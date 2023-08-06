@@ -35,6 +35,15 @@ class PDFExtractor:
             print(f"Extracting images from page: {idx+1}")
             self.extract_image(page)
 
+    def replace_html_entities(self, text):
+        symbols = {
+            "&nbsp;": " ",
+            "&amp;": "&",
+        }
+        for k, v in symbols.items():
+            text = text.replace(k, v)
+        return text
+
     def format_outline(self, pdf_outlines):
         levels = [0] * 10
         lines = []
@@ -47,7 +56,8 @@ class PDFExtractor:
             trailing_level_str = " " if level > 1 else ""
             leading_level_str = " " * 2 * max(level - 2, 0)
 
-            title_str = title.replace("&nbsp;", " ")
+            title_str = self.replace_html_entities(title)
+
             lines.append(
                 f"{leading_level_str}{level_str}{trailing_level_str}{title_str}"
             )
