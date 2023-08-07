@@ -6,6 +6,7 @@ from pathlib import Path
 
 class PDFExtractor:
     pdf_root = Path(__file__).parents[1] / "pdfs"
+    image_root = pdf_root / "images"
 
     def __init__(self):
         pass
@@ -16,27 +17,25 @@ class PDFExtractor:
             print(f"Page {idx+1}:")
             print(text)
 
-    def get_image(self, layout_object):
-        if isinstance(layout_object, LTImage):
-            return layout_object
-        if isinstance(layout_object, LTContainer):
-            for child in layout_object:
-                return self.get_image(child)
-        else:
-            return None
+    def save_image(self, pdf_doc, xref, basepath):
+        ext_image = pdf_doc.extract_image(xref)
+        ext = ext_image["ext"]
+        fullpath = basepath.with_suffix(f".{ext}")
+        print(f"  > Saving image to: {fullpath}")
+        # bytes = ext_image["image"]
+        # with open(fullpath, "wb") as wf:
+        #     wf.write(bytes)
+        pix = fitz.Pixmap(pdf_doc, xref)
+        pix.save(fullpath)
 
-    def extract_image(self, page: LTPage):
-        images = list(filter(bool, map(self.get_image, page)))
-        iw = ImageWriter(self.pdf_root / "images")
-        for image in images:
-            iw.export_image(image)
-
-    def extract_images(self):
-        pages = list(extract_pages(self.pdf_fullpath))
-        print(f"Pages: {len(pages)}")
-        for idx, page in enumerate(pages):
-            print(f"Extracting images from page: {idx+1}")
-            self.extract_image(page)
+    def extract_images(self, pdf_doc):
+        for idx, page in enumerate(pdf_doc):
+            img_infos = page.get_images()
+            print(f"Page {idx}: {img_infos}")
+            for info in img_infos:
+                xref = info[0]
+                img_basepath = self.image_root / f"img_{idx+1}"
+                self.save_image(pdf_doc, xref, img_basepath)
 
     def replace_html_entities(self, text):
         symbols = {
@@ -79,8 +78,9 @@ class PDFExtractor:
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
         self.pdf_fullpath = self.pdf_root / pdf_filename
         pdf_doc = fitz.open(self.pdf_fullpath)
-        self.extract_text(pdf_doc)
-        # self.extract_toc()
+        # self.extract_text(pdf_doc)
+        # self.extract_toc(pdf_doc)
+        self.extract_images(pdf_doc)
 
 
 if __name__ == "__main__":
