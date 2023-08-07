@@ -1,4 +1,6 @@
 # pip install 'pdfminer.six[image]'
+# python -m pip install --upgrade pymupdf
+import fitz
 from pdfminer.layout import LTImage, LTContainer, LTPage
 from pdfminer.high_level import extract_text, extract_pages
 from pdfminer.image import ImageWriter
@@ -44,10 +46,10 @@ class PDFExtractor:
             text = text.replace(k, v)
         return text
 
-    def format_outline(self, pdf_outlines):
+    def format_toc(self, pdf_toc):
         levels = [0] * 10
         lines = []
-        for (level, title, dest, action, se) in pdf_outlines:
+        for level, title, page, dest in pdf_toc:
             levels[level - 1] += 1
             for i in range(level, len(levels)):
                 levels[i] = 0
@@ -66,18 +68,15 @@ class PDFExtractor:
             print(line)
 
     def extract_toc(self):
-        with open(self.pdf_fullpath, "rb") as rf:
-            pdf_parser = PDFParser(rf)
-            pdf_doc = PDFDocument(pdf_parser)
-            pdf_outlines = pdf_doc.get_outlines()
-            # Introduction to PDF Destinations
-            # * https://evermap.com/Tutorial_ABM_Destinations.asp
-            self.format_outline(pdf_outlines)
+        pdf_doc = fitz.open(self.pdf_fullpath)
+        pdf_toc = pdf_doc.get_toc(simple=False)
+        print(pdf_toc)
+        self.format_toc(pdf_toc)
 
     def run(self):
         pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
-        pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
-        pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
+        # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
+        # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
         self.pdf_fullpath = self.pdf_root / pdf_filename
         # text = extract_text(pdf_fullpath)
         # print(text)
