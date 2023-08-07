@@ -11,32 +11,29 @@ class PDFExtractor:
     def __init__(self):
         pass
 
-    def extract_text(self, pdf_doc):
-        for idx, page in enumerate(pdf_doc):
+    def extract_text(self):
+        for idx, page in enumerate(self.pdf_doc):
             text = page.get_text()
             print(f"Page {idx+1}:")
             print(text)
 
-    def save_image(self, pdf_doc, xref, basepath):
-        ext_image = pdf_doc.extract_image(xref)
+    def save_image(self, xref, basepath):
+        ext_image = self.pdf_doc.extract_image(xref)
         ext = ext_image["ext"]
         fullpath = basepath.with_suffix(f".{ext}")
         print(f"  > Saving image to: {fullpath}")
-        # bytes = ext_image["image"]
-        # with open(fullpath, "wb") as wf:
-        #     wf.write(bytes)
-        pix = fitz.Pixmap(pdf_doc, xref)
+        pix = fitz.Pixmap(self.pdf_doc, xref)
         pix.save(fullpath)
 
-    def extract_images(self, pdf_doc):
+    def extract_images(self):
         img_idx = 0
-        for page_idx, page in enumerate(pdf_doc):
+        for page_idx, page in enumerate(self.pdf_doc):
             img_infos = page.get_images()
             print(f"Page {page_idx}: {img_infos}")
             for info in img_infos:
                 xref = info[0]
                 img_basepath = self.image_root / f"img_{img_idx+1}"
-                self.save_image(pdf_doc, xref, img_basepath)
+                self.save_image(xref, img_basepath)
                 img_idx += 1
 
     def replace_html_entities(self, text):
@@ -48,10 +45,10 @@ class PDFExtractor:
             text = text.replace(k, v)
         return text
 
-    def format_toc(self, pdf_toc):
+    def format_toc(self):
         levels = [0] * 10
         lines = []
-        for level, title, page, dest in pdf_toc:
+        for level, title, page, dest in self.pdf_toc:
             levels[level - 1] += 1
             for i in range(level, len(levels)):
                 levels[i] = 0
@@ -69,20 +66,19 @@ class PDFExtractor:
         for line in lines:
             print(line)
 
-    def extract_toc(self, pdf_doc):
-        pdf_toc = pdf_doc.get_toc(simple=False)
-        print(pdf_toc)
-        self.format_toc(pdf_toc)
+    def extract_toc(self):
+        self.pdf_toc = self.pdf_doc.get_toc(simple=False)
+        self.format_toc()
 
     def run(self):
         pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
         # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
         self.pdf_fullpath = self.pdf_root / pdf_filename
-        pdf_doc = fitz.open(self.pdf_fullpath)
-        # self.extract_text(pdf_doc)
-        # self.extract_toc(pdf_doc)
-        self.extract_images(pdf_doc)
+        self.pdf_doc = fitz.open(self.pdf_fullpath)
+        # self.extract_text()
+        self.extract_toc()
+        self.extract_images()
 
 
 if __name__ == "__main__":
