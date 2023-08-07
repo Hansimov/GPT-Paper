@@ -29,13 +29,15 @@ class PDFExtractor:
         pix.save(fullpath)
 
     def extract_images(self, pdf_doc):
-        for idx, page in enumerate(pdf_doc):
+        img_idx = 0
+        for page_idx, page in enumerate(pdf_doc):
             img_infos = page.get_images()
-            print(f"Page {idx}: {img_infos}")
+            print(f"Page {page_idx}: {img_infos}")
             for info in img_infos:
                 xref = info[0]
-                img_basepath = self.image_root / f"img_{idx+1}"
+                img_basepath = self.image_root / f"img_{img_idx+1}"
                 self.save_image(pdf_doc, xref, img_basepath)
+                img_idx += 1
 
     def replace_html_entities(self, text):
         symbols = {
