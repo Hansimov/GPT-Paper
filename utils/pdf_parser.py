@@ -1,11 +1,6 @@
 # pip install 'pdfminer.six[image]'
 # python -m pip install --upgrade pymupdf
 import fitz
-from pdfminer.layout import LTImage, LTContainer, LTPage
-from pdfminer.high_level import extract_text, extract_pages
-from pdfminer.image import ImageWriter
-from pdfminer.pdfparser import PDFParser
-from pdfminer.pdfdocument import PDFDocument
 from pathlib import Path
 
 
@@ -14,6 +9,12 @@ class PDFExtractor:
 
     def __init__(self):
         pass
+
+    def extract_text(self, pdf_doc):
+        for idx, page in enumerate(pdf_doc):
+            text = page.get_text()
+            print(f"Page {idx+1}:")
+            print(text)
 
     def get_image(self, layout_object):
         if isinstance(layout_object, LTImage):
@@ -67,8 +68,7 @@ class PDFExtractor:
         for line in lines:
             print(line)
 
-    def extract_toc(self):
-        pdf_doc = fitz.open(self.pdf_fullpath)
+    def extract_toc(self, pdf_doc):
         pdf_toc = pdf_doc.get_toc(simple=False)
         print(pdf_toc)
         self.format_toc(pdf_toc)
@@ -78,9 +78,9 @@ class PDFExtractor:
         # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
         self.pdf_fullpath = self.pdf_root / pdf_filename
-        # text = extract_text(pdf_fullpath)
-        # print(text)
-        self.extract_toc()
+        pdf_doc = fitz.open(self.pdf_fullpath)
+        self.extract_text(pdf_doc)
+        # self.extract_toc()
 
 
 if __name__ == "__main__":
