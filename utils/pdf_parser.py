@@ -1,5 +1,6 @@
 # pip install 'pdfminer.six[image]'
 # python -m pip install --upgrade pymupdf
+import matplotlib.pyplot as plt
 import fitz
 from pathlib import Path
 from itertools import islice
@@ -22,23 +23,43 @@ class PDFExtractor:
             print(f"Page {idx+1}:")
             print(text)
 
+    def calc_rect_center(self, rect):
+        x0, y0, x1, y1 = rect
+        x_center = (x0 + x1) / 2
+        y_center = (y0 + y1) / 2
+        return (x_center, y_center)
+
     def extract_all_text_blocks(self):
         # * https://pymupdf.readthedocs.io/en/latest/textpage.html#TextPage.extractBLOCKS
-        for idx, page in islice(enumerate(self.pdf_doc), 2):
+        rect_centers = []
+        last_words = []
+        for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
             blocks = page.get_text("blocks")
-            print(f"=== Start Page {idx+1}: {len(blocks)} blocks ===")
+            page_cnt = page_idx + 1
+            print(f"=== Start Page {page_cnt}: {len(blocks)} blocks ===")
             block_cnt = 0
             for block in blocks:
-                block_cnt += 1
-                block_rect = block[:4]
+                block_rect = block[:4]  # (x0,y0,x1,y1)
                 block_text = block[4]
                 block_num = block[5]
+                # block_cnt += 1
+                block_cnt = block_num + 1
+
+                rect_center = self.calc_rect_center(block_rect)
+                rect_centers.append(rect_center)
+                last_word = f"{block_text.split()[-1]}({page_cnt}.{block_cnt})"
+                last_words.append(last_word)
+                # rect_center_list.extend([tuple(block_rect[:2]), tuple(block_rect[-2:])])
                 block_type = "text" if block[6] == 0 else "image"
-                print(f"Block: {block_num+1}")
-                print(f"<{block_type}> {block_rect}")
+                print(f"Block: {page_cnt}.{block_cnt}")
+                print(f"<{block_type}> {rect_center} - {block_rect}")
                 print(block_text)
 
-            print(f"=== End Page {idx+1}: {len(blocks)} blocks ===\n")
+            print(f"=== End Page {page_cnt}: {len(blocks)} blocks ===\n")
+        plt.scatter(*zip(*rect_centers))
+        for i, rect_center in enumerate(rect_centers):
+            plt.annotate(last_words[i], rect_center)
+        plt.show()
 
     def save_image(self, xref, basepath):
         ext_image = self.pdf_doc.extract_image(xref)
