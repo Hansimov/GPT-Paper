@@ -14,11 +14,11 @@ class PDFTextBlockCategorizer:
 
         dbscan = DBSCAN()
         dbscan.fit(X)
-        labels = dbscan.labels_
-        self.n_clusters = len(np.unique(labels))
-        label_counter = Counter(labels)
-        most_common_label = label_counter.most_common(1)[0][0]
-        labels = [0 if label == most_common_label else 1 for label in labels]
-        self.labels = labels
+        categories = dbscan.labels_
+        self.n_clusters = len(np.unique(categories))
+        category_counter = Counter(categories)
+        most_common_category = category_counter.most_common(1)[0][0]
+        categories = [0 if category == most_common_category else 1 for category in categories]
+        self.labels = categories
 
         print(f"{self.n_clusters} clusters for {len(self.blocks)} blocks")

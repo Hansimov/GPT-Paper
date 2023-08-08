@@ -6,6 +6,7 @@ import fitz
 from pathlib import Path
 from itertools import islice
 from utils.categorizer import PDFTextBlockCategorizer
+from utils.logger import Logger
 
 
 class PDFExtractor:
@@ -37,10 +38,11 @@ class PDFExtractor:
 
     def extract_all_text_blocks(self):
         # * https://pymupdf.readthedocs.io/en/latest/textpage.html#TextPage.extractBLOCKS
+        logger = Logger().logger
 
         rect_centers = []
         rects = []
-        visual_label_texts = []
+        point_texts = []
         categorize_vectors = []
 
         for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
@@ -59,33 +61,40 @@ class PDFExtractor:
 
                 rect_center = self.calc_rect_center(block_rect, reverse_y=True)
                 rect_centers.append(rect_center)
-                # visual_label_text = f"{block_text.split()[-1]}({page_cnt}.{block_cnt})"
-                visual_label_text = f"({page_cnt}.{block_cnt})"
-                visual_label_texts.append(visual_label_text)
+                point_text = f"({page_cnt}.{block_cnt})"
+                point_texts.append(point_text)
 
                 block_type = "text" if block[6] == 0 else "image"
-                print(f"Block: {page_cnt}.{block_cnt}")
-                print(f"<{block_type}> {rect_center} - {block_rect}")
-                print(block_text)
+                logger.info(f"Block: {page_cnt}.{block_cnt}")
+                logger.info(f"<{block_type}> {rect_center} - {block_rect}")
+                logger.info(block_text)
                 categorize_vectors.append((*block_rect, block_text))
 
-            print(f"=== End Page {page_cnt}: {len(blocks)} blocks ===\n")
+            logger.info(f"=== End Page {page_cnt}: {len(blocks)} blocks ===\n")
 
         categorizer = PDFTextBlockCategorizer(categorize_vectors)
         categorizer.run()
 
+        # self.plot_text_block_rect(
+        #     categories=categorizer.labels,
+        #     points=rect_centers,
+        #     rects=rects,
+        #     point_texts=point_texts,
+        # )
+
+    def plot_text_block_rect(self, points, rects, categories, point_texts):
         fig, ax = plt.subplots()
         colors = ["b", "r", "g", "c", "m", "y", "k"]
 
-        for i, rect_center in enumerate(rect_centers):
-            label_idx = categorizer.labels[i]
-            color = colors[label_idx]
+        for i, rect_center in enumerate(points):
+            category_idx = categories[i]
+            color = colors[category_idx]
             x0, y0, x1, y1 = rects[i]
             rect = Rectangle((x0, -y0), x1 - x0, -y1 + y0, fill=False, edgecolor=color)
             ax.add_patch(rect)
             x, y = rect_center
             plt.scatter(x, y, color=color)
-            plt.annotate(visual_label_texts[i], rect_center)
+            plt.annotate(point_texts[i], rect_center)
         plt.show()
 
     def save_image(self, xref, basepath):
