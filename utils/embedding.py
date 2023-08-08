@@ -53,11 +53,13 @@ def calc_embedding(
         f"{colored(text,'light_cyan')}"
     )
 
-    text = text.replace("\n", " ")
     response = requests.post(
         url=endpoint_url,
         headers=headers,
-        json={"input": text, "model": model},
+        json={
+            "input": text.replace("\n", " "),
+            "model": model,
+        },
     )
     data = response.json()["data"]
     embedding = data[0]["embedding"]

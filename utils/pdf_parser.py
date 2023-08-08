@@ -2,6 +2,7 @@
 # python -m pip install --upgrade pymupdf
 import fitz
 from pathlib import Path
+from itertools import islice
 
 
 class PDFExtractor:
@@ -9,13 +10,35 @@ class PDFExtractor:
     image_root = pdf_root / "images"
 
     def __init__(self):
-        pass
+        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
+        # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
+        # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
+        self.pdf_fullpath = self.pdf_root / pdf_filename
+        self.pdf_doc = fitz.open(self.pdf_fullpath)
 
-    def extract_text(self):
+    def extract_all_texts(self):
         for idx, page in enumerate(self.pdf_doc):
-            text = page.get_text()
+            text = page.get_text("block")
             print(f"Page {idx+1}:")
             print(text)
+
+    def extract_all_text_blocks(self):
+        # * https://pymupdf.readthedocs.io/en/latest/textpage.html#TextPage.extractBLOCKS
+        for idx, page in islice(enumerate(self.pdf_doc), 2):
+            blocks = page.get_text("blocks")
+            print(f"=== Start Page {idx+1}: {len(blocks)} blocks ===")
+            block_cnt = 0
+            for block in blocks:
+                block_cnt += 1
+                block_rect = block[:4]
+                block_text = block[4]
+                block_num = block[5]
+                block_type = "text" if block[6] == 0 else "image"
+                print(f"Block: {block_num+1}")
+                print(f"<{block_type}> {block_rect}")
+                print(block_text)
+
+            print(f"=== End Page {idx+1}: {len(blocks)} blocks ===\n")
 
     def save_image(self, xref, basepath):
         ext_image = self.pdf_doc.extract_image(xref)
@@ -71,14 +94,10 @@ class PDFExtractor:
         self.format_toc()
 
     def run(self):
-        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
-        # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
-        # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
-        self.pdf_fullpath = self.pdf_root / pdf_filename
-        self.pdf_doc = fitz.open(self.pdf_fullpath)
-        # self.extract_text()
-        self.extract_toc()
-        self.extract_images()
+        # self.extract_all_texts()
+        self.extract_all_text_blocks()
+        # self.extract_toc()
+        # self.extract_images()
 
 
 if __name__ == "__main__":
