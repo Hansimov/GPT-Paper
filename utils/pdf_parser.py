@@ -1,12 +1,14 @@
-# pip install 'pdfminer.six[image]'
-# python -m pip install --upgrade pymupdf
 import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
+
+# python -m pip install --upgrade pymupdf
 import fitz
-from pathlib import Path
+import shutil
 from itertools import islice
+from matplotlib.patches import Rectangle
+from pathlib import Path
+from termcolor import colored
 from utils.categorizer import PDFTextBlockCategorizer
-from utils.logger import Logger
+from utils.logger import Logger, add_fillers
 
 
 class PDFExtractor:
@@ -38,7 +40,7 @@ class PDFExtractor:
 
     def extract_all_text_blocks(self):
         # * https://pymupdf.readthedocs.io/en/latest/textpage.html#TextPage.extractBLOCKS
-        logger = Logger().logger
+        logger = Logger(prefix=False).logger
 
         rect_centers = []
         rects = []
@@ -48,7 +50,12 @@ class PDFExtractor:
         for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
             blocks = page.get_text("blocks")
             page_cnt = page_idx + 1
-            print(f"=== Start Page {page_cnt}: {len(blocks)} blocks ===")
+            logger.info(
+                colored(
+                    add_fillers(f"Start Page {page_cnt}: {len(blocks)} blocks"),
+                    "green",
+                )
+            )
             block_cnt = 0
             for block in blocks:
                 block_rect = block[:4]  # (x0,y0,x1,y1)
@@ -70,7 +77,11 @@ class PDFExtractor:
                 logger.info(block_text)
                 categorize_vectors.append((*block_rect, block_text))
 
-            logger.info(f"=== End Page {page_cnt}: {len(blocks)} blocks ===\n")
+            logger.info(
+                colored(
+                    add_fillers(f"End Page {page_cnt}: {len(blocks)} blocks"), "green"
+                )
+            )
 
         categorizer = PDFTextBlockCategorizer(categorize_vectors)
         categorizer.run()
