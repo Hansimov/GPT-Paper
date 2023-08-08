@@ -13,8 +13,8 @@ class PDFExtractor:
     image_root = pdf_root / "images"
 
     def __init__(self):
-        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
-        # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
+        # pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
+        pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
         self.pdf_fullpath = self.pdf_root / pdf_filename
         self.pdf_doc = fitz.open(self.pdf_fullpath)
@@ -75,11 +75,11 @@ class PDFExtractor:
         categorizer.run()
 
         fig, ax = plt.subplots()
-        colors = ["r", "g", "b"]
+        colors = ["b", "g", "r", "c", "m", "y", "k"]
 
         for i, rect_center in enumerate(rect_centers):
-            label = categorizer.labels[i]
-            color = colors[label]
+            label_idx = categorizer.labels[i]
+            color = colors[label_idx]
             x0, y0, x1, y1 = rects[i]
             rect = Rectangle((x0, -y0), x1 - x0, -y1 + y0, fill=False, edgecolor=color)
             ax.add_patch(rect)
