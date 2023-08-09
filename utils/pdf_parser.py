@@ -3,12 +3,14 @@ import matplotlib.pyplot as plt
 # python -m pip install --upgrade pymupdf
 import fitz
 import shutil
-from itertools import islice
+from itertools import islice, chain
 from matplotlib.patches import Rectangle
 from pathlib import Path
 from termcolor import colored
 from utils.categorizer import PDFTextBlockCategorizer
 from utils.logger import Logger, add_fillers
+from utils.tokenizer import Tokenizer
+from utils.calculator import flatten_len
 
 logger = Logger(prefix=False).logger
 
@@ -78,6 +80,10 @@ class PDFExtractor:
                 f"removed in Page {i+1} "
             )
 
+        len_filtered_doc_blocks = flatten_len(filtered_doc_blocks)
+        len_doc_blocks = flatten_len(doc_blocks)
+        logger.info(f"{len_filtered_doc_blocks} blocks remained of {len_doc_blocks}")
+
         return filtered_doc_blocks
 
     def extract_all_text_blocks(self):
@@ -129,7 +135,7 @@ class PDFExtractor:
         categorizer = PDFTextBlockCategorizer(categorize_vectors)
         categorizer.run()
 
-        self.remove_no_body_text_blocks(
+        filtered_doc_blocks = self.remove_no_body_text_blocks(
             doc_blocks=doc_blocks, categories=categorizer.categories
         )
 
