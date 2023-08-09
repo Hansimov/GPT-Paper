@@ -200,6 +200,7 @@ class PDFExtractor:
         * https://pymupdf.readthedocs.io/en/latest/textpage.html#TextPage.extractDICT
         * https://pymupdf.readthedocs.io/en/latest/textpage.html#structure-of-dictionary-outputs
         * https://pymupdf.readthedocs.io/en/latest/_images/img-textpage.png
+        * https://pymupdf.readthedocs.io/en/latest/textpage.html#block-dictionaries
 
         Data Structure of a Text/Image Block Dict in Page Blocks:
 
@@ -215,7 +216,7 @@ class PDFExtractor:
                     "lines": [
                         {
                             "bbox": <tuple> (4 floats),
-                            "wmode": <int>,
+                            "wmode": <int> (0),
                             "dir": <tuple> (2 floats),
                             "spans": [
                                 {
@@ -255,7 +256,7 @@ class PDFExtractor:
         }
         ```
         """
-        for page_idx, page in islice(enumerate(self.pdf_doc), 1):
+        for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
             page_dict = page.get_text("dict")
             page_blocks = page_dict["blocks"]
             logger.info(f"{len(page_blocks)} blocks")
@@ -269,32 +270,52 @@ class PDFExtractor:
 
                 if block_type == "text":
                     lines = block["lines"]
-                    logger.info(f"{len(lines)} lines")
-
+                    logger.debug(f"{len(lines)} lines")
+                    block_text = ""
                     for line in lines:
                         line_bbox = line["bbox"]
                         spans = line["spans"]
-                        logger.info(f"{len(spans)} spans")
+                        # logger.info(f"{len(spans)} spans")
+                        line_text = ""
                         for span in spans:
                             span_bbox = span["bbox"]
                             span_origin = span["origin"]
                             span_text = span["text"]
                             span_font = span["font"]
                             span_fontsize = span["size"]
-                            logger.info(
-                                f"<font: {span_font}> <fontsize: {span_fontsize}>"
+                            span_flags = span["flags"]
+                            logger.debug(
+                                f"<font: {span_font}> <fontsize: {round(span_fontsize,1)}>"
                             )
-                            logger.info(f"{span_text}")
+                            logger.debug(colored(f"{span_text}", "light_cyan"))
+                            line_text += f"{span_text}"
+                        block_text += f"{line_text}\n"
+                    # block = block_text.replace("\n", " ")
+                    block_text = block_text.replace(" ﬁ ", "fi")
+                    logger.info(colored(f"{block_text}", "light_cyan"))
+
                 elif block_type == "image":
                     img_width = block["width"]
                     img_height = block["height"]
-                    for k, v in block.items():
-                        logger.info(f"{k}: {type(v)}")
-                        if k != "image":
-                            logger.info(v)
-                    break
+                    img_ext = block["ext"]
+                    img_size = block["size"]
+                    img_size_mb = round(img_size / (1024 * 1024), 1)
+                    img_bytes = block["image"]
+                    logger.info(
+                        colored(
+                            f"<{img_ext.upper()}> <{img_width}x{img_height}> ({img_size_mb} MB)",
+                            "light_magenta",
+                        )
+                    )
                 else:
                     raise ValueError(f"Unknown block type: {block_type}")
+
+    def extract_all_text_htmls(self):
+        html_str = ""
+        for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
+            html_str += page.get_text("html")
+        with open("output.html", "w") as wf:
+            wf.write(html_str)
 
     def replace_html_entities(self, text):
         symbols = {
@@ -336,6 +357,7 @@ class PDFExtractor:
         # self.extract_toc()
         # self.extract_images()
         self.extract_all_text_block_dicts()
+        # self.extract_all_text_htmls()
 
 
 if __name__ == "__main__":
