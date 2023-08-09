@@ -199,9 +199,9 @@ class PDFExtractor:
         """
         * https://pymupdf.readthedocs.io/en/latest/textpage.html#TextPage.extractDICT
         * https://pymupdf.readthedocs.io/en/latest/textpage.html#structure-of-dictionary-outputs
-        # https://pymupdf.readthedocs.io/en/latest/_images/img-textpage.png
+        * https://pymupdf.readthedocs.io/en/latest/_images/img-textpage.png
 
-        Data Structure of a Text Block Dict in Page Blocks:
+        Data Structure of a Text/Image Block Dict in Page Blocks:
 
         ```json
         {
@@ -209,7 +209,7 @@ class PDFExtractor:
             "height": <float>,
             "blocks": [
                 {
-                    "type": <int>,
+                    "type": <int> (0),
                     "bbox": <tuple> (4 floats),
                     "number": <int>,
                     "lines": [
@@ -235,6 +235,21 @@ class PDFExtractor:
                         ...
                     ]
                 },
+                {
+                    "type": <int> (1),
+                    "bbox": <tuple> (4 floats),
+                    "number": <int>,
+                    "width": <float>,
+                    "height": <float>,
+                    "ext": <str> ("jpeg"),
+                    "colorspace": <int>,
+                    "xres": <int>,
+                    "yres": <int>,
+                    "bpc": <int>,
+                    "transform": <tuple> (6 floats),
+                    "size": <int>,
+                    "image": <bytes>
+                },
                 ...
             ]
         }
@@ -243,15 +258,43 @@ class PDFExtractor:
         for page_idx, page in islice(enumerate(self.pdf_doc), 1):
             page_dict = page.get_text("dict")
             page_blocks = page_dict["blocks"]
-            lines = page_blocks[0]["lines"]
-            spans = lines[0]["spans"]
-
             logger.info(f"{len(page_blocks)} blocks")
-            logger.info(f"{len(lines)} lines")
-            logger.info(f"{len(spans)} spans")
-            for k, v in spans[0].items():
-                logger.info(f"{k}: {type(v)}")
-                logger.info(v)
+            block_cnt = 0
+            for block in page_blocks:
+                block_type = "text" if block["type"] == 0 else "image"
+                block_num = block["number"]
+                block_cnt = block_num + 1
+                block_bbox = block["bbox"]
+                logger.info(f"<{block_type}> Block {block_cnt}")
+
+                if block_type == "text":
+                    lines = block["lines"]
+                    logger.info(f"{len(lines)} lines")
+
+                    for line in lines:
+                        line_bbox = line["bbox"]
+                        spans = line["spans"]
+                        logger.info(f"{len(spans)} spans")
+                        for span in spans:
+                            span_bbox = span["bbox"]
+                            span_origin = span["origin"]
+                            span_text = span["text"]
+                            span_font = span["font"]
+                            span_fontsize = span["size"]
+                            logger.info(
+                                f"<font: {span_font}> <fontsize: {span_fontsize}>"
+                            )
+                            logger.info(f"{span_text}")
+                elif block_type == "image":
+                    img_width = block["width"]
+                    img_height = block["height"]
+                    for k, v in block.items():
+                        logger.info(f"{k}: {type(v)}")
+                        if k != "image":
+                            logger.info(v)
+                    break
+                else:
+                    raise ValueError(f"Unknown block type: {block_type}")
 
     def replace_html_entities(self, text):
         symbols = {
