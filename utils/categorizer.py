@@ -18,7 +18,9 @@ class PDFTextBlockCategorizer:
         self.n_clusters = len(np.unique(categories))
         category_counter = Counter(categories)
         most_common_category = category_counter.most_common(1)[0][0]
-        categories = [0 if category == most_common_category else 1 for category in categories]
-        self.labels = categories
+        categories = [
+            0 if category == most_common_category else 1 for category in categories
+        ]
+        self.categories = categories
 
         print(f"{self.n_clusters} clusters for {len(self.blocks)} blocks")

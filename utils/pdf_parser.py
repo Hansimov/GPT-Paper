@@ -10,6 +10,8 @@ from termcolor import colored
 from utils.categorizer import PDFTextBlockCategorizer
 from utils.logger import Logger, add_fillers
 
+logger = Logger(prefix=False).logger
+
 
 class PDFExtractor:
     pdf_root = Path(__file__).parents[1] / "pdfs"
@@ -38,26 +40,66 @@ class PDFExtractor:
         y_center = (y0 + y1) / 2
         return (x_center, y_center)
 
+    def plot_text_block_rect(self, points, rects, categories, point_texts):
+        fig, ax = plt.subplots()
+        colors = ["b", "r", "g", "c", "m", "y", "k"]
+
+        for i, rect_center in enumerate(points):
+            category_idx = categories[i]
+            color = colors[category_idx]
+            x0, y0, x1, y1 = rects[i]
+            rect = Rectangle((x0, -y0), x1 - x0, -y1 + y0, fill=False, edgecolor=color)
+            ax.add_patch(rect)
+            x, y = rect_center
+            plt.scatter(x, y, color=color)
+            plt.annotate(point_texts[i], rect_center)
+        plt.show()
+
+    def remove_no_body_text_blocks(self, doc_blocks, categories):
+        categories_by_page = []
+        start = 0
+        for page_blocks in doc_blocks:
+            end = start + len(page_blocks)
+            categories_by_page.append(categories[start:end])
+            start = end
+
+        filtered_doc_blocks = []
+        for i in range(len(doc_blocks)):
+            page_blocks = doc_blocks[i]
+            page_categories = categories_by_page[i]
+            filtered_page_blocks = [
+                block for j, block in enumerate(page_blocks) if page_categories[j] == 0
+            ]
+            filtered_doc_blocks.append(filtered_page_blocks)
+            len_removed_blocks = len(page_blocks) - len(filtered_page_blocks)
+            logger.info(
+                f"  [-] {len_removed_blocks} headers/footers "
+                f"({len(page_blocks):>2} -> {len(filtered_page_blocks):>2}) "
+                f"removed in Page {i+1} "
+            )
+
+        return filtered_doc_blocks
+
     def extract_all_text_blocks(self):
         # * https://pymupdf.readthedocs.io/en/latest/textpage.html#TextPage.extractBLOCKS
-        logger = Logger(prefix=False).logger
 
         rect_centers = []
         rects = []
         point_texts = []
         categorize_vectors = []
-
+        doc_blocks = []
         for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
-            blocks = page.get_text("blocks")
+            page_blocks = page.get_text("blocks")
+            doc_blocks.append(page_blocks)
             page_cnt = page_idx + 1
             logger.info(
                 colored(
-                    add_fillers(f"Start Page {page_cnt}: {len(blocks)} blocks"),
-                    "green",
+                    add_fillers(f"Start Page {page_cnt}: {len(page_blocks)} blocks"),
+                    "light_yellow",
                 )
             )
             block_cnt = 0
-            for block in blocks:
+            for block in page_blocks:
                 block_rect = block[:4]  # (x0,y0,x1,y1)
                 x0, y0, x1, y1 = block_rect
                 rects.append(block_rect)
@@ -73,18 +115,23 @@ class PDFExtractor:
 
                 block_type = "text" if block[6] == 0 else "image"
                 logger.info(f"Block: {page_cnt}.{block_cnt}")
-                logger.info(f"<{block_type}> {rect_center} - {block_rect}")
-                logger.info(block_text)
+                logger.debug(f"<{block_type}> {rect_center} - {block_rect}")
+                logger.debug(block_text)
                 categorize_vectors.append((*block_rect, block_text))
 
             logger.info(
                 colored(
-                    add_fillers(f"End Page {page_cnt}: {len(blocks)} blocks"), "green"
+                    add_fillers(f"End Page {page_cnt}: {len(page_blocks)} blocks"),
+                    "green",
                 )
             )
 
         categorizer = PDFTextBlockCategorizer(categorize_vectors)
         categorizer.run()
+
+        self.remove_no_body_text_blocks(
+            doc_blocks=doc_blocks, categories=categorizer.categories
+        )
 
         # self.plot_text_block_rect(
         #     categories=categorizer.labels,
@@ -92,21 +139,6 @@ class PDFExtractor:
         #     rects=rects,
         #     point_texts=point_texts,
         # )
-
-    def plot_text_block_rect(self, points, rects, categories, point_texts):
-        fig, ax = plt.subplots()
-        colors = ["b", "r", "g", "c", "m", "y", "k"]
-
-        for i, rect_center in enumerate(points):
-            category_idx = categories[i]
-            color = colors[category_idx]
-            x0, y0, x1, y1 = rects[i]
-            rect = Rectangle((x0, -y0), x1 - x0, -y1 + y0, fill=False, edgecolor=color)
-            ax.add_patch(rect)
-            x, y = rect_center
-            plt.scatter(x, y, color=color)
-            plt.annotate(point_texts[i], rect_center)
-        plt.show()
 
     def save_image(self, xref, basepath):
         ext_image = self.pdf_doc.extract_image(xref)
