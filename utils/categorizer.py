@@ -23,4 +23,4 @@ class PDFTextBlockCategorizer:
         ]
         self.categories = categories
 
-        print(f"{self.n_clusters} clusters for {len(self.blocks)} blocks")
+        print(f"{self.n_clusters} clusters for {len(self.blocks)} blocks.")

@@ -30,7 +30,7 @@ def add_fillers(text, filler="=", direction="both"):
 
 
 class Logger:
-    def __init__(self, name=None, prefix=True):
+    def __init__(self, name=None, prefix=False):
         if not name:
             frame = inspect.stack()[1]
             module = inspect.getmodule(frame[0])

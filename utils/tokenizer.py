@@ -1,21 +1,24 @@
 import tiktoken
+from utils.logger import Logger
 
 
-"""
-* How to count tokens with tiktoken · openai-cookbook
-  * https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb
-    
-    -----------------------------------------------------------------------
+logger = Logger().logger
+
+
+class Tokenizer:
+    """
+    * How to count tokens with tiktoken · openai-cookbook
+        * https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb
+
+
     Encoding name	    | OpenAI models
-    -----------------------------------------------------------------------
+    :-------------------|:-------------------------------------------------
     cl100k_base	        | gpt-4, gpt-3.5-turbo, text-embedding-ada-002
     p50k_base	        | Codex models, text-davinci-002, text-davinci-003
     r50k_base (or gpt2)	| GPT-3 models like davinci
     -----------------------------------------------------------------------
-"""
+    """
 
-
-class Tokenizer:
     def __init__(self, model="text-embedding-ada-002"):
         self.model = model
         self.encoding_name = None
@@ -39,7 +42,7 @@ class Tokenizer:
     def count_tokens(self, text):
         tokens = self.encoder.encode(text)
         token_cnt = len(tokens)
-        print(f"{token_cnt} tokens of text: [{text}]")
+        logger.debug(f"{token_cnt} tokens of text: [{text}]")
         return token_cnt
 
 

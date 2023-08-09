@@ -10,9 +10,9 @@ from termcolor import colored
 from utils.categorizer import PDFTextBlockCategorizer
 from utils.logger import Logger, add_fillers
 from utils.tokenizer import Tokenizer
-from utils.calculator import flatten_len
+from utils.calculator import flatten_len, kilo_count
 
-logger = Logger(prefix=False).logger
+logger = Logger().logger
 
 
 class PDFExtractor:
@@ -29,8 +29,8 @@ class PDFExtractor:
     def extract_all_texts(self):
         for idx, page in enumerate(self.pdf_doc):
             text = page.get_text("block")
-            print(f"Page {idx+1}:")
-            print(text)
+            logger.info(f"Page {idx+1}:")
+            logger.debug(text)
 
     def calc_rect_center(self, rect, reverse_y=False):
         if reverse_y:
@@ -74,7 +74,7 @@ class PDFExtractor:
             ]
             filtered_doc_blocks.append(filtered_page_blocks)
             len_removed_blocks = len(page_blocks) - len(filtered_page_blocks)
-            logger.info(
+            logger.debug(
                 f"  [-] {len_removed_blocks} headers/footers "
                 f"({len(page_blocks):>2} -> {len(filtered_page_blocks):>2}) "
                 f"removed in Page {i+1} "
@@ -82,7 +82,7 @@ class PDFExtractor:
 
         len_filtered_doc_blocks = flatten_len(filtered_doc_blocks)
         len_doc_blocks = flatten_len(doc_blocks)
-        logger.info(f"{len_filtered_doc_blocks} blocks remained of {len_doc_blocks}")
+        logger.info(f"{len_filtered_doc_blocks} blocks remained of {len_doc_blocks}.")
 
         return filtered_doc_blocks
 
@@ -94,50 +94,73 @@ class PDFExtractor:
         point_texts = []
         categorize_vectors = []
         doc_blocks = []
+        tokenizer = Tokenizer()
+        doc_token_cnt = 0
         for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
             page_blocks = page.get_text("blocks")
             doc_blocks.append(page_blocks)
             page_cnt = page_idx + 1
             logger.info(
                 colored(
-                    add_fillers(f"Start Page {page_cnt}: {len(page_blocks)} blocks"),
+                    add_fillers(f"Start [Page {page_cnt}] [{len(page_blocks)} blocks]"),
                     "light_yellow",
                 )
             )
             block_cnt = 0
+            page_token_cnt = 0
             for block in page_blocks:
                 block_rect = block[:4]  # (x0,y0,x1,y1)
-                x0, y0, x1, y1 = block_rect
-                rects.append(block_rect)
                 block_text = block[4]
                 block_num = block[5]
                 # block_cnt += 1
                 block_cnt = block_num + 1
+                block_type = "text" if block[6] == 0 else "image"
 
+                if block_type == "text":
+                    token_cnt = tokenizer.count_tokens(block_text.replace("\n", " "))
+                    page_token_cnt += token_cnt
+                else:
+                    token_cnt = 0
+
+                x0, y0, x1, y1 = block_rect
+                rects.append(block_rect)
                 rect_center = self.calc_rect_center(block_rect, reverse_y=True)
                 rect_centers.append(rect_center)
                 point_text = f"({page_cnt}.{block_cnt})"
                 point_texts.append(point_text)
 
-                block_type = "text" if block[6] == 0 else "image"
-                logger.info(f"Block: {page_cnt}.{block_cnt}")
-                logger.debug(f"<{block_type}> {rect_center} - {block_rect}")
-                logger.debug(block_text)
                 categorize_vectors.append((*block_rect, block_text))
 
+                token_cnt_str = ""
+                if block_type == "text":
+                    token_cnt_str = f"| (tokens: {token_cnt})"
+                logger.info(
+                    f"<{block_type}> Block: {page_cnt}.{block_cnt} {token_cnt_str}"
+                )
+
+                logger.debug(f"{rect_center} - {block_rect}")
+                logger.debug(block_text)
+
+            doc_token_cnt += page_token_cnt
+
+            logger.info(f"{page_token_cnt} tokens in Page {page_cnt}.")
             logger.info(
                 colored(
-                    add_fillers(f"End Page {page_cnt}: {len(page_blocks)} blocks"),
-                    "green",
+                    add_fillers(f"End [Page {page_cnt}] [{len(page_blocks)} blocks]"),
+                    "light_magenta",
                 )
             )
 
+        doc_token_cnt_kilo = kilo_count(doc_token_cnt)
+        logger.info(
+            colored(
+                f"{doc_token_cnt_kilo}k ({doc_token_cnt}) tokens in whole document.\n",
+                "light_green",
+            )
+        )
+
         categorizer = PDFTextBlockCategorizer(categorize_vectors)
         categorizer.run()
-
-        filtered_doc_blocks = self.remove_no_body_text_blocks(
-            doc_blocks=doc_blocks, categories=categorizer.categories
-        )
 
         # self.plot_text_block_rect(
         #     categories=categorizer.labels,
@@ -145,6 +168,10 @@ class PDFExtractor:
         #     rects=rects,
         #     point_texts=point_texts,
         # )
+
+        filtered_doc_blocks = self.remove_no_body_text_blocks(
+            doc_blocks=doc_blocks, categories=categorizer.categories
+        )
 
     def save_image(self, xref, basepath):
         ext_image = self.pdf_doc.extract_image(xref)
