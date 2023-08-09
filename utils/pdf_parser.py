@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 # python -m pip install --upgrade pymupdf
 import fitz
 import shutil
+from collections import Counter
 from itertools import islice, chain
 from matplotlib.patches import Rectangle
 from pathlib import Path
@@ -272,8 +273,7 @@ class PDFExtractor:
                     lines = block["lines"]
                     logger.debug(f"{len(lines)} lines")
                     block_text = ""
-                    font = ""
-                    fontsize = 0.0
+                    fontsize_list = []
                     font_properties = []
                     for line in lines:
                         line_bbox = line["bbox"]
@@ -285,13 +285,12 @@ class PDFExtractor:
                             span_origin = span["origin"]
                             span_text = span["text"]
                             span_font = span["font"]
-                            span_fontsize = span["size"]
+                            span_fontsize = round(span["size"], 1)
                             span_flags = span["flags"]
-                            font = span_font
-                            fontsize = span_fontsize
+                            fontsize_list.append(span_fontsize)
                             font_properties = font_flags_to_list(span_flags)
                             logger.debug(
-                                f"<font: {span_font}> <fontsize: {round(span_fontsize,1)}>"
+                                f"<font: {span_font}> <fontsize: {span_fontsize}>"
                             )
                             logger.debug(colored(f"{span_text}", "light_cyan"))
                             line_text += f"{span_text}"
@@ -299,9 +298,8 @@ class PDFExtractor:
 
                     # block = block_text.replace("\n", " ")
                     block_text = block_text.replace(" ﬁ ", "fi")
-                    logger.info(
-                        f"<{round(fontsize,1)}> <{font}> <{','.join(font_properties)}>"
-                    )
+                    most_common_fontsize = Counter(fontsize_list).most_common(1)[0][0]
+                    logger.info(f"<{most_common_fontsize}>")
                     logger.info(colored(f"{block_text}", "light_cyan"))
 
                 elif block_type == "image":
