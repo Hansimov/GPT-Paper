@@ -10,7 +10,7 @@ from termcolor import colored
 from utils.categorizer import PDFTextBlockCategorizer
 from utils.logger import Logger, add_fillers
 from utils.tokenizer import Tokenizer
-from utils.calculator import flatten_len, kilo_count
+from utils.calculator import flatten_len, kilo_count, font_flags_to_list
 
 logger = Logger().logger
 
@@ -212,7 +212,7 @@ class PDFExtractor:
                 {
                     "type": <int> (0),
                     "bbox": <tuple> (4 floats),
-                    "number": <int>,
+                    "number": <int> (start from 0),
                     "lines": [
                         {
                             "bbox": <tuple> (4 floats),
@@ -256,7 +256,7 @@ class PDFExtractor:
         }
         ```
         """
-        for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
+        for page_idx, page in islice(enumerate(self.pdf_doc), 3):
             page_dict = page.get_text("dict")
             page_blocks = page_dict["blocks"]
             logger.info(f"{len(page_blocks)} blocks")
@@ -272,6 +272,9 @@ class PDFExtractor:
                     lines = block["lines"]
                     logger.debug(f"{len(lines)} lines")
                     block_text = ""
+                    font = ""
+                    fontsize = 0.0
+                    font_properties = []
                     for line in lines:
                         line_bbox = line["bbox"]
                         spans = line["spans"]
@@ -284,14 +287,21 @@ class PDFExtractor:
                             span_font = span["font"]
                             span_fontsize = span["size"]
                             span_flags = span["flags"]
+                            font = span_font
+                            fontsize = span_fontsize
+                            font_properties = font_flags_to_list(span_flags)
                             logger.debug(
                                 f"<font: {span_font}> <fontsize: {round(span_fontsize,1)}>"
                             )
                             logger.debug(colored(f"{span_text}", "light_cyan"))
                             line_text += f"{span_text}"
                         block_text += f"{line_text}\n"
+
                     # block = block_text.replace("\n", " ")
                     block_text = block_text.replace(" ﬁ ", "fi")
+                    logger.info(
+                        f"<{round(fontsize,1)}> <{font}> <{','.join(font_properties)}>"
+                    )
                     logger.info(colored(f"{block_text}", "light_cyan"))
 
                 elif block_type == "image":
