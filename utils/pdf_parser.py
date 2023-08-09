@@ -23,6 +23,7 @@ class PDFExtractor:
         pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
         # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
+        # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
         self.pdf_fullpath = self.pdf_root / pdf_filename
         self.pdf_doc = fitz.open(self.pdf_fullpath)
 
@@ -109,11 +110,12 @@ class PDFExtractor:
             block_cnt = 0
             page_token_cnt = 0
             for block in page_blocks:
+                # Process block values
                 block_rect = block[:4]  # (x0,y0,x1,y1)
                 block_text = block[4]
                 block_num = block[5]
-                # block_cnt += 1
                 block_cnt = block_num + 1
+                # block_cnt += 1
                 block_type = "text" if block[6] == 0 else "image"
 
                 if block_type == "text":
@@ -122,15 +124,16 @@ class PDFExtractor:
                 else:
                     token_cnt = 0
 
-                x0, y0, x1, y1 = block_rect
+                categorize_vectors.append((*block_rect, block_text))
+
+                # Prepare for plot categorization of text blocks
                 rects.append(block_rect)
                 rect_center = self.calc_rect_center(block_rect, reverse_y=True)
                 rect_centers.append(rect_center)
                 point_text = f"({page_cnt}.{block_cnt})"
                 point_texts.append(point_text)
 
-                categorize_vectors.append((*block_rect, block_text))
-
+                # Logging
                 token_cnt_str = ""
                 if block_type == "text":
                     token_cnt_str = f"| (tokens: {token_cnt})"
@@ -163,7 +166,7 @@ class PDFExtractor:
         categorizer.run()
 
         # self.plot_text_block_rect(
-        #     categories=categorizer.labels,
+        #     categories=categorizer.categories,
         #     points=rect_centers,
         #     rects=rects,
         #     point_texts=point_texts,
@@ -191,6 +194,64 @@ class PDFExtractor:
                 img_basepath = self.image_root / f"img_{img_idx+1}"
                 self.save_image(xref, img_basepath)
                 img_idx += 1
+
+    def extract_all_text_block_dicts(self):
+        """
+        * https://pymupdf.readthedocs.io/en/latest/textpage.html#TextPage.extractDICT
+        * https://pymupdf.readthedocs.io/en/latest/textpage.html#structure-of-dictionary-outputs
+        # https://pymupdf.readthedocs.io/en/latest/_images/img-textpage.png
+
+        Data Structure of a Text Block Dict in Page Blocks:
+
+        ```json
+        {
+            "width": <float>,
+            "height": <float>,
+            "blocks": [
+                {
+                    "type": <int>,
+                    "bbox": <tuple> (4 floats),
+                    "number": <int>,
+                    "lines": [
+                        {
+                            "bbox": <tuple> (4 floats),
+                            "wmode": <int>,
+                            "dir": <tuple> (2 floats),
+                            "spans": [
+                                {
+                                    "bbox": <tuple> (4 floats),
+                                    "origin": <tuple> (2 floats),
+                                    "flags": <int>,
+                                    "size": <float>,
+                                    "font" <str>,
+                                    "color": <int>,
+                                    "ascender": <float>,
+                                    "descender": <float>,
+                                    "text": <str>
+                                },
+                                ...
+                            ]
+                        },
+                        ...
+                    ]
+                },
+                ...
+            ]
+        }
+        ```
+        """
+        for page_idx, page in islice(enumerate(self.pdf_doc), 1):
+            page_dict = page.get_text("dict")
+            page_blocks = page_dict["blocks"]
+            lines = page_blocks[0]["lines"]
+            spans = lines[0]["spans"]
+
+            logger.info(f"{len(page_blocks)} blocks")
+            logger.info(f"{len(lines)} lines")
+            logger.info(f"{len(spans)} spans")
+            for k, v in spans[0].items():
+                logger.info(f"{k}: {type(v)}")
+                logger.info(v)
 
     def replace_html_entities(self, text):
         symbols = {
@@ -228,9 +289,10 @@ class PDFExtractor:
 
     def run(self):
         # self.extract_all_texts()
-        self.extract_all_text_blocks()
+        # self.extract_all_text_blocks()
         # self.extract_toc()
         # self.extract_images()
+        self.extract_all_text_block_dicts()
 
 
 if __name__ == "__main__":

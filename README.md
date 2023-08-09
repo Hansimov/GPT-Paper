@@ -13,4 +13,4 @@ One practical method is to use clustering algorithms (such as **DBSCAN**) based 
 See my answer here:
 
 * Is there a way to delete headers/footers in PDF documents? · pymupdf/PyMuPDF · Discussion #2259
-  * https://github.com/pymupdf/PyMuPDF/discussions/2259
+  * https://github.com/pymupdf/PyMuPDF/discussions/2259#discussioncomment-6669190
