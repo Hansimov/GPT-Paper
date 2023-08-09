@@ -1,7 +1,5 @@
-import matplotlib.pyplot as plt
-
-# python -m pip install --upgrade pymupdf
 import fitz
+import matplotlib.pyplot as plt
 import shutil
 from collections import Counter
 from itertools import islice, chain

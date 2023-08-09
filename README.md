@@ -2,6 +2,27 @@
 
 Enhance paper search, reading, writing and review with the assistance of GPT.
 
+## Installation of dependencies
+
+**PyMuPDF:**
+
+```sh
+python -m pip install --upgrade pymupdf
+```
+
+**camolot-py:**
+
+Install dependencies of Camelot in Windows:
+  * https://camelot-py.readthedocs.io/en/master/user/install-deps.html
+
+Download GhostScript:
+* https://www.ghostscript.com/releases/gsdnld.html
+
+
+```sh
+python -m pip install "camelot-py[base]"
+```
+
 ## Data pre-processing
 
 ### Structure of PDF blocks
