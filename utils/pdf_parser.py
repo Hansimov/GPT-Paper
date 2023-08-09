@@ -10,6 +10,7 @@ from utils.categorizer import PDFTextBlockCategorizer
 from utils.logger import Logger, add_fillers
 from utils.tokenizer import Tokenizer
 from utils.calculator import flatten_len, kilo_count, font_flags_to_list
+from utils.table import PDFTableParser
 
 logger = Logger().logger
 
@@ -255,7 +256,7 @@ class PDFExtractor:
         }
         ```
         """
-        for page_idx, page in islice(enumerate(self.pdf_doc), 3):
+        for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
             page_dict = page.get_text("dict")
             page_blocks = page_dict["blocks"]
             logger.info(f"{len(page_blocks)} blocks")
@@ -357,13 +358,18 @@ class PDFExtractor:
         self.pdf_toc = self.pdf_doc.get_toc(simple=False)
         self.format_toc()
 
+    def extract_tables(self):
+        table_parser = PDFTableParser(self.pdf_fullpath)
+        table_parser.run()
+
     def run(self):
         # self.extract_all_texts()
         # self.extract_all_text_blocks()
         # self.extract_toc()
         # self.extract_images()
-        self.extract_all_text_block_dicts()
         # self.extract_all_text_htmls()
+        # self.extract_all_text_block_dicts()
+        self.extract_tables()
 
 
 if __name__ == "__main__":
