@@ -23,6 +23,12 @@ Download GhostScript:
 python -m pip install "camelot-py[base]"
 ```
 
+**tabula-py:**
+
+```sh
+python -m pip install --upgrade tabula-py
+```
+
 ## Data pre-processing
 
 ### Structure of PDF blocks

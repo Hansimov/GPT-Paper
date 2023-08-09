@@ -1,4 +1,5 @@
 import camelot
+import tabula
 from utils.logger import Logger
 
 logger = Logger().logger
@@ -10,14 +11,15 @@ class PDFTableParser:
 
     def extract_tables(self):
         logger.info(f"Extracting tables from: [{self.pdf_fullpath}]")
-        tables = camelot.read_pdf(
-            self.pdf_fullpath,
-            pages="7",
-            flavor="lattice",
-        )
+        # tables = camelot.read_pdf(
+        #     self.pdf_fullpath,
+        #     pages="7",
+        #     flavor="lattice",
+        # )
+        tables = tabula.read_pdf(self.pdf_fullpath, pages="all")
         logger.info(f"{len(tables)} tables found.")
         for table in tables:
-            print(table.df)
+            print(table)
 
     def run(self):
         self.extract_tables()
