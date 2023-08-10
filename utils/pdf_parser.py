@@ -7,7 +7,7 @@ from matplotlib.patches import Rectangle
 from pathlib import Path
 from termcolor import colored
 from utils.calculator import flatten_len, kilo_count, font_flags_to_list
-from utils.categorizer import PDFTextBlockCategorizer
+from utils.categorizer import BodyTextBlockCategorizer
 from utils.logger import Logger, add_fillers
 from utils.table import PDFTableExtractor
 from utils.tokenizer import Tokenizer
@@ -136,7 +136,7 @@ class PDFExtractor:
             )
         )
 
-        categorizer = PDFTextBlockCategorizer(categorize_vectors)
+        categorizer = BodyTextBlockCategorizer(categorize_vectors)
         categorizer.run()
 
         # self.plot_text_block_rect(
@@ -234,7 +234,7 @@ class PDFExtractor:
             page.get_text("dict")["blocks"]
             for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc))
         ]
-        categorizer = PDFTextBlockCategorizer(doc_blocks)
+        categorizer = BodyTextBlockCategorizer(doc_blocks)
         categorizer.run()
         self.filtered_doc_blocks = categorizer.filtered_doc_blocks
 
