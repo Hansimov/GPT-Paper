@@ -78,19 +78,50 @@ class TextBlock:
         The main font is the font with the largest number of spans.
         """
         lines = self.block["lines"]
-        font_list = []
-        fontsize_list = []
+
+        line_font_list = []
+        line_fontsize_list = []
+        old_line_font_and_size = (None, None)
         for line in lines:
+            span_font_list = []
+            span_fontsize_list = []
+            old_span_font_and_size = (None, None)
             spans = line["spans"]
+            line_text = ""
             for span in spans:
                 span_font = span["font"]
+                span_text = span["text"]
                 span_fontsize = round(span["size"], 1)
-                span_flags = span["flags"]
-                fontsize_list.append(span_fontsize)
-                font_list.append(span_font)
+                new_span_font_and_size = (span_font, span_fontsize)
+                if new_span_font_and_size != old_span_font_and_size:
+                    logger.debug(f"span: <{span_font}> <{span_fontsize}>")
+                    old_span_font_and_size = new_span_font_and_size
+
                 logger.debug(f"<font: {span_font}> <fontsize: {span_fontsize}>")
-        self.block_most_common_font = Counter(font_list).most_common(1)[0][0]
-        self.block_most_common_fontsize = Counter(fontsize_list).most_common(1)[0][0]
+                logger.debug(span["text"])
+                span_flags = span["flags"]
+                span_fontsize_list.append(span_fontsize)
+                span_font_list.append(span_font)
+                line_text += f"{span_text}"
+
+            line_font = Counter(span_font_list).most_common(1)[0][0]
+            line_fontsize = Counter(span_fontsize_list).most_common(1)[0][0]
+
+            new_line_font_and_size = (line_font, line_fontsize)
+            if new_line_font_and_size != old_line_font_and_size:
+                logger.warning(
+                    colored(f"line: <{line_font}> <{line_fontsize}>", "light_red")
+                )
+                old_line_font_and_size = new_line_font_and_size
+
+            logger.info(f"{line_text}")
+            line_font_list.append(line_font)
+            line_fontsize_list.append(line_fontsize)
+
+        self.block_most_common_font = Counter(line_font_list).most_common(1)[0][0]
+        self.block_most_common_fontsize = Counter(line_fontsize_list).most_common(1)[0][
+            0
+        ]
         return (self.block_most_common_font, self.block_most_common_fontsize)
 
     def get_block_tokens_num(self):

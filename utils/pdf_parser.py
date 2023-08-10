@@ -238,16 +238,23 @@ class PDFExtractor:
         categorizer.run()
         self.filtered_doc_blocks = categorizer.filtered_doc_blocks
 
-        for page_idx, page_blocks in enumerate(self.filtered_doc_blocks):
+        for page_idx, page_blocks in enumerate(self.filtered_doc_blocks[:9]):
             doc_blocks.append(page_blocks)
-            logger.info(f"{len(page_blocks)} blocks in Page {page_idx+1}")
+            logger.info(
+                colored(
+                    f"{len(page_blocks)} blocks in Page {page_idx+1}", "light_magenta"
+                )
+            )
             block_cnt = 0
             for block in page_blocks:
                 block_type = "text" if block["type"] == 0 else "image"
                 block_num = block["number"]
-                block_cnt = block_num + 1
+                block_cnt += 1
                 block_bbox = block["bbox"]
-                logger.info(f"<{block_type}> Block {block_cnt}")
+                logger.info(
+                    f"<{block_type}> Block {block_num}/{len(page_blocks)} "
+                    f"in Page {page_idx+1}/{len(self.filtered_doc_blocks)}"
+                )
 
                 if block_type == "text":
                     tblock = TextBlock(block)
