@@ -12,7 +12,7 @@ python -m pip install --upgrade pymupdf
 
 **camolot-py:**
 
-Install dependencies of Camelot in Windows:
+Camelot needs GhostScript and Tkinter:
   * https://camelot-py.readthedocs.io/en/master/user/install-deps.html
 
 Download GhostScript:
@@ -20,10 +20,18 @@ Download GhostScript:
 
 
 ```sh
-python -m pip install "camelot-py[base]"
+python -m pip install --upgrade "camelot-py[base]"
 ```
 
+
 **tabula-py:**
+
+Tabular needs Java:
+* https://tabula-py.readthedocs.io/en/latest/getting_started.html#get-tabula-py-working-windows-10
+
+Download Java:
+* https://www.java.com/en/download/manual.jsp
+
 
 ```sh
 python -m pip install --upgrade tabula-py
