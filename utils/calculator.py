@@ -18,3 +18,8 @@ def font_flags_to_list(flags):
         return [font_properties[i] for i, bit in enumerate(bits) if bit == 1]
 
     return bits_to_font_properties(int_to_bits(flags))
+
+
+def each_is_different(iter1, iter2):
+    # return all([i != j for i, j in zip(iter_1, iter_2)])
+    return not (set(iter1) & set(iter2))

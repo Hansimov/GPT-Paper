@@ -252,8 +252,11 @@ class PDFExtractor:
                 block_cnt += 1
                 block_bbox = block["bbox"]
                 logger.info(
-                    f"<{block_type}> Block {block_num}/{len(page_blocks)} "
-                    f"in Page {page_idx+1}/{len(self.filtered_doc_blocks)}"
+                    colored(
+                        f"<{block_type}> Block {block_num}/{len(page_blocks)} "
+                        f"in Page {page_idx+1}/{len(self.filtered_doc_blocks)}",
+                        "light_yellow",
+                    )
                 )
 
                 if block_type == "text":
@@ -263,7 +266,7 @@ class PDFExtractor:
                     block_font, block_fontsize = tblock.get_block_main_font()
                     block_tokens_num = tblock.get_block_tokens_num()
                     logger.info(f"<{block_font}> <{block_fontsize}>")
-                    logger.info(f"{block_tokens_num} tokens.")
+                    logger.info(colored(f"{block_tokens_num} tokens.", "light_green"))
                     logger.info(colored(f"{block_text}", "light_cyan"))
 
                 elif block_type == "image":

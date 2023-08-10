@@ -1,6 +1,7 @@
 import re
 from collections import Counter
 from termcolor import colored
+from utils.calculator import each_is_different
 from utils.logger import logger
 from utils.tokenizer import Tokenizer
 
@@ -108,7 +109,7 @@ class TextBlock:
             line_fontsize = Counter(span_fontsize_list).most_common(1)[0][0]
 
             new_line_font_and_size = (line_font, line_fontsize)
-            if new_line_font_and_size != old_line_font_and_size:
+            if each_is_different(new_line_font_and_size, old_line_font_and_size):
                 logger.warning(
                     colored(f"line: <{line_font}> <{line_fontsize}>", "light_red")
                 )
