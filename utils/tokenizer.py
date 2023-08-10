@@ -40,10 +40,10 @@ class Tokenizer:
             raise ValueError(f"No valid encoding for model: {self.model}")
 
     def count_tokens(self, text):
-        tokens = self.encoder.encode(text)
-        token_cnt = len(tokens)
-        logger.debug(f"{token_cnt} tokens of text: [{text}]")
-        return token_cnt
+        self.tokens = self.encoder.encode(text)
+        self.token_cnt = len(self.tokens)
+        logger.debug(f"{self.token_cnt} tokens of text: [{text}]")
+        return self.token_cnt
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ from utils.logger import Logger
 logger = Logger().logger
 
 
-class PDFTableParser:
+class PDFTableExtractor:
     def __init__(self, pdf_fullpath):
         self.pdf_fullpath = str(pdf_fullpath)
 

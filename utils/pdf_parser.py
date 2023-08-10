@@ -6,11 +6,12 @@ from itertools import islice, chain
 from matplotlib.patches import Rectangle
 from pathlib import Path
 from termcolor import colored
+from utils.calculator import flatten_len, kilo_count, font_flags_to_list
 from utils.categorizer import PDFTextBlockCategorizer
 from utils.logger import Logger, add_fillers
+from utils.table import PDFTableExtractor
 from utils.tokenizer import Tokenizer
-from utils.calculator import flatten_len, kilo_count, font_flags_to_list
-from utils.table import PDFTableParser
+from utils.text_processor import TextBlock
 
 logger = Logger().logger
 
@@ -20,10 +21,12 @@ class PDFExtractor:
     image_root = pdf_root / "images"
 
     def __init__(self):
-        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
+        # pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
         # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
-        # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
+        pdf_filename = (
+            "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
+        )
         self.pdf_fullpath = self.pdf_root / pdf_filename
         self.pdf_doc = fitz.open(self.pdf_fullpath)
 
@@ -237,7 +240,7 @@ class PDFExtractor:
 
         for page_idx, page_blocks in enumerate(self.filtered_doc_blocks):
             doc_blocks.append(page_blocks)
-            logger.info(f"{len(page_blocks)} blocks")
+            logger.info(f"{len(page_blocks)} blocks in Page {page_idx+1}")
             block_cnt = 0
             for block in page_blocks:
                 block_type = "text" if block["type"] == 0 else "image"
@@ -247,36 +250,13 @@ class PDFExtractor:
                 logger.info(f"<{block_type}> Block {block_cnt}")
 
                 if block_type == "text":
-                    lines = block["lines"]
-                    logger.debug(f"{len(lines)} lines")
-                    block_text = ""
-                    fontsize_list = []
-                    font_properties = []
-                    for line in lines:
-                        line_bbox = line["bbox"]
-                        spans = line["spans"]
-                        # logger.info(f"{len(spans)} spans")
-                        line_text = ""
-                        for span in spans:
-                            span_bbox = span["bbox"]
-                            span_origin = span["origin"]
-                            span_text = span["text"]
-                            span_font = span["font"]
-                            span_fontsize = round(span["size"], 1)
-                            span_flags = span["flags"]
-                            fontsize_list.append(span_fontsize)
-                            font_properties = font_flags_to_list(span_flags)
-                            logger.debug(
-                                f"<font: {span_font}> <fontsize: {span_fontsize}>"
-                            )
-                            logger.debug(colored(f"{span_text}", "light_cyan"))
-                            line_text += f"{span_text}"
-                        block_text += f"{line_text}\n"
-
-                    # block = block_text.replace("\n", " ")
-                    block_text = block_text.replace(" ﬁ ", "fi")
-                    most_common_fontsize = Counter(fontsize_list).most_common(1)[0][0]
-                    logger.info(f"<{most_common_fontsize}>")
+                    tblock = TextBlock(block)
+                    block_text = tblock.get_block_text()
+                    block_bbox = tblock.bbox
+                    block_font, block_fontsize = tblock.get_block_main_font()
+                    block_tokens_num = tblock.get_block_tokens_num()
+                    logger.info(f"<{block_font}> <{block_fontsize}>")
+                    logger.info(f"{block_tokens_num} tokens.")
                     logger.info(colored(f"{block_text}", "light_cyan"))
 
                 elif block_type == "image":
@@ -337,7 +317,7 @@ class PDFExtractor:
         self.format_toc()
 
     def extract_tables(self):
-        table_parser = PDFTableParser(self.pdf_fullpath)
+        table_parser = PDFTableExtractor(self.pdf_fullpath)
         table_parser.run()
 
     def run(self):

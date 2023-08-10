@@ -51,3 +51,6 @@ class Logger:
 
         self.handler.setFormatter(self.formatter)
         self.logger.addHandler(self.handler)
+
+
+logger = Logger().logger
