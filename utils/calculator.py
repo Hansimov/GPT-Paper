@@ -23,3 +23,16 @@ def font_flags_to_list(flags):
 def each_is_different(iter1, iter2):
     # return all([i != j for i, j in zip(iter_1, iter_2)])
     return not (set(iter1) & set(iter2))
+
+
+def rect_area(x0, y0, x1, y1):
+    return int(abs((y1 - y0) * (x1 - x0)))
+
+
+def char_per_pixel(char_num, rect_area):
+    return round(char_num / rect_area, 3)
+
+
+def avg_line_width(text):
+    lines = text.splitlines()
+    return int(len(text) / len(lines))
