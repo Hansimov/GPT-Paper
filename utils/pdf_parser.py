@@ -256,9 +256,11 @@ class PDFExtractor:
         }
         ```
         """
+        doc_blocks = []
         for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
             page_dict = page.get_text("dict")
             page_blocks = page_dict["blocks"]
+            doc_blocks.append(page_blocks)
             logger.info(f"{len(page_blocks)} blocks")
             block_cnt = 0
             for block in page_blocks:
@@ -317,6 +319,9 @@ class PDFExtractor:
                 else:
                     raise ValueError(f"Unknown block type: {block_type}")
 
+        categorizer = PDFTextBlockCategorizer(doc_blocks)
+        categorizer.run()
+
     def extract_all_text_htmls(self):
         html_str = ""
         for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
@@ -368,8 +373,8 @@ class PDFExtractor:
         # self.extract_toc()
         # self.extract_images()
         # self.extract_all_text_htmls()
-        # self.extract_all_text_block_dicts()
-        self.extract_tables()
+        self.extract_all_text_block_dicts()
+        # self.extract_tables()
 
 
 if __name__ == "__main__":
