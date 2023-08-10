@@ -1,8 +1,12 @@
 from itertools import chain
 
 
+def flatten(nested_list):
+    return list(chain.from_iterable(nested_list))
+
+
 def flatten_len(nested_list):
-    return len(list(chain.from_iterable(nested_list)))
+    return len(flatten(nested_list))
 
 
 def kilo_count(number, ndigits=1):

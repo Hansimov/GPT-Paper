@@ -1,6 +1,7 @@
 from collections import Counter
-from sklearn.cluster import DBSCAN
-from utils.calculator import flatten_len, rect_area
+from sklearn.cluster import DBSCAN, KMeans, OPTICS
+from termcolor import colored
+from utils.calculator import flatten, flatten_len
 from utils.logger import Logger
 from utils.text_processor import TextBlock
 import numpy as np
@@ -97,32 +98,65 @@ class FragmentedTextBlockCategorizer:
                     (
                         block_char_num,
                         block_area,
-                        block_char_per_pixel,
+                        # block_char_per_pixel,
                         block_avg_line_width,
                     )
                 )
-
         categorize_vectors = np.array(categorize_metrics)
+
+        self.categorize_metrics = categorize_metrics
         self.categorize_vectors = categorize_vectors
         logger.debug(self.categorize_vectors)
         return categorize_vectors
 
     def categorize(self):
         categorize_vectors = self.generate_categorize_vectors()
-        dbscan = DBSCAN()
+
+        dbscan = DBSCAN(eps=10)
         dbscan.fit(categorize_vectors)
         categories = dbscan.labels_
         self.n_clusters = len(np.unique(categories))
+
+        # self.n_clusters = 2
+        # kmeans = KMeans(n_clusters=self.n_clusters)
+        # kmeans.fit(categorize_vectors)
+        # categories = kmeans.labels_
+
         # category_counter = Counter(categories)
         # most_common_category = category_counter.most_common(1)[0][0]
         # categories = [
         #     0 if category == most_common_category else 1 for category in categories
         # ]
+
         self.categories = categories
 
         logger.info(
             f"{self.n_clusters} clusters for {flatten_len(self.doc_blocks)} text blocks."
         )
 
+    def display_results(self):
+        flatten_blocks = flatten(self.doc_blocks)
+        for block, category, metric in zip(
+            flatten_blocks, self.categories, self.categorize_metrics
+        ):
+            tblock = TextBlock(block)
+
+            category_color = "light_green" if category % 2 == 0 else "light_red"
+            logger.info(
+                colored(f"Category: {category} ", category_color)
+                + colored(f"{metric}", "light_cyan")
+            )
+
+            logger.info(tblock.get_block_text())
+
+        logger.info(
+            colored(
+                f"{self.n_clusters} clusters for "
+                f"{flatten_len(self.doc_blocks)} text blocks.",
+                "green",
+            )
+        )
+
     def run(self):
         self.categorize()
+        self.display_results()
