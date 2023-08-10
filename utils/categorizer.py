@@ -123,9 +123,13 @@ class FragmentedTextBlockCategorizer:
             tblock = TextBlock(self.flat_doc_blocks[i])
             block_avg_line_width = tblock.get_avg_line_width()
             block_char_num = tblock.get_char_num()
-            categorize_metrics.append((block_avg_line_width, block_char_num))
+            block_area = tblock.get_area()
+            block_fontsize = tblock.get_block_main_font()[1]
+            categorize_metrics.append(
+                (block_avg_line_width, block_char_num, block_area, block_fontsize)
+            )
 
-            if block_avg_line_width < 10 and block_char_num < 10:
+            if block_avg_line_width < 10:
                 category = 1
             else:
                 category = 0
