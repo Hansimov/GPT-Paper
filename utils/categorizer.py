@@ -1,7 +1,8 @@
 from collections import Counter
 from sklearn.cluster import DBSCAN
-from utils.calculator import flatten_len
+from utils.calculator import flatten_len, rect_area
 from utils.logger import Logger
+from utils.text_processor import TextBlock
 import numpy as np
 
 logger = Logger().logger
@@ -22,6 +23,7 @@ class BodyTextBlockCategorizer:
             [(*bbox, len(text)) for bbox, text in categorize_metrics]
         )
         self.categorize_vectors = categorize_vectors
+        logger.debug(self.categorize_vectors)
         return categorize_vectors
 
     def categorize(self):
@@ -73,3 +75,54 @@ class BodyTextBlockCategorizer:
     def run(self):
         self.categorize()
         self.get_most_common_category()
+
+
+class FragmentedTextBlockCategorizer:
+    def __init__(self, doc_blocks):
+        self.doc_blocks = doc_blocks
+
+    def generate_categorize_vectors(self):
+        categorize_metrics = []
+        for page_idx, page_blocks in enumerate(self.doc_blocks):
+            for block in page_blocks:
+                tblock = TextBlock(block)
+                block_text = tblock.get_block_text()
+                block_bbox = tblock.get_bbox()
+                block_char_num = tblock.get_char_num()
+                block_area = tblock.get_area()
+                block_char_per_pixel = tblock.get_char_per_pixel()
+                block_avg_line_width = tblock.get_avg_line_width()
+
+                categorize_metrics.append(
+                    (
+                        block_char_num,
+                        block_area,
+                        block_char_per_pixel,
+                        block_avg_line_width,
+                    )
+                )
+
+        categorize_vectors = np.array(categorize_metrics)
+        self.categorize_vectors = categorize_vectors
+        logger.debug(self.categorize_vectors)
+        return categorize_vectors
+
+    def categorize(self):
+        categorize_vectors = self.generate_categorize_vectors()
+        dbscan = DBSCAN()
+        dbscan.fit(categorize_vectors)
+        categories = dbscan.labels_
+        self.n_clusters = len(np.unique(categories))
+        # category_counter = Counter(categories)
+        # most_common_category = category_counter.most_common(1)[0][0]
+        # categories = [
+        #     0 if category == most_common_category else 1 for category in categories
+        # ]
+        self.categories = categories
+
+        logger.info(
+            f"{self.n_clusters} clusters for {flatten_len(self.doc_blocks)} text blocks."
+        )
+
+    def run(self):
+        self.categorize()
