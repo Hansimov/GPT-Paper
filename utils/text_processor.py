@@ -56,9 +56,9 @@ def regroup_blocks(blocks):
 class TextBlock:
     def __init__(self, block):
         self.block = block
-        self.lines = self.block["lines"]
-        self.spans = [spans for line in self.lines for spans in line["spans"]]
-        self.bbox = self.block["bbox"]
+        self.lines = self.get_lines()
+        self.spans = self.get_spans()
+        self.bbox = self.get_bbox()
 
     def replace_chars(self):
         chars_map = {"\s*ﬁ\s*": "fi"}
@@ -68,6 +68,14 @@ class TextBlock:
     def get_bbox(self):
         self.bbox = self.block["bbox"]
         return self.bbox
+
+    def get_lines(self):
+        self.lines = self.block["lines"]
+        return self.lines
+
+    def get_spans(self):
+        self.spans = [spans for line in self.lines for spans in line["spans"]]
+        return self.spans
 
     def get_area(self):
         self.area = rect_area(*self.bbox)
@@ -100,8 +108,7 @@ class TextBlock:
 
     def get_block_main_font(self):
         """
-        Get the main font of a block.
-        The main font is the font with the largest number of spans.
+        return (font, fontsize)
         """
         lines = self.block["lines"]
 
