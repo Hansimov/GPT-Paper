@@ -1,7 +1,12 @@
 import re
 from collections import Counter
 from termcolor import colored
-from utils.calculator import each_is_different
+from utils.calculator import (
+    each_is_different,
+    rect_area,
+    avg_line_width,
+    char_per_pixel,
+)
 from utils.logger import logger
 from utils.tokenizer import Tokenizer
 
@@ -39,7 +44,7 @@ def text_blocks_to_paragraphs(blocks):
     pass
 
 
-def regroup_blocks(self):
+def regroup_blocks(blocks):
     """
     1. Concatenate last block of page[i] and first block of page[i+1],
        if they are in the same paragraph.
@@ -60,6 +65,18 @@ class TextBlock:
         for k, v in chars_map.items():
             self.block_text = re.sub(k, v, self.block_text)
 
+    def get_bbox(self):
+        self.bbox = self.block["bbox"]
+        return self.bbox
+
+    def get_area(self):
+        self.area = rect_area(*self.bbox)
+        return self.area
+
+    def get_char_per_pixel(self):
+        self.char_per_pixel = char_per_pixel(self.get_char_num(), self.get_area())
+        return self.char_per_pixel
+
     def get_block_text(self):
         block_text = ""
         for line in self.lines:
@@ -72,6 +89,14 @@ class TextBlock:
         self.block_text = block_text
         self.replace_chars()
         return self.block_text
+
+    def get_avg_line_width(self):
+        self.avg_line_width = avg_line_width(self.get_block_text())
+        return self.avg_line_width
+
+    def get_char_num(self):
+        self.char_num = len(self.get_block_text())
+        return self.char_num
 
     def get_block_main_font(self):
         """
