@@ -116,6 +116,25 @@ class FragmentedTextBlockCategorizer:
         logger.debug(self.categorize_vectors)
         return categorize_vectors
 
+    def categorize_by_rules(self):
+        categorize_metrics = []
+        categories = []
+        for i in range(len(self.flat_doc_blocks)):
+            tblock = TextBlock(self.flat_doc_blocks[i])
+            block_avg_line_width = tblock.get_avg_line_width()
+            block_char_num = tblock.get_char_num()
+            categorize_metrics.append((block_avg_line_width, block_char_num))
+
+            if block_avg_line_width < 10 and block_char_num < 10:
+                category = 1
+            else:
+                category = 0
+            categories.append(category)
+
+        self.categories = categories
+        self.n_clusters = len(np.unique(categories))
+        self.categorize_metrics = categorize_metrics
+
     def categorize(self):
         categorize_vectors = self.generate_categorize_vectors()
 
@@ -184,6 +203,8 @@ class FragmentedTextBlockCategorizer:
         colors = get_cmap(sc.cmap.name).colors
 
         plt.show()
+
     def run(self):
-        self.categorize()
+        # self.categorize()
+        self.categorize_by_rules()
         self.display_results()
