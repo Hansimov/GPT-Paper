@@ -5,6 +5,8 @@ from utils.calculator import flatten, flatten_len
 from utils.logger import Logger
 from utils.text_processor import TextBlock
 import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.cm import get_cmap
 
 logger = Logger().logger
 
@@ -81,6 +83,7 @@ class BodyTextBlockCategorizer:
 class FragmentedTextBlockCategorizer:
     def __init__(self, doc_blocks):
         self.doc_blocks = doc_blocks
+        self.flat_doc_blocks = flatten(doc_blocks)
 
     def generate_categorize_vectors(self):
         categorize_metrics = []
@@ -89,17 +92,21 @@ class FragmentedTextBlockCategorizer:
                 tblock = TextBlock(block)
                 block_text = tblock.get_block_text()
                 block_bbox = tblock.get_bbox()
+                block_line_num = len(tblock.get_lines())
                 block_char_num = tblock.get_char_num()
                 block_area = tblock.get_area()
                 block_char_per_pixel = tblock.get_char_per_pixel()
                 block_avg_line_width = tblock.get_avg_line_width()
+                block_main_fontsize = tblock.get_block_main_font()[1]
 
                 categorize_metrics.append(
                     (
                         block_char_num,
-                        block_area,
-                        # block_char_per_pixel,
                         block_avg_line_width,
+                        # block_main_fontsize,
+                        # block_line_num,
+                        # block_area,
+                        block_char_per_pixel,
                     )
                 )
         categorize_vectors = np.array(categorize_metrics)
@@ -112,21 +119,21 @@ class FragmentedTextBlockCategorizer:
     def categorize(self):
         categorize_vectors = self.generate_categorize_vectors()
 
-        dbscan = DBSCAN(eps=10)
+        dbscan = DBSCAN()
         dbscan.fit(categorize_vectors)
         categories = dbscan.labels_
         self.n_clusters = len(np.unique(categories))
 
-        # self.n_clusters = 2
+        # self.n_clusters = 4
         # kmeans = KMeans(n_clusters=self.n_clusters)
         # kmeans.fit(categorize_vectors)
         # categories = kmeans.labels_
 
-        # category_counter = Counter(categories)
-        # most_common_category = category_counter.most_common(1)[0][0]
-        # categories = [
-        #     0 if category == most_common_category else 1 for category in categories
-        # ]
+        category_counter = Counter(categories)
+        most_common_category = category_counter.most_common(1)[0][0]
+        categories = [
+            0 if category == most_common_category else 1 for category in categories
+        ]
 
         self.categories = categories
 
@@ -149,6 +156,9 @@ class FragmentedTextBlockCategorizer:
 
             logger.info(tblock.get_block_text())
 
+        category_counter = Counter(self.categories)
+        logger.info(f"Most common categories: {category_counter.most_common(3)}")
+
         logger.info(
             colored(
                 f"{self.n_clusters} clusters for "
@@ -157,6 +167,23 @@ class FragmentedTextBlockCategorizer:
             )
         )
 
+    def plot_results(self):
+        fig = plt.figure()
+        ax = fig.add_subplot(111, projection="3d")
+        sc = ax.scatter(
+            self.categorize_vectors[:, 0],
+            self.categorize_vectors[:, 1],
+            self.categorize_vectors[:, 2],
+            c=self.categories,
+        )
+
+        ax.set_xlabel("Char Num")
+        ax.set_ylabel("Avg Line Width")
+        ax.set_zlabel("Char per Pix")
+        ax.legend(*sc.legend_elements(), loc="upper right", title="Categories")
+        colors = get_cmap(sc.cmap.name).colors
+
+        plt.show()
     def run(self):
         self.categorize()
         self.display_results()
