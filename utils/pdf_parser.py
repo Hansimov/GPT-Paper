@@ -20,8 +20,8 @@ class PDFExtractor:
     image_root = pdf_root / "images"
 
     def __init__(self):
-        # pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
-        pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
+        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
+        # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
         # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
         self.pdf_fullpath = self.pdf_root / pdf_filename
@@ -321,6 +321,7 @@ class PDFExtractor:
 
         categorizer = PDFTextBlockCategorizer(doc_blocks)
         categorizer.run()
+        filtered_doc_blocks = categorizer.filtered_doc_blocks
 
     def extract_all_text_htmls(self):
         html_str = ""
