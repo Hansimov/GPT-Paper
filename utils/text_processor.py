@@ -83,7 +83,12 @@ class TextBlock:
         line_font_list = []
         line_fontsize_list = []
         old_line_font_and_size = (None, None)
+
+        line_font_counter = Counter()
+        line_fontsize_counter = Counter()
         for line in lines:
+            span_font_counter = Counter()
+            span_fontsize_counter = Counter()
             span_font_list = []
             span_fontsize_list = []
             old_span_font_and_size = (None, None)
@@ -104,9 +109,11 @@ class TextBlock:
                 span_fontsize_list.append(span_fontsize)
                 span_font_list.append(span_font)
                 line_text += f"{span_text}"
+                span_font_counter.update({span_font: len(span_text)})
+                span_fontsize_counter.update({span_fontsize: len(span_text)})
 
-            line_font = Counter(span_font_list).most_common(1)[0][0]
-            line_fontsize = Counter(span_fontsize_list).most_common(1)[0][0]
+            line_font = span_font_counter.most_common(1)[0][0]
+            line_fontsize = span_fontsize_counter.most_common(1)[0][0]
 
             new_line_font_and_size = (line_font, line_fontsize)
             if each_is_different(new_line_font_and_size, old_line_font_and_size):
@@ -118,11 +125,11 @@ class TextBlock:
             logger.info(f"{line_text}")
             line_font_list.append(line_font)
             line_fontsize_list.append(line_fontsize)
+            line_font_counter.update({line_font: len(line_text)})
+            line_fontsize_counter.update({line_fontsize: len(line_text)})
 
-        self.block_most_common_font = Counter(line_font_list).most_common(1)[0][0]
-        self.block_most_common_fontsize = Counter(line_fontsize_list).most_common(1)[0][
-            0
-        ]
+        self.block_most_common_font = line_font_counter.most_common(1)[0][0]
+        self.block_most_common_fontsize = line_fontsize_counter.most_common(1)[0][0]
         return (self.block_most_common_font, self.block_most_common_fontsize)
 
     def get_block_tokens_num(self):
