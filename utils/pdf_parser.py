@@ -58,35 +58,6 @@ class PDFExtractor:
             plt.annotate(point_texts[i], rect_center)
         plt.show()
 
-    def remove_no_body_text_blocks(self, doc_blocks, categories):
-        categories_by_page = []
-        start = 0
-        for page_blocks in doc_blocks:
-            end = start + len(page_blocks)
-            categories_by_page.append(categories[start:end])
-            start = end
-
-        filtered_doc_blocks = []
-        for i in range(len(doc_blocks)):
-            page_blocks = doc_blocks[i]
-            page_categories = categories_by_page[i]
-            filtered_page_blocks = [
-                block for j, block in enumerate(page_blocks) if page_categories[j] == 0
-            ]
-            filtered_doc_blocks.append(filtered_page_blocks)
-            len_removed_blocks = len(page_blocks) - len(filtered_page_blocks)
-            logger.debug(
-                f"  [-] {len_removed_blocks} headers/footers "
-                f"({len(page_blocks):>2} -> {len(filtered_page_blocks):>2}) "
-                f"removed in Page {i+1} "
-            )
-
-        len_filtered_doc_blocks = flatten_len(filtered_doc_blocks)
-        len_doc_blocks = flatten_len(doc_blocks)
-        logger.info(f"{len_filtered_doc_blocks} blocks remained of {len_doc_blocks}.")
-
-        return filtered_doc_blocks
-
     def extract_all_text_blocks(self):
         # * https://pymupdf.readthedocs.io/en/latest/textpage.html#TextPage.extractBLOCKS
 
@@ -256,10 +227,15 @@ class PDFExtractor:
         }
         ```
         """
-        doc_blocks = []
-        for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
-            page_dict = page.get_text("dict")
-            page_blocks = page_dict["blocks"]
+        doc_blocks = [
+            page.get_text("dict")["blocks"]
+            for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc))
+        ]
+        categorizer = PDFTextBlockCategorizer(doc_blocks)
+        categorizer.run()
+        self.filtered_doc_blocks = categorizer.filtered_doc_blocks
+
+        for page_idx, page_blocks in enumerate(self.filtered_doc_blocks):
             doc_blocks.append(page_blocks)
             logger.info(f"{len(page_blocks)} blocks")
             block_cnt = 0
@@ -318,10 +294,6 @@ class PDFExtractor:
                     )
                 else:
                     raise ValueError(f"Unknown block type: {block_type}")
-
-        categorizer = PDFTextBlockCategorizer(doc_blocks)
-        categorizer.run()
-        filtered_doc_blocks = categorizer.filtered_doc_blocks
 
     def extract_all_text_htmls(self):
         html_str = ""
