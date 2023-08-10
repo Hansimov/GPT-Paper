@@ -6,8 +6,15 @@ from itertools import islice, chain
 from matplotlib.patches import Rectangle
 from pathlib import Path
 from termcolor import colored
-from utils.calculator import flatten_len, kilo_count, font_flags_to_list
-from utils.categorizer import BodyTextBlockCategorizer
+from utils.calculator import (
+    flatten_len,
+    kilo_count,
+    font_flags_to_list,
+    rect_area,
+    char_per_pixel,
+    avg_line_width,
+)
+from utils.categorizer import BodyTextBlockCategorizer, FragmentedTextBlockCategorizer
 from utils.logger import Logger, add_fillers
 from utils.table import PDFTableExtractor
 from utils.tokenizer import Tokenizer
@@ -184,7 +191,7 @@ class PDFExtractor:
             "height": <float>,
             "blocks": [
                 {
-                    "type": <int> (0),
+                    "type": <int> (0), // "text"
                     "bbox": <tuple> (4 floats),
                     "number": <int> (start from 0),
                     "lines": [
@@ -211,7 +218,7 @@ class PDFExtractor:
                     ]
                 },
                 {
-                    "type": <int> (1),
+                    "type": <int> (1), // "image"
                     "bbox": <tuple> (4 floats),
                     "number": <int>,
                     "width": <float>,
@@ -234,9 +241,24 @@ class PDFExtractor:
             page.get_text("dict")["blocks"]
             for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc))
         ]
-        categorizer = BodyTextBlockCategorizer(doc_blocks)
-        categorizer.run()
-        self.filtered_doc_blocks = categorizer.filtered_doc_blocks
+        body_text_block_categorizer = BodyTextBlockCategorizer(doc_blocks)
+        body_text_block_categorizer.run()
+        self.filtered_doc_blocks = body_text_block_categorizer.filtered_doc_blocks
+
+        filtered_doc_text_blocks = [
+            [block for block in page_blocks if block["type"] == 0]
+            for page_blocks in self.filtered_doc_blocks
+        ]
+        logger.info(
+            f"{flatten_len(filtered_doc_text_blocks)} text blocks in {flatten_len(self.filtered_doc_blocks)} blocks."
+        )
+
+        fragmented_text_block_categorizer = FragmentedTextBlockCategorizer(
+            filtered_doc_text_blocks
+        )
+        fragmented_text_block_categorizer.run()
+
+        return
 
         for page_idx, page_blocks in enumerate(self.filtered_doc_blocks[:9]):
             doc_blocks.append(page_blocks)
@@ -251,6 +273,8 @@ class PDFExtractor:
                 block_num = block["number"]
                 block_cnt += 1
                 block_bbox = block["bbox"]
+                block_area = rect_area(*block_bbox)
+
                 logger.info(
                     colored(
                         f"<{block_type}> Block {block_num}/{len(page_blocks)} "
@@ -265,7 +289,15 @@ class PDFExtractor:
                     block_bbox = tblock.bbox
                     block_font, block_fontsize = tblock.get_block_main_font()
                     block_tokens_num = tblock.get_block_tokens_num()
-                    logger.info(f"<{block_font}> <{block_fontsize}>")
+                    block_density = char_per_pixel(len(block_text), block_area)
+                    logger.info(
+                        colored(
+                            f"<{block_font}> <{block_fontsize}> "
+                            f"({len(block_text)}/{block_area}) ({block_density}) "
+                            f"({avg_line_width(block_text)})",
+                            "light_magenta",
+                        )
+                    )
                     logger.info(colored(f"{block_tokens_num} tokens.", "light_green"))
                     logger.info(colored(f"{block_text}", "light_cyan"))
 
