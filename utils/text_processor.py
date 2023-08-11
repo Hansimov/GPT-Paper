@@ -107,7 +107,7 @@ class TextBlock:
         return self.char_per_pixel
 
     def get_avg_line_width(self):
-        self.avg_line_width = avg_line_width(self.get_block_text().replace("\n", ""))
+        self.avg_line_width = avg_line_width(self.get_block_text())
         return self.avg_line_width
 
     def get_block_main_font(self) -> Tuple[str, float]:
