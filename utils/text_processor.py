@@ -1,6 +1,7 @@
 import re
 from collections import Counter
 from termcolor import colored
+from typing import Tuple
 from utils.calculator import (
     each_is_different,
     rect_area,
@@ -109,7 +110,7 @@ class TextBlock:
         self.avg_line_width = avg_line_width(self.get_block_text().replace("\n", ""))
         return self.avg_line_width
 
-    def get_block_main_font(self) -> tuple(str, float):
+    def get_block_main_font(self) -> Tuple[str, float]:
         """return (font, fontsize)"""
         lines = self.block["lines"]
 

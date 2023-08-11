@@ -286,7 +286,7 @@ class PDFExtractor:
                 if block_type == "text":
                     tblock = TextBlock(block)
                     block_text = tblock.get_block_text()
-                    block_bbox = tblock.bbox
+                    block_bbox = tblock.get_bbox()
                     block_font, block_fontsize = tblock.get_block_main_font()
                     block_tokens_num = tblock.get_block_tokens_num()
                     block_density = char_per_pixel(len(block_text), block_area)
