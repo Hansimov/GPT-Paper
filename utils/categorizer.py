@@ -1,7 +1,14 @@
 from collections import Counter
 from sklearn.cluster import DBSCAN, KMeans, OPTICS
 from termcolor import colored
-from utils.calculator import flatten, flatten_len
+from utils.calculator import (
+    flatten,
+    flatten_len,
+    get_neighbors,
+    weighted_avg,
+    closest_category,
+    distribute_weights,
+)
 from utils.logger import Logger
 from utils.text_processor import TextBlock
 import numpy as np
@@ -119,20 +126,38 @@ class FragmentedTextBlockCategorizer:
     def categorize_by_rules(self):
         categorize_metrics = []
         categories = []
+        self.category_enums = [0, 0.5, 1]
+        self.category_colors = {
+            0: "light_red",
+            0.5: "light_yellow",
+            1: "light_green",
+        }
+
         for i in range(len(self.flat_doc_blocks)):
             tblock = TextBlock(self.flat_doc_blocks[i])
             block_avg_line_width = tblock.get_avg_line_width()
             block_char_num = tblock.get_char_num()
+            block_line_num = tblock.get_line_num()
             block_area = tblock.get_area()
             block_fontsize = tblock.get_block_main_font()[1]
+            block_bbox = tblock.get_bbox()
             categorize_metrics.append(
-                (block_avg_line_width, block_char_num, block_area, block_fontsize)
+                {
+                    "LW": block_avg_line_width,
+                    "CH": block_char_num,
+                    "AR": block_area,
+                    "FS": block_fontsize,
+                    # "BX": block_bbox,
+                }
             )
 
+            # This idea is inspected by ReLU
             if block_avg_line_width < 10:
-                category = 1
+                category = self.category_enums[0]  # Table
+            elif block_avg_line_width < 20:
+                category = self.category_enums[1]  # Not sure
             else:
-                category = 0
+                category = self.category_enums[2]  # Body Text
             categories.append(category)
 
         self.categories = categories
@@ -169,12 +194,12 @@ class FragmentedTextBlockCategorizer:
         for block, category, metric in zip(
             flatten_blocks, self.categories, self.categorize_metrics
         ):
+            metric_str = ", ".join(f"{k}={v}" for k, v in metric.items())
             tblock = TextBlock(block)
 
-            category_color = "light_green" if category % 2 == 0 else "light_red"
             logger.info(
-                colored(f"Category: {category} ", category_color)
-                + colored(f"{metric}", "light_cyan")
+                colored(f"Category: {category} ", self.category_colors[category])
+                + colored(f"({metric_str})", "light_cyan")
             )
 
             logger.info(tblock.get_block_text())
@@ -209,6 +234,6 @@ class FragmentedTextBlockCategorizer:
         plt.show()
 
     def run(self):
-        # self.categorize()
+        # self.categorize_by_dbscan()
         self.categorize_by_rules()
         self.display_results()
