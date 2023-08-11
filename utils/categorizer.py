@@ -152,10 +152,10 @@ class FragmentedTextBlockCategorizer:
             )
 
             # This idea is inspected by ReLU
-            if block_avg_line_width < 10:
+            if block_avg_line_width <= 10:
                 category = self.category_enums[0]  # Table
             elif block_avg_line_width < 20:
-                category = self.category_enums[1]  # Not sure
+                category = (block_avg_line_width - 10) / (20 - 10)  # Not sure
             else:
                 category = self.category_enums[2]  # Body Text
             categories.append(category)
@@ -239,9 +239,19 @@ class FragmentedTextBlockCategorizer:
                             for idx, category in enumerate(neighbor_blocks_categories)
                         )
 
+                        old_category_color = (
+                            "light_yellow"
+                            if old_category not in [0, 1]
+                            else self.category_colors[old_category]
+                        )
+                        new_category_color = (
+                            "light_yellow"
+                            if new_category not in [0, 1]
+                            else self.category_colors[new_category]
+                        )
                         logger.info(
-                            f"Category [{colored(old_category,self.category_colors[old_category])} "
-                            f"-> {colored(new_category,self.category_colors[new_category])}] "
+                            f"Category [{colored(old_category,old_category_color)} "
+                            f"-> {colored(new_category,new_category_color)}] "
                             f"({round(avg_category,2)})"
                         )
                         logger.debug(f"{neighbor_blocks_weights}")
@@ -282,9 +292,13 @@ class FragmentedTextBlockCategorizer:
         ):
             metric_str = ", ".join(f"{k}={v}" for k, v in metric.items())
             tblock = TextBlock(block)
-
+            category_color = (
+                "light_yellow"
+                if category not in [0, 1]
+                else self.category_colors[category]
+            )
             logger.info(
-                colored(f"Category: {category} ", self.category_colors[category])
+                colored(f"Category: {category} ", category_color)
                 + colored(f"({metric_str})", "light_cyan")
             )
 
