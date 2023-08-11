@@ -164,7 +164,57 @@ class FragmentedTextBlockCategorizer:
         self.n_clusters = len(np.unique(categories))
         self.categorize_metrics = categorize_metrics
 
-    def categorize(self):
+    def recategorize_by_neighbors(self):
+        new_categories = []
+        block_idx_offset_in_doc = 0
+        for page_idx, page_blocks in enumerate(self.doc_blocks):
+            page_tblocks = [TextBlock(block) for block in page_blocks]
+            for block_idx, tblock in enumerate(page_tblocks):
+                block_idx_in_doc = block_idx + block_idx_offset_in_doc
+                neighbor_idxs, neighbor_tblocks = get_neighbors(
+                    i=block_idx, elements=page_tblocks, n=8, include_i=True
+                )
+                neighbor_blocks_categories = [
+                    self.categories[block_idx_offset_in_doc + idx]
+                    for idx in neighbor_idxs
+                ]
+                neighbor_blocks_weights = distribute_weights(
+                    [1 for tblock in neighbor_tblocks], distribution="linear"
+                )
+
+                avg_category = weighted_avg(
+                    neighbor_blocks_categories, neighbor_blocks_weights
+                )
+                self.reduced_category_enums = [self.category_enums[i] for i in [0, -1]]
+                new_category = closest_category(
+                    avg_category, self.reduced_category_enums
+                )
+
+                old_category = self.categories[block_idx_in_doc]
+                if new_category != old_category:
+                    neighbor_blocks_categories_str = ", ".join(
+                        colored(category, self.category_colors[category])
+                        for idx, category in enumerate(neighbor_blocks_categories)
+                    )
+
+                    logger.info(
+                        colored(
+                            f"Category [{colored(old_category,self.category_colors[old_category])} "
+                            f"-> {colored(new_category,self.category_colors[new_category])}] "
+                            f"of Block {block_idx}/{len(page_blocks)} "
+                            f"in Page {page_idx+1}/{len(self.doc_blocks)}",
+                            "light_cyan",
+                        )
+                    )
+                    logger.info(
+                        f"[{neighbor_blocks_categories_str}] ({round(avg_category,2)})"
+                    )
+                    logger.info(f"{neighbor_blocks_weights}")
+                    logger.info(f"{tblock.get_block_text()}")
+
+            block_idx_offset_in_doc += len(page_blocks)
+
+    def categorize_by_dbscan(self):
         categorize_vectors = self.generate_categorize_vectors()
 
         dbscan = DBSCAN()
@@ -237,3 +287,4 @@ class FragmentedTextBlockCategorizer:
         # self.categorize_by_dbscan()
         self.categorize_by_rules()
         self.display_results()
+        self.recategorize_by_neighbors()
