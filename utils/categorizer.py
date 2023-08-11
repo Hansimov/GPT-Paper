@@ -170,46 +170,82 @@ class FragmentedTextBlockCategorizer:
         for page_idx, page_blocks in enumerate(self.doc_blocks):
             page_tblocks = [TextBlock(block) for block in page_blocks]
             for block_idx, tblock in enumerate(page_tblocks):
+                logger.debug(
+                    colored(
+                        f"Block {block_idx+1}/{len(page_blocks)} "
+                        f"in Page {page_idx+1}/{len(self.doc_blocks)}",
+                        "light_cyan",
+                    )
+                )
                 block_idx_in_doc = block_idx + block_idx_offset_in_doc
-                neighbor_idxs, neighbor_tblocks = get_neighbors(
-                    i=block_idx, elements=page_tblocks, n=8, include_i=True
+                neighbor_idxs, neighbor_tblocks, idx_in_neighbors = get_neighbors(
+                    i=block_idx, elements=page_tblocks, n=7, include_i=True
                 )
                 neighbor_blocks_categories = [
                     self.categories[block_idx_offset_in_doc + idx]
                     for idx in neighbor_idxs
                 ]
-                neighbor_blocks_weights = distribute_weights(
-                    [1 for tblock in neighbor_tblocks], distribution="linear"
-                )
 
-                avg_category = weighted_avg(
-                    neighbor_blocks_categories, neighbor_blocks_weights
-                )
+                neighbor_blocks_weights_list = [
+                    distribute_weights(
+                        [tblock_func(tblock) for tblock in neighbor_tblocks],
+                        distribution=distribution,
+                        center_idx=idx_in_neighbors,
+                    )
+                    for tblock_func in [
+                        lambda x: 1,
+                        lambda x: x.get_line_num(),
+                        lambda x: x.get_char_num(),
+                    ]
+                    for distribution in ["normal", "linear", None]
+                ]
                 self.reduced_category_enums = [self.category_enums[i] for i in [0, -1]]
-                new_category = closest_category(
-                    avg_category, self.reduced_category_enums
-                )
-
                 old_category = self.categories[block_idx_in_doc]
-                if new_category != old_category:
-                    neighbor_blocks_categories_str = ", ".join(
-                        colored(category, self.category_colors[category])
-                        for idx, category in enumerate(neighbor_blocks_categories)
+
+                new_category_under_different_weights = []
+                category_same_under_different_weights = []
+                avg_category_under_different_weights = []
+
+                for neighbor_blocks_weights in neighbor_blocks_weights_list:
+                    avg_category = weighted_avg(
+                        neighbor_blocks_categories, neighbor_blocks_weights
+                    )
+                    new_category = closest_category(
+                        avg_category, self.reduced_category_enums
                     )
 
+                    avg_category_under_different_weights.append(avg_category)
+                    new_category_under_different_weights.append(new_category)
+
+                    category_same_under_different_weights.append(
+                        new_category == old_category
+                    )
+
+                if not all(category_same_under_different_weights):
                     logger.info(
                         colored(
-                            f"Category [{colored(old_category,self.category_colors[old_category])} "
-                            f"-> {colored(new_category,self.category_colors[new_category])}] "
-                            f"of Block {block_idx}/{len(page_blocks)} "
+                            f"Block {block_idx+1}/{len(page_blocks)} "
                             f"in Page {page_idx+1}/{len(self.doc_blocks)}",
                             "light_cyan",
                         )
                     )
-                    logger.info(
-                        f"[{neighbor_blocks_categories_str}] ({round(avg_category,2)})"
-                    )
-                    logger.info(f"{neighbor_blocks_weights}")
+
+                    for i in range(len(neighbor_blocks_weights_list)):
+                        avg_category = avg_category_under_different_weights[i]
+                        new_category = new_category_under_different_weights[i]
+                        neighbor_blocks_categories_str = ", ".join(
+                            # colored(f"{category}", self.category_colors[category])
+                            f"{category}"
+                            for idx, category in enumerate(neighbor_blocks_categories)
+                        )
+
+                        logger.info(
+                            f"Category [{colored(old_category,self.category_colors[old_category])} "
+                            f"-> {colored(new_category,self.category_colors[new_category])}] "
+                            f"({round(avg_category,2)})"
+                        )
+                        logger.debug(f"{neighbor_blocks_weights}")
+                    logger.info(f"[{neighbor_blocks_categories_str}]")
                     logger.info(f"{tblock.get_block_text()}")
 
             block_idx_offset_in_doc += len(page_blocks)
