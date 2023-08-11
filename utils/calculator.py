@@ -1,4 +1,5 @@
 from itertools import chain
+from utils.logger import logger
 import numpy as np
 
 
@@ -87,33 +88,44 @@ def weighted_sum(values, weights):
     return sum([v * w for v, w in zip(values, weights)])
 
 
-def distribute_weights(weights, distribution=None):
+def distribute_weights(weights, distribution=None, center_idx=None):
     n = len(weights)
 
-    if distribution == "normal":
-        seq = np.linspace(-n / 2, n / 2, n)
-        scales = np.exp(-(seq**2) / (n**2))
-        weights = weights * scales
-    elif distribution == "linear":
-        if n % 2 == 0:
-            scales = np.concatenate(
-                (
-                    np.linspace(0.5, 1, n // 2),
-                    np.linspace(1, 0.5, n // 2),
-                )
-            )
-        else:
-            scales = np.concatenate(
-                (
-                    np.linspace(0.5, 1, n // 2 + 1),
-                    np.linspace(0.5, 1, n // 2 + 1)[::-1][1:],
-                )
-            )
-        weights = weights * scales
-    else:
-        pass
+    if center_idx == None:
+        # if n is even, one more before than after for center element
+        center_idx = n // 2
 
-    weights /= np.sum(weights)
+    n_before = center_idx
+    n_after = (n - 1) - center_idx
+
+    if distribution == "normal":
+        seq = np.concatenate(
+            (
+                np.linspace(0, n_before, n_before + 1)[1:][::-1],
+                [0],
+                np.linspace(0, n_after, n_after + 1)[1:],
+            )
+        )
+        scales = np.exp(-seq / n)
+    elif distribution == "linear":
+        linear_min = 0.25
+        scales = np.concatenate(
+            (
+                np.linspace(1, linear_min, n_before + 1)[1:][::-1],
+                [1],
+                np.linspace(1, linear_min, n_after + 1)[1:],
+            )
+        )
+
+    else:
+        scales = np.ones(n)
+
+    logger.debug(center_idx)
+    logger.debug(weights)
+    logger.debug(scales)
+    scales = scales.reshape(1, len(weights)).flatten()
+    weights = weights * scales
+    weights = weights / np.sum(weights)
 
     return weights
 
