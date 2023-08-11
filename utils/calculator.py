@@ -33,6 +33,10 @@ def rect_area(x0, y0, x1, y1):
     return int(abs((y1 - y0) * (x1 - x0)))
 
 
+def rect_center(x0, y0, x1, y1):
+    return (x0 + x1) // 2, (y0 + y1) // 2
+
+
 def char_per_pixel(char_num, rect_area):
     return round(char_num / rect_area, 3)
 
@@ -40,3 +44,39 @@ def char_per_pixel(char_num, rect_area):
 def avg_line_width(text):
     lines = text.splitlines()
     return int(len(text) / len(lines))
+
+
+def get_neighbors(i, elements, n=5, include_i=True):
+    list_len = len(elements)
+
+    if list_len <= n + 1:
+        if include_i:
+            neighbor_idxs = list(range(0, list_len))
+        else:
+            neighbor_idxs = list(range(0, i)) + list(range(i + 1, list_len))
+    else:
+        n_after = n // 2
+        # if n is odd, before element is one more than after element
+        n_before = n - n_after
+
+        if n_before > i:
+            n_before = i
+            n_after = n - n_before
+        elif n_after > (list_len - 1) - i:
+            n_after = (list_len - 1) - i
+            n_before = n - n_after
+        else:
+            pass
+
+    if include_i:
+        neighbor_idxs = list(range(i - n_before, i + 1 + n_after))
+    else:
+        neighbor_idxs = list(range(i - n_before, i)) + list(
+            range(i + 1, i + 1 + n_after)
+        )
+    neighbor_elements = [elements[idx] for idx in neighbor_idxs]
+    return neighbor_idxs, neighbor_elements
+
+
+def weighted_sum(values, weights):
+    return sum([v * w for v, w in zip(values, weights)])
