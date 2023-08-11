@@ -60,30 +60,9 @@ class TextBlock:
         self.spans = self.get_spans()
         self.bbox = self.get_bbox()
 
-    def replace_chars(self):
-        chars_map = {"\s*ﬁ\s*": "fi"}
-        for k, v in chars_map.items():
-            self.block_text = re.sub(k, v, self.block_text)
-
     def get_bbox(self):
         self.bbox = self.block["bbox"]
         return self.bbox
-
-    def get_lines(self):
-        self.lines = self.block["lines"]
-        return self.lines
-
-    def get_spans(self):
-        self.spans = [spans for line in self.lines for spans in line["spans"]]
-        return self.spans
-
-    def get_area(self):
-        self.area = rect_area(*self.bbox)
-        return self.area
-
-    def get_char_per_pixel(self):
-        self.char_per_pixel = char_per_pixel(self.get_char_num(), self.get_area())
-        return self.char_per_pixel
 
     def get_block_text(self):
         block_text = ""
@@ -98,18 +77,40 @@ class TextBlock:
         self.replace_chars()
         return self.block_text
 
-    def get_avg_line_width(self):
-        self.avg_line_width = avg_line_width(self.get_block_text())
-        return self.avg_line_width
+    def get_lines(self):
+        self.lines = self.block["lines"]
+        return self.lines
+
+    def get_spans(self):
+        self.spans = [spans for line in self.lines for spans in line["spans"]]
+        return self.spans
+
+    def get_line_num(self):
+        self.line_num = len(self.block["lines"])
+        return self.line_num
+
+    def get_span_num(self):
+        self.span_num = len(self.get_spans())
+        return self.span_num
 
     def get_char_num(self):
-        self.char_num = len(self.get_block_text())
+        self.char_num = len(self.get_block_text().replace("\n", ""))
         return self.char_num
 
-    def get_block_main_font(self):
-        """
-        return (font, fontsize)
-        """
+    def get_area(self):
+        self.area = rect_area(*self.bbox)
+        return self.area
+
+    def get_char_per_pixel(self):
+        self.char_per_pixel = char_per_pixel(self.get_char_num(), self.get_area())
+        return self.char_per_pixel
+
+    def get_avg_line_width(self):
+        self.avg_line_width = avg_line_width(self.get_block_text().replace("\n", ""))
+        return self.avg_line_width
+
+    def get_block_main_font(self) -> tuple(str, float):
+        """return (font, fontsize)"""
         lines = self.block["lines"]
 
         line_font_list = []
@@ -168,3 +169,8 @@ class TextBlock:
         tokenizer = Tokenizer()
         self.tokens_num = tokenizer.count_tokens(self.block_text.replace("\n", " "))
         return self.tokens_num
+
+    def replace_chars(self):
+        chars_map = {"\s*ﬁ\s*": "fi"}
+        for k, v in chars_map.items():
+            self.block_text = re.sub(k, v, self.block_text)
