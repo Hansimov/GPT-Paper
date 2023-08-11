@@ -56,18 +56,20 @@ def get_neighbors(i, elements, n=5, include_i=True):
         else:
             neighbor_idxs = list(range(0, i)) + list(range(i + 1, list_len))
     else:
-        n_after = n // 2
         # if n is odd, before element is one more than after element
-        n_before = n - n_after
+        n_before = n // 2
+        n_after = (n - 1) - n_before
 
-        if n_before > i:
+        if i < n_before:
             n_before = i
-            n_after = n - n_before
-        elif n_after > (list_len - 1) - i:
+            n_after = (n - 1) - n_before
+        elif (list_len - 1) - i < n_after:
             n_after = (list_len - 1) - i
-            n_before = n - n_after
+            n_before = (n - 1) - n_after
         else:
             pass
+
+        logger.debug(f"n_before: {n_before}, n_after: {n_after}")
 
         if include_i:
             neighbor_idxs = list(range(i - n_before, i + 1 + n_after))
@@ -77,7 +79,8 @@ def get_neighbors(i, elements, n=5, include_i=True):
             )
 
     neighbor_elements = [elements[idx] for idx in neighbor_idxs]
-    return neighbor_idxs, neighbor_elements
+    idx_in_neighbors = neighbor_idxs.index(i)
+    return neighbor_idxs, neighbor_elements, idx_in_neighbors
 
 
 def weighted_sum(values, weights):
