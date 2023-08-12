@@ -1,4 +1,5 @@
 from collections import Counter
+from math import sqrt
 from sklearn.cluster import DBSCAN, KMeans, OPTICS
 from termcolor import colored
 from utils.calculator import (
@@ -8,6 +9,7 @@ from utils.calculator import (
     weighted_avg,
     closest_category,
     distribute_weights,
+    rect_distance,
 )
 from utils.logger import Logger
 from utils.text_processor import TextBlock
@@ -154,8 +156,8 @@ class FragmentedTextBlockCategorizer:
             # This idea is inspected by ReLU
             if block_avg_line_width <= 10:
                 category = self.category_enums[0]  # Table
-            elif block_avg_line_width < 20:
-                category = (block_avg_line_width - 10) / (20 - 10)  # Not sure
+            elif block_avg_line_width < 25:
+                category = round((block_avg_line_width - 10) / (25 - 10), 1)  # Not sure
             else:
                 category = self.category_enums[2]  # Body Text
             categories.append(category)
@@ -179,25 +181,42 @@ class FragmentedTextBlockCategorizer:
                 )
                 block_idx_in_doc = block_idx + block_idx_offset_in_doc
                 neighbor_idxs, neighbor_tblocks, idx_in_neighbors = get_neighbors(
-                    i=block_idx, elements=page_tblocks, n=7, include_i=True
+                    i=block_idx, elements=page_tblocks, n=8, include_i=True
                 )
                 neighbor_blocks_categories = [
                     self.categories[block_idx_offset_in_doc + idx]
                     for idx in neighbor_idxs
                 ]
 
+                neighbor_blocks_distances = []
+                for idx, neighbor_block in enumerate(neighbor_tblocks):
+                    rect1 = tblock.get_bbox()
+                    if idx == idx_in_neighbors:
+                        rect2 = None
+                    else:
+                        rect2 = neighbor_block.get_bbox()
+                    distance = sqrt(rect_distance(rect1, rect2, direction="min"))
+                    neighbor_blocks_distances.append(distance)
+
                 neighbor_blocks_weights_list = [
                     distribute_weights(
-                        [tblock_func(tblock) for tblock in neighbor_tblocks],
+                        weights=[tblock_func(tblock) for tblock in neighbor_tblocks],
                         distribution=distribution,
                         center_idx=idx_in_neighbors,
+                        distances=neighbor_blocks_distances,
                     )
                     for tblock_func in [
-                        lambda x: 1,
+                        # lambda x: 1,
                         lambda x: x.get_line_num(),
-                        lambda x: x.get_char_num(),
+                        # lambda x: x.get_area(),
+                        # lambda x: x.get_char_num(),
                     ]
-                    for distribution in ["normal", "linear", None]
+                    for distribution in [
+                        "normal",
+                        "linear",
+                        # "one",
+                        "distance",
+                    ]
                 ]
                 self.reduced_category_enums = [self.category_enums[i] for i in [0, -1]]
                 old_category = self.categories[block_idx_in_doc]
