@@ -39,6 +39,32 @@ def rect_center(x0, y0, x1, y1):
     return (x0 + x1) // 2, (y0 + y1) // 2
 
 
+def euclidean_distance(point1, point2, value_type=int):
+    p1 = np.array(point1)
+    p2 = np.array(point2)
+    return value_type(np.linalg.norm(p1 - p2))
+
+
+def rect_distance(rect1, rect2=None, direction="diag"):
+    if not rect2:
+        x0, y0, x1, y1 = rect1
+        x_distance = abs(x0 - x1)
+        y_distance = abs(y0 - y1)
+        diag_distance = euclidean_distance((x0, y0), (x1, y1))
+        distance_direction_map = {
+            "x": x_distance,
+            "y": y_distance,
+            "diag": diag_distance,
+            "min": min(x_distance, y_distance, diag_distance),
+        }
+        distance = distance_direction_map[direction]
+    else:
+        rect1_center = rect_center(*rect1)
+        rect2_center = rect_center(*rect2)
+        distance = euclidean_distance(rect1_center, rect2_center)
+    return distance
+
+
 def char_per_pixel(char_num, rect_area):
     return round(char_num / rect_area, 3)
 
@@ -88,7 +114,7 @@ def weighted_sum(values, weights):
     return sum([v * w for v, w in zip(values, weights)])
 
 
-def distribute_weights(weights, distribution=None, center_idx=None):
+def distribute_weights(weights, distribution="one", center_idx=None, distances=None):
     n = len(weights)
 
     if center_idx == None:
@@ -116,7 +142,10 @@ def distribute_weights(weights, distribution=None, center_idx=None):
                 np.linspace(1, linear_min, n_after + 1)[1:],
             )
         )
-
+    elif distribution == "distance":
+        scales = 1 / np.array(distances)
+    elif distribution == "one":
+        scales = np.ones(n)
     else:
         scales = np.ones(n)
 
