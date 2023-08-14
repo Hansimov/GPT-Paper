@@ -11,7 +11,7 @@ init_os_envs(set_proxy=True, cuda_device=3)
 #     repo_id="nielsr/example-pdf", repo_type="dataset", filename="example_pdf.png"
 # )
 
-file_path = Path(__file__).parent / "example_pdf_2.png"
+file_path = Path(__file__).parent / "example_pdf_4.png"
 image = Image.open(file_path).convert("RGB")
 
 image_processor = AutoImageProcessor.from_pretrained(
@@ -27,13 +27,13 @@ outputs = model(**inputs)
 # convert outputs (bounding boxes and class logits) to COCO API
 target_sizes = torch.tensor([image.size[::-1]])
 results = image_processor.post_process_object_detection(
-    outputs, threshold=0.9, target_sizes=target_sizes
+    outputs, threshold=0.4, target_sizes=target_sizes
 )[0]
 
 
 rects = []
 for score, label, box in zip(results["scores"], results["labels"], results["boxes"]):
-    box = [int(i) for i in box.tolist()]
+    box = [round(i, 1) for i in box.tolist()]
     print(
         f"Detected {model.config.id2label[label.item()]} with confidence "
         f"{round(score.item(), 3)} at location {box}"
