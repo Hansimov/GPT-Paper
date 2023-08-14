@@ -58,3 +58,18 @@ See my answer here:
 
 * Is there a way to delete headers/footers in PDF documents? · pymupdf/PyMuPDF · Discussion #2259
   * https://github.com/pymupdf/PyMuPDF/discussions/2259#discussioncomment-6669190
+  
+## Layout Analysis
+### Information Extraction Series by Tejpal Kumawat
+All posts: https://medium.com/@tejpal.abhyuday
+
+* Information Extraction Series Part 1
+  * https://medium.com/@tejpal.abhyuday/layoutlm-with-real-world-application-c6c09f1cc368
+* LayoutLM — For Named Entity Recognition
+  * https://medium.com/@tejpal.abhyuday/layoutlm-for-information-extraction-1f4671a4ef27
+* Information Extraction Part 2: LayoutLM V2 — Working and its Application
+  * https://medium.com/@tejpal.abhyuday/information-extraction-part-2-b69609fc10b2
+* LayoutLM V2- For Named Entity Recognition
+  * https://medium.com/@tejpal.abhyuday/layoutlm-v2-for-information-extraction-532396ce2aeb
+* Information Extraction Part 3: LayoutLM v3 — Explanation and Application
+  * https://medium.com/@tejpal.abhyuday/information-extraction-part-3-9c2487ec4930
