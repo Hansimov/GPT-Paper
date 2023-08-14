@@ -156,7 +156,7 @@ class TextBlock:
                 )
                 old_line_font_and_size = new_line_font_and_size
 
-            logger.info(f"{line_text}")
+            logger.debug(f"{line_text}")
             line_font_list.append(line_font)
             line_fontsize_list.append(line_fontsize)
             line_font_counter.update({line_font: len(line_text)})

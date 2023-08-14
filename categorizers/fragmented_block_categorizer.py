@@ -206,7 +206,7 @@ class FragmentedTextBlockCategorizer:
                         )
                         logger.debug(f"{neighbor_blocks_weights}")
                     logger.info(f"[{neighbor_blocks_categories_str}]")
-                    logger.debug(f"{tblock.get_block_main_font()}")
+                    # logger.debug(f"{tblock.get_block_main_font()}")
                     logger.info(f"{tblock.get_block_text()}")
 
             block_idx_offset_in_doc += len(page_blocks)
