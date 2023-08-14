@@ -14,9 +14,9 @@ from utils.calculator import (
     char_per_pixel,
     avg_line_width,
 )
-from utils.categorizer import BodyTextBlockCategorizer, FragmentedTextBlockCategorizer
+from categorizers.body_text_block_categorizer import BodyTextBlockCategorizer
+from categorizers.fragmented_block_categorizer import FragmentedTextBlockCategorizer
 from utils.logger import Logger, add_fillers
-from utils.table import PDFTableExtractor
 from utils.tokenizer import Tokenizer
 from utils.text_processor import TextBlock
 
