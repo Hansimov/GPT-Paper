@@ -7,35 +7,18 @@ Enhance paper search, reading, writing and review with the assistance of GPT.
 **PyMuPDF:**
 
 ```sh
-python -m pip install --upgrade pymupdf
+pip install --upgrade pymupdf
 ```
 
-**camolot-py:**
-
-Camelot needs GhostScript and Tkinter:
-  * https://camelot-py.readthedocs.io/en/master/user/install-deps.html
-
-Download GhostScript:
-* https://www.ghostscript.com/releases/gsdnld.html
-
+**detectron2:**
+* detectron2/blob/main/setup.py#L162-L215
+  * https://github.com/facebookresearch/detectron2/blob/main/setup.py#L162-L215
 
 ```sh
-python -m pip install --upgrade "camelot-py[base]"
+pip install "Pillow>=7.1" matplotlib "pycocotools>=2.0.2" "termcolor>=1.1" "yacs>=0.1.8" tabulate cloudpickle "tqdm>4.29.0" tensorboard "fvcore>=0.1.5,<0.1.6" "iopath>=0.1.7,<0.1.10" "omegaconf>=2.1,<2.4" "hydra-core>=1.1" black packaging
+pip install fairscale timm "scipy>1.5.1" shapely "pygments>=2.2" "psutil" "panopticapi @ https://github.com/cocodataset/panopticapi/archive/master.zip"
 ```
 
-
-**tabula-py:**
-
-Tabular needs Java:
-* https://tabula-py.readthedocs.io/en/latest/getting_started.html#get-tabula-py-working-windows-10
-
-Download Java:
-* https://www.java.com/en/download/manual.jsp
-
-
-```sh
-python -m pip install --upgrade tabula-py
-```
 
 ## Data pre-processing
 
@@ -48,17 +31,6 @@ Hers is the dict structure of blocks in a page of a PDF document parsed via PyMu
 ![](https://pymupdf.readthedocs.io/en/latest/_images/img-textpage.png)
 
 
-### How to categorize headers and footers?
-
-One practical method is to use clustering algorithms (such as **DBSCAN**) based on some metrics (such as the **coordinates** of the bound points for the block rectangle, and the **length** of the block text, in short: `(x0,y0,x1,y1,len(text))`).
-
-![](./examples/headers-categorize-1.png)
-
-See my answer here:
-
-* Is there a way to delete headers/footers in PDF documents? · pymupdf/PyMuPDF · Discussion #2259
-  * https://github.com/pymupdf/PyMuPDF/discussions/2259#discussioncomment-6669190
-  
 ## Layout Analysis
 * nielsr/dit-document-layout-analysis
   * https://huggingface.co/spaces/nielsr/dit-document-layout-analysis
@@ -67,3 +39,6 @@ See my answer here:
 * Table Transformer
   * https://huggingface.co/docs/transformers/main/model_doc/table-transformer
   * https://github.com/microsoft/table-transformer
+
+* app.py · nielsr/dit-document-layout-analysis at main
+  * https://huggingface.co/spaces/nielsr/dit-document-layout-analysis/blob/main/app.py
