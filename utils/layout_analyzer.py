@@ -39,13 +39,16 @@ class DITLayoutAnalyzer:
     def __init__(self):
         pass
 
-    def run(self):
+    def setup_model(self):
         self.load_configs()
         self.load_weights()
         self.set_device()
         self.create_predictor()
         self.set_metadata()
-        self.analyze_image()
+
+    def run(self):
+        self.setup_model()
+        self.annotate_image()
 
     # Step 1: Instantiate config
     def load_configs(self):
@@ -62,7 +65,7 @@ class DITLayoutAnalyzer:
         )
 
         logger.note(f"> Loading configs from `cascade_dit_base.yaml`:")
-        logger.msg(f"  - {cascade_dit_base_yml}")
+        logger.file(f"  - {cascade_dit_base_yml}")
 
         self.cfg.merge_from_file(cascade_dit_base_yml)
 
@@ -88,19 +91,20 @@ class DITLayoutAnalyzer:
 
     # Step 4: Create Predictor
     def create_predictor(self):
+        logger.note("> Creating predictor ...")
         self.predictor = DefaultPredictor(self.cfg)
 
     # Step 5: Set meta data
     def set_metadata(self):
-        self.metadata = MetadataCatalog.get(self.cfg.DATASETS.TEST[0])
-        if self.cfg.DATASETS.TEST[0] == "icdar2019_test":
-            self.metadata.set(thing_classes=["table"])
-        else:
-            self.metadata.set(
-                thing_classes=["text", "title", "list", "table", "figure"]
-            )
+        logger.note("> Setting metadata ...")
+        # logger.msg(self.cfg.DATASETS)
+        dataset_name = "publaynet_val"
+        self.metadata = MetadataCatalog.get(dataset_name)
+        # logger.msg(self.metadata)
+        self.thing_classes = ["text", "title", "list", "table", "figure"]
+        self.metadata.set(thing_classes=self.thing_classes)
 
-    def analyze_image(
+    def annotate_image(
         self,
         input_image_path=repo_path / "examples" / "example_pdf_4.png",
         output_image_path=repo_path / "examples" / "example_pdf_4_output.png",
@@ -110,7 +114,18 @@ class DITLayoutAnalyzer:
 
         image = read_image(str(input_image_path))
         output = self.predictor(image)["instances"]
-        logger.msg(output)
+        # logger.msg(output)
+        pred_things = [self.thing_classes[c] for c in output.pred_classes]
+
+        logger.note("Results:")
+        image_height, image_width = output.image_size
+        logger.msg(f" - image_size: {image_width}(w) * {image_height}(h)")
+        logger.msg(f" - num_instances: {len(output)}")
+        logger.msg(f" - pred_classes: {output.pred_classes.tolist()}")
+        logger.msg(f" - pred_things: {pred_things}")
+        logger.msg(f" - pred_boxes: {output.pred_boxes.tensor.tolist()}")
+        logger.msg(f" - scores: {output.scores.tolist()}")
+        # logger.msg(f" - fields {output.fields}")
 
         visualizer = Visualizer(
             image[:, :, ::-1],
@@ -126,6 +141,8 @@ class DITLayoutAnalyzer:
         logger.file(f"  - {output_image_path}")
 
         Image.fromarray(result_image).save(output_image_path)
+
+        return result_image, output
 
 
 if __name__ == "__main__":
