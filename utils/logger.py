@@ -54,6 +54,14 @@ class Logger:
         self.handler.setFormatter(self.formatter)
         self.logger.addHandler(self.handler)
 
+        self.bind_functions()
+
+    def success(self, msg, *args, **kwargs):
+        self.logger.info(colored(msg, "light_green"), *args, **kwargs)
+
+    def bind_functions(self):
+        self.logger.success = self.success
+
 
 logger = Logger().logger
 
