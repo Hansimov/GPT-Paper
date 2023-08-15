@@ -84,25 +84,41 @@ def setup_envs_of_detectron2(clone_repo=True, install_dependencies=True):
 
     # install dependencies of detectron2
     if install_dependencies:
-        logger.warning(
-            colored("See README.md to install `detectron2` dependencies.", "light_red")
-        )
+        logger.warn("See README.md to install `detectron2` dependencies.")
 
-        logger.info(
-            colored("Installing required packages of detectron2:", "light_magenta")
-        )
-        shell_cmd(
-            'pip install "Pillow>=7.1" matplotlib "pycocotools>=2.0.2" "termcolor>=1.1" "yacs>=0.1.8" tabulate cloudpickle "tqdm>4.29.0" tensorboard "fvcore>=0.1.5,<0.1.6" "iopath>=0.1.7,<0.1.10" "omegaconf>=2.1,<2.4" "hydra-core>=1.1" black packaging'
-        )
+        logger.info("Installing required packages of detectron2:")
+        required_packages = [
+            "Pillow>=7.1",
+            "matplotlib",
+            "pycocotools>=2.0.2",
+            "termcolor>=1.1",
+            "yacs>=0.1.8",
+            "tabulate",
+            "cloudpickle",
+            "tqdm>4.29.0",
+            "tensorboard",
+            "fvcore>=0.1.5,<0.1.6",
+            "iopath>=0.1.7,<0.1.10",
+            "omegaconf>=2.1,<2.4" "hydra-core>=1.1" "black",
+            "packaging",
+        ]
+        required_packages_str = " ".join([f'"{p}"' for p in required_packages])
+        shell_cmd(f"pip install {required_packages_str}")
 
-        logger.info(
-            colored("Installing extra packages of detectron2:", "light_magenta")
-        )
-        shell_cmd(
-            'pip install fairscale timm "scipy>1.5.1" shapely "pygments>=2.2" "psutil" "panopticapi @ https://github.com/cocodataset/panopticapi/archive/master.zip"'
-        )
+        extra_packages = [
+            "fairscale",
+            "timm",
+            "scipy>1.5.1",
+            "shapely",
+            "pygments>=2.2",
+            "psutil",
+            "panopticapi @ https://github.com/cocodataset/panopticapi/archive/master.zip",
+        ]
+        logger.note("Installing extra packages of detectron2:")
+        extra_packages_str = " ".join([f'"{p}"' for p in extra_packages])
+        shell_cmd(f"pip install {extra_packages_str}")
 
-    copy_to_site_packaegs(detectron2_path)
+    copy_to_site_packaegs(detectron2_path / "detectron2")
 
 
 def setup_envs_of_unilm():
@@ -112,7 +128,7 @@ def setup_envs_of_unilm():
         shell_cmd(f"git clone https://github.com/microsoft/unilm.git {str(unilm_path)}")
 
     # patch `data_structure.py` in dit
-    logger.note("> Patching `data_structure.py` in dit ...", "light_magenta")
+    logger.note("> Patching `data_structure.py` in dit ...")
     orignial_str = "from collections import Iterable"
     replaced_str = "from collections.abc import Iterable"
     data_structure_py = (

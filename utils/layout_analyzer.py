@@ -7,20 +7,21 @@ from utils.logger import logger, shell_cmd
 from utils.envs import init_os_envs, setup_envs_of_dit
 from PIL import Image
 
-# setup_envs_of_dit()
+setup_envs_of_dit()
 init_os_envs(cuda_device=2)
 
 try:
-    from detectron2.detectron2.config import CfgNode as CN
-    from detectron2.detectron2.config import get_cfg
-    from detectron2.detectron2.utils.visualizer import ColorMode, Visualizer
-    from detectron2.detectron2.data import MetadataCatalog
-    from detectron2.detectron2.data.detection_utils import read_image
-    from detectron2.detectron2.engine import DefaultPredictor
+    from detectron2.config import CfgNode as CN
+    from detectron2.config import get_cfg
+    from detectron2.utils.visualizer import ColorMode, Visualizer
+    from detectron2.data import MetadataCatalog
+    from detectron2.data.detection_utils import read_image
+    from detectron2.engine import DefaultPredictor
 
     from unilm.dit.object_detection.ditod import add_vit_config
 except Exception as e:
     logger.err(e)
+    raise e
 
 # GPT-Paper repo path
 repo_path = Path(__file__).parents[1]
