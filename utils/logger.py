@@ -1,6 +1,8 @@
 import inspect
 import logging
+import os
 import shutil
+import subprocess
 from termcolor import colored
 
 
@@ -54,3 +56,14 @@ class Logger:
 
 
 logger = Logger().logger
+
+
+def shell_cmd(cmd, getoutput=False, showcmd=True):
+    if showcmd:
+        logger.info(colored(f"\n$ [{os.getcwd()}]", "light_blue"))
+        logger.info(colored(f"  $ {cmd}\n", "light_cyan"))
+    if getoutput:
+        output = subprocess.getoutput(cmd)
+        return output
+    else:
+        subprocess.run(cmd, shell=True)
