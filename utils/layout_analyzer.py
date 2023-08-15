@@ -2,10 +2,11 @@ import os
 import sys
 from termcolor import colored
 import torch
+import warnings
 from pathlib import Path
 from utils.logger import logger, shell_cmd
 from utils.envs import init_os_envs, setup_envs_of_dit
-from PIL import Image
+warnings.filterwarnings("ignore")
 
 setup_envs_of_dit()
 init_os_envs(cuda_device=2)
