@@ -1,14 +1,16 @@
 import os
 import sys
-from termcolor import colored
 import torch
 import warnings
 from pathlib import Path
+from PIL import Image
+from termcolor import colored
 from utils.logger import logger, shell_cmd
 from utils.envs import init_os_envs, setup_envs_of_dit
+
 warnings.filterwarnings("ignore")
 
-setup_envs_of_dit()
+# setup_envs_of_dit()
 init_os_envs(cuda_device=2)
 
 try:
@@ -37,10 +39,18 @@ class DITLayoutAnalyzer:
     def __init__(self):
         pass
 
+    def run(self):
+        self.load_configs()
+        self.load_weights()
+        self.set_device()
+        self.create_predictor()
+        self.set_metadata()
+        self.analyze_image()
+
+    # Step 1: Instantiate config
     def load_configs(self):
-        # Step 1: Instantiate config
-        cfg = get_cfg()
-        add_vit_config(cfg)
+        self.cfg = get_cfg()
+        add_vit_config(self.cfg)
 
         cascade_dit_base_yml = (
             unilm_path
@@ -54,57 +64,57 @@ class DITLayoutAnalyzer:
         logger.note(f"> Loading configs from `cascade_dit_base.yaml`:")
         logger.msg(f"  - {cascade_dit_base_yml}")
 
-        cfg.merge_from_file(cascade_dit_base_yml)
+        self.cfg.merge_from_file(cascade_dit_base_yml)
 
-        # Step 2: Load model weights URL to config
+    # Step 2: Load model weights to config
+    def load_weights(self):
         publaynet_dit_b_cascade_pth = (
             repo_path / "configs" / "publaynet_dit-b_cascade.pth"
         )
         logger.note(f"> Loading weights from `publaynet_dit-b_cascade.pth`:")
         logger.file(f"  - {publaynet_dit_b_cascade_pth}")
 
-        cfg.MODEL.WEIGHTS = str(publaynet_dit_b_cascade_pth)
+        self.cfg.MODEL.WEIGHTS = str(publaynet_dit_b_cascade_pth)
 
-        # Step 3: Set CUDA device
+    # Step 3: Set CUDA device
+    def set_device(self):
         if torch.cuda.is_available():
             cuda_device = os.environ.get("CUDA_VISIBLE_DEVICES", 0)
-            logger.msg(f"> Using GPU:{cuda_device} ...")
-            cfg.MODEL.DEVICE = "cuda"
+            logger.note(f"> Using GPU:{cuda_device} ...")
+            self.cfg.MODEL.DEVICE = "cuda"
         else:
-            logger.msg(f"> Using CPU ...")
-            cfg.MODEL.DEVICE = "cpu"
+            logger.note(f"> Using CPU ...")
+            self.cfg.MODEL.DEVICE = "cpu"
 
-        # Step 4: Define model
-        self.predictor = DefaultPredictor(cfg)
-        self.cfg = cfg
+    # Step 4: Create Predictor
+    def create_predictor(self):
+        self.predictor = DefaultPredictor(self.cfg)
 
-        input_image_path = repo_path / "examples" / "example_pdf_4.png"
-        output_image_path = repo_path / "examples" / "example_pdf_4_output.png"
+    # Step 5: Set meta data
+    def set_metadata(self):
+        self.metadata = MetadataCatalog.get(self.cfg.DATASETS.TEST[0])
+        if self.cfg.DATASETS.TEST[0] == "icdar2019_test":
+            self.metadata.set(thing_classes=["table"])
+        else:
+            self.metadata.set(
+                thing_classes=["text", "title", "list", "table", "figure"]
+            )
 
+    def analyze_image(
+        self,
+        input_image_path=repo_path / "examples" / "example_pdf_4.png",
+        output_image_path=repo_path / "examples" / "example_pdf_4_output.png",
+    ):
         logger.note(f"> Analyzing input image:")
         logger.file(f"  - {input_image_path}")
 
-        output_image = self.analyze_image(input_image_path)
-
-        logger.success(f"> Saving output image:")
-        logger.file(f"  - {output_image_path}")
-        Image.fromarray(output_image).save(output_image_path)
-
-    def analyze_image(self, image_path):
-        cfg = self.cfg
-        md = MetadataCatalog.get(cfg.DATASETS.TEST[0])
-        if cfg.DATASETS.TEST[0] == "icdar2019_test":
-            md.set(thing_classes=["table"])
-        else:
-            md.set(thing_classes=["text", "title", "list", "table", "figure"])
-
-        image = read_image(str(image_path))
+        image = read_image(str(input_image_path))
         output = self.predictor(image)["instances"]
         logger.msg(output)
 
         visualizer = Visualizer(
             image[:, :, ::-1],
-            md,
+            metadata=self.metadata,
             scale=1.0,
             instance_mode=ColorMode.SEGMENTATION,
         )
@@ -112,9 +122,12 @@ class DITLayoutAnalyzer:
 
         result_image = result.get_image()[:, :, ::-1]
 
-        return result_image
+        logger.success(f"> Saving output image:")
+        logger.file(f"  - {output_image_path}")
+
+        Image.fromarray(result_image).save(output_image_path)
 
 
 if __name__ == "__main__":
     dit_layout_analyzer = DITLayoutAnalyzer()
-    dit_layout_analyzer.load_configs()
+    dit_layout_analyzer.run()
