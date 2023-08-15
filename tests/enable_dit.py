@@ -91,7 +91,12 @@ def main():
     title = "Interactive demo: Document Layout Analysis with DiT"
     description = "Demo for Microsoft's DiT, the Document Image Transformer for state-of-the-art document understanding tasks. This particular model is fine-tuned on PubLayNet, a large dataset for document layout analysis (read more at the links below). To use it, simply upload an image or use the example image below and click 'Submit'. Results will show up in a few seconds. If you want to make the output bigger, right-click on it and select 'Open image in new tab'."
     article = "<p style='text-align: center'><a href='https://arxiv.org/abs/2203.02378' target='_blank'>Paper</a> | <a href='https://github.com/microsoft/unilm/tree/master/dit' target='_blank'>Github Repo</a></p> | <a href='https://huggingface.co/docs/transformers/master/en/model_doc/dit' target='_blank'>HuggingFace doc</a></p>"
-    examples = [[Path(__file__).parent / f"example_pdf_{i+1}.png" for i in range(4)]]
+    examples = [
+        [
+            str(Path(__file__).parents[1] / "examples" / f"example_pdf_{i+1}.png")
+            for i in range(4)
+        ]
+    ]
     css = ".output-image, .input-image, .image-preview {height: 600px !important}"
 
     iface = gr.Interface(

@@ -2,6 +2,8 @@ import ctypes
 import json
 import os
 import re
+import site
+import shutil
 from ctypes.util import find_library
 from pathlib import Path
 from termcolor import colored
@@ -41,6 +43,22 @@ def init_os_envs(secrets=True, apis=[], set_proxy=True, cuda_device=None):
 
     if cuda_device:
         os.environ["CUDA_VISIBLE_DEVICES"] = str(cuda_device)
+
+
+def copy_to_site_packaegs(package_path):
+    folder_base_name = Path(package_path).name
+    site_packages_path = Path(site.getsitepackages()[0])
+    package_path_in_site_packages = site_packages_path / folder_base_name
+
+    if package_path_in_site_packages.exists():
+        logger.warn(f"> Removing {folder_base_name} in site-packages:")
+        logger.file(f"  - {package_path_in_site_packages}")
+        shutil.rmtree(site_packages_path / folder_base_name)
+
+    logger.note(f"> Copying {folder_base_name} to site-packages:")
+    logger.file(f"  - From: {package_path}")
+    logger.file(f"  -   To: {package_path_in_site_packages}")
+    shutil.copytree(package_path, package_path_in_site_packages)
 
 
 def check_camelot_dependencies():
@@ -84,6 +102,8 @@ def setup_envs_of_detectron2(clone_repo=True, install_dependencies=True):
             'pip install fairscale timm "scipy>1.5.1" shapely "pygments>=2.2" "psutil" "panopticapi @ https://github.com/cocodataset/panopticapi/archive/master.zip"'
         )
 
+    copy_to_site_packaegs(detectron2_path)
+
 
 def setup_envs_of_unilm():
     # git clone repo of unilm
@@ -92,7 +112,7 @@ def setup_envs_of_unilm():
         shell_cmd(f"git clone https://github.com/microsoft/unilm.git {str(unilm_path)}")
 
     # patch `data_structure.py` in dit
-    logger.info(colored("Patching `data_structure.py` in dit ...", "light_magenta"))
+    logger.note("> Patching `data_structure.py` in dit ...", "light_magenta")
     orignial_str = "from collections import Iterable"
     replaced_str = "from collections.abc import Iterable"
     data_structure_py = (
@@ -110,6 +130,8 @@ def setup_envs_of_unilm():
 
     with open(data_structure_py, "w") as wf:
         wf.write(replaced_text)
+
+    copy_to_site_packaegs(unilm_path)
 
 
 def download_publaynet_dit_b_cascade_pth(
