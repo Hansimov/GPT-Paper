@@ -10,8 +10,8 @@ from utils.envs import init_os_envs, setup_envs_of_dit
 
 warnings.filterwarnings("ignore")
 
-# setup_envs_of_dit()
-init_os_envs(cuda_device=2)
+setup_envs_of_dit()
+# init_os_envs(cuda_device=0)
 
 try:
     from detectron2.config import CfgNode as CN
@@ -74,6 +74,9 @@ class DITLayoutAnalyzer:
         publaynet_dit_b_cascade_pth = (
             repo_path / "configs" / "publaynet_dit-b_cascade.pth"
         )
+        if not publaynet_dit_b_cascade_pth.exists():
+            raise FileNotFoundError("`publaynet_dit-b_cascade.pth` not found.")
+
         logger.note(f"> Loading weights from `publaynet_dit-b_cascade.pth`:")
         logger.file(f"  - {publaynet_dit_b_cascade_pth}")
 

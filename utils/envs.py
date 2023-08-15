@@ -1,6 +1,7 @@
 import ctypes
 import json
 import os
+import platform
 import re
 import site
 import shutil
@@ -47,7 +48,11 @@ def init_os_envs(secrets=True, apis=[], set_proxy=True, cuda_device=None):
 
 def copy_to_site_packaegs(package_path):
     folder_base_name = Path(package_path).name
-    site_packages_path = Path(site.getsitepackages()[0])
+    site_packages_paths = site.getsitepackages()
+    site_packages_path = None
+    for p in site_packages_paths:
+        if p.endswith("site-packages"):
+            site_packages_path = Path(p)
     package_path_in_site_packages = site_packages_path / folder_base_name
 
     if package_path_in_site_packages.exists():
@@ -58,7 +63,11 @@ def copy_to_site_packaegs(package_path):
     logger.note(f"> Copying {folder_base_name} to site-packages:")
     logger.file(f"  - From: {package_path}")
     logger.file(f"  -   To: {package_path_in_site_packages}")
-    shutil.copytree(package_path, package_path_in_site_packages)
+    shutil.copytree(
+        package_path,
+        package_path_in_site_packages,
+        ignore=shutil.ignore_patterns(".git"),
+    )
 
 
 def check_camelot_dependencies():
@@ -86,7 +95,7 @@ def setup_envs_of_detectron2(clone_repo=True, install_dependencies=True):
     if install_dependencies:
         logger.warn("See README.md to install `detectron2` dependencies.")
 
-        logger.info("Installing required packages of detectron2:")
+        logger.note("Installing required packages of detectron2:")
         required_packages = [
             "Pillow>=7.1",
             "matplotlib",
@@ -99,7 +108,9 @@ def setup_envs_of_detectron2(clone_repo=True, install_dependencies=True):
             "tensorboard",
             "fvcore>=0.1.5,<0.1.6",
             "iopath>=0.1.7,<0.1.10",
-            "omegaconf>=2.1,<2.4" "hydra-core>=1.1" "black",
+            "omegaconf>=2.1,<2.4",
+            "hydra-core>=1.1",
+            "black",
             "packaging",
         ]
         required_packages_str = " ".join([f'"{p}"' for p in required_packages])
@@ -140,11 +151,11 @@ def setup_envs_of_unilm():
         / "data_structure.py"
     )
 
-    with open(data_structure_py, "r") as rf:
+    with open(data_structure_py, "r", encoding="utf-8") as rf:
         original_text = rf.read()
         replaced_text = re.sub(orignial_str, replaced_str, original_text)
 
-    with open(data_structure_py, "w") as wf:
+    with open(data_structure_py, "w", encoding="utf-8") as wf:
         wf.write(replaced_text)
 
     copy_to_site_packaegs(unilm_path)
@@ -157,12 +168,15 @@ def download_publaynet_dit_b_cascade_pth(
     overwrite=False,
 ):
     if http_proxy:
-        proxy_str = f" --proxy '{http_proxy}' "
+        proxy_str = f' --proxy "{http_proxy}"'
     else:
         proxy_str = ""
+    if platform.system().lower() == "windows":
+        url = url.replace("&", "&&")
     if overwrite or not output_path.exists():
+        os.makedirs(output_path.parent, exist_ok=True)
         logger.info(colored(f"Downloading {str(output_path)} ...", "light_magenta"))
-        shell_cmd(f"curl {proxy_str} -LJ -o {output_path} '{url}'")
+        shell_cmd(f'curl {proxy_str} -LJ -o "{output_path}" "{url}"')
 
 
 def setup_envs_of_dit():
