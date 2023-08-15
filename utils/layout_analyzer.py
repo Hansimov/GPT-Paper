@@ -4,33 +4,31 @@ from termcolor import colored
 import torch
 from pathlib import Path
 from utils.logger import logger, shell_cmd
-from utils.envs import setup_envs_of_dit
+from utils.envs import init_os_envs, setup_envs_of_dit
 from PIL import Image
 
 # setup_envs_of_dit()
+init_os_envs(cuda_device=2)
 
 try:
-    # GPT-Paper repo path
-    repo_path = Path(__file__).parents[1]
-    # GPT-Paper repo parent path
-    repo_parent_path = repo_path.parent
+    from detectron2.detectron2.config import CfgNode as CN
+    from detectron2.detectron2.config import get_cfg
+    from detectron2.detectron2.utils.visualizer import ColorMode, Visualizer
+    from detectron2.detectron2.data import MetadataCatalog
+    from detectron2.detectron2.data.detection_utils import read_image
+    from detectron2.detectron2.engine import DefaultPredictor
 
-    detectron2_path = repo_parent_path / "detectron2"
-    unilm_path = repo_parent_path / "unilm"
-
-    sys.path.insert(0, os.path.abspath(str(detectron2_path)))
-    sys.path.insert(0, os.path.abspath(str(unilm_path)))
-
-    from detectron2.config import CfgNode as CN
-    from detectron2.config import get_cfg
-    from detectron2.utils.visualizer import ColorMode, Visualizer
-    from detectron2.data import MetadataCatalog
-    from detectron2.data.detection_utils import read_image
-    from detectron2.engine import DefaultPredictor
-
-    from dit.object_detection.ditod import add_vit_config
+    from unilm.dit.object_detection.ditod import add_vit_config
 except Exception as e:
     logger.err(e)
+
+# GPT-Paper repo path
+repo_path = Path(__file__).parents[1]
+# GPT-Paper repo parent path
+repo_parent_path = repo_path.parent
+
+detectron2_path = repo_parent_path / "detectron2"
+unilm_path = repo_parent_path / "unilm"
 
 
 class DITLayoutAnalyzer:
