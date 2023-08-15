@@ -56,11 +56,23 @@ class Logger:
 
         self.bind_functions()
 
+    def note(self, msg, *args, **kwargs):
+        self.logger.info(colored(msg, "light_cyan"), *args, **kwargs)
+
     def success(self, msg, *args, **kwargs):
         self.logger.info(colored(msg, "light_green"), *args, **kwargs)
 
+    def warn(self, msg, *args, **kwargs):
+        self.logger.warning(colored(msg, "light_magenta"), *args, **kwargs)
+
+    def err(self, msg, *args, **kwargs):
+        self.logger.error(colored(msg, "light_red"), *args, **kwargs)
+
     def bind_functions(self):
+        self.logger.note = self.note
         self.logger.success = self.success
+        self.logger.warn = self.warn
+        self.logger.err = self.err
 
 
 logger = Logger().logger
