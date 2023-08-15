@@ -30,19 +30,27 @@ try:
 
     from dit.object_detection.ditod import add_vit_config
 except Exception as e:
-    logger.error(colored(e, "red"))
+    logger.err(e)
 
 
 class DITLayoutAnalyzer:
-    def __init__(self) -> None:
+    def __init__(self):
         pass
 
-    def run(self):
-        # Step 1: instantiate config
+    def load_configs(self):
+        cascade_dit_base_yml = (
+            unilm_path
+            / "dit"
+            / "object_detection"
+            / "publaynet_configs"
+            / "cascade"
+            / "cascade_dit_base.yaml"
+        )
+        logger.note(f"> Loading `cascade_dit_base.yaml`:")
+        logger.msg(f"  - {cascade_dit_base_yml}")
+
         cfg = get_cfg()
         add_vit_config(cfg)
-
-        cascade_dit_base_yml = str(repo_path / "configs" / "cascade_dit_base.yml")
         cfg.merge_from_file(cascade_dit_base_yml)
 
         # Step 2: add model weights URL to config
@@ -64,7 +72,10 @@ class DITLayoutAnalyzer:
 
             output = predictor(image)["instances"]
             v = Visualizer(
-                image[:, :, ::-1], md, scale=1.0, instance_mode=ColorMode.SEGMENTATION
+                image[:, :, ::-1],
+                md,
+                scale=1.0,
+                instance_mode=ColorMode.SEGMENTATION,
             )
             result = v.draw_instance_predictions(output.to("cpu"))
             result_image = result.get_image()[:, :, ::-1]
@@ -73,11 +84,17 @@ class DITLayoutAnalyzer:
 
         input_image_path = repo_path / "tests" / "example_pdf_4.png"
         output_image_path = repo_path / "tests" / "example_pdf_4_output.png"
+
+        logger.note(f"> Analyzing input image:")
+        logger.msg(f"  - {input_image_path}")
+
         output_image = analyze_image(input_image_path)
-        logger.info(colored("Saving output image...", "light_green"))
+
+        logger.success(f"> Saving output image:")
+        logger.msg(f"  - {output_image_path}")
         Image.fromarray(output_image).save(output_image_path)
 
 
 if __name__ == "__main__":
     dit_layout_analyzer = DITLayoutAnalyzer()
-    dit_layout_analyzer.run()
+    dit_layout_analyzer.load_configs()
