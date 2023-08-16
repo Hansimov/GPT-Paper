@@ -1,11 +1,15 @@
 import fitz
+import json
 import matplotlib.pyplot as plt
 import os
 import shutil
+from categorizers.body_text_block_categorizer import BodyTextBlockCategorizer
+from categorizers.fragmented_block_categorizer import FragmentedTextBlockCategorizer
 from collections import Counter
 from itertools import islice, chain
 from matplotlib.patches import Rectangle
 from pathlib import Path
+from PIL import Image
 from termcolor import colored
 from utils.calculator import (
     flatten_len,
@@ -15,8 +19,6 @@ from utils.calculator import (
     char_per_pixel,
     avg_line_width,
 )
-from categorizers.body_text_block_categorizer import BodyTextBlockCategorizer
-from categorizers.fragmented_block_categorizer import FragmentedTextBlockCategorizer
 from utils.logger import logger, add_fillers
 from utils.tokenizer import Tokenizer
 from utils.text_processor import TextBlock
@@ -42,6 +44,9 @@ class PDFExtractor:
         self.page_images_path.mkdir(parents=True, exist_ok=True)
         self.annotated_page_images_path = self.assets_path / "pages_annotated"
         self.annotated_page_images_path.mkdir(parents=True, exist_ok=True)
+        self.cropped_page_images_path = self.assets_path / "crops"
+        shutil.rmtree(self.cropped_page_images_path, ignore_errors=True)
+        self.cropped_page_images_path.mkdir(parents=True, exist_ok=True)
 
     def extract_all_texts(self):
         for idx, page in enumerate(self.pdf_doc):
@@ -399,7 +404,7 @@ class PDFExtractor:
             key=lambda x: int(x.stem.split("_")[-1]),
         )
 
-        for page_image_path in page_image_paths[:2]:
+        for page_image_path in page_image_paths:
             output_image_path = self.annotated_page_images_path / page_image_path.name
             # output_image_path = self.page_images_path / (
             #     page_image_path.stem + "_annotated" + page_image_path.suffix
@@ -412,6 +417,54 @@ class PDFExtractor:
             )
         logger.reset_indent()
 
+    def crop_page_image(self, annotate_info_json_path, padding=2):
+        with open(annotate_info_json_path, "r") as rf:
+            annotate_infos = json.load(rf)
+        page_image_path = Path(annotate_infos["page"]["original_image_path"])
+        page_num = int(page_image_path.stem.split("_")[-1])
+        page_image = Image.open(page_image_path)
+        page_image_width, page_image_height = page_image.size
+        regions = annotate_infos["regions"]
+        region_image_page_path = self.cropped_page_images_path / f"page_{page_num}"
+        region_image_page_path.mkdir(parents=True, exist_ok=True)
+
+        logger.msg(f"- Crop Page {page_num} to {len(regions)} regions")
+
+        for region in regions:
+            region_idx = region["idx"]
+            region_box = region["box"]
+            region_thing = region["thing"]
+            region_score = region["score"]
+            region_box = [int(x) for x in region_box]
+            region_box = [
+                max(0, region_box[0] - padding),
+                max(0, region_box[1] - padding),
+                min(page_image_width, region_box[2] + padding),
+                min(page_image_height, region_box[3] + padding),
+            ]
+            region_image = page_image.crop(region_box)
+            region_image_path = region_image_page_path / (
+                f"region_{region_idx}_{region_thing}_{region_score}"
+                + page_image_path.suffix
+            )
+            region_image.save(region_image_path)
+
+    def crop_page_images(self):
+        logger.note(f"> Croping page images")
+        annotate_json_paths = sorted(
+            [
+                self.annotated_page_images_path / p
+                for p in os.listdir(self.annotated_page_images_path)
+                if Path(p).suffix.lower() == ".json"
+            ],
+            key=lambda x: int(x.stem.split("_")[-1]),
+        )
+
+        logger.set_indent(2)
+        for annotate_json_path in annotate_json_paths:
+            self.crop_page_image(annotate_json_path)
+        logger.reset_indent()
+
     def run(self):
         # self.extract_all_texts()
         # self.extract_all_text_blocks()
@@ -420,8 +473,9 @@ class PDFExtractor:
         # self.extract_all_text_htmls()
         # self.extract_all_text_block_dicts()
         # self.extract_tables()
-        self.dump_pdf_to_page_images()
+        # self.dump_pdf_to_page_images()
         self.annotate_page_images()
+        self.crop_page_images()
 
 
 if __name__ == "__main__":
