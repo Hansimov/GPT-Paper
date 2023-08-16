@@ -154,7 +154,7 @@ class DITLayoutAnalyzer:
 
     def dump_annotate_info(self, input_image_path, output_image_path, output):
         image_height, image_width = output.image_size
-        annotate_infos = {
+        self.annotate_infos = {
             "page": {
                 "original_image_path": str(input_image_path),
                 "annotated_image_path": str(output_image_path),
@@ -172,12 +172,12 @@ class DITLayoutAnalyzer:
         pred_scores = [round(x * 100, 2) for x in output.scores.tolist()]
         for i in range(len(output)):
             region_info = {
-                "idx": i,
+                "idx": i + 1,
                 "thing": pred_things[i],
                 "score": pred_scores[i],
                 "box": pred_boxes[i],
             }
-            annotate_infos["regions"].append(region_info)
+            self.annotate_infos["regions"].append(region_info)
 
         annotate_info_json_path = output_image_path.parent / (
             output_image_path.stem + ".json"
@@ -185,7 +185,7 @@ class DITLayoutAnalyzer:
         logger.success(f"> Saving annotated info:")
         logger.file(f"  - {annotate_info_json_path}")
         with open(annotate_info_json_path, "w") as wf:
-            wf.write(json.dumps(annotate_infos, indent=4))
+            wf.write(json.dumps(self.annotate_infos, indent=4))
 
 
 if __name__ == "__main__":
