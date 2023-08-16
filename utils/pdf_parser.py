@@ -36,8 +36,8 @@ class PDFExtractor:
         )
         self.pdf_fullpath = self.pdf_root / pdf_filename
         self.pdf_doc = fitz.open(self.pdf_fullpath)
-        self.assets_path = self.pdf_root / Path(pdf_filename).stem
 
+        self.assets_path = self.pdf_root / Path(pdf_filename).stem
         self.page_images_path = self.assets_path / "pages"
         self.page_images_path.mkdir(parents=True, exist_ok=True)
         self.annotated_page_images_path = self.assets_path / "pages_annotated"
@@ -379,7 +379,7 @@ class PDFExtractor:
 
     def annotate_page_images(self):
         logger.note(f"> Annotating page images")
-        logger.file(f"  * {self.annotated_page_images_path}")
+        # logger.file(f"  * {self.annotated_page_images_path}")
 
         logger.set_indent(2)
 
@@ -391,12 +391,16 @@ class PDFExtractor:
                 self.page_images_path / p
                 for p in os.listdir(self.page_images_path)
                 if Path(p).suffix.lower() in [".jpg", ".png", "jpeg"]
+                and not Path(p).stem.endswith("_annotated")
             ],
             key=lambda x: int(x.stem.split("_")[-1]),
         )
 
-        for page_image_path in page_image_paths:
+        for page_image_path in page_image_paths[:2]:
             output_image_path = self.annotated_page_images_path / page_image_path.name
+            # output_image_path = self.page_images_path / (
+            #     page_image_path.stem + "_annotated" + page_image_path.suffix
+            # )
             logger.set_indent(2)
             logger.file(f"- {page_image_path.name}")
             logger.set_indent(4)
@@ -413,7 +417,7 @@ class PDFExtractor:
         # self.extract_all_text_htmls()
         # self.extract_all_text_block_dicts()
         # self.extract_tables()
-        # self.dump_pdf_to_page_images()
+        self.dump_pdf_to_page_images()
         self.annotate_page_images()
 
 

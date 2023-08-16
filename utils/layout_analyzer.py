@@ -48,7 +48,10 @@ class DITLayoutAnalyzer:
 
     def test_run(self):
         self.setup_model()
-        self.annotate_image()
+        self.annotate_image(
+            input_image_path=repo_path / "examples" / "example_pdf_4.png",
+            output_image_path=repo_path / "examples" / "example_pdf_4_output.png",
+        )
 
     # Step 1: Instantiate config
     def load_configs(self):
@@ -107,11 +110,10 @@ class DITLayoutAnalyzer:
         self.thing_classes = ["text", "title", "list", "table", "figure"]
         self.metadata.set(thing_classes=self.thing_classes)
 
-    def annotate_image(
-        self,
-        input_image_path=repo_path / "examples" / "example_pdf_4.png",
-        output_image_path=repo_path / "examples" / "example_pdf_4_output.png",
-    ):
+    def annotate_image(self, input_image_path=None, output_image_path=None):
+        if input_image_path is None:
+            raise ValueError("`input_image_path` is None!")
+
         logger.note(f"> Analyzing input image:")
         logger.file(f"  - {input_image_path}")
 
