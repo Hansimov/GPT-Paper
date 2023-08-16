@@ -369,6 +369,7 @@ class PDFExtractor:
         table_parser.run()
 
     def dump_pdf_to_page_images(self, dpi=300):
+        # transform_matrix = fitz.Matrix(dpi / 72, dpi / 72)
         logger.note(f"> Dumping PDF to image pages [dpi={dpi}]")
         logger.file(f"  - {self.page_images_path}")
         for page_idx, page in enumerate(self.pdf_doc):
@@ -376,6 +377,8 @@ class PDFExtractor:
             image_path = self.page_images_path / f"page_{page_idx+1}.png"
             pix = page.get_pixmap(dpi=dpi)
             pix.save(image_path)
+            # pix = page.get_pixmap(matrix=transform_matrix)
+            # pix.pil_save(image_path, dpi=(dpi, dpi))
 
     def annotate_page_images(self):
         logger.note(f"> Annotating page images")

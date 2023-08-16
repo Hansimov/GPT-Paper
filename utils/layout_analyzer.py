@@ -166,8 +166,10 @@ class DITLayoutAnalyzer:
         }
         pred_classes = output.pred_classes.tolist()
         pred_things = [self.thing_classes[c] for c in pred_classes]
-        pred_boxes = output.pred_boxes.tensor.tolist()
-        pred_scores = output.scores.tolist()
+        pred_boxes = [
+            [round(x, 1) for x in box] for box in output.pred_boxes.tensor.tolist()
+        ]
+        pred_scores = [round(x * 100, 2) for x in output.scores.tolist()]
         for i in range(len(output)):
             region_info = {
                 "idx": i,
