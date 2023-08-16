@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 import torch
@@ -147,7 +148,42 @@ class DITLayoutAnalyzer:
 
         Image.fromarray(result_image).save(output_image_path)
 
+        self.dump_annotate_info(input_image_path, output_image_path, output)
+
         return result_image, output
+
+    def dump_annotate_info(self, input_image_path, output_image_path, output):
+        image_height, image_width = output.image_size
+        annotate_infos = {
+            "page": {
+                "original_image_path": str(input_image_path),
+                "annotated_image_path": str(output_image_path),
+                "image_width": image_width,
+                "image_height": image_height,
+                "regions_num": len(output),
+            },
+            "regions": [],
+        }
+        pred_classes = output.pred_classes.tolist()
+        pred_things = [self.thing_classes[c] for c in pred_classes]
+        pred_boxes = output.pred_boxes.tensor.tolist()
+        pred_scores = output.scores.tolist()
+        for i in range(len(output)):
+            region_info = {
+                "idx": i,
+                "thing": pred_things[i],
+                "score": pred_scores[i],
+                "box": pred_boxes[i],
+            }
+            annotate_infos["regions"].append(region_info)
+
+        annotate_info_json_path = output_image_path.parent / (
+            output_image_path.stem + ".json"
+        )
+        logger.success(f"> Saving annotated info:")
+        logger.file(f"  - {annotate_info_json_path}")
+        with open(annotate_info_json_path, "w") as wf:
+            wf.write(json.dumps(annotate_infos, indent=4))
 
 
 if __name__ == "__main__":
