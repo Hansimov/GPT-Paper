@@ -46,7 +46,7 @@ class DITLayoutAnalyzer:
         self.create_predictor()
         self.set_metadata()
 
-    def run(self):
+    def test_run(self):
         self.setup_model()
         self.annotate_image()
 
@@ -120,15 +120,15 @@ class DITLayoutAnalyzer:
         # logger.msg(output)
         pred_things = [self.thing_classes[c] for c in output.pred_classes]
 
-        logger.note("Results:")
+        logger.note("> Results:")
         image_height, image_width = output.image_size
-        logger.msg(f" - image_size: {image_width}(w) * {image_height}(h)")
-        logger.msg(f" - num_instances: {len(output)}")
-        logger.msg(f" - pred_classes: {output.pred_classes.tolist()}")
-        logger.msg(f" - pred_things: {pred_things}")
-        logger.msg(f" - pred_boxes: {output.pred_boxes.tensor.tolist()}")
-        logger.msg(f" - scores: {output.scores.tolist()}")
-        # logger.msg(f" - fields {output.fields}")
+        logger.msg(f"  - image_size: {image_width}(w) * {image_height}(h)")
+        logger.msg(f"  - num_instances: {len(output)}")
+        logger.debug(f"  - pred_classes: {output.pred_classes.tolist()}")
+        logger.msg(f"  - pred_things: {pred_things}")
+        logger.debug(f"  - pred_boxes: {output.pred_boxes.tensor.tolist()}")
+        logger.debug(f"  - scores: {output.scores.tolist()}")
+        # logger.msg(f"  - fields {output.fields}")
 
         visualizer = Visualizer(
             image[:, :, ::-1],
@@ -150,4 +150,4 @@ class DITLayoutAnalyzer:
 
 if __name__ == "__main__":
     dit_layout_analyzer = DITLayoutAnalyzer()
-    dit_layout_analyzer.run()
+    dit_layout_analyzer.test_run()
