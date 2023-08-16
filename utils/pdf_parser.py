@@ -1,5 +1,6 @@
 import fitz
 import matplotlib.pyplot as plt
+import os
 import shutil
 from collections import Counter
 from itertools import islice, chain
@@ -19,6 +20,7 @@ from categorizers.fragmented_block_categorizer import FragmentedTextBlockCategor
 from utils.logger import logger, add_fillers
 from utils.tokenizer import Tokenizer
 from utils.text_processor import TextBlock
+from utils.layout_analyzer import DITLayoutAnalyzer
 
 
 class PDFExtractor:
@@ -35,6 +37,11 @@ class PDFExtractor:
         self.pdf_fullpath = self.pdf_root / pdf_filename
         self.pdf_doc = fitz.open(self.pdf_fullpath)
         self.assets_path = self.pdf_root / Path(pdf_filename).stem
+
+        self.page_images_path = self.assets_path / "pages"
+        self.page_images_path.mkdir(parents=True, exist_ok=True)
+        self.annotated_page_images_path = self.assets_path / "pages_annotated"
+        self.annotated_page_images_path.mkdir(parents=True, exist_ok=True)
 
     def extract_all_texts(self):
         for idx, page in enumerate(self.pdf_doc):
@@ -361,16 +368,42 @@ class PDFExtractor:
         table_parser = PDFTableExtractor(self.pdf_fullpath)
         table_parser.run()
 
-    def dump_pdf_to_image_pages(self, dpi=300):
-        image_pages_path = self.assets_path / "pages"
-        image_pages_path.mkdir(parents=True, exist_ok=True)
+    def dump_pdf_to_page_images(self, dpi=300):
         logger.note(f"> Dumping PDF to image pages [dpi={dpi}]")
-        logger.file(f"  - {image_pages_path}")
+        logger.file(f"  - {self.page_images_path}")
         for page_idx, page in enumerate(self.pdf_doc):
             logger.msg(f"    - Page {page_idx+1}")
-            image_path = image_pages_path / f"page_{page_idx+1}.png"
+            image_path = self.page_images_path / f"page_{page_idx+1}.png"
             pix = page.get_pixmap(dpi=dpi)
             pix.save(image_path)
+
+    def annotate_page_images(self):
+        logger.note(f"> Annotating page images")
+        logger.file(f"  * {self.annotated_page_images_path}")
+
+        logger.set_indent(2)
+
+        layout_analyzer = DITLayoutAnalyzer()
+        layout_analyzer.setup_model()
+
+        page_image_paths = sorted(
+            [
+                self.page_images_path / p
+                for p in os.listdir(self.page_images_path)
+                if Path(p).suffix.lower() in [".jpg", ".png", "jpeg"]
+            ],
+            key=lambda x: int(x.stem.split("_")[-1]),
+        )
+
+        for page_image_path in page_image_paths:
+            output_image_path = self.annotated_page_images_path / page_image_path.name
+            logger.set_indent(2)
+            logger.file(f"- {page_image_path.name}")
+            logger.set_indent(4)
+            layout_analyzer.annotate_image(
+                input_image_path=page_image_path, output_image_path=output_image_path
+            )
+        logger.reset_indent()
 
     def run(self):
         # self.extract_all_texts()
@@ -380,7 +413,8 @@ class PDFExtractor:
         # self.extract_all_text_htmls()
         # self.extract_all_text_block_dicts()
         # self.extract_tables()
-        self.dump_pdf_to_image_pages()
+        # self.dump_pdf_to_page_images()
+        self.annotate_page_images()
 
 
 if __name__ == "__main__":
