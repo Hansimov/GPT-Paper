@@ -41,6 +41,7 @@ class Logger:
         "warn": ("warning", "light_red"),
         "err": ("error", "red"),
     }
+    INDENT_METHODS = ["indent", "set_indent", "reset_indent"]
 
     def __init__(self, name=None, prefix=False):
         if not name:
@@ -71,6 +72,9 @@ class Logger:
     def indent(self, indent=2):
         self.log_indent += indent
 
+    def set_indent(self, indent=2):
+        self.log_indent = indent
+
     def reset_indent(self):
         self.log_indent = 0
 
@@ -83,8 +87,8 @@ class Logger:
         for method in self.LOG_METHODS:
             setattr(self.logger, method, functools.partial(self.log, method))
 
-        self.logger.indent = self.indent
-        self.logger.reset_indent = self.reset_indent
+        for method in self.INDENT_METHODS:
+            setattr(self.logger, method, getattr(self, method))
 
 
 logger = Logger().logger
