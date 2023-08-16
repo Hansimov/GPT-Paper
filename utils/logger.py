@@ -1,3 +1,4 @@
+import functools
 import inspect
 import logging
 import os
@@ -32,6 +33,15 @@ def add_fillers(text, filler="=", direction="both"):
 
 
 class Logger:
+    LOG_METHODS = {
+        "note": ("info", "light_magenta"),
+        "msg": ("info", "light_cyan"),
+        "file": ("info", "light_blue"),
+        "success": ("info", "light_green"),
+        "warn": ("warning", "light_red"),
+        "err": ("error", "red"),
+    }
+
     def __init__(self, name=None, prefix=False):
         if not name:
             frame = inspect.stack()[1]
@@ -54,33 +64,27 @@ class Logger:
         self.handler.setFormatter(self.formatter)
         self.logger.addHandler(self.handler)
 
+        self.log_indent = 0
+
         self.bind_functions()
 
-    def note(self, msg, *args, **kwargs):
-        self.logger.info(colored(msg, "light_magenta"), *args, **kwargs)
+    def indent(self, indent=2):
+        self.log_indent += indent
 
-    def msg(self, msg, *args, **kwargs):
-        self.logger.info(colored(msg, "light_cyan"), *args, **kwargs)
+    def reset_indent(self):
+        self.log_indent = 0
 
-    def file(self, msg, *args, **kwargs):
-        self.logger.info(colored(msg, "light_blue"), *args, **kwargs)
-
-    def success(self, msg, *args, **kwargs):
-        self.logger.info(colored(msg, "light_green"), *args, **kwargs)
-
-    def warn(self, msg, *args, **kwargs):
-        self.logger.warning(colored(msg, "light_red"), *args, **kwargs)
-
-    def err(self, msg, *args, **kwargs):
-        self.logger.error(colored(msg, "red"), *args, **kwargs)
+    def log(self, method, msg, *args, **kwargs):
+        level, color = self.LOG_METHODS[method]
+        indented_msg = " " * self.log_indent + msg
+        getattr(self.logger, level)(colored(indented_msg, color), *args, **kwargs)
 
     def bind_functions(self):
-        self.logger.note = self.note
-        self.logger.msg = self.msg
-        self.logger.success = self.success
-        self.logger.warn = self.warn
-        self.logger.err = self.err
-        self.logger.file = self.file
+        for method in self.LOG_METHODS:
+            setattr(self.logger, method, functools.partial(self.log, method))
+
+        self.logger.indent = self.indent
+        self.logger.reset_indent = self.reset_indent
 
 
 logger = Logger().logger
