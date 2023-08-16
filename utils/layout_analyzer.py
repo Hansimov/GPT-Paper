@@ -10,8 +10,8 @@ from utils.envs import init_os_envs, setup_envs_of_dit
 
 warnings.filterwarnings("ignore")
 
-setup_envs_of_dit()
-# init_os_envs(cuda_device=0)
+# setup_envs_of_dit()
+init_os_envs(cuda_device=2)
 
 try:
     from detectron2.config import CfgNode as CN

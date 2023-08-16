@@ -16,11 +16,9 @@ from utils.calculator import (
 )
 from categorizers.body_text_block_categorizer import BodyTextBlockCategorizer
 from categorizers.fragmented_block_categorizer import FragmentedTextBlockCategorizer
-from utils.logger import Logger, add_fillers
+from utils.logger import logger, add_fillers
 from utils.tokenizer import Tokenizer
 from utils.text_processor import TextBlock
-
-logger = Logger().logger
 
 
 class PDFExtractor:
@@ -36,6 +34,7 @@ class PDFExtractor:
         )
         self.pdf_fullpath = self.pdf_root / pdf_filename
         self.pdf_doc = fitz.open(self.pdf_fullpath)
+        self.assets_path = self.pdf_root / Path(pdf_filename).stem
 
     def extract_all_texts(self):
         for idx, page in enumerate(self.pdf_doc):
@@ -362,14 +361,26 @@ class PDFExtractor:
         table_parser = PDFTableExtractor(self.pdf_fullpath)
         table_parser.run()
 
+    def dump_pdf_to_image_pages(self, dpi=300):
+        image_pages_path = self.assets_path / "pages"
+        image_pages_path.mkdir(parents=True, exist_ok=True)
+        logger.note(f"> Dumping PDF to image pages [dpi={dpi}]")
+        logger.file(f"  - {image_pages_path}")
+        for page_idx, page in enumerate(self.pdf_doc):
+            logger.msg(f"    - Page {page_idx+1}")
+            image_path = image_pages_path / f"page_{page_idx+1}.png"
+            pix = page.get_pixmap(dpi=dpi)
+            pix.save(image_path)
+
     def run(self):
         # self.extract_all_texts()
         # self.extract_all_text_blocks()
         # self.extract_toc()
         # self.extract_images()
         # self.extract_all_text_htmls()
-        self.extract_all_text_block_dicts()
+        # self.extract_all_text_block_dicts()
         # self.extract_tables()
+        self.dump_pdf_to_image_pages()
 
 
 if __name__ == "__main__":
