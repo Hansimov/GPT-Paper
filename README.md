@@ -22,6 +22,11 @@ pip install fairscale timm "scipy>1.5.1" shapely "pygments>=2.2" "psutil" "panop
 
 ## Data pre-processing
 
+
+![](./examples/document-preprocess.png)
+
+![](./examples/task-agents.png)
+
 ### Structure of PDF blocks
 
 In fact, the structure of a PDF is more complex than most people imagine.
