@@ -1,9 +1,14 @@
+from pathlib import Path
 from PIL import Image
 from transformers import TrOCRProcessor, VisionEncoderDecoderModel
 from utils.logger import logger
 from utils.envs import init_os_envs
+import platform
 
-init_os_envs()
+if platform.system() == "Windows":
+    init_os_envs(apis=["huggingface"], cuda_device=0)
+else:
+    init_os_envs()
 
 
 class TextExtractor:
@@ -12,7 +17,9 @@ class TextExtractor:
 
     def run(self):
         image = Image.open(
-            "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops/page_2/region_1_text_99.9.png"
+            Path(__file__).parents[1]
+            / "pdfs"
+            / "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops/page_2/region_1_text_99.9.png"
         )
         processor = TrOCRProcessor.from_pretrained(self.model_name)
         model = VisionEncoderDecoderModel.from_pretrained(self.model_name)

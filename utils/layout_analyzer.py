@@ -1,5 +1,6 @@
 import json
 import os
+import platform
 import sys
 import torch
 import warnings
@@ -12,7 +13,11 @@ from utils.envs import init_os_envs, setup_envs_of_dit
 warnings.filterwarnings("ignore")
 
 # setup_envs_of_dit()
-init_os_envs(cuda_device=2)
+if platform.system() == "Windows":
+    init_os_envs(apis=["huggingface"], cuda_device=0)
+else:
+    init_os_envs(cuda_device=3)
+
 
 try:
     from detectron2.config import CfgNode as CN
