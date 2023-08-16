@@ -115,7 +115,7 @@ class DITLayoutAnalyzer:
         if input_image_path is None:
             raise ValueError("`input_image_path` is None!")
 
-        logger.note(f"> Analyzing input image:")
+        logger.note(f"> Analyzing the layout of input image:")
         logger.file(f"  - {input_image_path}")
 
         image = read_image(str(input_image_path))
