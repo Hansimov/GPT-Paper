@@ -161,30 +161,60 @@ def setup_envs_of_unilm():
     copy_to_site_packaegs(unilm_path)
 
 
-def download_publaynet_dit_b_cascade_pth(
+def download_publaynet_dit_cascade_pth(
     http_proxy="http://localhost:11111",
-    url="https://layoutlm.blob.core.windows.net/dit/dit-fts/publaynet_dit-b_cascade.pth?sv=2022-11-02&ss=b&srt=o&sp=r&se=2033-06-08T16:48:15Z&st=2023-06-08T08:48:15Z&spr=https&sig=a9VXrihTzbWyVfaIDlIT1Z0FoR1073VB0RLQUMuudD4%3D",
-    output_path=repo_path / "configs" / "publaynet_dit-b_cascade.pth",
+    output_path=None,
     overwrite=False,
+    size="base",
 ):
+    """
+    Download weights of Fine-tuning on PubLayNet (Document Layout Analysis):
+    * https://github.com/microsoft/unilm/blob/master/dit/README.md#fine-tuning-on-publaynet-document-layout-analysis
+    """
+    if size == "large":
+        size_str = "l"
+    else:
+        size_str = "l"
+
+    pth_name = f"publaynet_dit-{size_str}_cascade.pth"
+    url_head = f"https://layoutlm.blob.core.windows.net/dit/dit-fts/{pth_name}"
+
+    url_params = {
+        "sv": "2022-11-02",
+        "ss": "b",
+        "srt": "o",
+        "sp": "r",
+        "se": "2033-06-08T16:48:15Z",
+        "st": "2023-06-08T08:48:15Z",
+        "spr": "https",
+        "sig": "a9VXrihTzbWyVfaIDlIT1Z0FoR1073VB0RLQUMuudD4%3D",
+    }
+
+    download_url = url_head + "?" + "&".join(f"{k}={v}" for k, v in url_params.items())
+
     if http_proxy:
         proxy_str = f' --proxy "{http_proxy}"'
     else:
         proxy_str = ""
     if platform.system().lower() == "windows":
-        url = url.replace("&", "&&")
+        download_url = download_url.replace("&", "&&")
+
+    if not output_path:
+        output_path = repo_path / "configs" / pth_name
+
     if overwrite or not output_path.exists():
         os.makedirs(output_path.parent, exist_ok=True)
         logger.info(colored(f"Downloading {str(output_path)} ...", "light_magenta"))
-        shell_cmd(f'curl {proxy_str} -LJ -o "{output_path}" "{url}"')
+        shell_cmd(f'curl {proxy_str} -LJ -o "{output_path}" "{download_url}"')
 
 
 def setup_envs_of_dit():
-    setup_envs_of_detectron2()
-    setup_envs_of_unilm()
-    download_publaynet_dit_b_cascade_pth()
+    # setup_envs_of_detectron2()
+    # setup_envs_of_unilm()
+    download_publaynet_dit_cascade_pth(size="large")
 
 
 if __name__ == "__main__":
     # init_os_envs()
-    check_camelot_dependencies()
+    # check_camelot_dependencies()
+    setup_envs_of_dit()
