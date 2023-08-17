@@ -42,8 +42,8 @@ unilm_path = repo_parent_path / "unilm"
 
 
 class DITLayoutAnalyzer:
-    def __init__(self):
-        pass
+    def __init__(self, size="base"):
+        self.model_size = size
 
     def setup_model(self):
         self.load_configs()
@@ -54,42 +54,52 @@ class DITLayoutAnalyzer:
 
     def test_run(self):
         self.setup_model()
-        self.annotate_image(
-            input_image_path=repo_path / "examples" / "example_pdf_4.png",
-            output_image_path=repo_path / "examples" / "example_pdf_4_output.png",
-        )
+        # self.annotate_image(
+        #     input_image_path=repo_path / "examples" / "example_pdf_4.png",
+        #     output_image_path=repo_path / "examples" / "example_pdf_4_output.png",
+        # )
 
     # Step 1: Instantiate config
     def load_configs(self):
         self.cfg = get_cfg()
         add_vit_config(self.cfg)
 
-        cascade_dit_base_yml = (
+        if self.model_size == "large":
+            size_str = "large"
+        else:
+            size_str = "base"
+
+        yaml_name = f"cascade_dit_{size_str}.yaml"
+        cascade_dit_yml = (
             unilm_path
             / "dit"
             / "object_detection"
             / "publaynet_configs"
             / "cascade"
-            / "cascade_dit_base.yaml"
+            / yaml_name
         )
 
-        logger.note(f"> Loading configs from `cascade_dit_base.yaml`:")
-        logger.file(f"  - {cascade_dit_base_yml}")
+        logger.note(f"> Loading configs from `{yaml_name}`:")
+        logger.file(f"  - {cascade_dit_yml}")
 
-        self.cfg.merge_from_file(cascade_dit_base_yml)
+        self.cfg.merge_from_file(cascade_dit_yml)
 
     # Step 2: Load model weights to config
     def load_weights(self):
-        publaynet_dit_b_cascade_pth = (
-            repo_path / "configs" / "publaynet_dit-b_cascade.pth"
-        )
-        if not publaynet_dit_b_cascade_pth.exists():
-            raise FileNotFoundError("`publaynet_dit-b_cascade.pth` not found.")
+        if self.model_size == "large":
+            size_str = "l"
+        else:
+            size_str = "b"
 
-        logger.note(f"> Loading weights from `publaynet_dit-b_cascade.pth`:")
-        logger.file(f"  - {publaynet_dit_b_cascade_pth}")
+        pth_name = f"publaynet_dit-{size_str}_cascade.pth"
+        publaynet_dit_cascade_pth = repo_path / "configs" / pth_name
+        if not publaynet_dit_cascade_pth.exists():
+            raise FileNotFoundError(f"`{pth_name}` not found.")
 
-        self.cfg.MODEL.WEIGHTS = str(publaynet_dit_b_cascade_pth)
+        logger.note(f"> Loading weights from `{pth_name}`:")
+        logger.file(f"  - {publaynet_dit_cascade_pth}")
+
+        self.cfg.MODEL.WEIGHTS = str(publaynet_dit_cascade_pth)
 
     # Step 3: Set CUDA device
     def set_device(self):
@@ -194,5 +204,5 @@ class DITLayoutAnalyzer:
 
 
 if __name__ == "__main__":
-    dit_layout_analyzer = DITLayoutAnalyzer()
+    dit_layout_analyzer = DITLayoutAnalyzer(size="large")
     dit_layout_analyzer.test_run()
