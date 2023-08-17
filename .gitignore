@@ -2,3 +2,5 @@
 secrets.json
 .vscode/
 *.pth
+pdfs/**/*.png
+pdfs/**/*.json

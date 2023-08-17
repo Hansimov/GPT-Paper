@@ -30,16 +30,17 @@ class PDFExtractor:
     image_root = pdf_root / "images"
 
     def __init__(self):
-        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
-        # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
+        # pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
+        self.pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
-        # pdf_filename = (
-        #     "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
-        # )
-        self.pdf_fullpath = self.pdf_root / pdf_filename
+        # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
+        # pdf_filename = "Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images.pdf"
+        self.pdf_fullpath = self.pdf_root / self.pdf_filename
         self.pdf_doc = fitz.open(self.pdf_fullpath)
+        self.init_paths()
 
-        self.assets_path = self.pdf_root / Path(pdf_filename).stem
+    def init_paths(self):
+        self.assets_path = self.pdf_root / Path(self.pdf_filename).stem
         self.page_images_path = self.assets_path / "pages"
         self.page_images_path.mkdir(parents=True, exist_ok=True)
         self.annotated_page_images_path = self.assets_path / "pages_annotated"
@@ -391,7 +392,7 @@ class PDFExtractor:
 
         logger.set_indent(2)
 
-        layout_analyzer = DITLayoutAnalyzer()
+        layout_analyzer = DITLayoutAnalyzer(size="large")
         layout_analyzer.setup_model()
 
         page_image_paths = sorted(
@@ -449,8 +450,7 @@ class PDFExtractor:
             )
             region_image.save(region_image_path)
 
-    def crop_page_images(self):
-        logger.note(f"> Croping page images")
+    def get_annotate_json_paths(self):
         annotate_json_paths = sorted(
             [
                 self.annotated_page_images_path / p
@@ -459,10 +459,28 @@ class PDFExtractor:
             ],
             key=lambda x: int(x.stem.split("_")[-1]),
         )
+        return annotate_json_paths
 
+    def crop_page_images(self):
+        annotate_json_paths = self.get_annotate_json_paths()
+
+        logger.note(f"> Croping page images")
         logger.set_indent(2)
         for annotate_json_path in annotate_json_paths:
             self.crop_page_image(annotate_json_path)
+        logger.reset_indent()
+
+    def remove_overlapped_layout_regions_from_page(self, annotate_info_json_path):
+        with open(annotate_info_json_path, "r") as rf:
+            annotate_infos = json.load(rf)
+        regions = annotate_infos["regions"]
+
+    def remove_overlapped_layout_regions_from_pages(self):
+        annotate_json_paths = self.get_annotate_json_paths()
+        logger.set_indent(2)
+        for page_idx, annotate_json_path in enumerate(annotate_json_paths):
+            logger.msg(f"- Remove Page {page_idx+1}")
+            self.remove_overlapped_layout_regions_from_page(annotate_json_path)
         logger.reset_indent()
 
     def run(self):
@@ -473,9 +491,10 @@ class PDFExtractor:
         # self.extract_all_text_htmls()
         # self.extract_all_text_block_dicts()
         # self.extract_tables()
-        self.dump_pdf_to_page_images()
-        self.annotate_page_images()
-        self.crop_page_images()
+        # self.dump_pdf_to_page_images()
+        # self.annotate_page_images()
+        # self.crop_page_images()
+        self.remove_overlapped_layout_regions_from_pages()
 
 
 if __name__ == "__main__":
