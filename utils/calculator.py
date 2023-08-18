@@ -39,6 +39,22 @@ def rect_center(x0, y0, x1, y1):
     return (x0 + x1) // 2, (y0 + y1) // 2
 
 
+def rect_overlapped(rect1, rect2):
+    pass
+
+
+def rect_contain(rect1, rect2, t=3) -> int:
+    l1, t1, r1, b1 = rect1
+    l2, t2, r2, b2 = rect2
+    diffs = [l1 - l2, t1 - t2, r2 - r1, b2 - b1]
+    if all([diff <= t for diff in diffs]):  # rect1 contains rect2
+        return 1
+    elif all([diff >= -t for diff in diffs]):  # rect2 contains rect1
+        return -1
+    else:
+        return 0
+
+
 def euclidean_distance(point1, point2, value_type=int):
     p1 = np.array(point1)
     p2 = np.array(point2)
