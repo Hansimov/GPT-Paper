@@ -18,6 +18,7 @@ from utils.calculator import (
     rect_area,
     char_per_pixel,
     avg_line_width,
+    rect_contain,
 )
 from utils.logger import logger, add_fillers
 from utils.tokenizer import Tokenizer
@@ -437,13 +438,13 @@ class PDFExtractor:
             region_thing = region["thing"]
             region_score = region["score"]
             region_box = [int(x) for x in region_box]
-            region_box = [
+            crop_region_box = [
                 max(0, region_box[0] - padding),
                 max(0, region_box[1] - padding),
                 min(page_image_width, region_box[2] + padding),
                 min(page_image_height, region_box[3] + padding),
             ]
-            region_image = page_image.crop(region_box)
+            region_image = page_image.crop(crop_region_box)
             region_image_path = region_image_page_path / (
                 f"region_{region_idx}_{region_thing}_{region_score}"
                 + page_image_path.suffix
@@ -474,14 +475,47 @@ class PDFExtractor:
         with open(annotate_info_json_path, "r") as rf:
             annotate_infos = json.load(rf)
         regions = annotate_infos["regions"]
+        logger.msg(f"- {len(regions)} regions")
+
+        region_containers = []
+        for i in range(len(regions)):
+            region_i_containers = []
+            for j in range(len(regions)):
+                region_i = regions[i]
+                region_j = regions[j]
+                if i != j and rect_contain(region_i["box"], region_j["box"]) == 1:
+                    region_i_containers.append(j+1)
+            region_containers.append(region_i_containers)
+
+        for i, region_i_containers in enumerate(region_containers):
+            region_i = regions[i]
+            if region_i_containers:
+                max_score_of_contained_regions = max(
+                    [regions[i-1]["score"] for i in region_i_containers], key=int
+                )
+                region_containers_str = (
+                    f": {region_i_containers} ({max_score_of_contained_regions})"
+                )
+                line_color = "light_green"
+            else:
+                region_containers_str = ""
+                line_color = "light_blue"
+
+            logger.line(
+                colored(
+                    f"  - {region_i['thing']} region {i+1} ({region_i['score']}) contains {len(region_i_containers)} regions {region_containers_str}",
+                    line_color,
+                )
+            )
 
     def remove_overlapped_layout_regions_from_pages(self):
         annotate_json_paths = self.get_annotate_json_paths()
-        logger.set_indent(2)
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
+            logger.store_indent()
             logger.msg(f"- Remove Page {page_idx+1}")
+            logger.indent(2)
             self.remove_overlapped_layout_regions_from_page(annotate_json_path)
-        logger.reset_indent()
+            logger.restore_indent()
 
     def run(self):
         # self.extract_all_texts()

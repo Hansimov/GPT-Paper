@@ -37,6 +37,7 @@ class Logger:
         "note": ("info", "light_magenta"),
         "msg": ("info", "light_cyan"),
         "file": ("info", "light_blue"),
+        "line": ("info", "light_blue"),
         "success": ("info", "light_green"),
         "warn": ("warning", "light_red"),
         "err": ("error", "red"),
