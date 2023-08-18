@@ -41,7 +41,13 @@ class Logger:
         "warn": ("warning", "light_red"),
         "err": ("error", "red"),
     }
-    INDENT_METHODS = ["indent", "set_indent", "reset_indent"]
+    INDENT_METHODS = [
+        "indent",
+        "set_indent",
+        "reset_indent",
+        "store_indent",
+        "restore_indent",
+    ]
 
     def __init__(self, name=None, prefix=False):
         if not name:
@@ -66,6 +72,7 @@ class Logger:
         self.logger.addHandler(self.handler)
 
         self.log_indent = 0
+        self.log_indents = []
 
         self.bind_functions()
 
@@ -77,6 +84,12 @@ class Logger:
 
     def reset_indent(self):
         self.log_indent = 0
+
+    def store_indent(self):
+        self.log_indents.append(self.log_indent)
+
+    def restore_indent(self):
+        self.log_indent = self.log_indents.pop(-1)
 
     def log(self, method, msg, *args, **kwargs):
         level, color = self.LOG_METHODS[method]
