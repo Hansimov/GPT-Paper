@@ -32,24 +32,55 @@ def each_is_different(iter1, iter2):
 
 
 def rect_area(x0, y0, x1, y1):
-    return int(abs((y1 - y0) * (x1 - x0)))
+    return round(abs((y1 - y0) * (x1 - x0)))
 
 
 def rect_center(x0, y0, x1, y1):
     return (x0 + x1) // 2, (y0 + y1) // 2
 
 
-def rect_overlapped(rect1, rect2):
-    pass
+def rect_overlap(rect1, rect2, t=10):
+    """
+    `t` is the shrunk padding of the rect.
+    The larger the `t`, the more strict the condition.
+    """
+    l1, t1, r1, b1 = rect1
+    l2, t2, r2, b2 = rect2
+    l1, l2, t1, t2 = list(
+        map(lambda x, m: min(x + t, m), (l1, l2, t1, t2), (r1, r2, b1, b2))
+    )
+    r1, r2, b1, b2 = list(
+        map(lambda x, m: max(x - t, m), (r1, r2, b1, b2), (l1, l2, t1, t2))
+    )
+
+    horizontal_intersected = ((l1 - r2) * (r1 - l2)) < 0
+    vertical_intersected = ((t1 - b2) * (b1 - t2)) < 0
+
+    if horizontal_intersected and vertical_intersected:
+        rect1_area = rect_area(l1, t1, r1, b1)
+        rect2_area = rect_area(l2, t2, r2, b2)
+        intersected_area = rect_area(max(l1, l2), max(t1, t2), min(r1, r2), min(b1, b2))
+        intersected_ratio = round(intersected_area / rect1_area, 3)
+        return 1, intersected_ratio
+    else:
+        return 0, 0
 
 
 def rect_contain(rect1, rect2, t=3) -> int:
+    """
+    `t` is the expansion padding of the rect.
+    The less the `t`, the more strict the condition.
+    """
     l1, t1, r1, b1 = rect1
     l2, t2, r2, b2 = rect2
     diffs = [l1 - l2, t1 - t2, r2 - r1, b2 - b1]
-    if all([diff <= t for diff in diffs]):  # rect1 contains rect2
+    rect1_contains_rect2 = all(diff <= t for diff in diffs)
+    rect2_contains_rect1 = all(diff >= -t for diff in diffs)
+    if rect1_contains_rect2 and rect2_contains_rect1:
+        return 2
+    elif rect1_contains_rect2:
         return 1
-    elif all([diff >= -t for diff in diffs]):  # rect2 contains rect1
+    elif rect2_contains_rect1:
         return -1
     else:
         return 0
