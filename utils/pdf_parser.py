@@ -9,7 +9,7 @@ from collections import Counter
 from itertools import islice, chain
 from matplotlib.patches import Rectangle
 from pathlib import Path
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 from termcolor import colored
 from utils.calculator import (
     flatten_len,
@@ -43,13 +43,19 @@ class PDFExtractor:
 
     def init_paths(self):
         self.assets_path = self.pdf_root / Path(self.pdf_filename).stem
+
         self.page_images_path = self.assets_path / "pages"
         self.page_images_path.mkdir(parents=True, exist_ok=True)
+
         self.annotated_page_images_path = self.assets_path / "pages_annotated"
         self.annotated_page_images_path.mkdir(parents=True, exist_ok=True)
+
         self.cropped_page_images_path = self.assets_path / "crops"
         shutil.rmtree(self.cropped_page_images_path, ignore_errors=True)
         self.cropped_page_images_path.mkdir(parents=True, exist_ok=True)
+
+        self.drawn_page_images_path = self.assets_path / "pages_drawn"
+        self.drawn_page_images_path.mkdir(parents=True, exist_ok=True)
 
     def extract_all_texts(self):
         for idx, page in enumerate(self.pdf_doc):
@@ -438,7 +444,7 @@ class PDFExtractor:
             region_box = region["box"]
             region_thing = region["thing"]
             region_score = region["score"]
-            region_box = [int(x) for x in region_box]
+            region_box = [round(x) for x in region_box]
             crop_region_box = [
                 max(0, region_box[0] - padding),
                 max(0, region_box[1] - padding),
@@ -451,6 +457,64 @@ class PDFExtractor:
                 + page_image_path.suffix
             )
             region_image.save(region_image_path)
+
+    def draw_regions_on_page(self, annotate_info_json_path):
+        region_colors = {
+            "text": (0, 128, 0),
+            "title": (128, 0, 0),
+            "list": (0, 0, 128),
+            "table": (128, 128, 0),
+            "figure": (0, 0, 128),
+        }
+        with open(annotate_info_json_path, "r") as rf:
+            annotate_infos = json.load(rf)
+        page_image_path = Path(annotate_infos["page"]["original_image_path"])
+        page_num = int(page_image_path.stem.split("_")[-1])
+        page_image = Image.open(page_image_path)
+        page_image_width, page_image_height = page_image.size
+        regions = annotate_infos["regions"]
+
+        image_draw = ImageDraw.Draw(page_image, "RGBA")
+
+        drawn_page_image_path = self.drawn_page_images_path / page_image_path.name
+        logger.msg(f"- Draw on Page {page_num} with {len(regions)} regions")
+        logger.file(f"  - {drawn_page_image_path}")
+
+        for region in regions:
+            region_idx = region["idx"]
+            region_box = region["box"]
+            region_thing = region["thing"]
+            region_score = region["score"]
+            region_box = [round(x) for x in region_box]
+
+            text_font = ImageFont.truetype("arial.ttf", 40)
+            text_str = f"{region_idx}.{region_thing}({round(region_score)}%)"
+            text_bbox = image_draw.textbbox(
+                region_box[:2], text_str, font=text_font, anchor="rt"
+            )
+            image_draw.text(
+                region_box[:2], text_str, fill="black", font=text_font, anchor="rt"
+            )
+            region_rect_color = region_colors[region_thing]
+            image_draw.rectangle(
+                region_box,
+                outline=region_rect_color,
+                fill=(*region_rect_color, 64),
+                width=2,
+            )
+
+            image_draw.rectangle(text_bbox, fill=(*region_rect_color, 80))
+
+        page_image.save(drawn_page_image_path)
+
+    def draw_regions_on_pages(self):
+        annotate_json_paths = self.get_annotate_json_paths()
+        logger.note(f"> Draw on page images")
+        for page_idx, annotate_json_path in enumerate(annotate_json_paths):
+            logger.store_indent()
+            logger.indent(2)
+            self.draw_regions_on_page(annotate_json_path)
+            logger.restore_indent()
 
     def get_annotate_json_paths(self):
         annotate_json_paths = sorted(
@@ -568,6 +632,7 @@ class PDFExtractor:
         # self.dump_pdf_to_page_images()
         # self.annotate_page_images()
         # self.crop_page_images()
+        self.draw_regions_on_pages()
         self.remove_overlapped_layout_regions_from_pages()
 
 
