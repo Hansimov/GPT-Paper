@@ -536,10 +536,31 @@ class PDFExtractor:
             self.crop_page_image(annotate_json_path)
         logger.reset_indent()
 
-    def draw_rects_on_no_overlapped_pages(self):
-        pass
-
     def remove_overlapped_layout_regions_from_page(self, annotate_info_json_path):
+        """
+        Rules of thumb:
+
+        The higher the score of "thing", and the larger the region area:
+        the more likely it is a separated region with category "thing".
+
+        Common cases in overlapped regions:
+
+        1. (Page 12) Text t1 is in Table/Figure t2, and t2's score is higher than t1's.
+        Solution: Only keep table region t2.
+
+        2. (Page 13) List overlapped with Text:
+        Solution: Keep the region with higher score. And in later process, treat list same as text.
+
+        3. (Page 3,8) Large False Figure overlapped with other Figures and Texts:
+        Solution: If the score of the large false figure is too lower, ignore/remove it. And process other regions. As the other regions are also possibly detected.
+
+        4. (Page 13) Large Text overlapped with small Texts.
+        Solution: Keep the larger one, if its score is not too low.
+
+        5. (Page 5) Table overlapped with inside-table and outside-table Texts:
+        Solution: Keep the table, and the outside-table texts.
+
+        """
         with open(annotate_info_json_path, "r") as rf:
             annotate_infos = json.load(rf)
         regions = annotate_infos["regions"]
