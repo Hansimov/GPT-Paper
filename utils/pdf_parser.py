@@ -24,7 +24,11 @@ from utils.calculator import (
 from utils.logger import logger, add_fillers
 from utils.tokenizer import Tokenizer
 from utils.text_processor import TextBlock
-from utils.layout_analyzer import DITLayoutAnalyzer, calc_regions_overlap_relationships
+from utils.layout_analyzer import (
+    DITLayoutAnalyzer,
+    calc_regions_overlaps,
+    remove_regions_overlaps,
+)
 
 
 class PDFExtractor:
@@ -546,19 +550,22 @@ class PDFExtractor:
         with open(annotate_info_json_path, "r") as rf:
             annotate_infos = json.load(rf)
         regions = annotate_infos["regions"]
-        logger.msg(f"- {len(regions)} regions")
 
-        region_overlappers = calc_regions_overlap_relationships(regions)
+        logger.store_indent()
+        logger.indent(2)
+        logger.note(f"- Detect overlaps of {len(annotate_infos['regions'])} regions")
+        regions_overlaps = calc_regions_overlaps(regions)
+        logger.restore_indent()
 
         no_overlap_regions_infos = annotate_infos.copy()
-        no_overlap_regions_infos["regions"] = [
-            regions[i] for i in range(len(regions)) if not region_overlappers[i]
-        ]
+        no_overlap_regions_infos["regions"] = remove_regions_overlaps(
+            regions, regions_overlaps
+        )
         no_overlap_regions_info_json_path = self.no_overlap_page_images_path / (
             Path(annotate_infos["page"]["annotated_image_path"]).stem + ".json"
         )
 
-        logger.msg("> Dump no-overlap regions info json")
+        logger.note("> Dump no-overlap regions info json")
         logger.file(f"  - {no_overlap_regions_info_json_path}")
         with open(no_overlap_regions_info_json_path, "w") as wf:
             json.dump(no_overlap_regions_infos, wf, indent=4)
@@ -567,9 +574,10 @@ class PDFExtractor:
         annotate_json_paths = self.get_annotate_json_paths()
         self.no_overlap_page_images_path.mkdir(parents=True, exist_ok=True)
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
+            with open(annotate_json_path, "r") as rf:
+                annotate_infos = json.load(rf)
             logger.store_indent()
-            logger.msg(f"- Remove Page {page_idx+1}")
-            logger.indent(2)
+            logger.note(f"- Remove overlaps on Page {page_idx+1}")
             self.remove_overlapped_layout_regions_from_page(annotate_json_path)
             logger.restore_indent()
 

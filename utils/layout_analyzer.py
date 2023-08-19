@@ -225,81 +225,56 @@ class LayoutLMv3Analyzer:
         pass
 
 
-def calc_regions_overlap_relationships(regions):
-    region_containers = []
-    region_overlappers = []
+def calc_regions_overlaps(regions):
+    regions_overlaps = []
     for i in range(len(regions)):
-        region_i_containers = []
         region_i_overlappers = []
         for j in range(len(regions)):
             region_i = regions[i]
             region_j = regions[j]
-            if i != j and rect_contain(region_i["box"], region_j["box"]) == -1:
-                region_i_containers.append(j + 1)
             region_i_overlaps_j, region_i_j_overlapped_area_ratio = rect_overlap(
                 region_i["box"], region_j["box"]
             )
             if i != j and region_i_overlaps_j:
                 region_i_overlappers.append((j + 1, region_i_j_overlapped_area_ratio))
-        region_containers.append(region_i_containers)
-        region_overlappers.append(region_i_overlappers)
+        regions_overlaps.append(region_i_overlappers)
 
     for i in range(len(regions)):
-        region_i_containers = region_containers[i]
-        region_i_overlappers = region_overlappers[i]
+        region_i_overlappers = regions_overlaps[i]
         region_i = regions[i]
 
-        # if region_i_containers:
-        #     max_score_of_contained_regions = max(
-        #         [regions[i - 1]["score"] for i in region_i_containers], key=int
-        #     )
-        #     region_containers_str = (
-        #         f": {region_i_containers} ({max_score_of_contained_regions})"
-        #     )
-        #     line_color = "light_green"
-        # else:
-        #     region_containers_str = ""
-        #     line_color = "light_blue"
-
-        # logger.line(
-        #     colored(
-        #         f"  - {region_i['thing']} region {i+1} ({region_i['score']}) [AR={rect_area(*region_i['box'])}] is contained by {len(region_i_containers)} regions {region_containers_str}",
-        #         line_color,
-        #     )
-        # )
-
         if region_i_overlappers:
-            region_i_overlappers_str = ", ".join(
+            region_i_overlaps_str = ", ".join(
                 [f"{x[0]}({round(x[1],2)})" for x in region_i_overlappers]
             )
-            region_i_overlappers_str = f"- {region_i_overlappers_str}"
+            region_i_overlaps_str = f"- {region_i_overlaps_str}"
             line_color = "light_red"
             overlap_region_num_str = (
-                f" is overlapped with {len(region_i_overlappers)} regions"
+                f", overlaps with {len(region_i_overlappers)} regions"
             )
         else:
-            region_i_overlappers_str = ""
-            line_color = "light_green"
+            region_i_overlaps_str = ""
+            line_color = "light_cyan"
             overlap_region_num_str = ""
 
         logger.store_indent()
         logger.indent(2)
         logger.line(
             colored(
-                f"- {region_i['thing']} region {i+1} ({region_i['score']}) [AR={rect_area(*region_i['box'])}]"
+                f"- {i+1}: {region_i['thing']} region ({region_i['score']})"
                 + overlap_region_num_str,
                 line_color,
             )
         )
-        if region_i_overlappers_str:
+        if region_i_overlaps_str:
             logger.indent(2)
-            logger.line(region_i_overlappers_str)
+            logger.line(region_i_overlaps_str)
         logger.restore_indent()
 
-        return region_overlappers
+    return regions_overlaps
 
 
-def remove_overlapped_regions(regions):
+def remove_regions_overlaps(regions, regions_overlaps):
     """
     Rules of thumb:
 
@@ -324,7 +299,10 @@ def remove_overlapped_regions(regions):
     Solution: Keep the table, and the outside-table texts.
 
     """
-    pass
+    no_overlap_regions = [
+        regions[i] for i in range(len(regions)) if not regions_overlaps[i]
+    ]
+    return no_overlap_regions
 
 
 if __name__ == "__main__":
