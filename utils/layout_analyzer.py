@@ -141,38 +141,40 @@ class DITLayoutAnalyzer:
         logger.file(f"  - {input_image_path}")
 
         image = read_image(str(input_image_path))
-        output = self.predictor(image)["instances"]
+        pred_output = self.predictor(image)["instances"]
         # logger.msg(output)
-        pred_things = [self.thing_classes[c] for c in output.pred_classes]
+        pred_things = [self.thing_classes[c] for c in pred_output.pred_classes]
 
         logger.note("> Results:")
-        image_height, image_width = output.image_size
+        image_height, image_width = pred_output.image_size
         logger.msg(f"  - image_size: {image_width}(w) * {image_height}(h)")
-        logger.msg(f"  - num_instances: {len(output)}")
-        logger.debug(f"  - pred_classes: {output.pred_classes.tolist()}")
+        logger.msg(f"  - num_instances: {len(pred_output)}")
+        logger.debug(f"  - pred_classes: {pred_output.pred_classes.tolist()}")
         logger.msg(f"  - pred_things: {pred_things}")
-        logger.debug(f"  - pred_boxes: {output.pred_boxes.tensor.tolist()}")
-        logger.debug(f"  - scores: {output.scores.tolist()}")
+        logger.debug(f"  - pred_boxes: {pred_output.pred_boxes.tensor.tolist()}")
+        logger.debug(f"  - scores: {pred_output.scores.tolist()}")
         # logger.msg(f"  - fields {output.fields}")
 
-        visualizer = Visualizer(
-            image[:, :, ::-1],
-            metadata=self.metadata,
-            scale=1.0,
-            instance_mode=ColorMode.SEGMENTATION,
+        # visualizer = Visualizer(
+        #     image[:, :, ::-1],
+        #     metadata=self.metadata,
+        #     scale=1.0,
+        #     instance_mode=ColorMode.SEGMENTATION,
+        # )
+        # result = visualizer.draw_instance_predictions(output.to("cpu"))
+
+        # result_image = result.get_image()[:, :, ::-1]
+
+        # logger.success(f"> Saving output image:")
+        # logger.file(f"  - {output_image_path}")
+
+        # Image.fromarray(result_image).save(output_image_path)
+
+        annotate_info_json_path = self.dump_annotate_info(
+            input_image_path, output_image_path, pred_output
         )
-        result = visualizer.draw_instance_predictions(output.to("cpu"))
 
-        result_image = result.get_image()[:, :, ::-1]
-
-        logger.success(f"> Saving output image:")
-        logger.file(f"  - {output_image_path}")
-
-        Image.fromarray(result_image).save(output_image_path)
-
-        self.dump_annotate_info(input_image_path, output_image_path, output)
-
-        return result_image, output
+        return pred_output, annotate_info_json_path
 
     def dump_annotate_info(self, input_image_path, output_image_path, output):
         image_height, image_width = output.image_size
@@ -208,6 +210,8 @@ class DITLayoutAnalyzer:
         logger.file(f"  - {annotate_info_json_path}")
         with open(annotate_info_json_path, "w") as wf:
             wf.write(json.dumps(self.annotate_infos, indent=4))
+
+        return annotate_info_json_path
 
 
 class LayoutLMv3Analyzer:

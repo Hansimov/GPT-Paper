@@ -45,17 +45,9 @@ class PDFExtractor:
         self.assets_path = self.pdf_root / Path(self.pdf_filename).stem
 
         self.page_images_path = self.assets_path / "pages"
-        self.page_images_path.mkdir(parents=True, exist_ok=True)
-
         self.annotated_page_images_path = self.assets_path / "pages_annotated"
-        self.annotated_page_images_path.mkdir(parents=True, exist_ok=True)
-
         self.cropped_page_images_path = self.assets_path / "crops"
-        shutil.rmtree(self.cropped_page_images_path, ignore_errors=True)
-        self.cropped_page_images_path.mkdir(parents=True, exist_ok=True)
-
-        self.drawn_page_images_path = self.assets_path / "pages_drawn"
-        self.drawn_page_images_path.mkdir(parents=True, exist_ok=True)
+        self.clean_page_images_path = self.assets_path / "pages_clean"
 
     def extract_all_texts(self):
         for idx, page in enumerate(self.pdf_doc):
@@ -383,6 +375,8 @@ class PDFExtractor:
         table_parser.run()
 
     def dump_pdf_to_page_images(self, dpi=300):
+        shutil.rmtree(self.page_images_path, ignore_errors=True)
+        self.page_images_path.mkdir(parents=True, exist_ok=True)
         # transform_matrix = fitz.Matrix(dpi / 72, dpi / 72)
         logger.note(f"> Dumping PDF to image pages [dpi={dpi}]")
         logger.file(f"  - {self.page_images_path}")
@@ -395,6 +389,9 @@ class PDFExtractor:
             # pix.pil_save(image_path, dpi=(dpi, dpi))
 
     def annotate_page_images(self):
+        shutil.rmtree(self.annotated_page_images_path, ignore_errors=True)
+        self.annotated_page_images_path.mkdir(parents=True, exist_ok=True)
+
         logger.note(f"> Annotating page images")
         # logger.file(f"  * {self.annotated_page_images_path}")
 
@@ -421,8 +418,13 @@ class PDFExtractor:
             logger.set_indent(2)
             logger.file(f"- {page_image_path.name}")
             logger.set_indent(4)
-            layout_analyzer.annotate_image(
-                input_image_path=page_image_path, output_image_path=output_image_path
+            pred_output, annotate_info_json_path = layout_analyzer.annotate_image(
+                input_image_path=page_image_path,
+                output_image_path=output_image_path,
+            )
+            self.draw_regions_on_page(
+                annotate_info_json_path,
+                output_parent_path=self.annotated_page_images_path,
             )
         logger.reset_indent()
 
@@ -458,7 +460,7 @@ class PDFExtractor:
             )
             region_image.save(region_image_path)
 
-    def draw_regions_on_page(self, annotate_info_json_path):
+    def draw_regions_on_page(self, regions_info_json_path, output_parent_path):
         region_colors = {
             "text": (0, 128, 0),
             "title": (128, 0, 0),
@@ -466,17 +468,17 @@ class PDFExtractor:
             "table": (128, 128, 0),
             "figure": (0, 0, 128),
         }
-        with open(annotate_info_json_path, "r") as rf:
-            annotate_infos = json.load(rf)
-        page_image_path = Path(annotate_infos["page"]["original_image_path"])
+        with open(regions_info_json_path, "r") as rf:
+            regions_infos = json.load(rf)
+        page_image_path = Path(regions_infos["page"]["original_image_path"])
         page_num = int(page_image_path.stem.split("_")[-1])
         page_image = Image.open(page_image_path)
         page_image_width, page_image_height = page_image.size
-        regions = annotate_infos["regions"]
+        regions = regions_infos["regions"]
 
         image_draw = ImageDraw.Draw(page_image, "RGBA")
 
-        drawn_page_image_path = self.drawn_page_images_path / page_image_path.name
+        drawn_page_image_path = output_parent_path / page_image_path.name
         logger.msg(f"- Draw on Page {page_num} with {len(regions)} regions")
         logger.file(f"  - {drawn_page_image_path}")
 
@@ -504,16 +506,18 @@ class PDFExtractor:
             )
 
             image_draw.rectangle(text_bbox, fill=(*region_rect_color, 80))
-
         page_image.save(drawn_page_image_path)
 
-    def draw_regions_on_pages(self):
+    def draw_regions_on_pages(self, output_parent_path):
+        shutil.rmtree(output_parent_path, ignore_errors=True)
+        output_parent_path.mkdir(parents=True, exist_ok=True)
+
         annotate_json_paths = self.get_annotate_json_paths()
         logger.note(f"> Draw on page images")
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
             logger.store_indent()
             logger.indent(2)
-            self.draw_regions_on_page(annotate_json_path)
+            self.draw_regions_on_page(annotate_json_path, output_parent_path)
             logger.restore_indent()
 
     def get_annotate_json_paths(self):
@@ -528,6 +532,8 @@ class PDFExtractor:
         return annotate_json_paths
 
     def crop_page_images(self):
+        shutil.rmtree(self.cropped_page_images_path, ignore_errors=True)
+        self.cropped_page_images_path.mkdir(parents=True, exist_ok=True)
         annotate_json_paths = self.get_annotate_json_paths()
 
         logger.note(f"> Croping page images")
@@ -650,11 +656,11 @@ class PDFExtractor:
         # self.extract_all_text_htmls()
         # self.extract_all_text_block_dicts()
         # self.extract_tables()
-        # self.dump_pdf_to_page_images()
-        # self.annotate_page_images()
-        # self.crop_page_images()
-        self.draw_regions_on_pages()
+        self.dump_pdf_to_page_images()
+        self.annotate_page_images()
+        self.crop_page_images()
         self.remove_overlapped_layout_regions_from_pages()
+        # self.draw_regions_on_pages()
 
 
 if __name__ == "__main__":
