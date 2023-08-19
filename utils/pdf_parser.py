@@ -19,6 +19,7 @@ from utils.calculator import (
     char_per_pixel,
     avg_line_width,
     rect_contain,
+    rect_overlap,
 )
 from utils.logger import logger, add_fillers
 from utils.tokenizer import Tokenizer
@@ -471,6 +472,9 @@ class PDFExtractor:
             self.crop_page_image(annotate_json_path)
         logger.reset_indent()
 
+    def draw_rects_on_no_overlapped_pages(self):
+        pass
+
     def remove_overlapped_layout_regions_from_page(self, annotate_info_json_path):
         with open(annotate_info_json_path, "r") as rf:
             annotate_infos = json.load(rf)
@@ -478,35 +482,71 @@ class PDFExtractor:
         logger.msg(f"- {len(regions)} regions")
 
         region_containers = []
+        region_overlappers = []
         for i in range(len(regions)):
             region_i_containers = []
+            region_i_overlappers = []
             for j in range(len(regions)):
                 region_i = regions[i]
                 region_j = regions[j]
-                if i != j and rect_contain(region_i["box"], region_j["box"]) == 1:
-                    region_i_containers.append(j+1)
+                if i != j and rect_contain(region_i["box"], region_j["box"]) == -1:
+                    region_i_containers.append(j + 1)
+                region_i_overlaps_j, region_i_j_overlapped_area_ratio = rect_overlap(
+                    region_i["box"], region_j["box"]
+                )
+                if i != j and region_i_overlaps_j:
+                    region_i_overlappers.append(
+                        (j + 1, region_i_j_overlapped_area_ratio)
+                    )
             region_containers.append(region_i_containers)
+            region_overlappers.append(region_i_overlappers)
 
-        for i, region_i_containers in enumerate(region_containers):
+        for i in range(len(regions)):
+            region_i_containers = region_containers[i]
+            region_i_overlappers = region_overlappers[i]
             region_i = regions[i]
-            if region_i_containers:
-                max_score_of_contained_regions = max(
-                    [regions[i-1]["score"] for i in region_i_containers], key=int
-                )
-                region_containers_str = (
-                    f": {region_i_containers} ({max_score_of_contained_regions})"
-                )
-                line_color = "light_green"
-            else:
-                region_containers_str = ""
-                line_color = "light_blue"
 
+            # if region_i_containers:
+            #     max_score_of_contained_regions = max(
+            #         [regions[i - 1]["score"] for i in region_i_containers], key=int
+            #     )
+            #     region_containers_str = (
+            #         f": {region_i_containers} ({max_score_of_contained_regions})"
+            #     )
+            #     line_color = "light_green"
+            # else:
+            #     region_containers_str = ""
+            #     line_color = "light_blue"
+
+            # logger.line(
+            #     colored(
+            #         f"  - {region_i['thing']} region {i+1} ({region_i['score']}) [AR={rect_area(*region_i['box'])}] is contained by {len(region_i_containers)} regions {region_containers_str}",
+            #         line_color,
+            #     )
+            # )
+
+            if region_i_overlappers:
+                region_i_overlappers_str = ", ".join(
+                    [f"{x[0]}({round(x[1],2)})" for x in region_i_overlappers]
+                )
+                region_i_overlappers_str = f"- {region_i_overlappers_str}"
+                line_color = "light_red"
+            else:
+                region_i_overlappers_str = ""
+                line_color = "light_green"
+
+            logger.store_indent()
+            logger.indent(2)
             logger.line(
                 colored(
-                    f"  - {region_i['thing']} region {i+1} ({region_i['score']}) contains {len(region_i_containers)} regions {region_containers_str}",
+                    f"- {region_i['thing']} region {i+1} ({region_i['score']}) [AR={rect_area(*region_i['box'])}] is overlapped with {len(region_i_overlappers)} regions",
                     line_color,
                 )
             )
+            if region_i_overlappers_str:
+                logger.indent(2)
+                logger.line(region_i_overlappers_str)
+            logger.restore_indent()
 
     def remove_overlapped_layout_regions_from_pages(self):
         annotate_json_paths = self.get_annotate_json_paths()
