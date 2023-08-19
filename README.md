@@ -37,13 +37,3 @@ Hers is the dict structure of blocks in a page of a PDF document parsed via PyMu
 
 
 ## Layout Analysis
-* nielsr/dit-document-layout-analysis
-  * https://huggingface.co/spaces/nielsr/dit-document-layout-analysis
-  * https://huggingface.co/spaces/nielsr/dit-document-layout-analysis/blob/main/app.py
-
-* Table Transformer
-  * https://huggingface.co/docs/transformers/main/model_doc/table-transformer
-  * https://github.com/microsoft/table-transformer
-
-* app.py · nielsr/dit-document-layout-analysis at main
-  * https://huggingface.co/spaces/nielsr/dit-document-layout-analysis/blob/main/app.py

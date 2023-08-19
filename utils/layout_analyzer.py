@@ -42,6 +42,13 @@ unilm_path = repo_parent_path / "unilm"
 
 
 class DITLayoutAnalyzer:
+    """
+    * app.py · nielsr/dit-document-layout-analysis
+        * https://huggingface.co/spaces/nielsr/dit-document-layout-analysis/blob/main/app.py
+    * unilm/dit/object_detection/inference.py
+        * https://github.com/microsoft/unilm/blob/master/dit/object_detection/inference.py
+    """
+
     def __init__(self, size="base"):
         self.model_size = size
 
@@ -201,6 +208,16 @@ class DITLayoutAnalyzer:
         logger.file(f"  - {annotate_info_json_path}")
         with open(annotate_info_json_path, "w") as wf:
             wf.write(json.dumps(self.annotate_infos, indent=4))
+
+
+class LayoutLMv3Analyzer:
+    """
+    * unilm/layoutlmv3 at master · microsoft/unilm
+        * https://github.com/microsoft/unilm/tree/master/layoutlmv3#document-layout-analysis-on-publaynet
+    """
+
+    def __init__(self) -> None:
+        pass
 
 
 if __name__ == "__main__":
