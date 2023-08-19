@@ -24,7 +24,7 @@ from utils.calculator import (
 from utils.logger import logger, add_fillers
 from utils.tokenizer import Tokenizer
 from utils.text_processor import TextBlock
-from utils.layout_analyzer import DITLayoutAnalyzer
+from utils.layout_analyzer import DITLayoutAnalyzer, calc_regions_overlap_relationships
 
 
 class PDFExtractor:
@@ -47,7 +47,7 @@ class PDFExtractor:
         self.page_images_path = self.assets_path / "pages"
         self.annotated_page_images_path = self.assets_path / "pages_annotated"
         self.cropped_page_images_path = self.assets_path / "crops"
-        self.clean_page_images_path = self.assets_path / "pages_clean"
+        self.no_overlap_page_images_path = self.assets_path / "pages_no_overlap"
 
     def extract_all_texts(self):
         for idx, page in enumerate(self.pdf_doc):
@@ -543,104 +543,29 @@ class PDFExtractor:
         logger.reset_indent()
 
     def remove_overlapped_layout_regions_from_page(self, annotate_info_json_path):
-        """
-        Rules of thumb:
-
-        The higher the score of "thing", and the larger the region area:
-        the more likely it is a separated region with category "thing".
-
-        Common cases in overlapped regions:
-
-        1. (Page 12) Text t1 is in Table/Figure t2, and t2's score is higher than t1's.
-        Solution: Only keep table region t2.
-
-        2. (Page 13) List overlapped with Text:
-        Solution: Keep the region with higher score. And in later process, treat list same as text.
-
-        3. (Page 3,8) Large False Figure overlapped with other Figures and Texts:
-        Solution: If the score of the large false figure is too lower, ignore/remove it. And process other regions. As the other regions are also possibly detected.
-
-        4. (Page 13) Large Text overlapped with small Texts.
-        Solution: Keep the larger one, if its score is not too low.
-
-        5. (Page 5) Table overlapped with inside-table and outside-table Texts:
-        Solution: Keep the table, and the outside-table texts.
-
-        """
         with open(annotate_info_json_path, "r") as rf:
             annotate_infos = json.load(rf)
         regions = annotate_infos["regions"]
         logger.msg(f"- {len(regions)} regions")
 
-        region_containers = []
-        region_overlappers = []
-        for i in range(len(regions)):
-            region_i_containers = []
-            region_i_overlappers = []
-            for j in range(len(regions)):
-                region_i = regions[i]
-                region_j = regions[j]
-                if i != j and rect_contain(region_i["box"], region_j["box"]) == -1:
-                    region_i_containers.append(j + 1)
-                region_i_overlaps_j, region_i_j_overlapped_area_ratio = rect_overlap(
-                    region_i["box"], region_j["box"]
-                )
-                if i != j and region_i_overlaps_j:
-                    region_i_overlappers.append(
-                        (j + 1, region_i_j_overlapped_area_ratio)
-                    )
-            region_containers.append(region_i_containers)
-            region_overlappers.append(region_i_overlappers)
+        region_overlappers = calc_regions_overlap_relationships(regions)
 
-        for i in range(len(regions)):
-            region_i_containers = region_containers[i]
-            region_i_overlappers = region_overlappers[i]
-            region_i = regions[i]
+        no_overlap_regions_infos = annotate_infos.copy()
+        no_overlap_regions_infos["regions"] = [
+            regions[i] for i in range(len(regions)) if not region_overlappers[i]
+        ]
+        no_overlap_regions_info_json_path = self.no_overlap_page_images_path / (
+            Path(annotate_infos["page"]["annotated_image_path"]).stem + ".json"
+        )
 
-            # if region_i_containers:
-            #     max_score_of_contained_regions = max(
-            #         [regions[i - 1]["score"] for i in region_i_containers], key=int
-            #     )
-            #     region_containers_str = (
-            #         f": {region_i_containers} ({max_score_of_contained_regions})"
-            #     )
-            #     line_color = "light_green"
-            # else:
-            #     region_containers_str = ""
-            #     line_color = "light_blue"
-
-            # logger.line(
-            #     colored(
-            #         f"  - {region_i['thing']} region {i+1} ({region_i['score']}) [AR={rect_area(*region_i['box'])}] is contained by {len(region_i_containers)} regions {region_containers_str}",
-            #         line_color,
-            #     )
-            # )
-
-            if region_i_overlappers:
-                region_i_overlappers_str = ", ".join(
-                    [f"{x[0]}({round(x[1],2)})" for x in region_i_overlappers]
-                )
-                region_i_overlappers_str = f"- {region_i_overlappers_str}"
-                line_color = "light_red"
-            else:
-                region_i_overlappers_str = ""
-                line_color = "light_green"
-
-            logger.store_indent()
-            logger.indent(2)
-            logger.line(
-                colored(
-                    f"- {region_i['thing']} region {i+1} ({region_i['score']}) [AR={rect_area(*region_i['box'])}] is overlapped with {len(region_i_overlappers)} regions",
-                    line_color,
-                )
-            )
-            if region_i_overlappers_str:
-                logger.indent(2)
-                logger.line(region_i_overlappers_str)
-            logger.restore_indent()
+        logger.msg("> Dump no-overlap regions info json")
+        logger.file(f"  - {no_overlap_regions_info_json_path}")
+        with open(no_overlap_regions_info_json_path, "w") as wf:
+            json.dump(no_overlap_regions_infos, wf, indent=4)
 
     def remove_overlapped_layout_regions_from_pages(self):
         annotate_json_paths = self.get_annotate_json_paths()
+        self.no_overlap_page_images_path.mkdir(parents=True, exist_ok=True)
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
             logger.store_indent()
             logger.msg(f"- Remove Page {page_idx+1}")
@@ -656,11 +581,10 @@ class PDFExtractor:
         # self.extract_all_text_htmls()
         # self.extract_all_text_block_dicts()
         # self.extract_tables()
-        self.dump_pdf_to_page_images()
-        self.annotate_page_images()
-        self.crop_page_images()
+        # self.dump_pdf_to_page_images()
+        # self.annotate_page_images()
+        # self.crop_page_images()
         self.remove_overlapped_layout_regions_from_pages()
-        # self.draw_regions_on_pages()
 
 
 if __name__ == "__main__":

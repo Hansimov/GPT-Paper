@@ -9,6 +9,7 @@ from PIL import Image
 from termcolor import colored
 from utils.logger import logger, shell_cmd
 from utils.envs import init_os_envs, setup_envs_of_dit
+from utils.calculator import rect_area, rect_overlap, rect_contain
 
 warnings.filterwarnings("ignore")
 
@@ -222,6 +223,108 @@ class LayoutLMv3Analyzer:
 
     def __init__(self) -> None:
         pass
+
+
+def calc_regions_overlap_relationships(regions):
+    region_containers = []
+    region_overlappers = []
+    for i in range(len(regions)):
+        region_i_containers = []
+        region_i_overlappers = []
+        for j in range(len(regions)):
+            region_i = regions[i]
+            region_j = regions[j]
+            if i != j and rect_contain(region_i["box"], region_j["box"]) == -1:
+                region_i_containers.append(j + 1)
+            region_i_overlaps_j, region_i_j_overlapped_area_ratio = rect_overlap(
+                region_i["box"], region_j["box"]
+            )
+            if i != j and region_i_overlaps_j:
+                region_i_overlappers.append((j + 1, region_i_j_overlapped_area_ratio))
+        region_containers.append(region_i_containers)
+        region_overlappers.append(region_i_overlappers)
+
+    for i in range(len(regions)):
+        region_i_containers = region_containers[i]
+        region_i_overlappers = region_overlappers[i]
+        region_i = regions[i]
+
+        # if region_i_containers:
+        #     max_score_of_contained_regions = max(
+        #         [regions[i - 1]["score"] for i in region_i_containers], key=int
+        #     )
+        #     region_containers_str = (
+        #         f": {region_i_containers} ({max_score_of_contained_regions})"
+        #     )
+        #     line_color = "light_green"
+        # else:
+        #     region_containers_str = ""
+        #     line_color = "light_blue"
+
+        # logger.line(
+        #     colored(
+        #         f"  - {region_i['thing']} region {i+1} ({region_i['score']}) [AR={rect_area(*region_i['box'])}] is contained by {len(region_i_containers)} regions {region_containers_str}",
+        #         line_color,
+        #     )
+        # )
+
+        if region_i_overlappers:
+            region_i_overlappers_str = ", ".join(
+                [f"{x[0]}({round(x[1],2)})" for x in region_i_overlappers]
+            )
+            region_i_overlappers_str = f"- {region_i_overlappers_str}"
+            line_color = "light_red"
+            overlap_region_num_str = (
+                f" is overlapped with {len(region_i_overlappers)} regions"
+            )
+        else:
+            region_i_overlappers_str = ""
+            line_color = "light_green"
+            overlap_region_num_str = ""
+
+        logger.store_indent()
+        logger.indent(2)
+        logger.line(
+            colored(
+                f"- {region_i['thing']} region {i+1} ({region_i['score']}) [AR={rect_area(*region_i['box'])}]"
+                + overlap_region_num_str,
+                line_color,
+            )
+        )
+        if region_i_overlappers_str:
+            logger.indent(2)
+            logger.line(region_i_overlappers_str)
+        logger.restore_indent()
+
+        return region_overlappers
+
+
+def remove_overlapped_regions(regions):
+    """
+    Rules of thumb:
+
+    The higher the score of "thing", and the larger the region area:
+    the more likely it is a separated region with category "thing".
+
+    Common cases in overlapped regions:
+
+    1. (Page 12) Text t1 is in Table/Figure t2, and t2's score is higher than t1's.
+    Solution: Only keep table region t2.
+
+    2. (Page 13) List overlapped with Text:
+    Solution: Keep the region with higher score. And in later process, treat list same as text.
+
+    3. (Page 3,8) Large False Figure overlapped with other Figures and Texts:
+    Solution: If the score of the large false figure is too lower, ignore/remove it. And process other regions. As the other regions are also possibly detected.
+
+    4. (Page 13) Large Text overlapped with small Texts.
+    Solution: Keep the larger one, if its score is not too low.
+
+    5. (Page 5) Table overlapped with inside-table and outside-table Texts:
+    Solution: Keep the table, and the outside-table texts.
+
+    """
+    pass
 
 
 if __name__ == "__main__":
