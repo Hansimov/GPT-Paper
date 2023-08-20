@@ -28,6 +28,7 @@ from utils.layout_analyzer import (
     DITLayoutAnalyzer,
     calc_regions_overlaps,
     remove_regions_overlaps,
+    draw_regions_on_page,
 )
 
 
@@ -426,7 +427,7 @@ class PDFExtractor:
                 input_image_path=page_image_path,
                 output_image_path=output_image_path,
             )
-            self.draw_regions_on_page(
+            draw_regions_on_page(
                 annotate_info_json_path,
                 output_parent_path=self.annotated_page_images_path,
             )
@@ -464,54 +465,6 @@ class PDFExtractor:
             )
             region_image.save(region_image_path)
 
-    def draw_regions_on_page(self, regions_info_json_path, output_parent_path):
-        region_colors = {
-            "text": (0, 128, 0),
-            "title": (128, 0, 0),
-            "list": (0, 0, 128),
-            "table": (128, 128, 0),
-            "figure": (0, 0, 128),
-        }
-        with open(regions_info_json_path, "r") as rf:
-            regions_infos = json.load(rf)
-        page_image_path = Path(regions_infos["page"]["original_image_path"])
-        page_num = int(page_image_path.stem.split("_")[-1])
-        page_image = Image.open(page_image_path)
-        page_image_width, page_image_height = page_image.size
-        regions = regions_infos["regions"]
-
-        image_draw = ImageDraw.Draw(page_image, "RGBA")
-
-        drawn_page_image_path = output_parent_path / page_image_path.name
-        logger.msg(f"- Draw on Page {page_num} with {len(regions)} regions")
-        logger.file(f"  - {drawn_page_image_path}")
-
-        for region in regions:
-            region_idx = region["idx"]
-            region_box = region["box"]
-            region_thing = region["thing"]
-            region_score = region["score"]
-            region_box = [round(x) for x in region_box]
-
-            text_font = ImageFont.truetype("arial.ttf", 40)
-            text_str = f"{region_idx}.{region_thing}({round(region_score)}%)"
-            text_bbox = image_draw.textbbox(
-                region_box[:2], text_str, font=text_font, anchor="rt"
-            )
-            image_draw.text(
-                region_box[:2], text_str, fill="black", font=text_font, anchor="rt"
-            )
-            region_rect_color = region_colors[region_thing]
-            image_draw.rectangle(
-                region_box,
-                outline=region_rect_color,
-                fill=(*region_rect_color, 64),
-                width=2,
-            )
-
-            image_draw.rectangle(text_bbox, fill=(*region_rect_color, 80))
-        page_image.save(drawn_page_image_path)
-
     def draw_regions_on_pages(self, output_parent_path):
         shutil.rmtree(output_parent_path, ignore_errors=True)
         output_parent_path.mkdir(parents=True, exist_ok=True)
@@ -521,7 +474,7 @@ class PDFExtractor:
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
             logger.store_indent()
             logger.indent(2)
-            self.draw_regions_on_page(annotate_json_path, output_parent_path)
+            draw_regions_on_page(annotate_json_path, output_parent_path)
             logger.restore_indent()
 
     def get_annotate_json_paths(self):
@@ -561,8 +514,16 @@ class PDFExtractor:
         no_overlap_regions_infos["regions"] = remove_regions_overlaps(
             regions, regions_overlaps
         )
-        no_overlap_regions_info_json_path = self.no_overlap_page_images_path / (
-            Path(annotate_infos["page"]["annotated_image_path"]).stem + ".json"
+        no_overlap_regions_infos["page"]["original_image_path"] = annotate_infos[
+            "page"
+        ]["current_image_path"]
+        no_overlap_regions_infos["page"]["current_image_path"] = str(
+            self.no_overlap_page_images_path
+            / Path(annotate_infos["page"]["current_image_path"]).name
+        )
+        no_overlap_regions_info_json_path = str(
+            self.no_overlap_page_images_path
+            / (Path(annotate_infos["page"]["current_image_path"]).stem + ".json")
         )
 
         logger.note("> Dump no-overlap regions info json")

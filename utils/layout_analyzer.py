@@ -5,7 +5,7 @@ import sys
 import torch
 import warnings
 from pathlib import Path
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 from termcolor import colored
 from utils.logger import logger, shell_cmd
 from utils.envs import init_os_envs, setup_envs_of_dit
@@ -182,7 +182,7 @@ class DITLayoutAnalyzer:
         self.annotate_infos = {
             "page": {
                 "original_image_path": str(input_image_path),
-                "annotated_image_path": str(output_image_path),
+                "current_image_path": str(output_image_path),
                 "image_width": image_width,
                 "image_height": image_height,
                 "regions_num": len(output),
@@ -223,6 +223,55 @@ class LayoutLMv3Analyzer:
 
     def __init__(self) -> None:
         pass
+
+
+def draw_regions_on_page(regions_info_json_path, output_parent_path):
+    region_colors = {
+        "text": (0, 128, 0),
+        "title": (128, 0, 0),
+        "list": (0, 0, 128),
+        "table": (128, 128, 0),
+        "figure": (0, 0, 128),
+    }
+    with open(regions_info_json_path, "r") as rf:
+        regions_infos = json.load(rf)
+    page_image_path = Path(regions_infos["page"]["original_image_path"])
+    page_num = int(page_image_path.stem.split("_")[-1])
+    page_image = Image.open(page_image_path)
+    page_image_width, page_image_height = page_image.size
+    regions = regions_infos["regions"]
+
+    image_draw = ImageDraw.Draw(page_image, "RGBA")
+
+    drawn_page_image_path = output_parent_path / page_image_path.name
+    logger.msg(f"- Draw on Page {page_num} with {len(regions)} regions")
+    logger.file(f"  - {drawn_page_image_path}")
+
+    for region in regions:
+        region_idx = region["idx"]
+        region_box = region["box"]
+        region_thing = region["thing"]
+        region_score = region["score"]
+        region_box = [round(x) for x in region_box]
+
+        text_font = ImageFont.truetype("times.ttf", 40)
+        text_str = f"{region_idx}.{region_thing}({round(region_score)}%)"
+        text_bbox = image_draw.textbbox(
+            region_box[:2], text_str, font=text_font, anchor="rt"
+        )
+        image_draw.text(
+            region_box[:2], text_str, fill="black", font=text_font, anchor="rt"
+        )
+        region_rect_color = region_colors[region_thing]
+        image_draw.rectangle(
+            region_box,
+            outline=region_rect_color,
+            fill=(*region_rect_color, 64),
+            width=2,
+        )
+
+        image_draw.rectangle(text_bbox, fill=(*region_rect_color, 80))
+    page_image.save(drawn_page_image_path)
 
 
 def calc_regions_overlaps(regions):
