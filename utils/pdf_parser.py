@@ -516,10 +516,10 @@ class PDFExtractor:
         )
         no_overlap_regions_infos["page"]["original_image_path"] = annotate_infos[
             "page"
-        ]["current_image_path"]
+        ]["original_image_path"]
         no_overlap_regions_infos["page"]["current_image_path"] = str(
             self.no_overlap_page_images_path
-            / Path(annotate_infos["page"]["current_image_path"]).name
+            / Path(annotate_infos["page"]["original_image_path"]).name
         )
         no_overlap_regions_info_json_path = str(
             self.no_overlap_page_images_path
@@ -531,8 +531,13 @@ class PDFExtractor:
         with open(no_overlap_regions_info_json_path, "w") as wf:
             json.dump(no_overlap_regions_infos, wf, indent=4)
 
+        draw_regions_on_page(
+            no_overlap_regions_info_json_path, self.no_overlap_page_images_path
+        )
+
     def remove_overlapped_layout_regions_from_pages(self):
         annotate_json_paths = self.get_annotate_json_paths()
+        shutil.rmtree(self.no_overlap_page_images_path, ignore_errors=True)
         self.no_overlap_page_images_path.mkdir(parents=True, exist_ok=True)
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
             with open(annotate_json_path, "r") as rf:

@@ -235,15 +235,15 @@ def draw_regions_on_page(regions_info_json_path, output_parent_path):
     }
     with open(regions_info_json_path, "r") as rf:
         regions_infos = json.load(rf)
-    page_image_path = Path(regions_infos["page"]["original_image_path"])
-    page_num = int(page_image_path.stem.split("_")[-1])
-    page_image = Image.open(page_image_path)
+    original_page_image_path = Path(regions_infos["page"]["original_image_path"])
+    page_num = int(original_page_image_path.stem.split("_")[-1])
+    page_image = Image.open(original_page_image_path)
     page_image_width, page_image_height = page_image.size
     regions = regions_infos["regions"]
 
     image_draw = ImageDraw.Draw(page_image, "RGBA")
 
-    drawn_page_image_path = output_parent_path / page_image_path.name
+    drawn_page_image_path = output_parent_path / original_page_image_path.name
     logger.msg(f"- Draw on Page {page_num} with {len(regions)} regions")
     logger.file(f"  - {drawn_page_image_path}")
 
