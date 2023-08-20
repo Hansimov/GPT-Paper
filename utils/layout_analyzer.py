@@ -5,6 +5,7 @@ import platform
 import sys
 import torch
 import warnings
+from collections import defaultdict
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from termcolor import colored
@@ -323,7 +324,7 @@ def calc_regions_overlaps(regions):
 
         logger.store_indent()
         logger.indent(2)
-        logger.line(
+        logger.back(
             colored(
                 f"- {region_i['idx']}: {region_i['thing']} region ({region_i['score']})"
                 + overlap_region_num_str,
@@ -332,7 +333,7 @@ def calc_regions_overlaps(regions):
         )
         if region_i_overlaps_str:
             logger.indent(2)
-            logger.line(region_i_overlaps_str)
+            logger.back(region_i_overlaps_str)
         logger.restore_indent()
 
     return regions_overlaps
@@ -376,9 +377,9 @@ def remove_regions_overlaps(
         keep_region_i = True
         if region_i_overlaps:
             if region_i["score"] / 100 <= ignore_score_threshold:
-                # keep_region_i = False
-                # regions_overlaps[i] = []
-                logger.success(
+                keep_region_i = False
+                regions_overlaps[i] = []
+                logger.back(
                     f"Ignore region {i+1} its score {(region_i['score'])} "
                     f"is lower than {round(ignore_score_threshold*100)}"
                 )
@@ -388,7 +389,7 @@ def remove_regions_overlaps(
                         j
                     ]
                     region_j = regions[region_j_idx - 1]
-                    logger.msg(
+                    logger.back(
                         f"region {i+1} ({region_i['score']}) and region {region_j_idx} ({(region_j['score'])}) "
                         f"[{round(region_i_j_overlapped_area_ratio*100)}%]"
                     )
@@ -397,7 +398,7 @@ def remove_regions_overlaps(
                         and region_j["score"] >= region_i["score"]
                     ):
                         # Means this region is a totally child region, ignore it.
-                        logger.success(
+                        logger.back(
                             f"Ignore region {i+1} as region {region_j_idx} has score {(region_j['score'])} "
                             f"[{round(region_i_j_overlapped_area_ratio*100)}%]"
                         )
@@ -456,7 +457,9 @@ def remove_regions_overlaps(
         G.add_edges_from(new_overlap_regions_edges)
         connected_regions_components = list(nx.connected_components(G))
         # print(connected_regions_components)
-        # print(len(connected_regions_components))
+        logger.success(
+            f"> Combine {connected_regions_components} to {len(connected_regions_components)} regions"
+        )
 
         filtered_regions = [
             region
@@ -467,19 +470,35 @@ def remove_regions_overlaps(
         for c_idx, connected_regions_component in enumerate(
             connected_regions_components
         ):
+            connected_regions_idxs = list(connected_regions_component)
             connected_regions_boxes = [
-                regions[region_idx - 1]["box"]
-                for region_idx in list(connected_regions_component)
+                regions[region_idx - 1]["box"] for region_idx in connected_regions_idxs
             ]
             union_region_box = union_rects(connected_regions_boxes)
             union_region_score = 0
             union_region_thing = ""
             union_region_idx = len(regions) + c_idx + 1
-            for i in new_overlap_regions_idxs:
+            thing_scores = defaultdict(float)
+            for i in connected_regions_idxs:
                 region_i = regions[i - 1]
-                if region_i["score"] > union_region_score:
-                    union_region_score = region_i["score"]
-                    union_region_thing = region_i["thing"]
+                region_i_thing = region_i["thing"]
+                region_i_score = region_i["score"]
+                region_i_area = rect_area(*region_i["box"])
+                thing_scores[region_i_thing] += region_i_score * region_i_area
+                # if region_i["score"] > union_region_score:
+                #     union_region_score = region_i["score"]
+                #     union_region_thing = region_i["thing"]
+
+            connected_region_areas_sum = sum(
+                rect_area(*x) for x in connected_regions_boxes
+            )
+            connected_region_scores_sum = sum(thing_scores.values())
+            connected_region_score = (
+                connected_region_scores_sum / connected_region_areas_sum
+            )
+
+            union_region_thing = max(thing_scores, key=thing_scores.get)
+            union_region_score = round(connected_region_score,2)
 
             union_region = {
                 "idx": union_region_idx,
@@ -487,9 +506,15 @@ def remove_regions_overlaps(
                 "score": union_region_score,
                 "box": union_region_box,
             }
+
+            logger.indent(2)
+            logger.success(
+                f"- New {union_region_thing} region {union_region_idx} ({union_region_score})"
+            )
+            logger.indent(-2)
             filtered_regions.append(union_region)
 
-    print(filtered_regions)
+    # print(filtered_regions)
     return filtered_regions
 
 

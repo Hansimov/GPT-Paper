@@ -34,6 +34,7 @@ def add_fillers(text, filler="=", direction="both"):
 
 class Logger:
     LOG_METHODS = {
+        "back": ("debug", "light_cyan"),
         "note": ("info", "light_magenta"),
         "msg": ("info", "light_cyan"),
         "file": ("info", "light_blue"),
