@@ -282,7 +282,7 @@ def calc_regions_overlaps(regions):
             region_i = regions[i]
             region_j = regions[j]
             region_i_overlaps_j, region_i_j_overlapped_area_ratio = rect_overlap(
-                region_i["box"], region_j["box"], t=10
+                region_i["box"], region_j["box"], t=5
             )
             if i != j and region_i_overlaps_j:
                 region_i_overlaps.append((j + 1, region_i_j_overlapped_area_ratio))
@@ -322,7 +322,10 @@ def calc_regions_overlaps(regions):
 
 
 def remove_regions_overlaps(
-    regions, regions_overlaps, overlap_area_ratio_threshold=0.9
+    regions,
+    regions_overlaps,
+    overlap_area_ratio_threshold=0.9,
+    ignore_score_threshold=0.1,
 ):
     """
     Rules of thumb:
@@ -349,35 +352,45 @@ def remove_regions_overlaps(
     Solution: Keep the table, and the outside-table texts.
 
     """
-    filtered_regions = [
-        regions[i] for i in range(len(regions)) if not regions_overlaps[i]
-    ]
+    filtered_regions = []
     for i in range(len(regions)):
         region_i = regions[i]
         region_i_overlaps = regions_overlaps[i]
         keep_region_i = True
         if region_i_overlaps:
-            for j in range(len(region_i_overlaps)):
-                region_j_idx, region_i_j_overlapped_area_ratio = region_i_overlaps[j]
-                region_j = regions[region_j_idx - 1]
-                logger.msg(
-                    f"region {i+1} ({region_i['score']}) and region {region_j_idx} ({(region_j['score'])}) "
-                    f"[{round(region_i_j_overlapped_area_ratio*100)}%]"
+            if region_i["score"] / 100 <= ignore_score_threshold:
+                keep_region_i = False
+                logger.success(
+                    f"Ignore region {i+1} its score {(region_i['score'])} "
+                    f"is lower than {round(ignore_score_threshold*100)}"
                 )
-                if (
-                    region_i_j_overlapped_area_ratio >= overlap_area_ratio_threshold
-                    and region_j["score"] >= region_i["score"]
-                ):
-                    # Means this region is a totally child region, ignore it.
-                    logger.success(
-                        f"Ignore region {i+1} as region {region_j_idx} has score {(region_j['score'])} "
+            else:
+                for j in range(len(region_i_overlaps)):
+                    region_j_idx, region_i_j_overlapped_area_ratio = region_i_overlaps[
+                        j
+                    ]
+                    region_j = regions[region_j_idx - 1]
+                    logger.msg(
+                        f"region {i+1} ({region_i['score']}) and region {region_j_idx} ({(region_j['score'])}) "
                         f"[{round(region_i_j_overlapped_area_ratio*100)}%]"
                     )
-                    region_i_overlaps = []
-                    keep_region_i = False
-                    break
-            if keep_region_i:
-                filtered_regions.append(region_i)
+                    if (
+                        region_i_j_overlapped_area_ratio >= overlap_area_ratio_threshold
+                        and region_j["score"] >= region_i["score"]
+                    ):
+                        # Means this region is a totally child region, ignore it.
+                        logger.success(
+                            f"Ignore region {i+1} as region {region_j_idx} has score {(region_j['score'])} "
+                            f"[{round(region_i_j_overlapped_area_ratio*100)}%]"
+                        )
+                        region_i_overlaps = []
+                        keep_region_i = False
+                        break
+        if keep_region_i:
+            filtered_regions.append(region_i)
+
+    # TODO: Overlaps: References: List and text
+    # TODO: Overlaps: Title and text
 
     return filtered_regions
 

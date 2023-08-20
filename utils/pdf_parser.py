@@ -37,11 +37,12 @@ class PDFExtractor:
     image_root = pdf_root / "images"
 
     def __init__(self):
-        # pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
-        self.pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
+        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
+        # self.pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
         # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
         # pdf_filename = "Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images.pdf"
+        self.pdf_filename = pdf_filename
         self.pdf_fullpath = self.pdf_root / self.pdf_filename
         self.pdf_doc = fitz.open(self.pdf_fullpath)
         self.init_paths()
@@ -510,7 +511,7 @@ class PDFExtractor:
         regions_overlaps = calc_regions_overlaps(regions)
 
         logger.note(f"- Filter overlaps of {len(annotate_infos['regions'])} regions")
-        
+
         logger.indent(2)
         no_overlap_regions_infos = annotate_infos.copy()
         no_overlap_regions_infos["regions"] = remove_regions_overlaps(
