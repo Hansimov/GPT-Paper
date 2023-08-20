@@ -1,4 +1,5 @@
 import json
+import networkx as nx
 import os
 import platform
 import sys
@@ -275,6 +276,14 @@ def draw_regions_on_page(regions_info_json_path, output_parent_path):
 
 
 def calc_regions_overlaps(regions):
+    """
+    Return: List of list of tuples. List length is num of regions.
+    In each level-1 list, there is level-2 list of tuples.
+
+    For each tuple in i-th list:
+    The 1st element is the idx of overlapped region with region i, and
+    the 2nd element is the overlapped area ratio of overlapped region in region i.
+    """
     regions_overlaps = []
     for i in range(len(regions)):
         region_i_overlaps = []
@@ -285,7 +294,9 @@ def calc_regions_overlaps(regions):
                 region_i["box"], region_j["box"], t=5
             )
             if i != j and region_i_overlaps_j:
-                region_i_overlaps.append((j + 1, region_i_j_overlapped_area_ratio))
+                region_i_overlaps.append(
+                    (regions[j]["idx"], region_i_j_overlapped_area_ratio)
+                )
         regions_overlaps.append(region_i_overlaps)
 
     for i in range(len(regions)):
@@ -308,7 +319,7 @@ def calc_regions_overlaps(regions):
         logger.indent(2)
         logger.line(
             colored(
-                f"- {i+1}: {region_i['thing']} region ({region_i['score']})"
+                f"- {region_i['idx']}: {region_i['thing']} region ({region_i['score']})"
                 + overlap_region_num_str,
                 line_color,
             )
@@ -364,6 +375,7 @@ def remove_regions_overlaps(
                     f"Ignore region {i+1} its score {(region_i['score'])} "
                     f"is lower than {round(ignore_score_threshold*100)}"
                 )
+                regions_overlaps[i] = []
             else:
                 for j in range(len(region_i_overlaps)):
                     region_j_idx, region_i_j_overlapped_area_ratio = region_i_overlaps[
@@ -383,14 +395,55 @@ def remove_regions_overlaps(
                             f"Ignore region {i+1} as region {region_j_idx} has score {(region_j['score'])} "
                             f"[{round(region_i_j_overlapped_area_ratio*100)}%]"
                         )
-                        region_i_overlaps = []
+                        regions_overlaps[i] = []
                         keep_region_i = False
                         break
         if keep_region_i:
             filtered_regions.append(region_i)
 
-    # TODO: Overlaps: References: List and text
-    # TODO: Overlaps: Title and text
+    """
+    1. Overlaps: References: List and text
+    2. Overlaps: Title and text
+    Solution: Group the regions, and union them with large rects.
+    """
+
+    new_overlap_regions = []
+    for i in range(len(regions_overlaps)):
+        region_i_overlaps = regions_overlaps[i]
+        region_i = regions[i]
+        if region_i_overlaps:
+            new_region_i_overlaps = []
+            for j in range(len(region_i_overlaps)):
+                region_j_idx, region_i_j_overlapped_area_ratio = region_i_overlaps[j]
+                if regions_overlaps[region_j_idx - 1]:  # region_j is not removed
+                    new_region_i_overlaps.append(
+                        (region_j_idx, region_i_j_overlapped_area_ratio)
+                    )
+
+            if new_region_i_overlaps:
+                new_overlap_regions.append(region_i)
+
+    if new_overlap_regions:
+        new_overlap_regions_idxs = [x["idx"] for x in new_overlap_regions]
+        new_overlap_regions_str = ", ".join(map(str, new_overlap_regions_idxs))
+        logger.warn(
+            f"{len(new_overlap_regions)} regions remains overlapped: [{new_overlap_regions_str}]"
+        )
+
+        new_regions_overlaps = calc_regions_overlaps(new_overlap_regions)
+        new_overlap_regions_edges = []
+        for i, new_regions_overlaps in enumerate(new_regions_overlaps):
+            region_idx = new_overlap_regions_idxs[i]
+            for new_region_idx, new_region_overlap_area_ratio in new_regions_overlaps:
+                new_overlap_regions_edges.append((region_idx, new_region_idx))
+
+        print(new_regions_overlaps)
+        print(new_overlap_regions_edges)
+
+        G = nx.Graph()
+        G.add_nodes_from(new_overlap_regions_idxs)
+        G.add_edges_from(new_overlap_regions_edges)
+        print(list(nx.connected_components(G)))
 
     return filtered_regions
 

@@ -48,6 +48,7 @@ class Logger:
         "reset_indent",
         "store_indent",
         "restore_indent",
+        "log_indent",
     ]
 
     def __init__(self, name=None, prefix=False):
