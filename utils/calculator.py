@@ -94,6 +94,15 @@ def rect_contain(rect1, rect2, t=3) -> int:
         return 0
 
 
+def union_rects(rects):
+    lefts, tops, rights, bottoms = zip(*rects)
+    left = min(lefts)
+    top = min(tops)
+    right = max(rights)
+    bottom = max(bottoms)
+    return [left, top, right, bottom]
+
+
 def euclidean_distance(point1, point2, value_type=int):
     p1 = np.array(point1)
     p2 = np.array(point2)
