@@ -277,30 +277,28 @@ def draw_regions_on_page(regions_info_json_path, output_parent_path):
 def calc_regions_overlaps(regions):
     regions_overlaps = []
     for i in range(len(regions)):
-        region_i_overlappers = []
+        region_i_overlaps = []
         for j in range(len(regions)):
             region_i = regions[i]
             region_j = regions[j]
             region_i_overlaps_j, region_i_j_overlapped_area_ratio = rect_overlap(
-                region_i["box"], region_j["box"]
+                region_i["box"], region_j["box"], t=10
             )
             if i != j and region_i_overlaps_j:
-                region_i_overlappers.append((j + 1, region_i_j_overlapped_area_ratio))
-        regions_overlaps.append(region_i_overlappers)
+                region_i_overlaps.append((j + 1, region_i_j_overlapped_area_ratio))
+        regions_overlaps.append(region_i_overlaps)
 
     for i in range(len(regions)):
-        region_i_overlappers = regions_overlaps[i]
+        region_i_overlaps = regions_overlaps[i]
         region_i = regions[i]
 
-        if region_i_overlappers:
+        if region_i_overlaps:
             region_i_overlaps_str = ", ".join(
-                [f"{x[0]}({round(x[1],2)})" for x in region_i_overlappers]
+                [f"{x[0]}({round(x[1],2)})" for x in region_i_overlaps]
             )
             region_i_overlaps_str = f"- {region_i_overlaps_str}"
             line_color = "light_red"
-            overlap_region_num_str = (
-                f", overlaps with {len(region_i_overlappers)} regions"
-            )
+            overlap_region_num_str = f", overlaps with {len(region_i_overlaps)} regions"
         else:
             region_i_overlaps_str = ""
             line_color = "light_cyan"
@@ -323,7 +321,9 @@ def calc_regions_overlaps(regions):
     return regions_overlaps
 
 
-def remove_regions_overlaps(regions, regions_overlaps):
+def remove_regions_overlaps(
+    regions, regions_overlaps, overlap_area_ratio_threshold=0.9
+):
     """
     Rules of thumb:
 
@@ -339,7 +339,8 @@ def remove_regions_overlaps(regions, regions_overlaps):
     Solution: Keep the region with higher score. And in later process, treat list same as text.
 
     3. (Page 3,8) Large False Figure overlapped with other Figures and Texts:
-    Solution: If the score of the large false figure is too lower, ignore/remove it. And process other regions. As the other regions are also possibly detected.
+    Solution: If the score of the large false figure is too lower, ignore/remove it.
+    And process other regions. As the other regions are also possibly detected.
 
     4. (Page 13) Large Text overlapped with small Texts.
     Solution: Keep the larger one, if its score is not too low.
@@ -348,10 +349,37 @@ def remove_regions_overlaps(regions, regions_overlaps):
     Solution: Keep the table, and the outside-table texts.
 
     """
-    no_overlap_regions = [
+    filtered_regions = [
         regions[i] for i in range(len(regions)) if not regions_overlaps[i]
     ]
-    return no_overlap_regions
+    for i in range(len(regions)):
+        region_i = regions[i]
+        region_i_overlaps = regions_overlaps[i]
+        keep_region_i = True
+        if region_i_overlaps:
+            for j in range(len(region_i_overlaps)):
+                region_j_idx, region_i_j_overlapped_area_ratio = region_i_overlaps[j]
+                region_j = regions[region_j_idx - 1]
+                logger.msg(
+                    f"region {i+1} ({region_i['score']}) and region {region_j_idx} ({(region_j['score'])}) "
+                    f"[{round(region_i_j_overlapped_area_ratio*100)}%]"
+                )
+                if (
+                    region_i_j_overlapped_area_ratio >= overlap_area_ratio_threshold
+                    and region_j["score"] >= region_i["score"]
+                ):
+                    # Means this region is a totally child region, ignore it.
+                    logger.success(
+                        f"Ignore region {i+1} as region {region_j_idx} has score {(region_j['score'])} "
+                        f"[{round(region_i_j_overlapped_area_ratio*100)}%]"
+                    )
+                    region_i_overlaps = []
+                    keep_region_i = False
+                    break
+            if keep_region_i:
+                filtered_regions.append(region_i)
+
+    return filtered_regions
 
 
 if __name__ == "__main__":

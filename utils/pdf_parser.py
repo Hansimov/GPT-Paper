@@ -508,12 +508,15 @@ class PDFExtractor:
         logger.indent(2)
         logger.note(f"- Detect overlaps of {len(annotate_infos['regions'])} regions")
         regions_overlaps = calc_regions_overlaps(regions)
-        logger.restore_indent()
 
+        logger.note(f"- Filter overlaps of {len(annotate_infos['regions'])} regions")
+        
+        logger.indent(2)
         no_overlap_regions_infos = annotate_infos.copy()
         no_overlap_regions_infos["regions"] = remove_regions_overlaps(
             regions, regions_overlaps
         )
+        logger.indent(-2)
         no_overlap_regions_infos["page"]["original_image_path"] = annotate_infos[
             "page"
         ]["original_image_path"]
@@ -530,10 +533,11 @@ class PDFExtractor:
         logger.file(f"  - {no_overlap_regions_info_json_path}")
         with open(no_overlap_regions_info_json_path, "w") as wf:
             json.dump(no_overlap_regions_infos, wf, indent=4)
-
+        logger.indent(2)
         draw_regions_on_page(
             no_overlap_regions_info_json_path, self.no_overlap_page_images_path
         )
+        logger.restore_indent()
 
     def remove_overlapped_layout_regions_from_pages(self):
         annotate_json_paths = self.get_annotate_json_paths()

@@ -42,10 +42,10 @@ def rect_center(x0, y0, x1, y1):
 def rect_overlap(rect1, rect2, t=10):
     """
     `t` is the shrunk padding of the rect.
-    
+
     The larger the `t`, the more strict the condition.
-    
-    When `dpi=300`, recommend to set `t=10`.
+
+    When `dpi=300`, recommend to set `t=5~10`.
     """
     l1, t1, r1, b1 = rect1
     l2, t2, r2, b2 = rect2
