@@ -37,12 +37,10 @@ class PDFExtractor:
     image_root = pdf_root / "images"
 
     def __init__(self):
-        # pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
+        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
         # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
-        pdf_filename = (
-            "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
-        )
+        # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
         # pdf_filename = "Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images.pdf"
         self.pdf_filename = pdf_filename
         self.pdf_fullpath = self.pdf_root / self.pdf_filename
@@ -54,8 +52,9 @@ class PDFExtractor:
 
         self.page_images_path = self.assets_path / "pages"
         self.annotated_page_images_path = self.assets_path / "pages_annotated"
-        self.cropped_page_images_path = self.assets_path / "crops"
+        self.cropped_annotated_page_images_path = self.assets_path / "crops_annotated"
         self.no_overlap_page_images_path = self.assets_path / "pages_no_overlap"
+        self.cropped_no_overlap_page_images_path = self.assets_path / "crops_no_overlap"
 
     def extract_all_texts(self):
         for idx, page in enumerate(self.pdf_doc):
@@ -436,16 +435,17 @@ class PDFExtractor:
             )
         logger.reset_indent()
 
-    def crop_page_image(self, annotate_info_json_path, padding=2):
-        with open(annotate_info_json_path, "r") as rf:
-            annotate_infos = json.load(rf)
-        page_image_path = Path(annotate_infos["page"]["original_image_path"])
+    def crop_page_image(self, cropped_page_images_path, page_info_json_path, padding=2):
+        with open(page_info_json_path, "r") as rf:
+            page_infos = json.load(rf)
+        page_image_path = Path(page_infos["page"]["original_image_path"])
         page_num = int(page_image_path.stem.split("_")[-1])
         page_image = Image.open(page_image_path)
         page_image_width, page_image_height = page_image.size
-        regions = annotate_infos["regions"]
-        region_image_page_path = self.cropped_page_images_path / f"page_{page_num}"
-        region_image_page_path.mkdir(parents=True, exist_ok=True)
+        regions = page_infos["regions"]
+
+        region_images_page_path = cropped_page_images_path / f"page_{page_num}"
+        region_images_page_path.mkdir(parents=True, exist_ok=True)
 
         logger.msg(f"- Crop Page {page_num} to {len(regions)} regions")
 
@@ -462,45 +462,57 @@ class PDFExtractor:
                 min(page_image_height, region_box[3] + padding),
             ]
             region_image = page_image.crop(crop_region_box)
-            region_image_path = region_image_page_path / (
+            region_image_path = region_images_page_path / (
                 f"region_{region_idx}_{region_thing}_{region_score}"
                 + page_image_path.suffix
             )
             region_image.save(region_image_path)
 
+    def get_page_json_paths(self, page_type):
+        page_type_images_paths = {
+            "annotated": self.annotated_page_images_path,
+            "no-overlap": self.no_overlap_page_images_path,
+        }
+        page_images_path = page_type_images_paths[page_type]
+        page_info_json_paths = sorted(
+            [
+                page_images_path / p
+                for p in os.listdir(page_images_path)
+                if Path(p).suffix.lower() == ".json"
+            ],
+            key=lambda x: int(x.stem.split("_")[-1]),
+        )
+        return page_info_json_paths
+
+    def crop_page_images(self, page_type):
+        page_type_cropped_images_paths = {
+            "annotated": self.cropped_annotated_page_images_path,
+            "no-overlap": self.cropped_no_overlap_page_images_path,
+        }
+        cropped_page_images_paths = page_type_cropped_images_paths[page_type]
+        shutil.rmtree(cropped_page_images_paths, ignore_errors=True)
+        cropped_page_images_paths.mkdir(parents=True, exist_ok=True)
+
+        page_info_json_paths = self.get_page_json_paths(page_type)
+
+        logger.note(f"> Croping {page_type} page images")
+        logger.store_indent()
+        logger.indent(2)
+        for page_info_json_path in page_info_json_paths:
+            self.crop_page_image(cropped_page_images_paths, page_info_json_path)
+        logger.restore_indent()
+
     def draw_regions_on_pages(self, output_parent_path):
         shutil.rmtree(output_parent_path, ignore_errors=True)
         output_parent_path.mkdir(parents=True, exist_ok=True)
 
-        annotate_json_paths = self.get_annotate_json_paths()
+        annotate_json_paths = self.get_page_json_paths("annotated")
         logger.note(f"> Draw on page images")
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
             logger.store_indent()
             logger.indent(2)
             draw_regions_on_page(annotate_json_path, output_parent_path)
             logger.restore_indent()
-
-    def get_annotate_json_paths(self):
-        annotate_json_paths = sorted(
-            [
-                self.annotated_page_images_path / p
-                for p in os.listdir(self.annotated_page_images_path)
-                if Path(p).suffix.lower() == ".json"
-            ],
-            key=lambda x: int(x.stem.split("_")[-1]),
-        )
-        return annotate_json_paths
-
-    def crop_page_images(self):
-        shutil.rmtree(self.cropped_page_images_path, ignore_errors=True)
-        self.cropped_page_images_path.mkdir(parents=True, exist_ok=True)
-        annotate_json_paths = self.get_annotate_json_paths()
-
-        logger.note(f"> Croping page images")
-        logger.set_indent(2)
-        for annotate_json_path in annotate_json_paths:
-            self.crop_page_image(annotate_json_path)
-        logger.reset_indent()
 
     def remove_overlapped_layout_regions_from_page(self, annotate_info_json_path):
         with open(annotate_info_json_path, "r") as rf:
@@ -543,7 +555,7 @@ class PDFExtractor:
         logger.restore_indent()
 
     def remove_overlapped_layout_regions_from_pages(self):
-        annotate_json_paths = self.get_annotate_json_paths()
+        annotate_json_paths = self.get_page_json_paths("annotated")
         shutil.rmtree(self.no_overlap_page_images_path, ignore_errors=True)
         self.no_overlap_page_images_path.mkdir(parents=True, exist_ok=True)
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
@@ -564,8 +576,9 @@ class PDFExtractor:
         # self.extract_tables()
         # self.dump_pdf_to_page_images()
         # self.annotate_page_images()
-        # self.crop_page_images()
+        self.crop_page_images("annotated")
         self.remove_overlapped_layout_regions_from_pages()
+        self.crop_page_images("no-overlap")
 
 
 if __name__ == "__main__":
