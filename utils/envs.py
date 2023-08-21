@@ -218,7 +218,25 @@ def setup_envs_of_dit():
     download_publaynet_dit_cascade_pth(size="large")
 
 
+def download_reading_bank_dataset():
+    """
+    Link of ReadingBank dataset:
+    * https://layoutlm.blob.core.windows.net/readingbank/dataset/ReadingBank.zip?sv=2022-11-02&ss=b&srt=o&sp=r&se=2033-06-08T16:48:15Z&st=2023-06-08T08:48:15Z&spr=https&sig=a9VXrihTzbWyVfaIDlIT1Z0FoR1073VB0RLQUMuudD4%3D
+
+    Link of LayoutReader pre-trained model:
+    * https://layoutlm.blob.core.windows.net/readingbank/model/layoutreader-base-readingbank.zip?sv=2022-11-02&ss=b&srt=o&sp=r&se=2033-06-08T16:48:15Z&st=2023-06-08T08:48:15Z&spr=https&sig=a9VXrihTzbWyVfaIDlIT1Z0FoR1073VB0RLQUMuudD4%3D
+
+    """
+    url_head = (
+        "https://layoutlm.blob.core.windows.net/readingbank/dataset/ReadingBank.zip"
+    )
+    output_filename = "ReadingBank.zip"
+
+    download_layout_blob(url_head=url_head, output_filename=output_filename)
+
+
 if __name__ == "__main__":
     # init_os_envs()
     # check_camelot_dependencies()
-    setup_envs_of_dit()
+    # setup_envs_of_dit()
+    download_reading_bank_dataset()
