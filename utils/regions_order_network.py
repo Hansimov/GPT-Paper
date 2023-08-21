@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -9,11 +10,49 @@ from utils.logger import logger
 
 class ReadingBankDatasetProcessor:
     dataset_root = Path(__file__).parents[1] / "data" / "ReadingBank"
+    new_dataset_root = Path(__file__).parents[1] / "data" / "ReadingBank-New"
 
     def __init__(self):
-        dataset_paths = list(self.dataset_root.glob("*"))
-        for dataset_path in dataset_paths:
-            logger.file(f"- {dataset_path}")
+
+        self.train_data_path = self.dataset_root / "train"
+        self.dev_data_path = self.dataset_root / "dev"
+        self.test_data_path = self.dataset_root / "test"
+        self.new_train_data_path = self.new_dataset_root / "train"
+        self.new_dev_data_path = self.new_dataset_root / "dev"
+        self.new_test_data_path = self.new_dataset_root / "test"
+
+    def json_to_dataframe(self, data_json_path, data_df_path):
+        pass
+
+    def run(self):
+        # dataset_paths = list(self.dataset_root.glob("*"))
+        dataset_paths = [
+            self.train_data_path,
+            self.dev_data_path,
+            self.test_data_path,
+        ]
+        new_dataset_paths = [
+            self.new_train_data_path,
+            self.new_dev_data_path,
+            self.new_test_data_path,
+        ]
+        for dataset_path, new_dataset_path in zip(dataset_paths, new_dataset_paths):
+            logger.note(f"- {dataset_path}")
+            logger.store_indent()
+            logger.indent(2)
+            data_json_paths = dataset_path.glob("*")
+            for data_json_path in data_json_paths:
+                layout_text_type = data_json_path.stem.split("-")[-2]
+                if layout_text_type == "layout":
+                    logger.file(f"- {data_json_path}")
+                    new_data_path = (
+                        (new_dataset_path / data_json_path.name)
+                        .with_suffix("")
+                        .with_suffix(".pkl")
+                    )
+                    logger.success(f"- {new_data_path}")
+                    break
+            logger.restore_indent()
 
 
 class RegionsVisualizer:
@@ -142,4 +181,5 @@ if __name__ == "__main__":
     # pdf_regions_order_network.train()
     # pdf_regions_order_network.test()
     # sorted_boxes = pdf_regions_order_network.sort_boxes(boxes)
-    data_processor = ReadingBankDatasetProcessor()
+    reading_bank_dataset_processor = ReadingBankDatasetProcessor()
+    reading_bank_dataset_processor.run()
