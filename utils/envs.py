@@ -163,10 +163,11 @@ def setup_envs_of_unilm():
 
 def download_layout_blob(
     url_head,
-    http_proxy="http://localhost:11111",
     output_path=None,
     output_filename=None,
+    http_proxy="http://localhost:11111",
     overwrite=False,
+    resume=False,
 ):
     url_params = {
         "sv": "2022-11-02",
@@ -184,6 +185,14 @@ def download_layout_blob(
         proxy_str = f' --proxy "{http_proxy}"'
     else:
         proxy_str = ""
+
+    if resume:
+        resume_str = " -C -"
+        remote_header_str = ""
+    else:
+        resume_str = ""
+        remote_header_str = " -J"
+
     if platform.system().lower() == "windows":
         download_url = download_url.replace("&", "&&")
 
@@ -193,7 +202,9 @@ def download_layout_blob(
     if overwrite or not output_path.exists():
         os.makedirs(output_path.parent, exist_ok=True)
         logger.info(colored(f"Downloading {str(output_path)} ...", "light_magenta"))
-        shell_cmd(f'curl {proxy_str} -LJ -o "{output_path}" "{download_url}"')
+        shell_cmd(
+            f'curl{proxy_str}{resume_str}{remote_header_str} -L -o "{output_path}" "{download_url}"'
+        )
 
 
 def download_publaynet_dit_cascade_pth(size="base"):
@@ -234,7 +245,12 @@ def download_reading_bank_dataset():
     )
     output_filename = "ReadingBank.zip"
 
-    download_layout_blob(url_head=url_head, output_filename=output_filename)
+    download_layout_blob(
+        url_head=url_head,
+        output_filename=output_filename,
+        overwrite=True,
+        resume=True,
+    )
 
 
 if __name__ == "__main__":
