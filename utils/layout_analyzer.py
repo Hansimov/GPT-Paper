@@ -500,6 +500,17 @@ def remove_regions_overlaps(
     return filtered_regions
 
 
+class LayoutOrderer:
+    def sort_regions_by_reading_order(self, regions):
+        for region in regions:
+            region_box = region["box"]
+            region_thing = region["thing"]
+            region_score = region["score"]
+            logger.line(
+                f"- {region['idx']}: {region_thing} region ({region_score}) {region_box}"
+            )
+
+
 if __name__ == "__main__":
     dit_layout_analyzer = DITLayoutAnalyzer(size="large")
     dit_layout_analyzer.test_run()

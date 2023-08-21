@@ -4,3 +4,4 @@ secrets.json
 *.pth
 pdfs/**/*.png
 pdfs/**/*.json
+data/

@@ -368,6 +368,16 @@ class PDFStreamExtractor:
         table_parser = PDFTableExtractor(self.pdf_fullpath)
         table_parser.run()
 
+    def run(self):
+        # self.extract_all_texts()
+        # self.extract_all_text_blocks()
+        # self.extract_toc()
+        # self.extract_images()
+        # self.extract_all_text_htmls()
+        # self.extract_all_text_block_dicts()
+        # self.extract_tables()
+        pass
+
 
 class PDFVisualExtractor:
     pdf_root = Path(__file__).parents[1] / "pdfs"
@@ -392,6 +402,7 @@ class PDFVisualExtractor:
         self.cropped_annotated_page_images_path = self.assets_path / "crops_annotated"
         self.no_overlap_page_images_path = self.assets_path / "pages_no_overlap"
         self.cropped_no_overlap_page_images_path = self.assets_path / "crops_no_overlap"
+        self.ordered_page_images_path = self.assets_path / "pages_ordered"
 
     def dump_pdf_to_page_images(self, dpi=300):
         shutil.rmtree(self.page_images_path, ignore_errors=True)
@@ -562,29 +573,30 @@ class PDFVisualExtractor:
             with open(annotate_json_path, "r") as rf:
                 annotate_infos = json.load(rf)
             logger.store_indent()
-            logger.note(f"- Remove overlaps on Page {page_idx+1}")
+            logger.note(f"- Remove overlaps in Page {page_idx+1}")
             self.remove_overlapped_layout_regions_from_page(annotate_json_path)
             logger.restore_indent()
 
-    def sort_pages_regions_by_reading_order(self):
+    def order_pages_regions(self):
         page_info_json_paths = self.get_page_info_json_paths("no-overlap")
-        for page_info_json_path in page_info_json_paths:
-            pass
+        for page_idx, page_info_json_path in enumerate(page_info_json_paths):
+            with open(page_info_json_path, "r") as rf:
+                page_infos = json.load(rf)
+
+            regions = page_infos["regions"]
+            logger.store_indent()
+            logger.note(f"- Sort regions in Page {page_idx+1}")
+            logger.indent(2)
+            ordered_regions = sort_regions_by_reading_order(regions)
+            logger.restore_indent()
 
     def run(self):
-        # self.extract_all_texts()
-        # self.extract_all_text_blocks()
-        # self.extract_toc()
-        # self.extract_images()
-        # self.extract_all_text_htmls()
-        # self.extract_all_text_block_dicts()
-        # self.extract_tables()
         # self.dump_pdf_to_page_images()
         # self.annotate_page_images()
         # self.crop_page_images("annotated")
-        self.remove_overlapped_layout_regions_from_pages()
+        # self.remove_overlapped_layout_regions_from_pages()
         # self.crop_page_images("no-overlap")
-        # self.sort_regions_by_reading_order()
+        self.order_pages_regions()
 
 
 if __name__ == "__main__":
