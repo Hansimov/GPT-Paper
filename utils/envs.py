@@ -161,24 +161,13 @@ def setup_envs_of_unilm():
     copy_to_site_packaegs(unilm_path)
 
 
-def download_publaynet_dit_cascade_pth(
+def download_layout_blob(
+    url_head,
     http_proxy="http://localhost:11111",
     output_path=None,
+    output_filename=None,
     overwrite=False,
-    size="base",
 ):
-    """
-    Download weights of Fine-tuning on PubLayNet (Document Layout Analysis):
-    * https://github.com/microsoft/unilm/blob/master/dit/README.md#fine-tuning-on-publaynet-document-layout-analysis
-    """
-    if size == "large":
-        size_str = "l"
-    else:
-        size_str = "l"
-
-    pth_name = f"publaynet_dit-{size_str}_cascade.pth"
-    url_head = f"https://layoutlm.blob.core.windows.net/dit/dit-fts/{pth_name}"
-
     url_params = {
         "sv": "2022-11-02",
         "ss": "b",
@@ -191,7 +180,6 @@ def download_publaynet_dit_cascade_pth(
     }
 
     download_url = url_head + "?" + "&".join(f"{k}={v}" for k, v in url_params.items())
-
     if http_proxy:
         proxy_str = f' --proxy "{http_proxy}"'
     else:
@@ -200,12 +188,28 @@ def download_publaynet_dit_cascade_pth(
         download_url = download_url.replace("&", "&&")
 
     if not output_path:
-        output_path = repo_path / "configs" / pth_name
+        output_path = repo_path / "data" / output_filename
 
     if overwrite or not output_path.exists():
         os.makedirs(output_path.parent, exist_ok=True)
         logger.info(colored(f"Downloading {str(output_path)} ...", "light_magenta"))
         shell_cmd(f'curl {proxy_str} -LJ -o "{output_path}" "{download_url}"')
+
+
+def download_publaynet_dit_cascade_pth(size="base"):
+    """
+    Download weights of Fine-tuning on PubLayNet (Document Layout Analysis):
+    * https://github.com/microsoft/unilm/blob/master/dit/README.md#fine-tuning-on-publaynet-document-layout-analysis
+    """
+    if size == "large":
+        size_str = "l"
+    else:
+        size_str = "l"
+
+    pth_name = f"publaynet_dit-{size_str}_cascade.pth"
+    url_head = f"https://layoutlm.blob.core.windows.net/dit/dit-fts/{pth_name}"
+
+    download_layout_blob(url_head=url_head, output_filename=pth_name)
 
 
 def setup_envs_of_dit():

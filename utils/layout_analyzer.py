@@ -102,7 +102,7 @@ class DITLayoutAnalyzer:
             size_str = "b"
 
         pth_name = f"publaynet_dit-{size_str}_cascade.pth"
-        publaynet_dit_cascade_pth = repo_path / "configs" / pth_name
+        publaynet_dit_cascade_pth = repo_path / "data" / pth_name
         if not publaynet_dit_cascade_pth.exists():
             raise FileNotFoundError(f"`{pth_name}` not found.")
 
