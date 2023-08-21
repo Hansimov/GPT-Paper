@@ -96,7 +96,8 @@ class Logger:
 
     def log(self, method, msg, *args, **kwargs):
         level, color = self.LOG_METHODS[method]
-        indented_msg = " " * self.log_indent + msg
+        indent_str = " " * self.log_indent
+        indented_msg = f"{indent_str}{msg}"
         getattr(self.logger, level)(colored(indented_msg, color), *args, **kwargs)
 
     def bind_functions(self):
