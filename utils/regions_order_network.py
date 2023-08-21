@@ -1,5 +1,7 @@
+import json
 import os
 import pandas as pd
+import shutil
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -21,8 +23,21 @@ class ReadingBankDatasetProcessor:
         self.new_dev_data_path = self.new_dataset_root / "dev"
         self.new_test_data_path = self.new_dataset_root / "test"
 
-    def json_to_dataframe(self, data_json_path, data_df_path):
-        pass
+    def get_correct_box_idxs(self, source_boxes, target_boxes):
+        correct_box_idxs = []
+        for source_box in source_boxes:
+            correct_box_idx = target_boxes.index(source_box)
+            correct_box_idxs.append(correct_box_idx)
+        return correct_box_idxs
+
+    def data_json_to_dataframe(self, json_data_path, df_data_path):
+        with open(json_data_path, "r") as rf:
+            lines = rf.readlines()
+            json_data = json.loads(lines[0])
+            source_boxes = json_data["src"]
+            target_boxes = json_data["tgt"]
+            correct_box_idxs = self.get_correct_box_idxs(source_boxes, target_boxes)
+            logger.msg(correct_box_idxs)
 
     def run(self):
         # dataset_paths = list(self.dataset_root.glob("*"))
@@ -41,6 +56,8 @@ class ReadingBankDatasetProcessor:
             logger.store_indent()
             logger.indent(2)
             data_json_paths = dataset_path.glob("*")
+            shutil.rmtree(new_dataset_path, ignore_errors=True)
+            new_dataset_path.mkdir(parents=True, exist_ok=True)
             for data_json_path in data_json_paths:
                 layout_text_type = data_json_path.stem.split("-")[-2]
                 if layout_text_type == "layout":
@@ -50,6 +67,7 @@ class ReadingBankDatasetProcessor:
                         .with_suffix("")
                         .with_suffix(".pkl")
                     )
+                    self.data_json_to_dataframe(data_json_path, new_data_path)
                     logger.success(f"- {new_data_path}")
                     break
             logger.restore_indent()
