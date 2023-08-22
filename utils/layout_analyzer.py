@@ -1,3 +1,4 @@
+from functools import cmp_to_key
 import json
 import networkx as nx
 import os
@@ -500,7 +501,46 @@ def remove_regions_overlaps(
     return filtered_regions
 
 
-class LayoutOrderer:
+class RegionsOrderer:
+    def sort_two_regions_by_reading_order(self, region1, region2):
+        """
+        Return:
+            -1: rect1 is before rect2
+             1: rect1 is after rect2
+
+        In this certain case, there is no need to consider the conditions
+        that rects are intersected,
+        as we have already split them to no-overlapped ones.
+
+        1. Check Left and Right:
+            r1 <= l2: rect1 is before rect2
+            l1 >= r2: rect1 is after rect2
+        2. Then check Top and Bottom:
+            b1 <= t2: rect1 is before rect2
+            t1 >= b2: rect1 is after rect2
+        3. Others:
+            raise Error
+
+        Since rects have no intersections, the checks above is sufficient.
+
+        """
+        rect1 = region1["box"]
+        rect2 = region2["box"]
+
+        l1, t1, r1, b1 = rect1
+        l2, t2, r2, b2 = rect2
+        if r1 <= l2:
+            return -1
+        elif l1 >= r2:
+            return 1
+        else:
+            if b1 <= t2:
+                return -1
+            elif t1 >= b2:
+                return 1
+            else:
+                raise ValueError("Rects have intersections!")
+
     def sort_regions_by_reading_order(self, regions):
         for region in regions:
             region_box = region["box"]
@@ -509,6 +549,18 @@ class LayoutOrderer:
             logger.line(
                 f"- {region['idx']}: {region_thing} region ({region_score}) {region_box}"
             )
+        sorted_regions = sorted(
+            regions, key=cmp_to_key(self.sort_two_regions_by_reading_order)
+        )
+        for region in sorted_regions:
+            region_box = region["box"]
+            region_thing = region["thing"]
+            region_score = region["score"]
+            logger.msg(
+                f"- {region['idx']}: {region_thing} region ({region_score}) {region_box}"
+            )
+
+        return sorted_regions
 
 
 if __name__ == "__main__":

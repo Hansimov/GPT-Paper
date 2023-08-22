@@ -26,10 +26,10 @@ from utils.tokenizer import Tokenizer
 from utils.text_processor import TextBlock
 from utils.layout_analyzer import (
     DITLayoutAnalyzer,
+    RegionsOrderer,
     calc_regions_overlaps,
     remove_regions_overlaps,
     draw_regions_on_page,
-    sort_regions_by_reading_order,
 )
 
 
@@ -587,7 +587,8 @@ class PDFVisualExtractor:
             logger.store_indent()
             logger.note(f"- Sort regions in Page {page_idx+1}")
             logger.indent(2)
-            ordered_regions = sort_regions_by_reading_order(regions)
+            regions_orderer = RegionsOrderer()
+            ordered_regions = regions_orderer.sort_regions_by_reading_order(regions)
             logger.restore_indent()
 
     def run(self):
