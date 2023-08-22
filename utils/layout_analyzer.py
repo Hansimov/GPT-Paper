@@ -130,10 +130,10 @@ class DITLayoutAnalyzer:
     # Step 5: Set meta data
     def set_metadata(self):
         logger.note("> Setting metadata ...")
-        # logger.msg(self.cfg.DATASETS)
+        # logger.mesg(self.cfg.DATASETS)
         dataset_name = "publaynet_val"
         self.metadata = MetadataCatalog.get(dataset_name)
-        # logger.msg(self.metadata)
+        # logger.mesg(self.metadata)
         self.thing_classes = ["text", "title", "list", "table", "figure"]
         self.metadata.set(thing_classes=self.thing_classes)
 
@@ -146,18 +146,18 @@ class DITLayoutAnalyzer:
 
         image = read_image(str(input_image_path))
         pred_output = self.predictor(image)["instances"]
-        # logger.msg(output)
+        # logger.mesg(output)
         pred_things = [self.thing_classes[c] for c in pred_output.pred_classes]
 
         logger.note("> Results:")
         image_height, image_width = pred_output.image_size
-        logger.msg(f"  - image_size: {image_width}(w) * {image_height}(h)")
-        logger.msg(f"  - num_instances: {len(pred_output)}")
+        logger.mesg(f"  - image_size: {image_width}(w) * {image_height}(h)")
+        logger.mesg(f"  - num_instances: {len(pred_output)}")
         logger.debug(f"  - pred_classes: {pred_output.pred_classes.tolist()}")
-        logger.msg(f"  - pred_things: {pred_things}")
+        logger.mesg(f"  - pred_things: {pred_things}")
         logger.debug(f"  - pred_boxes: {pred_output.pred_boxes.tensor.tolist()}")
         logger.debug(f"  - scores: {pred_output.scores.tolist()}")
-        # logger.msg(f"  - fields {output.fields}")
+        # logger.mesg(f"  - fields {output.fields}")
 
         # visualizer = Visualizer(
         #     image[:, :, ::-1],
@@ -247,7 +247,7 @@ def draw_regions_on_page(regions_info_json_path, output_parent_path, spacing=2):
     image_draw = ImageDraw.Draw(page_image, "RGBA")
 
     drawn_page_image_path = output_parent_path / original_page_image_path.name
-    logger.msg(f"- Draw on Page {page_num} with {len(regions)} regions")
+    logger.mesg(f"- Draw on Page {page_num} with {len(regions)} regions")
     logger.back(f"  - {drawn_page_image_path}")
 
     for region in regions:

@@ -411,7 +411,7 @@ class PDFVisualExtractor:
         logger.note(f"> Dumping PDF to image pages [dpi={dpi}]")
         logger.file(f"  - {self.page_images_path}")
         for page_idx, page in enumerate(self.pdf_doc):
-            logger.msg(f"    - Page {page_idx+1}")
+            logger.mesg(f"    - Page {page_idx+1}")
             image_path = self.page_images_path / f"page_{page_idx+1}.png"
             pix = page.get_pixmap(dpi=dpi)
             pix.save(image_path)
@@ -470,7 +470,7 @@ class PDFVisualExtractor:
         region_images_page_path = cropped_page_images_path / f"page_{page_num}"
         region_images_page_path.mkdir(parents=True, exist_ok=True)
 
-        logger.msg(f"- Crop Page {page_num} to {len(regions)} regions")
+        logger.mesg(f"- Crop Page {page_num} to {len(regions)} regions")
 
         for region in regions:
             region_idx = region["idx"]
@@ -588,7 +588,7 @@ class PDFVisualExtractor:
                 page_infos = json.load(rf)
             ordered_page_infos = page_infos.copy()
             regions = page_infos["regions"]
-            logger.msg(f"- Sort regions in Page {page_idx+1}")
+            logger.mesg(f"- Sort regions in Page {page_idx+1}")
             regions_orderer = RegionsOrderer()
             ordered_regions = regions_orderer.sort_regions_by_reading_order(regions)
 

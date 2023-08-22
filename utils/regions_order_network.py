@@ -15,7 +15,6 @@ class ReadingBankDatasetProcessor:
     new_dataset_root = Path(__file__).parents[1] / "data" / "ReadingBank-New"
 
     def __init__(self):
-
         self.train_data_path = self.dataset_root / "train"
         self.dev_data_path = self.dataset_root / "dev"
         self.test_data_path = self.dataset_root / "test"
@@ -37,7 +36,7 @@ class ReadingBankDatasetProcessor:
             source_boxes = json_data["src"]
             target_boxes = json_data["tgt"]
             correct_box_idxs = self.get_correct_box_idxs(source_boxes, target_boxes)
-            logger.msg(correct_box_idxs)
+            logger.mesg(correct_box_idxs)
 
     def run(self):
         # dataset_paths = list(self.dataset_root.glob("*"))

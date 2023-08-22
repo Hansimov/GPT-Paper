@@ -36,7 +36,7 @@ class Logger:
     LOG_METHODS = {
         "back": ("debug", "light_cyan"),
         "note": ("info", "light_magenta"),
-        "msg": ("info", "light_cyan"),
+        "mesg": ("info", "light_cyan"),
         "file": ("info", "light_blue"),
         "line": ("info", "light_blue"),
         "success": ("info", "light_green"),
