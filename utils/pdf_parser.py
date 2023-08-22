@@ -413,9 +413,12 @@ class PDFVisualExtractor:
         # transform_matrix = fitz.Matrix(dpi / 72, dpi / 72)
         logger.note(f"> Dumping PDF to image pages [dpi={dpi}]")
         logger.file(f"  - {self.page_images_path}")
+        pdf_idx_digits = get_int_digits(len(self.pdf_doc))
         for page_idx, page in enumerate(self.pdf_doc):
-            logger.mesg(f"    - Page {page_idx+1}")
-            image_path = self.page_images_path / f"page_{page_idx+1}.png"
+            logger.mesg(f"    - Page {page_idx+1:>{pdf_idx_digits}}")
+            image_path = (
+                self.page_images_path / f"page_{page_idx+1:0>{pdf_idx_digits}}.png"
+            )
             pix = page.get_pixmap(dpi=dpi)
             pix.save(image_path)
             # pix = page.get_pixmap(matrix=transform_matrix)
@@ -470,7 +473,7 @@ class PDFVisualExtractor:
         with open(page_info_json_path, "r") as rf:
             page_infos = json.load(rf)
         page_image_path = Path(page_infos["page"]["original_image_path"])
-        page_num = int(page_image_path.stem.split("_")[-1])
+        page_num = page_image_path.stem.split("_")[-1]
         page_image = Image.open(page_image_path)
         page_image_width, page_image_height = page_image.size
         regions = page_infos["regions"]
@@ -480,7 +483,8 @@ class PDFVisualExtractor:
 
         logger.mesg(f"- Crop Page {page_num} to {len(regions)} regions")
 
-        region_idx_digits = get_int_digits(len(regions))
+        region_idx_max_num = max([int(region["idx"]) for region in regions], default=0)
+        region_idx_digits = get_int_digits(region_idx_max_num)
         for region in regions:
             region_idx = region["idx"]
             region_box = region["box"]
@@ -580,7 +584,7 @@ class PDFVisualExtractor:
         )
 
         logger.note("> Dump no-overlap regions info json")
-        logger.file(f"  - {no_overlap_regions_info_json_path}")
+        logger.back(f"  - {no_overlap_regions_info_json_path}")
         with open(no_overlap_regions_info_json_path, "w") as wf:
             json.dump(no_overlap_regions_infos, wf, indent=4)
         logger.indent(2)
@@ -605,6 +609,7 @@ class PDFVisualExtractor:
         rmtree_and_mkdir(self.ordered_page_images_path)
         logger.note(f"- Sort regions")
         logger.store_indent()
+        page_idx_digits = get_int_digits(len(page_info_json_paths))
         for page_idx, page_info_json_path in enumerate(page_info_json_paths):
             with open(page_info_json_path, "r") as rf:
                 page_infos = json.load(rf)
@@ -621,7 +626,8 @@ class PDFVisualExtractor:
             )
 
             ordered_page_info_json_path = (
-                self.ordered_page_images_path / f"page_{page_idx+1}.json"
+                self.ordered_page_images_path
+                / f"page_{page_idx+1:0>{page_idx_digits}}.json"
             )
 
             logger.store_indent()
@@ -637,12 +643,12 @@ class PDFVisualExtractor:
         logger.restore_indent()
 
     def run(self):
-        # self.dump_pdf_to_page_images()
-        # self.annotate_page_images()
-        # self.crop_page_images("annotated")
-        # self.remove_overlapped_layout_regions_from_pages()
-        # self.crop_page_images("no-overlap")
-        # self.order_pages_regions()
+        self.dump_pdf_to_page_images()
+        self.annotate_page_images()
+        self.crop_page_images("annotated")
+        self.remove_overlapped_layout_regions_from_pages()
+        self.crop_page_images("no-overlap")
+        self.order_pages_regions()
         self.crop_page_images("ordered")
 
 
