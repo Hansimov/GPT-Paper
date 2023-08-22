@@ -583,7 +583,6 @@ class PDFVisualExtractor:
         self.ordered_page_images_path.mkdir(parents=True, exist_ok=True)
         logger.note(f"- Sort regions")
         logger.store_indent()
-        logger.indent(2)
         for page_idx, page_info_json_path in enumerate(page_info_json_paths):
             with open(page_info_json_path, "r") as rf:
                 page_infos = json.load(rf)
@@ -602,12 +601,17 @@ class PDFVisualExtractor:
             ordered_page_info_json_path = (
                 self.ordered_page_images_path / f"page_{page_idx+1}.json"
             )
-            logger.success(f"- Dump ordered regions info")
+
+            logger.store_indent()
             logger.indent(2)
-            logger.file(f"- {ordered_page_info_json_path}")
+            logger.success(f"- Dump ordered regions info")
+            logger.back(f"- {ordered_page_info_json_path}")
             with open(ordered_page_info_json_path, "w") as wf:
                 json.dump(ordered_page_infos, wf, indent=4)
-            logger.indent(-2)
+            draw_regions_on_page(
+                ordered_page_info_json_path, self.ordered_page_images_path
+            )
+            logger.restore_indent()
         logger.restore_indent()
 
     def run(self):

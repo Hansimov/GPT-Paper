@@ -248,7 +248,7 @@ def draw_regions_on_page(regions_info_json_path, output_parent_path, spacing=2):
 
     drawn_page_image_path = output_parent_path / original_page_image_path.name
     logger.msg(f"- Draw on Page {page_num} with {len(regions)} regions")
-    logger.file(f"  - {drawn_page_image_path}")
+    logger.back(f"  - {drawn_page_image_path}")
 
     for region in regions:
         region_idx = region["idx"]
