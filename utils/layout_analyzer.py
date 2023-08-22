@@ -546,17 +546,18 @@ class RegionsOrderer:
             region_box = region["box"]
             region_thing = region["thing"]
             region_score = region["score"]
-            logger.line(
+            logger.back(
                 f"- {region['idx']}: {region_thing} region ({region_score}) {region_box}"
             )
         sorted_regions = sorted(
             regions, key=cmp_to_key(self.sort_two_regions_by_reading_order)
         )
-        for region in sorted_regions:
+        for idx, region in enumerate(sorted_regions):
+            sorted_regions[idx]["idx"] = idx + 1
             region_box = region["box"]
             region_thing = region["thing"]
             region_score = region["score"]
-            logger.msg(
+            logger.back(
                 f"- {region['idx']}: {region_thing} region ({region_score}) {region_box}"
             )
 

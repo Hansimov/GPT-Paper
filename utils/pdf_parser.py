@@ -579,17 +579,36 @@ class PDFVisualExtractor:
 
     def order_pages_regions(self):
         page_info_json_paths = self.get_page_info_json_paths("no-overlap")
+        shutil.rmtree(self.ordered_page_images_path, ignore_errors=True)
+        self.ordered_page_images_path.mkdir(parents=True, exist_ok=True)
+        logger.note(f"- Sort regions")
+        logger.store_indent()
+        logger.indent(2)
         for page_idx, page_info_json_path in enumerate(page_info_json_paths):
             with open(page_info_json_path, "r") as rf:
                 page_infos = json.load(rf)
-
+            ordered_page_infos = page_infos.copy()
             regions = page_infos["regions"]
-            logger.store_indent()
-            logger.note(f"- Sort regions in Page {page_idx+1}")
-            logger.indent(2)
+            logger.msg(f"- Sort regions in Page {page_idx+1}")
             regions_orderer = RegionsOrderer()
             ordered_regions = regions_orderer.sort_regions_by_reading_order(regions)
-            logger.restore_indent()
+
+            ordered_page_infos["regions"] = ordered_regions
+            ordered_page_infos["page"]["current_image_path"] = str(
+                self.ordered_page_images_path
+                / Path(page_infos["page"]["original_image_path"]).name
+            )
+
+            ordered_page_info_json_path = (
+                self.ordered_page_images_path / f"page_{page_idx+1}.json"
+            )
+            logger.success(f"- Dump ordered regions info")
+            logger.indent(2)
+            logger.file(f"- {ordered_page_info_json_path}")
+            with open(ordered_page_info_json_path, "w") as wf:
+                json.dump(ordered_page_infos, wf, indent=4)
+            logger.indent(-2)
+        logger.restore_indent()
 
     def run(self):
         # self.dump_pdf_to_page_images()
