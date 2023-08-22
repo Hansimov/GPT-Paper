@@ -1,5 +1,6 @@
 from itertools import chain
 from utils.logger import logger
+import math
 import numpy as np
 
 
@@ -136,6 +137,10 @@ def char_per_pixel(char_num, rect_area):
 def avg_line_width(text):
     lines = text.splitlines()
     return int(len(text) / len(lines))
+
+
+def get_int_digits(num):
+    return int(math.log10(num)) + 1
 
 
 def get_neighbors(i, elements, n=5, include_i=True):

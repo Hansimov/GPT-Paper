@@ -20,6 +20,7 @@ from utils.calculator import (
     avg_line_width,
     rect_contain,
     rect_overlap,
+    get_int_digits,
 )
 from utils.logger import logger, add_fillers
 from utils.tokenizer import Tokenizer
@@ -403,6 +404,7 @@ class PDFVisualExtractor:
         self.no_overlap_page_images_path = self.assets_path / "pages_no_overlap"
         self.cropped_no_overlap_page_images_path = self.assets_path / "crops_no_overlap"
         self.ordered_page_images_path = self.assets_path / "pages_ordered"
+        self.cropped_ordered_page_images_path = self.assets_path / "crops_ordered"
 
     def dump_pdf_to_page_images(self, dpi=300):
         shutil.rmtree(self.page_images_path, ignore_errors=True)
@@ -458,7 +460,14 @@ class PDFVisualExtractor:
             )
         logger.reset_indent()
 
-    def crop_page_image(self, cropped_page_images_path, page_info_json_path, padding=2):
+    def crop_page_image(
+        self,
+        cropped_page_images_path,
+        page_info_json_path,
+        padding=2,
+        show_score=True,
+        idx_leading_zero=True,
+    ):
         with open(page_info_json_path, "r") as rf:
             page_infos = json.load(rf)
         page_image_path = Path(page_infos["page"]["original_image_path"])
@@ -472,6 +481,7 @@ class PDFVisualExtractor:
 
         logger.mesg(f"- Crop Page {page_num} to {len(regions)} regions")
 
+        region_idx_digits = get_int_digits(len(regions))
         for region in regions:
             region_idx = region["idx"]
             region_box = region["box"]
@@ -485,8 +495,19 @@ class PDFVisualExtractor:
                 min(page_image_height, region_box[3] + padding),
             ]
             region_image = page_image.crop(crop_region_box)
+
+            if show_score:
+                region_score_str = f"_{region_score}"
+            else:
+                region_score_str = ""
+
+            if idx_leading_zero:
+                region_idx_str = f"_{region_idx:0>{region_idx_digits}}"
+            else:
+                region_idx_str = f"_{region_idx}"
+
             region_image_path = region_images_page_path / (
-                f"region_{region_idx}_{region_thing}_{region_score}"
+                f"region{region_idx_str}_{region_thing}{region_score_str}"
                 + page_image_path.suffix
             )
             region_image.save(region_image_path)
@@ -495,6 +516,7 @@ class PDFVisualExtractor:
         page_type_images_paths = {
             "annotated": self.annotated_page_images_path,
             "no-overlap": self.no_overlap_page_images_path,
+            "ordered": self.ordered_page_images_path,
         }
         page_images_path = page_type_images_paths[page_type]
         page_info_json_paths = sorted(
@@ -511,10 +533,11 @@ class PDFVisualExtractor:
         page_type_cropped_images_paths = {
             "annotated": self.cropped_annotated_page_images_path,
             "no-overlap": self.cropped_no_overlap_page_images_path,
+            "ordered": self.cropped_ordered_page_images_path,
         }
-        cropped_page_images_paths = page_type_cropped_images_paths[page_type]
-        shutil.rmtree(cropped_page_images_paths, ignore_errors=True)
-        cropped_page_images_paths.mkdir(parents=True, exist_ok=True)
+        cropped_page_images_path = page_type_cropped_images_paths[page_type]
+
+        rmtree_and_mkdir(cropped_page_images_path)
 
         page_info_json_paths = self.get_page_info_json_paths(page_type)
 
@@ -522,7 +545,9 @@ class PDFVisualExtractor:
         logger.store_indent()
         logger.indent(2)
         for page_info_json_path in page_info_json_paths:
-            self.crop_page_image(cropped_page_images_paths, page_info_json_path)
+            self.crop_page_image(
+                cropped_page_images_path, page_info_json_path, show_score=False
+            )
         logger.restore_indent()
 
     def remove_overlapped_layout_regions_from_page(self, annotate_info_json_path):
@@ -620,7 +645,8 @@ class PDFVisualExtractor:
         # self.crop_page_images("annotated")
         # self.remove_overlapped_layout_regions_from_pages()
         # self.crop_page_images("no-overlap")
-        self.order_pages_regions()
+        # self.order_pages_regions()
+        self.crop_page_images("ordered")
 
 
 if __name__ == "__main__":
