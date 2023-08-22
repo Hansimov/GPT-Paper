@@ -21,12 +21,10 @@ class TextExtractor:
             Path(__file__).parents[1]
             / "pdfs"
             / "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning"
-            / "crops"
-            / "page_1"
-            # / "region_1_text_99.95.png"
-            # / "region_5_text_99.31.png"
-            / "region_6_text_98.92.png"
-            # / "region_14_text_13.72.png"
+            / "crops_no_overlap"
+            / "page_13"
+            # / "region_60_list_91.79.png"
+            / "region_61_list_70.24.png"
         )
         text = pytesseract.image_to_string(image)
         logger.note("Text extracted from image:")

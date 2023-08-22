@@ -19,7 +19,26 @@ pip install "Pillow>=7.1" matplotlib "pycocotools>=2.0.2" "termcolor>=1.1" "yacs
 pip install fairscale timm "scipy>1.5.1" shapely "pygments>=2.2" "psutil" "panopticapi @ https://github.com/cocodataset/panopticapi/archive/master.zip"
 ```
 
+**tesseract-ocr**
 
+Ubuntu:
+* https://tesseract-ocr.github.io/tessdoc/Installation.html#ubuntu
+
+```sh
+sudo apt install tesseract-ocr
+sudo apt install libtesseract-dev
+```
+
+Windows:
+
+* https://tesseract-ocr.github.io/tessdoc/Installation.html#windows
+* https://tesseract-ocr.github.io/tessdoc/Downloads.html
+
+```sh
+pip install pytesseract
+```
+
+* https://github.com/madmaze/pytesseract#installation
 ## Data pre-processing
 
 
