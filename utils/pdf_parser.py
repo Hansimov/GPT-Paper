@@ -22,7 +22,7 @@ from utils.calculator import (
     rect_overlap,
     get_int_digits,
 )
-from utils.logger import logger, add_fillers
+from utils.logger import logger, add_fillers, Runtimer
 from utils.tokenizer import Tokenizer
 from utils.text_processor import TextBlock
 from utils.layout_analyzer import (
@@ -653,5 +653,6 @@ class PDFVisualExtractor:
 
 
 if __name__ == "__main__":
-    pdf_visual_extractor = PDFVisualExtractor()
-    pdf_visual_extractor.run()
+    with Runtimer():
+        pdf_visual_extractor = PDFVisualExtractor()
+        pdf_visual_extractor.run()

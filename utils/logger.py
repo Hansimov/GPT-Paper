@@ -1,3 +1,4 @@
+import datetime
 import functools
 import inspect
 import logging
@@ -120,3 +121,57 @@ def shell_cmd(cmd, getoutput=False, showcmd=True):
         return output
     else:
         subprocess.run(cmd, shell=True)
+
+
+class Runtimer:
+    def __enter__(self):
+        self.t1, _ = self.start_time()
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.t2, _ = self.end_time()
+        self.elapsed_time(self.t2 - self.t1)
+
+    def start_time(self):
+        t1 = datetime.datetime.now()
+        self.logger_time("start", t1)
+        return t1, self.time2str(t1)
+
+    def end_time(self):
+        t2 = datetime.datetime.now()
+        self.logger_time("end", t2)
+        return t2, self.time2str(t2)
+
+    def elapsed_time(self, dt=None):
+        if dt is None:
+            dt = self.t2 - self.t1
+        self.logger_time("elapsed", dt)
+        return dt, self.time2str(dt)
+
+    def logger_time(self, time_type, t):
+        time_types = {
+            "start": "Start",
+            "end": "End",
+            "elapsed": "Elapsed",
+        }
+        time_str = add_fillers(
+            f"\n{time_types[time_type]} time: [ {self.time2str(t)} ]"
+        )
+        logger.success(time_str)
+
+    # Convert time to string
+    def time2str(self, t):
+        datetime_str_format = "%Y-%m-%d %H:%M:%S"
+        if isinstance(t, datetime.datetime):
+            return t.strftime(datetime_str_format)
+        elif isinstance(t, datetime.timedelta):
+            hours = t.seconds // 3600
+            hour_str = f"{hours} hr" if hours > 0 else ""
+            minutes = (t.seconds // 60) % 60
+            minute_str = f"{minutes:>2} min" if minutes > 0 else ""
+            seconds = t.seconds % 60
+            second_str = f"{seconds:>2} s"
+            time_str = " ".join([hour_str, minute_str, second_str]).strip()
+            return time_str
+        else:
+            return str(t)
