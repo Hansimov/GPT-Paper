@@ -152,33 +152,16 @@ class DITLayoutAnalyzer:
 
         image = read_image(str(input_image_path))
         pred_output = self.predictor(image)["instances"]
-        # logger.mesg(output)
         pred_things = [self.thing_classes[c] for c in pred_output.pred_classes]
 
         logger.note("> Results:")
         image_height, image_width = pred_output.image_size
-        logger.mesg(f"  - image_size: {image_width}(w) * {image_height}(h)")
+        logger.back(f"  - image_size: {image_width}(w) * {image_height}(h)")
         logger.mesg(f"  - num_instances: {len(pred_output)}")
-        logger.debug(f"  - pred_classes: {pred_output.pred_classes.tolist()}")
+        logger.back(f"  - pred_classes: {pred_output.pred_classes.tolist()}")
         logger.mesg(f"  - pred_things: {pred_things}")
-        logger.debug(f"  - pred_boxes: {pred_output.pred_boxes.tensor.tolist()}")
-        logger.debug(f"  - scores: {pred_output.scores.tolist()}")
-        # logger.mesg(f"  - fields {output.fields}")
-
-        # visualizer = Visualizer(
-        #     image[:, :, ::-1],
-        #     metadata=self.metadata,
-        #     scale=1.0,
-        #     instance_mode=ColorMode.SEGMENTATION,
-        # )
-        # result = visualizer.draw_instance_predictions(output.to("cpu"))
-
-        # result_image = result.get_image()[:, :, ::-1]
-
-        # logger.success(f"> Saving output image:")
-        # logger.file(f"  - {output_image_path}")
-
-        # Image.fromarray(result_image).save(output_image_path)
+        logger.back(f"  - pred_boxes: {pred_output.pred_boxes.tensor.tolist()}")
+        logger.back(f"  - scores: {pred_output.scores.tolist()}")
 
         annotate_info_json_path = self.dump_annotate_info(
             input_image_path, output_image_path, pred_output

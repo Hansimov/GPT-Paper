@@ -446,9 +446,6 @@ class PDFVisualExtractor:
 
         for page_image_path in page_image_paths:
             output_image_path = self.annotated_page_images_path / page_image_path.name
-            # output_image_path = self.page_images_path / (
-            #     page_image_path.stem + "_annotated" + page_image_path.suffix
-            # )
             logger.set_indent(2)
             logger.file(f"- {page_image_path.name}")
             logger.set_indent(4)
@@ -468,7 +465,8 @@ class PDFVisualExtractor:
         page_info_json_path,
         padding=2,
         show_score=True,
-        idx_leading_zero=True,
+        add_leading_zero_to_idx=True,
+        add_crop_image_path_to_page_info_json=True,
     ):
         with open(page_info_json_path, "r") as rf:
             page_infos = json.load(rf)
@@ -485,7 +483,7 @@ class PDFVisualExtractor:
 
         region_idx_max_num = max([int(region["idx"]) for region in regions], default=0)
         region_idx_digits = get_int_digits(region_idx_max_num)
-        for region in regions:
+        for i, region in enumerate(regions):
             region_idx = region["idx"]
             region_box = region["box"]
             region_thing = region["thing"]
@@ -504,7 +502,7 @@ class PDFVisualExtractor:
             else:
                 region_score_str = ""
 
-            if idx_leading_zero:
+            if add_leading_zero_to_idx:
                 region_idx_str = f"_{region_idx:0>{region_idx_digits}}"
             else:
                 region_idx_str = f"_{region_idx}"
@@ -513,6 +511,11 @@ class PDFVisualExtractor:
                 f"region{region_idx_str}_{region_thing}{region_score_str}"
                 + page_image_path.suffix
             )
+            if add_crop_image_path_to_page_info_json:
+                page_infos["regions"][i]["crop_image_path"] = str(region_image_path)
+                with open(page_info_json_path, "w") as wf:
+                    json.dump(page_infos, wf, indent=4)
+
             region_image.save(region_image_path)
 
     def get_page_info_json_paths(self, page_type):
@@ -574,10 +577,15 @@ class PDFVisualExtractor:
         no_overlap_regions_infos["page"]["original_image_path"] = annotate_infos[
             "page"
         ]["original_image_path"]
+
         no_overlap_regions_infos["page"]["current_image_path"] = str(
             self.no_overlap_page_images_path
             / Path(annotate_infos["page"]["original_image_path"]).name
         )
+        no_overlap_regions_infos["page"]["regions_num"] = len(
+            no_overlap_regions_infos["regions"]
+        )
+
         no_overlap_regions_info_json_path = str(
             self.no_overlap_page_images_path
             / (Path(annotate_infos["page"]["current_image_path"]).stem + ".json")
@@ -594,8 +602,8 @@ class PDFVisualExtractor:
         logger.restore_indent()
 
     def remove_overlapped_layout_regions_from_pages(self):
-        annotate_json_paths = self.get_page_info_json_paths("annotated")
         rmtree_and_mkdir(self.no_overlap_page_images_path)
+        annotate_json_paths = self.get_page_info_json_paths("annotated")
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
             logger.store_indent()
             logger.note(f"- Remove overlaps in Page {page_idx+1}")
@@ -622,6 +630,8 @@ class PDFVisualExtractor:
                 self.ordered_page_images_path
                 / Path(page_infos["page"]["original_image_path"]).name
             )
+            ordered_page_infos["page"]["regions_num"] = len(ordered_regions)
+            ordered_page_infos["page"]["page_idx"] = page_idx + 1
 
             ordered_page_info_json_path = (
                 self.ordered_page_images_path
