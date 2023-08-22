@@ -7,7 +7,7 @@ import platform
 import pytesseract
 
 if platform.system() == "Windows":
-    init_os_envs(apis=["huggingface"], cuda_device=0)
+    init_os_envs(cuda_device=0)
 else:
     init_os_envs()
 
@@ -16,21 +16,11 @@ class TextExtractor:
     def __init__(self):
         pass
 
-    def run(self):
-        image = Image.open(
-            Path(__file__).parents[1]
-            / "pdfs"
-            / "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning"
-            / "crops_no_overlap"
-            / "page_13"
-            # / "region_60_list_91.79.png"
-            / "region_61_list_70.24.png"
-        )
+    def extract_from_image(self, image_path):
+        image = Image.open(image_path)
         text = pytesseract.image_to_string(image)
-        logger.note("Text extracted from image:")
-        logger.success(text)
+        return text
 
 
 if __name__ == "__main__":
     text_extractor = TextExtractor()
-    text_extractor.run()
