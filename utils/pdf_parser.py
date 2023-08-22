@@ -662,12 +662,13 @@ class PDFVisualExtractor:
             if region["thing"] in ["text", "title", "list"]:
                 region_image_path = Path(region["crop_image_path"])
                 region_text = self.text_extractor.extract_from_image(region_image_path)
-                logger.store_indent()
-                logger.indent(2)
                 logger.line(f"- Extract text from {region['thing']} region {i+1}:")
+                logger.indent(2)
                 logger.success(f"{region_text}")
-                logger.restore_indent()
+                logger.indent(-2)
                 page_texts_infos["regions"][i]["text"] = region_text
+            else:
+                logger.line(f"- Skip {region['thing']} region {i+1}")
         page_texts_infos_path = self.page_texts_path / page_info_json_path.name
         with open(page_texts_infos_path, "w") as wf:
             json.dump(page_texts_infos, wf, indent=4)
@@ -681,7 +682,7 @@ class PDFVisualExtractor:
         logger.note(f"> Extracting texts from {len(page_info_json_paths)} pages")
         for page_idx, page_info_json_path in enumerate(page_info_json_paths):
             logger.store_indent()
-            logger.line(f"- Extracting texts from Page {page_idx+1}")
+            logger.note(f"- Extracting texts from Page {page_idx+1}")
             self.extract_text_from_page(page_info_json_path)
             logger.restore_indent()
 
