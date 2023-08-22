@@ -32,7 +32,7 @@ from utils.layout_analyzer import (
     remove_regions_overlaps,
     draw_regions_on_page,
 )
-
+from utils.text_extractor import TextExtractor
 from utils.file import rmtree_and_mkdir
 
 
@@ -407,6 +407,7 @@ class PDFVisualExtractor:
         self.cropped_no_overlap_page_images_path = self.assets_path / "crops_no_overlap"
         self.ordered_page_images_path = self.assets_path / "pages_ordered"
         self.cropped_ordered_page_images_path = self.assets_path / "crops_ordered"
+        self.page_texts_path = self.assets_path / "texts"
 
     def dump_pdf_to_page_images(self, dpi=300):
         rmtree_and_mkdir(self.page_images_path)
@@ -650,14 +651,47 @@ class PDFVisualExtractor:
             logger.restore_indent()
         logger.restore_indent()
 
+    def extract_text_from_page(self, page_info_json_path):
+        with open(page_info_json_path, "r") as rf:
+            page_infos = json.load(rf)
+        page_texts_infos = page_infos.copy()
+        regions = page_infos["regions"]
+        logger.store_indent()
+        logger.indent(2)
+        for i, region in enumerate(regions):
+            if region["thing"] in ["text", "title", "list"]:
+                region_image_path = Path(region["crop_image_path"])
+                region_text = self.text_extractor.extract_from_image(region_image_path)
+                logger.store_indent()
+                logger.indent(2)
+                logger.line(f"- Extract text from {region['thing']} region {i+1}:")
+                logger.success(f"{region_text}")
+                logger.restore_indent()
+                page_texts_infos["regions"][i]["text"] = region_text
+        page_texts_infos_path = self.page_texts_path / page_info_json_path.name
+        with open(page_texts_infos_path, "w") as wf:
+            json.dump(page_texts_infos, wf, indent=4)
+        logger.restore_indent()
+
+    def extract_texts_from_pages(self):
+        rmtree_and_mkdir(self.page_texts_path)
+        self.text_extractor = TextExtractor()
+
+        page_info_json_paths = self.get_page_info_json_paths("ordered")
+        logger.note(f"> Extracting texts from {len(page_info_json_paths)} pages")
+        for page_idx, page_info_json_path in enumerate(page_info_json_paths):
+            logger.store_indent()
+            logger.line(f"- Extracting texts from Page {page_idx+1}")
+            self.extract_text_from_page(page_info_json_path)
+            logger.restore_indent()
+
     def run(self):
-        self.dump_pdf_to_page_images()
-        self.annotate_page_images()
-        # self.crop_page_images("annotated")
-        self.remove_overlapped_layout_regions_from_pages()
-        # self.crop_page_images("no-overlap")
-        self.order_pages_regions()
-        self.crop_page_images("ordered")
+        # self.dump_pdf_to_page_images()
+        # self.annotate_page_images()
+        # self.remove_overlapped_layout_regions_from_pages()
+        # self.order_pages_regions()
+        # self.crop_page_images("ordered")
+        self.extract_texts_from_pages()
 
 
 if __name__ == "__main__":
