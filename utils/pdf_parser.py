@@ -643,9 +643,9 @@ class PDFVisualExtractor:
     def run(self):
         self.dump_pdf_to_page_images()
         self.annotate_page_images()
-        self.crop_page_images("annotated")
+        # self.crop_page_images("annotated")
         self.remove_overlapped_layout_regions_from_pages()
-        self.crop_page_images("no-overlap")
+        # self.crop_page_images("no-overlap")
         self.order_pages_regions()
         self.crop_page_images("ordered")
 

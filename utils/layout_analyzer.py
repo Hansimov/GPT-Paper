@@ -350,7 +350,7 @@ def remove_regions_overlaps(
     regions,
     regions_overlaps,
     overlap_area_ratio_threshold=0.9,
-    ignore_score_threshold=0.1,
+    ignore_score_threshold=0.15,
 ):
     """
     Rules of thumb:
