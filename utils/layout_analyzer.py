@@ -12,7 +12,13 @@ from PIL import Image, ImageDraw, ImageFont
 from termcolor import colored
 from utils.logger import logger, shell_cmd
 from utils.envs import init_os_envs, setup_envs_of_dit
-from utils.calculator import rect_area, rect_overlap, rect_contain, union_rects
+from utils.calculator import (
+    rect_area,
+    rect_overlap,
+    rect_contain,
+    union_rects,
+    expand_rect_bound,
+)
 
 warnings.filterwarnings("ignore")
 
@@ -299,7 +305,7 @@ def calc_regions_overlaps(regions):
             region_i = regions[i]
             region_j = regions[j]
             region_i_overlaps_j, region_i_j_overlapped_area_ratio = rect_overlap(
-                region_i["box"], region_j["box"], t=5
+                region_i["box"], region_j["box"], t=-5
             )
             if i != j and region_i_overlaps_j:
                 region_i_overlaps.append(
@@ -527,8 +533,8 @@ class RegionsOrderer:
         rect1 = region1["box"]
         rect2 = region2["box"]
 
-        l1, t1, r1, b1 = rect1
-        l2, t2, r2, b2 = rect2
+        l1, t1, r1, b1 = expand_rect_bound(rect1, t=-5)
+        l2, t2, r2, b2 = expand_rect_bound(rect2, t=-5)
         if r1 <= l2:
             return -1
         elif l1 >= r2:

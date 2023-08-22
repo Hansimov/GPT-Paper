@@ -40,22 +40,32 @@ def rect_center(x0, y0, x1, y1):
     return (x0 + x1) // 2, (y0 + y1) // 2
 
 
-def rect_overlap(rect1, rect2, t=10):
+def expand_rect_bound(rect, t=0):
     """
-    `t` is the shrunk padding of the rect.
-
-    The larger the `t`, the more strict the condition.
-
-    When `dpi=300`, recommend to set `t=5~10`.
+    t is the pixels to expand/shrunk:
+        t > 0: expand
+        t < 0: shrunk
     """
-    l1, t1, r1, b1 = rect1
-    l2, t2, r2, b2 = rect2
-    l1, l2, t1, t2 = list(
-        map(lambda x, m: min(x + t, m), (l1, l2, t1, t2), (r1, r2, b1, b2))
+    left, top, right, bottom = rect
+    new_left, new_top = list(
+        map(lambda x, m: min(x - t, m), (left, top), (right, bottom))
     )
-    r1, r2, b1, b2 = list(
-        map(lambda x, m: max(x - t, m), (r1, r2, b1, b2), (l1, l2, t1, t2))
+    new_right, new_bottom = list(
+        map(lambda x, m: max(x + t, m), (right, bottom), (left, top))
     )
+    return (new_left, new_top, new_right, new_bottom)
+
+
+def rect_overlap(rect1, rect2, t=-5):
+    """
+    `t` is the expand/shrunk padding of the rect.
+
+    The less the `t`, the harder to categorize rects as overlapped.
+
+    When `dpi=300`, recommend to set `t=-10~-5`.
+    """
+    l1, t1, r1, b1 = expand_rect_bound(rect1, t=t)
+    l2, t2, r2, b2 = expand_rect_bound(rect2, t=t)
 
     horizontal_intersected = ((l1 - r2) * (r1 - l2)) < 0
     vertical_intersected = ((t1 - b2) * (b1 - t2)) < 0

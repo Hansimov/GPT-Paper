@@ -387,8 +387,8 @@ class PDFVisualExtractor:
     image_root = pdf_root / "images"
 
     def __init__(self):
-        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
-        # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
+        # pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
+        pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
         # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
         # pdf_filename = "Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images.pdf"
@@ -597,8 +597,6 @@ class PDFVisualExtractor:
         annotate_json_paths = self.get_page_info_json_paths("annotated")
         rmtree_and_mkdir(self.no_overlap_page_images_path)
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
-            with open(annotate_json_path, "r") as rf:
-                annotate_infos = json.load(rf)
             logger.store_indent()
             logger.note(f"- Remove overlaps in Page {page_idx+1}")
             self.remove_overlapped_layout_regions_from_page(annotate_json_path)
