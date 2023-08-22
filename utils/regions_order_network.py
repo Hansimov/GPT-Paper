@@ -8,6 +8,7 @@ import torch.optim as optim
 from pathlib import Path
 from torch.utils.data import Dataset, DataLoader
 from utils.logger import logger
+from utils.file import rmtree_and_mkdir
 
 
 class ReadingBankDatasetProcessor:
@@ -55,8 +56,7 @@ class ReadingBankDatasetProcessor:
             logger.store_indent()
             logger.indent(2)
             data_json_paths = dataset_path.glob("*")
-            shutil.rmtree(new_dataset_path, ignore_errors=True)
-            new_dataset_path.mkdir(parents=True, exist_ok=True)
+            rmtree_and_mkdir(new_dataset_path)
             for data_json_path in data_json_paths:
                 layout_text_type = data_json_path.stem.split("-")[-2]
                 if layout_text_type == "layout":

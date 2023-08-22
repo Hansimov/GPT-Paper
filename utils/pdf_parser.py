@@ -33,6 +33,8 @@ from utils.layout_analyzer import (
     draw_regions_on_page,
 )
 
+from utils.file import rmtree_and_mkdir
+
 
 class PDFStreamExtractor:
     pdf_root = Path(__file__).parents[1] / "pdfs"
@@ -407,8 +409,7 @@ class PDFVisualExtractor:
         self.cropped_ordered_page_images_path = self.assets_path / "crops_ordered"
 
     def dump_pdf_to_page_images(self, dpi=300):
-        shutil.rmtree(self.page_images_path, ignore_errors=True)
-        self.page_images_path.mkdir(parents=True, exist_ok=True)
+        rmtree_and_mkdir(self.page_images_path)
         # transform_matrix = fitz.Matrix(dpi / 72, dpi / 72)
         logger.note(f"> Dumping PDF to image pages [dpi={dpi}]")
         logger.file(f"  - {self.page_images_path}")
@@ -421,9 +422,7 @@ class PDFVisualExtractor:
             # pix.pil_save(image_path, dpi=(dpi, dpi))
 
     def annotate_page_images(self):
-        shutil.rmtree(self.annotated_page_images_path, ignore_errors=True)
-        self.annotated_page_images_path.mkdir(parents=True, exist_ok=True)
-
+        rmtree_and_mkdir(self.annotated_page_images_path)
         logger.note(f"> Annotating page images")
         # logger.file(f"  * {self.annotated_page_images_path}")
 
@@ -592,8 +591,7 @@ class PDFVisualExtractor:
 
     def remove_overlapped_layout_regions_from_pages(self):
         annotate_json_paths = self.get_page_info_json_paths("annotated")
-        shutil.rmtree(self.no_overlap_page_images_path, ignore_errors=True)
-        self.no_overlap_page_images_path.mkdir(parents=True, exist_ok=True)
+        rmtree_and_mkdir(self.no_overlap_page_images_path)
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
             with open(annotate_json_path, "r") as rf:
                 annotate_infos = json.load(rf)
@@ -604,8 +602,7 @@ class PDFVisualExtractor:
 
     def order_pages_regions(self):
         page_info_json_paths = self.get_page_info_json_paths("no-overlap")
-        shutil.rmtree(self.ordered_page_images_path, ignore_errors=True)
-        self.ordered_page_images_path.mkdir(parents=True, exist_ok=True)
+        rmtree_and_mkdir(self.ordered_page_images_path)
         logger.note(f"- Sort regions")
         logger.store_indent()
         for page_idx, page_info_json_path in enumerate(page_info_json_paths):
