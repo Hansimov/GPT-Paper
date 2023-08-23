@@ -96,13 +96,17 @@ class Logger:
         self.log_indent = self.log_indents.pop(-1)
 
     def log(self, method, msg, *args, **kwargs):
-        level, color = self.LOG_METHODS[method]
-        indent_str = " " * self.log_indent
-        msg_str = repr(msg)
-        quotes = ["'", '"']
-        if msg_str[0] in quotes and msg_str[-1] in quotes:
-            msg_str = msg_str[1:-1]
+        if type(msg) == str:
+            msg_str = msg
+        else:
+            msg_str = repr(msg)
+            quotes = ["'", '"']
+            if msg_str[0] in quotes and msg_str[-1] in quotes:
+                msg_str = msg_str[1:-1]
         msg_lines = msg_str.splitlines()
+
+        indent_str = " " * self.log_indent
+        level, color = self.LOG_METHODS[method]
         indented_msg = "\n".join([f"{indent_str}{line}" for line in msg_lines])
         getattr(self.logger, level)(colored(indented_msg, color), *args, **kwargs)
 

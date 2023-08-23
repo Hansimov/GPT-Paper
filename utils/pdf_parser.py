@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import os
 import pandas as pd
 import shutil
+import torch
 from categorizers.body_text_block_categorizer import BodyTextBlockCategorizer
 from categorizers.fragmented_block_categorizer import FragmentedTextBlockCategorizer
 from collections import Counter
@@ -11,6 +12,9 @@ from itertools import islice, chain
 from matplotlib.patches import Rectangle
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
+from sentence_transformers import util as st_util
+from sentence_transformers.util import semantic_search
+
 from termcolor import colored
 from utils.calculator import (
     flatten_len,
@@ -747,6 +751,31 @@ class PDFVisualExtractor:
         logger.file(f"- {self.doc_embeddings_path}")
         embeddings_df.to_pickle(self.doc_embeddings_path)
 
+    def query_region_texts(self):
+        embedder = Embedder()
+        query = "这篇文章的标题"
+        embeddings_df = pd.read_pickle(self.doc_embeddings_path)
+        corpus = embeddings_df["text"].to_list()
+        # logger.line(corpus)
+        corpus_embeddings = embedder.model.encode(corpus, convert_to_tensor=True)
+        query_embedding = embedder.model.encode(query, convert_to_tensor=True)
+
+        top_k = min(5, len(corpus))
+        cos_scores = st_util.cos_sim(query_embedding, corpus_embeddings)[0]
+        top_results = torch.topk(cos_scores, k=top_k)
+        # top_results = semantic_search(
+        #     query_embeddings=query_embedding,
+        #     corpus_embeddings=corpus_embeddings,
+        #     top_k=top_k,
+        # )[0]
+        logger.line(top_results)
+        logger.note(f"Query: [{colored(query,'light_cyan')}]")
+        logger.line(f"Top {top_k} most similar sentences in corpus:")
+        logger.store_indent()
+        logger.indent(2)
+        for score, idx in zip(top_results[0], top_results[1]):
+            logger.success(f"({score:.4f}) {corpus[idx]}")
+        logger.restore_indent()
 
     def run(self):
         # self.dump_pdf_to_page_images()
@@ -756,7 +785,8 @@ class PDFVisualExtractor:
         # self.crop_page_images("ordered")
         # self.extract_texts_from_pages()
         # self.combine_page_texts_to_doc()
-        self.doc_texts_to_embeddings()
+        # self.doc_texts_to_embeddings()
+        self.query_region_texts()
 
 
 if __name__ == "__main__":
