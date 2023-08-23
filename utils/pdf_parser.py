@@ -22,9 +22,7 @@ from utils.calculator import (
     rect_overlap,
     get_int_digits,
 )
-from utils.logger import logger, add_fillers, Runtimer
-from utils.tokenizer import WordTokenizer, SentenceTokenizer
-from utils.text_processor import TextBlock
+from utils.file import rmtree_and_mkdir
 from utils.layout_analyzer import (
     DITLayoutAnalyzer,
     RegionsOrderer,
@@ -32,8 +30,10 @@ from utils.layout_analyzer import (
     remove_regions_overlaps,
     draw_regions_on_page,
 )
+from utils.logger import logger, add_fillers, Runtimer
+from utils.tokenizer import WordTokenizer, SentenceTokenizer, Embedder
 from utils.text_extractor import TextExtractor
-from utils.file import rmtree_and_mkdir
+from utils.text_processor import TextBlock
 
 
 class PDFStreamExtractor:
@@ -717,7 +717,8 @@ class PDFVisualExtractor:
             json.dump(doc_text_infos, wf, indent=4, ensure_ascii=False)
 
     def doc_texts_to_embeddings(self):
-        sentence_tokenizer = SentenceTokenizer()
+        # sentence_tokenizer = SentenceTokenizer()
+        embedder = Embedder()
         with open(self.doc_texts_path, "r") as rf:
             doc_texts_infos = json.load(rf)
         # test_region_text = doc_texts_infos["pages"][0]["regions"][4]["text"]
@@ -725,9 +726,11 @@ class PDFVisualExtractor:
             for region_idx, region_infos in enumerate(page_infos["regions"]):
                 if region_infos["thing"] in ["text", "title", "list"]:
                     region_text = region_infos["text"]
-                    region_sentences = sentence_tokenizer.text_to_sentences(region_text)
-                    for idx, region_sentence in enumerate(region_sentences):
-                        logger.line(f"{idx+1}: {region_sentence}")
+                    region_text_embedding = embedder.calc_embedding(region_text)
+                    logger.line(region_text_embedding)
+                    # region_sentences = sentence_tokenizer.text_to_sentences(region_text)
+                    # for idx, region_sentence in enumerate(region_sentences):
+                    # logger.line(f"{idx+1}: {region_sentence}")
 
     def run(self):
         # self.dump_pdf_to_page_images()
