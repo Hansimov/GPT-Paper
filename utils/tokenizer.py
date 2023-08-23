@@ -154,7 +154,8 @@ class Embedder:
             # )
             # self.model_name = "moka-ai/m3e-base"
             # self.model_name = "BAAI/bge-large-en"
-            self.model_name = "multi-qa-MiniLM-L6-cos-v1"
+            # self.model_name = "multi-qa-MiniLM-L6-cos-v1"
+            self.model_name = "msmarco-bert-base-dot-v5"
         self.load_model()
 
     def load_model(self):
@@ -201,14 +202,15 @@ class CrossEncoderX:
         if model_name:
             self.model_name = model_name
         else:
-            self.model_name = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+            # self.model_name = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+            self.model_name = "cross-encoder/ms-marco-MiniLM-L-12-v2"
         self.load_model()
 
     def load_model(self):
         init_os_envs(cuda_device=0)
         logger.note(f"> Using CrossEncoder model: [{self.model_name}]")
         self.model = CrossEncoder(self.model_name)
-    
+
 
 if __name__ == "__main__":
     with RunTimer():

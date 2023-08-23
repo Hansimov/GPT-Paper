@@ -745,13 +745,9 @@ class PDFVisualExtractor:
                     region_thing = region_infos["thing"]
                     region_text_chunk += region_text
                     if region_thing in ["title", "list"]:
+                        region_text_chunk += " - "
                         continue
 
-                    sentence_tokenizer = SentenceTokenizer()
-
-                    chunk_sentences = sentence_tokenizer.text_to_sentences(
-                        region_text_chunk
-                    )
                     chunk_embedding = embedder.calc_embedding(region_text_chunk)
                     region_embeddings_dict = {
                         "page_idx": page_idx + 1,
@@ -759,10 +755,14 @@ class PDFVisualExtractor:
                         "thing": region_thing,
                         "sentence_idx": -1,
                         "text": remove_newline_seps_from_text(region_text_chunk),
-                        "embedding_level": "region",
+                        "level": "region",
                         "embedding": chunk_embedding,
                     }
 
+                    sentence_tokenizer = SentenceTokenizer()
+                    chunk_sentences = sentence_tokenizer.text_to_sentences(
+                        region_text_chunk
+                    )
                     region_text_chunk = ""
 
                     page_region_embeddings_list.append(region_embeddings_dict)
@@ -777,7 +777,7 @@ class PDFVisualExtractor:
                             "thing": region_infos["thing"],
                             "sentence_idx": sentence_idx + 1,
                             "text": sentence,
-                            "embedding_level": "sentence",
+                            "level": "sentence",
                             "embedding": sentence_embedding,
                         }
                         page_region_embeddings_list.append(sentence_embeddings_dict)
@@ -788,21 +788,22 @@ class PDFVisualExtractor:
         embeddings_df.to_pickle(self.doc_embeddings_path)
 
     def query_region_texts(self):
-        query_prefix = "Represent this sentence for searching relevant passages:"
-        query_body = f"What are the descriptions of figure"
-        query = f"{query_prefix} {query_body}"
+        # query_prefix = "Represent this sentence for searching relevant passages:"
+        # query_body = f"what is the title of this paper?"
+        # query = f"{query_prefix}{query_body}"
+        query = f"what does HCC mean?"
 
         df = pd.read_pickle(self.doc_embeddings_path)
         doc_embeddings_tensors = df_column_to_torch_tensor(df["embedding"])
         doc_texts = df["text"].values.tolist()
         page_idxs = df["page_idx"].values.tolist()
         region_idxs = df["region_idx"].values.tolist()
+        levels = df["level"].values.tolist()
 
         embedder = Embedder()
         query_embedding_tensor = embedder.model.encode(query, convert_to_tensor=True)
 
         top_k = min(100, len(doc_texts))
-
         top_results = semantic_search(
             query_embeddings=query_embedding_tensor,
             corpus_embeddings=doc_embeddings_tensors,
@@ -810,8 +811,10 @@ class PDFVisualExtractor:
         )[0]
         # logger.line(top_results)
 
-        logger.note(f"Query: {colored(query_body,'light_cyan')}")
-        logger.line(f"Top {top_k} most similar texts:")
+        query_log = f"Query: {colored(query,'light_cyan')}"
+        statistics_str = f"Top {top_k} most related chunks in {len(doc_texts)}:"
+        logger.note(query_log)
+        logger.line(statistics_str)
 
         logger.store_indent()
         logger.indent(2)
@@ -835,13 +838,17 @@ class PDFVisualExtractor:
         for idx in range(len(cross_scores)):
             top_results[idx]["cross_score"] = cross_scores[idx]
         top_results = sorted(top_results, key=lambda x: x["cross_score"], reverse=True)
+
+        logger.note(query_log)
+        logger.line(statistics_str)
         for item_idx, item in enumerate(top_results[:10]):
             score = item["cross_score"]
             chunk_idx = item["corpus_id"]
             page_idx = page_idxs[chunk_idx]
             region_idx = region_idxs[chunk_idx]
+            chunk_level = levels[chunk_idx]
             logger.line(
-                f"{item_idx+1}: ({score:.4f}) [Page {page_idx}, Region {region_idx}]\n"
+                f"{item_idx+1}: ({score:.4f}) [Page {page_idx}, Region {region_idx}, Level {chunk_level}]\n"
                 + f"{colored(doc_texts[chunk_idx],'light_green')}"
             )
 
@@ -853,7 +860,7 @@ class PDFVisualExtractor:
         # self.crop_page_images("ordered")
         # self.extract_texts_from_pages()
         # self.combine_page_texts_to_doc()
-        # self.doc_texts_to_embeddings()
+        self.doc_texts_to_embeddings()
         self.query_region_texts()
 
 
