@@ -23,7 +23,8 @@ def remove_newline_seps_from_text(text):
 class WordTokenizer:
     """
     * How to count tokens with tiktoken · openai-cookbook
-        * https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb
+        * https://github.com/openai/openai-cookbook/blob/main/examples/
+          How_to_count_tokens_with_tiktoken.ipynb
 
 
     Encoding name	    | OpenAI models
@@ -150,6 +151,7 @@ class Embedder:
         self.load_model()
 
     def load_model(self):
+        logger.note(f"> Using embedding model: [{self.model_name}]")
         self.model = SentenceTransformer(self.model_name)
 
     def calc_embedding(self, text):

@@ -2,6 +2,7 @@ import fitz
 import json
 import matplotlib.pyplot as plt
 import os
+import pandas as pd
 import shutil
 from categorizers.body_text_block_categorizer import BodyTextBlockCategorizer
 from categorizers.fragmented_block_categorizer import FragmentedTextBlockCategorizer
@@ -31,7 +32,12 @@ from utils.layout_analyzer import (
     draw_regions_on_page,
 )
 from utils.logger import logger, add_fillers, Runtimer
-from utils.tokenizer import WordTokenizer, SentenceTokenizer, Embedder
+from utils.tokenizer import (
+    WordTokenizer,
+    SentenceTokenizer,
+    Embedder,
+    remove_newline_seps_from_text,
+)
 from utils.text_extractor import TextExtractor
 from utils.text_processor import TextBlock
 
@@ -409,6 +415,7 @@ class PDFVisualExtractor:
         self.cropped_ordered_page_images_path = self.assets_path / "crops_ordered"
         self.page_texts_path = self.assets_path / "texts"
         self.doc_texts_path = self.page_texts_path / "doc.json"
+        self.doc_embeddings_path = self.page_texts_path / "embeddings.pkl"
 
     def dump_pdf_to_page_images(self, dpi=300):
         rmtree_and_mkdir(self.page_images_path)
@@ -717,20 +724,29 @@ class PDFVisualExtractor:
             json.dump(doc_text_infos, wf, indent=4, ensure_ascii=False)
 
     def doc_texts_to_embeddings(self):
-        # sentence_tokenizer = SentenceTokenizer()
         embedder = Embedder()
         with open(self.doc_texts_path, "r") as rf:
             doc_texts_infos = json.load(rf)
-        # test_region_text = doc_texts_infos["pages"][0]["regions"][4]["text"]
+
+        page_region_embeddings_list = []
         for page_idx, page_infos in enumerate(doc_texts_infos["pages"]):
             for region_idx, region_infos in enumerate(page_infos["regions"]):
                 if region_infos["thing"] in ["text", "title", "list"]:
                     region_text = region_infos["text"]
                     region_text_embedding = embedder.calc_embedding(region_text)
-                    logger.line(region_text_embedding)
-                    # region_sentences = sentence_tokenizer.text_to_sentences(region_text)
-                    # for idx, region_sentence in enumerate(region_sentences):
-                    # logger.line(f"{idx+1}: {region_sentence}")
+                    page_region_embeddings_dict = {
+                        "page_idx": page_idx + 1,
+                        "region_idx": region_idx + 1,
+                        "text": remove_newline_seps_from_text(region_text),
+                        "embedding": region_text_embedding,
+                    }
+                    page_region_embeddings_list.append(page_region_embeddings_dict)
+        embeddings_df = pd.DataFrame.from_dict(page_region_embeddings_list)
+        logger.info(embeddings_df)
+        logger.success("> Dump embeddings to pickle")
+        logger.file(f"- {self.doc_embeddings_path}")
+        embeddings_df.to_pickle(self.doc_embeddings_path)
+
 
     def run(self):
         # self.dump_pdf_to_page_images()

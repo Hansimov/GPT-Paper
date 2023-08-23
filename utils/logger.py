@@ -98,7 +98,10 @@ class Logger:
     def log(self, method, msg, *args, **kwargs):
         level, color = self.LOG_METHODS[method]
         indent_str = " " * self.log_indent
-        msg_str = repr(msg)[1:-1]
+        msg_str = repr(msg)
+        quotes = ["'", '"']
+        if msg_str[0] in quotes and msg_str[-1] in quotes:
+            msg_str = msg_str[1:-1]
         msg_lines = msg_str.splitlines()
         indented_msg = "\n".join([f"{indent_str}{line}" for line in msg_lines])
         getattr(self.logger, level)(colored(indented_msg, color), *args, **kwargs)
@@ -157,7 +160,8 @@ class Runtimer:
             "elapsed": "Elapsed",
         }
         time_str = add_fillers(
-            f"\n{time_types[time_type]} time: [ {self.time2str(t)} ]"
+            f"\n{time_types[time_type]} time: [ {self.time2str(t)} ]",
+            direction="left",
         )
         logger.success(time_str)
 
