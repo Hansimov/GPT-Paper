@@ -742,7 +742,7 @@ class PDFVisualExtractor:
         for page_idx, page_infos in enumerate(doc_texts_infos["pages"]):
             region_text_chunk = ""
             for region_idx, region_infos in enumerate(page_infos["regions"]):
-                if region_infos["thing"] in ["text", "title"]:
+                if region_infos["thing"] in ["text", "title", "list"]:
                     region_text = region_infos["text"]
                     region_thing = region_infos["thing"]
                     region_text_chunk = region_text
@@ -793,8 +793,9 @@ class PDFVisualExtractor:
         # query_prefix = "Represent this sentence for searching relevant passages:"
         # query_body = f"what is the title of this paper?"
         # query = f"{query_prefix}{query_body}"
-        query = f"Tree of Thoughts vs Graph of Thoughts"
+        # query = f"Tree of Thoughts vs Graph of Thoughts"
         # query = f"figure captions of paper"
+        query = "References with names, publishments and years"
 
         df = pd.read_pickle(self.doc_embeddings_path)
         doc_embeddings_tensors = df_column_to_torch_tensor(df["embedding"])
@@ -870,14 +871,16 @@ class PDFVisualExtractor:
             chunk_idx = item["corpus_id"]
             page_idx = df_page_idxs[chunk_idx]
             region_idx = df_region_idxs[chunk_idx]
-            query_results_page_region_idxs[page_idx].append(region_idx)
+            rank = item_idx + 1
+            query_results_page_region_idxs[page_idx].append((region_idx, rank))
         query_results_page_region_idxs = {
-            k: sorted(v) for k, v in sorted(query_results_page_region_idxs.items())
+            k: sorted(v, key=lambda x: x[0])
+            for k, v in sorted(query_results_page_region_idxs.items())
         }
         query_results_path = self.queries_results_path / f"{query[:100]}"
         rmtree_and_mkdir(query_results_path)
         page_idx_digits = get_int_digits(len(self.pdf_doc))
-        for page_idx, region_idxs in query_results_page_region_idxs.items():
+        for page_idx, region_idxs_and_ranks in query_results_page_region_idxs.items():
             page_info_json_name = f"page_{page_idx:0>{page_idx_digits}}.json"
             query_results_page_info_json_path = query_results_path / page_info_json_name
             ordered_page_info_path = self.ordered_page_images_path / page_info_json_name
@@ -889,20 +892,27 @@ class PDFVisualExtractor:
                 query_results_path
                 / Path(page_infos["page"]["original_image_path"]).name
             )
-            query_results_page_infos["page"]["regions_num"] = len(region_idxs)
+            query_results_page_infos["page"]["regions_num"] = len(region_idxs_and_ranks)
             query_results_page_infos["regions"] = []
-            for region_idx in region_idxs:
+            for item_idx, region_idx_and_rank in enumerate(region_idxs_and_ranks):
+                region_idx, rank = region_idx_and_rank
                 query_results_page_infos["regions"].append(
                     page_infos["regions"][region_idx - 1]
                 )
-            logger.success("> Dump query results page info json")
+                query_results_page_infos["regions"][item_idx]["score"] = rank
+            logger.store_indent()
             logger.indent(2)
+            logger.success("> Dump query results page info json")
             logger.file(f"- {query_results_page_info_json_path}")
-            logger.indent(-2)
             with open(query_results_page_info_json_path, "w") as wf:
                 json.dump(query_results_page_infos, wf, indent=4)
-
-        query_results_infos = {}
+            draw_regions_on_page(
+                query_results_page_info_json_path,
+                query_results_path,
+                show_region_idx=False,
+                score_use_percent=False,
+            )
+            logger.restore_indent()
 
     def run(self):
         # self.dump_pdf_to_page_images()
@@ -912,7 +922,7 @@ class PDFVisualExtractor:
         # self.crop_page_images("ordered")
         # self.extract_texts_from_pages()
         # self.combine_page_texts_to_doc()
-        # self.doc_texts_to_embeddings()
+        self.doc_texts_to_embeddings()
         self.query_region_texts()
 
 
