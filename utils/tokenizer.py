@@ -1,12 +1,18 @@
 import os
 import requests
 import tiktoken
+import torch
 from nltk.tokenize import sent_tokenize
 from utils.envs import init_os_envs
 from utils.logger import logger, Runtimer
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer, CrossEncoder
 from sentence_transformers import util as st_util
 from termcolor import colored
+
+
+def df_column_to_torch_tensor(df_column):
+    torch_tensor = torch.stack([torch.Tensor(i) for i in df_column])
+    return torch_tensor
 
 
 def remove_newline_seps_from_text(text):
@@ -139,7 +145,6 @@ def get_embedding_with_api(
 
 class Embedder:
     def __init__(self, model_name=None):
-        init_os_envs(cuda_device=3)
         if model_name:
             self.model_name = model_name
         else:
@@ -147,16 +152,19 @@ class Embedder:
             # self.model_name = (
             #     "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
             # )
-            self.model_name = "moka-ai/m3e-base"
+            # self.model_name = "moka-ai/m3e-base"
+            # self.model_name = "BAAI/bge-large-en"
+            self.model_name = "multi-qa-MiniLM-L6-cos-v1"
         self.load_model()
 
     def load_model(self):
+        init_os_envs(cuda_device=0)
         logger.note(f"> Using embedding model: [{self.model_name}]")
         self.model = SentenceTransformer(self.model_name)
 
-    def calc_embedding(self, text):
+    def calc_embedding(self, text, normalize_embeddings=True):
         text = remove_newline_seps_from_text(text)
-        embeddings = self.model.encode(text)
+        embeddings = self.model.encode(text, normalize_embeddings=normalize_embeddings)
         return embeddings
 
     def test_paraphrase_mining(self):
@@ -187,6 +195,20 @@ class Embedder:
             logger.line(f"1. {sentences[i]}\n2. {sentences[j]}")
             logger.indent(-2)
 
+
+class CrossEncoderX:
+    def __init__(self, model_name=None):
+        if model_name:
+            self.model_name = model_name
+        else:
+            self.model_name = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+        self.load_model()
+
+    def load_model(self):
+        init_os_envs(cuda_device=0)
+        logger.note(f"> Using CrossEncoder model: [{self.model_name}]")
+        self.model = CrossEncoder(self.model_name)
+    
 
 if __name__ == "__main__":
     with RunTimer():

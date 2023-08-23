@@ -42,7 +42,9 @@ from utils.tokenizer import (
     WordTokenizer,
     SentenceTokenizer,
     Embedder,
+    CrossEncoderX,
     remove_newline_seps_from_text,
+    df_column_to_torch_tensor,
 )
 from utils.text_extractor import TextExtractor
 from utils.text_processor import TextBlock
@@ -736,54 +738,112 @@ class PDFVisualExtractor:
 
         page_region_embeddings_list = []
         for page_idx, page_infos in enumerate(doc_texts_infos["pages"]):
+            region_text_chunk = ""
             for region_idx, region_infos in enumerate(page_infos["regions"]):
                 if region_infos["thing"] in ["text", "title", "list"]:
                     region_text = region_infos["text"]
-                    region_text_embedding = embedder.calc_embedding(region_text)
-                    page_region_embeddings_dict = {
+                    region_thing = region_infos["thing"]
+                    region_text_chunk += region_text
+                    if region_thing in ["title", "list"]:
+                        continue
+
+                    sentence_tokenizer = SentenceTokenizer()
+
+                    chunk_sentences = sentence_tokenizer.text_to_sentences(
+                        region_text_chunk
+                    )
+                    chunk_embedding = embedder.calc_embedding(region_text_chunk)
+                    region_embeddings_dict = {
                         "page_idx": page_idx + 1,
                         "region_idx": region_idx + 1,
-                        "text": remove_newline_seps_from_text(region_text),
-                        "embedding": region_text_embedding,
+                        "thing": region_thing,
+                        "sentence_idx": -1,
+                        "text": remove_newline_seps_from_text(region_text_chunk),
+                        "embedding_level": "region",
+                        "embedding": chunk_embedding,
                     }
-                    page_region_embeddings_list.append(page_region_embeddings_dict)
+
+                    region_text_chunk = ""
+
+                    page_region_embeddings_list.append(region_embeddings_dict)
+                    continue
+                    for sentence_idx, sentence in enumerate(chunk_sentences):
+                        sentence_embedding = embedder.calc_embedding(
+                            sentence, normalize_embeddings=True
+                        )
+                        sentence_embeddings_dict = {
+                            "page_idx": page_idx + 1,
+                            "region_idx": region_idx + 1,
+                            "thing": region_infos["thing"],
+                            "sentence_idx": sentence_idx + 1,
+                            "text": sentence,
+                            "embedding_level": "sentence",
+                            "embedding": sentence_embedding,
+                        }
+                        page_region_embeddings_list.append(sentence_embeddings_dict)
         embeddings_df = pd.DataFrame.from_dict(page_region_embeddings_list)
-        logger.info(embeddings_df)
+        logger.line(embeddings_df)
         logger.success("> Dump embeddings to pickle")
         logger.file(f"- {self.doc_embeddings_path}")
         embeddings_df.to_pickle(self.doc_embeddings_path)
 
     def query_region_texts(self):
+        query_prefix = "Represent this sentence for searching relevant passages:"
+        query_body = f"What are the descriptions of figure"
+        query = f"{query_prefix} {query_body}"
+
+        df = pd.read_pickle(self.doc_embeddings_path)
+        doc_embeddings_tensors = df_column_to_torch_tensor(df["embedding"])
+        doc_texts = df["text"].values.tolist()
+        page_idxs = df["page_idx"].values.tolist()
+        region_idxs = df["region_idx"].values.tolist()
+
         embedder = Embedder()
-        query = "contributions of this paper"
-        embeddings_df = pd.read_pickle(self.doc_embeddings_path)
-        corpus = embeddings_df["text"].values.tolist()
-        corpus_embeddings = embeddings_df["embedding"]
-
-        corpus_embeddings_tensors = torch.stack(
-            [torch.Tensor(i) for i in corpus_embeddings]
-        )
-
         query_embedding_tensor = embedder.model.encode(query, convert_to_tensor=True)
 
-        top_k = min(5, len(corpus))
+        top_k = min(100, len(doc_texts))
 
         top_results = semantic_search(
             query_embeddings=query_embedding_tensor,
-            corpus_embeddings=corpus_embeddings_tensors,
+            corpus_embeddings=doc_embeddings_tensors,
             top_k=top_k,
         )[0]
-        logger.line(top_results)
-        logger.note(f"Query: {colored(query,'light_cyan')}")
-        logger.line(f"Top {top_k} most similar sentences in corpus:")
+        # logger.line(top_results)
+
+        logger.note(f"Query: {colored(query_body,'light_cyan')}")
+        logger.line(f"Top {top_k} most similar texts:")
 
         logger.store_indent()
         logger.indent(2)
-        for item in top_results:
+        for item_idx, item in enumerate(top_results[:10]):
             score = item["score"]
-            corpus_idx = item["corpus_id"]
-            logger.success(f"({score:.4f}) {corpus[corpus_idx]}")
+            chunk_idx = item["corpus_id"]
+            page_idx = page_idxs[chunk_idx]
+            region_idx = region_idxs[chunk_idx]
+            logger.line(
+                f"{item_idx+1}: ({score:.4f}) [Page {page_idx}, Region {region_idx}]\n"
+                + f"{colored(doc_texts[chunk_idx],'light_green')}"
+            )
         logger.restore_indent()
+
+        # Re-ranking
+        cross_encoder = CrossEncoderX().model
+        cross_inp = [
+            [query, doc_texts[top_result["corpus_id"]]] for top_result in top_results
+        ]
+        cross_scores = cross_encoder.predict(cross_inp)
+        for idx in range(len(cross_scores)):
+            top_results[idx]["cross_score"] = cross_scores[idx]
+        top_results = sorted(top_results, key=lambda x: x["cross_score"], reverse=True)
+        for item_idx, item in enumerate(top_results[:10]):
+            score = item["cross_score"]
+            chunk_idx = item["corpus_id"]
+            page_idx = page_idxs[chunk_idx]
+            region_idx = region_idxs[chunk_idx]
+            logger.line(
+                f"{item_idx+1}: ({score:.4f}) [Page {page_idx}, Region {region_idx}]\n"
+                + f"{colored(doc_texts[chunk_idx],'light_green')}"
+            )
 
     def run(self):
         # self.dump_pdf_to_page_images()
