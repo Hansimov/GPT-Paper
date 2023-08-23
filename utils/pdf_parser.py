@@ -668,12 +668,12 @@ class PDFVisualExtractor:
                 logger.indent(2)
                 logger.success(f"{region_text}")
                 logger.indent(-2)
-                page_texts_infos["regions"][i]["text"] = region_text
+                page_texts_infos["regions"][i]["text"] = region_text.replace("\f", "")
             else:
                 logger.line(f"- Skip {region['thing']} region {i+1}")
         page_texts_infos_path = self.page_texts_path / page_info_json_path.name
-        with open(page_texts_infos_path, "w") as wf:
-            json.dump(page_texts_infos, wf, indent=4)
+        with open(page_texts_infos_path, "w", encoding="utf-8") as wf:
+            json.dump(page_texts_infos, wf, indent=4, ensure_ascii=False)
         logger.restore_indent()
 
     def extract_texts_from_pages(self):
@@ -713,8 +713,8 @@ class PDFVisualExtractor:
         logger.file(f"- {self.doc_texts_path}")
         logger.restore_indent()
 
-        with open(self.doc_texts_path, "w") as wf:
-            json.dump(doc_text_infos, wf, indent=4)
+        with open(self.doc_texts_path, "w", encoding="utf-8") as wf:
+            json.dump(doc_text_infos, wf, indent=4, ensure_ascii=False)
 
     def run(self):
         # self.dump_pdf_to_page_images()
@@ -722,7 +722,7 @@ class PDFVisualExtractor:
         # self.remove_overlapped_layout_regions_from_pages()
         # self.order_pages_regions()
         # self.crop_page_images("ordered")
-        # self.extract_texts_from_pages()
+        self.extract_texts_from_pages()
         self.combine_page_texts_to_doc()
 
 
