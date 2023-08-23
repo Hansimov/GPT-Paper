@@ -1,11 +1,9 @@
 import tiktoken
-from utils.logger import Logger
+from utils.logger import logger, Runtimer
+from nltk.tokenize import sent_tokenize
 
 
-logger = Logger().logger
-
-
-class Tokenizer:
+class WordTokenizer:
     """
     * How to count tokens with tiktoken · openai-cookbook
         * https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb
@@ -46,6 +44,24 @@ class Tokenizer:
         return self.token_cnt
 
 
+class SentenceTokenizer:
+    def remove_newline_seps_from_text(self, text):
+        chars_map = {
+            "-\n": "",
+            "\n": " ",
+            "\f": "",
+        }
+        for k, v in chars_map.items():
+            text = text.replace(k, v)
+        return text
+
+    def text_to_sentences(self, text):
+        text = self.remove_newline_seps_from_text(text)
+        sentences = sent_tokenize(text)
+        return sentences
+
+
 if __name__ == "__main__":
-    tokenizer = Tokenizer()
-    tokenizer.count_tokens("你好吗？我的朋友。")
+    with RunTimer():
+        word_tokenizer = WordTokenizer()
+        word_tokenizer.count_tokens("你好吗？我的朋友。")

@@ -9,7 +9,6 @@ from utils.calculator import (
     char_per_pixel,
 )
 from utils.logger import logger
-from utils.tokenizer import Tokenizer
 
 
 def text_blocks_to_paragraphs(blocks):
@@ -52,6 +51,7 @@ def regroup_blocks(blocks):
     2. Split the concatenated block into multiple blocks,
        if there are different paragraphs.
     """
+    pass
 
 
 class TextBlock:

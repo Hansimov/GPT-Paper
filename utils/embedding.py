@@ -84,20 +84,26 @@ class Embedder:
             self.model_name = model_name
         else:
             # self.model_name = "all-MiniLM-L6-v2"
-            self.model_name = (
-                "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-            )
+            # self.model_name = (
+            #     "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+            # )
+            self.model_name = "moka-ai/m3e-base"
+        self.load_model()
 
     def load_model(self):
         self.model = SentenceTransformer(self.model_name)
 
+    def calc_embedding(self, text):
+        embeddings = self.model.encode(text)
+        return embeddings
+
     def test_paraphrase_mining(self):
-        self.load_model()
         sentences = [
             "你好",
             "我很好",
             "今天天气怎么样",
             "今晚的晚饭真好吃",
+            "猫咪坐在外面",
             "The cat sits outside",
             "A man is playing guitar",
             "I love pasta",
@@ -115,11 +121,13 @@ class Embedder:
         for paraphrase in paraphrases[0:10]:
             score, i, j = paraphrase
             logger.mesg(f"Score: {score:.4f}")
-            logger.line(f"{sentences[i]}\n{sentences[j]}")
+            logger.indent(2)
+            logger.line(f"1. {sentences[i]}\n2. {sentences[j]}")
+            logger.indent(-2)
 
 
 if __name__ == "__main__":
     with Runtimer():
         # get_embedding_with_api("hello world!")
         embedder = Embedder()
-        embedder.test_run()
+        embedder.test_paraphrase_mining()

@@ -1,5 +1,6 @@
 import ctypes
 import json
+import nltk
 import os
 import platform
 import re
@@ -253,8 +254,13 @@ def download_reading_bank_dataset():
     )
 
 
+def download_nltk_data():
+    nltk.download("punkt")
+
+
 if __name__ == "__main__":
-    # init_os_envs()
+    init_os_envs()
     # check_camelot_dependencies()
     # setup_envs_of_dit()
-    download_reading_bank_dataset()
+    # download_reading_bank_dataset()
+    download_nltk_data()

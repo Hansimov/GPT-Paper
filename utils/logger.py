@@ -39,7 +39,7 @@ class Logger:
         "note": ("info", "light_magenta"),
         "mesg": ("info", "light_cyan"),
         "file": ("info", "light_blue"),
-        "line": ("info", "light_blue"),
+        "line": ("info", "white"),
         "success": ("info", "light_green"),
         "warn": ("warning", "light_red"),
         "err": ("error", "red"),
@@ -98,7 +98,8 @@ class Logger:
     def log(self, method, msg, *args, **kwargs):
         level, color = self.LOG_METHODS[method]
         indent_str = " " * self.log_indent
-        msg_lines = msg.splitlines()
+        msg_str = repr(msg)[1:-1]
+        msg_lines = msg_str.splitlines()
         indented_msg = "\n".join([f"{indent_str}{line}" for line in msg_lines])
         getattr(self.logger, level)(colored(indented_msg, color), *args, **kwargs)
 

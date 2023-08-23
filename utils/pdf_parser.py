@@ -23,7 +23,7 @@ from utils.calculator import (
     get_int_digits,
 )
 from utils.logger import logger, add_fillers, Runtimer
-from utils.tokenizer import Tokenizer
+from utils.tokenizer import WordTokenizer, SentenceTokenizer
 from utils.text_processor import TextBlock
 from utils.layout_analyzer import (
     DITLayoutAnalyzer,
@@ -85,7 +85,7 @@ class PDFStreamExtractor:
         point_texts = []
         categorize_vectors = []
         doc_blocks = []
-        tokenizer = Tokenizer()
+        tokenizer = WordTokenizer()
         doc_token_cnt = 0
         for page_idx, page in islice(enumerate(self.pdf_doc), len(self.pdf_doc)):
             page_blocks = page.get_text("blocks")
@@ -716,14 +716,28 @@ class PDFVisualExtractor:
         with open(self.doc_texts_path, "w", encoding="utf-8") as wf:
             json.dump(doc_text_infos, wf, indent=4, ensure_ascii=False)
 
+    def doc_texts_to_embeddings(self):
+        sentence_tokenizer = SentenceTokenizer()
+        with open(self.doc_texts_path, "r") as rf:
+            doc_texts_infos = json.load(rf)
+        # test_region_text = doc_texts_infos["pages"][0]["regions"][4]["text"]
+        for page_idx, page_infos in enumerate(doc_texts_infos["pages"]):
+            for region_idx, region_infos in enumerate(page_infos["regions"]):
+                if region_infos["thing"] in ["text", "title", "list"]:
+                    region_text = region_infos["text"]
+                    region_sentences = sentence_tokenizer.text_to_sentences(region_text)
+                    for idx, region_sentence in enumerate(region_sentences):
+                        logger.line(f"{idx+1}: {region_sentence}")
+
     def run(self):
         # self.dump_pdf_to_page_images()
         # self.annotate_page_images()
         # self.remove_overlapped_layout_regions_from_pages()
         # self.order_pages_regions()
         # self.crop_page_images("ordered")
-        self.extract_texts_from_pages()
-        self.combine_page_texts_to_doc()
+        # self.extract_texts_from_pages()
+        # self.combine_page_texts_to_doc()
+        self.doc_texts_to_embeddings()
 
 
 if __name__ == "__main__":
