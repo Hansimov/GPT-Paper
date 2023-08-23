@@ -217,7 +217,13 @@ class LayoutLMv3Analyzer:
         pass
 
 
-def draw_regions_on_page(regions_info_json_path, output_parent_path, spacing=2):
+def draw_regions_on_page(
+    regions_info_json_path,
+    output_parent_path,
+    spacing=2,
+    show_region_idx=True,
+    score_use_percent=True,
+):
     region_colors = {
         "text": (0, 128, 0),
         "title": (128, 0, 0),
@@ -253,7 +259,17 @@ def draw_regions_on_page(regions_info_json_path, output_parent_path, spacing=2):
         ]
 
         text_font = ImageFont.truetype("times.ttf", 40)
-        text_str = f"{region_idx}.{region_thing}({round(region_score)}%)"
+        if show_region_idx:
+            region_idx_str = f"{region_idx}."
+        else:
+            region_idx_str = ""
+
+        if score_use_percent:
+            region_score_str = f"{round(region_score)}%"
+        else:
+            region_score_str = f"{region_score}"
+
+        text_str = f"{region_idx_str}{region_thing}({region_score_str})"
         text_bbox = image_draw.textbbox(
             region_box[:2], text_str, font=text_font, anchor="rt"
         )
