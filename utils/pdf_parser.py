@@ -684,7 +684,7 @@ class PDFVisualExtractor:
         logger.note(f"> Extracting texts from {len(page_info_json_paths)} pages")
         for page_idx, page_info_json_path in enumerate(page_info_json_paths):
             logger.store_indent()
-            logger.note(f"- Extracting texts from Page {page_idx+1}")
+            logger.note(f"- Extract Page {page_idx+1}")
             self.extract_text_from_page(page_info_json_path)
             logger.restore_indent()
 

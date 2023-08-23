@@ -3,16 +3,18 @@ import logging
 import os
 import requests
 from utils.envs import init_os_envs
-from utils.logger import Logger
+from utils.logger import logger, Runtimer
+from sentence_transformers import SentenceTransformer
+from sentence_transformers import util as st_util
 
-init_os_envs(apis=["openai"])
 
-
-def calc_embedding(
+def get_embedding_with_api(
     text,
     endpoint="openai",
     model="text-embedding-ada-002",
 ):
+    init_os_envs(apis=["openai"])
+
     """
     Response Example:
 
@@ -75,5 +77,49 @@ def calc_embedding(
     return embedding
 
 
+class Embedder:
+    def __init__(self, model_name=None):
+        init_os_envs(cuda_device=3)
+        if model_name:
+            self.model_name = model_name
+        else:
+            # self.model_name = "all-MiniLM-L6-v2"
+            self.model_name = (
+                "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+            )
+
+    def load_model(self):
+        self.model = SentenceTransformer(self.model_name)
+
+    def test_paraphrase_mining(self):
+        self.load_model()
+        sentences = [
+            "你好",
+            "我很好",
+            "今天天气怎么样",
+            "今晚的晚饭真好吃",
+            "The cat sits outside",
+            "A man is playing guitar",
+            "I love pasta",
+            "Hello",
+            "Today's weather is so good!",
+            "what about Today's weather",
+            "How about today evening's dinner?",
+            "The new movie is awesome",
+            "The cat plays in the garden",
+            "A woman watches TV",
+            "The new movie is so great",
+            "Do you like pizza?",
+        ]
+        paraphrases = st_util.paraphrase_mining(self.model, sentences)
+        for paraphrase in paraphrases[0:10]:
+            score, i, j = paraphrase
+            logger.mesg(f"Score: {score:.4f}")
+            logger.line(f"{sentences[i]}\n{sentences[j]}")
+
+
 if __name__ == "__main__":
-    calc_embedding("hello world!")
+    with Runtimer():
+        # get_embedding_with_api("hello world!")
+        embedder = Embedder()
+        embedder.test_run()

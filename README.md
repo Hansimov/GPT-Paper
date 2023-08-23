@@ -39,8 +39,15 @@ pip install pytesseract
 ```
 
 * https://github.com/madmaze/pytesseract#installation
-## Data pre-processing
 
+
+**sentence-transformers:**
+
+```sh
+pip install sentence-transformers
+```
+
+## Data pre-processing
 
 ![](./examples/document-preprocess.png)
 
