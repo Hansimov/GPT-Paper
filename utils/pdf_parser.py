@@ -1,6 +1,7 @@
 import fitz
 import json
 import matplotlib.pyplot as plt
+import numpy as np
 import os
 import pandas as pd
 import shutil
@@ -27,6 +28,7 @@ from utils.calculator import (
     rect_overlap,
     get_int_digits,
 )
+from utils.envs import init_os_envs
 from utils.file import rmtree_and_mkdir
 from utils.layout_analyzer import (
     DITLayoutAnalyzer,
@@ -710,7 +712,7 @@ class PDFVisualExtractor:
         for page_idx, page_texts_info_json_path in enumerate(
             page_texts_info_json_paths
         ):
-            with open(page_texts_info_json_path, "r") as rf:
+            with open(page_texts_info_json_path, "r", encoding="utf-8") as rf:
                 page_texts_infos = json.load(rf)
                 doc_text_infos["pages"].append(page_texts_infos)
 
@@ -729,7 +731,7 @@ class PDFVisualExtractor:
 
     def doc_texts_to_embeddings(self):
         embedder = Embedder()
-        with open(self.doc_texts_path, "r") as rf:
+        with open(self.doc_texts_path, "r", encoding="utf-8") as rf:
             doc_texts_infos = json.load(rf)
 
         page_region_embeddings_list = []
@@ -753,28 +755,34 @@ class PDFVisualExtractor:
 
     def query_region_texts(self):
         embedder = Embedder()
-        query = "这篇文章的标题"
+        query = "contributions of this paper"
         embeddings_df = pd.read_pickle(self.doc_embeddings_path)
-        corpus = embeddings_df["text"].to_list()
-        # logger.line(corpus)
-        corpus_embeddings = embedder.model.encode(corpus, convert_to_tensor=True)
-        query_embedding = embedder.model.encode(query, convert_to_tensor=True)
+        corpus = embeddings_df["text"].values.tolist()
+        corpus_embeddings = embeddings_df["embedding"]
+
+        corpus_embeddings_tensors = torch.stack(
+            [torch.Tensor(i) for i in corpus_embeddings]
+        )
+
+        query_embedding_tensor = embedder.model.encode(query, convert_to_tensor=True)
 
         top_k = min(5, len(corpus))
-        cos_scores = st_util.cos_sim(query_embedding, corpus_embeddings)[0]
-        top_results = torch.topk(cos_scores, k=top_k)
-        # top_results = semantic_search(
-        #     query_embeddings=query_embedding,
-        #     corpus_embeddings=corpus_embeddings,
-        #     top_k=top_k,
-        # )[0]
+
+        top_results = semantic_search(
+            query_embeddings=query_embedding_tensor,
+            corpus_embeddings=corpus_embeddings_tensors,
+            top_k=top_k,
+        )[0]
         logger.line(top_results)
-        logger.note(f"Query: [{colored(query,'light_cyan')}]")
+        logger.note(f"Query: {colored(query,'light_cyan')}")
         logger.line(f"Top {top_k} most similar sentences in corpus:")
+
         logger.store_indent()
         logger.indent(2)
-        for score, idx in zip(top_results[0], top_results[1]):
-            logger.success(f"({score:.4f}) {corpus[idx]}")
+        for item in top_results:
+            score = item["score"]
+            corpus_idx = item["corpus_id"]
+            logger.success(f"({score:.4f}) {corpus[corpus_idx]}")
         logger.restore_indent()
 
     def run(self):
