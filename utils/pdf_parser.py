@@ -8,7 +8,7 @@ import shutil
 import torch
 from categorizers.body_text_block_categorizer import BodyTextBlockCategorizer
 from categorizers.fragmented_block_categorizer import FragmentedTextBlockCategorizer
-from collections import Counter
+from collections import Counter, defaultdict
 from itertools import islice, chain
 from matplotlib.patches import Rectangle
 from pathlib import Path
@@ -425,6 +425,7 @@ class PDFVisualExtractor:
         self.page_texts_path = self.assets_path / "texts"
         self.doc_texts_path = self.page_texts_path / "doc.json"
         self.doc_embeddings_path = self.page_texts_path / "embeddings.pkl"
+        self.queries_results_path = self.assets_path / "queries"
 
     def dump_pdf_to_page_images(self, dpi=300):
         rmtree_and_mkdir(self.page_images_path)
@@ -797,15 +798,15 @@ class PDFVisualExtractor:
 
         df = pd.read_pickle(self.doc_embeddings_path)
         doc_embeddings_tensors = df_column_to_torch_tensor(df["embedding"])
-        doc_texts = df["text"].values.tolist()
-        page_idxs = df["page_idx"].values.tolist()
-        region_idxs = df["region_idx"].values.tolist()
+        df_doc_texts = df["text"].values.tolist()
+        df_page_idxs = df["page_idx"].values.tolist()
+        df_region_idxs = df["region_idx"].values.tolist()
         levels = df["level"].values.tolist()
 
         embedder = Embedder()
         query_embedding_tensor = embedder.model.encode(query, convert_to_tensor=True)
 
-        top_k = min(100, len(doc_texts))
+        top_k = min(100, len(df_doc_texts))
         top_results = semantic_search(
             query_embeddings=query_embedding_tensor,
             corpus_embeddings=doc_embeddings_tensors,
@@ -814,7 +815,7 @@ class PDFVisualExtractor:
         # logger.line(top_results)
 
         query_log = f"Query: {colored(query,'light_cyan')}"
-        statistics_str = f"Top 10 most related chunks in {len(doc_texts)}:"
+        statistics_str = f"Top 10 most related chunks in {len(df_doc_texts)}:"
         logger.note(query_log)
         logger.line(statistics_str)
 
@@ -823,18 +824,18 @@ class PDFVisualExtractor:
         for item_idx, item in enumerate(top_results[:10]):
             score = item["score"]
             chunk_idx = item["corpus_id"]
-            page_idx = page_idxs[chunk_idx]
-            region_idx = region_idxs[chunk_idx]
+            page_idx = df_page_idxs[chunk_idx]
+            region_idx = df_region_idxs[chunk_idx]
             logger.line(
                 f"{item_idx+1}: ({score:.4f}) [Page {page_idx}, Region {region_idx}]\n"
-                + f"{colored(doc_texts[chunk_idx],'light_green')}"
+                + f"{colored(df_doc_texts[chunk_idx],'light_green')}"
             )
         logger.restore_indent()
 
         # Re-ranking
         cross_encoder = CrossEncoderX().model
         cross_inp = [
-            [query, doc_texts[top_result["corpus_id"]]] for top_result in top_results
+            [query, df_doc_texts[top_result["corpus_id"]]] for top_result in top_results
         ]
         cross_scores = cross_encoder.predict(cross_inp)
         for idx in range(len(cross_scores)):
@@ -848,10 +849,10 @@ class PDFVisualExtractor:
         for item_idx, item in enumerate(top_results[:10]):
             score = item["cross_score"]
             chunk_idx = item["corpus_id"]
-            page_idx = page_idxs[chunk_idx]
-            region_idx = region_idxs[chunk_idx]
+            page_idx = df_page_idxs[chunk_idx]
+            region_idx = df_region_idxs[chunk_idx]
             chunk_level = levels[chunk_idx]
-            chunk_text = doc_texts[chunk_idx]
+            chunk_text = df_doc_texts[chunk_idx]
             sentences = sentence_tokenizer.text_to_sentences(chunk_text)
             sentences_str = "\n".join(sentences)
             logger.store_indent()
@@ -863,6 +864,46 @@ class PDFVisualExtractor:
             logger.success(sentences_str)
             logger.restore_indent()
 
+        # Dump to query results page json
+        query_results_page_region_idxs = defaultdict(list)
+        for item_idx, item in enumerate(top_results[:10]):
+            chunk_idx = item["corpus_id"]
+            page_idx = df_page_idxs[chunk_idx]
+            region_idx = df_region_idxs[chunk_idx]
+            query_results_page_region_idxs[page_idx].append(region_idx)
+        query_results_page_region_idxs = {
+            k: sorted(v) for k, v in sorted(query_results_page_region_idxs.items())
+        }
+        query_results_path = self.queries_results_path / f"{query[:100]}"
+        rmtree_and_mkdir(query_results_path)
+        page_idx_digits = get_int_digits(len(self.pdf_doc))
+        for page_idx, region_idxs in query_results_page_region_idxs.items():
+            page_info_json_name = f"page_{page_idx:0>{page_idx_digits}}.json"
+            query_results_page_info_json_path = query_results_path / page_info_json_name
+            ordered_page_info_path = self.ordered_page_images_path / page_info_json_name
+            with open(ordered_page_info_path, "r") as rf:
+                page_infos = json.load(rf)
+
+            query_results_page_infos = page_infos.copy()
+            query_results_page_infos["page"]["current_image_path"] = str(
+                query_results_path
+                / Path(page_infos["page"]["original_image_path"]).name
+            )
+            query_results_page_infos["page"]["regions_num"] = len(region_idxs)
+            query_results_page_infos["regions"] = []
+            for region_idx in region_idxs:
+                query_results_page_infos["regions"].append(
+                    page_infos["regions"][region_idx - 1]
+                )
+            logger.success("> Dump query results page info json")
+            logger.indent(2)
+            logger.file(f"- {query_results_page_info_json_path}")
+            logger.indent(-2)
+            with open(query_results_page_info_json_path, "w") as wf:
+                json.dump(query_results_page_infos, wf, indent=4)
+
+        query_results_infos = {}
+
     def run(self):
         # self.dump_pdf_to_page_images()
         # self.annotate_page_images()
@@ -871,7 +912,7 @@ class PDFVisualExtractor:
         # self.crop_page_images("ordered")
         # self.extract_texts_from_pages()
         # self.combine_page_texts_to_doc()
-        self.doc_texts_to_embeddings()
+        # self.doc_texts_to_embeddings()
         self.query_region_texts()
 
 
