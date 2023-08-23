@@ -164,10 +164,13 @@ class Runtimer:
             "elapsed": "Elapsed",
         }
         time_str = add_fillers(
-            f"\n{time_types[time_type]} time: [ {self.time2str(t)} ]",
-            direction="left",
+            colored(
+                f"{time_types[time_type]} time: [ {self.time2str(t)} ]",
+                "light_magenta",
+            ),
+            direction="both",
         )
-        logger.success(time_str)
+        logger.line(time_str)
 
     # Convert time to string
     def time2str(self, t):

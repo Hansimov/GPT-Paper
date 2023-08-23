@@ -402,10 +402,11 @@ class PDFVisualExtractor:
 
     def __init__(self):
         # pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
-        pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
+        # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
         # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
         # pdf_filename = "Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images.pdf"
+        pdf_filename = "2308.09687 - Graph of Thoughts.pdf"
         self.pdf_filename = pdf_filename
         self.pdf_fullpath = self.pdf_root / self.pdf_filename
         self.pdf_doc = fitz.open(self.pdf_fullpath)
@@ -740,11 +741,11 @@ class PDFVisualExtractor:
         for page_idx, page_infos in enumerate(doc_texts_infos["pages"]):
             region_text_chunk = ""
             for region_idx, region_infos in enumerate(page_infos["regions"]):
-                if region_infos["thing"] in ["text", "title", "list"]:
+                if region_infos["thing"] in ["text", "title"]:
                     region_text = region_infos["text"]
                     region_thing = region_infos["thing"]
-                    region_text_chunk += region_text
-                    if region_thing in ["title", "list"]:
+                    region_text_chunk = region_text
+                    if region_thing in ["title"]:
                         region_text_chunk += " - "
                         continue
 
@@ -791,7 +792,8 @@ class PDFVisualExtractor:
         # query_prefix = "Represent this sentence for searching relevant passages:"
         # query_body = f"what is the title of this paper?"
         # query = f"{query_prefix}{query_body}"
-        query = f"what does HCC mean?"
+        query = f"Tree of Thoughts vs Graph of Thoughts"
+        # query = f"figure captions of paper"
 
         df = pd.read_pickle(self.doc_embeddings_path)
         doc_embeddings_tensors = df_column_to_torch_tensor(df["embedding"])
@@ -812,7 +814,7 @@ class PDFVisualExtractor:
         # logger.line(top_results)
 
         query_log = f"Query: {colored(query,'light_cyan')}"
-        statistics_str = f"Top {top_k} most related chunks in {len(doc_texts)}:"
+        statistics_str = f"Top 10 most related chunks in {len(doc_texts)}:"
         logger.note(query_log)
         logger.line(statistics_str)
 
@@ -839,18 +841,27 @@ class PDFVisualExtractor:
             top_results[idx]["cross_score"] = cross_scores[idx]
         top_results = sorted(top_results, key=lambda x: x["cross_score"], reverse=True)
 
+        sentence_tokenizer = SentenceTokenizer()
         logger.note(query_log)
         logger.line(statistics_str)
+
         for item_idx, item in enumerate(top_results[:10]):
             score = item["cross_score"]
             chunk_idx = item["corpus_id"]
             page_idx = page_idxs[chunk_idx]
             region_idx = region_idxs[chunk_idx]
             chunk_level = levels[chunk_idx]
+            chunk_text = doc_texts[chunk_idx]
+            sentences = sentence_tokenizer.text_to_sentences(chunk_text)
+            sentences_str = "\n".join(sentences)
+            logger.store_indent()
+            logger.indent(2)
             logger.line(
-                f"{item_idx+1}: ({score:.4f}) [Page {page_idx}, Region {region_idx}, Level {chunk_level}]\n"
-                + f"{colored(doc_texts[chunk_idx],'light_green')}"
+                f"{item_idx+1}: ({score:.4f}) [Page {page_idx}, Region {region_idx}, Level {chunk_level}]"
             )
+            logger.indent(2)
+            logger.success(sentences_str)
+            logger.restore_indent()
 
     def run(self):
         # self.dump_pdf_to_page_images()
