@@ -408,6 +408,7 @@ class PDFVisualExtractor:
         self.ordered_page_images_path = self.assets_path / "pages_ordered"
         self.cropped_ordered_page_images_path = self.assets_path / "crops_ordered"
         self.page_texts_path = self.assets_path / "texts"
+        self.doc_texts_path = self.page_texts_path / "doc.json"
 
     def dump_pdf_to_page_images(self, dpi=300):
         rmtree_and_mkdir(self.page_images_path)
@@ -524,13 +525,14 @@ class PDFVisualExtractor:
             "annotated": self.annotated_page_images_path,
             "no-overlap": self.no_overlap_page_images_path,
             "ordered": self.ordered_page_images_path,
+            "texts": self.page_texts_path,
         }
         page_images_path = page_type_images_paths[page_type]
         page_info_json_paths = sorted(
             [
                 page_images_path / p
                 for p in os.listdir(page_images_path)
-                if Path(p).suffix.lower() == ".json"
+                if Path(p).name.startswith("page") and Path(p).suffix.lower() == ".json"
             ],
             key=lambda x: int(x.stem.split("_")[-1]),
         )
@@ -686,13 +688,42 @@ class PDFVisualExtractor:
             self.extract_text_from_page(page_info_json_path)
             logger.restore_indent()
 
+    def combine_page_texts_to_doc(self):
+        page_texts_info_json_paths = self.get_page_info_json_paths("texts")
+        doc_text_infos = {
+            "pdf_filename": self.pdf_filename,
+            "pdf_fullpath": str(self.pdf_fullpath),
+            "pages_num": len(page_texts_info_json_paths),
+            "pages": [],
+        }
+        for page_idx, page_texts_info_json_path in enumerate(
+            page_texts_info_json_paths
+        ):
+            with open(page_texts_info_json_path, "r") as rf:
+                page_texts_infos = json.load(rf)
+                doc_text_infos["pages"].append(page_texts_infos)
+
+        doc_text_infos["pages"] = sorted(
+            doc_text_infos["pages"], key=lambda x: int(x["page"]["page_idx"])
+        )
+
+        logger.success("> Dump texts infos to doc")
+        logger.store_indent()
+        logger.indent(2)
+        logger.file(f"- {self.doc_texts_path}")
+        logger.restore_indent()
+
+        with open(self.doc_texts_path, "w") as wf:
+            json.dump(doc_text_infos, wf, indent=4)
+
     def run(self):
         # self.dump_pdf_to_page_images()
         # self.annotate_page_images()
         # self.remove_overlapped_layout_regions_from_pages()
         # self.order_pages_regions()
         # self.crop_page_images("ordered")
-        self.extract_texts_from_pages()
+        # self.extract_texts_from_pages()
+        self.combine_page_texts_to_doc()
 
 
 if __name__ == "__main__":
