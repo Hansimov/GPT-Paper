@@ -6,3 +6,5 @@ pdfs/**/*.png
 pdfs/**/*.json
 pdfs/**/*.pkl
 data/
+
+**/.ipynb_checkpoints

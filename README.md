@@ -47,6 +47,13 @@ pip install pytesseract
 pip install sentence-transformers
 ```
 
+**JupyterLab:**
+
+```sh
+pip install jupyterlab
+pip install notebook
+```
+
 ## Data pre-processing
 
 ![](./examples/document-preprocess.png)
