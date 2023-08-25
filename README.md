@@ -52,6 +52,8 @@ pip install sentence-transformers
 ```sh
 pip install jupyterlab
 pip install notebook
+pip install jupyterlab-widgets
+pip install ipywidgets
 ```
 
 ## Data pre-processing

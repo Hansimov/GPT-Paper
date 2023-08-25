@@ -3,7 +3,7 @@
     "showDocumentationPanel": true,
     "autoCompletion": true,
     "availableProviders": {
-        "CompletionProvider:context": 100,
+        "CompletionProvider:context": -1,
         "CompletionProvider:kernel": -1
     }
 }
