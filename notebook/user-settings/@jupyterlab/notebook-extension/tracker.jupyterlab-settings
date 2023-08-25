@@ -6,7 +6,7 @@
     "scrollPastEnd": true,
     "recordTiming": false,
     "overscanCount": 1,
-    "maxNumberOutputs": 50,
+    "maxNumberOutputs": 100,
     "showEditorForReadOnlyMarkdown": true,
     "kernelStatus": {
         "showOnStatusBar": false,
@@ -25,13 +25,18 @@
             "fontFamily": null,
             "fontSize": 18,
             "lineHeight": null
-        }
+        },
+        "lineNumbers": true,
+        "matchBrackets": true,
+        "lineWrap": true
     },
     "markdownCellConfig": {
         "autoClosingBrackets": true,
         "highlightActiveLine": true
     },
     "rawCellConfig": {
-        "autoClosingBrackets": true
+        "autoClosingBrackets": true,
+        "lineNumbers": true,
+        "matchBrackets": true
     }
 }
