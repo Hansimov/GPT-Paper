@@ -8,26 +8,26 @@ import subprocess
 from termcolor import colored
 
 
-def add_fillers(text, filler="=", direction="both"):
+def add_fillers(text, filler="=", fill_side="both"):
     terminal_width = shutil.get_terminal_size().columns
     text = text.strip()
     text_width = len(text)
     if text_width >= terminal_width:
         return text
 
-    if direction == "both":
+    if fill_side[0].lower() == "b":
         leading_fill_str = filler * ((terminal_width - text_width) // 2 - 1) + " "
         trailing_fill_str = " " + filler * (
             terminal_width - text_width - len(leading_fill_str) - 1
         )
-    elif direction == "left":
+    elif fill_side[0].lower() == "l":
         leading_fill_str = filler * (terminal_width - text_width - 1) + " "
         trailing_fill_str = ""
-    elif direction == "right":
+    elif fill_side[0].lower() == "r":
         leading_fill_str = ""
         trailing_fill_str = " " + filler * (terminal_width - text_width - 1)
     else:
-        raise ValueError("Invalid direction")
+        raise ValueError("Invalid fill_side")
 
     filled_str = f"{leading_fill_str}{text}{trailing_fill_str}"
     return filled_str
@@ -41,6 +41,7 @@ class Logger:
         "file": ("info", "light_blue"),
         "line": ("info", "white"),
         "success": ("info", "light_green"),
+        "fail": ("info", "light_red"),
         "warn": ("warning", "light_red"),
         "err": ("error", "red"),
     }
@@ -95,7 +96,7 @@ class Logger:
     def restore_indent(self):
         self.log_indent = self.log_indents.pop(-1)
 
-    def log(self, method, msg, *args, **kwargs):
+    def log(self, method, msg, indent=0, fill=False, fill_side="both", *args, **kwargs):
         if type(msg) == str:
             msg_str = msg
         else:
@@ -105,9 +106,15 @@ class Logger:
                 msg_str = msg_str[1:-1]
         msg_lines = msg_str.splitlines()
 
+        self.store_indent()
+        self.indent(indent)
         indent_str = " " * self.log_indent
+        self.restore_indent()
+
         level, color = self.LOG_METHODS[method]
         indented_msg = "\n".join([f"{indent_str}{line}" for line in msg_lines])
+        if fill:
+            indented_msg = add_fillers(indented_msg, fill_side=fill_side)
         getattr(self.logger, level)(colored(indented_msg, color), *args, **kwargs)
 
     def bind_functions(self):
@@ -168,7 +175,7 @@ class Runtimer:
                 f"{time_types[time_type]} time: [ {self.time2str(t)} ]",
                 "light_magenta",
             ),
-            direction="both",
+            fill_side="both",
         )
         logger.line(time_str)
 
