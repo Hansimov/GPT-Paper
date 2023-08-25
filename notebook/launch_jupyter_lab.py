@@ -6,7 +6,7 @@ from utils.logger import shell_cmd
 class JupyterLabLauncher:
     def __init__(self):
         self.init_envs()
-        self.ipynb_path = Path(__file__).parent / "test_jupyter_lab.ipynb"
+        self.ipynb_path = Path(__file__).parent / "review_writer.ipynb"
 
     def init_envs(self):
         self.envs = {
@@ -20,7 +20,7 @@ class JupyterLabLauncher:
 
     def run(self):
         # shell_cmd(f"jupyter lab {self.ipynb_path}")
-        shell_cmd(f"jupyter lab")
+        shell_cmd(f"jupyter lab {self.ipynb_path}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,14 @@
+{
+    // Code Console
+    // @jupyterlab/console-extension:tracker
+    // Code Console settings.
+    // *************************************
+
+    // Prompt Cell Configuration
+    // The configuration for all prompt cells; it will override the CodeMirror default configuration.
+    "promptCellConfig": {
+        "codeFolding": false,
+        "lineNumbers": false,
+        "autoClosingBrackets": true
+    }
+}
