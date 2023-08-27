@@ -45,6 +45,7 @@ def init_os_envs(secrets=True, apis=[], set_proxy=True, cuda_device=None):
 
     if cuda_device:
         os.environ["CUDA_VISIBLE_DEVICES"] = str(cuda_device)
+        os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
 
 def copy_to_site_packaegs(package_path):

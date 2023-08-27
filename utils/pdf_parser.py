@@ -793,13 +793,13 @@ class PDFVisualExtractor:
         # query_prefix = "Represent this sentence for searching relevant passages:"
         # query_body = f"what is the title of this paper?"
         # query = f"{query_prefix}{query_body}"
-        # query = f"Tree of Thoughts vs Graph of Thoughts"
+        query = f"Tree of Thoughts vs Graph of Thoughts"
         # query = f"figure captions of paper"
         # query = "References with names, publishments and years"
         # query = "Explain Graph of Thoughts"
         # query = "Architecture of GoT (Graph of Thoughts)"
         # query = "How GoT (Graph of Thoughts) outperforms other prompt techniques"
-        query = "summarize this paper"
+        # query = "summarize this paper"
 
         df = pd.read_pickle(self.doc_embeddings_path)
         doc_embeddings_tensors = df_column_to_torch_tensor(df["embedding"])
@@ -926,7 +926,7 @@ class PDFVisualExtractor:
         # self.crop_page_images("ordered")
         # self.extract_texts_from_pages()
         # self.combine_page_texts_to_doc()
-        # self.doc_texts_to_embeddings()
+        self.doc_texts_to_embeddings()
         self.query_region_texts()
 
 
