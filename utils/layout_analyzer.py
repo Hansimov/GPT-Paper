@@ -24,7 +24,7 @@ warnings.filterwarnings("ignore")
 
 # setup_envs_of_dit()
 if platform.system() == "Windows":
-    init_os_envs(apis=["huggingface"], cuda_device=0)
+    init_os_envs(cuda_device=0, huggingface=True)
 else:
     init_os_envs(cuda_device=3)
 

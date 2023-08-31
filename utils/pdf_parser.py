@@ -49,6 +49,8 @@ from utils.tokenizer import (
 from utils.text_extractor import TextExtractor
 from utils.text_processor import TextBlock
 
+init_os_envs(cuda_device=0, huggingface=True)
+
 
 class PDFStreamExtractor:
     pdf_root = Path(__file__).parents[1] / "pdfs"

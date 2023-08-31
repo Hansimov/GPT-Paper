@@ -80,7 +80,7 @@ def get_embedding_with_api(
     endpoint="openai",
     model="text-embedding-ada-002",
 ):
-    init_os_envs(apis=["openai"])
+    init_os_envs(openai=True)
 
     """
     Response Example:
@@ -159,7 +159,7 @@ class Embedder:
         self.load_model()
 
     def load_model(self):
-        init_os_envs(cuda_device=0)
+        init_os_envs(cuda_device=0, huggingface=True)
         logger.note(f"> Using embedding model: [{self.model_name}]")
         self.model = SentenceTransformer(self.model_name)
 
@@ -207,13 +207,12 @@ class CrossEncoderX:
         self.load_model()
 
     def load_model(self):
-        init_os_envs(cuda_device=0)
         logger.note(f"> Using CrossEncoder model: [{self.model_name}]")
         self.model = CrossEncoder(self.model_name)
 
 
 if __name__ == "__main__":
-    with RunTimer():
+    with Runtimer():
         word_tokenizer = WordTokenizer()
         word_tokenizer.count_tokens("你好吗？我的朋友。")
         # get_embedding_with_api("hello world!")

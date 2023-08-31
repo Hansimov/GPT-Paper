@@ -12,39 +12,59 @@ from termcolor import colored
 from utils.logger import logger, shell_cmd
 
 
-def init_os_envs(secrets=True, apis=[], set_proxy=True, cuda_device=None):
+def init_os_envs(
+    secrets=True,
+    set_proxy=True,
+    cuda_device=None,
+    cuda_alloc=True,
+    huggingface=True,
+    openai=False,
+):
     if secrets:
         with open(Path(__file__).parents[1] / "secrets.json", "r") as rf:
             secrets = json.load(rf)
 
-    if type(apis) == str:
-        apis = [apis]
-    apis = [api.lower() for api in apis]
+    # if type(apis) == str:
+    #     apis = [apis]
+    # apis = [api.lower() for api in apis]
 
     if set_proxy:
         for proxy_env in ["http_proxy", "https_proxy"]:
             os.environ[proxy_env] = secrets["http_proxy"]
 
-    if "openai" in apis:
+    if openai:
         os.environ["OPENAI_API_KEY"] = secrets["openai_api_key"]
 
-    if "huggingface" in apis:
+    if huggingface:
         """
-        https://stackoverflow.com/questions/63312859/how-to-change-huggingface-transformers-default-cache-directory
-        https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables
+        * https://stackoverflow.com/questions/63312859/how-to-change-huggingface-transformers-default-cache-directory
+        * https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables
         """
+        cache_root = Path(__file__).parents[2] / ".cache"
+        cache_root.mkdir(parents=True, exist_ok=True)
         hf_envs = {
-            "TRANSFORMERS_CACHE": "models",
-            "HF_DATASETS_CACHE": "datasets",
-            "HF_HOME": "misc",
+            "HF_HOME": ".",
+            "XDG_CACHE_HOME": ".",
+            "TRANSFORMERS_CACHE": "hub",
+            "HUGGINGFACE_HUB_CACHE": "hub",
+            "HUGGINGFACE_ASSETS_CACHE": "assets",
+            "HUGGING_FACE_HUB_TOKEN": "token",
+            # "HF_DATASETS_CACHE": "datasets",
         }
         for env_name, env_path in hf_envs.items():
-            os.environ[env_name] = str(
-                Path(__file__).parent / f".cache/huggingface/{env_path}"
-            )
+            os.environ[env_name] = str(cache_root / "huggingface" / f"{env_path}")
+            # logger.note(str(cache_root / "huggingface" / f"{env_path}"))
+
+        st_envs = {
+            "SENTENCE_TRANSFORMERS_HOME": "sentence_transformers",
+        }
+        for env_name, env_path in st_envs.items():
+            os.environ[env_name] = str(cache_root / f"{env_path}")
 
     if cuda_device:
         os.environ["CUDA_VISIBLE_DEVICES"] = str(cuda_device)
+
+    if cuda_alloc:
         os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
 
