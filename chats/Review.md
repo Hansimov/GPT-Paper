@@ -1,5 +1,4 @@
-Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer
-===
+# Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer
 
 ## Current advances of AI-based approaches for clinical management of liver cancer
 
@@ -38,4 +37,4 @@ Unraveling the “black-box” of artificial intelligence-based pathological ana
    a. Influence functions
    b. ...
 
-# Conclusion and future applications
+## Conclusion and future applications
