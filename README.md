@@ -54,6 +54,7 @@ pip install jupyterlab
 pip install notebook
 pip install jupyterlab-widgets
 pip install ipywidgets
+pip install jupyter-black
 ```
 
 ## Data pre-processing
