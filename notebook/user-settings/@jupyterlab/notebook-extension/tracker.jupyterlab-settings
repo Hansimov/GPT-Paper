@@ -1,6 +1,6 @@
 {
     "defaultCell": "code",
-    "autoStartDefaultKernel": false,
+    "autoStartDefaultKernel": true,
     "inputHistoryScope": "global",
     "kernelShutdown": false,
     "scrollPastEnd": true,
@@ -21,22 +21,32 @@
     "windowingMode": "defer",
     "codeCellConfig": {
         "autoClosingBrackets": true,
+        "rulers": [
+            {}
+        ],
         "customStyles": {
             "fontFamily": null,
             "fontSize": 18,
             "lineHeight": null
-        },
-        "lineNumbers": true,
-        "matchBrackets": true,
-        "lineWrap": true
+        }
     },
     "markdownCellConfig": {
         "autoClosingBrackets": true,
-        "highlightActiveLine": true
+        "codeFolding": true,
+        "highlightActiveLine": true,
+        "customStyles": {
+            "fontFamily": null,
+            "fontSize": 18,
+            "lineHeight": null
+        }
     },
     "rawCellConfig": {
         "autoClosingBrackets": true,
-        "lineNumbers": true,
-        "matchBrackets": true
+        "codeFolding": true,
+        "customStyles": {
+            "fontFamily": null,
+            "fontSize": 18,
+            "lineHeight": null
+        }
     }
 }
