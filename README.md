@@ -55,6 +55,7 @@ pip install notebook
 pip install jupyterlab-widgets
 pip install ipywidgets
 pip install jupyter-black
+pip install ipynbname
 ```
 
 **aiohttp:**
@@ -63,6 +64,7 @@ pip install jupyter-black
 pip install aiohttp[speedups]
 pip install nest_asyncio
 ```
+
 
 ## Data pre-processing
 
