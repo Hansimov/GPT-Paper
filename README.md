@@ -57,6 +57,12 @@ pip install ipywidgets
 pip install jupyter-black
 ```
 
+**curl_cffi:**
+
+```sh
+pip install curl_cffi --upgrade
+```
+
 ## Data pre-processing
 
 ![](./examples/document-preprocess.png)

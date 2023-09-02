@@ -19,14 +19,11 @@ def init_os_envs(
     cuda_alloc=True,
     huggingface=True,
     openai=False,
+    ninomae=False,
 ):
     if secrets:
         with open(Path(__file__).parents[1] / "secrets.json", "r") as rf:
             secrets = json.load(rf)
-
-    # if type(apis) == str:
-    #     apis = [apis]
-    # apis = [api.lower() for api in apis]
 
     if set_proxy:
         for proxy_env in ["http_proxy", "https_proxy"]:
@@ -34,6 +31,9 @@ def init_os_envs(
 
     if openai:
         os.environ["OPENAI_API_KEY"] = secrets["openai_api_key"]
+
+    if ninomae:
+        os.environ["OPENAI_API_KEY"] = secrets["ninomae_api_key"]
 
     if huggingface:
         """

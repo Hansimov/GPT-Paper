@@ -1,0 +1,273 @@
+import json
+import os
+import re
+from curl_cffi import requests
+from termcolor import colored
+from utils.envs import init_os_envs
+
+
+def output_stream_response(
+    response,
+    cleanse_chat_content=None,
+    content_color="cyan",
+):
+    whole_content = ""
+    for chunk in response.iter_lines():
+        chunk_str = chunk.decode("utf-8")
+        if chunk_str:
+            chunk_str = re.sub(r"^\s*data:\s*", "", chunk_str)
+            if chunk_str.lower() == "[DONE]":
+                break
+            chunk_data = json.loads(chunk_str)
+            try:
+                delta_data = chunk_data["choices"][0]["delta"]
+            except:
+                print(chunk_data, flush=True)
+                continue
+            finish_reason = chunk_data["choices"][0]["finish_reason"]
+            if "role" in delta_data:
+                role = delta_data["role"]
+                # print(f"Role: {role}", end="", flush=True)
+            if "content" in delta_data:
+                delta_content = delta_data["content"]
+                print(colored(delta_content, content_color), end="", flush=True)
+                whole_content += delta_content
+            if finish_reason == "stop":
+                print()
+                break
+    whole_content = cleanse_chat_content(whole_content)
+    return whole_content
+
+
+class OpenAIAgent:
+    """
+    OpenAI API doc:
+      * https://platform.openai.com/docs/api-reference/chat/create
+    """
+
+    endpoint_apis = {
+        "openai": {
+            "url": "https://api.openai.com",
+            "chat": "/v1/chat/completions",
+            "models": "/v1/models",
+        },
+        "ninomae": {
+            "url": "https://api-thanks.ninomae.live",
+            "chat": "/chat/completions",
+            "models": "/models",
+        },
+    }
+
+    def __init__(
+        self,
+        name="",  # name of the agent, also use "role" as alias
+        endpoint_name="ninomae",
+        model="gpt-3.5-turbo",
+        temperature=0,
+        system_message=None,
+        max_input_message_chars=None,
+    ):
+
+        self.name = name
+        self.endpoint_name = endpoint_name
+        self.endpoint = self.endpoint_apis[self.endpoint_name]
+        self.endpoint_url = self.endpoint["url"]
+        self.chat_api = self.endpoint_url + self.endpoint["chat"]
+
+        env_params = {
+            "secrets": True,
+            "set_proxy": True,
+            f"{self.endpoint_name}": True,
+        }
+        api_key_env = f"OPENAI_API_KEY"
+        init_os_envs(**env_params)
+        self.requests_headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {os.environ[api_key_env]}",
+        }
+
+        self.model = model
+        self.temperature = temperature
+        self.system_message = system_message
+        self.max_input_message_chars = max_input_message_chars
+
+        self.calc_max_input_message_chars()
+
+    def get_available_models(self):
+        self.models_api = self.endpoint_url + self.endpoint["models"]
+        response = requests.get(self.models_api, impersonate="chrome110")
+        # print(response.text)
+        data = response.json()["data"]
+        self.available_models = []
+
+        for item in data:
+            # print(item)
+            self.available_models.append(item["id"])
+        print(self.available_models)
+        return self.available_models
+
+    def calc_max_input_message_chars(self):
+        if self.max_input_message_chars is None:
+            max_input_chars_per_model = {
+                16000: [
+                    "gpt-3.5-turbo-16k",
+                    "gpt-3.5-turbo-16k-openai",
+                    "gpt-3.5-turbo-16k-poe",
+                ],
+                32000: ["gpt-4-32k", "gpt-4-32k-poe"],
+                100000: ["claude-2-100k", "claude-instant-100k"],
+            }
+            self.max_input_message_chars = 8000
+            for max_chars, models in max_input_chars_per_model.items():
+                if self.model in models:
+                    self.max_input_message_chars = max_chars
+                    break
+
+    def content_to_message(self, role, content):
+        return {"role": role, "content": content}
+
+    def construct_request_messages_with_prompt(self, prompt):
+        request_messages = []
+        if self.system_message:
+            request_messages.append(
+                self.content_to_message("system", self.system_message)
+            )
+        request_messages.append(self.content_to_message("user", prompt))
+        return request_messages
+
+    def chat(
+        self,
+        # model,
+        # temperature,
+        messages,
+        stream=False,
+        top_p=1,
+        n=1,
+        stop=None,
+        max_tokens=8096,
+        functions=None,
+        function_call=None,
+        presence_penalty=0,
+        frequency_penalty=0,
+        logit_bias=None,
+        user=None,
+    ):
+        """
+        ## Request:
+        ```sh
+        curl -X 'POST' \
+            'https://api.openai.com/v1/chat/completions' \
+            -H 'accept: application/json' \
+            -H 'Authorization: Bearer <API_KEY>' \
+            -H 'Content-Type: application/json' \
+            -d '{
+                "model": "gpt-3.5-turbo",
+                "messages": [{"role": "user", "content": "Say this is a test!"}],
+                "temperature": 0
+            }'
+        ```
+        
+        ## Response
+        ```json
+        {
+            "id": "chatcmpl-W0zJUER1GNIcrN3mLRp00fy6Tb8GO",
+            "object": "chat.completion",
+            "created": 1689055727,
+            "model": "gpt-3.5-turbo",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "This is a test!"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "completion_tokens": 5,
+                "prompt_tokens": 14,
+                "total_tokens": 19
+            }
+        }
+        ```
+        """
+        self.requests_payload = {
+            "model": self.model,
+            "messages": messages,
+            "temperature": self.temperature,
+            "stream": stream,
+        }
+        requests_session = requests.session()
+
+        # retires = Retry(total=3, backoff_factor=0.1)
+        # requests_session.mount("https://", HTTPAdapter(max_retries=retires))
+
+        response = requests_session.post(
+            self.chat_api,
+            headers=self.requests_headers,
+            json=self.requests_payload,
+            timeout=30,
+            stream=stream,
+        )
+        if not stream:
+            response_data = response.json()
+            # print(f'{[self.name]}: {response_data["choices"][0]["message"]["content"]}')
+            return response_data
+        else:
+            # print(response)
+            # print(response.content)
+            # https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb
+            return response
+
+    def test_prompt(self, stream=True):
+        self.system_message = (
+            f"你是一个专业的中英双语专家。如果给出中文，你需要如实翻译成英文；如果给出中文，你需要如实翻译成英文。"
+            f"你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本："
+        )
+        prompt = "In this paper, we introduce Semantic-SAM, a universal image segmentation model to enable segment and recognize anything at any desired granularity. Our model offers two key advantages: semantic-awareness and granularity-abundance. To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information. For the multi-granularity capability, we propose a multi-choice learning scheme during training, enabling each click to generate masks at multiple levels that correspond to multiple ground-truth masks. Notably, this work represents the first attempt to jointly train a model on SA-1B, generic, and part segmentation datasets. Experimental results and visualizations demonstrate that our model successfully achieves semantic-awareness and granularity-abundance. Furthermore, combining SA-1B training with other segmentation tasks, such as panoptic and part segmentation, leads to performance improvements. We will provide code and a demo for further exploration and evaluation."
+        messages = self.construct_request_messages_with_prompt(prompt)
+        print(messages, flush=True)
+        response = self.chat(messages, stream=stream)
+        if not stream:
+            content = response["choices"][0]["message"]["content"]
+            print(content)
+        else:
+            """
+            requests.iter_content():
+              - https://requests.readthedocs.io/en/latest/api/#requests.Response.iter_content
+              - https://requests.readthedocs.io/en/latest/_modules/requests/models/#Response.iter_content
+
+            requests.iter_lines():
+              - https://requests.readthedocs.io/en/latest/api/#requests.Response.iter_lines
+              - https://requests.readthedocs.io/en/latest/_modules/requests/models/#Response.iter_lines
+            """
+            for chunk in response.iter_lines():
+                chunk_str = chunk.decode("utf-8")
+                if chunk_str:
+                    # print(chunk_str, flush=True)
+                    chunk_str = re.sub(r"^\s*data:\s*", "", chunk_str)
+                    if chunk_str.lower() == "[DONE]":
+                        break
+
+                    chunk_data = json.loads(chunk_str)
+                    delta_data = chunk_data["choices"][0]["delta"]
+                    finish_reason = chunk_data["choices"][0]["finish_reason"]
+                    if "role" in delta_data:
+                        role = delta_data["role"]
+                        print(f"Role: {role}", end="", flush=True)
+                    if "content" in delta_data:
+                        delta_content = delta_data["content"]
+                        print(colored(delta_content, "cyan"), end="", flush=True)
+                    if finish_reason == "stop":
+                        break
+
+    def run(self):
+        self.get_available_models()
+        # self.test_prompt()
+        pass
+
+
+if __name__ == "__main__":
+    agent = OpenAIAgent(name="ninomae", endpoint_name="ninomae")
+    agent.get_available_models()
