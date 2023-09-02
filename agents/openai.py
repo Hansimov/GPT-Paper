@@ -1,9 +1,12 @@
+import aiohttp
+import asyncio
 import json
 import os
 import re
-from curl_cffi import requests
 from termcolor import colored
 from utils.envs import init_os_envs
+
+asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
 def output_stream_response(
@@ -93,16 +96,16 @@ class OpenAIAgent:
 
         self.calc_max_input_message_chars()
 
-    def get_available_models(self):
+    async def get_available_models(self):
         self.models_api = self.endpoint_url + self.endpoint["models"]
-        response = requests.get(self.models_api, impersonate="chrome110")
-        # print(response.text)
-        data = response.json()["data"]
         self.available_models = []
 
-        for item in data:
-            # print(item)
-            self.available_models.append(item["id"])
+        async with aiohttp.ClientSession() as session:
+            async with session.get(self.models_api) as response:
+                data = (await response.json())["data"]
+                for item in data:
+                    self.available_models.append(item["id"])
+
         print(self.available_models)
         return self.available_models
 
@@ -135,7 +138,7 @@ class OpenAIAgent:
         request_messages.append(self.content_to_message("user", prompt))
         return request_messages
 
-    def chat(
+    async def chat(
         self,
         # model,
         # temperature,
@@ -192,25 +195,24 @@ class OpenAIAgent:
         }
         ```
         """
+
         self.requests_payload = {
             "model": self.model,
             "messages": messages,
             "temperature": self.temperature,
-            "stream": stream,
+            # "stream": stream,
         }
-        requests_session = requests.session()
 
-        # retires = Retry(total=3, backoff_factor=0.1)
-        # requests_session.mount("https://", HTTPAdapter(max_retries=retires))
-
-        response = requests_session.post(
+        response = requests.post(
             self.chat_api,
             headers=self.requests_headers,
             json=self.requests_payload,
             timeout=30,
-            stream=stream,
+            # stream=stream,
+            # impersonate="chrome110",
         )
         if not stream:
+            print(response.text)
             response_data = response.json()
             # print(f'{[self.name]}: {response_data["choices"][0]["message"]["content"]}')
             return response_data
@@ -220,7 +222,7 @@ class OpenAIAgent:
             # https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb
             return response
 
-    def test_prompt(self, stream=True):
+    def test_prompt(self, stream=False):
         self.system_message = (
             f"你是一个专业的中英双语专家。如果给出中文，你需要如实翻译成英文；如果给出中文，你需要如实翻译成英文。"
             f"你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本："
@@ -262,12 +264,8 @@ class OpenAIAgent:
                     if finish_reason == "stop":
                         break
 
-    def run(self):
-        self.get_available_models()
-        # self.test_prompt()
-        pass
-
 
 if __name__ == "__main__":
     agent = OpenAIAgent(name="ninomae", endpoint_name="ninomae")
-    agent.get_available_models()
+    asyncio.run(agent.get_available_models())
+    # agent.test_prompt()

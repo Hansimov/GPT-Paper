@@ -57,10 +57,10 @@ pip install ipywidgets
 pip install jupyter-black
 ```
 
-**curl_cffi:**
+**aiohttp:**
 
 ```sh
-pip install curl_cffi --upgrade
+pip install aiohttp[speedups]
 ```
 
 ## Data pre-processing
