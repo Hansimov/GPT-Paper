@@ -61,6 +61,7 @@ pip install jupyter-black
 
 ```sh
 pip install aiohttp[speedups]
+pip install nest_asyncio
 ```
 
 ## Data pre-processing

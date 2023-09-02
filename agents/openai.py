@@ -9,39 +9,6 @@ from utils.envs import init_os_envs
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
-def output_stream_response(
-    response,
-    cleanse_chat_content=None,
-    content_color="cyan",
-):
-    whole_content = ""
-    for chunk in response.iter_lines():
-        chunk_str = chunk.decode("utf-8")
-        if chunk_str:
-            chunk_str = re.sub(r"^\s*data:\s*", "", chunk_str)
-            if chunk_str.lower() == "[DONE]":
-                break
-            chunk_data = json.loads(chunk_str)
-            try:
-                delta_data = chunk_data["choices"][0]["delta"]
-            except:
-                print(chunk_data, flush=True)
-                continue
-            finish_reason = chunk_data["choices"][0]["finish_reason"]
-            if "role" in delta_data:
-                role = delta_data["role"]
-                # print(f"Role: {role}", end="", flush=True)
-            if "content" in delta_data:
-                delta_content = delta_data["content"]
-                print(colored(delta_content, content_color), end="", flush=True)
-                whole_content += delta_content
-            if finish_reason == "stop":
-                print()
-                break
-    whole_content = cleanse_chat_content(whole_content)
-    return whole_content
-
-
 class OpenAIAgent:
     """
     OpenAI API doc:
@@ -254,8 +221,12 @@ class OpenAIAgent:
             # https://docs.aiohttp.org/en/stable/streams.html
             await self.chat(messages, stream=stream)
 
+    def _test_prompt(self):
+        asyncio.run(agent.test_prompt())
+
 
 if __name__ == "__main__":
     agent = OpenAIAgent(name="ninomae", endpoint_name="ninomae")
     # asyncio.run(agent.get_available_models())
-    asyncio.run(agent.test_prompt())
+    # asyncio.run(agent.test_prompt())
+    agent._test_prompt()
