@@ -7,6 +7,7 @@ from termcolor import colored
 from utils.envs import init_os_envs
 
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+ar = asyncio.run
 
 
 class OpenAIAgent:
@@ -73,22 +74,39 @@ class OpenAIAgent:
     def content_to_message(self, role, content):
         return {"role": role, "content": content}
 
-    def construct_request_messages_with_prompt(self, prompt):
-        request_messages = []
-        if self.system_message:
-            request_messages.append(
-                self.content_to_message("system", self.system_message)
-            )
-        request_messages.append(self.content_to_message("user", prompt))
-        return request_messages
-
     def update_history_messages(self, role, content):
         message = self.content_to_message(role, content)
         self.history_messages.append(message)
 
-    def clear_history_messages(self):
+        if role == "system":
+            self.system_message = content
+        self.update_system_message()
+
+    def update_system_message(self, system_message=None):
+        """It assumes that there is at most one system message."""
+        if system_message:
+            self.system_message = system_message
+        if not self.system_message:
+            return
+
+        def get_system_message_idx():
+            for idx, message in enumerate(self.history_messages):
+                if message["role"] == "system":
+                    return idx
+            return None
+
+        system_message_idx = get_system_message_idx()
+        if system_message_idx is None:
+            self.history_messages.insert(
+                0, self.content_to_message("system", self.system_message)
+            )
+        else:
+            self.history_messages[system_message_idx]["content"] = self.system_message
+
+    def clear_history_messages(self, keep_system_message=True):
         self.history_messages = []
-        self.init_history_messages()
+        if keep_system_message:
+            self.init_history_messages()
 
     async def get_available_models(self):
         self.models_api = self.endpoint_url + self.endpoint["models"]
@@ -122,9 +140,6 @@ class OpenAIAgent:
 
     async def async_chat(
         self,
-        # model,
-        # temperature,
-        # messages,
         prompt="",
         stream=True,
         top_p=1,
@@ -202,46 +217,32 @@ class OpenAIAgent:
                                 break
                     self.update_history_messages(role, response_content)
 
-    async def async_test_prompt(self, stream=True):
+    def test_prompt(self):
         self.system_message = (
             f"你是一个专业的中英双语专家。如果给出英文，你需要如实翻译成中文；如果给出中文，你需要如实翻译成英文。"
             f"你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本："
         )
         prompt = "In this paper, we introduce Semantic-SAM, a universal image segmentation model to enable segment and recognize anything at any desired granularity. Our model offers two key advantages: semantic-awareness and granularity-abundance. To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information."  # For the multi-granularity capability, we propose a multi-choice learning scheme during training, enabling each click to generate masks at multiple levels that correspond to multiple ground-truth masks. Notably, this work represents the first attempt to jointly train a model on SA-1B, generic, and part segmentation datasets. Experimental results and visualizations demonstrate that our model successfully achieves semantic-awareness and granularity-abundance. Furthermore, combining SA-1B training with other segmentation tasks, such as panoptic and part segmentation, leads to performance improvements. We will provide code and a demo for further exploration and evaluation."
-        messages = self.construct_request_messages_with_prompt(prompt)
-        print(messages, flush=True)
-
-        if not stream:
-            content = await self.async_chat(messages, stream=stream)
-            print(content)
-        else:
-            # https://docs.aiohttp.org/en/stable/streams.html
-            await self.async_chat(messages, stream=stream)
-
-    def test_prompt(self):
-        asyncio.run(agent.async_test_prompt())
-
-    async def async_test_system_message(self, prompt):
-        messages = self.construct_request_messages_with_prompt(prompt)
-        print(messages, flush=True)
-
-        # https://docs.aiohttp.org/en/stable/streams.html
-        await self.async_chat(messages)
+        asyncio.run(self.async_chat(prompt=prompt))
 
 
 if __name__ == "__main__":
-    system_message = "Explain the following text in Chinese."
-    prompt1 = "To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information."
     agent = OpenAIAgent(
         name="ninomae",
         endpoint_name="ninomae",
-        system_message=system_message,
         model="gpt-3.5-turbo",
         temperature=0.0,
     )
-    # asyncio.run(agent.get_available_models())
-    # asyncio.run(agent.test_prompt())
-    # asyncio.run(agent.async_test_system_message(prompt))
-    asyncio.run(agent.async_chat(prompt1))
-    prompt2 = "For the multi-granularity capability, we propose a multi-choice learning scheme during training, enabling each click to generate masks at multiple levels that correspond to multiple ground-truth masks."
-    asyncio.run(agent.async_chat(prompt2))
+    agent.test_prompt()
+    # system_message = "Explain the following text in Chinese."
+    # prompt1 = "To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information."
+    # agent = OpenAIAgent(
+    #     name="ninomae",
+    #     endpoint_name="ninomae",
+    #     system_message=system_message,
+    #     model="gpt-3.5-turbo",
+    #     temperature=0.0,
+    # )
+    # asyncio.run(agent.async_chat(prompt1))
+    # prompt2 = "For the multi-granularity capability, we propose a multi-choice learning scheme during training, enabling each click to generate masks at multiple levels that correspond to multiple ground-truth masks."
+    # asyncio.run(agent.async_chat(prompt2))
