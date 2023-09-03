@@ -7,7 +7,6 @@ from termcolor import colored
 from utils.envs import init_os_envs
 
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-ar = asyncio.run
 
 
 class OpenAIAgent:
@@ -217,6 +216,9 @@ class OpenAIAgent:
                                 break
                     self.update_history_messages(role, response_content)
 
+    def chat(self, prompt):
+        asyncio.run(self.async_chat(prompt=prompt))
+
     def test_prompt(self):
         self.system_message = (
             f"你是一个专业的中英双语专家。如果给出英文，你需要如实翻译成中文；如果给出中文，你需要如实翻译成英文。"
@@ -233,8 +235,11 @@ if __name__ == "__main__":
         model="gpt-3.5-turbo",
         temperature=0.0,
     )
-    agent.test_prompt()
-    # system_message = "Explain the following text in Chinese."
+    # agent.test_prompt()
+    agent.system_message = "Explain the following text in Chinese."
+    agent.chat(
+        "Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer applications"
+    )
     # prompt1 = "To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information."
     # agent = OpenAIAgent(
     #     name="ninomae",
