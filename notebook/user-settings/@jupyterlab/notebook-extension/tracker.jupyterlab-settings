@@ -28,7 +28,9 @@
             "fontFamily": null,
             "fontSize": 18,
             "lineHeight": null
-        }
+        },
+        "lineNumbers":true,
+        "lineWrap": true,
     },
     "markdownCellConfig": {
         "autoClosingBrackets": true,
