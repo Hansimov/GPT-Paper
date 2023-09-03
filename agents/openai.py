@@ -37,12 +37,12 @@ class OpenAIAgent:
         system_message=None,
         max_input_message_chars=None,
     ):
-
         self.name = name
         self.endpoint_name = endpoint_name
         self.endpoint = self.endpoint_apis[self.endpoint_name]
         self.endpoint_url = self.endpoint["url"]
         self.chat_api = self.endpoint_url + self.endpoint["chat"]
+        self.history_messages = []
 
         env_params = {
             "secrets": True,
@@ -62,6 +62,33 @@ class OpenAIAgent:
         self.max_input_message_chars = max_input_message_chars
 
         self.calc_max_input_message_chars()
+        self.init_history_messages()
+
+    def init_history_messages(self):
+        if self.system_message:
+            self.history_messages.append(
+                self.content_to_message("system", self.system_message)
+            )
+
+    def content_to_message(self, role, content):
+        return {"role": role, "content": content}
+
+    def construct_request_messages_with_prompt(self, prompt):
+        request_messages = []
+        if self.system_message:
+            request_messages.append(
+                self.content_to_message("system", self.system_message)
+            )
+        request_messages.append(self.content_to_message("user", prompt))
+        return request_messages
+
+    def update_history_messages(self, role, content):
+        message = self.content_to_message(role, content)
+        self.history_messages.append(message)
+
+    def clear_history_messages(self):
+        self.history_messages = []
+        self.init_history_messages()
 
     async def get_available_models(self):
         self.models_api = self.endpoint_url + self.endpoint["models"]
@@ -93,24 +120,13 @@ class OpenAIAgent:
                     self.max_input_message_chars = max_chars
                     break
 
-    def content_to_message(self, role, content):
-        return {"role": role, "content": content}
-
-    def construct_request_messages_with_prompt(self, prompt):
-        request_messages = []
-        if self.system_message:
-            request_messages.append(
-                self.content_to_message("system", self.system_message)
-            )
-        request_messages.append(self.content_to_message("user", prompt))
-        return request_messages
-
-    async def chat(
+    async def async_chat(
         self,
         # model,
         # temperature,
-        messages,
-        stream=False,
+        # messages,
+        prompt="",
+        stream=True,
         top_p=1,
         n=1,
         stop=None,
@@ -124,11 +140,11 @@ class OpenAIAgent:
     ):
         """
         ## Request:
+        
         ```sh
-        curl -X 'POST' \
-            'https://api.openai.com/v1/chat/completions' \
+        curl -X 'POST' 'https://api.openai.com/v1/chat/completions' \
             -H 'accept: application/json' \
-            -H 'Authorization: Bearer <API_KEY>' \
+            -H 'Authorization: Bearer <OPENAI_API_KEY>' \
             -H 'Content-Type: application/json' \
             -d '{
                 "model": "gpt-3.5-turbo",
@@ -136,39 +152,19 @@ class OpenAIAgent:
                 "temperature": 0
             }'
         ```
-        
-        ## Response
-        ```json
-        {
-            "id": "chatcmpl-W0zJUER1GNIcrN3mLRp00fy6Tb8GO",
-            "object": "chat.completion",
-            "created": 1689055727,
-            "model": "gpt-3.5-turbo",
-            "choices": [
-                {
-                    "index": 0,
-                    "message": {
-                        "role": "assistant",
-                        "content": "This is a test!"
-                    },
-                    "finish_reason": "stop"
-                }
-            ],
-            "usage": {
-                "completion_tokens": 5,
-                "prompt_tokens": 14,
-                "total_tokens": 19
-            }
-        }
-        ```
+
         """
+
+        self.update_history_messages("user", prompt)
+        print(self.history_messages, flush=True)
 
         self.requests_payload = {
             "model": self.model,
-            "messages": messages,
+            "messages": self.history_messages,
             "temperature": self.temperature,
             "stream": stream,
         }
+
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 self.chat_api,
@@ -178,13 +174,13 @@ class OpenAIAgent:
             ) as response:
                 if not stream:
                     response_data = await response.json()
-                    print(
-                        f'{[self.name]}: {response_data["choices"][0]["message"]["content"]}'
-                    )
-                    return response_data
+                    response_content = response_data["choices"][0]["message"]["content"]
+                    self.update_history_messages("assistant", response_content)
+                    return response_content
                 else:
                     # https://docs.aiohttp.org/en/stable/streams.html
                     # https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb
+                    response_content = ""
                     async for line in response.content:
                         # print(line)
                         line_str = line.decode("utf-8")
@@ -199,14 +195,16 @@ class OpenAIAgent:
                                 print(f"{role}: ", end="", flush=True)
                             if "content" in delta_data:
                                 delta_content = delta_data["content"]
+                                response_content += delta_content
                                 print(delta_content, end="", flush=True)
                             if finish_reason == "stop":
                                 print()
                                 break
+                    self.update_history_messages(role, response_content)
 
-    async def test_prompt(self, stream=True):
+    async def async_test_prompt(self, stream=True):
         self.system_message = (
-            f"你是一个专业的中英双语专家。如果给出中文，你需要如实翻译成英文；如果给出中文，你需要如实翻译成英文。"
+            f"你是一个专业的中英双语专家。如果给出英文，你需要如实翻译成中文；如果给出中文，你需要如实翻译成英文。"
             f"你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本："
         )
         prompt = "In this paper, we introduce Semantic-SAM, a universal image segmentation model to enable segment and recognize anything at any desired granularity. Our model offers two key advantages: semantic-awareness and granularity-abundance. To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information."  # For the multi-granularity capability, we propose a multi-choice learning scheme during training, enabling each click to generate masks at multiple levels that correspond to multiple ground-truth masks. Notably, this work represents the first attempt to jointly train a model on SA-1B, generic, and part segmentation datasets. Experimental results and visualizations demonstrate that our model successfully achieves semantic-awareness and granularity-abundance. Furthermore, combining SA-1B training with other segmentation tasks, such as panoptic and part segmentation, leads to performance improvements. We will provide code and a demo for further exploration and evaluation."
@@ -214,19 +212,36 @@ class OpenAIAgent:
         print(messages, flush=True)
 
         if not stream:
-            response = await self.chat(messages, stream=stream)
-            content = response["choices"][0]["message"]["content"]
+            content = await self.async_chat(messages, stream=stream)
             print(content)
         else:
             # https://docs.aiohttp.org/en/stable/streams.html
-            await self.chat(messages, stream=stream)
+            await self.async_chat(messages, stream=stream)
 
-    def _test_prompt(self):
-        asyncio.run(agent.test_prompt())
+    def test_prompt(self):
+        asyncio.run(agent.async_test_prompt())
+
+    async def async_test_system_message(self, prompt):
+        messages = self.construct_request_messages_with_prompt(prompt)
+        print(messages, flush=True)
+
+        # https://docs.aiohttp.org/en/stable/streams.html
+        await self.async_chat(messages)
 
 
 if __name__ == "__main__":
-    agent = OpenAIAgent(name="ninomae", endpoint_name="ninomae")
+    system_message = "Explain the following text in Chinese."
+    prompt1 = "To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information."
+    agent = OpenAIAgent(
+        name="ninomae",
+        endpoint_name="ninomae",
+        system_message=system_message,
+        model="gpt-3.5-turbo",
+        temperature=0.0,
+    )
     # asyncio.run(agent.get_available_models())
     # asyncio.run(agent.test_prompt())
-    agent._test_prompt()
+    # asyncio.run(agent.async_test_system_message(prompt))
+    asyncio.run(agent.async_chat(prompt1))
+    prompt2 = "For the multi-granularity capability, we propose a multi-choice learning scheme during training, enabling each click to generate masks at multiple levels that correspond to multiple ground-truth masks."
+    asyncio.run(agent.async_chat(prompt2))
