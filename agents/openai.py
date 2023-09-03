@@ -2,6 +2,7 @@ import aiohttp
 import asyncio
 import json
 import os
+import pprint
 import re
 from termcolor import colored
 from utils.envs import init_os_envs
@@ -102,6 +103,12 @@ class OpenAIAgent:
         else:
             self.history_messages[system_message_idx]["content"] = self.system_message
 
+    def get_messages_without_memory(self):
+        messages = [
+            message for message in self.history_messages if message["role"] == "system"
+        ]
+        return messages
+
     def clear_history_messages(self, keep_system_message=True):
         self.history_messages = []
         if keep_system_message:
@@ -141,6 +148,8 @@ class OpenAIAgent:
         self,
         prompt="",
         stream=True,
+        record=True,
+        memory=True,
         top_p=1,
         n=1,
         stop=None,
@@ -169,9 +178,16 @@ class OpenAIAgent:
 
         """
 
-        self.update_history_messages("user", prompt)
-        print(self.history_messages, flush=True)
+        if record:
+            self.update_history_messages("user", prompt)
 
+        if memory:
+            request_messages = self.history_messages
+        else:
+            request_messages = self.get_messages_without_memory()
+            request_messages.append(self.content_to_message("user", prompt))
+
+        pprint.pprint(request_messages)
         self.requests_payload = {
             "model": self.model,
             "messages": self.history_messages,
@@ -189,7 +205,9 @@ class OpenAIAgent:
                 if not stream:
                     response_data = await response.json()
                     response_content = response_data["choices"][0]["message"]["content"]
-                    self.update_history_messages("assistant", response_content)
+                    if record:
+                        self.update_history_messages("assistant", response_content)
+                    print("[Completed]")
                     return response_content
                 else:
                     # https://docs.aiohttp.org/en/stable/streams.html
@@ -206,7 +224,10 @@ class OpenAIAgent:
                             finish_reason = line_data["choices"][0]["finish_reason"]
                             if "role" in delta_data:
                                 role = delta_data["role"]
-                                print(f"{role}: ", end="", flush=True)
+                                # print(f"{role}: ", end="", flush=True)
+                                print(
+                                    f"[{self.name.capitalize()}]: ", end="", flush=True
+                                )
                             if "content" in delta_data:
                                 delta_content = delta_data["content"]
                                 response_content += delta_content
@@ -214,10 +235,12 @@ class OpenAIAgent:
                             if finish_reason == "stop":
                                 print()
                                 break
-                    self.update_history_messages(role, response_content)
+                    if record:
+                        self.update_history_messages(role, response_content)
+                    print("[Completed]")
 
-    def chat(self, prompt):
-        asyncio.run(self.async_chat(prompt=prompt))
+    def chat(self, prompt, record=True, memory=True):
+        asyncio.run(self.async_chat(prompt=prompt, record=record, memory=memory))
 
     def test_prompt(self):
         self.system_message = (

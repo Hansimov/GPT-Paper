@@ -50,12 +50,7 @@ pip install sentence-transformers
 **JupyterLab:**
 
 ```sh
-pip install jupyterlab
-pip install notebook
-pip install jupyterlab-widgets
-pip install ipywidgets
-pip install jupyter-black
-pip install ipynbname
+pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipynbname
 ```
 
 **aiohttp:**
