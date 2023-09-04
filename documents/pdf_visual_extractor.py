@@ -33,23 +33,15 @@ init_os_envs(cuda_device=0, huggingface=True)
 
 
 class PDFVisualExtractor:
-    pdf_root = Path(__file__).parents[1] / "pdfs"
-    image_root = pdf_root / "images"
-
-    def __init__(self):
-        # pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
-        # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
-        # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
-        # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
-        # pdf_filename = "Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images.pdf"
-        pdf_filename = "2308.09687 - Graph of Thoughts.pdf"
-        self.pdf_filename = pdf_filename
-        self.pdf_fullpath = self.pdf_root / self.pdf_filename
-        self.pdf_doc = fitz.open(self.pdf_fullpath)
+    def __init__(self, pdf_path):
+        self.pdf_path = Path(pdf_path)
+        self.pdf_parent = self.pdf_path.parent
+        self.pdf_filename = self.pdf_path.name
+        self.pdf_doc = fitz.open(self.pdf_path)
         self.init_paths()
 
     def init_paths(self):
-        self.assets_path = self.pdf_root / Path(self.pdf_filename).stem
+        self.assets_path = self.pdf_parent / Path(self.pdf_filename).stem
 
         self.page_images_path = self.assets_path / "pages"
         self.annotated_page_images_path = self.assets_path / "pages_annotated"
@@ -345,7 +337,7 @@ class PDFVisualExtractor:
         page_texts_info_json_paths = self.get_page_info_json_paths("texts")
         doc_text_infos = {
             "pdf_filename": self.pdf_filename,
-            "pdf_fullpath": str(self.pdf_fullpath),
+            "pdf_fullpath": str(self.pdf_path),
             "pages_num": len(page_texts_info_json_paths),
             "pages": [],
         }
@@ -568,5 +560,13 @@ class PDFVisualExtractor:
 
 if __name__ == "__main__":
     with Runtimer():
-        pdf_visual_extractor = PDFVisualExtractor()
+        pdf_parent = Path(__file__).parents[1] / "pdfs" / "cancer_review"
+        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
+        # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
+        # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
+        # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
+        # pdf_filename = "Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images.pdf"
+        # pdf_filename = "2308.09687 - Graph of Thoughts.pdf"
+        pdf_path = pdf_parent / pdf_filename
+        pdf_visual_extractor = PDFVisualExtractor(pdf_path)
         pdf_visual_extractor.run()
