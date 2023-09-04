@@ -143,7 +143,7 @@ def get_embedding_with_api(
     return embedding
 
 
-class Embedder:
+class BiEncoderX:
     def __init__(self, model_name=None):
         if model_name:
             self.model_name = model_name
@@ -156,12 +156,15 @@ class Embedder:
             # self.model_name = "BAAI/bge-large-en"
             # self.model_name = "multi-qa-MiniLM-L6-cos-v1"
             self.model_name = "msmarco-bert-base-dot-v5"
-        self.load_model()
+        self.is_load_model = False
 
-    def load_model(self):
+    def load_model(self, quiet=True):
+        logger.enter_quiet(quiet)
         init_os_envs(cuda_device=0, huggingface=True)
         logger.note(f"> Using embedding model: [{self.model_name}]")
         self.model = SentenceTransformer(self.model_name)
+        self.is_load_model = True
+        logger.exit_quiet(quiet)
 
     def calc_embedding(self, text, normalize_embeddings=True):
         text = remove_newline_seps_from_text(text)
@@ -204,11 +207,14 @@ class CrossEncoderX:
         else:
             # self.model_name = "cross-encoder/ms-marco-MiniLM-L-6-v2"
             self.model_name = "cross-encoder/ms-marco-MiniLM-L-12-v2"
-        self.load_model()
+        self.is_load_model = False
 
-    def load_model(self):
+    def load_model(self, quiet=True):
+        logger.enter_quiet(quiet)
         logger.note(f"> Using CrossEncoder model: [{self.model_name}]")
         self.model = CrossEncoder(self.model_name)
+        self.is_load_model = True
+        logger.exit_quiet(quiet)
 
 
 if __name__ == "__main__":

@@ -3,6 +3,8 @@ from utils.logger import logger, Runtimer
 from utils.calculator import get_int_digits
 from documents.pdf_visual_extractor import PDFVisualExtractor
 from utils.layout_analyzer import DITLayoutAnalyzer
+from utils.tokenizer import BiEncoderX, CrossEncoderX
+
 from tqdm import tqdm
 
 
@@ -22,8 +24,10 @@ class MultiPDFExtractor:
 
     def extract_pdfs(self):
         layout_analyzer = DITLayoutAnalyzer(size="large")
-        logger.store_level()
-        for pdf_idx, pdf_path in enumerate(tqdm(self.pdf_paths[2:8], colour="green")):
+        bi_encoder = BiEncoderX()
+
+        for pdf_idx, pdf_path in enumerate(tqdm(self.pdf_paths[:3], colour="green")):
+            logger.store_level()
             logger.note(
                 f"[{pdf_idx+1:>{self.pdfs_count_digits}}/{self.pdfs_count}] {pdf_path.name}"
             )
@@ -41,10 +45,15 @@ class MultiPDFExtractor:
             logger.note("> Extract texts, and combine to doc")
             extractor.extract_texts_from_pages()
             extractor.combine_page_texts_to_doc()
+            logger.note("> Text to embeddings")
+            extractor.doc_texts_to_embeddings(bi_encoder=bi_encoder)
             logger.restore_indent()
-            # extractor.doc_texts_to_embeddings()
             # extractor.query_region_texts()
-        logger.restore_level()
+            logger.restore_level()
+
+
+class MultiPDFRetriever:
+    pass
 
 
 if __name__ == "__main__":

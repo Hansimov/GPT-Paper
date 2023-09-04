@@ -23,7 +23,7 @@ from utils.logger import logger, add_fillers, Runtimer
 from utils.tokenizer import (
     WordTokenizer,
     SentenceTokenizer,
-    Embedder,
+    BiEncoderX,
     CrossEncoderX,
     remove_newline_seps_from_text,
     df_column_to_torch_tensor,
@@ -77,7 +77,6 @@ class PDFVisualExtractor:
                 pix = page.get_pixmap(dpi=dpi)
                 pix.save(image_path)
         logger.restore_indent()
-
         logger.exit_quiet(quiet)
 
     def annotate_page_images(
@@ -85,9 +84,10 @@ class PDFVisualExtractor:
     ):
         rmtree_and_mkdir(self.annotated_page_images_path, overwrite=overwrite)
         logger.enter_quiet(quiet)
+        logger.store_indent()
         logger.note(f"> Annotating page images")
         # logger.file(f"  * {self.annotated_page_images_path}")
-        logger.set_indent(2)
+        logger.indent(2)
 
         page_image_paths = sorted(
             [
@@ -116,10 +116,11 @@ class PDFVisualExtractor:
             if not layout_analyzer.is_setup_model:
                 layout_analyzer.setup_model()
 
-            logger.set_indent(2)
-            logger.file(f"- {page_image_path.name}")
-            logger.set_indent(4)
-            pred_output, annotate_info_json_path = layout_analyzer.annotate_image(
+            logger.file(f"- {page_image_path.name}",indent=2)
+            logger.store_indent()
+            logger.indent(2)
+            pred_output = layout_analyzer.annotate_image(
+                annotate_info_json_path=annotate_info_json_path,
                 input_image_path=page_image_path,
                 output_image_path=output_image_path,
                 quiet=quiet,
@@ -129,7 +130,8 @@ class PDFVisualExtractor:
                     annotate_info_json_path,
                     output_parent_path=self.annotated_page_images_path,
                 )
-        logger.reset_indent()
+            logger.restore_indent()
+        logger.restore_indent()
         logger.exit_quiet(quiet)
 
     def crop_page_image(
@@ -452,8 +454,17 @@ class PDFVisualExtractor:
             json.dump(doc_text_infos, wf, indent=4, ensure_ascii=False)
         logger.exit_quiet(quiet)
 
-    def doc_texts_to_embeddings(self):
-        embedder = Embedder()
+    def doc_texts_to_embeddings(self, bi_encoder=None, overwrite=False, quiet=True):
+        logger.enter_quiet(quiet)
+        if not overwrite and self.doc_embeddings_path.exists():
+            logger.exit_quiet(quiet)
+            return
+
+        if not bi_encoder:
+            bi_encoder = BiEncoderX()
+        if not bi_encoder.is_load_model:
+            bi_encoder.load_model()
+
         with open(self.doc_texts_path, "r", encoding="utf-8") as rf:
             doc_texts_infos = json.load(rf)
 
@@ -469,9 +480,10 @@ class PDFVisualExtractor:
                     if region_thing in ["title"]:
                         region_text_chunk += " - "
                         previous_title = region_text
+                        # FIXME: if last region is title, this would be droppred
                         continue
 
-                    chunk_embedding = embedder.calc_embedding(region_text_chunk)
+                    chunk_embedding = bi_encoder.calc_embedding(region_text_chunk)
                     region_embeddings_dict = {
                         "page_idx": page_idx + 1,
                         "region_idx": region_idx + 1,
@@ -493,7 +505,7 @@ class PDFVisualExtractor:
 
                     continue
                     for sentence_idx, sentence in enumerate(chunk_sentences):
-                        sentence_embedding = embedder.calc_embedding(
+                        sentence_embedding = bi_encoder.calc_embedding(
                             sentence, normalize_embeddings=True
                         )
                         sentence_embeddings_dict = {
@@ -511,6 +523,7 @@ class PDFVisualExtractor:
         logger.success("> Dump embeddings to pickle")
         logger.file(f"- {self.doc_embeddings_path}")
         embeddings_df.to_pickle(self.doc_embeddings_path)
+        logger.exit_quiet(quiet)
 
     def query_region_texts(self, query):
         # query_prefix = "Represent this sentence for searching relevant passages:"
@@ -531,8 +544,8 @@ class PDFVisualExtractor:
         df_region_idxs = df["region_idx"].values.tolist()
         levels = df["level"].values.tolist()
 
-        embedder = Embedder()
-        query_embedding_tensor = embedder.model.encode(query, convert_to_tensor=True)
+        bi_encoder = BiEncoderX()
+        query_embedding_tensor = bi_encoder.model.encode(query, convert_to_tensor=True)
 
         top_k = min(100, len(df_doc_texts))
         top_results = semantic_search(
