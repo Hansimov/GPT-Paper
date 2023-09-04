@@ -62,12 +62,15 @@ class DITLayoutAnalyzer:
     def __init__(self, size="base"):
         self.model_size = size
 
-    def setup_model(self):
+    def setup_model(self, quiet=False):
+        logger.note("> Setting up model of DITLayoutAnalyzer ...")
+        logger.enter_quiet(quiet)
         self.load_configs()
         self.load_weights()
         self.set_device()
         self.create_predictor()
         self.set_metadata()
+        logger.exit_quiet(quiet)
 
     def test_run(self):
         self.setup_model()
@@ -143,7 +146,11 @@ class DITLayoutAnalyzer:
         self.thing_classes = ["text", "title", "list", "table", "figure"]
         self.metadata.set(thing_classes=self.thing_classes)
 
-    def annotate_image(self, input_image_path=None, output_image_path=None):
+    def annotate_image(
+        self, input_image_path=None, output_image_path=None, quiet=False
+    ):
+        logger.enter_quiet(quiet)
+
         if input_image_path is None:
             raise ValueError("`input_image_path` is None!")
 
@@ -166,6 +173,8 @@ class DITLayoutAnalyzer:
         annotate_info_json_path = self.dump_annotate_info(
             input_image_path, output_image_path, pred_output
         )
+
+        logger.exit_quiet(quiet)
 
         return pred_output, annotate_info_json_path
 
@@ -223,7 +232,10 @@ def draw_regions_on_page(
     spacing=2,
     show_region_idx=True,
     score_use_percent=True,
+    quiet=False,
 ):
+    logger.enter_quiet(quiet)
+
     region_colors = {
         "text": (0, 128, 0),
         "title": (128, 0, 0),
@@ -286,6 +298,7 @@ def draw_regions_on_page(
 
         image_draw.rectangle(text_bbox, fill=(*region_rect_color, 80))
     page_image.save(drawn_page_image_path)
+    logger.exit_quiet(quiet)
 
 
 def calc_regions_overlaps(regions):

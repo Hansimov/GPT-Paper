@@ -57,6 +57,9 @@ class Logger:
         "set_level",
         "store_level",
         "restore_level",
+        "quiet",
+        "enter_quiet",
+        "exit_quiet",
     ]
     LEVEL_NAMES = {
         "error": logging.ERROR,
@@ -120,6 +123,18 @@ class Logger:
     def restore_level(self):
         self.log_level = self.log_levels.pop(-1)
         self.set_level(self.log_level)
+
+    def quiet(self):
+        self.set_level("error")
+
+    def enter_quiet(self, quiet=False):
+        if quiet:
+            self.store_level()
+            self.quiet()
+
+    def exit_quiet(self, quiet=False):
+        if quiet:
+            self.restore_level()
 
     def log(self, method, msg, indent=0, fill=False, fill_side="both", *args, **kwargs):
         if type(msg) == str:

@@ -6,8 +6,9 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from PIL import Image
 from sentence_transformers.util import semantic_search
-
 from termcolor import colored
+from tqdm import tqdm
+
 from utils.calculator import get_int_digits
 from utils.envs import init_os_envs
 from utils.file import rmtree_and_mkdir
@@ -55,31 +56,41 @@ class PDFVisualExtractor:
         self.doc_embeddings_path = self.page_texts_path / "embeddings.pkl"
         self.queries_results_path = self.assets_path / "queries"
 
-    def dump_pdf_to_page_images(self, dpi=300):
-        rmtree_and_mkdir(self.page_images_path)
+    def dump_pdf_to_page_images(self, dpi=300, overwrite=False, quiet=False):
+        logger.enter_quiet(quiet)
+
+        rmtree_and_mkdir(self.page_images_path, overwrite=overwrite)
         # transform_matrix = fitz.Matrix(dpi / 72, dpi / 72)
         logger.note(f"> Dumping PDF to image pages [dpi={dpi}]")
-        logger.file(f"  - {self.page_images_path}")
+        logger.file(f"- {self.page_images_path}")
         pdf_idx_digits = get_int_digits(len(self.pdf_doc))
-        for page_idx, page in enumerate(self.pdf_doc):
-            logger.mesg(f"    - Page {page_idx+1:>{pdf_idx_digits}}")
+        logger.store_indent()
+        logger.indent(2)
+        for page_idx, page in enumerate(tqdm(self.pdf_doc)):
+            logger.back(f"- Page {page_idx+1:>{pdf_idx_digits}}")
             image_path = (
                 self.page_images_path / f"page_{page_idx+1:0>{pdf_idx_digits}}.png"
             )
-            pix = page.get_pixmap(dpi=dpi)
-            pix.save(image_path)
-            # pix = page.get_pixmap(matrix=transform_matrix)
-            # pix.pil_save(image_path, dpi=(dpi, dpi))
+            if not overwrite and image_path.exists():
+                logger.back("- Page Image existed. Skip dumping.", indent=2)
+                continue
+            else:
+                pix = page.get_pixmap(dpi=dpi)
+                pix.save(image_path)
+        logger.restore_indent()
 
-    def annotate_page_images(self):
-        rmtree_and_mkdir(self.annotated_page_images_path)
+        logger.exit_quiet(quiet)
+
+    def annotate_page_images(self, layout_analyzer=None, overwrite=False, quiet=False):
+        rmtree_and_mkdir(self.annotated_page_images_path, overwrite=overwrite)
         logger.note(f"> Annotating page images")
+        logger.enter_quiet(quiet)
         # logger.file(f"  * {self.annotated_page_images_path}")
-
         logger.set_indent(2)
 
-        layout_analyzer = DITLayoutAnalyzer(size="large")
-        layout_analyzer.setup_model()
+        if not layout_analyzer:
+            layout_analyzer = DITLayoutAnalyzer(size="large")
+            layout_analyzer.setup_model()
 
         page_image_paths = sorted(
             [
@@ -91,20 +102,27 @@ class PDFVisualExtractor:
             key=lambda x: int(x.stem.split("_")[-1]),
         )
 
-        for page_image_path in page_image_paths:
+        for page_image_path in tqdm(page_image_paths):
             output_image_path = self.annotated_page_images_path / page_image_path.name
+            if not overwrite and output_image_path.exists():
+                logger.back(
+                    f"- Annotated Page Image existed. Skip annotating.", indent=2
+                )
+                continue
             logger.set_indent(2)
             logger.file(f"- {page_image_path.name}")
             logger.set_indent(4)
             pred_output, annotate_info_json_path = layout_analyzer.annotate_image(
                 input_image_path=page_image_path,
                 output_image_path=output_image_path,
+                quiet=quiet,
             )
             draw_regions_on_page(
                 annotate_info_json_path,
                 output_parent_path=self.annotated_page_images_path,
             )
         logger.reset_indent()
+        logger.exit_quiet(quiet)
 
     def crop_page_image(
         self,
@@ -369,6 +387,7 @@ class PDFVisualExtractor:
         page_region_embeddings_list = []
         for page_idx, page_infos in enumerate(doc_texts_infos["pages"]):
             region_text_chunk = ""
+            previous_title = ""
             for region_idx, region_infos in enumerate(page_infos["regions"]):
                 if region_infos["thing"] in ["text", "title", "list"]:
                     region_text = region_infos["text"]
@@ -376,12 +395,14 @@ class PDFVisualExtractor:
                     region_text_chunk = region_text
                     if region_thing in ["title"]:
                         region_text_chunk += " - "
+                        previous_title = region_text
                         continue
 
                     chunk_embedding = embedder.calc_embedding(region_text_chunk)
                     region_embeddings_dict = {
                         "page_idx": page_idx + 1,
                         "region_idx": region_idx + 1,
+                        "previous_title": previous_title,
                         "thing": region_thing,
                         "sentence_idx": -1,
                         "text": remove_newline_seps_from_text(region_text_chunk),
@@ -389,13 +410,14 @@ class PDFVisualExtractor:
                         "embedding": chunk_embedding,
                     }
 
+                    page_region_embeddings_list.append(region_embeddings_dict)
+
                     sentence_tokenizer = SentenceTokenizer()
                     chunk_sentences = sentence_tokenizer.text_to_sentences(
                         region_text_chunk
                     )
                     region_text_chunk = ""
 
-                    page_region_embeddings_list.append(region_embeddings_dict)
                     continue
                     for sentence_idx, sentence in enumerate(chunk_sentences):
                         sentence_embedding = embedder.calc_embedding(
@@ -417,11 +439,11 @@ class PDFVisualExtractor:
         logger.file(f"- {self.doc_embeddings_path}")
         embeddings_df.to_pickle(self.doc_embeddings_path)
 
-    def query_region_texts(self):
+    def query_region_texts(self, query):
         # query_prefix = "Represent this sentence for searching relevant passages:"
         # query_body = f"what is the title of this paper?"
         # query = f"{query_prefix}{query_body}"
-        query = f"Tree of Thoughts vs Graph of Thoughts"
+        # query = f"Tree of Thoughts vs Graph of Thoughts"
         # query = f"figure captions of paper"
         # query = "References with names, publishments and years"
         # query = "Explain Graph of Thoughts"
@@ -547,15 +569,15 @@ class PDFVisualExtractor:
             logger.restore_indent()
 
     def run(self):
-        self.dump_pdf_to_page_images()
-        self.annotate_page_images()
-        self.remove_overlapped_layout_regions_from_pages()
-        self.order_pages_regions()
-        self.crop_page_images("ordered")
-        self.extract_texts_from_pages()
-        self.combine_page_texts_to_doc()
+        # self.dump_pdf_to_page_images()
+        # self.annotate_page_images()
+        # self.remove_overlapped_layout_regions_from_pages()
+        # self.order_pages_regions()
+        # self.crop_page_images("ordered")
+        # self.extract_texts_from_pages()
+        # self.combine_page_texts_to_doc()
         self.doc_texts_to_embeddings()
-        self.query_region_texts()
+        # self.query_region_texts()
 
 
 if __name__ == "__main__":
