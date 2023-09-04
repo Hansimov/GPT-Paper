@@ -20,7 +20,7 @@ class JupyterLabLauncher:
 
     def run(self):
         # shell_cmd(f"jupyter lab {self.ipynb_path}")
-        shell_cmd(f"jupyter lab {self.ipynb_path}")
+        shell_cmd(f"jupyter lab --ip=0.0.0.0 --port=28888 {self.ipynb_path}")
 
 
 if __name__ == "__main__":
