@@ -100,6 +100,8 @@ class PDFVisualExtractor:
 
         if not layout_analyzer:
             layout_analyzer = DITLayoutAnalyzer(size="large")
+        # if not layout_analyzer.is_setup_model:
+        #     layout_analyzer.setup_model()
 
         for page_image_path in tqdm(page_image_paths):
             output_image_path = self.annotated_page_images_path / page_image_path.name
@@ -306,7 +308,7 @@ class PDFVisualExtractor:
                 no_overlap_regions_info_json_path, self.no_overlap_page_images_path
             )
         logger.restore_indent()
-        logger.exit_quiet()
+        logger.exit_quiet(quiet)
 
     def remove_overlapped_layout_regions_from_pages(self, overwrite=False, quiet=True):
         logger.enter_quiet(quiet)
@@ -412,7 +414,7 @@ class PDFVisualExtractor:
         self.text_extractor = TextExtractor()
         page_info_json_paths = self.get_page_info_json_paths("ordered")
         logger.note(f"> Extracting texts from {len(page_info_json_paths)} pages")
-        for page_idx, page_info_json_path in enumerate(page_info_json_paths):
+        for page_idx, page_info_json_path in enumerate(tqdm(page_info_json_paths)):
             logger.store_indent()
             logger.note(f"- Extract Page {page_idx+1}")
             self.extract_text_from_page(page_info_json_path, overwrite=overwrite)

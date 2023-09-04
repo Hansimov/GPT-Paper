@@ -23,10 +23,13 @@ class MultiPDFExtractor:
             logger.file(f"{idx+1:>{self.pdfs_count_digits}}. {pdf_path.name}", indent=2)
 
     def extract_pdfs(self):
-        layout_analyzer = DITLayoutAnalyzer(size="large")
-        bi_encoder = BiEncoderX()
+        # layout_analyzer = DITLayoutAnalyzer(size="large")
+        # layout_analyzer.setup_model(quiet=False)
 
-        for pdf_idx, pdf_path in enumerate(tqdm(self.pdf_paths[:3], colour="green")):
+        # bi_encoder = BiEncoderX()
+        # bi_encoder.load_model()
+
+        for pdf_idx, pdf_path in enumerate(tqdm(self.pdf_paths[:], colour="green")):
             logger.store_level()
             logger.note(
                 f"[{pdf_idx+1:>{self.pdfs_count_digits}}/{self.pdfs_count}] {pdf_path.name}"
@@ -37,7 +40,7 @@ class MultiPDFExtractor:
             logger.mesg("> Dump page images")
             extractor.dump_pdf_to_page_images()
             logger.mesg("> Annotate page images")
-            extractor.annotate_page_images(layout_analyzer=layout_analyzer)
+            extractor.annotate_page_images(layout_analyzer=None)
             logger.mesg("> Remove overlaps, order regions, and crop")
             extractor.remove_overlapped_layout_regions_from_pages()
             extractor.order_pages_regions()
@@ -46,7 +49,7 @@ class MultiPDFExtractor:
             extractor.extract_texts_from_pages()
             extractor.combine_page_texts_to_doc()
             logger.mesg("> Text to embeddings")
-            extractor.doc_texts_to_embeddings(bi_encoder=bi_encoder, overwrite=True)
+            extractor.doc_texts_to_embeddings(bi_encoder=None)
             logger.restore_indent()
             # extractor.query_region_texts()
             logger.restore_level()
