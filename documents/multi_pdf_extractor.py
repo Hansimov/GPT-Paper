@@ -6,6 +6,7 @@ from utils.logger import logger, Runtimer
 from utils.calculator import get_int_digits
 from utils.layout_analyzer import DITLayoutAnalyzer
 from utils.tokenizer import BiEncoderX, CrossEncoderX
+from utils.query_embeddings import query_embeddings_df
 import pandas as pd
 import pickle
 
@@ -74,8 +75,14 @@ class MultiPDFExtractor:
         logger.file(f"- {self.docs_embeddings_path}", indent=2)
         self.docs_embeddings_df.to_pickle(self.docs_embeddings_path)
 
-    def query(self):
-        pass
+    def query_docs(self, query):
+        self.docs_embeddings_df = pd.read_pickle(self.docs_embeddings_path)
+        query_embeddings_df(
+            query=query,
+            df=self.docs_embeddings_df,
+            rerank_n=20,
+            exclude_things=["list"],
+        )
 
 
 if __name__ == "__main__":
@@ -83,4 +90,7 @@ if __name__ == "__main__":
         multi_pdf_extractor = MultiPDFExtractor("cancer_review")
         # multi_pdf_retriever.list_pdfs()
         # multi_pdf_retriever.extract_pdfs()
-        multi_pdf_extractor.combine_docs_embeddings()
+        # multi_pdf_extractor.combine_docs_embeddings()
+        # query="Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer"
+        query = "Current advances of AI-based approaches for clinical management of liver cancer"
+        multi_pdf_extractor.query_docs(query=query)
