@@ -39,7 +39,7 @@ class OpenAIAgent:
         temperature=0,
         system_message=None,
         max_input_message_chars=None,
-        memory=True,
+        memory=False,
         record=True,
     ):
         self.name = name
@@ -158,7 +158,7 @@ class OpenAIAgent:
         prompt="",
         stream=True,
         record=True,
-        memory=True,
+        memory=False,
         show_prompt=False,
         top_p=1,
         n=1,
@@ -253,8 +253,8 @@ class OpenAIAgent:
                     return response_content
 
     def chat(self, prompt, record=None, memory=None, show_prompt=False):
-        memory = memory if memory else self.memory
-        record = record if record else self.record
+        memory = memory if memory is not None else self.memory
+        record = record if record is not None else self.record
 
         response_content = asyncio.run(
             self.async_chat(
