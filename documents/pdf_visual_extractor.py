@@ -58,7 +58,6 @@ class PDFVisualExtractor:
 
     def dump_pdf_to_page_images(self, dpi=300, overwrite=False, quiet=True):
         logger.enter_quiet(quiet)
-
         rmtree_and_mkdir(self.page_images_path, overwrite=overwrite)
         # transform_matrix = fitz.Matrix(dpi / 72, dpi / 72)
         logger.note(f"> Dumping PDF to image pages [dpi={dpi}]")
@@ -116,7 +115,7 @@ class PDFVisualExtractor:
             if not layout_analyzer.is_setup_model:
                 layout_analyzer.setup_model()
 
-            logger.file(f"- {page_image_path.name}",indent=2)
+            logger.file(f"- {page_image_path.name}", indent=2)
             logger.store_indent()
             logger.indent(2)
             pred_output = layout_analyzer.annotate_image(
@@ -462,6 +461,7 @@ class PDFVisualExtractor:
 
         if not bi_encoder:
             bi_encoder = BiEncoderX()
+
         if not bi_encoder.is_load_model:
             bi_encoder.load_model()
 
@@ -469,7 +469,7 @@ class PDFVisualExtractor:
             doc_texts_infos = json.load(rf)
 
         page_region_embeddings_list = []
-        for page_idx, page_infos in enumerate(doc_texts_infos["pages"]):
+        for page_idx, page_infos in enumerate(tqdm(doc_texts_infos["pages"])):
             region_text_chunk = ""
             previous_title = ""
             for region_idx, region_infos in enumerate(page_infos["regions"]):
@@ -485,13 +485,15 @@ class PDFVisualExtractor:
 
                     chunk_embedding = bi_encoder.calc_embedding(region_text_chunk)
                     region_embeddings_dict = {
+                        "pdf_name": self.pdf_path.stem,
+                        "pdf_path": self.pdf_path,
                         "page_idx": page_idx + 1,
                         "region_idx": region_idx + 1,
+                        "sentence_idx": -1,
+                        "level": "region",
                         "previous_title": previous_title,
                         "thing": region_thing,
-                        "sentence_idx": -1,
                         "text": remove_newline_seps_from_text(region_text_chunk),
-                        "level": "region",
                         "embedding": chunk_embedding,
                     }
 

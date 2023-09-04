@@ -35,15 +35,15 @@ def add_fillers(text, filler="=", fill_side="both"):
 
 class Logger:
     LOG_METHODS = {
-        "back": ("debug", "light_cyan"),
+        "err": ("error", "red"),
+        "warn": ("warning", "light_red"),
         "note": ("info", "light_magenta"),
         "mesg": ("info", "light_cyan"),
         "file": ("info", "light_blue"),
         "line": ("info", "white"),
         "success": ("info", "light_green"),
         "fail": ("info", "light_red"),
-        "warn": ("warning", "light_red"),
-        "err": ("error", "red"),
+        "back": ("debug", "light_cyan"),
     }
     INDENT_METHODS = [
         "indent",
