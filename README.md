@@ -56,8 +56,7 @@ pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipyn
 **aiohttp:**
 
 ```sh
-pip install aiohttp[speedups]
-pip install nest_asyncio
+pip install aiohttp[speedups] nest_asyncio
 ```
 
 

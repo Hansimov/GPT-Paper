@@ -18,7 +18,8 @@ repo_path = Path(os.path.abspath(".")).parent
 if str(repo_path) not in sys.path:
     sys.path.append(str(repo_path))
 work_dir = Path().absolute()
-ipynb_path = ipynbname.path()
+# ipynb_path = ipynbname.path()
+# ipynb_name = ipynbname.name()
 
 import jupyter_black
 import ipywidgets as widgets
@@ -32,12 +33,16 @@ from termcolor import colored
 from cells import get_above_cell_content
 from interactions import chat
 from agents.openai import OpenAIAgent
+import platform
 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+if platform.system() == "Windows":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
 nest_asyncio.apply()
 jupyter_black.load(lab=True)
 
 logger.note(f"Repo path:   [{repo_path}]")
 logger.note(f"Working dir: [{work_dir}]")
-logger.note(f"Notebook Path: [{ipynb_path}]")
+# logger.note(f"Notebook Path: [{ipynb_path}]")
+# logger.note(f"Notebook Name: [{ipynb_name}]")
 logger.note(f"Now: [{datetime.datetime.now()}]")

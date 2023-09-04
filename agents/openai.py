@@ -2,12 +2,14 @@ import aiohttp
 import asyncio
 import json
 import os
+import platform
 import pprint
 import re
 from termcolor import colored
 from utils.envs import init_os_envs
 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+if platform.system() == "Windows":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
 class OpenAIAgent:
@@ -47,7 +49,7 @@ class OpenAIAgent:
 
         env_params = {
             "secrets": True,
-            "set_proxy": True,
+            "set_proxy": False,
             f"{self.endpoint_name}": True,
         }
         api_key_env = f"OPENAI_API_KEY"
@@ -119,7 +121,10 @@ class OpenAIAgent:
         self.available_models = []
 
         async with aiohttp.ClientSession() as session:
-            async with session.get(self.models_api) as response:
+            async with session.get(
+                self.models_api,
+                proxy=os.environ.get("http_proxy"),
+            ) as response:
                 data = (await response.json())["data"]
                 for item in data:
                     self.available_models.append(item["id"])
@@ -201,6 +206,7 @@ class OpenAIAgent:
                 headers=self.requests_headers,
                 json=self.requests_payload,
                 timeout=30,
+                proxy=os.environ.get("http_proxy"),
             ) as response:
                 if not stream:
                     response_data = await response.json()
