@@ -39,12 +39,16 @@ class OpenAIAgent:
         temperature=0,
         system_message=None,
         max_input_message_chars=None,
+        memory=True,
+        record=True,
     ):
         self.name = name
         self.endpoint_name = endpoint_name
         self.endpoint = self.endpoint_apis[self.endpoint_name]
         self.endpoint_url = self.endpoint["url"]
         self.chat_api = self.endpoint_url + self.endpoint["chat"]
+        self.memory = memory
+        self.record = record
         self.history_messages = []
 
         env_params = {
@@ -155,6 +159,7 @@ class OpenAIAgent:
         stream=True,
         record=True,
         memory=True,
+        show_prompt=False,
         top_p=1,
         n=1,
         stop=None,
@@ -180,7 +185,6 @@ class OpenAIAgent:
                 "temperature": 0
             }'
         ```
-
         """
 
         if record:
@@ -192,7 +196,9 @@ class OpenAIAgent:
             request_messages = self.get_messages_without_memory()
             request_messages.append(self.content_to_message("user", prompt))
 
-        pprint.pprint(request_messages)
+        # pprint.pprint(request_messages)
+        if show_prompt:
+            print(f"[Human]: {prompt}")
         self.requests_payload = {
             "model": self.model,
             "messages": self.history_messages,
@@ -213,7 +219,7 @@ class OpenAIAgent:
                     response_content = response_data["choices"][0]["message"]["content"]
                     if record:
                         self.update_history_messages("assistant", response_content)
-                    print("[Completed]")
+                    # print("[Completed]")
                     return response_content
                 else:
                     # https://docs.aiohttp.org/en/stable/streams.html
@@ -243,10 +249,19 @@ class OpenAIAgent:
                                 break
                     if record:
                         self.update_history_messages(role, response_content)
-                    print("[Completed]")
+                    # print("[Completed]")
+                    return response_content
 
-    def chat(self, prompt, record=True, memory=True):
-        asyncio.run(self.async_chat(prompt=prompt, record=record, memory=memory))
+    def chat(self, prompt, record=None, memory=None, show_prompt=False):
+        memory = memory if memory else self.memory
+        record = record if record else self.record
+
+        response_content = asyncio.run(
+            self.async_chat(
+                prompt=prompt, record=record, memory=memory, show_prompt=show_prompt
+            )
+        )
+        return response_content
 
     def test_prompt(self):
         self.system_message = (
