@@ -53,6 +53,17 @@ class Logger:
         "restore_indent",
         "log_indent",
     ]
+    LEVEL_METHODS = [
+        "set_level",
+        "store_level",
+        "restore_level",
+    ]
+    LEVEL_NAMES = {
+        "error": logging.ERROR,
+        "warning": logging.WARNING,
+        "info": logging.INFO,
+        "debug": logging.DEBUG,
+    }
 
     def __init__(self, name=None, prefix=False):
         if not name:
@@ -79,6 +90,9 @@ class Logger:
         self.log_indent = 0
         self.log_indents = []
 
+        self.log_level = "info"
+        self.log_levels = []
+
         self.bind_functions()
 
     def indent(self, indent=2):
@@ -95,6 +109,17 @@ class Logger:
 
     def restore_indent(self):
         self.log_indent = self.log_indents.pop(-1)
+
+    def set_level(self, level):
+        self.log_level = level
+        self.logger.setLevel(self.LEVEL_NAMES[level])
+
+    def store_level(self):
+        self.log_levels.append(self.log_level)
+
+    def restore_level(self):
+        self.log_level = self.log_levels.pop(-1)
+        self.set_level(self.log_level)
 
     def log(self, method, msg, indent=0, fill=False, fill_side="both", *args, **kwargs):
         if type(msg) == str:
@@ -122,6 +147,9 @@ class Logger:
             setattr(self.logger, method, functools.partial(self.log, method))
 
         for method in self.INDENT_METHODS:
+            setattr(self.logger, method, getattr(self, method))
+
+        for method in self.LEVEL_METHODS:
             setattr(self.logger, method, getattr(self, method))
 
 
