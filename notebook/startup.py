@@ -18,7 +18,7 @@ repo_path = Path(os.path.abspath(".")).parent
 if str(repo_path) not in sys.path:
     sys.path.append(str(repo_path))
 work_dir = Path().absolute()
-# ipynb_path = ipynbname.path()
+ipynb_path = ipynbname.path()
 # ipynb_name = ipynbname.name()
 
 import jupyter_black
@@ -33,6 +33,7 @@ from termcolor import colored
 from cells import get_above_cell_content
 from interactions import chat
 from agents.openai import OpenAIAgent
+from agents.retriever import DocumentsRetriever
 import platform
 
 if platform.system() == "Windows":
@@ -41,8 +42,8 @@ if platform.system() == "Windows":
 nest_asyncio.apply()
 jupyter_black.load(lab=True)
 
-logger.note(f"Repo path:   [{repo_path}]")
-logger.note(f"Working dir: [{work_dir}]")
-# logger.note(f"Notebook Path: [{ipynb_path}]")
+print(f"Repo path:   [{repo_path}]")
+print(f"Working dir: [{work_dir}]")
+print(f"Notebook Path: [{ipynb_path}]")
 # logger.note(f"Notebook Name: [{ipynb_name}]")
-logger.note(f"Now: [{datetime.datetime.now()}]")
+print(f"Now: [{datetime.datetime.now()}]")
