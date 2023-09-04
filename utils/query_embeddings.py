@@ -20,13 +20,8 @@ from utils.tokenizer import (
 init_os_envs(cuda_device=0, huggingface=True)
 
 
-def query_embeddings_df(
-    query, df, retrieve_n=100, rerank_n=10, exclude_things=["list"]
-):
-    def is_thing_excluded(row):
-        return row["thing"] in exclude_things
-
-    df = df[~df.apply(is_thing_excluded, axis=1)]
+def query_embeddings_df(query, df, retrieve_n=100, rerank_n=10, quite=False):
+    logger.enter_quiet(quite)
 
     doc_embeddings_tensors = df_column_to_torch_tensor(df["embedding"])
     df_doc_texts = df["text"].values.tolist()
@@ -89,9 +84,11 @@ def query_embeddings_df(
     logger.line(rerank_statistics_str)
 
     rerank_results = rerank_results[:rerank_n]
+    rerank_results_df_scores_and_idxs = []
     for item_idx, item in enumerate(rerank_results):
         score = item["cross_score"]
         chunk_idx = item["corpus_id"]
+        rerank_results_df_scores_and_idxs.append((chunk_idx, score))
         page_idx = df_page_idxs[chunk_idx]
         region_idx = df_region_idxs[chunk_idx]
         region_thing = df_region_things[chunk_idx]
@@ -110,7 +107,8 @@ def query_embeddings_df(
         logger.success(sentences_str)
         logger.restore_indent()
 
-    return
+    logger.exit_quiet(quite)
+    return rerank_results_df_scores_and_idxs
     # Dump to query results page json
     query_results_page_region_idxs = defaultdict(list)
     for item_idx, item in enumerate(top_results[:10]):

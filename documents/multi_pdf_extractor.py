@@ -5,7 +5,7 @@ from tqdm import tqdm
 from utils.logger import logger, Runtimer
 from utils.calculator import get_int_digits
 from utils.layout_analyzer import DITLayoutAnalyzer
-from utils.tokenizer import BiEncoderX, CrossEncoderX
+from utils.tokenizer import BiEncoderX, CrossEncoderX, SentenceTokenizer
 from utils.query_embeddings import query_embeddings_df
 import pandas as pd
 import pickle
@@ -75,14 +75,67 @@ class MultiPDFExtractor:
         logger.file(f"- {self.docs_embeddings_path}", indent=2)
         self.docs_embeddings_df.to_pickle(self.docs_embeddings_path)
 
-    def query_docs(self, query):
+    def query_docs(
+        self,
+        query,
+        rerank_n=20,
+        exclude_things=["list"],
+        quiet=False,
+    ):
+        logger.enter_quiet(quiet)
         self.docs_embeddings_df = pd.read_pickle(self.docs_embeddings_path)
-        query_embeddings_df(
-            query=query,
-            df=self.docs_embeddings_df,
-            rerank_n=20,
-            exclude_things=["list"],
+        df = self.docs_embeddings_df.copy()
+
+        def is_thing_excluded(row):
+            return row["thing"] in exclude_things
+
+        df = df[~df.apply(is_thing_excluded, axis=1)]
+
+        # print(df)
+        df.reset_index(drop=True, inplace=True)
+        # print(df)
+        query_results_scores_and_indexes = query_embeddings_df(
+            query=query, df=df, rerank_n=20
         )
+        query_results = []
+        sentence_tokenizer = SentenceTokenizer()
+        for rank_idx, (item_idx, score) in enumerate(query_results_scores_and_indexes):
+            query_item = df.iloc[item_idx]
+            pdf_name = query_item["pdf_name"]
+            region_text = query_item["text"]
+            page_idx = query_item["page_idx"]
+            region_idx = query_item["region_idx"]
+            region_thing = query_item["thing"]
+            previous_title = query_item["previous_title"]
+            sentences = sentence_tokenizer.text_to_sentences(region_text)
+            sentences_str = "\n".join(sentences)
+            query_results.append(
+                {
+                    "rank": rank_idx + 1,
+                    "score": score,
+                    "pdf_name": pdf_name,
+                    "page_idx": page_idx,
+                    "region_idx": region_idx,
+                    "region_thing": region_thing,
+                    "previous_title": previous_title,
+                    "text": sentences_str,
+                }
+            )
+
+            logger.store_indent()
+            logger.indent(2)
+            logger.line(
+                f"{rank_idx+1}: ({score:.4f}) [Page {page_idx}, {region_thing.capitalize()} Region {region_idx}]"
+            )
+            logger.file(f"- {pdf_name}")
+            logger.indent(2)
+            logger.file(f"- {previous_title}")
+            logger.indent(2)
+            logger.success(sentences_str)
+            logger.restore_indent()
+        logger.exit_quiet(quiet)
+
+        return query_results
 
 
 if __name__ == "__main__":
@@ -93,4 +146,5 @@ if __name__ == "__main__":
         # multi_pdf_extractor.combine_docs_embeddings()
         # query="Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer"
         query = "Current advances of AI-based approaches for clinical management of liver cancer"
-        multi_pdf_extractor.query_docs(query=query)
+        query_results = multi_pdf_extractor.query_docs(query=query, quiet=True)
+        print(query_results)
