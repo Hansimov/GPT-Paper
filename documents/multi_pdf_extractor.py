@@ -1,11 +1,13 @@
+from utils.file import rmtree_and_mkdir
+from documents.pdf_visual_extractor import PDFVisualExtractor
 from pathlib import Path
+from tqdm import tqdm
 from utils.logger import logger, Runtimer
 from utils.calculator import get_int_digits
-from documents.pdf_visual_extractor import PDFVisualExtractor
 from utils.layout_analyzer import DITLayoutAnalyzer
 from utils.tokenizer import BiEncoderX, CrossEncoderX
-
-from tqdm import tqdm
+import pandas as pd
+import pickle
 
 
 class MultiPDFExtractor:
@@ -13,9 +15,11 @@ class MultiPDFExtractor:
 
     def __init__(self, project_dir):
         self.project_path = self.pdf_root / project_dir
+        self.result_root = self.project_path / "_results"
         self.pdf_paths = sorted(list(self.project_path.glob("*.pdf")))
         self.pdfs_count = len(self.pdf_paths)
         self.pdfs_count_digits = get_int_digits(len(self.pdf_paths))
+        self.docs_embeddings_path = self.result_root / "docs_embeddings.pkl"
 
     def list_pdfs(self):
         logger.mesg(f"[{self.project_path}] has {self.pdfs_count} PDFs:")
@@ -54,13 +58,29 @@ class MultiPDFExtractor:
             # extractor.query_region_texts()
             logger.restore_level()
 
+    def combine_docs_embeddings(self, overwrite=False):
+        if not overwrite and self.docs_embeddings_path.exists():
+            return
+        rmtree_and_mkdir(self.result_root)
 
-class MultiPDFRetriever:
-    pass
+        self.docs_embeddings_df = pd.DataFrame()
+        for idx, pdf_path in enumerate(self.pdf_paths):
+            embedding_path = pdf_path.with_suffix("") / "texts" / "embeddings.pkl"
+            df = pd.read_pickle(embedding_path)
+            self.docs_embeddings_df = self.docs_embeddings_df.append(df)
+
+        print(self.docs_embeddings_df)
+        logger.note(f"> Dump embeddings of {self.pdfs_count} PDFs")
+        logger.file(f"- {self.docs_embeddings_path}", indent=2)
+        self.docs_embeddings_df.to_pickle(self.docs_embeddings_path)
+
+    def query(self):
+        pass
 
 
 if __name__ == "__main__":
     with Runtimer():
-        multi_pdf_retriever = MultiPDFExtractor("cancer_review")
+        multi_pdf_extractor = MultiPDFExtractor("cancer_review")
         # multi_pdf_retriever.list_pdfs()
-        multi_pdf_retriever.extract_pdfs()
+        # multi_pdf_retriever.extract_pdfs()
+        multi_pdf_extractor.combine_docs_embeddings()
