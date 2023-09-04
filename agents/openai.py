@@ -1,5 +1,6 @@
 import aiohttp
 import asyncio
+import nest_asyncio
 import json
 import os
 import platform
@@ -7,7 +8,9 @@ import pprint
 import re
 from termcolor import colored
 from utils.envs import init_os_envs
+from utils.tokenizer import WordTokenizer
 
+nest_asyncio.apply()
 if platform.system() == "Windows":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
@@ -67,7 +70,7 @@ class OpenAIAgent:
         self.temperature = temperature
         self.system_message = system_message
         self.max_input_message_chars = max_input_message_chars
-
+        self.word_tokenizer = WordTokenizer()
         self.calc_max_input_message_chars()
         self.init_history_messages()
 
@@ -120,7 +123,12 @@ class OpenAIAgent:
         if keep_system_message:
             self.init_history_messages()
 
-    async def get_available_models(self):
+    async def async_get_available_models(self):
+        """
+        gpt-3.5-turbo, gpt-4, gpt-4-internet, claude-2,
+        poe-llama-2-7b, poe-llama-2-13b, poe-llama-2-70b,
+        poe-gpt-3.5-turbo, poe-saga, poe-claude-instant, poe-google-palm,
+        """
         self.models_api = self.endpoint_url + self.endpoint["models"]
         self.available_models = []
 
@@ -134,6 +142,10 @@ class OpenAIAgent:
                     self.available_models.append(item["id"])
 
         print(self.available_models)
+        return self.available_models
+
+    def get_available_models(self):
+        self.available_models = asyncio.run(self.async_get_available_models())
         return self.available_models
 
     def calc_max_input_message_chars(self):
@@ -160,6 +172,7 @@ class OpenAIAgent:
         record=True,
         memory=False,
         show_prompt=False,
+        show_tokens_count=False,
         top_p=1,
         n=1,
         stop=None,
@@ -199,6 +212,9 @@ class OpenAIAgent:
         # pprint.pprint(request_messages)
         if show_prompt:
             print(f"[Human]: {prompt}")
+        tokens_count = self.word_tokenizer.count_tokens(prompt)
+        if show_tokens_count:
+            print(f"Prompt Tokens count: [{tokens_count}]")
         self.requests_payload = {
             "model": self.model,
             "messages": self.history_messages,
@@ -230,6 +246,7 @@ class OpenAIAgent:
                         line_str = line.decode("utf-8")
                         # print(line_str)
                         line_str = re.sub(r"^\s*data:\s*", "", line_str).strip()
+                        # print(line_str)
                         if line_str:
                             line_data = json.loads(line_str)
                             delta_data = line_data["choices"][0]["delta"]
@@ -252,13 +269,24 @@ class OpenAIAgent:
                     # print("[Completed]")
                     return response_content
 
-    def chat(self, prompt, record=None, memory=None, show_prompt=False):
+    def chat(
+        self,
+        prompt,
+        record=None,
+        memory=None,
+        show_prompt=False,
+        show_tokens_count=True,
+    ):
         memory = memory if memory is not None else self.memory
         record = record if record is not None else self.record
 
         response_content = asyncio.run(
             self.async_chat(
-                prompt=prompt, record=record, memory=memory, show_prompt=show_prompt
+                prompt=prompt,
+                record=record,
+                memory=memory,
+                show_prompt=show_prompt,
+                show_tokens_count=show_tokens_count,
             )
         )
         return response_content
