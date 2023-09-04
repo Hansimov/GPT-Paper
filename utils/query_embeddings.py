@@ -20,12 +20,13 @@ from utils.tokenizer import (
 init_os_envs(cuda_device=0, huggingface=True)
 
 
-def query_embeddings_df(query, df, retrieve_n=100, rerank_n=10, exclude_things=[]):
-    def drop_exclude_things(row):
+def query_embeddings_df(
+    query, df, retrieve_n=100, rerank_n=10, exclude_things=["list"]
+):
+    def is_thing_excluded(row):
         return row["thing"] in exclude_things
 
-    drop_mask = df.apply(drop_exclude_things, axis=1)
-    df = df[~drop_mask]
+    df = df[~df.apply(is_thing_excluded, axis=1)]
 
     doc_embeddings_tensors = df_column_to_torch_tensor(df["embedding"])
     df_doc_texts = df["text"].values.tolist()
