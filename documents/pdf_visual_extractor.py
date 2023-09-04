@@ -187,15 +187,17 @@ class PDFVisualExtractor:
                 + page_image_path.suffix
             )
 
-            if not overwrite and region_image_path.exists():
-                continue
-            region_image = page_image.crop(crop_region_box)
             if add_crop_image_path_to_page_info_json:
                 page_infos["regions"][i]["crop_image_path"] = str(region_image_path)
                 with open(page_info_json_path, "w") as wf:
                     json.dump(page_infos, wf, indent=4)
 
-            region_image.save(region_image_path)
+            if not overwrite and region_image_path.exists():
+                continue
+            else:
+                region_image = page_image.crop(crop_region_box)
+                region_image.save(region_image_path)
+
         logger.exit_quiet(quiet)
 
     def get_page_info_json_paths(self, page_type):
@@ -373,7 +375,13 @@ class PDFVisualExtractor:
         logger.restore_indent()
         logger.exit_quiet(quiet)
 
-    def extract_text_from_page(self, page_info_json_path):
+    def extract_text_from_page(self, page_info_json_path, overwrite=False, quiet=True):
+        logger.enter_quiet(quiet)
+        page_texts_infos_path = self.page_texts_path / page_info_json_path.name
+        if not overwrite and page_texts_infos_path.exists():
+            logger.exit_quiet(quiet)
+            return
+
         with open(page_info_json_path, "r") as rf:
             page_infos = json.load(rf)
         page_texts_infos = page_infos.copy()
@@ -391,24 +399,31 @@ class PDFVisualExtractor:
                 page_texts_infos["regions"][i]["text"] = region_text.replace("\f", "")
             else:
                 logger.line(f"- Skip {region['thing']} region {i+1}")
-        page_texts_infos_path = self.page_texts_path / page_info_json_path.name
+
         with open(page_texts_infos_path, "w", encoding="utf-8") as wf:
             json.dump(page_texts_infos, wf, indent=4, ensure_ascii=False)
         logger.restore_indent()
+        logger.exit_quiet(quiet)
 
-    def extract_texts_from_pages(self):
-        rmtree_and_mkdir(self.page_texts_path)
+    def extract_texts_from_pages(self, overwrite=False, quiet=True):
+        rmtree_and_mkdir(self.page_texts_path, overwrite=overwrite)
+        logger.enter_quiet(quiet)
         self.text_extractor = TextExtractor()
-
         page_info_json_paths = self.get_page_info_json_paths("ordered")
         logger.note(f"> Extracting texts from {len(page_info_json_paths)} pages")
         for page_idx, page_info_json_path in enumerate(page_info_json_paths):
             logger.store_indent()
             logger.note(f"- Extract Page {page_idx+1}")
-            self.extract_text_from_page(page_info_json_path)
+            self.extract_text_from_page(page_info_json_path, overwrite=overwrite)
             logger.restore_indent()
+        logger.exit_quiet(quiet)
 
-    def combine_page_texts_to_doc(self):
+    def combine_page_texts_to_doc(self, overwrite=False, quiet=True):
+        logger.enter_quiet(quiet)
+        if not overwrite and self.doc_texts_path.exists():
+            logger.exit_quiet(quiet)
+            return
+
         page_texts_info_json_paths = self.get_page_info_json_paths("texts")
         doc_text_infos = {
             "pdf_filename": self.pdf_filename,
@@ -435,6 +450,7 @@ class PDFVisualExtractor:
 
         with open(self.doc_texts_path, "w", encoding="utf-8") as wf:
             json.dump(doc_text_infos, wf, indent=4, ensure_ascii=False)
+        logger.exit_quiet(quiet)
 
     def doc_texts_to_embeddings(self):
         embedder = Embedder()
