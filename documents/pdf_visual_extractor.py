@@ -56,7 +56,7 @@ class PDFVisualExtractor:
         self.doc_embeddings_path = self.page_texts_path / "embeddings.pkl"
         self.queries_results_path = self.assets_path / "queries"
 
-    def dump_pdf_to_page_images(self, dpi=300, overwrite=False, quiet=False):
+    def dump_pdf_to_page_images(self, dpi=300, overwrite=False, quiet=True):
         logger.enter_quiet(quiet)
 
         rmtree_and_mkdir(self.page_images_path, overwrite=overwrite)
@@ -72,7 +72,6 @@ class PDFVisualExtractor:
                 self.page_images_path / f"page_{page_idx+1:0>{pdf_idx_digits}}.png"
             )
             if not overwrite and image_path.exists():
-                logger.back("- Page Image existed. Skip dumping.", indent=2)
                 continue
             else:
                 pix = page.get_pixmap(dpi=dpi)
@@ -81,16 +80,14 @@ class PDFVisualExtractor:
 
         logger.exit_quiet(quiet)
 
-    def annotate_page_images(self, layout_analyzer=None, overwrite=False, quiet=False):
+    def annotate_page_images(
+        self, layout_analyzer=None, overwrite=False, quiet=True, draw_on_page=False
+    ):
         rmtree_and_mkdir(self.annotated_page_images_path, overwrite=overwrite)
-        logger.note(f"> Annotating page images")
         logger.enter_quiet(quiet)
+        logger.note(f"> Annotating page images")
         # logger.file(f"  * {self.annotated_page_images_path}")
         logger.set_indent(2)
-
-        if not layout_analyzer:
-            layout_analyzer = DITLayoutAnalyzer(size="large")
-            layout_analyzer.setup_model()
 
         page_image_paths = sorted(
             [
@@ -102,13 +99,23 @@ class PDFVisualExtractor:
             key=lambda x: int(x.stem.split("_")[-1]),
         )
 
+        if not layout_analyzer:
+            layout_analyzer = DITLayoutAnalyzer(size="large")
+
         for page_image_path in tqdm(page_image_paths):
             output_image_path = self.annotated_page_images_path / page_image_path.name
-            if not overwrite and output_image_path.exists():
-                logger.back(
-                    f"- Annotated Page Image existed. Skip annotating.", indent=2
-                )
+            annotate_info_json_path = self.annotated_page_images_path / (
+                page_image_path.stem + ".json"
+            )
+            if not overwrite and (
+                (draw_on_page and output_image_path.exists())
+                or (not draw_on_page and annotate_info_json_path.exists())
+            ):
                 continue
+
+            if not layout_analyzer.is_setup_model:
+                layout_analyzer.setup_model()
+
             logger.set_indent(2)
             logger.file(f"- {page_image_path.name}")
             logger.set_indent(4)
@@ -117,10 +124,11 @@ class PDFVisualExtractor:
                 output_image_path=output_image_path,
                 quiet=quiet,
             )
-            draw_regions_on_page(
-                annotate_info_json_path,
-                output_parent_path=self.annotated_page_images_path,
-            )
+            if draw_on_page:
+                draw_regions_on_page(
+                    annotate_info_json_path,
+                    output_parent_path=self.annotated_page_images_path,
+                )
         logger.reset_indent()
         logger.exit_quiet(quiet)
 
@@ -130,9 +138,12 @@ class PDFVisualExtractor:
         page_info_json_path,
         padding=2,
         show_score=True,
+        overwrite=False,
+        quiet=True,
         add_leading_zero_to_idx=True,
         add_crop_image_path_to_page_info_json=True,
     ):
+        logger.enter_quiet(quiet)
         with open(page_info_json_path, "r") as rf:
             page_infos = json.load(rf)
         page_image_path = Path(page_infos["page"]["original_image_path"])
@@ -160,7 +171,6 @@ class PDFVisualExtractor:
                 min(page_image_width, region_box[2] + padding),
                 min(page_image_height, region_box[3] + padding),
             ]
-            region_image = page_image.crop(crop_region_box)
 
             if show_score:
                 region_score_str = f"_{region_score}"
@@ -176,12 +186,17 @@ class PDFVisualExtractor:
                 f"region{region_idx_str}_{region_thing}{region_score_str}"
                 + page_image_path.suffix
             )
+
+            if not overwrite and region_image_path.exists():
+                continue
+            region_image = page_image.crop(crop_region_box)
             if add_crop_image_path_to_page_info_json:
                 page_infos["regions"][i]["crop_image_path"] = str(region_image_path)
                 with open(page_info_json_path, "w") as wf:
                     json.dump(page_infos, wf, indent=4)
 
             region_image.save(region_image_path)
+        logger.exit_quiet(quiet)
 
     def get_page_info_json_paths(self, page_type):
         page_type_images_paths = {
@@ -201,7 +216,8 @@ class PDFVisualExtractor:
         )
         return page_info_json_paths
 
-    def crop_page_images(self, page_type):
+    def crop_page_images(self, page_type, overwrite=False, quiet=True):
+        logger.enter_quiet(quiet)
         page_type_cropped_images_paths = {
             "annotated": self.cropped_annotated_page_images_path,
             "no-overlap": self.cropped_no_overlap_page_images_path,
@@ -216,30 +232,41 @@ class PDFVisualExtractor:
         logger.note(f"> Croping {page_type} page images")
         logger.store_indent()
         logger.indent(2)
-        for page_info_json_path in page_info_json_paths:
+        for page_info_json_path in tqdm(page_info_json_paths):
             self.crop_page_image(
-                cropped_page_images_path, page_info_json_path, show_score=False
+                cropped_page_images_path,
+                page_info_json_path,
+                show_score=False,
+                overwrite=overwrite,
             )
         logger.restore_indent()
+        logger.exit_quiet(quiet)
 
-    def remove_overlapped_layout_regions_from_page(self, annotate_info_json_path):
+    def remove_overlapped_layout_regions_from_page(
+        self,
+        annotate_info_json_path,
+        draw_on_page=False,
+        overwrite=False,
+        quiet=True,
+    ):
+        logger.enter_quiet(quiet)
         with open(annotate_info_json_path, "r") as rf:
             annotate_infos = json.load(rf)
         regions = annotate_infos["regions"]
-
-        logger.store_indent()
-        logger.indent(2)
-        logger.note(f"- Detect overlaps of {len(annotate_infos['regions'])} regions")
-        regions_overlaps = calc_regions_overlaps(regions)
-
-        logger.note(f"- Filter overlaps of {len(annotate_infos['regions'])} regions")
-
-        logger.indent(2)
-        no_overlap_regions_infos = annotate_infos.copy()
-        no_overlap_regions_infos["regions"] = remove_regions_overlaps(
-            regions, regions_overlaps
+        no_overlap_regions_info_json_path = str(
+            self.no_overlap_page_images_path
+            / (Path(annotate_infos["page"]["current_image_path"]).stem + ".json")
         )
-        logger.indent(-2)
+
+        if (
+            not overwrite
+            and Path(no_overlap_regions_info_json_path).exists()
+            and not draw_on_page
+        ):
+            logger.exit_quiet(quiet)
+            return
+
+        no_overlap_regions_infos = annotate_infos.copy()
         no_overlap_regions_infos["page"]["original_image_path"] = annotate_infos[
             "page"
         ]["original_image_path"]
@@ -252,33 +279,52 @@ class PDFVisualExtractor:
             no_overlap_regions_infos["regions"]
         )
 
-        no_overlap_regions_info_json_path = str(
-            self.no_overlap_page_images_path
-            / (Path(annotate_infos["page"]["current_image_path"]).stem + ".json")
+        logger.store_indent()
+        logger.indent(2)
+        logger.note(f"- Detect overlaps of {len(annotate_infos['regions'])} regions")
+        regions_overlaps = calc_regions_overlaps(regions)
+
+        logger.note(f"- Filter overlaps of {len(annotate_infos['regions'])} regions")
+
+        logger.indent(2)
+
+        no_overlap_regions_infos["regions"] = remove_regions_overlaps(
+            regions, regions_overlaps
         )
+        logger.indent(-2)
 
         logger.note("> Dump no-overlap regions info json")
         logger.back(f"  - {no_overlap_regions_info_json_path}")
         with open(no_overlap_regions_info_json_path, "w") as wf:
             json.dump(no_overlap_regions_infos, wf, indent=4)
         logger.indent(2)
-        draw_regions_on_page(
-            no_overlap_regions_info_json_path, self.no_overlap_page_images_path
-        )
+        if draw_on_page:
+            draw_regions_on_page(
+                no_overlap_regions_info_json_path, self.no_overlap_page_images_path
+            )
         logger.restore_indent()
+        logger.exit_quiet()
 
-    def remove_overlapped_layout_regions_from_pages(self):
-        rmtree_and_mkdir(self.no_overlap_page_images_path)
+    def remove_overlapped_layout_regions_from_pages(self, overwrite=False, quiet=True):
+        logger.enter_quiet(quiet)
+        rmtree_and_mkdir(self.no_overlap_page_images_path, overwrite=overwrite)
         annotate_json_paths = self.get_page_info_json_paths("annotated")
         for page_idx, annotate_json_path in enumerate(annotate_json_paths):
             logger.store_indent()
             logger.note(f"- Remove overlaps in Page {page_idx+1}")
-            self.remove_overlapped_layout_regions_from_page(annotate_json_path)
+            self.remove_overlapped_layout_regions_from_page(
+                annotate_json_path,
+                draw_on_page=False,
+                quiet=quiet,
+                overwrite=overwrite,
+            )
             logger.restore_indent()
+        logger.exit_quiet(quiet)
 
-    def order_pages_regions(self):
+    def order_pages_regions(self, overwrite=False, quiet=True, draw_on_page=True):
         page_info_json_paths = self.get_page_info_json_paths("no-overlap")
-        rmtree_and_mkdir(self.ordered_page_images_path)
+        rmtree_and_mkdir(self.ordered_page_images_path, overwrite=overwrite)
+        logger.enter_quiet(quiet)
         logger.note(f"- Sort regions")
         logger.store_indent()
         page_idx_digits = get_int_digits(len(page_info_json_paths))
@@ -288,6 +334,17 @@ class PDFVisualExtractor:
             ordered_page_infos = page_infos.copy()
             regions = page_infos["regions"]
             logger.mesg(f"- Sort regions in Page {page_idx+1}")
+            ordered_page_info_json_path = (
+                self.ordered_page_images_path
+                / f"page_{page_idx+1:0>{page_idx_digits}}.json"
+            )
+            if (
+                not overwrite
+                and ordered_page_info_json_path.exists()
+                and not draw_on_page
+            ):
+                continue
+
             regions_orderer = RegionsOrderer()
             ordered_regions = regions_orderer.sort_regions_by_reading_order(regions)
 
@@ -299,22 +356,22 @@ class PDFVisualExtractor:
             ordered_page_infos["page"]["regions_num"] = len(ordered_regions)
             ordered_page_infos["page"]["page_idx"] = page_idx + 1
 
-            ordered_page_info_json_path = (
-                self.ordered_page_images_path
-                / f"page_{page_idx+1:0>{page_idx_digits}}.json"
-            )
-
             logger.store_indent()
             logger.indent(2)
             logger.success(f"- Dump ordered regions info")
             logger.back(f"- {ordered_page_info_json_path}")
             with open(ordered_page_info_json_path, "w") as wf:
                 json.dump(ordered_page_infos, wf, indent=4)
-            draw_regions_on_page(
-                ordered_page_info_json_path, self.ordered_page_images_path
-            )
+
+            if draw_on_page:
+                draw_regions_on_page(
+                    ordered_page_info_json_path,
+                    self.ordered_page_images_path,
+                    overwrite=overwrite,
+                )
             logger.restore_indent()
         logger.restore_indent()
+        logger.exit_quiet(quiet)
 
     def extract_text_from_page(self, page_info_json_path):
         with open(page_info_json_path, "r") as rf:

@@ -22,24 +22,28 @@ class MultiPDFExtractor:
 
     def extract_pdfs(self):
         layout_analyzer = DITLayoutAnalyzer(size="large")
-        layout_analyzer.setup_model(quiet=True)
-        for pdf_idx, pdf_path in enumerate(tqdm(self.pdf_paths[:3], colour="green")):
+        logger.store_level()
+        for pdf_idx, pdf_path in enumerate(tqdm(self.pdf_paths[2:8], colour="green")):
             logger.note(
                 f"[{pdf_idx+1:>{self.pdfs_count_digits}}/{self.pdfs_count}] {pdf_path.name}"
             )
             logger.store_indent()
             logger.indent(2)
             extractor = PDFVisualExtractor(pdf_path)
-            # extractor.dump_pdf_to_page_images(quiet=True)
-            extractor.annotate_page_images(layout_analyzer, quiet=True)
+            logger.note("> Dump page images")
+            extractor.dump_pdf_to_page_images()
+            logger.note("> Annotate page images")
+            extractor.annotate_page_images(layout_analyzer=layout_analyzer)
+            logger.note("> Remove overlaps, order regions, and crop")
+            extractor.remove_overlapped_layout_regions_from_pages()
+            extractor.order_pages_regions()
+            extractor.crop_page_images("ordered")
             logger.restore_indent()
-            # extractor.remove_overlapped_layout_regions_from_pages()
-            # extractor.order_pages_regions()
-            # extractor.crop_page_images("ordered")
             # extractor.extract_texts_from_pages()
             # extractor.combine_page_texts_to_doc()
             # extractor.doc_texts_to_embeddings()
             # extractor.query_region_texts()
+        logger.restore_level()
 
 
 if __name__ == "__main__":

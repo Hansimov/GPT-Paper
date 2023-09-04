@@ -61,8 +61,9 @@ class DITLayoutAnalyzer:
 
     def __init__(self, size="base"):
         self.model_size = size
+        self.is_setup_model = False
 
-    def setup_model(self, quiet=False):
+    def setup_model(self, quiet=True):
         logger.note("> Setting up model of DITLayoutAnalyzer ...")
         logger.enter_quiet(quiet)
         self.load_configs()
@@ -70,6 +71,7 @@ class DITLayoutAnalyzer:
         self.set_device()
         self.create_predictor()
         self.set_metadata()
+        self.is_setup_model = True
         logger.exit_quiet(quiet)
 
     def test_run(self):
@@ -147,7 +149,11 @@ class DITLayoutAnalyzer:
         self.metadata.set(thing_classes=self.thing_classes)
 
     def annotate_image(
-        self, input_image_path=None, output_image_path=None, quiet=False
+        self,
+        annotate_info_json_path,
+        input_image_path=None,
+        output_image_path=None,
+        quiet=False,
     ):
         logger.enter_quiet(quiet)
 
@@ -170,15 +176,17 @@ class DITLayoutAnalyzer:
         logger.back(f"  - pred_boxes: {pred_output.pred_boxes.tensor.tolist()}")
         logger.back(f"  - scores: {pred_output.scores.tolist()}")
 
-        annotate_info_json_path = self.dump_annotate_info(
-            input_image_path, output_image_path, pred_output
+        self.dump_annotate_info(
+            annotate_info_json_path, input_image_path, output_image_path, pred_output
         )
 
         logger.exit_quiet(quiet)
 
-        return pred_output, annotate_info_json_path
+        return pred_output
 
-    def dump_annotate_info(self, input_image_path, output_image_path, output):
+    def dump_annotate_info(
+        self, annotate_info_json_path, input_image_path, output_image_path, output
+    ):
         image_height, image_width = output.image_size
         self.annotate_infos = {
             "page": {
@@ -205,9 +213,6 @@ class DITLayoutAnalyzer:
             }
             self.annotate_infos["regions"].append(region_info)
 
-        annotate_info_json_path = output_image_path.parent / (
-            output_image_path.stem + ".json"
-        )
         logger.success(f"> Saving annotated info:")
         logger.file(f"  - {annotate_info_json_path}")
         with open(annotate_info_json_path, "w") as wf:
@@ -232,9 +237,18 @@ def draw_regions_on_page(
     spacing=2,
     show_region_idx=True,
     score_use_percent=True,
+    overwrite=False,
     quiet=False,
 ):
     logger.enter_quiet(quiet)
+
+    with open(regions_info_json_path, "r") as rf:
+        regions_infos = json.load(rf)
+    original_page_image_path = Path(regions_infos["page"]["original_image_path"])
+    drawn_page_image_path = output_parent_path / original_page_image_path.name
+    if not overwrite and drawn_page_image_path.exists():
+        logger.exit_quiet(quiet)
+        return
 
     region_colors = {
         "text": (0, 128, 0),
@@ -243,17 +257,12 @@ def draw_regions_on_page(
         "table": (128, 128, 0),
         "figure": (0, 0, 128),
     }
-    with open(regions_info_json_path, "r") as rf:
-        regions_infos = json.load(rf)
-    original_page_image_path = Path(regions_infos["page"]["original_image_path"])
     page_num = int(original_page_image_path.stem.split("_")[-1])
     page_image = Image.open(original_page_image_path)
     page_image_width, page_image_height = page_image.size
-    regions = regions_infos["regions"]
-
     image_draw = ImageDraw.Draw(page_image, "RGBA")
 
-    drawn_page_image_path = output_parent_path / original_page_image_path.name
+    regions = regions_infos["regions"]
     logger.mesg(f"- Draw on Page {page_num} with {len(regions)} regions")
     logger.back(f"  - {drawn_page_image_path}")
 
