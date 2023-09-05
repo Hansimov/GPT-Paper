@@ -13,13 +13,15 @@ import sys
 from pathlib import Path
 import logging
 import ipynbname
+import platform
 
 repo_path = Path(os.path.abspath(".")).parent
 if str(repo_path) not in sys.path:
     sys.path.append(str(repo_path))
 work_dir = Path().absolute()
-ipynb_path = ipynbname.path()
-# ipynb_name = ipynbname.name()
+if platform.system() == "Windows":
+    ipynb_path = ipynbname.path()
+    # ipynb_name = ipynbname.name()
 
 import jupyter_black
 import ipywidgets as widgets
@@ -30,7 +32,7 @@ from ipywidgets import Image as wImage
 from ipywidgets import HBox, Layout
 from utils.logger import logger
 from termcolor import colored
-from cells import get_above_cell_content
+from cells import get_above_cell_content, get_notebook_cells
 from interactions import chat
 from agents.openai import OpenAIAgent
 from agents.retriever import DocumentsRetriever
@@ -44,6 +46,6 @@ jupyter_black.load(lab=True)
 
 print(f"Repo path:   [{repo_path}]")
 print(f"Working dir: [{work_dir}]")
-print(f"Notebook Path: [{ipynb_path}]")
+# print(f"Notebook Path: [{ipynb_path}]")
 # logger.note(f"Notebook Name: [{ipynb_name}]")
 print(f"Now: [{datetime.datetime.now()}]")
