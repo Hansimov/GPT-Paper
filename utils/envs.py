@@ -1,4 +1,5 @@
 import ctypes
+import inspect
 import json
 import nltk
 import os
@@ -12,60 +13,85 @@ from termcolor import colored
 from utils.logger import logger, shell_cmd
 
 
-def init_os_envs(
-    secrets=True,
-    set_proxy=True,
-    cuda_device=None,
-    cuda_alloc=True,
-    huggingface=True,
-    openai=False,
-    ninomae=False,
-):
-    if secrets:
-        with open(Path(__file__).parents[1] / "secrets.json", "r") as rf:
-            secrets = json.load(rf)
+class OSEnver:
+    def __init__(self, global_scope=True):
+        self.envs_stack = []
+        self.global_scope = global_scope
+        self.envs = os.environ.copy()
 
-    if set_proxy:
-        for proxy_env in ["http_proxy", "https_proxy"]:
-            os.environ[proxy_env] = secrets["http_proxy"]
+    def store_envs(self):
+        self.envs_stack.append(self.envs)
 
-    if openai:
-        os.environ["OPENAI_API_KEY"] = secrets["openai_api_key"]
+    def restore_envs(self):
+        self.envs = self.envs_stack.pop()
+        if self.global_scope:
+            os.environ = self.envs
 
-    if ninomae:
-        os.environ["OPENAI_API_KEY"] = secrets["ninomae_api_key"]
+    def set_envs(
+        self,
+        secrets=True,
+        set_proxy=False,
+        cuda_device=None,
+        cuda_alloc=True,
+        huggingface=True,
+        openai=False,
+        ninomae=False,
+    ):
+        caller_info = inspect.stack()[1]
+        logger.note(f"OS Envs is set by: {caller_info.filename}")
 
-    if huggingface:
-        """
-        * https://stackoverflow.com/questions/63312859/how-to-change-huggingface-transformers-default-cache-directory
-        * https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables
-        """
-        cache_root = Path(__file__).parents[2] / ".cache"
-        cache_root.mkdir(parents=True, exist_ok=True)
-        hf_envs = {
-            "HF_HOME": ".",
-            "XDG_CACHE_HOME": ".",
-            "TRANSFORMERS_CACHE": "hub",
-            "HUGGINGFACE_HUB_CACHE": "hub",
-            "HUGGINGFACE_ASSETS_CACHE": "assets",
-            "HUGGING_FACE_HUB_TOKEN": "token",
-            # "HF_DATASETS_CACHE": "datasets",
-        }
-        for env_name, env_path in hf_envs.items():
-            os.environ[env_name] = str(cache_root / "huggingface" / f"{env_path}")
-            # logger.note(str(cache_root / "huggingface" / f"{env_path}"))
+        if secrets:
+            with open(Path(__file__).parents[1] / "secrets.json", "r") as rf:
+                secrets = json.load(rf)
 
-        st_envs = {
-            "SENTENCE_TRANSFORMERS_HOME": "sentence_transformers",
-        }
-        for env_name, env_path in st_envs.items():
-            os.environ[env_name] = str(cache_root / f"{env_path}")
+        if set_proxy:
+            for proxy_env in ["http_proxy", "https_proxy"]:
+                # self.envs[proxy_env] = secrets["http_proxy"]
+                pass
+        # else:
+        #     for proxy_env in ["http_proxy", "https_proxy"]:
+        #         os.environ.pop(proxy_env, None)
 
-    if cuda_device:
-        os.environ["CUDA_VISIBLE_DEVICES"] = str(cuda_device)
+        if openai:
+            self.envs["OPENAI_API_KEY"] = secrets["openai_api_key"]
 
-    if cuda_alloc:
-        os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
+        if ninomae:
+            self.envs["OPENAI_API_KEY"] = secrets["ninomae_api_key"]
+
+        if huggingface:
+            """
+            * https://stackoverflow.com/questions/63312859/how-to-change-huggingface-transformers-default-cache-directory
+            * https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables
+            """
+            cache_root = Path(__file__).parents[2] / ".cache"
+            cache_root.mkdir(parents=True, exist_ok=True)
+            hf_envs = {
+                "HF_HOME": ".",
+                "XDG_CACHE_HOME": ".",
+                "TRANSFORMERS_CACHE": "hub",
+                "HUGGINGFACE_HUB_CACHE": "hub",
+                "HUGGINGFACE_ASSETS_CACHE": "assets",
+                "HUGGING_FACE_HUB_TOKEN": "token",
+                # "HF_DATASETS_CACHE": "datasets",
+            }
+            for env_name, env_path in hf_envs.items():
+                self.envs[env_name] = str(cache_root / "huggingface" / f"{env_path}")
+                # logger.note(str(cache_root / "huggingface" / f"{env_path}"))
+
+            st_envs = {
+                "SENTENCE_TRANSFORMERS_HOME": "sentence_transformers",
+            }
+            for env_name, env_path in st_envs.items():
+                self.envs[env_name] = str(cache_root / f"{env_path}")
+
+        if cuda_device:
+            self.envs["CUDA_VISIBLE_DEVICES"] = str(cuda_device)
+
+        if cuda_alloc:
+            self.envs["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
+
+        if self.global_scope:
+            os.environ = self.envs
 
 
 def copy_to_site_packaegs(package_path):
@@ -280,7 +306,8 @@ def download_nltk_data():
 
 
 if __name__ == "__main__":
-    init_os_envs()
+    enver = OSEnver()
+    enver.set_envs()
     # check_camelot_dependencies()
     # setup_envs_of_dit()
     # download_reading_bank_dataset()

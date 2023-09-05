@@ -2,14 +2,15 @@ from pathlib import Path
 from PIL import Image
 
 from utils.logger import logger
-from utils.envs import init_os_envs
+from utils.envs import OSEnver
 import platform
 import pytesseract
 
+enver = OSEnver()
 if platform.system() == "Windows":
-    init_os_envs(cuda_device=0)
+    enver.set_envs(cuda_device=0)
 else:
-    init_os_envs()
+    enver.set_envs()
 
 
 class TextExtractor:

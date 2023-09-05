@@ -3,7 +3,7 @@ import requests
 import tiktoken
 import torch
 from nltk.tokenize import sent_tokenize
-from utils.envs import init_os_envs
+from utils.envs import OSEnver
 from utils.logger import logger, Runtimer
 from sentence_transformers import SentenceTransformer, CrossEncoder
 from sentence_transformers import util as st_util
@@ -80,7 +80,8 @@ def get_embedding_with_api(
     endpoint="openai",
     model="text-embedding-ada-002",
 ):
-    init_os_envs(openai=True)
+    enver = OSEnver()
+    enver.set_envs(openai=True)
 
     """
     Response Example:
@@ -160,7 +161,8 @@ class BiEncoderX:
 
     def load_model(self, quiet=True):
         logger.enter_quiet(quiet)
-        init_os_envs(cuda_device=0, huggingface=True)
+        enver = OSEnver()
+        enver.set_envs(cuda_device=0, huggingface=True)
         logger.note(f"> Using embedding model: [{self.model_name}]")
         self.model = SentenceTransformer(self.model_name)
         self.is_load_model = True

@@ -3,9 +3,10 @@ from transformers import AutoImageProcessor, TableTransformerForObjectDetection
 import torch
 from pathlib import Path
 from PIL import Image, ImageDraw
-from utils.envs import init_os_envs
+from utils.envs import OSEnver
 
-init_os_envs(set_proxy=True, cuda_device=3)
+enver = OSEnver
+OSEnver.set_envs(set_proxy=True, cuda_device=3)
 
 # file_path = hf_hub_download(
 #     repo_id="nielsr/example-pdf", repo_type="dataset", filename="example_pdf.png"

@@ -28,7 +28,7 @@ outliner = OpenAIAgent(
 )
 polisher = OpenAIAgent(
     name="polisher",
-    model="claude-2",
+    model="gpt-4",
     system_message="你的任务是针对提供的文本，进行逻辑和表达上的润色。润色后的内容应当更加严谨和丰富。下面是提供的文本：",
 )
 criticizer = OpenAIAgent(
@@ -58,7 +58,6 @@ markdown_filler = OpenAIAgent(
 section_summarizer = OpenAIAgent(
     name="section_summarizer",
     model="gpt-4",
-    # model="claude-2",
     system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
 )
 
@@ -109,7 +108,7 @@ def summarize_and_translate_section(
     section: str,
     queries: list,
     extra_prompt="",
-    word_count=200,
+    word_count=500,
 ):
     # queries_str = json.dumps(queries, indent=2, ensure_ascii=False)
     queries_str = str(queries)

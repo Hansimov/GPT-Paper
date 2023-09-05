@@ -6,7 +6,7 @@ from sentence_transformers.util import semantic_search
 from termcolor import colored
 
 from utils.calculator import get_int_digits
-from utils.envs import init_os_envs
+from utils.envs import OSEnver
 from utils.file import rmtree_and_mkdir
 from utils.layout_analyzer import draw_regions_on_page
 from utils.logger import logger, add_fillers, Runtimer
@@ -17,11 +17,11 @@ from utils.tokenizer import (
     df_column_to_torch_tensor,
 )
 
-init_os_envs(cuda_device=0, huggingface=True)
-
 
 def query_embeddings_df(query, df, retrieve_n=100, rerank_n=10, quite=False):
     logger.enter_quiet(quite)
+    enver = OSEnver()
+    enver.set_envs(cuda_device=0, huggingface=True)
 
     doc_embeddings_tensors = df_column_to_torch_tensor(df["embedding"])
     df_doc_texts = df["text"].values.tolist()

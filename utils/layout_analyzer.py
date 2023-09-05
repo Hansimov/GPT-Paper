@@ -11,7 +11,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from termcolor import colored
 from utils.logger import logger, shell_cmd
-from utils.envs import init_os_envs, setup_envs_of_dit
+from utils.envs import OSEnver, setup_envs_of_dit
 from utils.calculator import (
     rect_area,
     rect_overlap,
@@ -23,10 +23,11 @@ from utils.calculator import (
 warnings.filterwarnings("ignore")
 
 # setup_envs_of_dit()
+enver = OSEnver()
 if platform.system() == "Windows":
-    init_os_envs(cuda_device=0, huggingface=True)
+    enver.set_envs(cuda_device=0, huggingface=True)
 else:
-    init_os_envs(cuda_device=3)
+    enver.set_envs(cuda_device=3)
 
 
 try:

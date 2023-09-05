@@ -1,11 +1,8 @@
 import httpx
 import json
 import os
-import platform
-import pprint
 import re
-from termcolor import colored
-from utils.envs import init_os_envs
+from utils.envs import OSEnver
 from utils.tokenizer import WordTokenizer
 
 
@@ -53,12 +50,13 @@ class OpenAIAgent:
             "set_proxy": False,
             f"{self.endpoint_name}": True,
         }
-        api_key_env = f"OPENAI_API_KEY"
-        init_os_envs(**env_params)
+        self.enver = OSEnver(global_scope=False)
+        self.enver.set_envs(**env_params)
         self.requests_headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {os.environ[api_key_env]}",
+            "Authorization": f"Bearer {self.enver.envs['OPENAI_API_KEY']}",
         }
+        # print(self.requests_headers)
 
         self.model = model
         self.temperature = temperature
@@ -223,11 +221,13 @@ class OpenAIAgent:
             self.chat_api,
             headers=self.requests_headers,
             json=self.requests_payload,
+            # proxies=self.enver.envs.get("http_proxy"),
         ) as response:
             # https://docs.aiohttp.org/en/stable/streams.html
             # https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb
             response_content = ""
             for line in response.iter_lines():
+                # print(line)
                 line = re.sub(r"^\s*data:\s*", "", line).strip()
                 if line:
                     try:
