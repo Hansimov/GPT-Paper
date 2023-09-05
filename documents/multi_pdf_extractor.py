@@ -64,12 +64,14 @@ class MultiPDFExtractor:
             return
         rmtree_and_mkdir(self.result_root)
 
-        self.docs_embeddings_df = pd.DataFrame()
+        df = pd.DataFrame()
         for idx, pdf_path in enumerate(self.pdf_paths):
             embedding_path = pdf_path.with_suffix("") / "texts" / "embeddings.pkl"
-            df = pd.read_pickle(embedding_path)
-            self.docs_embeddings_df = self.docs_embeddings_df.append(df)
+            doc_df = pd.read_pickle(embedding_path)
+            # self.docs_embeddings_df = self.docs_embeddings_df.append(df)
+            df = pd.concat([df, doc_df], ignore_index=True)
 
+        self.docs_embeddings_df = df
         print(self.docs_embeddings_df)
         logger.note(f"> Dump embeddings of {self.pdfs_count} PDFs")
         logger.file(f"- {self.docs_embeddings_path}", indent=2)
@@ -141,10 +143,9 @@ class MultiPDFExtractor:
 if __name__ == "__main__":
     with Runtimer():
         multi_pdf_extractor = MultiPDFExtractor("cancer_review")
-        # multi_pdf_retriever.list_pdfs()
-        # multi_pdf_retriever.extract_pdfs()
-        # multi_pdf_extractor.combine_docs_embeddings()
+        # multi_pdf_extractor.extract_pdfs()
+        multi_pdf_extractor.combine_docs_embeddings()
         # query="Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer"
-        query = "Current advances of AI-based approaches for clinical management of liver cancer"
-        query_results = multi_pdf_extractor.query_docs(query=query, quiet=True)
-        print(query_results)
+        # query = "Current advances of AI-based approaches for clinical management of liver cancer"
+        # query_results = multi_pdf_extractor.query_docs(query=query, quiet=True)
+        # print(query_results)
