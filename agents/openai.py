@@ -1,5 +1,4 @@
-import aiohttp
-import asyncio
+import httpx
 import json
 import os
 import platform
@@ -8,9 +7,6 @@ import re
 from termcolor import colored
 from utils.envs import init_os_envs
 from utils.tokenizer import WordTokenizer
-
-if platform.system() == "Windows":
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
 class OpenAIAgent:
@@ -121,7 +117,10 @@ class OpenAIAgent:
         if keep_system_message:
             self.init_history_messages()
 
-    async def async_get_available_models(self):
+        self.models_api = self.endpoint_url + self.endpoint["models"]
+        self.available_models = []
+
+    def get_available_models(self):
         """
         gpt-3.5-turbo, gpt-4, gpt-4-internet, claude-2,
         poe-llama-2-7b, poe-llama-2-13b, poe-llama-2-70b,
@@ -129,21 +128,13 @@ class OpenAIAgent:
         """
         self.models_api = self.endpoint_url + self.endpoint["models"]
         self.available_models = []
+        response = httpx.get(self.models_api)
+        data = response.json()["data"]
 
-        async with aiohttp.ClientSession() as session:
-            async with session.get(
-                self.models_api,
-                proxy=os.environ.get("http_proxy"),
-            ) as response:
-                data = (await response.json())["data"]
-                for item in data:
-                    self.available_models.append(item["id"])
-
+        for item in data:
+            self.available_models.append(item["id"])
         print(self.available_models)
-        return self.available_models
 
-    def get_available_models(self):
-        self.available_models = asyncio.run(self.async_get_available_models())
         return self.available_models
 
     def calc_max_input_message_chars(self):
@@ -163,14 +154,15 @@ class OpenAIAgent:
                     self.max_input_message_chars = max_chars
                     break
 
-    async def async_chat(
+    def chat(
         self,
         prompt="",
         stream=True,
         record=True,
         memory=False,
+        show_role=False,
         show_prompt=False,
-        show_tokens_count=False,
+        show_tokens_count=True,
         top_p=1,
         n=1,
         stop=None,
@@ -198,6 +190,9 @@ class OpenAIAgent:
         ```
         """
 
+        memory = memory if memory is not None else self.memory
+        record = record if record is not None else self.record
+
         if record:
             self.update_history_messages("user", prompt)
 
@@ -210,6 +205,8 @@ class OpenAIAgent:
         # pprint.pprint(request_messages)
         if show_prompt:
             print(f"[Human]: {prompt}")
+        if show_role:
+            print(f"[{self.name}]:", end="", flush=True)
         prompt_tokens_count = self.word_tokenizer.count_tokens(prompt)
         if show_tokens_count:
             print(f"Prompt Tokens count: [{prompt_tokens_count}]")
@@ -220,78 +217,42 @@ class OpenAIAgent:
             "stream": stream,
         }
 
-        async with aiohttp.ClientSession() as session:
-            async with session.post(
-                self.chat_api,
-                headers=self.requests_headers,
-                json=self.requests_payload,
-                proxy=os.environ.get("http_proxy"),
-            ) as response:
-                if not stream:
-                    response_data = await response.json()
-                    response_content = response_data["choices"][0]["message"]["content"]
-                    if record:
-                        self.update_history_messages("assistant", response_content)
-                    # print("[Completed]")
-                    return response_content
-                else:
-                    # https://docs.aiohttp.org/en/stable/streams.html
-                    # https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb
-                    response_content = ""
-                    async for line in response.content:
-                        # print(line)
-                        line_str = line.decode("utf-8")
-                        # print(line_str)
-                        line_str = re.sub(r"^\s*data:\s*", "", line_str).strip()
-                        # print(line_str)
-                        if line_str:
-                            line_data = json.loads(line_str)
-                            delta_data = line_data["choices"][0]["delta"]
-                            finish_reason = line_data["choices"][0]["finish_reason"]
-                            if "role" in delta_data:
-                                role = delta_data["role"]
-                                # print(f"{role}: ", end="", flush=True)
-                                # print(
-                                #     f"[{self.name.capitalize()}]: ", end="", flush=True
-                                # )
-                            if "content" in delta_data:
-                                delta_content = delta_data["content"]
-                                response_content += delta_content
-                                print(delta_content, end="", flush=True)
-                            if finish_reason == "stop":
-                                print()
-                                break
-                    if record:
-                        self.update_history_messages(role, response_content)
-                    # print("[Completed]")
-                    response_tokens_count = self.word_tokenizer.count_tokens(
-                        response_content
-                    )
-                    if show_tokens_count:
-                        print(f"Response Tokens count: [{response_tokens_count}]")
-                    return response_content
+        with httpx.stream(
+            "POST",
+            self.chat_api,
+            headers=self.requests_headers,
+            json=self.requests_payload,
+        ) as response:
+            # https://docs.aiohttp.org/en/stable/streams.html
+            # https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb
+            response_content = ""
+            for line in response.iter_lines():
+                line = re.sub(r"^\s*data:\s*", "", line).strip()
+                if line:
+                    line_data = json.loads(line)
+                    delta_data = line_data["choices"][0]["delta"]
+                    finish_reason = line_data["choices"][0]["finish_reason"]
+                    if "role" in delta_data:
+                        role = delta_data["role"]
+                        # print(f"{role}: ", end="", flush=True)
+                        # print(
+                        #     f"[{self.name.capitalize()}]: ", end="", flush=True
+                        # )
+                    if "content" in delta_data:
+                        delta_content = delta_data["content"]
+                        response_content += delta_content
+                        print(delta_content, end="", flush=True)
+                    if finish_reason == "stop":
+                        print()
+                        break
+            if record:
+                self.update_history_messages(role, response_content)
+            # print("[Completed]")
+            response_tokens_count = self.word_tokenizer.count_tokens(response_content)
+            if show_tokens_count:
+                print(f"Response Tokens count: [{response_tokens_count}]")
 
-    def chat(
-        self,
-        prompt,
-        record=None,
-        memory=None,
-        show_prompt=False,
-        show_tokens_count=True,
-    ):
-        memory = memory if memory is not None else self.memory
-        record = record if record is not None else self.record
-
-        response_content = asyncio.run(
-            self.async_chat(
-                prompt=prompt,
-                record=record,
-                memory=memory,
-                show_prompt=show_prompt,
-                show_tokens_count=show_tokens_count,
-            )
-        )
-        return response_content
+            return response_content
 
     def test_prompt(self):
         self.system_message = (
@@ -299,7 +260,7 @@ class OpenAIAgent:
             f"你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本："
         )
         prompt = "In this paper, we introduce Semantic-SAM, a universal image segmentation model to enable segment and recognize anything at any desired granularity. Our model offers two key advantages: semantic-awareness and granularity-abundance. To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information."  # For the multi-granularity capability, we propose a multi-choice learning scheme during training, enabling each click to generate masks at multiple levels that correspond to multiple ground-truth masks. Notably, this work represents the first attempt to jointly train a model on SA-1B, generic, and part segmentation datasets. Experimental results and visualizations demonstrate that our model successfully achieves semantic-awareness and granularity-abundance. Furthermore, combining SA-1B training with other segmentation tasks, such as panoptic and part segmentation, leads to performance improvements. We will provide code and a demo for further exploration and evaluation."
-        asyncio.run(self.async_chat(prompt=prompt))
+        self.chat(prompt)
 
 
 if __name__ == "__main__":
@@ -310,7 +271,7 @@ if __name__ == "__main__":
         temperature=0.0,
     )
     # agent.test_prompt()
-    agent.system_message = "Explain the following text in Chinese."
+    agent.system_message = "Explain the following text in Chinese:"
     agent.chat(
         "Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer applications"
     )
@@ -322,6 +283,6 @@ if __name__ == "__main__":
     #     model="gpt-3.5-turbo",
     #     temperature=0.0,
     # )
-    # asyncio.run(agent.async_chat(prompt1))
+    # agent.chat(prompt1)
     # prompt2 = "For the multi-granularity capability, we propose a multi-choice learning scheme during training, enabling each click to generate masks at multiple levels that correspond to multiple ground-truth masks."
-    # asyncio.run(agent.async_chat(prompt2))
+    # agent.chat(prompt2)
