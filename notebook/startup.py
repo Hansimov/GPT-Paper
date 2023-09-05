@@ -41,8 +41,8 @@ import platform
 if platform.system() == "Windows":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-nest_asyncio.apply()
 jupyter_black.load(lab=True)
+nest_asyncio.apply()
 
 print(f"Repo path:   [{repo_path}]")
 print(f"Working dir: [{work_dir}]")
