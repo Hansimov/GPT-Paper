@@ -1,7 +1,7 @@
 {
     "providerTimeout": 100,
     "showDocumentationPanel": true,
-    "autoCompletion": true,
+    "autoCompletion": false,
     "availableProviders": {
         "CompletionProvider:context": -1,
         "CompletionProvider:kernel": -1

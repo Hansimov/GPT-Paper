@@ -37,8 +37,8 @@ class OSEnver:
         openai=False,
         ninomae=False,
     ):
-        caller_info = inspect.stack()[1]
-        logger.note(f"OS Envs is set by: {caller_info.filename}")
+        # caller_info = inspect.stack()[1]
+        # logger.back(f"OS Envs is set by: {caller_info.filename}")
 
         if secrets:
             with open(Path(__file__).parents[1] / "secrets.json", "r") as rf:
