@@ -3,15 +3,12 @@
 
 # Use `%load startup.py` to load this script
 # Use `%run -i "startup.py"` to run this script in IPython namespace
-# Run this cell when initialized
 
-import asyncio
-import nest_asyncio
+# Run this cell when initialized
 import datetime
 import os
 import sys
 from pathlib import Path
-import logging
 import ipynbname
 import platform
 
@@ -19,6 +16,7 @@ repo_path = Path(os.path.abspath(".")).parent
 if str(repo_path) not in sys.path:
     sys.path.append(str(repo_path))
 work_dir = Path().absolute()
+
 if platform.system() == "Windows":
     ipynb_path = ipynbname.path()
     # ipynb_name = ipynbname.name()
@@ -33,16 +31,25 @@ from ipywidgets import HBox, Layout
 from utils.logger import logger
 from termcolor import colored
 from cells import get_above_cell_content, get_notebook_cells
-from interactions import chat
+from time import sleep
 from agents.openai import OpenAIAgent
-from agents.retriever import DocumentsRetriever
-import platform
+from agents.paper_reviewer import (
+    prompter,
+    translator,
+    summarizer,
+    synonymer,
+    outliner,
+    polisher,
+    criticizer,
+    backtracker,
+    tasker,
+    markdown_filler,
+    retriever,
+    summarize_and_translate_section,
+)
 
-if platform.system() == "Windows":
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 jupyter_black.load(lab=True)
-nest_asyncio.apply()
 
 print(f"Repo path:   [{repo_path}]")
 print(f"Working dir: [{work_dir}]")
