@@ -1,6 +1,5 @@
 import aiohttp
 import asyncio
-import nest_asyncio
 import json
 import os
 import platform
@@ -10,7 +9,6 @@ from termcolor import colored
 from utils.envs import init_os_envs
 from utils.tokenizer import WordTokenizer
 
-nest_asyncio.apply()
 if platform.system() == "Windows":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
@@ -212,9 +210,9 @@ class OpenAIAgent:
         # pprint.pprint(request_messages)
         if show_prompt:
             print(f"[Human]: {prompt}")
-        tokens_count = self.word_tokenizer.count_tokens(prompt)
+        prompt_tokens_count = self.word_tokenizer.count_tokens(prompt)
         if show_tokens_count:
-            print(f"Prompt Tokens count: [{tokens_count}]")
+            print(f"Prompt Tokens count: [{prompt_tokens_count}]")
         self.requests_payload = {
             "model": self.model,
             "messages": self.history_messages,
@@ -227,7 +225,6 @@ class OpenAIAgent:
                 self.chat_api,
                 headers=self.requests_headers,
                 json=self.requests_payload,
-                timeout=30,
                 proxy=os.environ.get("http_proxy"),
             ) as response:
                 if not stream:
@@ -254,9 +251,9 @@ class OpenAIAgent:
                             if "role" in delta_data:
                                 role = delta_data["role"]
                                 # print(f"{role}: ", end="", flush=True)
-                                print(
-                                    f"[{self.name.capitalize()}]: ", end="", flush=True
-                                )
+                                # print(
+                                #     f"[{self.name.capitalize()}]: ", end="", flush=True
+                                # )
                             if "content" in delta_data:
                                 delta_content = delta_data["content"]
                                 response_content += delta_content
@@ -267,6 +264,11 @@ class OpenAIAgent:
                     if record:
                         self.update_history_messages(role, response_content)
                     # print("[Completed]")
+                    response_tokens_count = self.word_tokenizer.count_tokens(
+                        response_content
+                    )
+                    if show_tokens_count:
+                        print(f"Response Tokens count: [{response_tokens_count}]")
                     return response_content
 
     def chat(
