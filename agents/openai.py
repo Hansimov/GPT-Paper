@@ -207,13 +207,14 @@ class OpenAIAgent:
             print(f"[Human]: {prompt}")
         if show_role:
             print(f"[{self.name}]:", end="", flush=True)
-        prompt_tokens_count = self.word_tokenizer.count_tokens(prompt)
+        self.prompt_tokens_count = self.word_tokenizer.count_tokens(prompt)
         if show_tokens_count:
-            print(f"Prompt Tokens count: [{prompt_tokens_count}]")
+            print(f"Prompt Tokens count: [{self.prompt_tokens_count}]")
         self.requests_payload = {
             "model": self.model,
             "messages": self.history_messages,
             "temperature": self.temperature,
+            "max_tokens": max_tokens,
             "stream": stream,
         }
 
@@ -229,29 +230,32 @@ class OpenAIAgent:
             for line in response.iter_lines():
                 line = re.sub(r"^\s*data:\s*", "", line).strip()
                 if line:
-                    line_data = json.loads(line)
+                    try:
+                        line_data = json.loads(line)
+                    except Exception as e:
+                        print(line_data)
+                        raise e
                     delta_data = line_data["choices"][0]["delta"]
                     finish_reason = line_data["choices"][0]["finish_reason"]
                     if "role" in delta_data:
                         role = delta_data["role"]
-                        # print(f"{role}: ", end="", flush=True)
-                        # print(
-                        #     f"[{self.name.capitalize()}]: ", end="", flush=True
-                        # )
                     if "content" in delta_data:
                         delta_content = delta_data["content"]
                         response_content += delta_content
                         print(delta_content, end="", flush=True)
                     if finish_reason == "stop":
                         print()
-                        break
+
             if record:
                 self.update_history_messages(role, response_content)
             # print("[Completed]")
-            response_tokens_count = self.word_tokenizer.count_tokens(response_content)
+            self.response_tokens_count = self.word_tokenizer.count_tokens(
+                response_content
+            )
             if show_tokens_count:
-                print(f"Response Tokens count: [{response_tokens_count}]")
-
+                print(
+                    f"Response Tokens count: [{self.response_tokens_count}] [{finish_reason}]"
+                )
             return response_content
 
     def test_prompt(self):
