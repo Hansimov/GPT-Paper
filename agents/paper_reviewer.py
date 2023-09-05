@@ -87,15 +87,23 @@ def section_sum_prompt_template(
     # Topic: {topic}
     
     # Statement:
-    <段落1> [1,2]. <段落2> [1,3]. <段落3> [4].
+    <文本段落1> [1.1, 2.1]. <文本段落2> [1.1]. <文本段落3> [3.1].
     ...
     
     # References:
-    [1] <文章1>: Page <页码>, Region <区域编号>
-    [2] <文章2>: Page <页码>, Region <区域编号>
+    [1] <Referred pdf 1>: (1) P<page_idx>.<region_idx>; (2) P<page_idx>.<region_idx>
+    [2] <Referred pdf 2>: P<page_idx>.<region_idx>
     ...
+    
     ```
-        
+    
+    参考文献格式要求：
+    1. 参考文献的顺序依据你的输出顺序，即先输出的参考文献排在前面。
+    2. 参考文献的格式为：`[<ref_idx>] '<pdf_name>': (<sub_ref_idx>) P<page_idx>.<region_idx>`。
+    其中，`<ref_idx>`为参考PDF的顺序序号，从1开始递增。`<pdf_name>`为参考文献所在的PDF文件名，`<sub_ref_idx>`为参考片段的顺序，从1开始递增编号。`<page_idx>`为参考片段所在的页码，`<region_idx>`为参考片段所在的段落序号。
+    
+    请你根据上述要求，针对提供的主题，给出{word_count}词的{lang_str}陈述：：
+    
     {extra_prompt}
     """
     return section_sum_prompt
@@ -108,10 +116,11 @@ def summarize_and_translate_section(
     section: str,
     queries: list,
     extra_prompt="",
+    query_count=20,
     word_count=500,
 ):
     # queries_str = json.dumps(queries, indent=2, ensure_ascii=False)
-    queries_str = str(queries)
+    queries_str = str(queries[:query_count])
     section_sum_prompt = section_sum_prompt_template(
         section, queries_str, extra_prompt=extra_prompt, word_count=word_count
     )
