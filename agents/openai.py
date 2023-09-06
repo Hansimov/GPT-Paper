@@ -1,4 +1,5 @@
 import httpx
+import inspect
 import json
 import os
 import re
@@ -24,6 +25,9 @@ class OpenAIAgent:
             "models": "/models",
         },
     }
+    continous_token_thresholds = {
+        "gpt-4": 950,
+    }
 
     def __init__(
         self,
@@ -44,6 +48,7 @@ class OpenAIAgent:
         self.memory = memory
         self.record = record
         self.history_messages = []
+        self.response_content = ""
 
         self.model = model
         self.temperature = temperature
@@ -144,6 +149,8 @@ class OpenAIAgent:
         prompt="",
         stream=True,
         record=True,
+        continous=False,
+        continous_token_threshold=950,
         memory=False,
         show_role=False,
         show_prompt=False,
@@ -174,6 +181,9 @@ class OpenAIAgent:
             }'
         ```
         """
+        input_args = inspect.getargvalues(inspect.currentframe()).locals
+        for arg_key in ["self", "prompt", "memory"]:
+            input_args.pop(arg_key)
 
         memory = memory if memory is not None else self.memory
         record = record if record is not None else self.record
@@ -203,18 +213,20 @@ class OpenAIAgent:
         if show_role:
             print(f"[{self.name}]:", end="", flush=True)
 
-        self.prompt_tokens_count = self.word_tokenizer.count_tokens(prompt)
+        self.prompt_tokens_count = self.word_tokenizer.count_tokens(
+            " ".join([message["content"] for message in request_messages])
+        )
 
         if show_tokens_count:
             print(f"Prompt Tokens count: [{self.prompt_tokens_count}]")
+
         self.requests_payload = {
             "model": self.model,
-            "messages": self.history_messages,
+            "messages": request_messages,
             "temperature": self.temperature,
             "max_tokens": max_tokens,
             "stream": stream,
         }
-
         with httpx.stream(
             "POST",
             self.chat_api,
@@ -246,20 +258,27 @@ class OpenAIAgent:
                     if finish_reason == "stop":
                         print()
 
-            if record:
-                self.update_history_messages(role, response_content)
-            # print("[Completed]")
-            self.response_tokens_count = self.word_tokenizer.count_tokens(
-                response_content
-            )
-            if show_tokens_count:
-                print(
-                    f"Response Tokens count: [{self.response_tokens_count}] [{finish_reason}]"
-                )
+        if record:
+            self.update_history_messages(role, response_content)
+        # print("[Completed]")
+        response_tokens_count = self.word_tokenizer.count_tokens(response_content)
+        if show_tokens_count:
+            print(f"Response Tokens count: [{response_tokens_count}] [{finish_reason}]")
 
-            enver.restore_envs()
-            os.environ = enver.envs
-            return response_content
+        if continous and response_tokens_count > continous_token_threshold:
+            print("Continue ...")
+            response_content += self.chat(
+                prompt="Complete last chat from the truncated part.",
+                memory=True,
+                **input_args,
+            )
+
+        self.response_content = response_content
+
+        enver.restore_envs()
+        os.environ = enver.envs
+
+        return response_content
 
     def test_prompt(self):
         self.system_message = (
