@@ -62,6 +62,7 @@ class Logger:
         "exit_quiet",
     ]
     LEVEL_NAMES = {
+        "critical": logging.CRITICAL,
         "error": logging.ERROR,
         "warning": logging.WARNING,
         "info": logging.INFO,
@@ -125,7 +126,7 @@ class Logger:
         self.set_level(self.log_level)
 
     def quiet(self):
-        self.set_level("error")
+        self.set_level("critical")
 
     def enter_quiet(self, quiet=False):
         if quiet:

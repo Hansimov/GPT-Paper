@@ -47,7 +47,7 @@ from agents.paper_reviewer import (
     retriever,
     summarize_and_translate_section,
 )
-
+from documents.json_checker import JsonChecker
 
 jupyter_black.load(lab=True)
 
