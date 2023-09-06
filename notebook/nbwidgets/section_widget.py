@@ -1,3 +1,4 @@
+from datetime import datetime
 import ipywidgets as widgets
 from IPython.display import display
 
@@ -12,31 +13,35 @@ class SectionWidget:
             disabled=False,
             button_style="",  # 'success', 'info', 'warning', 'danger' or ''
             tooltip="Click and generate details for this section",
-            icon="radiation",  # (FontAwesome names without the `fa-` prefix),
+            icon="radiation",
         )
-        button.on_click = self.generate_section_details
-        return button
+        button.on_click(self.button_output)
+        self.button = button
 
-    def generate_section_details(self):
-        print("Generating ...")
+    def button_output(self, button):
+        self.output.clear_output()
+        with self.output:
+            print(f"Button clicked at {datetime.now()}")
+
+    def create_output(self):
+        self.output = widgets.Output()
 
     def create_tab(self):
-        # self.button = self.create_button()
-
         tab = widgets.Tab()
         tab_titles = ["Section 1", "Section 2", "Section 3", "Section 4"]
         tab_contents = ["Content 1", "Content 2", "Content 3", "Content 4"]
         tab_children = [widgets.HTML(description=content) for content in tab_contents]
         tab.children = tab_children
         tab.titles = [title for title in tab_titles]
-        return tab
+        self.tab = tab
 
     def create_widgets(self):
-        self.widgets = []
+        self.create_output()
+        self.create_button()
+        self.create_tab()
         self.container = widgets.VBox()
-        self.button = self.create_button()
-        self.tab = self.create_tab()
-        self.widgets.extend([self.button, self.tab])
+        self.widgets = []
+        self.widgets.extend([self.button, self.tab, self.output])
         self.container.children = self.widgets
 
     def display(self):
