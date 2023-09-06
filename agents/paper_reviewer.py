@@ -1,4 +1,3 @@
-import json
 from agents.openai import OpenAIAgent
 from agents.documents_retriever import DocumentsRetriever
 

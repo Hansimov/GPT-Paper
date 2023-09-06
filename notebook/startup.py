@@ -6,6 +6,7 @@
 
 # Run this cell when initialized
 import datetime
+import json
 import os
 import sys
 from pathlib import Path
@@ -24,13 +25,11 @@ if platform.system() == "Windows":
 import jupyter_black
 import ipywidgets as widgets
 from importlib import reload
-from IPython.display import display
-from IPython.display import HTML
-from ipywidgets import Image as wImage
-from ipywidgets import HBox, Layout
+from IPython.display import display, HTML
 from utils.logger import logger
 from termcolor import colored
 from cells import get_above_cell_content, get_notebook_cells
+from nbwidgets.section_widget import SectionWidget
 from time import sleep
 from agents.openai import OpenAIAgent
 from agents.paper_reviewer import (
