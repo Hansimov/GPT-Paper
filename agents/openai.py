@@ -220,6 +220,7 @@ class OpenAIAgent:
             self.chat_api,
             headers=self.requests_headers,
             json=self.requests_payload,
+            timeout=httpx.Timeout(connect=15, read=60, write=15, pool=None),
             # proxies=self.enver.envs.get("http_proxy"),
         ) as response:
             # https://docs.aiohttp.org/en/stable/streams.html
