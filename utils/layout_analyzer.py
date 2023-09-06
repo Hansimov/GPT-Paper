@@ -11,7 +11,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from termcolor import colored
 from utils.logger import logger, shell_cmd
-from utils.envs import OSEnver, setup_envs_of_dit
+from utils.envs import enver, setup_envs_of_dit
 from utils.calculator import (
     rect_area,
     rect_overlap,
@@ -21,13 +21,6 @@ from utils.calculator import (
 )
 
 warnings.filterwarnings("ignore")
-
-# setup_envs_of_dit()
-enver = OSEnver()
-if platform.system() == "Windows":
-    enver.set_envs(cuda_device=0, huggingface=True)
-else:
-    enver.set_envs(cuda_device=3)
 
 
 try:
@@ -67,12 +60,16 @@ class DITLayoutAnalyzer:
     def setup_model(self, quiet=True):
         logger.note("> Setting up model of DITLayoutAnalyzer ...")
         logger.enter_quiet(quiet)
+        enver.set_envs(set_proxy=True, cuda_device=True, huggingface=True)
+        os.environ = enver.envs
         self.load_configs()
         self.load_weights()
         self.set_device()
         self.create_predictor()
         self.set_metadata()
         self.is_setup_model = True
+        enver.restore_envs()
+        os.environ = enver.envs
         logger.exit_quiet(quiet)
 
     def test_run(self):

@@ -10,7 +10,6 @@ from termcolor import colored
 from tqdm import tqdm
 
 from utils.calculator import get_int_digits
-from utils.envs import OSEnver
 from utils.file import rmtree_and_mkdir
 from utils.layout_analyzer import (
     DITLayoutAnalyzer,
@@ -29,9 +28,6 @@ from utils.tokenizer import (
     df_column_to_torch_tensor,
 )
 from documents.text_extractor import TextExtractor
-
-enver = OSEnver()
-enver.set_envs(cuda_device=0, huggingface=True)
 
 
 class PDFVisualExtractor:

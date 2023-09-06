@@ -3,7 +3,7 @@ import requests
 import tiktoken
 import torch
 from nltk.tokenize import sent_tokenize
-from utils.envs import OSEnver
+from utils.envs import enver
 from utils.logger import logger, Runtimer
 from sentence_transformers import SentenceTransformer, CrossEncoder
 from sentence_transformers import util as st_util
@@ -80,8 +80,8 @@ def get_embedding_with_api(
     endpoint="openai",
     model="text-embedding-ada-002",
 ):
-    enver = OSEnver()
-    enver.set_envs(openai=True)
+    enver.set_envs(set_proxy=True, openai=True)
+    os.environ = enver.envs
 
     """
     Response Example:
@@ -130,6 +130,10 @@ def get_embedding_with_api(
             "model": model,
         },
     )
+
+    enver.restore_envs()
+    os.environ = enver.envs
+
     data = response.json()["data"]
     embedding = data[0]["embedding"]
     token_count = response.json()["usage"]["prompt_tokens"]
@@ -161,10 +165,12 @@ class BiEncoderX:
 
     def load_model(self, quiet=True):
         logger.enter_quiet(quiet)
-        enver = OSEnver()
-        enver.set_envs(cuda_device=0, huggingface=True)
         logger.note(f"> Using embedding model: [{self.model_name}]")
+        enver.set_envs(set_proxy=True, cuda_device=True, huggingface=True)
+        os.environ = enver.envs
         self.model = SentenceTransformer(self.model_name)
+        enver.restore_envs()
+        os.environ = enver.envs
         self.is_load_model = True
         logger.exit_quiet(quiet)
 
@@ -214,7 +220,11 @@ class CrossEncoderX:
     def load_model(self, quiet=True):
         logger.enter_quiet(quiet)
         logger.note(f"> Using CrossEncoder model: [{self.model_name}]")
+        enver.set_envs(set_proxy=True, cuda_device=True, huggingface=True)
+        os.environ = enver.envs
         self.model = CrossEncoder(self.model_name)
+        enver.restore_envs()
+        os.environ = enver.envs
         self.is_load_model = True
         logger.exit_quiet(quiet)
 

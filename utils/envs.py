@@ -31,14 +31,18 @@ class OSEnver:
         self,
         secrets=True,
         set_proxy=False,
-        cuda_device=None,
+        cuda_device=True,
         cuda_alloc=True,
         huggingface=True,
         openai=False,
         ninomae=False,
+        store_envs=True,
     ):
         # caller_info = inspect.stack()[1]
         # logger.back(f"OS Envs is set by: {caller_info.filename}")
+
+        if store_envs:
+            self.store_envs()
 
         if secrets:
             with open(Path(__file__).parents[1] / "secrets.json", "r") as rf:
@@ -84,14 +88,20 @@ class OSEnver:
             for env_name, env_path in st_envs.items():
                 self.envs[env_name] = str(cache_root / f"{env_path}")
 
-        if cuda_device:
-            self.envs["CUDA_VISIBLE_DEVICES"] = str(cuda_device)
+        if cuda_device is True:
+            if platform.system() == "Windows":
+                self.envs["CUDA_VISIBLE_DEVICES"] = "0"
+            else:
+                self.envs["CUDA_VISIBLE_DEVICES"] = "3"
 
         if cuda_alloc:
             self.envs["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
         if self.global_scope:
             os.environ = self.envs
+
+
+enver = OSEnver()
 
 
 def copy_to_site_packaegs(package_path):
@@ -306,9 +316,11 @@ def download_nltk_data():
 
 
 if __name__ == "__main__":
-    enver = OSEnver()
-    enver.set_envs()
+    enver.set_envs(set_proxy=True)
+    os.environ = enver.envs
     # check_camelot_dependencies()
     # setup_envs_of_dit()
     # download_reading_bank_dataset()
     download_nltk_data()
+    enver.restore_envs()
+    os.environ = enver.envs

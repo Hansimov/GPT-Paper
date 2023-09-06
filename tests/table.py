@@ -1,12 +1,13 @@
+import os
+import torch
 from huggingface_hub import hf_hub_download
 from transformers import AutoImageProcessor, TableTransformerForObjectDetection
-import torch
 from pathlib import Path
 from PIL import Image, ImageDraw
-from utils.envs import OSEnver
+from utils.envs import enver
 
-enver = OSEnver
-OSEnver.set_envs(set_proxy=True, cuda_device=3)
+enver.set_envs(set_proxy=True)
+os.environ = enver.envs
 
 # file_path = hf_hub_download(
 #     repo_id="nielsr/example-pdf", repo_type="dataset", filename="example_pdf.png"
@@ -48,3 +49,7 @@ for rect in rects:
 output_image_path = Path(__file__).parent / "example_pdf_output.png"
 with open(output_image_path, "wb") as wf:
     image.save(output_image_path)
+
+
+enver.restore_envs()
+os.environ = enver.envs

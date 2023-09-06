@@ -1,4 +1,5 @@
 import json
+import os
 import pandas as pd
 from collections import defaultdict
 from pathlib import Path
@@ -6,7 +7,7 @@ from sentence_transformers.util import semantic_search
 from termcolor import colored
 
 from utils.calculator import get_int_digits
-from utils.envs import OSEnver
+from utils.envs import enver
 from utils.file import rmtree_and_mkdir
 from utils.layout_analyzer import draw_regions_on_page
 from utils.logger import logger, add_fillers, Runtimer
@@ -20,8 +21,8 @@ from utils.tokenizer import (
 
 def query_embeddings_df(query, df, retrieve_n=100, rerank_n=10, quite=False):
     logger.enter_quiet(quite)
-    enver = OSEnver()
-    enver.set_envs(cuda_device=0, huggingface=True)
+    enver.set_envs(cuda_device=True, huggingface=True)
+    os.environ = enver.envs
 
     doc_embeddings_tensors = df_column_to_torch_tensor(df["embedding"])
     df_doc_texts = df["text"].values.tolist()
@@ -108,6 +109,8 @@ def query_embeddings_df(query, df, retrieve_n=100, rerank_n=10, quite=False):
         logger.restore_indent()
 
     logger.exit_quiet(quite)
+    enver.restore_envs()
+    os.environ = enver.envs
     return rerank_results_df_scores_and_idxs
     # Dump to query results page json
     query_results_page_region_idxs = defaultdict(list)
