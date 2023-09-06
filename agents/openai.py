@@ -2,7 +2,7 @@ import httpx
 import json
 import os
 import re
-from utils.envs import OSEnver
+from utils.envs import enver
 from utils.tokenizer import WordTokenizer
 
 
@@ -44,19 +44,6 @@ class OpenAIAgent:
         self.memory = memory
         self.record = record
         self.history_messages = []
-
-        env_params = {
-            "secrets": True,
-            "set_proxy": False,
-            f"{self.endpoint_name}": True,
-        }
-        self.enver = OSEnver(global_scope=False)
-        self.enver.set_envs(**env_params)
-        self.requests_headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {self.enver.envs['OPENAI_API_KEY']}",
-        }
-        # print(self.requests_headers)
 
         self.model = model
         self.temperature = temperature
@@ -191,6 +178,16 @@ class OpenAIAgent:
         memory = memory if memory is not None else self.memory
         record = record if record is not None else self.record
 
+        env_params = {
+            f"{self.endpoint_name}": True,
+        }
+        enver.set_envs(secrets=True, set_proxy=True, **env_params)
+        os.environ = enver.envs
+        self.requests_headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {enver.envs['OPENAI_API_KEY']}",
+        }
+
         if record:
             self.update_history_messages("user", prompt)
 
@@ -205,7 +202,9 @@ class OpenAIAgent:
             print(f"[Human]: {prompt}")
         if show_role:
             print(f"[{self.name}]:", end="", flush=True)
+
         self.prompt_tokens_count = self.word_tokenizer.count_tokens(prompt)
+
         if show_tokens_count:
             print(f"Prompt Tokens count: [{self.prompt_tokens_count}]")
         self.requests_payload = {
@@ -256,6 +255,9 @@ class OpenAIAgent:
                 print(
                     f"Response Tokens count: [{self.response_tokens_count}] [{finish_reason}]"
                 )
+
+            enver.restore_envs()
+            os.environ = enver.envs
             return response_content
 
     def test_prompt(self):
