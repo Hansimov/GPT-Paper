@@ -25,7 +25,7 @@ import jupyter_black
 import ipywidgets as widgets
 from importlib import reload
 from IPython.display import display
-from IPython.display import Javascript
+from IPython.display import HTML
 from ipywidgets import Image as wImage
 from ipywidgets import HBox, Layout
 from utils.logger import logger
@@ -43,7 +43,7 @@ from agents.paper_reviewer import (
     criticizer,
     backtracker,
     tasker,
-    markdown_filler,
+    outline_filler,
     retriever,
     summarize_and_translate_section,
 )

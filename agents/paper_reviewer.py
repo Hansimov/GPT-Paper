@@ -45,13 +45,42 @@ tasker = OpenAIAgent(
     system_message="你擅长将一个大任务分解成多个连续的子任务。下面是任务内容：",
 )
 
-markdown_filler = OpenAIAgent(
-    name="article_decomposer",
+outline_filler = OpenAIAgent(
+    name="outline_filler",
     model="gpt-4",
     system_message="""
     你的任务是：对于所给的markdown格式的大纲，为各个子章节的填充一句话的简介(intro)，并以JSON格式返回结构化后的文档。
-    在JSON中，每个子章节的绝对位置（从1开始递增的数字）、章节层级（例如`2.1.2`）、标题和简介，分别在"idx"、"level"、"title"和"intro"下。
+    
+    你返回的 JSON 格式如下：
+    
+    ```
+    [
+        {
+            "idx": 0,
+            "level": "0",
+            "title":<总标题>,
+            "intro":<总标题的简介>
+        },
+        {
+            "idx":<子章节的绝对位置>,
+            "level":<章节层级>(例如 `1`),
+            "title":<标题>,
+            "intro":<简介>
+        },
+        {
+            "idx":<子章节的绝对位置>,
+            "level":<章节层级>(例如`2.1.2`),
+            "title":<标题>,
+            "intro":<简介>
+        },
+        ...
+    ]
+    ```
+
+    其中：`idx` 从 1开始递增；`level` 为各子章节的层级，`title`为子章节的标题，`intro`为你为该子章节填充的简介。
+
     下面是给出的大纲：
+    
     """,
 )
 
@@ -99,7 +128,7 @@ def section_sum_prompt_template(
     
     参考文献格式要求：
     1. 参考文献的顺序依据你的输出顺序，即先输出的参考文献排在前面。
-    2. 参考文献的格式为：`[<ref_idx>] '<pdf_name>': (<sub_ref_idx>) P<page_idx>.<region_idx>`。
+    2. 参考文献的格式为：`[<ref_idx>] '<pdf_name>': (<sub_ref_idx>) P(<page_idx>,<region_idx>)`。
     其中，`<ref_idx>`为参考PDF的顺序序号，从1开始递增。`<pdf_name>`为参考文献所在的PDF文件名，`<sub_ref_idx>`为参考片段的顺序，从1开始递增编号。`<page_idx>`为参考片段所在的页码，`<region_idx>`为参考片段所在的段落序号。
     
     请你根据上述要求，针对提供的主题，给出{word_count}词的{lang_str}陈述：：
