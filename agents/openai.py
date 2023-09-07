@@ -4,6 +4,7 @@ import inspect
 import json
 import os
 import re
+from pathlib import Path
 from utils.envs import enver
 from utils.tokenizer import WordTokenizer
 
@@ -16,12 +17,11 @@ class OpenAIAgent:
 
     endpoint_apis = {
         "openai": {
-            "url": "https://api.openai.com",
-            "chat": "/v1/chat/completions",
-            "models": "/v1/models",
+            "url": "https://api.openai.com/v1",
+            "chat": "/chat/completions",
+            "models": "/models",
         },
         "ninomae": {
-            "url": "https://api-thanks.ninomae.live",
             "chat": "/chat/completions",
             "models": "/models",
         },
@@ -46,7 +46,13 @@ class OpenAIAgent:
         self.name = name
         self.endpoint_name = endpoint_name
         self.endpoint = self.endpoint_apis[self.endpoint_name]
-        self.endpoint_url = self.endpoint["url"]
+        if "url" in self.endpoint:
+            self.endpoint_url = self.endpoint["url"]
+        else:
+            with open(Path(__file__).parents[1] / "secrets.json", "r") as rf:
+                secrets = json.load(rf)
+            self.endpoint_url = secrets[f"{self.endpoint_name}_endpoint"]
+
         self.chat_api = self.endpoint_url + self.endpoint["chat"]
         self.memory = memory
         self.record = record
@@ -116,9 +122,10 @@ class OpenAIAgent:
 
     def get_available_models(self):
         """
-        gpt-3.5-turbo, gpt-4, gpt-4-internet, claude-2,
+        gpt-3.5-turbo,
+        poe-gpt-3.5-turbo, poe-gpt-3.5-turbo-16k, poe-gpt-4
+        poe-saga, poe-claude-instant, poe-google-palm,
         poe-llama-2-7b, poe-llama-2-13b, poe-llama-2-70b,
-        poe-gpt-3.5-turbo, poe-saga, poe-claude-instant, poe-google-palm,
         """
         self.models_api = self.endpoint_url + self.endpoint["models"]
         self.available_models = []
@@ -245,9 +252,10 @@ class OpenAIAgent:
             # https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb
             response_content = ""
             for line in response.iter_lines():
-                # print(line)
-                line = re.sub(r"^\s*data:\s*", "", line).strip()
-                line = re.sub(r"^\s*\[DONE\]\s*", "", line).strip()
+                remove_patterns = [r"^\s*data:\s*", r"^\s*\[DONE\]\s*"]
+                for pattern in remove_patterns:
+                    line = re.sub(pattern, "", line).strip()
+
                 if line:
                     try:
                         line_data = json.loads(line)
