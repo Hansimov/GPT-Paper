@@ -9,13 +9,15 @@ class DocumentsRetriever:
         self.project_dir = project_dir
         self.multi_pdf_extractor = MultiPDFExtractor(project_dir)
 
-    def query(self, query: str, rerank_n=20, text_only=False) -> list:
-        query_results = self.multi_pdf_extractor.query_docs(
-            query, rerank_n=rerank_n, quiet=True
-        )
-        if text_only:
-            query_results = [item["text"] for item in query_results]
-        else:
+    def query(self, queries: list | str, rerank_n=20) -> list:
+        if type(queries) == str:
+            queries = [queries]
+
+        queries_results = []
+        for query in queries:
+            query_results = self.multi_pdf_extractor.query_docs(
+                query, rerank_n=rerank_n, quiet=True
+            )
             query_results = [
                 {
                     "pdf_name": item["pdf_name"],
@@ -26,17 +28,10 @@ class DocumentsRetriever:
                 }
                 for item in query_results
             ]
-        # query_results = json.dumps(query_results, indent=2, ensure_ascii=False)
-        return query_results
+            queries_results.append(query_results)
 
-    def query_multi(self, queries: list, rerank_n=20, text_only=False) -> list:
-        query_results = []
-        for query in queries:
-            query_results.append(
-                self.query(query, rerank_n=rerank_n, text_only=text_only)
-            )
-        query_results = self.combine_query_results(query_results)
-        return query_results
+        queries_results = self.combine_query_results(queries_results)
+        return queries_results
 
     def group_query_results_by_pdf_name(self, query_results: list) -> dict:
         # Group query results by pdf_name
