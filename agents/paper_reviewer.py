@@ -15,7 +15,6 @@ summarizer = OpenAIAgent(
     name="summarizer",
     model="gpt-4",
     system_message="你是一个擅长总结文章的学术专家。对于提供的文本，你总是能给出易于理解和总结。下面是提供的文本：",
-    memory=True,
 )
 synonymer = OpenAIAgent(
     name="synonymer",
@@ -83,75 +82,76 @@ outline_filler = OpenAIAgent(
     """,
 )
 
-section_summarizer = OpenAIAgent(
-    name="section_summarizer",
-    model="gpt-4",
-    system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
-)
 
+class SectionSummarizer(OpenAIAgent):
+    def __init__(self):
+        super().__init__(
+            name="section_summarizer",
+            model="gpt-4",
+            system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
+        )
 
-def section_sum_prompt_template(
-    topic, queries_str, extra_prompt="", word_count=500, lang="en"
-):
-    lang_map = {"en": "英文", "zh": "中文"}
-    lang_str = lang_map[lang]
+    def chat(self, topic, queries, extra_prompt="", word_count=600):
+        prompt = self.create_prompt(
+            topic=topic,
+            queries=queries,
+            extra_prompt=extra_prompt,
+            word_count=word_count,
+        )
+        return super().chat(prompt)
 
-    section_sum_prompt = f"""
-    请你根据以下主题，给出{word_count}词的{lang_str}陈述：：
-    
-    ```
-    {topic}
-    ```
-    
-    下面是你参考的文本，你的结论必须从该文本中提取：
-    
-    ```
-    {queries_str}
-    ```
+    def create_prompt(
+        self,
+        topic,
+        queries,
+        query_count=20,
+        extra_prompt="",
+        word_count=500,
+        lang="en",
+    ):
+        queries_str = str(queries[:query_count])
+        lang_map = {"en": "英文", "zh": "中文"}
+        lang_str = lang_map[lang]
 
-    你的输出格式：
-    
-    ```
-    # Topic: {topic}
-    
-    # Statement:
-    <文本段落1> [1.1, 2.1]. <文本段落2> [1.1]. <文本段落3> [3.1].
-    ...
-    
-    # References:
-    [1] <Referred pdf 1>: (1) P<page_idx>.<region_idx>; (2) P<page_idx>.<region_idx>
-    [2] <Referred pdf 2>: P<page_idx>.<region_idx>
-    ...
-    
-    ```
-    
-    参考文献格式要求：
-    1. 参考文献的顺序依据你的输出顺序，即先输出的参考文献排在前面。
-    2. 参考文献的格式为：`[<ref_idx>] '<pdf_name>': (<sub_ref_idx>) P(<page_idx>,<region_idx>)`。
-    其中，`<ref_idx>`为参考PDF的顺序序号，从1开始递增。`<pdf_name>`为参考文献所在的PDF文件名，`<sub_ref_idx>`为参考片段的顺序，从1开始递增编号。`<page_idx>`为参考片段所在的页码，`<region_idx>`为参考片段所在的段落序号。
-    
-    请你根据上述要求，针对提供的主题，给出{word_count}词的{lang_str}陈述：：
-    
-    {extra_prompt}
-    """
-    return section_sum_prompt
+        combined_prompt = f"""
+        请你根据以下主题，给出{word_count}词的{lang_str}陈述：：
+        
+        ```
+        {topic}
+        ```
+        
+        下面是你参考的文本，你的结论必须从该文本中提取：
+        
+        ```
+        {queries_str}
+        ```
+
+        你的输出格式：
+        
+        ```
+        # Topic: {topic}
+        
+        # Statement:
+        <文本段落1> [1.1, 2.1]. <文本段落2> [1.1]. <文本段落3> [3.1].
+        ...
+        
+        # References:
+        [1] <Referred pdf 1>: (1) P<page_idx>.<region_idx>; (2) P<page_idx>.<region_idx>
+        [2] <Referred pdf 2>: P<page_idx>.<region_idx>
+        ...
+        
+        ```
+        
+        参考文献格式要求：
+        1. 参考文献的顺序依据你的输出顺序，即先输出的参考文献排在前面。
+        2. 参考文献的格式为：`[<ref_idx>] '<pdf_name>': (<sub_ref_idx>) P(<page_idx>,<region_idx>)`。
+        其中，`<ref_idx>`为参考PDF的顺序序号，从1开始递增。`<pdf_name>`为参考文献所在的PDF文件名，`<sub_ref_idx>`为参考片段的顺序，从1开始递增编号。`<page_idx>`为参考片段所在的页码，`<region_idx>`为参考片段所在的段落序号。
+        
+        请你根据上述要求，针对提供的主题，给出{word_count}词的{lang_str}陈述：：
+        
+        {extra_prompt}
+        """
+        return combined_prompt
 
 
 retriever = DocumentsRetriever("cancer_review")
-
-
-def summarize_and_translate_section(
-    section: str,
-    queries: list,
-    extra_prompt="",
-    query_count=20,
-    word_count=500,
-):
-    # queries_str = json.dumps(queries, indent=2, ensure_ascii=False)
-    queries_str = str(queries[:query_count])
-    section_sum_prompt = section_sum_prompt_template(
-        section, queries_str, extra_prompt=extra_prompt, word_count=word_count
-    )
-    section_sum_res = section_summarizer.chat(section_sum_prompt)
-    section_trans_res = translator.chat(section_sum_res)
-    return section_sum_res, section_trans_res

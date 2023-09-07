@@ -3,7 +3,7 @@ import ipywidgets as widgets
 from IPython.display import display
 
 
-class SectionWidget:
+class SectionEditor:
     def __init__(self):
         self.create_widgets()
 
