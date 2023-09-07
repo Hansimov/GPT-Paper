@@ -28,6 +28,7 @@ class OpenAIAgent:
     }
     continous_token_thresholds = {
         "gpt-4": 950,
+        "poe-gpt-3.5-turbo-16k": 2000,
     }
 
     def __init__(
@@ -38,6 +39,7 @@ class OpenAIAgent:
         temperature=0,
         system_message=None,
         max_input_message_chars=None,
+        continuous=False,
         memory=False,
         record=True,
     ):
@@ -53,6 +55,7 @@ class OpenAIAgent:
 
         self.model = model
         self.temperature = temperature
+        self.continuous = continuous
         self.system_message = system_message
         self.max_input_message_chars = max_input_message_chars
         self.word_tokenizer = WordTokenizer()
@@ -150,8 +153,7 @@ class OpenAIAgent:
         prompt="",
         stream=True,
         record=True,
-        continous=False,
-        continous_token_threshold=950,
+        continous=None,
         memory=False,
         show_role=False,
         show_prompt=False,
@@ -188,6 +190,7 @@ class OpenAIAgent:
 
         memory = memory if memory is not None else self.memory
         record = record if record is not None else self.record
+        continous = continous if continous is not None else self.continuous
 
         env_params = {
             f"{self.endpoint_name}": True,
@@ -235,7 +238,7 @@ class OpenAIAgent:
             self.chat_api,
             headers=self.requests_headers,
             json=self.requests_payload,
-            timeout=httpx.Timeout(connect=60, read=60, write=60, pool=None),
+            timeout=httpx.Timeout(connect=20, read=60, write=20, pool=None),
             # proxies=self.enver.envs.get("http_proxy"),
         ) as response:
             # https://docs.aiohttp.org/en/stable/streams.html
@@ -273,6 +276,9 @@ class OpenAIAgent:
         if show_tokens_count:
             print(f"Response Tokens count: [{response_tokens_count}] [{finish_reason}]")
 
+        continous_token_threshold = self.continous_token_thresholds.get(
+            self.model, 4000
+        )
         if continous and response_tokens_count > continous_token_threshold:
             print("Continue ...")
             response_content += self.chat(

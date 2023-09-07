@@ -91,14 +91,15 @@ class SectionSummarizer(OpenAIAgent):
             system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
         )
 
-    def chat(self, topic, queries, extra_prompt="", word_count=600):
+    def run(self, topic, queries, extra_prompt="", word_count=600):
         prompt = self.create_prompt(
             topic=topic,
             queries=queries,
             extra_prompt=extra_prompt,
             word_count=word_count,
         )
-        response_content = super().chat(prompt, continous=True)
+        super_instance = super()
+        response_content = super_instance.chat(prompt, continous=True)
         return response_content
 
     def create_prompt(
