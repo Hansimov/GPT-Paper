@@ -87,7 +87,7 @@ class SectionSummarizer(OpenAIAgent):
     def __init__(self):
         super().__init__(
             name="section_summarizer",
-            model="gpt-4",
+            model="gpt-3.5-turbo",
             system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
         )
 
@@ -98,7 +98,8 @@ class SectionSummarizer(OpenAIAgent):
             extra_prompt=extra_prompt,
             word_count=word_count,
         )
-        return super().chat(prompt)
+        response_content = super().chat(prompt, continous=True)
+        return response_content
 
     def create_prompt(
         self,
@@ -136,8 +137,9 @@ class SectionSummarizer(OpenAIAgent):
         ...
         
         # References:
-        [1] <Referred pdf 1>: (1) P<page_idx>.<region_idx>; (2) P<page_idx>.<region_idx>
-        [2] <Referred pdf 2>: P<page_idx>.<region_idx>
+        [1] <Referred pdf 1>: (1) P(<page_idx>,<region_idx>); (2) P(<page_idx>,<region_idx>)
+        [2] <Referred pdf 2>: P(<page_idx>,<region_idx>)
+        [3] ...
         ...
         
         ```

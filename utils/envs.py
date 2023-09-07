@@ -50,11 +50,7 @@ class OSEnver:
 
         if set_proxy:
             for proxy_env in ["http_proxy", "https_proxy"]:
-                # self.envs[proxy_env] = secrets["http_proxy"]
-                pass
-        # else:
-        #     for proxy_env in ["http_proxy", "https_proxy"]:
-        #         os.environ.pop(proxy_env, None)
+                self.envs[proxy_env] = secrets["http_proxy"]
 
         if openai:
             self.envs["OPENAI_API_KEY"] = secrets["openai_api_key"]

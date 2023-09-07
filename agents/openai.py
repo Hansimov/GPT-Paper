@@ -191,9 +191,11 @@ class OpenAIAgent:
         env_params = {
             f"{self.endpoint_name}": True,
         }
-        enver.set_envs(secrets=True, set_proxy=True, **env_params)
+        enver.set_envs(secrets=True, set_proxy=False, **env_params)
         os.environ = enver.envs
+        # print(os.environ.get("http_proxy"))
         self.requests_headers = {
+            # "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
             "Content-Type": "application/json",
             "Authorization": f"Bearer {enver.envs['OPENAI_API_KEY']}",
         }
@@ -232,7 +234,7 @@ class OpenAIAgent:
             self.chat_api,
             headers=self.requests_headers,
             json=self.requests_payload,
-            timeout=httpx.Timeout(connect=15, read=60, write=15, pool=None),
+            timeout=httpx.Timeout(connect=60, read=60, write=60, pool=None),
             # proxies=self.enver.envs.get("http_proxy"),
         ) as response:
             # https://docs.aiohttp.org/en/stable/streams.html
@@ -247,6 +249,7 @@ class OpenAIAgent:
                     except Exception as e:
                         print(line_data)
                         raise e
+                    # print(line_data)
                     delta_data = line_data["choices"][0]["delta"]
                     finish_reason = line_data["choices"][0]["finish_reason"]
                     if "role" in delta_data:
@@ -293,7 +296,7 @@ if __name__ == "__main__":
     agent = OpenAIAgent(
         name="ninomae",
         endpoint_name="ninomae",
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         temperature=0.0,
     )
     # agent.test_prompt()
