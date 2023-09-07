@@ -5,6 +5,7 @@ secrets.json
 pdfs/**/*.png
 pdfs/**/*.json
 !pdfs/**/texts/*.json
+!pdfs/**/crops_ordered/**/*.png
 
 data/
 
