@@ -1,3 +1,4 @@
+import ast
 import httpx
 import inspect
 import json
@@ -243,12 +244,16 @@ class OpenAIAgent:
             for line in response.iter_lines():
                 # print(line)
                 line = re.sub(r"^\s*data:\s*", "", line).strip()
+                line = re.sub(r"^\s*\[DONE\]\s*", "", line).strip()
                 if line:
                     try:
                         line_data = json.loads(line)
                     except Exception as e:
-                        print(line_data)
-                        raise e
+                        try:
+                            line_data = ast.literal_eval(line)
+                        except:
+                            print(line_data)
+                            raise e
                     # print(line_data)
                     delta_data = line_data["choices"][0]["delta"]
                     finish_reason = line_data["choices"][0]["finish_reason"]
