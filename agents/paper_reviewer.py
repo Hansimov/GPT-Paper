@@ -113,7 +113,7 @@ class SectionSummarizer:
             translate_content = ""
         return sum_content, translate_content
 
-    def create_prompt(
+    def create_sum_prompt(
         self,
         topic,
         queries,
@@ -121,7 +121,7 @@ class SectionSummarizer:
         extra_prompt="",
         word_count=500,
         lang="en",
-        output_type="json",
+        output_type="text",
     ):
         queries_str = str(queries[:query_count])
         lang_map = {"en": "英文", "zh": "中文"}
@@ -133,21 +133,27 @@ class SectionSummarizer:
             # Topic: {topic}
             
             # Statement:
-            <文本段落1> [1.1, 2.1]. <文本段落2> [1.1]. <文本段落3> [3.1].
+            
+            <文本段落1> [<pdf_num>-<page_num>.<region_num>, ...].
+            <文本段落2> [<pdf_num>-<page_num>.<region_num>, ...].
+            <文本段落3> [<pdf_num>-<page_num>.<region_num>, ...].
             ...
             
             # References:
-            [1] <Referred pdf 1>: (1) P(<page_idx>,<region_idx>); (2) P(<page_idx>,<region_idx>)
-            [2] <Referred pdf 2>: P(<page_idx>,<region_idx>)
-            [3] ...
+            [1] <Refer pdf name 1>
+            [2] <Refer pdf name 2>
+            [3] <Refer pdf name 3>
+            [4] ...
             ...
+            
             ```
 
             参考文献格式要求：
             
             1. 参考文献的顺序依据你的输出顺序，即先输出的参考文献排在前面。
-            2. 参考文献的格式为：`[<ref_idx>] '<pdf_name>': (<sub_ref_idx>) P(<page_idx>,<region_idx>)`。
-            其中，`<ref_idx>`为参考PDF的顺序序号，从1开始递增。`<pdf_name>`为参考文献所在的PDF文件名，`<sub_ref_idx>`为参考片段的顺序，从1开始递增编号。`<page_idx>`为参考片段所在的页码，`<region_idx>`为参考片段所在的段落序号。
+            2. 根据你输出的陈述文本参考的PDF引用顺序排列，即先引用的参考文献排在前面。
+            `<ref_pdf_order>`表示该段文本所参考的PDF在"References"里的顺序，为整数，从1开始。
+            `<page_num>`表示PDF中对应的页码，`<region_num>`表示对应的文本块的序号。
             """
         elif output_type == "json":
             output_formats = f"""
@@ -180,7 +186,7 @@ class SectionSummarizer:
             格式说明：
             1. "statements"中，`text`表示段落文本内容，`"refs"`中的`<ref_pdf_order>`表示该段文本所参考的PDF在"references"里的顺序，为整数，从1开始。根据你输出的陈述文本参考的PDF引用顺序排列，即先引用的参考文献排在前面。
             `<page_num>`表示PDF中对应的页码，`<region_num>`表示对应的文本块的序号。
-            2. "refereces"中，关键字中的数字表示参考文献的顺序，为整数，从1开始。`"pdf_name"`表示参考文献所在的PDF文件名。
+            2. "references"中，关键字中的数字表示参考文献的顺序，为整数，从1开始。`"pdf_name"`表示参考文献所在的PDF文件名。
             """
 
         combined_prompt = f"""
@@ -200,7 +206,6 @@ class SectionSummarizer:
         
         {output_formats}
         
-        请不要输出额外的内容！
         
         请你根据上述要求，针对提供的主题，给出{word_count}词的{lang_str}陈述。
         
