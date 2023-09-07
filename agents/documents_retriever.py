@@ -91,20 +91,12 @@ class DocumentsRetriever:
             combined_query_res, key=lambda x: x["score"], reverse=True
         )
 
-        # drop score items
-        combined_query_res = [
-            {
-                "pdf_name": item["pdf_name"],
-                "page_idx": item["page_idx"],
-                "region_idx": item["region_idx"],
-                "text": item["text"],
-            }
-            for item in combined_query_res
-        ]
         # remove duplicates
-        combined_query_res = [
-            dict(t) for t in {tuple(d.items()) for d in combined_query_res}
-        ]
+        unique_keys = ("pdf_name", "page_idx", "region_idx")
+
+        combined_query_res = list(
+            {tuple(d[k] for k in unique_keys): d for d in combined_query_res}.values()
+        )
 
         print(f"{len(combined_query_res)} queries after combined.")
 
