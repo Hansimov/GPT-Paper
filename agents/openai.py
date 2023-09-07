@@ -26,9 +26,10 @@ class OpenAIAgent:
             "models": "/models",
         },
     }
-    continous_token_thresholds = {
+    continuous_token_thresholds = {
         "gpt-4": 950,
         "poe-gpt-3.5-turbo-16k": 2000,
+        "gpt-3.5-turbo": 1500,
     }
 
     def __init__(
@@ -160,7 +161,7 @@ class OpenAIAgent:
         prompt="",
         stream=True,
         record=True,
-        continous=None,
+        continuous=None,
         memory=False,
         show_role=False,
         show_prompt=False,
@@ -197,7 +198,7 @@ class OpenAIAgent:
 
         memory = memory if memory is not None else self.memory
         record = record if record is not None else self.record
-        continous = continous if continous is not None else self.continuous
+        continuous = continuous if continuous is not None else self.continuous
 
         env_params = {
             f"{self.endpoint_name}": True,
@@ -284,10 +285,10 @@ class OpenAIAgent:
         if show_tokens_count:
             print(f"Response Tokens count: [{response_tokens_count}] [{finish_reason}]")
 
-        continous_token_threshold = self.continous_token_thresholds.get(
+        continuous_token_threshold = self.continuous_token_thresholds.get(
             self.model, 4000
         )
-        if continous and response_tokens_count > continous_token_threshold:
+        if continuous and response_tokens_count > continuous_token_threshold:
             print("Continue ...")
             response_content += self.chat(
                 prompt="Complete last chat from the truncated part.",
@@ -317,9 +318,9 @@ if __name__ == "__main__":
         endpoint_name="ninomae",
         model="gpt-4",
         temperature=0.0,
+        system_message="Explain the following text in Chinese:",
     )
     # agent.test_prompt()
-    agent.system_message = "Explain the following text in Chinese:"
     agent.chat(
         "Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer applications"
     )
