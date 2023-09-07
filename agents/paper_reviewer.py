@@ -87,7 +87,9 @@ class SectionSummarizer(OpenAIAgent):
     def __init__(self):
         super().__init__(
             name="section_summarizer",
-            model="poe-gpt-3.5-turbo-16k",
+            # model="poe-gpt-3.5-turbo-16k",
+            # model="gpt-4",
+            model="poe-claude-2-100k",
             system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
         )
 
@@ -146,47 +148,30 @@ class SectionSummarizer(OpenAIAgent):
                 "statements": [
                     {{
                         "text": <文本段落1>,
-                        "refs": ["<ref_pdf_order>.<page_region_order>", ...]
+                        "refs": ["<pdf_num>-<page_num>.<region_num>", ...]
                     }},
                     {{
                         "text": <文本段落2>,
-                        "refs": ["<ref_pdf_order>.<page_region_order>", ...]
+                        "refs": ["<pdf_num>-<page_num>.<region_num>", ...]
                     }},
                     ...
                 ],
                 "references": {{
                     1: {{
-                        "pdf_name": <PDF 1 name>,
-                        "page_region_idxs": [
-                            "<page_idx>-<region_idx>", "<page_idx>-<region_idx>", ...
-                        ]
+                        "pdf_name": <Referred_PDF_1>,
                     }},
                     2: {{
-                        "pdf_name": <PDF 2 name>,
-                        "page_region_idxs": [
-                            "<page_idx>-<region_idx>", "<page_idx>-<region_idx>", ...
-                        ]
+                        "pdf_name": <Referred_PDF_2>,
                     }},
                     3: ...
                 }}
-
             }}
             ```
             
             格式说明：
-            
-            1. "statements"中：`text`表示段落文本内容；`refs`中包含该段文本参考文献的顺序`<ref_pdf_order>`，和对应的页码区域顺序`<page_region_order>`。
-            `ref_pdf_order`和`page_region_order`都为整数，且均从1开始。
-            
-            2. "refereces"中，key中的数字表示参考文献的顺序，为整数，从1开始。根据你输出的陈述文本引用的顺序排列，即先输出的参考文献排在前面。
-            在 "<page_region_idxs>" 中，`"<page_idx>-<region_idx>"` 表示参考片段的在参考PDF所在的页码和区域序号。其顺序取决于在该文本区域被引用的顺序，从1开始计数。
-            `<page_idx>`为参考片段所在的页码，`<region_idx>`为参考片段所在的段落序号。
-           
-            让我举例说明：
-            假设 `"text":<文本段落1>` 参考了 PDF_1 的第1个区域，那么`"refs":["1.1"]`。
-            再假设PDF_1被引用的第1个区域的页码和区域序号为 `"3-4"`，也即第3页第4个文本块。
-            此时：`"references:{{1: {{ "pdf_name":<PDF_1>, "page_region_idxs":["3-4"]}} }}"。
-            关键字 `1` 即对应<文本段落1>引用的<PDF_1>。
+            1. "statements"中，`text`表示段落文本内容，`"refs"`中的`<ref_pdf_order>`表示该段文本所参考的PDF在"references"里的顺序，为整数，从1开始。根据你输出的陈述文本参考的PDF引用顺序排列，即先引用的参考文献排在前面。
+            `<page_num>`表示PDF中对应的页码，`<region_num>`表示对应的文本块的序号。
+            2. "refereces"中，关键字中的数字表示参考文献的顺序，为整数，从1开始。`"pdf_name"`表示参考文献所在的PDF文件名。
             """
 
         combined_prompt = f"""
@@ -206,7 +191,9 @@ class SectionSummarizer(OpenAIAgent):
         
         {output_formats}
         
-        请你根据上述要求，针对提供的主题，给出{word_count}词的{lang_str}陈述：：
+        请不要输出额外的内容！
+        
+        请你根据上述要求，针对提供的主题，给出{word_count}词的{lang_str}陈述。
         
         {extra_prompt}
         """
