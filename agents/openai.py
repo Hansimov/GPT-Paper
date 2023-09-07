@@ -43,6 +43,7 @@ class OpenAIAgent:
         continuous=False,
         memory=False,
         record=True,
+        output_widget=None,
     ):
         self.name = name
         self.endpoint_name = endpoint_name
@@ -57,6 +58,8 @@ class OpenAIAgent:
         self.chat_api = self.endpoint_url + self.endpoint["chat"]
         self.memory = memory
         self.record = record
+        self.output_widget = output_widget
+
         self.history_messages = []
         self.response_content = ""
 
@@ -68,6 +71,13 @@ class OpenAIAgent:
         self.word_tokenizer = WordTokenizer()
         self.calc_max_input_message_chars()
         self.init_history_messages()
+
+    def print_output(self, *args, **kwargs):
+        if self.output_widget:
+            with self.output_widget:
+                print(*args, **kwargs)
+        else:
+            print(*args, **kwargs)
 
     def init_history_messages(self):
         if self.system_message:
@@ -135,7 +145,7 @@ class OpenAIAgent:
 
         for item in data:
             self.available_models.append(item["id"])
-        print(self.available_models)
+        self.print_output(self.available_models)
 
         return self.available_models
 
@@ -166,6 +176,7 @@ class OpenAIAgent:
         show_role=False,
         show_prompt=False,
         show_tokens_count=True,
+        output_widget=None,
         top_p=1,
         n=1,
         stop=None,
@@ -223,16 +234,16 @@ class OpenAIAgent:
 
         # pprint.pprint(request_messages)
         if show_prompt:
-            print(f"[Human]: {prompt}")
+            self.print_output(f"[Human]: {prompt}")
         if show_role:
-            print(f"[{self.name}]:", end="", flush=True)
+            self.print_output(f"[{self.name}]:", end="", flush=True)
 
         self.prompt_tokens_count = self.word_tokenizer.count_tokens(
             " ".join([message["content"] for message in request_messages])
         )
 
         if show_tokens_count:
-            print(f"Prompt Tokens count: [{self.prompt_tokens_count}]")
+            self.print_output(f"Prompt Tokens count: [{self.prompt_tokens_count}]")
 
         self.requests_payload = {
             "model": self.model,
@@ -264,7 +275,7 @@ class OpenAIAgent:
                         try:
                             line_data = ast.literal_eval(line)
                         except:
-                            print(line_data)
+                            self.print_output(line_data)
                             raise e
                     # print(line_data)
                     delta_data = line_data["choices"][0]["delta"]
@@ -274,22 +285,24 @@ class OpenAIAgent:
                     if "content" in delta_data:
                         delta_content = delta_data["content"]
                         response_content += delta_content
-                        print(delta_content, end="", flush=True)
+                        self.print_output(delta_content, end="", flush=True)
                     if finish_reason == "stop":
-                        print()
+                        self.print_output()
 
         if record:
             self.update_history_messages(role, response_content)
         # print("[Completed]")
         response_tokens_count = self.word_tokenizer.count_tokens(response_content)
         if show_tokens_count:
-            print(f"Response Tokens count: [{response_tokens_count}] [{finish_reason}]")
+            self.print_output(
+                f"Response Tokens count: [{response_tokens_count}] [{finish_reason}]"
+            )
 
         continuous_token_threshold = self.continuous_token_thresholds.get(
             self.model, 4000
         )
         if continuous and response_tokens_count > continuous_token_threshold:
-            print("Continue ...")
+            self.print_output("Continue ...")
             response_content += self.chat(
                 prompt="Complete last chat from the truncated part.",
                 memory=True,
