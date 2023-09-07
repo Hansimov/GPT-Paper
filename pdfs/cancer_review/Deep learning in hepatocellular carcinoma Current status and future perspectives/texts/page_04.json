@@ -1,0 +1,103 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_04.png",
+        "image_width": 2480,
+        "image_height": 3509,
+        "regions_num": 7,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                808.1,
+                229.5,
+                2260.3,
+                837.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_1_text.png",
+            "text": "each patient was transformed into a 108 x 998 matrix and applied to a CNN, which\npredicted liver cancer with an AUC of 0.886 and an accuracy of 0.980. Another study\nby Nam et al[16] constructed a deep neural network to predict 3-year and 5-year\nincidence of HCC in 424 patients with HBV-related cirrhosis on entecavir therapy.\nWhen applied to an external validation cohort of 316 patients, the DL model achieved\na Harrell’s C-index of 0.782 and significantly outperformed 6 previously reported\nmodels based on traditional modeling. The same group also developed another DL\nmodel called the Al-based Model of Recurrence after Liver Transplantation (MoRAL-\nAJ) to predict HCC recurrence after liver transplantation using variables such as tumor\ndiameter, age, alpha-fetoprotein (AFP), and prothrombin time[17]. The MoRAL-AI\nshowed significantly better predictive performance compared to conventional models\nsuch as the Milan, UCSF, up-to-seven, and Kyoto criteria (C-index = 0.75 vs 0.64, 0.62,\n0.50, 0.50, respectively; P < 0.001).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.17,
+            "box": [
+                807.9,
+                961.9,
+                1181.9,
+                1027.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_2_title.png",
+            "text": "HCC MULTI-OMICS\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                808.0,
+                1048.8,
+                2260.2,
+                2216.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_3_text.png",
+            "text": "Serum AFP has been widely used as a predictive and prognostic biomarker for HCC\n[18], but AFP has limited sensitivity for detecting early-stage HCC and its levels do not\nreliably correlate with disease progression[19]. Recent advances in multi-omics related\nto HCC are expected to address this unmet need for novel biomarkers. Multi-omics\nrefers to an approach to biological analysis which utilizes data sets from multiple\n\"omics\", such as the genome, epigenome, transcriptome, proteome, metabolome and\nmicrobiome. Multi-omics experiments generate an enormous amount of information,\nand various machine learning techniques including DL that can help with the\ncomputational challenges of processing and analyzing such high dimensional data. Xie\net al[20] used gene expression profiling of peripheral blood to build an ANN model\nthat classifies HCC patients from a control group. Using a nine-gene expression\nsystem, the ANN was able to distinguish HCC patients from controls with an AUC of\n0.943, 98% sensitivity, and 85% specificity, although it should be noted that the control\ngroup was healthy individuals rather than patients with cirrhosis, which could have\noverestimated the performance of the model. Choi et al[21] proposed a novel network-\nbased DL method to identify prognostic gene signatures via G2Vec, a modified\nWord2Vec model originally used for natural language processing (NLP). When\napplied to gene expression data for HCC from the Cancer Genome Atlas (TCGA),\nG2Vec showed superior prediction accuracy for patient outcomes compared to\nexisting gene selection methods and was able to identify two distinct gene modules\nsignificantly associated with HCC prognosis. Chaudhary et al[22] used RNA\nsexquencing, miRNA, and methylation data of 360 HCC patients from TCGA to build\nan autoencoder, which is an unsupervised feed-forward neural network. Using this\nDL model, they were able to distinguish patients with survival differences and identify\nspecific mutations and pathways as predictors of aggressive tumor behavior.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.07,
+            "box": [
+                807.1,
+                2340.2,
+                1056.5,
+                2406.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_4_title.png",
+            "text": "RADIOLOGY\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 98.82,
+            "box": [
+                808.6,
+                2429.9,
+                1380.6,
+                2488.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_5_title.png",
+            "text": "HCC diagnosis and segmentation\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                808.6,
+                2487.0,
+                2258.7,
+                2770.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_6_text.png",
+            "text": "In recent years, there have been remarkable advances in the application of AI for the\ninterpretation of medical imaging, primarily due to the use of DL algorithms using\nCNN[23]. CNN algorithms trained on ultrasound, computed tomography (CT), or\nmagnetic resonance imaging (MRI) images have shown excellent performances in\ndetection of lesions, classification of lesions, segmentation of organs or anatomic\nstructures, and imaging reconstruction[24].\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                807.9,
+                2768.1,
+                2258.3,
+                3282.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_7_text.png",
+            "text": "In 2012, Streba et al[25] prospectively studied contrast-enhanced ultrasound images\nof 112 patients to train an ANN that classified five different types of liver tumors. The\nANN showed promising performances with accuracies of 94.5% in the training set and\n87.1% in the testing set. In 2017, Hassan et al[26] reported using the stacked sparse\nauto-encoder, an unsupervised DL technique, to segment and classify liver lesions on\nultrasound images with a classification accuracy of 97.2%. Additionally, Bharti et al[27]\nbuilt a CNN using echotexture and roughness of liver surface on 754 segmented\nultrasound images, which differentiated between normal liver, chronic liver disease,\ncirrhosis, and HCC with a classification accuracy of 96.6%. Schmauch ef al[28] also\ncreated a CNN which detects and characterizes benign and malignant focal liver\nlesions on 2-D ultrasound images from 367 patients from various institutions. When\n"
+        }
+    ]
+}

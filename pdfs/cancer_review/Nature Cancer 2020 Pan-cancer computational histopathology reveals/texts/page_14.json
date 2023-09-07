@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 2,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.81,
+            "box": [
+                179.5,
+                232.1,
+                2295.7,
+                931.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_14/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                177.8,
+                983.3,
+                2287.4,
+                1284.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_14/region_2_text.png",
+            "text": "Extended Data Fig. 3 | Pan-cancer morphological features of whole genome duplications. a, Distribution of cell nucleus size and intensity of samples\nwith and without WGD. Each dot in the scatter plot corresponds to one of 12,000 tiles that were randomly selected across cancer types. The cell nucleus\nsize and intensity were calculated using Cell Profiler with a pipeline provided by the software provider. Boxplots depict the quartiles and median, whiskers\nextend to 1.5x the inter quartile range. b, AUC from PC-CHiP (y-axis) compared to hard coded features (x-axis) for a set of n=500 randomly selected\ntiles for each cancer type. Each dot represents a cancer type. Error bars correspond to 95% confidence intervals. ¢, Histopathological prediction of WGD\nusing 5-fold cross validation (red) and models trained leaving out one cancer type (blue). Error bars correspond to 95% confidence intervals estimated by\nbootstrap resampling.\n"
+        }
+    ]
+}

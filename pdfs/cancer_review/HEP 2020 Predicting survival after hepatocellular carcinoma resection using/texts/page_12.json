@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_12.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_12.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 5,
+        "page_idx": 12
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 78.13,
+            "box": [
+                249.6,
+                262.4,
+                530.6,
+                332.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_12/region_1_title.png",
+            "text": "Discussion\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 88.62,
+            "box": [
+                255.7,
+                399.0,
+                2245.2,
+                779.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_12/region_2_text.png",
+            "text": "In this study, we developed two deep learning models from histological slides for predicting\nsurvival after the surgical resection of HCC. We show that our algorithms predict survival more\naccurately than classical clinical, biological and pathological features. Both models had a greater\ndiscriminatory performance than the combination of all common variables associated with HCC\nprognosis.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 88.02,
+            "box": [
+                249.2,
+                817.0,
+                2247.1,
+                1360.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_12/region_3_text.png",
+            "text": "Artificial intelligence-driven approaches for processing medical images provide us with a unique\nopportunity to standardize the diagnosis of cancer subtypes and improve patient stratification.(3)\nIn a recent pioneering study, Coudray and coworkers used a large collection of lung cancer slides\nand showed that a deep learning-based model could classify them into non-tumoral lung tissue,\nadenocarcinoma and squamous carcinoma with an accuracy similar to that of pathologists.(5)\nMoreover, six of the most frequent genetic alterations occurring in these malignancies could be\npredicted directly from the slides.(5)\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 87.58,
+            "box": [
+                254.6,
+                1402.2,
+                2243.9,
+                2886.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_12/region_4_text.png",
+            "text": "Here, we provide additional evidence suggesting that these approaches will improve precision\nmedicine. Indeed, our models outperformed all other common clinical or pathological features for\npredicting survival. Slides from the TCGA dataset were indeed processed as they were, without\nthe annotation of tumoral or non-tumoral areas or the removal of artifacts (e.g. blurring,\nannotation markers or folds). Slide formats and staining protocols also differed between the two\nseries of slides (NDPI format and hematein-eosin-saffron staining for the discovery set and SVS\nformat and hematein-eosin staining for the validation set). These findings demonstrate the\nrobustness of our models and suggest that they may be suitable for use in different technical\nsettings. However, both models performed less well on the validation set, for which the prognostic\npower of classical clinical and pathological variables was also lower (difference in c-indexes and\nhazard ratio values between our dataset and the TCGA). This may be explained by the lower\noverall survival of the patients from the TCGA dataset. We cannot however exclude an overfitting\nissue during the development of the model in the training set. Indeed, features specific of the\ndiscovery set (such as noise related to the staining techniques or slides format) are likely to be\nalso incorporated by the neural networks in the decision process and may thus impact the\nperformance on external and new datasets. This is particularly true for image analysis, and the\nimitation of this phenomenon is an active area of research. Data augmentation approaches,\nwhich artificially inflate the training set size by data transformation and/or oversampling, may be\nconsidered, however they significantly increase the computation time.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 28.02,
+            "box": [
+                248.8,
+                3295.5,
+                1397.6,
+                3362.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_12/region_5_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

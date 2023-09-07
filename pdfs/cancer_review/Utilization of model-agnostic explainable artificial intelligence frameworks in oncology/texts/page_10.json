@@ -1,0 +1,103 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3249,
+        "regions_num": 7,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                188.6,
+                350.8,
+                1204.9,
+                1657.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_10/region_1_text.png",
+            "text": "volume planning objective was met or whether the target\nvolume planning objective was met or not due to a priority\ntrade off due to organ at risk constraints. Such a model\nuses knowledge from previous radiation treatment plans\nto inform on when trade-offs might be necessary. SHAP\nwas used on the model to be able to determine relevant\ndosimetric factors that would inform whether a plan was\nacceptable, which can provide useful feedback to medical\nphysicist and radiation oncologists when determining ways\nto further optimize plans that are not deemed acceptable.\nIn this case, XAI was helpful in that it provides information\non generally what leads to objectives being met, and also\nproviding a breakdown of specific cases. Next, once the plan\nis approved, quality assurance is required to ensure patient’s\nsafety and avoid clinically significant errors such as delivery\nof the desired dose. This is a process that can be somewhat\nautomated with ML models. Again, it is important that a\nmodel predicts that a plan can be safely delivered and for\nend-users to understand why this conclusion was made to\nfacilitate improvements. Chen et a/. explored a model that\nevaluated whether a plan would be deemed acceptable and\nused XAI to identify features that led to such a prediction,\nboth globally and individually, which aids in further\nautomating the quality assurance process (56).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.26,
+            "box": [
+                188.5,
+                1739.6,
+                415.8,
+                1791.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_10/region_2_title.png",
+            "text": "Discussion\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                188.2,
+                1821.1,
+                1204.2,
+                2420.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_10/region_3_text.png",
+            "text": "The studies discussed above, including how model-\nagnostic XAI was used by the authors, is summarized in\nTable 3. We found that the use of XAI could be divided into\nfive categories: delineation of global feature importance,\ncharacterization of individual prediction feature importance,\nvisualization of nonlinear relationships and interactions,\nidentification of prognostic and/or predictive thresholds,\nand feature selection/construction. These permit additional\nconclusions to be drawn from ML models, which are key\nto implementation in the oncology clinic, given that they\nimprove understandability and therefore confidence.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                188.4,
+                2420.7,
+                1204.0,
+                2964.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_10/region_4_text.png",
+            "text": "In general, XAI is a vibrant area of ML research, with\nhundreds of papers produced in the field over the last\ndecade. While there is a wide adoption of interpretability\n“add-ons” (to the “classical” ML classifiers and estimators),\nsuch as SHAP and LIME, there is yet no unifying XAI\nframework in the broad ML field, let alone biomedical ML.\nThis situation is likely to change, given the heightened\ninterest in XAI within both theoretical and applied ML\nresearch communities. Adoption of the cutting-edge\nXAI ML research advances and methods, preferably\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1287.0,
+                351.1,
+                2302.5,
+                1059.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_10/region_5_text.png",
+            "text": "biomedical data-specific, in oncology is the next frontier.\nThat being said, there are already existing methods and\nalgorithms in the ML/AI toolkit that are more explainable\nand interpretable by design, such as probabilistic causal\nmodeling, various Bayesian methodologies and fast/\noblique decision trees. Adaptation of such techniques to\nthe oncology spaces is an emerging trend (57-61). Notably,\nBayesian network modeling aims to construct and visualize\ngraphical probabilistic/causal multiscale models from the\n“flat” multivariate data; while outside of the scope of this\ncommunication, there is significant recent body of work in\nthe Bayesian networks in oncology space, numbering ~100\npublications per annum in the 2020s.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1287.0,
+                1060.2,
+                2302.9,
+                1765.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_10/region_6_text.png",
+            "text": "Other areas of active research with direct ties to\noncology are computation of hazard ratios from XAI\noutput (62) and using XAI as an explicit feature selection/\nconstruction mechanism (63). XAI offers an opportunity\nfor collaboration of oncologists and computer scientists to\nimprove patient care. Integration of EHRs can facilitate\ntraining and implementation of models and associated\nexplanations to leverage information and decision-\nmaking for oncology patients. With availability of\nmassive quantities of patient data in the EHR, inclusive of\ngenomic and clinical characteristics, applications to better\nunderstanding precision medicine that arises from out ML\nmodels.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1287.0,
+                1768.0,
+                2302.9,
+                2964.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_10/region_7_text.png",
+            "text": "In summary, there remains a fundamental tradeoff\nbetween the predictive accuracy (oftentimes directly\ncorrelated with the model complexity and opaqueness) and\ndescriptive interpretability (64). While the focus of the\nML research has often been on the former, the latter is\nno less significant in our (oncology) context. Finding the\nproper balance between the two has been elusive; recent\nadvances in XAI, while promising, remain incremental and\nfragmentary. Therefore, our broad recommendation to\nthe oncology researchers and practitioners is three-fold:\nfirst, utilize the high-performance scalable ML methods\naugmented with the interpretability tools, such as SHAP\nand LIME. Second, adopt inherently high-interpretability\nmethods, such as “simple” decision trees, regression\nmodels such as least absolute shrinkage and selection\noperator (LASSO), and probabilistic causal networks,\nwhen the data modalities and dimensionality allow such\napplications and their predictive performance is not that\ndifferent from more complex (and opaque) models. Third,\nbe on a lookout for the emerging XAI advances in the\nML spaces, both systemic and method-specific. By using\nthese approaches, the power of ML can be optimally\n"
+        }
+    ]
+}

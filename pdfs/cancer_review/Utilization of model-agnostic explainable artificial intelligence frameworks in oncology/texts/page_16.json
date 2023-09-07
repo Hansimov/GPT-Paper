@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages/page_16.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages_ordered/page_16.png",
+        "image_width": 2481,
+        "image_height": 3249,
+        "regions_num": 3,
+        "page_idx": 16
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 91.71,
+            "box": [
+                187.9,
+                351.1,
+                1197.0,
+                2079.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_16/region_1_list.png",
+            "text": "Applied Sciences 2022;12:1926.\n\n54. Richter AN, Khoshgoftaar TM. Efficient learning from\nbig data for cancer risk modeling: A case study with\nmelanoma. Comput Biol Med 2019;110:29-39.\n\n55. Siciarz P, Alfaifi S, Uytven EV, et al. Machine learning for\ndose-volume histogram based clinical decision-making\nsupport system in radiation therapy plans for brain tumors.\nClin Transl Radiat Oncol 2021;31:50-7.\n\n56. Chen Y, Aleman DM, Purdie TG, et al. Understanding\nmachine learning classifier decisions in automated\nradiotherapy quality assurance. Phys Med Biol 2022. doi:\n10.1088/1361-6560/ac3e0e.\n\n57. Kalet AM, Doctor JN, Gennari JH, et al. Developing\nBayesian networks from a dependency-layered ontology:\nA proof-of-concept in radiation oncology. Med Phys\n2017;44:43 50-9.\n\n58. Trilla-Fuertes L, Gimez-Pozo A, Arevalillo JM,\net al. Bayesian networks established functional\ndifferences between breast cancer subtypes. PLoS One\n2020;15:e0234752.\n\n59. Park SB, Hwang KT, Chung CK, et al. Causal Bayesian\ngene networks associated with bone, brain and lung\nmetastasis of breast cancer. Clin Exp Metastasis\n2020;37:657-74.\n\n60. Wang X, Branciamore S, Gogoshin G, et al. New Analysis\nFramework Incorporating Mixed Mutual Information\nand Scalable Bayesian Networks for Multimodal High\nDimensional Genomic and Epigenomic Cancer Data.\nFront Genet 2020;11:648.\n\n61. Djulbegovic B, Hozo I, Dale W. Transforming clinical\npractice guidelines and clinical pathways into fast-and-\nfrugal decision trees to improve clinical care strategies. J\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 84.27,
+            "box": [
+                213.9,
+                2191.7,
+                1176.5,
+                2454.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_16/region_2_text.png",
+            "text": "Cite this article as: Ladbury C, Zarinshenas R, Semwal H,\n‘Tam A, Vaidehi N, Rodin AS, Liu A, Glaser S, Salgia R, Amini A.\nUtilization of model-agnostic explainable artificial intelligence\nframeworks in oncology: a narrative review. Transl Cancer Res\n2022;11(10):3853-3868. doi: 10.21037/tcr-22-1626\n"
+        },
+        {
+            "idx": 3,
+            "thing": "list",
+            "score": 86.35,
+            "box": [
+                1284.7,
+                348.1,
+                2298.1,
+                2076.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_16/region_3_list.png",
+            "text": "Eval Clin Pract 2018;24:1247-54.\n\n62. Sundrani S, Lu J. Computing the Hazard Ratios\nAssociated With Explanatory Variables Using Machine\nLearning Models of Survival Data. JCO Clin Cancer\nInform 2021;5:364-78.\n\n63. Marcilio WE, Eler DM. editors. From explanations to\nfeature selection: assessing SHAP values as feature selection\nmechanism. In: 2020 33rd SIBGRAPI Conference on\nGraphics, Patterns and Images (SIBGRAPD), 2020.\n\n64. Duval A. Explainable artificial intelligence (XAI).\n\n2019. Available online: https://www.researchgate.net/\nprofile/Alexandre-Duval-2/publication/332209054_\nExplainable_Artificial_Intelligence_XAI/\nlinks/5ca6269aa6fdeca26dfecOcd/Explainable-Artificial-\nIntelligence-XAI.pdf\n\n65. Rudin C. Stop Explaining Black Box Machine Learning\nModels for High Stakes Decisions and Use Interpretable\nModels Instead. Nat Mach Intell 2019;1:206-15.\n\n66. Yang S, Wen J, Eckert ST, et al. Prioritizing genetic\nvariants in GWAS with lasso using permutation-assisted\ntuning. Bioinformatics 2020;36:3811-7.\n\n67. Moons KG, Altman DG, Reitsma JB, et al. Transparent\nReporting of a multivariable prediction model for\nIndividual Prognosis or Diagnosis (TRIPOD): explanation\nand elaboration. Ann Intern Med 2015;162:W1-73.\n\n68. Norgeot B, Quer G, Beaulieu-Jones BK, et al. Minimum\ninformation about clinical artificial intelligence modeling:\nthe MI-CLAIM checklist. Nat Med 2020;26:1320-4.\n\n69. Sanduleanu S, Woodruff HC, de Jong EEC, et al.\n‘Tracking tumor biology with radiomics: A systematic\nreview utilizing a radiomics quality score. Radiother Oncol\n2018;127:349-60.\n"
+        }
+    ]
+}

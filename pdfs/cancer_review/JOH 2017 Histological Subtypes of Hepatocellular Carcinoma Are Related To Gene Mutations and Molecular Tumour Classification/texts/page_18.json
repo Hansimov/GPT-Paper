@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_18.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_18.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 4,
+        "page_idx": 18
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 98.74,
+            "box": [
+                385.1,
+                224.0,
+                2174.7,
+                667.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_18/region_1_text.png",
+            "text": "and activation of epithelial-to-mesenchymal transition and angiogenesis (TP53 mutated\nHCCs n=37, TP53 non-mutated HCCs n=149). (E) Heat-map graphical representation of\nthe main pathological and immunohistochemical features linked to CTNNB1 and TP53\nmutational status (series with available immunohistochemistry, n=219). HES: Hematein-\nEosin-Saffron, Mut=mutation, T=tumour, NT=non-tumour. Comparison between\nqualitative and quantitative data was performed using Chi-square and Fisher exact tests\nand Mann-Whitney U and Kruskall-Wallis tests, respectively. Monte-Carlo method was\nused to adjust the P value for multiple tests.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 98.69,
+            "box": [
+                385.1,
+                867.1,
+                2174.3,
+                1808.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_18/region_2_text.png",
+            "text": "Figure 3. (A) Low magnification of a macrotrabecular-massive HCC, with,a vascular\ninvasion (VI) and a satellite nodule (SN) located outside the main tumour (T)\n(#CHC1754T). (B) Identification of a predominant macrotrabecular pattern in this low-\npower microcopic field (#CHC1754T). (C) Thick macrotrabeculae:coated by endothelial\ncells and surrounded by vascular spaces (#CHC1754T). (D) Trabeculae appearing as\ntumour clusters when observed in cross sections (#CHC1754T). (E) Associations\nbetween macrotrabecular-massive HCC subtype and clinical, pathological and molecular\nfeatures in both cohorts (for RT-PCR experiments of InsermU1162 cohort MTM-HCC\nn=12, Non MTM-HCC n=174; for RNA sequencing experiments of TCGA cohort MTM-HCC\nn=61, Non MTM-HCC n=292). (F) Association of macrotrabecular-massive HCC with\nearly relapse and shorter disease-specific survival. HES=Hematein-Eosin-Saffron,\nT=tumour, NT=non-tumour, Mut=mutation, Expres=expression, Amp=amplification,\nEFS=Event-free survival, na=not available. Comparison between qualitative and\nquantitative data was performed using Chi-square and Fisher exact tests and Mann-\nWhitney U and Kruskall-Wallis tests, respectively. Monte-Carlo method was used to\nadjust the P value for multiple tests. *ANGPT2 expression data from the TCGA cohort\nwas compared using the z-scores provided on the TCGA webportal.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 98.83,
+            "box": [
+                385.8,
+                1921.9,
+                2173.3,
+                2587.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_18/region_3_text.png",
+            "text": "Figure 4. (A) A scirrhous HCC with dense, hyalin stroma surrounding clusters of\nneoplastic cells (#CHC1198T). (B) Schirrhous HCC with CK19 expression (#CHC1182T).\n(C) Associationsbetween the scirrhous subtype of HCC and molecular and\nimmunohistochemical features. (D) Upregulation of progenitor/cancer stem cell genes\nand activation of epithelial-to-mesenchymal transition (Scirrhous HCCs n=12, non-\nscirrhous HCCs n=174). (E) A case of steatohepatitic HCC with cell ballooning, steatosis,\nMallory-Denk bodies and inflammation (#CHC1712T). (F) Associations between the\nsteatohepatitic subtype of HCC and pathological and molecular features. HES: Hematein-\nEosin-Saffron, Mut.=mutation, Expres.=expression, T=tumour, NT=non-tumour.\nComparison between qualitative and quantitative data was performed using Chi-square\nand Fisher exact tests and Mann-Whitney U and Kruskall-Wallis tests, respectively.\nMonte-Carlo method was used to adjust the P value for multiple tests.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.34,
+            "box": [
+                386.6,
+                2788.9,
+                2173.3,
+                3011.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_18/region_4_text.png",
+            "text": "Figure 5. Integration of clinical, pathological and molecular features into HCC molecular\nclassification. Mut=mutation, ampl=amplification. Comparison between qualitative data\nwas performed using Chi-square and Fisher exact test. Monte-Carlo method was used to\nadjust the P value for multiple tests.\n"
+        }
+    ]
+}

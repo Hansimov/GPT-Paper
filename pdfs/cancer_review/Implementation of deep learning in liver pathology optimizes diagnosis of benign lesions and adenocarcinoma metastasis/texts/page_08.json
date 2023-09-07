@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 2,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.52,
+            "box": [
+                373.5,
+                197.8,
+                2113.3,
+                2838.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_08/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.74,
+            "box": [
+                191.8,
+                2901.0,
+                2286.9,
+                3093.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_08/region_2_text.png",
+            "text": "FIGURE 3 Models trained. With the EfficientNetV2B0 architecture (A), the EfficientNetV2S architecture (B) and the ResNetRS50\narchitecture (C) a learning rate of .001 showed a higher Matthews correlation coefficient (MCC) as compared to a learning rate of .01. Dashed\nand solid lines correspond to the six different trainings with the same parameters to account for randomness (e.g., the random weights\ninitialization).\n"
+        }
+    ]
+}

@@ -1,0 +1,180 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages/page_12.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages_ordered/page_12.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 13,
+        "page_idx": 12
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.46,
+            "box": [
+                156.3,
+                232.6,
+                249.5,
+                268.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_01_title.png",
+            "text": "Table 5\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                157.7,
+                268.7,
+                2129.3,
+                303.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_02_text.png",
+            "text": "Pros and cons of XAI techniques. Pros are depicted by +, cons by -. The letters in the column Open source (original paper) refer to the URL below the table.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "table",
+            "score": 99.75,
+            "box": [
+                154.6,
+                317.6,
+                2323.8,
+                1359.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_03_table.png"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 97.09,
+            "box": [
+                157.5,
+                1369.7,
+                998.2,
+                1869.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_04_text.png",
+            "text": "n.t. = not tested by studies on that criterion.\n\ninc. = inconclusive results between studies on that criterion.\na https://github.com/zhoubolei/CAM\n\nb https://github.com/Cloud-CV/Grad-CAM\n\nc https://github.com/slundberg/shap\n\nd https://github.com/saumya-jetley/cd_ICLR18_LearnToPayAttention\ne https://github.com/marcotcr/lime\n\nf https://github.com/ruthcfong/perturb_explanations\n\ng https://github.com/Imzintgraf/DeepVis-PredDiff\n\nh https://github.com/zizhaozhang/tandemnet\n\ni https://github.com/tensorflow/tcav\n\nj https://github.com/eladhoffer/TripletNet\n\nk https: //github.com/kohpangwei/influence-release\n\n| https://github.com/cfchen-duke/ProtoPNet\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                157.2,
+                1978.1,
+                1205.3,
+                2457.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_05_text.png",
+            "text": "tify the validity of visual explanation techniques using the SIIM-\nACR Pneumothorax Segmentation and RSNA Pneumonia Detection\ndatabases (Society for Imaging Informatics in Medicine and Ameri-\ncan College of Radiology, 2019; Radiological Society of North Amer-\nica, 2018). They compared four of the methods discussed in this\npaper: backpropagation, guided backpropagation, Grad-CAM, and\nguided Grad-CAM. Of these methods, Grad-CAM showed the high-\nest validity. Note that this study solely focuses on chest X-rays.\nTherefore, more research is needed to investigate the validity of\nvisual explanation techniques in other modalities and anatomical\nlocations.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                156.6,
+                2457.5,
+                1204.8,
+                2849.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_06_text.png",
+            "text": "In case of textual explanation, validity can be assessed by com-\nparing the generated textual explanation to the ground truth text.\nIn case of example-based explanation, validity can be assessed\nby comparing relevant characteristics of found examples, such as\npatient or clinicopathological characteristics. To the best of our\nknowledge, there have not been such rigorous studies on validity\nperformed for textual explanation and for example-based variation\nas there are for visual explanation (Arun et al., 2021). Hence, more\nresearch in this area is desired.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 98.3,
+            "box": [
+                156.4,
+                2895.6,
+                387.3,
+                2937.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_07_title.png",
+            "text": "4,3. Robustness\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                157.2,
+                2981.4,
+                1202.8,
+                3112.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_08_text.png",
+            "text": "The robustness of XAI techniques can be assessed by intention-\nally changing certain aspects of the deep learning framework and\nmeasuring the effect of these changes to the given explanation.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1276.9,
+                1979.5,
+                2324.9,
+                2107.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_09_text.png",
+            "text": "The robustness is mainly quantified for visual explanation tech-\nniques, using parameter randomization tests and data randomiza-\ntion tests.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1277.7,
+                2108.7,
+                2325.9,
+                2413.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_10_text.png",
+            "text": "The parameter randomization test compares visual explanation\nfrom a trained CNN with visual explanation from a randomly ini-\ntialized untrained CNN of the same architecture. If the explanation\ndepends on the learned parameters of the CNN (the desired situ-\nation), the two explanations should differ substantially. If the two\nexplanations are similar, the visual explanation technique is insen-\nsitive to the properties of the CNN.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1277.8,
+                2413.3,
+                2325.9,
+                2718.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_11_text.png",
+            "text": "The data randomization test compares visual explanation from\na trained CNN with visual explanation from a CNN trained on the\nsame dataset but with randomly imputed labels. If the explana-\ntion depends on the data labels (the desired situation), the two\nexplanations should differ substantially. If the two explanations are\nsimilar, the visual explanation does not depend on the relationship\nbetween images and labels.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1277.4,
+                2719.5,
+                2325.3,
+                3022.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_12_text.png",
+            "text": "Adebayo et al. (2018) performed these two tests for many vi-\nsual explanation methods including backpropagation, guided back-\npropagation, Grad-CAM, and guided Grad-CAM. They showed that\nguided backpropagation and guided Grad-CAM provided a similar\nvisual explanation in both tests, and might be emphasizing edges.\nHence, caution is advised when using such methods for visualiza-\ntion.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1276.6,
+                3025.7,
+                2325.8,
+                3110.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_12/region_13_text.png",
+            "text": "Eitel and Ritter (2019) evaluated the robustness of visual ex-\nplanation techniques guided backpropagation, layer-wise relevance\n"
+        }
+    ]
+}

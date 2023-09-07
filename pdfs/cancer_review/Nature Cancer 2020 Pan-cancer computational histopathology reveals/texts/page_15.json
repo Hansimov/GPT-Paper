@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_15.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_15.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 2,
+        "page_idx": 15
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.87,
+            "box": [
+                177.4,
+                229.8,
+                2301.7,
+                1916.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_15/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                178.6,
+                1964.7,
+                2298.4,
+                2180.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_15/region_2_text.png",
+            "text": "Extended Data Fig. 4 | Example tiles for associations between computational histopathological and genomic alterations. a, Four example tiles for\nchromosome 8q gain (left column) and wild type (right column) breast invasive carcinoma (top row) and esophageal carcinoma (bottom row). b, Four\nexample tiles for chromosome 17p loss (left column) and wild type (right column) for colon adenocarcinoma (top row) and lung squamous cell carcinoma\n(bottom row). ¢, Four example tiles for TP53 mutated (left column) and wild type (right column) liver cancer (hepatocellular carcinomas). d, Four example\ntiles for PTEN mutation (left column) and wild type (right column) for uterine cancer. Representative tiles are selected from 100 best predicted tiles.\n"
+        }
+    ]
+}

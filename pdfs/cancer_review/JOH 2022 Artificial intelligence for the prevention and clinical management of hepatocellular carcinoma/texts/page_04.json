@@ -1,0 +1,116 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 8,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                176.9,
+                253.7,
+                1000.4,
+                1023.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_04/region_1_text.png",
+            "text": "Schmauch and colleagues designed a supervised\nDL model, using a training dataset of 367 ultra-\nsound images together with their corresponding\nradiological reports, that could identify liver lesions\nas benign or malignant with a mean AUROC of 0.93\nand 0.92, respectively.'? More recently, Yang and\ncolleagues developed and externally validated a\ndeep convolutional neural network (DCNN), using\na large, multicentre, ultrasound imaging database\nfrom 13 hospital systems. The final model\ndemonstrated an AUROC of 0.92 for distinguishing\nbenign from malignant liver lesions, and showed\ncomparable a) performance to the judgment of\nclinical radiologists (diagnostic accuracy, both\n76.0%) and b) accuracy to contrast-enhanced CT\n(diagnostic accuracy, both 84.7%) that was only\nslightly inferior to MRI (87.9%).'?\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                177.1,
+                1029.0,
+                999.8,
+                1663.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_04/region_2_text.png",
+            "text": "Similar approaches have also been applied to\ncontrast-enhanced ultrasound (CEUS) imaging for\nthe detection of HCC. For example, Guo and col-\nleagues recently demonstrated that a DL algorithm\napplied to liver lesions seen by CEUS could increase\nthe sensitivity, specificity, and overall accuracy of\nCEUS for detecting HCC.'* Others have used Al to\napply additional pattern recognition classifiers to\nCEUS DCNN algorithms, to improve diagnosis of\nindeterminate focal liver lesions.’ However, to\ndate, most prior CEUS studies have had small\nsample sizes and lacked standardised imaging data\nor external validation cohorts (to confirm the\ngeneralisability of models across populations).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 93.49,
+            "box": [
+                177.3,
+                1713.1,
+                372.3,
+                1755.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_04/region_3_title.png",
+            "text": "CT and MRI\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                177.3,
+                1759.6,
+                999.9,
+                2715.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_04/region_4_text.png",
+            "text": "Another rapidly growing area of research is focused\non improved characterisation of indeterminate\nliver lesions. In clinical practice, when an abdom-\ninal ultrasound shows a new liver lesion, a patient\nis typically referred for further imaging, with\ncontrast-enhanced CT or MRI. Based on the fulfil-\nment of specific radiologic criteria, certain liver\nlesions may be considered as having pathogno-\nmonic features of HCC, and thus do not require\nliver biopsy for further histological confirmation.\nHowever, liver nodules imaged by CT or MRI often\ndemonstrate indeterminate features, for which\ncurrent recommendations include either liver bi-\nopsy or close interval follow-up with serial imag-\ning.”° This practice is sub-optimal, resulting in\nnumerous imaging studies, patient stress, and the\npotential for delayed diagnoses of liver cancer. For\nthis reason, a growing body of recent literature has\nexplored AI approaches to improve risk stratifica-\ntion of indeterminate liver lesions, to facilitate\nearlier and more accurate detection of HCC.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                177.4,
+                2719.3,
+                999.1,
+                3033.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_04/region_5_text.png",
+            "text": "In an early study focused on this issue, Preis and\ncolleagues developed a NN to assess focal liver le-\nsions identified by 'F-FDG-PET/CT (fluorine-18\nfluorodeoxyglucose positron emission tomogra-\nphy/CT) evaluations, together with patient de-\nmographics and clinical characteristics of 98\npatients; their model had an AUROC of 0.896 for\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1034.2,
+                252.3,
+                1856.5,
+                1801.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_04/region_6_text.png",
+            "text": "the identification of focal liver lesions, out-\nperforming the results of blinded radiologists.'®\nMokrane and colleagues conducted a small retro-\nspective study (n = 178) of patients with cirrhosis\nand indeterminate liver lesions, for whom diag-\nnostic liver biopsy was recommended. Applying DL\napproaches, the authors constructed a radiomics\nsignature based on 13,920 CT imaging classifiers,\nthat achieved an AUROC of 0.70 for distinguishing\nHCC from non-HCC lesions. Importantly, the au-\nthors demonstrated that the signature was not\ninfluenced by segmentation or by contrast\nenhancement, which adds to its putative general-\nisability.'” Another retrospective study, by Yasaka\net al. (n = 460), utilised CT imaging classifiers from\n3 phases (non-contrast-enhanced, arterial, and\ndelayed) to construct a 3-layer CNN for dis-\ntinguishing a) HCC and non-HCC liver cancers from\n(b) indeterminate liver lesions, haeemangiomas and\ncysts; their CNN had a diagnostic accuracy of 0.84\nwith a median AUROC of 0.92.'° More recently, Shi\nand colleagues compared the performance of a\ntriple-phase contrast-enhanced CT protocol\ncoupled with a DL model, to a four-phase CT pro-\ntocol, for distinguishing HCC from other focal liver\nlesions.'? The authors found that a DL model\ncombined with triple-phase CT protocol without\npre-contrast yielded similar diagnostic accuracy\n(85.6%) to a four-phase protocol (83.3%; p = 0.765).\nThese findings suggest that reducing a patient’s\nradiation dose with a triple-phase CT protocol may\nnot compromise accuracy, and thereby brings the\nfield one step closer to optimising CT protocols for\nthe accurate classification of liver lesions.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1034.2,
+                1802.5,
+                1856.4,
+                2759.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_04/region_7_text.png",
+            "text": "Given the wide variability of radiographic fea-\ntures of the liver and liver lesions, manual seg-\nmentation for radiomics-based assessments of HCC\nis both difficult and time-consuming. In 2017, the\nLiver Tumor Segmentation (LiTS) Challenge called\nupon investigators to develop Al-based algorithms\nthat could automatically segment liver tumours,\nusing a multinational dataset of 200 CT scans (130\ntraining, 70 validation scans).?°7' All of the top-\nscoring automatic methods used fully convolu-\ntional NNs that separately segmented the liver and\nliver tumours. Segmentation quality was evaluated\nusing Dice scores, and the best-scoring algorithm\nachieved a Dice score of 0.96, whereas for liver\ntumour segmentation the best algorithm achieved\nDice scores between 0.67 and 0.70. While these\nfindings are promising, there was notable vari-\nability in both the imaging characteristics of liver\ntumours and in their annotation, underscoring the\nneed for universal, standardised methods for liver\ntumour segmentation.7°7!\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1034.4,
+                2763.7,
+                1856.1,
+                3033.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_04/region_8_text.png",
+            "text": "To date, AI has been applied less frequently to\nMRI imaging of HCC tumours, and given the tech-\nnical difficulty and expense associated with\nmanually designing MRI features, the majority of\npublished studies have been conducted in rela-\ntively small populations. Nevertheless, a prior\n"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_13.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 4,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 91.51,
+            "box": [
+                248.9,
+                264.0,
+                2245.7,
+                1039.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_13/region_1_text.png",
+            "text": "The major difference between the two neural networks used in this study was the inclusion of an\nattention mechanism in SCHMOWDER. Whole-slide images contain large amounts of\ninformation, not all of which is relevant to the prediction of survival. Our model acts in a similar\nway to pathologists analyzing images to make a diagnosis. It focuses on specific areas of the\nslide identified as potentially containing key survival-related information. Indeed we hypothesized\nthat the most important features for survival prediction were located in the tumoral areas, and we\nshowed that the addition of this attention mechanism significantly improved the performance of\nthe model. Once trained, these networks no longer require annotation, as they can automatically\nidentify the regions of interest on slides. These results highlight the importance of human-\nmachine interactions for the development of artificial intelligence-based algorithms.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 88.23,
+            "box": [
+                252.7,
+                1076.5,
+                2244.1,
+                2329.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_13/region_2_text.png",
+            "text": "Several studies based on gene expression profiling and/or genetic testing have reported scores\npredicting the survival of patients with HCC.(15) In a recent and elegant study, Chaudhary and\ncollaborators used deep-learning approaches on RNA/miRNA sequencing and methylation data\nfrom the TCGA database to predict prognosis after HCC resection. Their model was able to\nidentify two distinct subgroups of patients with significant survival differences, and was further\nvalidated in five external cohorts. The implementation of these high-throughput gene expression\nprofiling/sequencing technologies in clinical care is however currently hampered by their cost, the\nneed for nucleic acid extraction, and standardization and reproducibility issues. Our model\nrequires only stained slides, which are easily available in a surgical treatment setting. We believe\nthat this approach would thus facilitate the implementation of risk stratification systems in clinical\npractice. The use of such models will however require particular workflows in pathology\ndepartments that allow efficient, rapid and reproducible glass slides scanning. The WSI\nprocessing and computing time should also be short enough not to delay therapeutic decisions.\nBoth our discovery and validation series consisted of patients treated by surgical resection for\nwhom abundant histological material is available, and the validation of our models in other clinical\nsettings remains a challenge for future studies.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 85.77,
+            "box": [
+                251.5,
+                2367.3,
+                2246.9,
+                2989.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_13/region_3_text.png",
+            "text": "Convolutional neural networks are generally seen as “black boxes”.(16) Indeed, data are\nprocessed through complex layers of computation, and it is difficult to identify the most relevant\nfeatures used by trained models for sample classification.(16) This lack of interpretability is\nconsidered a major limitation of deep learning-based networks. We used an innovative approach\nallowing extraction of the most pertinent image tiles and their subsequent analysis by trained\npathologists. We show that the classification obtained is at least partly based on pathological\nfeatures known to be associated with the clinical outcome of HCC, such as the macrotrabecular\narchitectural pattern, the presence of intratumoral immune infiltration, or high levels of cellular\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 33.59,
+            "box": [
+                248.2,
+                3295.3,
+                1398.2,
+                3363.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_13/region_4_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

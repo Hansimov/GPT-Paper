@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_20.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_20.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 20
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                489.7,
+                362.2,
+                2000.1,
+                885.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_20/region_1_text.png",
+            "text": "It was interesting to note the differences in the expression / methylation profiles of\nthe top omics features between the prognostic clusters derived by the hybrid loss. These\nfeatures tended to exhibit only low and subtle expression and methylation differences\nbetween prognostic groups. Thus, it remains to be established whether the features\nidentified by the hybrid approach could have utility in diagnostics as biomarkers with\ncurrent approaches using expression or pyrosequencing assays. Also a limitation of the\nmethod is that the methylation specific CpG site information was collapsed during data\npre-processing, therefore changes to this stage would be required to identify key meth-\nylation features that differed in order to be able to design a diagnostic assay.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                490.2,
+                894.4,
+                1999.9,
+                1416.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_20/region_2_text.png",
+            "text": "Nevertheless, mRNA and methylation patterns were differential between prognostic\ngroups, which would warrant further testing for their clinical application as targeted\ntherapies for HCC or other. It may be that other biological processes might distinguish\nhow these genes function differently between prognostic groups. For example, patient\ngroups may differ in their epigenetic profiles or post-transcriptional processing or modi-\nfication of these mRNAs, whereby some are silenced whilst others go on to become a\nprotein with functional impact. Thus, in future, assays that focus on other RNA pro-\ncesses related to those features perhaps may prove more useful for diagnostics compared\nto traditional tests.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                490.3,
+                1423.6,
+                1999.9,
+                2302.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_20/region_3_text.png",
+            "text": "Certainly the hybrid approach developed here identified a suite of unbiased features\nthat may be more representative of the aetiology. This is because only the significant fea-\ntures in the top 10% of the omics ANOVA results for each run were considered here.\nAlso examining the key features consistently identified across ten multiple runs should\nhave prevented any oversight of the most important features of interest. In this work,\na single Gene-enrichment and Functional Annotation Analysis was conducted on the\nfeatures that were most different between clusters. The reason for this was to focus on\nuncovering the biological pathways that differed between prognostic patient groups.\nPrognostic subgroups for the losses did not appear to be explained by clinical charac-\nteristics such as disease grade or risk factors. Instead many of the robust features identi-\nfied by the hybrid model that distinguished prognostic groups were novel and had not\nbeen previously described for HCC by similar models. Thus, further investigation of the\nrobust features that distinguished prognostic groups could determine whether any of\nthese genomic alterations that distinguished patients in groups would be of interest from\na clinical perspective for diagnosing new HCC survival subtypes.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.61,
+            "box": [
+                489.7,
+                2415.6,
+                721.2,
+                2467.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_20/region_4_title.png",
+            "text": "Conclusions\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                490.3,
+                2477.0,
+                1999.8,
+                2943.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_20/region_5_text.png",
+            "text": "Autoencoders trained using Les and Lpsc produced more statistically robust results. This\nwork demonstrates that utilising a joint clustering and survival objective function can\nidentify new patient subgroups that are prognostic and provide biological insights for\ntarget identification for therapeutics. This information is important for discovery within\nprecision medicine and the development of new therapies for patient interventions.\nFuture directions of this work would be the application of the proposed analysis pipeline\nto other cancers of poor clinical outcome, such as brain tumours (gliomas), or other dis-\neases where survival and omics information is becoming more routinely available.\n"
+        }
+    ]
+}

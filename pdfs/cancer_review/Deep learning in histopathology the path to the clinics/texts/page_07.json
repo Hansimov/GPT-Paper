@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 3,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 85.39,
+            "box": [
+                301.1,
+                299.3,
+                2194.5,
+                1279.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_07/region_1_text.png",
+            "text": "annotator and avoiding false negatives and false positives in the annotated reference standard.\nAnother useful technique is re-staining, which provides an alternative to serial sections and enables\nthe same slide to be subsequently stained with, for example, H&E and IHC, and the two digitized slides\nto be aligned via registration algorithms. This technique guarantees that exactly the same cells and\ntissue compartments are present in both slides, and that the positive marker in IHC can be transferred\nto H&E, de facto producing a strong basis for making accurate annotations automatically. This\napproach has been adopted for the detection of mitotic figures using phosphohistone H3 as a\nreference standard [55], for the segmentation of prostate epithelium using CK as reference standard\n[78], and for the detection of epithelial cells in breast cancer using CK and Ki67 [79]. Re-staining\ntechniques enable the number of cases to be scaled at relatively low cost and with only a minimal\ninteraction from human experts, thus reducing variability due to inter-observer disagreement, which\nis a well-known limitation in applications such as the detection of mitotic figures [55].\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 85.79,
+            "box": [
+                300.2,
+                1381.8,
+                2194.5,
+                2118.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_07/region_2_text.png",
+            "text": "[H2] Weakly supervised learning. Another approach to reduce the burden of manual annotations is\nto consider CPATH algorithms that are trained in a weakly supervised fashion. In the context of image\nsegmentation, weak supervision can come in the form of sparse manual annotations, for example,\nannotation of only small regions using dots or scribbles, as opposed to full supervision via dense\nannotations, in which all pixels of the image are manually labeled [80] [81]. Several groups have shown\nthat weak supervision combined with advanced learning strategies in model development can\napproach the performance of fully supervised systems, particularly when sparse and dense\nannotations are combined. On the basis of this idea, weak supervision has been used to address\nseveral segmentation and detection problems in CPATH methods [82], [83], [41], [58], [84], [48].\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 85.38,
+            "box": [
+                301.4,
+                2219.3,
+                2195.0,
+                3044.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_07/region_3_text.png",
+            "text": "In weakly supervised WSI classification (for example, making a single prediction for the entire WSI),\nonly a single label per image is available for model development, and methods based on manual\nannotations are no longer applicable. This setting is appealing in terms of scalability because\ninformation contained in clinical annotations is often sufficient to define the image-level target (such\nas the presence of cancer in WSI) without the need to make manual annotations of cancer regions.\nFurthermore, clinical annotations can often be extracted from pathology reports and health records\n[85], [86], opening a new avenue for automated analysis of those reports and for extraction of labels,\nwith the potential to scale up to several thousands of cases, which would be impossible to manually\nannotate. As an example, this type of challenge was proposed as one of the tasks in the TUPAC\ncompetition in 2016, in which participants were asked to predict a proliferation score derived from\n"
+        }
+    ]
+}

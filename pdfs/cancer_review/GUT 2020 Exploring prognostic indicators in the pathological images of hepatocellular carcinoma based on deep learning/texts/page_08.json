@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 5,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.87,
+            "box": [
+                190.8,
+                194.9,
+                2284.1,
+                2267.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                174.4,
+                2297.0,
+                2302.2,
+                2524.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_2_text.png",
+            "text": "Figure 5 Evaluation of the prognostic results for patients in the validation set from the The Cancer Genome Atlas (TCGA) cohort. (A) Confusion\nmatrices of the classification results (PPV, positive predictive value; NPV, negative predictive value). (B) C-indices via TRS under different magnification\nscales with (w/) or without (w/o) WSI standardisation (std). (C) Kaplan-Meier curves of overall survival for high TRS (>70% TRS) and low TRS\n\n(<70% TRS) (D) Kaplan-Meier curves for overall survival of TRS (70% as cut-off) at different tumour stages. (E) Relevance of TRS to tumour immune\ninfiltration and gene mutations. Hi, high; Lo, low; TRS, tumour risk score.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                175.8,
+                2623.4,
+                1207.0,
+                3128.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_3_text.png",
+            "text": "By contrast, we successfully applied weakly supervised learning\non smaller data sets effectively. Training a deep neural network\nin image analysis is an optimisation of all possible solutions to\ntremendous image information. By implicitly constraining the\nsolution space with prior knowledge, the complexity of the\nproblem can be effectively reduced to justify the need for less\ndata. In our study, an easily available prior knowledge for patho-\nlogical images is the tissue category. Thus, we trained tissue\ncategory-based local sampling using minor manual annotation,\nthereby obtaining a large number of more meaningful tissue tiles\non HCC slices as inputs. Using prior knowledge can effectively\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.73,
+            "box": [
+                1278.1,
+                2624.5,
+                2307.7,
+                2760.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_4_text.png",
+            "text": "reduce the complexity of network optimisation and improve the\nperformance of weakly supervised learning, even on small data\nsets.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1278.4,
+                2762.7,
+                2306.9,
+                3128.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_5_text.png",
+            "text": "Recently, Saillard et al has reported a method of predicting\npostoperative survival of HCC patients using deep-learning on\nhistological slides.*”? Compared with their study, we have advan-\ntages on multi-scale sampling, multi-omics analysis and fine-\ngrained heatmap visualisation. Using tissue decomposition, we\nperformed multi-scale automatic sampling from specific tissue\nregions to calibrate prognostic risk scores. Compared with\nnon-tumour tissue regions, the TRS had the greatest prognostic\n"
+        }
+    ]
+}

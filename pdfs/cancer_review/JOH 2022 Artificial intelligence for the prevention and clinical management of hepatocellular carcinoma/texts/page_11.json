@@ -1,0 +1,129 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 9,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 40.15,
+            "box": [
+                201.7,
+                1146.4,
+                358.0,
+                1189.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_11/region_1_title.png",
+            "text": "Key point\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 97.32,
+            "box": [
+                202.9,
+                1214.1,
+                572.0,
+                1626.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_11/region_2_text.png",
+            "text": "There remains a great need\nto standardise and robustly\nevaluate AI algorithms in\nprospective studies and\nusing large-scale “real-\nworld” datasets, as well as\nto establish consensus\nguidelines to ensure accu-\nrate and comprehensive\nreporting of data from ML\nand DL studies.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                626.9,
+                248.9,
+                1449.3,
+                569.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_11/region_3_text.png",
+            "text": "its different components and finally generating\npost hoc explanations. Transparency mainly con-\nsists of understanding the model structure and its\nfunction. Semantics of the different network com-\nponents will provide insights on the meaning of\nparticular neurons and the post hoc explanation\nfinally analyses why a result is inferred (Fig. 3).’°\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                626.5,
+                569.7,
+                1450.1,
+                1664.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_11/region_4_text.png",
+            "text": "For example, post hoc explanations of models\nprocessing digital histology slides can be estab-\nlished by getting a human expert to review the\nimage areas associated with the highest predictive\nvalue.. This type of approach was used in the study\nby Saillard et al, who built a model able to predict\nthe survival of patients after resection of HCC.\nInterestingly, reviewing the tumoural tiles associ-\nated with a high risk of death showed an enrich-\nment in several features (including macro-\ntrabecular-massive subtype, cellular atypia) previ-\nously shown to be predictive of dismal clinical\noutcome.®° These results show that the models, at\nleast in part, rely on known histological parame-\nters. The authors also identified a new prognostic\nfeature, ie. the presence of vascular spaces.\nTogether, these results underscore the importance\nof human/machine interactions and show that\nnovel hypotheses can be generated with this type\nof approache. Altogether, addressing ‘explain-\nability’ is a critical issue, and will be necessary to: i)\ngain the required confidence in AI models’ outputs,\nand ii) exploit NNs to discover key features that\nmay have been overlooked.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 98.77,
+            "box": [
+                627.3,
+                1731.9,
+                1428.8,
+                1829.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_11/region_5_title.png",
+            "text": "Future applications of Al: towards tailored\nclinical trials\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                626.4,
+                1830.2,
+                1450.3,
+                2924.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_11/region_6_text.png",
+            "text": "Prospective studies are needed to fully demon-\nstrate the potential of AI to improve the clinical\ncare of patients with HCC. In other medical areas,\nseveral Al-based randomised clinical trials have\nalready been conducted. As such, in endoscopy,\nnumerous randomised clinical trials have evalu-\nated the impact of computer-aided systems on\nphysicians’ performance in diagnosing intestinal\nadenoma or indicating blind spots of colonos-\ncopy.’*°° The need to incorporate these new de-\nvelopments prompted the research community to\nextend the widely used SPIRIT and CONSORT\nguidelines for the use of Al methods in 2020.°'°?\nAccording to ClinicalTrials.gov (https://\nclinicaltrials.gov/), there are currently 6 ongoing\ntrials involving AI for the management of HCC. A\nresearch group at the University of Hong Kong is\ncomparing an algorithm designed to diagnose HCC\nfrom CT images against the standard diagnostic\nprocedure that relies on the LI-RADS criteria\n(NCT04843176).°? A multicentre study from France\nis prospectively developing an AI algorithm in a\nnon-randomised clinical trial. The research group\nuses clinical, biological and ultrasound data to\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 98.66,
+            "box": [
+                1483.3,
+                248.3,
+                2307.3,
+                340.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_11/region_7_text.png",
+            "text": "stratify the risk of HCC emergence in high- and\nlow-risk patients.°*\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1484.3,
+                340.7,
+                2308.9,
+                1346.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_11/region_8_text.png",
+            "text": "Treatment with immune checkpoint inhibitors\n(ICIs) has represented a fundamental breakthrough\nin many cancers.®° °’ In palliative treatment of HCC\npatients, the IMBRAVE-150 trial showed that the\ncombination of atezolizumab and bevacizumab\nconferred a significant survival benefit compared to\nsorafenib in patients with HCC.* However, like in\nmany previous trials in distinct entities, it became\napparent that not all patients with HCC benefit from\nICIs to a similar extent. While there are signals for\nHCC subgroups with a potentially higher benefit (e.g.\nviral hepatitis vs. non-viral liver disease®*®), there is\nstill no biomarker that reliably predicts therapeutic\nresponse before or very early after starting ICI ther-\napy in patients with HCC. Therefore, a significant\nfraction of patients will be subjected to the (low) risk\nof severe ICI-related toxicity without benefit, thereby\nbeing at an increased risk of tumour progression and\nworsened liver function, while the cost of ICI therapy\nis remarkably high. In this setting, Al-based response\nprediction could play a key role in improving patient\noutcomes and reducing healthcare expenditure.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1483.8,
+                1345.2,
+                2308.3,
+                2943.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_11/region_9_text.png",
+            "text": "Generating, training and applying an algorithm\ncould involve a deep net trained on histologic data,\ne.g. from randomised clinical trials in immuno-\ntherapy, and/or the combination of different deep\nnets including histology, radiology, genomic and\nclinical information. Importantly, a DL-based algo-\nrithm could either be trained on data available\nbefore the start of therapy or on data extracted\nimmediately after the initiation of therapy. Thus, it\nmay, before the first radiological response evalua-\ntion, provide early predictions of whether a patient\nwill benefit or should be switched to another\ntherapeutic strategy. Beyond determining the ideal\nfirst-line therapy per patient, Al-based decision\nmaking could also provide a basis for a funda-\nmental switch in the way that treatment changes\nare implemented into long term palliative treat-\nment of oncologic patients. Currently, a successful\nline of therapy is provided to a patient until\nradiological progression is evident (Fig. 4). How-\never, it could be beneficial to establish a tool for the\nearly prediction of treatment failure, recommend-\ning a switch to another therapy, even before full\nprogression is documented on imaging. This tool\ncould enable preemptive therapy adjustment in the\ninterval between molecular resistance and imaging\n(Fig. 3). AI could represent the ideal toolbox to\nfacilitate such a concept. Similar to a first-line de-\ncision, an algorithm would need to be trained\nwithin clinical trials, first proving that radiological\nprogression can be reliably predicted, e.g. on an\nalgorithm trained on radiology, but also on labo-\nratory values and clinical parameters. Once a proof\nof concept for an AI algorithm is achieved, future\nclinical trials could compare a possible benefit from\n"
+        }
+    ]
+}

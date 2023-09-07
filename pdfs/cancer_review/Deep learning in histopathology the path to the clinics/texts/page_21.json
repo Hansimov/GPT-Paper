@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_21.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_21.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 21
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 98.18,
+            "box": [
+                299.8,
+                294.5,
+                2200.0,
+                3052.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_21/region_1_list.png",
+            "text": "[59] Nagpal, K. et al. Development and validation of a deep learning algorithm for improving\nGleason scoring of prostate cancer. npj Digital Medicine 2, (2019).\n\n[60] Jansen, |. et al. Automated Detection and Grading of Non-Muscle-Invasive Urothelial Cell\nCarcinoma of the Bladder. The American journal of pathology 190, 1483-1490 (2020).\n\n[61] Karimi, D. et al. Deep Learning-Based Gleason Grading of Prostate Cancer From\nHistopathology Images-Role of Multiscale Decision Aggregation and Data Augmentation. /EEE journal\nof biomedical and health informatics 24, 1413-1426 (2020).\n\n[62] Bulten, W. et al. Automated deep-learning system for Gleason grading of prostate cancer\nusing biopsies: a diagnostic study. The Lancet. Oncology 21, 233-241 (2020).\n\n[63] Strom, P. et al. Artificial intelligence for diagnosis and grading of prostate cancer in biopsies:\na population-based, diagnostic study. The Lancet. Oncology 21, 222-232 (2020).\n\n[64] Gertych, A. et al. Convolutional neural networks can accurately distinguish four histologic\ngrowth patterns of lung adenocarcinoma in digital slides. Scientific reports 9, 1483 (2019).\n\n[65] Salgado, R. et al. The evaluation of tumor-infiltrating lymphocytes (TILs) in breast cancer:\nrecommendations by an International TILs Working Group 2014. Annals of Oncology 26, 259-271,\n(2015).\n\n[66] Saltz, J. et al. Spatial Organization and Molecular Correlation of Tumor-infiltrating\nLymphocytes Using Deep Learning on Pathology Images. Ce// Reports 23, 181-193.e7 (2018).\n\n[67] AbdulJabbar, K. Geospatial immune variability illuminates differential evolution of lung\nadenocarcinoma. Nature medicine 26, 1054-1062 (2020).\n\n[68] Kather, J. N. et al. Predicting survival from colorectal cancer histology slides using deep\nlearning: A retrospective multicenter study. PLoS medicine 16, e1002730 (2019).\n\n[69] Geessink, O. G. F. et al. Computer aided quantification of intratumoral stroma yields an\nindependent prognosticator in rectal cancer. Cellular oncology 42, 331-341 (2019).\n\n[70] Kapil, A. Et al. DASGAN-Joint Domain Adaptation and Segmentation for the Analysis of\nEpithelial Regions in Histopathology PD-L1 Images. https://arxiv.org/abs/1906.11118 (2019).\n\n[71] Sha, L. et al. Multi-Field-of-View Deep Learning Model Predicts Non small Cell Lung Cancer\nProgrammed Death-Ligand 1 Status from Whole-Slide Hematoxylin and Eosin Images. Journal of\npathology informatics 10, 24 (2019).\n\n[72] Campanella, G. et al. Clinical-grade computational pathology using weakly supervised deep\nlearning on whole slide images. Nature medicine 25, 1301-1309 (2019).\n\n[73] Ehteshami Bejnordi, B. et al. Diagnostic Assessment of Deep Learning Algorithms for Detection\nof Lymph Node Metastases in Women With Breast Cancer. JAMA 318, 2199-2210 (2017).\n"
+        }
+    ]
+}

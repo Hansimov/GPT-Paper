@@ -1,0 +1,259 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 19,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                156.6,
+                233.8,
+                1204.6,
+                539.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_01_text.png",
+            "text": "ated with which radiological characteristics. This global explana-\ntion provided insight into the neural network’s behavior. For ex-\nample, the class ‘benign cyst’ was most often associated with the\nradiological finding ‘thin-walled mass’. Since the network did not\nonly output the class label but also the corresponding radiologi-\ncal characteristics, this explanation could enhance user trust in the\noutput of the network.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 98.92,
+            "box": [
+                156.9,
+                606.7,
+                405.0,
+                648.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_02_title.png",
+            "text": "3.3.3. Prototypes\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                157.7,
+                649.4,
+                1205.5,
+                1258.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_03_text.png",
+            "text": "Chen et al. 2019 proposed to use typical examples as expla-\nnation (i.e., prototypes), which they described as ‘this-looks-like-\nthat’. The method reflected case-based reasoning that humans per-\nform. For example, when a person explains why a picture contains\na car, they can internally reason that this is a car because it looks\nlike a car they have seen before. A prototype layer was added to\nthe neural network, which grouped training inputs according to\ntheir classes in the latent space. A prototype was picked for each\nclass, consisting of a typical example of that class. During testing,\nthe method utilized parts of the test image that resembled these\ntrained prototypes. The output was a weighted combination of the\nsimilarities to these prototypes. Hence, the explanation was an ac-\ntual computation of the neural network, not a post hoc approxi-\nmation.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                156.1,
+                1260.6,
+                1204.5,
+                1519.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_04_text.png",
+            "text": "Uehara et al. (2019) used prototypes to explain why a neural\nnetwork classified patches of histology images as cancer or as not-\ncancer. The network was able to identify on which parts of the im-\nage it based its decision, and to what extent these parts of the im-\nage were similar to prototypical examples learned from the train-\ning set.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.42,
+            "box": [
+                156.5,
+                1587.4,
+                721.9,
+                1629.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_05_title.png",
+            "text": "3.3.4. Examples from the latent space\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                156.3,
+                1631.1,
+                1205.2,
+                2022.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_06_text.png",
+            "text": "Sarhan et al. (2019) proposed learning disentangled represen-\ntations of the latent space using a residual adversarial VAE with\na total correlation constraint. This adversarial VAE enhanced the\nfidelity of the reconstruction and provided more detailed descrip-\ntions of underlying generative characteristics of the data. When an-\nalyzing reconstructions by traversing through the latent space, they\nshowed that their method yielded reconstructions that were more\ntrue to human-interpretable concepts such as lesion size, lesion ec-\ncentricity, and skin color compared with a regular VAE.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                157.6,
+                2023.3,
+                1205.8,
+                2588.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_07_text.png",
+            "text": "Biffi et al. (2020) provided a framework for explainable anatom-\nical shape analysis using a ladder VAE (Sgnderby et al., 2016). They\ncoupled this ladder VAE with a multi-layered perceptron, enabling\nthe network to train end-to-end for classification tasks. By doing\nthis, the highest level of the latent space was enforced to be low-\ndimensional (2D or 3D), which meant that these learned latent\nspaces could be directly visualized without the need of further di-\nmensionality reduction after training. They provided dataset-level\nexplanation using these low-dimensional latent spaces to visual-\nize differences in shape for hypertrophic cardiomyopathy versus\nhealthy controls on cardiac MRI, and for Alzheimer’s disease ver-\nsus healthy controls on brain MRI by visualizing the shape of the\nhippocampus.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                157.8,
+                2589.4,
+                1205.6,
+                3112.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_08_text.png",
+            "text": "Silva et al. (2018) proposed example-based explanation that\nshowed similar and dissimilar cases foraesthetic results of breast\nsurgery on photos, and for skin images on dermoscopy. They iden-\ntified these examples using a nearest neighbor search in latent\nSpace: The nearest neighbor of the same class was considered the\nmost similar case, and the nearest neighbor of the other class\nwas considered the most dissimilar case. Their explanation also in-\ncluded rule extraction from meta-features (e.g. the color of a skin\nlesion or the visibility of scars). They proposed three criteria to\nmeasure the validity of the rule-extracted explanation, namely: (1)\ncompleteness, i.e. the explanation should be general enough to be\napplied to more than one observation; (2) correctness, i.e. if the\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1277.0,
+                234.5,
+                2325.5,
+                363.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_09_text.png",
+            "text": "explanation itself was considered a model, it should correctly iden-\ntify which class it belongs to; and (3) compactness, i.e. the expla-\nnation should be succinct.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1277.6,
+                364.5,
+                2325.8,
+                756.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_10_text.png",
+            "text": "In later work, Silva et al. (2020) combined example-based ex-\nplanation with saliency mapping. First, they trained a baseline CNN\nto classify chest X-rays into pleural effusion versus non-pleural ef-\nfusion. After that, the CNN was fine-tuned on saliency maps. In\ntesting, a nearest neighbor search between the latent space of the\ntest image and a curated ‘catalogue’ set of images was performed.\nAdding the saliency map yielded more consistent examples than\nextracting examples without the saliency map (i.e., the baseline\nCNN).\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1277.1,
+                756.5,
+                2324.5,
+                1365.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_11_text.png",
+            "text": "Sabour et al. (2017) showed that by replacing the scalar feature\nmaps from convolution neural networks by vectorized representa-\ntions (i.e., capsules), they were able to encode high-level features\nof images. Capsules were basically subcollections of neurons in a\nlayer. These were linked to subcollections of neurons in subsequent\nlayers, forming a capsule network. This capsule network was opti-\nmized using dynamic routing. In short, higher level capsules were\nactivated if their corresponding lower-level capsules are active.\nThis correspondence was described by routing coefficients, which\nsummed to one for each capsule. The coefficients were iteratively\n(i.e., dynamically) updated when the capsule network received new\ninput data. For the MNIST digits dataset, Sabour et al. (2017) found\nthat these capsules learn human-interpretable features such as\nscale, thickness, and skew.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.6,
+                1367.2,
+                2326.1,
+                1802.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_12_text.png",
+            "text": "LaLonde et al. (2020) used capsules for lung cancer diagnosis,\nwhile also predicting visual attributes such as sphericity, lobula-\ntion, and texture. Since these visual attributes were not necessar-\nily mutually exclusive, as was the case in MNIST (a digit cannot\nbe a two and a nine at the same time), they adapted the dy-\nnamic routing algorithm accordingly. Specifically, the routing co-\nefficients did not have to sum to one in their implementation.\nLaLonde et al. (2020) showed that their implementation was in-\ndeed able to predict these visual attributes as well as lung nodule\nmalignancy.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "title",
+            "score": 99.57,
+            "box": [
+                1276.6,
+                1847.9,
+                1856.1,
+                1890.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_13_title.png",
+            "text": "4. Pros and cons of XAI techniques\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.6,
+                1934.3,
+                2326.2,
+                2196.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_14_text.png",
+            "text": "All XAI techniques described in Section 3 have pros and cons,\ninfluencing how one would choose from the various options. We\nwill structure these pros and cons in the categories ease of use,\nvalidity, robustness, computational cost, necessity to fine-tune, and\nopen-source availability. An overview of these pros and cons per\nmethod from Table 1 is given in Table 5.\n"
+        },
+        {
+            "idx": 15,
+            "thing": "title",
+            "score": 98.47,
+            "box": [
+                1277.9,
+                2241.8,
+                1508.2,
+                2283.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_15_title.png",
+            "text": "4.1. Ease of use\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1278.0,
+                2327.4,
+                2325.7,
+                2675.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_16_text.png",
+            "text": "We define the ease of use by the potential of XAI tech-\nniques to be ‘plug-and-play’. Post hoc model agnostic techniques\nhave the highest ease of use. These methods generally consist of\nperturbation-based visual explanation techniques such as occlusion\nsensitivity. These techniques can be used on any trained neural\nnetwork to provide a visual explanation. Model-based techniques\ntypically have lowest ease of use, since the explanation is embed-\nded in the design of the neural network.\n"
+        },
+        {
+            "idx": 17,
+            "thing": "title",
+            "score": 98.25,
+            "box": [
+                1278.2,
+                2720.8,
+                1457.6,
+                2762.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_17_title.png",
+            "text": "4.2. Validity\n"
+        },
+        {
+            "idx": 18,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1277.8,
+                2807.7,
+                2325.1,
+                3025.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_18_text.png",
+            "text": "We define validity by whether the explanation is correct and\ncorresponds to what the end-user expects. In case of visual ex-\nplanation, this can be assessed for example by asking a radiolo-\ngist whether the explanation points towards the pathology that the\nneural network was designed to classify.\n"
+        },
+        {
+            "idx": 19,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1277.5,
+                3027.0,
+                2325.4,
+                3111.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_11/region_19_text.png",
+            "text": "Research on quantifying validity of XAI is sparse, and currently\nfocuses on visual explanation. Arun et al. (2021) aimed to quan-\n"
+        }
+    ]
+}

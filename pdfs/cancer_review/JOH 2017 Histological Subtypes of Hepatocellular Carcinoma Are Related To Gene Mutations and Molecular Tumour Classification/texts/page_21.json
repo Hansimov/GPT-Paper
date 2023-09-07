@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_21.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_21.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 2,
+        "page_idx": 21
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 97.6,
+            "box": [
+                192.5,
+                222.4,
+                2274.8,
+                455.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_21/region_1_text.png",
+            "text": "Table 2. Analysis of clinical, biological and histological features for disease-specific survival (InsermU1162 Cohort,\nn=278, only features with more than 10% infrequency were selected) (OR= Odds Ratio, Cl=Confidence Interval).\nStatistical analysis was performed using univariate and multivariate Cox proportional hazards regression models (Wald\ntest).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.8,
+            "box": [
+                177.2,
+                504.0,
+                2383.3,
+                2985.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_21/region_2_table.png"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_18.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_18.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 2,
+        "page_idx": 18
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.57,
+            "box": [
+                321.7,
+                232.3,
+                2158.1,
+                1126.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_18/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.75,
+            "box": [
+                178.0,
+                1174.3,
+                2266.7,
+                1300.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_18/region_2_text.png",
+            "text": "Extended Data Fig. 7 | Patient risk stratification using histopathological features. Kaplan-Meier curves for high and low risk groups in different tumor\ntypes and stages. a, breast invasive carcinoma. b, stomach adenocarcinoma. ¢, head and neck squamous cell carcinoma. Only tumor stages with at least\n20 patients are shown. Hazard ratios (HR) and the corresponding 95% confidence interval were computed using a Cox proportional hazards model.\n"
+        }
+    ]
+}

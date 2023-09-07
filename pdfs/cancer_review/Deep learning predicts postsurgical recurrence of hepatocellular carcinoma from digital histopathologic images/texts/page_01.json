@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 6,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.85,
+            "box": [
+                647.7,
+                527.1,
+                2288.4,
+                1033.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_1_title.png",
+            "text": "Deep learning predicts postsurgical\nrecurrence of hepatocellular\ncarcinoma from digital\nhistopathologic images\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 97.09,
+            "box": [
+                648.9,
+                1059.4,
+                2137.2,
+                1109.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_2_text.png",
+            "text": "Rikiya Yamashita?”, Jin Long2, Atif Saleem?, Daniel L. Rubin?“ & Jeanne Shen???“\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                650.6,
+                1146.5,
+                2308.0,
+                1741.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_3_text.png",
+            "text": "Recurrence risk stratification of patients undergoing primary surgical resection for hepatocellular\ncarcinoma (HCC) is an area of active investigation, and several staging systems have been proposed to\noptimize treatment strategies. However, as many as 70% of patients still experience tumor recurrence\nat 5 years post-surgery. We developed and validated a deep learning-based system (HCC-SurvNet)\nthat provides risk scores for disease recurrence after primary resection, directly from hematoxylin\n\nand eosin-stained digital whole-slide images of formalin-fixed, paraffin embedded liver resections.\nOur model achieved concordance indices of 0.724 and 0.683 on the internal and external test cohorts,\nrespectively, exceeding the performance of the standard Tumor-Node-Metastasis classification\nsystem. The model's risk score stratified patients into low- and high-risk subgroups with statistically\nsignificant differences in their survival distributions, and was an independent risk factor for post-\nsurgical recurrence in both test cohorts. Our results suggest that deep learning-based models can\nprovide recurrence risk scores which may augment current patient stratification methods and help\nrefine the clinical management of patients undergoing primary surgical resection for HCC.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                649.8,
+                1822.0,
+                2314.1,
+                2284.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_4_text.png",
+            "text": "Hepatocellular carcinoma (HCC) is the most prevalent primary liver malignancy and the fourth leading cause\nof cancer-related death worldwide’”. Despite advances in prevention, surveillance, early detection, and treat-\nment, its incidence and cancer-specific mortality continue to rise, with the majority of patients still presenting\nat advanced stages’”. To stratify patients according to their expected outcome in order to optimize treatment\nstrategies, several staging systems, such as the American Joint Committee on Cancer (AJCC)/International\nUnion against Cancer (UICC) Tumor-Node-Metastasis (TNM)? and the Barcelona Clinic Liver Cancer (BCLC)\nsystems‘, have been proposed and validated. However, as many as 70% of patients still have tumor recurrence\nwithin 5 years post-treatment**’’, including both true recurrence due to intrahepatic metastasis and de novo\nprimary cancers arising in the background liver, as the majority of HCCs occur in patients with underlying\nchronic liver disease that directly contributes to the development of HCC. Therefore, further refinement and\nimprovement of recurrence risk stratification is warranted.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                650.4,
+                2281.0,
+                2313.6,
+                2785.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_5_text.png",
+            "text": "Histopathologic assessment plays a key role in recurrence risk stratification, as it evaluates human-recog-\nnizable morphologic features associated with tumor recurrence, such as histopathologic grade and vascular\ninvasion*''. Prognostic nomograms for prediction of recurrence after curative liver resection for HCC have\nbeen proposed using clinicopathologic variables'”. However, histopathologic features are interpreted by patholo-\ngists, which is subject to reproducibility problems (an example being inter- and intra-observer variability in the\nassessment of microvascular invasion!*). On the other hand, recent advances in computer vision, deep learning,\nand other forms of machine learning have enabled the identification of histomorphologic patterns and features\ninformative of disease outcomes which are not readily recognizable by the human eye, and which are reproduc-\nible. Thus, there has been much interest in applying computer vision methods to histologic images for automated\noutcome prediction'**'. Mobadersany et al.'* and Zhu et al.'° applied convolutional neural networks, a type of\ndeep learning network, to predict patient survival directly from histopathologic images of brain and lung cancers,\nrespectively. In these two studies, to achieve direct survival prediction from histopathologic images, the negative\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 96.81,
+            "box": [
+                649.3,
+                2874.1,
+                2316.9,
+                3081.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_6_text.png",
+            "text": "1Department of Biomedical Data Science, Stanford University School of Medicine, 1265 Welch Road, Stanford,\nCA 94305, USA. *Center for Artificial Intelligence in Medicine and Imaging, Stanford University, 1701 Page Mill\nRoad, Palo Alto, CA 94304, USA. ?>Department of Pathology, Stanford University School of Medicine, 300 Pasteur\nDrive, Stanford, CA 94305, USA. “These authors contributed equally: Daniel L. Rubin and Jeanne Shen. “email:\njeannes@stanford.edu\n"
+        }
+    ]
+}

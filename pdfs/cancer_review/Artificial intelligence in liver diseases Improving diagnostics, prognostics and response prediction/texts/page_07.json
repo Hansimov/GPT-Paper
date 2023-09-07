@@ -1,0 +1,141 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 10,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                177.8,
+                264.9,
+                1217.7,
+                581.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_07/region_01_text.png",
+            "text": "established. Datasets should include multiple geographic re-\ngions, provide data from different imaging vendors, and reflect\nthe racial and socioeconomic diversity of the population the Al\nalgorithm will be implemented upon.”° Strategies such as data\naugmentation or general adversarial networks can also be used\nto expand the dataset and compensate for under-represented\nclasses of images.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                178.1,
+                584.4,
+                1218.3,
+                855.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_07/region_02_text.png",
+            "text": "Anticipating sources of bias which threaten the external val-\nidity of an algorithm will involve pre-emptively acting on biased\npredictions. AI algorithms should employ continuous, real-time\nlearning in which new input data are monitored for biases®®\nand predicted labels are modified accordingly in external\ntesting to minimise bias.°°\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                177.9,
+                858.1,
+                1216.8,
+                1814.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_07/region_03_text.png",
+            "text": "Sharing all details of algorithm development, especially the\ndatasets and computer source code underlying the model, will\nbe critical for reproducibility, validation, and eventual translation\ninto clinical workflows.°°'°! The Checklist for Artificial Intelli-\ngence in Medical Imaging (CLAIM) and the assessment checklist\ndeveloped by the Fairness, Universality, Traceability, Usability,\nRobustness and Explainability Al (FUTURE-AI) initiative establish\nreporting guidelines for appraisal of AI studies.'°” Similarly, the\nchecklists for established reporting guidelines, such as STARD\n(Standards for Reporting Diagnostic Accuracy), CONSORT\n(Consolidated Standards of Reporting Trials), and TRIPOD, are\nbeing expanded specifically to account for ML and AI applica-\ntions.'0?'4 The Evaluating Commercial Al Solutions in Radiology\n(ECLAIR) Guidelines expand upon the aforementioned checklists\nfor Al studies by adding considerations related to information\ntechnology infrastructure, user accessibility, medical device\nregulation, data protection, licensing, and product mainte-\nnance.'°° With greater adherence to reporting guidelines, AI will\nbe able to clearly define its roles in hepatology clinical work-\nflows. Indeed, AI can potentially facilitate triage of patients,\nenhance consult evaluations, or conveniently summarise all\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1263.8,
+                264.7,
+                2304.0,
+                489.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_07/region_04_text.png",
+            "text": "patient clinical data under a single clinical interface.'* Moreover,\nstandardisation of AI tools will be needed to encourage the\nadoption of more clinically relevant performance metrics such as\nclassification/re-classification accuracy and quality of life mea-\nsures, rather than indices such as the AUC.'®!°°\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1265.1,
+                492.2,
+                2303.6,
+                1175.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_07/region_05_text.png",
+            "text": "Finally, holding algorithms accountable for their predictions\nmay involve proactively ensuring that clinicians understand how\nalgorithms use input data to make decisions, or interpretability.\nVisualisation methods mapping which pixels contribute to the\nclassification of an input image can aid interpretability of DL\nsystems.'°° Wang et al. worked within the framework of Hamm\net al.’s DL system to infer features most relevant to hepatic lesion\nclassification and produce feature maps corresponding to areas\nwhere features were detected.’°'°” Zhen et al. generated saliency\nheatmaps to visualise pixels most relevant to classification of 7\ntypes of focal liver lesions on MRI.'°° Wei et al. utilised an inte-\ngrated gradients method to show which pixels corresponded to\nthe most important clinical and radiomics features for prediction\nof overall survival in patients with HCC undergoing stereotactic\nbody radiation therapy.'°°\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 98.47,
+            "box": [
+                1264.3,
+                1260.5,
+                1417.9,
+                1309.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_07/region_06_title.png",
+            "text": "Outlook\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 98.08,
+            "box": [
+                1263.5,
+                1314.1,
+                2303.1,
+                1358.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_07/region_07_title.png",
+            "text": "Overcoming obstacles on the way to clinical implementation\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1264.0,
+                1360.9,
+                2303.8,
+                1816.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_07/region_08_text.png",
+            "text": "Even though AI carries much promise for changing future clinical\npractice, a number of issues must be addressed before broad\nimplementation is possible. The problems of data stand-\nardisation, biases introduced through unrepresentative training\ndata, and explainability of ML/DL algorithms have already been\nmentioned above. However, these issues are more concerned\nwith model development, rather than deployment. Building up\nthe necessary healthcare infrastructure and training medical\npersonnel to sensibly use new technology are important cor-\nnerstones of the deployment side. To fully realise the benefits of\n"
+        },
+        {
+            "idx": 9,
+            "thing": "figure",
+            "score": 99.02,
+            "box": [
+                676.6,
+                1921.9,
+                1806.7,
+                2896.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_07/region_09_figure.png"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.58,
+            "box": [
+                177.3,
+                2976.6,
+                2304.0,
+                3096.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_07/region_10_text.png",
+            "text": "Fig. 3. Data types in hepatology and multimodal learning. Inner area: data types routinely used for clinical decision making in hepatology. Blue circle: type of\ndigital data. Yellow circle: suitable machine learning methods to analyse this data. NLP, natural language processing. Icon source: openmoji.org (CC-BY-SA 4.0\nlicense).\n"
+        }
+    ]
+}

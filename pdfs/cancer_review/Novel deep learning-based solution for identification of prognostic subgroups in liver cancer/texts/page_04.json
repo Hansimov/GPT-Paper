@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 6,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                490.3,
+                363.3,
+                1992.2,
+                943.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_04/region_1_text.png",
+            "text": "from mirBase 20. For methylation, data collected using the Infinitum HumanMethylation\n450 BeadChip assay was selected for analysis. Methylation values were averaged, with\n1500 base pairs ahead of transcription start sites being selected to indicate the genomic\nregion for which the average value should be calculated. Only those samples which had\nall three omics types, a non-negative survival value and a histologic diagnosis of HCC\nwere selected. For each omics type, features which had either a missing or zero value in\nmore than 20% of samples were removed. Next, those samples which had more than 20%\nof their features missing or of zero value were removed. The impute.knn function in the\nimpute R package was used to fill in any missing values [12]. Following pre-processing, a\ntotal of 352 samples were taken forward for further analyses.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                489.8,
+                953.0,
+                1992.0,
+                1475.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_04/region_2_text.png",
+            "text": "The three data types were concatenated into a single vector for each patient creat-\ning the multi-omics matrix, which was used as the input for the proposed model. The\nfinal dataset consisted of 35,024 features for 352 patients. The Liver Cancer, Riken Japan\n(LIRI-JP) HCC dataset, which also had associated survival data, was utilised as an inde-\npendent cohort for feature validation [13]. The data was accessed using the HCCDB\nplatform online (http://lifeome.net/database/hccdb/home.html). Data consisted of\ngene expression measures also collected using RNA-seq for 212 HCC samples from 203\npatients. Both HCC cohorts had similar clinical characteristics (sex ratios, age profiles)\nand underlying health conditions with risk factors such as hepatitis B and C (Table 1).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.53,
+            "box": [
+                490.1,
+                1595.5,
+                814.5,
+                1641.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_04/region_3_title.png",
+            "text": "Model construction\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.84,
+            "box": [
+                489.7,
+                1653.7,
+                1992.0,
+                1938.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_04/region_4_text.png",
+            "text": "As the baseline, the autoencoder of Chaudhary et al. [6] was recreated. Herein, their\nautoencoder model was implemented and trained using log loss, also known as binary\ncross entropy (BCE). In addition, mean squared error (MSE), termed Lp was used with\nthe same baseline autoencoder architecture as a comparison. The formula of Lp is pre-\nsented in Eq. 1:\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                490.6,
+                2151.6,
+                1992.0,
+                2732.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_04/region_5_text.png",
+            "text": "where x represents input, @ represents the encoder function of the autoencoder, w rep-\nresents the decoder function, meaning w(@(x)) represents the final output of the model.\nThese baseline models utilise survival information to filter bottleneck features after net-\nwork training and then use the selected features for clustering. In our implementation\nof the baseline, the bottleneck produced by the autoencoder trained with MSE for ten\nepochs was clustered using the KMeans function from Scikit-learn Python library (full\nalgorithm with kmeans-+-+ initialisation) into k groups ranging from 2 to 5. The optimal\nnumber of k was identified as being two using the Silhouette score, estimated using the\nsilhouette_score function from Scikit-learn Python library. This result was in line with\nprevious findings presented in the baseline work [6].\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                490.3,
+                2742.5,
+                1991.7,
+                3027.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_04/region_6_text.png",
+            "text": "For the network construction, the Keras [14] module tf.Keras in Tensorflow was\nused [15]. As before [6], the three omics data types were stacked by sample to form a\nsingle matrix, which was unit norm scaled. This was done using the normalize function\nfrom the Scikit-learn pre-processing module [16]. The autoencoder, as before [6], was\ncreated using hidden layers of dimensions 500, 100 and 500. As before [6] tanh was used\n"
+        }
+    ]
+}

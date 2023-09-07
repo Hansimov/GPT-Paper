@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_08.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 5,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 65.53,
+            "box": [
+                251.0,
+                263.4,
+                441.5,
+                333.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_08/region_1_title.png",
+            "text": "Results\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 75.66,
+            "box": [
+                249.5,
+                373.9,
+                1213.4,
+                442.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_08/region_2_title.png",
+            "text": "Model development from the discovery set\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 54.96,
+            "box": [
+                246.7,
+                458.3,
+                2248.6,
+                2554.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_08/region_3_text.png",
+            "text": "We included 194 patients in our discovery series (Figure 1). The most frequent risk factors for\nliver disease were alcohol intake (30%) and HCV (hepatitis C virus) infection (27%)\n(Supplemental Table 1). Disease stage, according to the Barcelona Clinic of Liver Cancer\n(BCLC) system, was 0/A in 79% of the patients and B/C in 21% of the patients. As expected liver\nfunction was preserved in almost all the patients (191/194 were classified as Child-Pugh A). We\ndid not, therefore, include this variable in the analysis. The frequency of cirrhosis was also low\n(Supplemental Table 1). Fifty-six deaths were recorded during follow-up (after a median follow\nup of 26.5 months). The clinical and pathological features associated with shorter overall survival\nwere microvascular invasion (hazard ratio (HR)=4.2, p=5E-7), BCLC stage B-C (HR=4.1, p=6E-6)\nand macrovascular invasion (HR=3.7, p=4E-5).\n\nOne or two representative digital slides of hematein-eosin-saffron (HES)-stained sections were\navailable for each HCC case (NDPI format, 40x magnification, total of 390 slides from 206\ntumors; some patients had several tumors). These slides included tissues from both the HCC and\nthe adjacent surrounding liver tissues, and the tumor and non-tumoral areas were identified and\nannotated by an expert liver pathologist (JC).\n\nWe extracted 20 000 tiles (small image patches of 224 x 224 pixels) from each available WSI\n(total of 7 800 000 tiles), and used a pretrained convolutional neural network to extract relevant\nfeatures from each tile before training our models (Figure 2A, Supplemental Methods).(14)\n\nWe assessed the discriminatory power of the CHOWDER and SCHMOWDER models for\npredicting overall survival by cross-validation. We found that both models performed well, with\nmean c-indexes of 0.75 and 0.78, respectively (Figure 3A). Interestingly, both models\noutperformed baseline variables (Figure 3A). We then constructed a composite score (CS)\nintegrating the relevant clinical, biological and pathological features for survival prediction, and\nshowed that both deep learning-based models had a greater discriminatory power than the CS\n(Figure 3A and Supplementary Methods).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 84.62,
+            "box": [
+                251.4,
+                2668.4,
+                2246.1,
+                2979.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_08/region_4_text.png",
+            "text": "Indeed, CHOWDER and SCHMOWDER outperformed the CS by 4 points (p=3.6E-3), and 7\npoints (p=5.9E-7), respectively. SCHMOWDER also significantly outperformed CHOWDER (p-\nvalue=2.1E-2). A mean aggregation of the predictions from the CS and our models did not\nimprove performance significantly (c-indices stagnated at 0.75, p=0.99 and 0.78, p=0.83 with\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 33.37,
+            "box": [
+                247.1,
+                3295.1,
+                1399.1,
+                3363.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_08/region_5_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

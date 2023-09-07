@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_19.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_19.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 2,
+        "page_idx": 19
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.65,
+            "box": [
+                207.4,
+                240.2,
+                2271.5,
+                757.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_19/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.83,
+            "box": [
+                176.9,
+                805.7,
+                2295.1,
+                1065.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_19/region_2_text.png",
+            "text": "Extended Data Fig. 8 | Overall performance of PC-CHiP in validation datasets. a, The validation accuracy in METABRIC (blue) and BASIS (green)\ndatasets compared to TCGA dataset (red) for each significant association discovered in TCGA indicated at the bottom (total number of genomic\nalterations tested n=82). Each point corresponds to the predicted AUC for the genomic alteration indicated at the bottom. Error bars correspond to 95%\nconfidence intervals. p-value estimated from Wilcox’s rank sum test and adjusted using FDR. b, The distribution of correlation between predicted and true\ntranscript level in METABRIC (x-axis) compared to those in TCGA (y-axis). Each dot represents a gene (n=14,756 genes); blue dots are the genes that can\nbe validated in METABRIC (Spearman’s rank correlation p > O, p-value estimated using two sided t-test, adjusted FDR<O.1).\n"
+        }
+    ]
+}

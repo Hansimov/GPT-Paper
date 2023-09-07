@@ -1,0 +1,168 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages/page_1.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages_ordered/page_1.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 12,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.19,
+            "box": [
+                149.6,
+                411.2,
+                2292.0,
+                600.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_01_title.png",
+            "text": "Classification and mutation prediction based on\nhistopathology H&E images in liver cancer using deep learning\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 88.26,
+            "box": [
+                149.8,
+                632.7,
+                2292.4,
+                723.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_02_text.png",
+            "text": "Mingyu Chen@'?, Bin Zhang@®', Win Topatana(\", Jiasheng Cao', Hepan Zhu’, Sarun Juengpanich’*, Qijiang Mao', Hong Yu'™ and\nXiujun Cai@!'??™4\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.26,
+            "box": [
+                199.3,
+                807.9,
+                2246.4,
+                1215.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_03_text.png",
+            "text": "Hepatocellular carcinoma (HCC) is the most common subtype of liver cancer, and assessing its histopathological grade requires\nvisual inspection by an experienced pathologist. In this study, the histopathological H&E images from the Genomic Data Commons\nDatabases were used to train a neural network (inception V3) for automatic classification. According to the evaluation of our model\nby the Matthews correlation coefficient, the performance level was close to the ability of a 5-year experience pathologist, with\n96.0% accuracy for benign and malignant classification, and 89.6% accuracy for well, moderate, and poor tumor differentiation.\nFurthermore, the model was trained to predict the ten most common and prognostic mutated genes in HCC. We found that four of\nthem, including CTNNB1, FMN2, TP53, and ZFX4, could be predicted from histopathology images, with external AUCs from 0.71 to\n0.89. The findings demonstrated that convolutional neural networks could be used to assist pathologists in the classification and\ndetection of gene mutation in liver cancer.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 6.09,
+            "box": [
+                203.6,
+                1236.8,
+                1420.9,
+                1276.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_04_text.png",
+            "text": "npj Precision Oncology (2020)4:14; https://doi.org/10.1038/s41698-020-01 20-3\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 96.42,
+            "box": [
+                150.9,
+                1433.7,
+                411.0,
+                1474.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_05_title.png",
+            "text": "INTRODUCTION\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                149.0,
+                1482.6,
+                1184.2,
+                2115.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_06_text.png",
+            "text": "Hepatocellular carcinoma (HCC) is the fourth leading cause of\ncancer-related mortality and is currently the main cause of liver-\nrelated death, leading to more than one million deaths annually\nworldwide'°. Over several decades, substantial progress had\nbeen made in the understanding of HCC risk factors, epidemiol-\nogy, and molecular pathogenesis. The early detection of HCC\nincreases the chance of curative therapies in high overall survival.\nUnfortunately, most HCC patients are diagnosed at the inter-\nmediate to late-stage, which significantly decreases the overall\nsurvival*. Various predominant clinical risk factors for the\ndevelopment of HCC have been defined, including alcohol abuse,\ncirrhosis, metabolic syndrome, and hepatitis B and/or C virus\ninfection® °. However, multiple genetic alternation and signaling\ncascades also have a great influence on tumor progression and\noverall survival’.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                148.6,
+                2115.0,
+                1184.8,
+                2876.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_07_text.png",
+            "text": "The understanding of HCC molecular pathogenesis has been\nsignificantly improved over the past decade'®. The development\nof genomic analysis has identified the major drivers that are\nresponsible for cancer development and progression. HCC has\nbeen reported to have around 40 genomic aberrations, some of\nwhich are deemed as drivers. Several frequent HCC genomic\nalternations have been identified, including mutations in the\nCTNNB1 (B-catenin WNT pathway activation), 7P53, telomere\nreverse transcriptase (telomere maintenance), AT-rich interaction\ndomain 1A (ARID1A; chromatin remodeling), mammalian target of\nrapamycin signaling, RAS signaling, oxidative stress pathway\nactivation, and aberrations in DNA methylation''. Previous studies\nhave reported that the heterogeneity of HCC at both molecular\nand histological levels are correlated with gene mutations and\noncogenic pathways'*. The mutually exclusive CTNNB1 (40%) and\nTP53 (21%) mutations have been identified as two major groups of\nHCC according to its distinct phenotype. CTNNB1 mutated HCC is\ngenerally well-differentiated and large, with pseudoglandular and\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 66.17,
+            "box": [
+                149.4,
+                3134.0,
+                1128.3,
+                3170.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_08_text.png",
+            "text": "Published in partnership with The Hormel Institute, University of Minnesota\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 6.9,
+            "box": [
+                2007.6,
+                340.8,
+                2286.5,
+                381.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_09_text.png",
+            "text": "® Check for updates\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1257.9,
+                1433.9,
+                2292.2,
+                1685.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_10_text.png",
+            "text": "microtrabecular patterns, and lacks inflammatory infiltrates;\nwhereas 7P53 mutated HCC is generally poor-differentiated, with\ncompact patterns, frequent vascular invasion, and pleomorphic,\nmultinucleated cells'?. The deeper understandings of the HCC\nphenotypes are essential for improving targeted therapies and\nclinical translation.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1259.2,
+                1688.2,
+                2292.7,
+                2877.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_11_text.png",
+            "text": "Pathologists could provide limited information regarding cancer\nreorganization from normal liver tissue and assess its histopatho-\nlogical grade via visual inspection, but it still lacks the underlying\nbiological differences in HCC gene mutations associated with\noverall survival. The recent advances in artificial intelligence (Al)\nprovided a novel way to assist clinicians to classify medical\ninformation and images'*'’. Recently, Lin et al.'® used multi-\nphoton microscopy with deep learning in the automated\nclassification of HCC differentiation. Furthermore, Li et al.'®\ncombined extreme learning machine with multiple convolutional\nneural network methods for nuclei grading in HCC. The\ndevelopment of graphics processing units allows the possibility\nto train a more complex neural network to satisfy the requirement\nof accomplishing complex visual recognition tasks, such as\ndistinguishing tumors from normal tissue slides and classifying\nsubtypes of tumors”°?'. To the best of our knowledge, a previous\nstudy by Coudray et al.’° utilized the deep convolutional neural\nnetwork on histopathological images to automatically classify the\ntype and subtype of lung tumors. In addition, a promising result\nfor the classification of colorectal?”** and breast tumors~* using\ndeep learning was also reported. Therefore, deep-learning models\ncould be used to assist pathologists to effectively detect gene\nmutations and cancer subtypes. However, it remains unclear\nwhether deep learning can be applied to solid tumors, especially\nfor HCC. In addition, advances in Al tools in digital pathology have\nresulted in an increased demand for predictive assays in frozen\nslides that enable the selection and stratification of patients for\nadditional treatment during surgery”’.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 81.82,
+            "box": [
+                147.9,
+                2957.2,
+                2294.2,
+                3062.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_1/region_12_text.png",
+            "text": "‘Department of General Surgery, Sir Run-Run Shaw Hospital, Zhejiang University, 310016 Hangzhou, China. “Key Laboratory of Endoscopic Technique Research of Zhejiang\nProvince, Sir Run-Run Shaw Hospital, Zhejiang University, 310016 Hangzhou, China. *Engineering Research Center of Cognitive Healthcare of Zhejiang Province, 310003\nHangzhou, China. “Zhejiang University School of Medicine, 310000 Hangzhou, China. “email: 3195016@zju.edu.cn; srrsh_cxj@zju.edu.cn\n"
+        }
+    ]
+}

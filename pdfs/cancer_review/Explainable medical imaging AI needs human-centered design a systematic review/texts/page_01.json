@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 10,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.46,
+            "box": [
+                151.4,
+                409.2,
+                2291.0,
+                598.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_01/region_01_title.png",
+            "text": "Explainable medical imaging AI needs human-centered design:\nguidelines and evidence from a systematic review\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 92.58,
+            "box": [
+                149.4,
+                632.2,
+                1592.2,
+                677.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_01/region_02_text.png",
+            "text": "Haomin Chen@!”, Catalina Gomez'?, Chien-Ming Huang@®' and Mathias Unberath @! ™\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.24,
+            "box": [
+                197.9,
+                763.6,
+                2245.8,
+                1487.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_01/region_03_text.png",
+            "text": "Transparency in Machine Learning (ML), often also referred to as interpretability or explainability, attempts to reveal the working\nmechanisms of complex models. From a human-centered design perspective, transparency is not a property of the ML model but\nan affordance, i.e., a relationship between algorithm and users. Thus, prototyping and user evaluations are critical to attaining\nsolutions that afford transparency. Following human-centered design principles in highly specialized and high stakes domains, such\nas medical image analysis, is challenging due to the limited access to end users and the knowledge imbalance between those users\nand ML designers. To investigate the state of transparent ML in medical image analysis, we conducted a systematic review of the\nliterature from 2012 to 2021 in PubMed, EMBASE, and Compendex databases. We identified 2508 records and 68 articles met the\ninclusion criteria. Current techniques in transparent ML are dominated by computational feasibility and barely consider end users,\ne.g. clinical stakeholders. Despite the different roles and knowledge of ML developers and end users, no study reported formative\nuser research to inform the design and development of transparent ML models. Only a few studies validated transparency claims\nthrough empirical user evaluations. These shortcomings put contemporary research on transparent ML at risk of being\nincomprehensible to users, and thus, clinically irrelevant. To alleviate these shortcomings in forthcoming research, we introduce the\nINTRPRT guideline, a design directive for transparent ML systems in medical image analysis. The INTRPRT guideline suggests human-\ncentered design principles, recommending formative user research as the first step to understand user needs and domain\nrequirements. Following these guidelines increases the likelihood that the algorithms afford transparency and enable stakeholders\nto capitalize on the benefits of transparent ML.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 7.7,
+            "box": [
+                200.4,
+                1509.9,
+                1416.9,
+                1550.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_01/region_04_text.png",
+            "text": "npj Digital Medicine (2022)5:156; https://doi.org/10.1038/s41746-022-00699-2\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 95.04,
+            "box": [
+                150.5,
+                1708.2,
+                411.1,
+                1748.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_01/region_05_title.png",
+            "text": "INTRODUCTION\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                148.2,
+                1756.6,
+                1184.6,
+                2951.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_01/region_06_text.png",
+            "text": "There have been considerable research thrusts to develop\nMachine Learning (ML) models in the healthcare domain that\nassist clinical stakeholders'. However, translating these ML models\nfrom the bench to the bedside to support clinical stakeholders\nduring routine care brings substantial challenges, among other\nreasons, because of the high stakes involved in most decisions\nthat impact human lives. When stakeholders interact with ML\ntools to reach decisions, they may be persuaded to follow ML’s\nrecommendations that may be incorrect or promote unintended\nbiases against vulnerable populations, all of which can have\ndreadful consequences”. These circumstances motivate the need\nfor trustworthy ML systems in healthcare and have sparked efforts\nto specify the different requirements that ML algorithms should\nfulfill. Most of these recent efforts focus on achieving a certain on-\ntask performance requirement but neglect that for assisted\ndecision making not ML system performance alone, but human-\nML team performance is the most pertinent to patient outcome.\nHow to achieve adequate human-machine teaming performance,\nhowever, is debated. While some argue that rigorous algorithmic\nvalidation, e.g., similar to the evaluation of drugs, tests, or devices,\ndemonstrates safe and reliable operation and may thus be\nsufficient for successful human-machine teaming“, others reason\nthat transparency in an ML model, e.g., by revealing its working\nmechanisms and presenting a proper interface, is necessary to\ninvoke user trust and achieve the desired human-machine\nteaming performance®~’. The growing interest and convergence\nof recent works on the importance and need of transparency have\nstressed that not addressing the opacity of ML techniques might\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 25.98,
+            "box": [
+                149.1,
+                3133.7,
+                1100.9,
+                3170.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_01/region_07_text.png",
+            "text": "Published in partnership with Seoul National University Bundang Hospital\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1259.2,
+                1707.8,
+                2293.3,
+                2458.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_01/region_08_text.png",
+            "text": "hinder their adoption of in healthcare, limiting the potential\npositive impacts?’*'*. The inability to make the decision making\nprocess transparent might affect the misuse and disuse of ML\nmodels in the clinical domain, as the utility of the model might be\nlimited if it does not reveal the reasoning process, limitations, and\nbiases. We believe that this dichotomy is artificial in that, first,\nrigorous validation and transparency are not mutually exclusive,\nand second, both approaches augment an ML model with\nadditional information in hopes to justify (in other words, make\ntransparent) the recommendation’s validity which is hypothesized\nto achieve certain human-factors engineering goals such as\nunderstandability, reliability, trust and etc. However, as we will\nhighlight in detail through a systematic review, current\napproaches that aim at advancing human factors goals of ML\nsystems rely on developers’ intuition rather than considering\nwhether these mechanisms affect users’ experience with the\nsystem and their ability to act on ML model's outputs.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1259.0,
+                2458.3,
+                2292.7,
+                2942.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_01/region_09_text.png",
+            "text": "Designing ML algorithms that are transparent is fundamentally\ndifferent from merely designing ML algorithms. The desire for\ntransparency adds a layer of complexity that is not necessarily\ncomputational. Rather, it involves human factors, namely the users\nto whom the ML algorithm should be transparent. As a\nconsequence, transparency of an algorithm is not a property of\nthe algorithm but a relationship between the transparent ML\nalgorithm and the user processing the information. Such relation-\nship can be understood as an affordance, a concept that is\ncommonly employed when designing effective Human-Computer\nInteractions (HCls)'?, and we argue that transparency in ML\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 96.26,
+            "box": [
+                150.4,
+                3028.4,
+                2294.2,
+                3062.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_01/region_10_text.png",
+            "text": "\"Department of Computer Science, Johns Hopkins University, Baltimore, MD, USA. “These authors contributed equally: Haomin Chen, Catalina Gomez. “email: unberath@jhu.edu\n"
+        }
+    ]
+}

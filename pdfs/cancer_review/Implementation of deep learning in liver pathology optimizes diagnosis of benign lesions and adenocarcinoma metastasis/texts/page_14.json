@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 5,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 98.01,
+            "box": [
+                197.7,
+                203.0,
+                1203.0,
+                1675.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_14/region_1_list.png",
+            "text": "30. Bulten W, Kartasalo K, Chen P-HC, et al. Artificial intelli-\ngence for diagnosis and Gleason grading of prostate cancer: the\nPANDA challenge. Nat Med. 2022;28:154-163.\n\n31. Strom P, Kartasalo K, Olsson H, et al. Artificial intelligence\nfor diagnosis and grading of prostate cancer in biopsies: a\npopulation-based, diagnostic study. Lancet Oncol. 2020;21:222-\n232.\n\n32. Calderaro J, Kather JN. Artificial intelligence-based pathology\nfor gastrointestinal and hepatobiliary cancers. Gut. 2021;70:1183-\n1193.\n\n33. Lu MY, Chen TY, Williamson DFK, et al. Al-based pathol-\nogy predicts origins for cancers of unknown primary. Nature.\n2021;594:106-110.\n\n34. Kiani A, Uyumazturk B, Rajpurkar P, et al. Impact of a deep\nlearning assistant on the histopathologic classification of liver\ncancer. NPJ Digit Med. 2020;3:23.\n\n35. Muhammad H, Sigel CS, Campanella G, et al. Towards Unsuper-\nvised Cancer Subtyping: Predicting Prognosis Using a Histologic\nVisual Dictionary. arXiv:1903.05257; 2019.\n\n36. Saillard C, Schmauch B, Laifa O, et al. Predicting survival\nafter hepatocellular carcinoma resection using deep learning on\nhistological slides. Hepatology. 2020;72:2000-2013.\n\n37. Zanini N, Lombardi R, Masetti M, Giordano M, Landolfo G,\nJovine E. Surgery for isolated liver metastases from pancreatic\ncancer. Updates Surg. 2015;67:19-25.\n\n38. Voon W, Hum YC, Tee YK, et al. Performance analysis of\nseven convolutional neural networks (CNNs) with transfer\nlearning for invasive ductal carcinoma (IDC) grading in breast\nhistopathological images. Sci Rep. 2022;12:19200.\n\n39. Tan MX, Le QV. EfficientNetV2: smaller models and faster\ntraining. Pr Mach Learn Res. 2021;139:7102-7110.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 99.27,
+            "box": [
+                1284.4,
+                199.4,
+                2291.1,
+                815.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_14/region_2_list.png",
+            "text": "40. Howard FM, Kather JN, Pearson AT. Multimodal deep learn-\ning: an improvement in prognostication or a reflection of batch\neffect? Cancer Cell. 2023;41:5-6.\n\n41. Khan Niazi MK, Yearsley MM, Zhou X, Frankel WL, Gurcan\nMN. Perceptual clustering for automatic hotspot detection\nfrom Ki-67-stained neuroendocrine tumour images. J Microsc.\n2014;256:213-225.\n\n42. Matek C, Krappe S, Miinzenmayer C, Haferlach T, Marr C.\nHighly accurate differentiation of bone marrow cell morpholo-\ngies using deep neural networks on a large image data set. Blood.\n2021;138:1917-1927.\n\n43. Huang B, Huang H, Zhang §, et al. Artificial intelligence in\npancreatic cancer. Theranostics. 2022;12:6931-6954.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 97.5,
+            "box": [
+                1277.8,
+                950.9,
+                2022.4,
+                1002.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_14/region_3_title.png",
+            "text": "SUPPORTING INFORMATION\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.32,
+            "box": [
+                1278.3,
+                1006.7,
+                2291.3,
+                1163.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_14/region_4_text.png",
+            "text": "Additional supporting information can be found online\nin the Supporting Information section at the end of this\narticle.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 84.51,
+            "box": [
+                1331.7,
+                1296.9,
+                2215.5,
+                1620.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_14/region_5_text.png",
+            "text": "How to cite this article: Kriegsmann M,\nKriegsmann K, Steinbuss G, et al. Implementation\nof deep learning in liver pathology optimizes\ndiagnosis of benign lesions and adenocarcinoma\nmetastasis. Clin Transl Med. 2023;13:e1299.\nhttps://doi.org/10.1002/ctm2.1299\n"
+        }
+    ]
+}

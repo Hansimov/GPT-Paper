@@ -1,0 +1,141 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 10,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 51.35,
+            "box": [
+                213.2,
+                220.1,
+                2263.8,
+                2221.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_11/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.63,
+            "box": [
+                212.9,
+                2247.1,
+                1214.5,
+                2337.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_11/region_02_text.png",
+            "text": "Supplementary Information The online version contains supplemen-\ntary material available at https://doi.org/10.1007/s12072-022-10321-y.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.84,
+            "box": [
+                212.5,
+                2381.1,
+                1214.9,
+                2599.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_11/region_03_text.png",
+            "text": "Author contributions LZ, ZS and XX designed the study. ZW, HY,\nWJw, WJg had full access to all the data. HY, LZ and LY analyzed the\ndata, wrote the manuscript, and were responsible for the decision to\nsubmit the manuscript. All authors provided substantial comments on\ndrafts and approved the final report.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                212.8,
+                2641.7,
+                1215.6,
+                2941.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_11/region_04_text.png",
+            "text": "Funding This research gained support from the Key Program\nof Provincial Natural Foundation of Zhejiang Province (No.\nLZ22H18003), Key Research & Development Plan of Zhejiang Prov-\nince (No. 2019C03050, No.2022C03108, No. 2021C03118) and the\nNational Natural Science Foundation of China (No. 92159202, No.\n81930016, No. 81802889). Research results are partially based on data\nfrom the TCGA database.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.82,
+            "box": [
+                1275.3,
+                2247.5,
+                2276.8,
+                2337.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_11/region_05_text.png",
+            "text": "Availability of dataand material The data that support the findings of this\nstudy are available from the corresponding author on reasonable request.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.54,
+            "box": [
+                1276.0,
+                2382.8,
+                1517.9,
+                2441.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_11/region_06_title.png",
+            "text": "Declarations\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.61,
+            "box": [
+                1276.6,
+                2486.1,
+                2276.8,
+                2619.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_11/region_07_text.png",
+            "text": "Conflict of interest Zhikun Liu, Yuanpeng Liu, Wenhui Zhang, Yuan\nHong, Jinwen Meng, Jianguo Wang, Shusen Zheng and Xiao Xu have\nnothing to disclose.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.35,
+            "box": [
+                1275.4,
+                2652.1,
+                2275.9,
+                2746.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_11/region_08_text.png",
+            "text": "Ethics approval Ethics approval was obtained by the Ethics Committee\nof the First Hospital, Zhejiang University School of Medicine.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.3,
+            "box": [
+                1275.9,
+                2777.2,
+                2229.4,
+                2829.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_11/region_09_text.png",
+            "text": "Consent to participate All patients gave written informed consent.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.14,
+            "box": [
+                1275.3,
+                2862.1,
+                2270.9,
+                2912.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_11/region_10_text.png",
+            "text": "Consent for publication All authors approved the manuscript for publication.\n"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_13.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 2,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 85.63,
+            "box": [
+                301.0,
+                291.2,
+                2196.2,
+                1618.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_13/region_1_text.png",
+            "text": "disease, the diagnostic process, and the specific circumstances of the patient, and then communicate\nand explain the outcomes of the analysis for both other clinicians and, increasingly, for patients. Thus,\nit is important to stress that pathologists are not likely to be replaced with Al algorithms anytime soon.\nWhat could be achieved relatively soon is Al algorithms that work in conjunction with pathologists,\nrather than as stand-alone solutions, to remove the need for tedious, repetitive work, such as\nidentifying lymph node metastases [73], or to increase the quality of diagnostic grading [62] [63]. In\nthis context, it is important to differentiate between most high-income countries, such as the USA or\nthe Netherlands, and low or middle-income countries, such as China or India. The former generally\nhave sufficient pathologists for their current workload (although the issue of workloads is expected to\nbecome problematic in the near future), whereas in the latter, access to pathological expertise is\nchallenging and sometimes even impossible. In the absence of pathologists, algorithms could yield\nurgently needed data to inform diagnoses, which would be an important step forward. Obviously, the\ninfrastructure around digital pathology in some settings, such as rural hospitals in low and middle-\nincome countries, would be challenging, and it is worth noting recent initiatives to address this\nlimitation by giving access to CPATH algorithms without the need for a full digital pathology\ninfrastructure [122].\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 87.08,
+            "box": [
+                299.3,
+                1715.5,
+                2196.9,
+                3128.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_13/region_2_text.png",
+            "text": "[H2] Explainable Al. CPATH solutions based on deep learning models are often described as ‘black\nboxes’, indicating that because of the nature of these systems (being trained rather than explicitly\nprogrammed), it is very difficult for humans to understand the exact underlying functioning of the\nsystem [159]. As a result, correcting certain erroneous behaviors may be more difficult, and\nacceptance by humans (as well as regulatory approval) may be hampered [123]. This problem has\ngiven rise to research on ‘explainable Al’, in which techniques are developed that enable better\nunderstanding of the functioning of deep learning models. Current state-of-the-art of methods that\ncan shed light inside the black box have been extensively reviewed elsewhere [124]. Interestingly, the\nauthors of that survey [124] conclude that there is no consensus on the exact meaning of the term\n‘explainable’, as it has different requirements in different contexts and for different stakeholders.\nAlthough techniques for improving the explainability of Al will support acceptance by the community,\nthe emphasis that should be placed on precise understanding of the mechanics of the technology,\nrather than on the functioning of the system as a whole in the context in which it is used [125], is\ndebatable, especially when such systems are integrated into the clinical workflow of pathology\ndiagnostics. Rigorous validation and quality assurance and checking procedures will be critical to prove\nthe correct functioning of CPATH solutions, both at initial market entrance and also after future\nupdates. This topic is highly relevant to regulatory bodies such as the FDA, which has recently\n"
+        }
+    ]
+}

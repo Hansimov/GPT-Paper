@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 4,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 82.13,
+            "box": [
+                302.2,
+                294.6,
+                2189.8,
+                523.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_10/region_1_text.png",
+            "text": "be also found in several other studies [111], [112], [59]. Limited generalizability of algorithms is\nprobably the single most important obstacle for wide-scale implementation of CPATH techniques in\nthe clinic.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 85.96,
+            "box": [
+                300.1,
+                627.5,
+                2194.1,
+                1196.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_10/region_2_text.png",
+            "text": "To make CPATH algorithms as robust as possible in response to variations that are likely to be\nencountered in real-world practice, it is pivotal to establish a training set that contains as much\nvariation as possible, including data from different staining batches, scanners and medical centers.\nAdditional (artificial) variability may be introduced by data augmentation techniques, with a particular\nfocus on color augmentation, to mimic differences in staining from different pathology laboratories\n[113]: image patches can be transformed before being used in the training process by applying random\nrotation, flipping, addition of noise, blurring and color shifting.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 86.43,
+            "box": [
+                301.0,
+                1301.5,
+                2192.7,
+                2035.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_10/region_3_text.png",
+            "text": "An alternative (or possibly complementary) approach to deal with variations between data sources is\nthe normalization of images to a common standard [111] [114], [115], [116], [117]. The hypothesis is\nthat if variability can be removed and all (future) target images translated to a well-defined standard\n(mostly in terms of color specifications) then even a CPATH algorithm built on a narrow set of training\nimages would perform consistently well. The price that is paid for this approach is the need to\ntransform every target image before applying the CPATH model, which may be computationally costly.\nBoth data augmentation and image normalization are necessary requisites to increase generalizability\nof deep learning models [113], and should therefore be considered in the development of any CPATH\napproach.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 86.56,
+            "box": [
+                300.7,
+                2138.8,
+                2192.7,
+                2955.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_10/region_4_text.png",
+            "text": "Another important issue to contend with is the fact that a CPATH algorithm will only recognize the\npatterns it was trained to recognize. For example, if an algorithm that was trained to detect breast\ncancer metastases in lymph nodes was confronted with lymphoma, the outcome would be uncertain.\nIf such an algorithm were used to filter out obviously negative WSI (without lymph node metastases),\nwhich do not need to be inspected by a pathologist, serious diseases could remain undetected. One\npossible solution is to train algorithms for all possible pathologies; however, such an approach may be\nimpractical or even impossible in most cases. An alternative approach is the development of CNN\ntechniques that yield, in addition to the network output, a score that expresses the certainty of the\nCNN for that specific output [152] [153], which would offer CNNs the ability to essentially state ‘I do\nnot know’.\n"
+        }
+    ]
+}

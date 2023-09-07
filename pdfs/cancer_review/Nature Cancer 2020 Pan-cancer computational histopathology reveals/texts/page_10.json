@@ -1,0 +1,181 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 13,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                177.8,
+                227.9,
+                1212.6,
+                517.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_01_text.png",
+            "text": "setting. Third, a likelihood boosting approach was used to train Cox models from\nscratch, combining clinical/gene expression data with the histopathology features.\nTo compare predictive performance across models, we examined the distribution\nof concordance indices across folds, as well as the mean difference concordance\nwithin folds. Furthermore, we used a paired-Wilcoxon signed-rank test to compare\nC estimates across models. To account for multiple comparisons, we used the\nHolm-Bonferroni correction as the FWER procedure. Survival curves were\nestimated using the Kaplan-Meier estimator.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.69,
+            "box": [
+                177.2,
+                554.7,
+                1174.9,
+                878.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_02_text.png",
+            "text": "External validation using the METABRIC and BASIS dataset. Hematoxylin\nand eosin-stained slides from frozen tissue samples were downloaded and tiled\ninto 512 pixel x 512 pixel tiles at 20x magnification in the same fashion as in\nTCGA. WGD status was calculated using the methods described previously®.\nThe amended Inception-V4 architecture preprocessing scripts are available\nfrom GitHub (https://github.com/gerstung-lab/PC-CHiP), and the retrained\nmodel checkpoints are available from the BioStudies database (https://www.ebi.\nac.uk/biostudies/) under accession number S-BSST292. Per-slide predictions for\nMETABRIC and BASIS were calculated using all tiles.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                177.2,
+                916.5,
+                1201.7,
+                1278.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_03_text.png",
+            "text": "Expert blinded assessment of TIL counts. To assess whether predicted TIL levels\nreflected the true level of immune cells for individual tiles, we randomly selected\n150 tiles with different levels of TILs from three cancer types: breast, bladder and\nlung cancer (each set of 50 tiles were from the highest 10% quantile, the 50-70%\nquantile and the lowest 10% quantile, respectively). The number of TILs for each\ntile was independently evaluated by two expert pathologists, who were blinded to\nthe predicted scores. The total number of nuclei was automatically learned using\nthe algorithm described”. The relationship between the predicted TIL scores from\nPC-CHIiP, the slide-level transcriptomic TIL scores and the true TIL scores was\nmodeled using multiple linear regression.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                177.8,
+                1315.1,
+                1212.2,
+                1822.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_04_text.png",
+            "text": "Statistics and reproducibility. All statistical procedures were conducted as\noutlined above. Data from previously published studies were obtained from the\nsources stated below. Only tissue types from TCGA with at least 50 images with a\nmagnification greater than 20x were included in this study. Histopathology slides\nwith at least 85% tumor content (existing histopathological information) were used\nfor training. Reproducibility of the image classification analysis was controlled\nusing a randomly selected set of patients for evaluation. Fivefold cross-validation\nand subsequent hypothesis testing with multiple testing adjustment was performed\nto control for errors in genomic, transcriptomic and prognostic associations. The\nvalidity of discoveries was assessed on two validation cohorts (METABRIC and\nBASIS). No statistical method was used to predetermine the sample size. The\nexperiments were not randomized. The investigators were not blinded to allocation\nduring the experiments and outcome assessment, except for the histopathological\nassessment of TILs.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.61,
+            "box": [
+                178.3,
+                1859.4,
+                1171.3,
+                1931.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_05_text.png",
+            "text": "Reporting Summary. Further information on research design is available in the\nNature Research Reporting Summary linked to this article.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.28,
+            "box": [
+                177.5,
+                1986.1,
+                463.0,
+                2034.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_06_title.png",
+            "text": "Data availability\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                176.8,
+                2033.1,
+                1215.0,
+                2432.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_07_text.png",
+            "text": "TCGA data (images, as well as genomic, transcriptomic and clinical data) are\npublically available from http://gdc.cancer.gov. For METABRIC, images and\ngenomic and transcriptomic data are available under controlled access at the\nEuropean Genome-phenome Archive (https://ega-archive.org/) under study\naccession EGAS00000000098, and clinical data are available at https://www.\ncbioportal.org/. For BASIS, genomic data are freely available from ftp://ftp.sanger.\nac.uk/pub/cancer/Nik-ZainalEtAl-560BreastGenomes, clinical data are published”,\nand histopathology images are available under controlled access at the European\nGenome-phenome Archive via accession EGAS00001001178. All other data\nsupporting the findings of this study are available from the corresponding author\nupon reasonable request. Source data are provided with this paper.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 99.21,
+            "box": [
+                177.5,
+                2483.9,
+                468.5,
+                2531.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_08_title.png",
+            "text": "Code availability\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.59,
+            "box": [
+                177.8,
+                2530.5,
+                1189.2,
+                2710.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_09_text.png",
+            "text": "The computational histopathology algorithm and analysis code are available\n\nat https://github.com/gerstung-lab/PC-CHiP. The retrained checkpoints for\nInception-V4 and amended Inception-V4 architecture are available from the\nBioStudies database (https://www.ebi.ac.uk/biostudies/) under accession number\nS-BSST292. Source data are provided with this paper.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 84.02,
+            "box": [
+                177.7,
+                2750.8,
+                916.3,
+                2837.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_10_title.png",
+            "text": "Received: 3 April 2020; Accepted: 26 May 2020;\nPublished online: 27 July 2020\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 98.51,
+            "box": [
+                177.7,
+                2881.0,
+                373.3,
+                2929.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_11_title.png",
+            "text": "References\n"
+        },
+        {
+            "idx": 12,
+            "thing": "list",
+            "score": 97.53,
+            "box": [
+                179.1,
+                2929.7,
+                1204.9,
+                3108.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_12_list.png",
+            "text": "1. Lindeman, N. I. et al. Molecular testing guideline for selection of lung cancer\npatients for EGFR and ALK tyrosine kinase inhibitors: guideline from the\nCollege of American Pathologists, International Association for the Study of\nLung Cancer, and Association for Molecular Pathology. J. Thorac. Oncol. 8,\n823-859 (2013).\n"
+        },
+        {
+            "idx": 13,
+            "thing": "list",
+            "score": 90.04,
+            "box": [
+                1266.0,
+                230.0,
+                2304.5,
+                3114.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_10/region_13_list.png",
+            "text": "2. Woodman, S. E., Lazar, A. J., Aldape, K. D. & Davies, M. A. New strategies\nin melanoma: molecular testing in advanced disease. Clin. Cancer Res. 18,\n1195-1200 (2012).\n\n3. Russnes, H. G., Lingjeerde, O. C., Borresen-Dale, A.-L. & Caldas, C. Breast\ncancer molecular stratification: from intrinsic subtypes to integrative clusters.\nAm. J. Pathol. 187, 2152-2162 (2017).\n\n4. Dienstmann, R. et al. Consensus molecular subtypes and the evolution of\nprecision medicine in colorectal cancer. Nat. Rev. Cancer 17, 79-92 (2017).\n\n5. Cancer Genome Atlas Research Network. The molecular taxonomy of\nprimary prostate cancer. Cell 163, 1011-1025 (2015).\n\n6. Bailey, P. et al. Genomic analyses identify molecular subtypes of pancreatic\ncancer. Nature 531, 47-52 (2016).\n\n7. Esteva, A. et al. Dermatologist-level classification of skin cancer with deep\nneural networks. Nature 542, 115-118 (2017).\n\n8. Coudray, N. et al. Classification and mutation prediction from non-small cell\nlung cancer histopathology images using deep learning. Nat. Med. 24,\n1559-1567 (2018).\n\n9. Campanella, G. et al. Clinical-grade computational pathology using\nweakly supervised deep learning on whole slide images. Nat. Med. 25,\n1301-1309 (2019).\n\n10. Bera, K., Schalper, K. A., Rimm, D. L., Velcheti, V. & Madabhushi, A.\nArtificial intelligence in digital pathology—new tools for diagnosis and\nprecision oncology. Nat. Rev. Clin. Oncol. 16, 703-715 (2019).\n\n11. Hegde, N. et al. Similar image search for histopathology: SMILY.\n\nNP] Digit. Med. 2, 56 (2019).\n\n12. Saltz, J. et al. Spatial organization and molecular correlation of\ntumor-infiltrating lymphocytes using deep learning on pathology images.\nCell Rep. 23, 181-193.e7 (2018).\n\n13. Shia, J. et al. Morphological characterization of colorectal cancers in The\nCancer Genome Atlas reveals distinct morphology-molecular associations:\nclinical and biological implications. Mod. Pathol. 30, 599-609 (2017).\n\n14. Schaumberg, A. J., Rubin, M. A. & Fuchs, T. J. H&E-stained whole slide\nimage deep learning predicts SPOP mutation state in prostate cancer. Preprint\nat bioRxiv https://doi.org/10.1101/064279 (2018).\n\n15. Tsou, P. & Wu, C.-J. Mapping driver mutations to histopathological subtypes\nin papillary thyroid carcinoma: applying a deep convolutional neural network.\nJ. Clin. Med. Res. 8, 1675 (2019).\n\n16. Chang, P. et al. Deep-learning convolutional neural networks accurately\nclassify genetic mutations in gliomas. AJNR Am. J. Neuroradiol. 39,\n1201-1207 (2018).\n\n17. Kather, J. N. et al. Deep learning can predict microsatellite instability directly\nfrom histology in gastrointestinal cancer. Nat. Med. 25, 1054-1056 (2019).\n\n18. Kather, J. N., Heij, L. R., Grabsch, H. I. & Kooreman, L. F. S. Pan-cancer\nimage-based detection of clinically actionable genetic alterations. Nat. Cancer\nhttps://doi.org/10.1038/s43018-020-0087-6 (2020).\n\n19. Kather, J. N., Schulte, J., Grabsch, H. I., Loeffler, C. & Muti, H. S. Deep\nlearning detects virus presence in cancer histology. Preprint at bioRxiv\nhttps://doi.org/10.1101/690206 (2019).\n\n20. Yu, K.-H. et al. Association of omics features with histopathology patterns in\nlung adenocarcinoma. Cell Syst. 5, 620-627.e3 (2017).\n\n21. Schmauch, B., Romagnoni, A., Pronier, E. & Saillard, C. Transcriptomic\nlearning for digital pathology. Preprint at bioRxiv https://doi.\norg/10.1101/760173 (2019).\n\n22. Mobadersany, P. et al. Predicting cancer outcomes from histology and\ngenomics using convolutional networks. Proc. Natl Acad. Sci. USA 115,\nE2970-E2979 (2018).\n\n23. Cheng, J. et al. Integrative analysis of histopathological images and genomic\ndata predicts clear cell renal cell carcinoma prognosis. Cancer Res. 77,\ne91-e100 (2017).\n\n24. Yu, K.-H. et al. Predicting non-small cell lung cancer prognosis by\nfully automated microscopic pathology image features. Nat. Commun. 7,\n12474 (2016).\n\n25. Szegedy, C., Ioffe, S., Vanhoucke, V. & Alemi, A. A. Inception-v4,\nInception-ResNet and the impact of residual connections on learning. in\nProceedings of the Thirty-First AAAI Conference on Artificial Intelligence. AAAI\nPress 4, 4278-4284 (2017).\n\n26. Cooper, L. A. et al. PanCancer insights from The Cancer Genome Atlas: the\npathologist's perspective. J. Pathol. 244, 512-524 (2018).\n\n27. Gerstung, M. et al. The evolutionary history of 2,658 cancers. Nature 578,\n122-128 (2020).\n\n28. Carpenter, A. E. et al. CellProfiler: image analysis software for identifying and\nquantifying cell phenotypes. Genome Biol. 7, R100 (2006).\n\n29. Cancer Genome Atlas Research Network. Comprehensive and integrated\ngenomic characterization of adult soft tissue sarcomas. Cell 171,\n950-965.e28 (2017).\n\n30. Zack, T. I. et al. Pan-cancer patterns of somatic copy number alteration.\n\nNat. Genet. 45, 1134-1140 (2013).\n\n31. Burger, P. C. et al. Small cell architecture—a histological equivalent of EGFR\namplification in glioblastoma multiforme? J. Neuropathol. Exp. Neurol. 60,\n1099-1104 (2001).\n"
+        }
+    ]
+}

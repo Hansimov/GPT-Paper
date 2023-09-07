@@ -1,0 +1,246 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 18,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.26,
+            "box": [
+                314.1,
+                340.4,
+                1962.8,
+                507.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_01_title.png",
+            "text": "Artificial Intelligence in Hepatology- Ready for\nthe Primetime\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 95.0,
+            "box": [
+                676.8,
+                555.1,
+                1798.3,
+                602.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_02_text.png",
+            "text": "Rakesh Kalapala**, Hardik Rughwani*, D. Nageshwar Reddy '\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 79.79,
+            "box": [
+                331.5,
+                628.2,
+                2152.0,
+                709.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_03_text.png",
+            "text": "*Department of Gastroenterology, Asian Institute of Gastroenterology and AIG Hospitals, Hyderabad, India and ‘Asian Institute of\nGastroenterology and AIG Hospitals, Hyderabad, India\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.75,
+            "box": [
+                318.6,
+                765.7,
+                2164.7,
+                1202.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_04_text.png",
+            "text": "Artificial Intelligence (AI) is a mathematical process of computer mediating designing of algorithms to support\nhuman intelligence. AI in hepatology has shown tremendous promise to plan appropriate management and\nhence improve treatment outcomes. The field of AI is in a very early phase with limited clinical use. AI tools\nsuch as machine learning, deep learning, and ‘big data’ are in a continuous phase of evolution, presently being\napplied for clinical and basic research. In this review, we have summarized various AI applications in hepatology,\nthe pitfalls and AI's future implications. Different AI models and algorithms are under study using clinical, lab-\noratory, endoscopic and imaging parameters to diagnose and manage liver diseases and mass lesions. AI has\nhelped to reduce human errors and improve treatment protocols. Further research and validation are required\nfor future use of AI in hepatology. (J Ciin Exp HepaTor 2023;13:149-161)\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                199.9,
+                1330.2,
+                1204.8,
+                2025.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_05_text.png",
+            "text": "n recent years, the development of Artificial Intelli-\n[= (AI) in the fields of gastroenterology and hepa-\n\ntology has made remarkable progress. The use of AI\nis studied in gastroenterology for the endoscopic evalua-\ntion of Barrett's oesophagus, oesophageal and gastric ma-\nlignancies, colorectal polyp detection and characterization,\nevaluation of inflammatory bowel disease and capsule\nendoscopy for obscure gastrointestinal bleed! (Table 1).\nWith the increased development and usage of AI in gastro-\nenterology, research in the field of hepatology also has\naccelerated. AI in hepatology can be used to detect liver\nfibrosis, diagnose non-alcoholic fatty liver disease\n(NAFLD), differentiate focal liver lesions, diagnose hepato-\ncellular cancer, prognosticate chronic liver disease (CLD)\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 69.8,
+            "box": [
+                201.0,
+                2130.9,
+                1203.0,
+                2209.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_06_text.png",
+            "text": "Keywords: artificial intelligence, machine learning, deep learning, hepatol-\nogy, NAFLD\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 26.96,
+            "box": [
+                200.6,
+                2213.4,
+                1138.7,
+                2250.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_07_text.png",
+            "text": "Received: 19.1.2022; Accepted: 23.6.2022; Available online 29 June 2022\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 82.35,
+            "box": [
+                199.9,
+                2245.6,
+                1207.2,
+                2417.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_08_text.png",
+            "text": "Address for correspondence: Rakesh Kalapala, Consultant Gastroenterologist\n& Endosonologist, Endoscopy (Center for Obesity & Metabolic Therapy),\nInternational Bariatric and Metabolic Endoscopy Committee - IFSO, AIG\nHospitals, Hyderabad, India.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 67.49,
+            "box": [
+                201.3,
+                2421.3,
+                1128.7,
+                2458.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_09_text.png",
+            "text": "E-mails: drkalpala@gmail.com; drrakesh.kalapala@aighospitals.com\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 90.71,
+            "box": [
+                201.3,
+                2460.3,
+                1199.9,
+                2540.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_10_text.png",
+            "text": "“Contact address- Cluster I, 1st floor, AIG hospitals, Mindspace\nroad, Gachibowli, Hyderabad, 500032.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 98.73,
+            "box": [
+                199.6,
+                2546.1,
+                1205.0,
+                3040.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_11_text.png",
+            "text": "Abbreviations: ACLF: acute on chronic liver failure; AI: artificial intelli-\ngence; ALD: alcoholic liver disease; ALT: alanine transaminase; ANN: arti-\nficial neural network; AST: aspartate aminotransferase; AUD: alcohol use\ndisorder; CHB: chronic hepatitis B; CHC: chronic hepatitis C; CLD:\nchronic liver disease; CNN: convolutional neural network; DL: deep\nlearning; FIB-4: fibrosis-4 score; GGTP: gamma glutamyl transferase;\nHCC: hepatocellular carcinoma; HDL: high density lipoprotein; ML: ma-\nchine learning; MLR: multi-nomial logistic regressions; NAFLD: non-alco-\nholic fatty liver disease; NASH: non-alcoholic steatohepatitis; NLP:\nnatural language processing; RF: random forest; RTE: real-time tissue\nelastography; SOLs: space-occupying lesions; SVM: support vector ma-\nchine\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1277.7,
+                1332.0,
+                2281.7,
+                2124.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_12_text.png",
+            "text": "and facilitate transplant sciences. However, multiple issues\nare to be sorted out to establish the AI's full functionality\nand clinical use. Here, we review the practical applications\nand ongoing research of AI in hepatology. AI has impacted\nhealth-related systems by accurately and rapidly eluci-\ndating pathology, radiology and endoscopy images,\nreducing medical errors and improving workflow.” AI has\naided non-experts also to reach a diagnosis by increasing\nthe performance quality of images. The use of labelled\n‘big data’ along with exceptionally enhanced computers\nand cloud storage, has enabled a giant leap in the develop-\nment of AI sciences. This will impact at three different\nstrata: for physicians, via quick and precise data interpreta-\ntion; for healthcare, by increasing work efficiency; and for\npatients, by allowing them to promote healthy living using\ntheir data.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "title",
+            "score": 99.46,
+            "box": [
+                1277.6,
+                2201.0,
+                2194.5,
+                2307.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_13_title.png",
+            "text": "ARTIFICIAL INTELLIGENCE - DEFINITION,\nTERMINOLOGY AND CONCEPTS\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1278.1,
+                2326.5,
+                2280.1,
+                2720.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_14_text.png",
+            "text": "Artificial Intelligence is an umbrella term that mainly infers\nthe use of mathematics using computers to generate soft-\nware, performing functions as natural human intelligence\nsuch as problem-solving and decision-making.” The glos-\nsary of terms>*?°75 used in the AI platform are listed\nand defined in Table 2. The hierarchy patterns of various\ntypes of AI are shown in Figure 1. The overview of the\ndeep learning (DL) tool is demonstrated in Figure 2.\n"
+        },
+        {
+            "idx": 15,
+            "thing": "title",
+            "score": 98.47,
+            "box": [
+                1276.8,
+                2795.6,
+                2066.0,
+                2847.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_15_title.png",
+            "text": "RADIOMICS AND RADIOGENOMICS\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1278.2,
+                2869.3,
+                2281.7,
+                3063.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_16_text.png",
+            "text": "The term “Radiomics” is defined as a process that uses com-\nputers to extract a large amount of information from\ndifferent types of images, form various quantifiable fea-\ntures, and using AI algorithms build models to predict\n"
+        },
+        {
+            "idx": 17,
+            "thing": "text",
+            "score": 37.67,
+            "box": [
+                200.8,
+                3131.0,
+                1657.7,
+                3167.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_17_text.png",
+            "text": "© 2022 Indian National Association for Study of the Liver. Published by Elsevier B.V. All rights reserved.\n"
+        },
+        {
+            "idx": 18,
+            "thing": "text",
+            "score": 17.14,
+            "box": [
+                831.8,
+                3164.0,
+                2275.7,
+                3201.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_18_text.png",
+            "text": "Journal of Clinical and Experimental Hepatology | January-February 2023 | Vol. 13 | No. 1 | 149-161\n"
+        }
+    ]
+}

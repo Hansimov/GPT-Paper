@@ -1,0 +1,50 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_29.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_29.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 3,
+        "page_idx": 29
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.8,
+            "box": [
+                302.8,
+                301.1,
+                2178.1,
+                914.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_29/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 81.38,
+            "box": [
+                298.1,
+                945.5,
+                1439.5,
+                1001.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_29/region_2_text.png",
+            "text": "Figure 1. Computational pathology for tissue segmentation.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 84.23,
+            "box": [
+                300.6,
+                1012.7,
+                2192.8,
+                1506.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_29/region_3_text.png",
+            "text": "A computational pathology algorithm for kidney tissue segmentation based on convolutional neural\nnetworks has been applied to a Periodic acid—Schiff-stained section of kidney tissue. a| Original image.\nb| Original image that has been manually annotated by an expert. c| The result of processing the\noriginal image using a deep learning algorithm [18]. No added color indicates interstitium; purple\nindicates glomerulus; red indicates sclerotic glomerulus; dark blue indicates proximal tubule; orange\nindicates distal tubule; green indicates atrophic tubule; and turquoise indicates artery or arteriole.\n"
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 7,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.81,
+            "box": [
+                179.9,
+                240.7,
+                2293.4,
+                908.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_06/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                176.8,
+                955.0,
+                2269.2,
+                1388.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_06/region_2_text.png",
+            "text": "Fig. 5 | Widespread associations between histopathology and gene expression. a, Boxplots of cross-validated Spearman’s rank correlation (p) between\nwhole-tumor messenger RNA expression levels and histopathological features for significant associations (defined as p> 0.25 and Fisher's combined\nPvalue*’ from a two-sided test®!, adjusted°° to FDR < 0.1) across cancer types (n=17,256 genes tested for each cancer type; the number of samples for\neach cancer type is stated in the x axis labels). The fraction of significant genes is shown at the bottom. Individual P values for each gene are available\n\nin Supplementary Table 2h. b, Pie charts showing the fraction (number) of genes (subtypes, grades, and subtypes and grades) that can be predicted by\nPC-CHIiP only, by histology only, and by both combined, in cancer types with available histological information (20 for subtypes and ten for grades).\n\nc, Boxplots showing the distribution of predicted Spearman's p values for genes using PC-CHiP compared with those using histological subtypes and\ngrades combined for each cancer type with available information (n= 207,258 gene-cancer pairs from ten cancer types tested). All boxplots demarcate\nquartiles and median values, while whiskers extend to 1.5x the interquartile range. d, Gene Ontology analysis for significant genes (n=203,373\ntranscript-cancer pairs tested; only pathways with FDR < 0.1 from a paired t-test are shown).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "figure",
+            "score": 99.84,
+            "box": [
+                177.6,
+                1479.7,
+                2300.5,
+                2209.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_06/region_3_figure.png"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                176.4,
+                2255.2,
+                2287.0,
+                2686.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_06/region_4_text.png",
+            "text": "Fig. 6 | Transcriptomic associations reveal immune infiltration and stromal cell types. a, Example tiles of predicted TIL-rich (top) and TIL-poor regions\n(bottom) from hepatocellular carcinoma, thymoma and breast invasive carcinoma. For each cancer type, four representative examples selected from\n\nthe 100 best-predicted tiles are shown. b, Systematic blinded assessment of TIL densities by two expert pathologists for three different cancer types\n(n=150 for each cancer). Each boxplot shows the predicted TIL scores from PC-CHiP for tiles with different TIL densities, as independently evaluated\n\nby pathologists. Boxplots depict quartiles and median values, while whiskers extend to 1.5x the interquartile range. Pvalues for the PC-CHiP score were\ndetermined from a binomial generalized linear model with TIL fraction as the response and the additional covariate of whole-slide molecular TIL score.\n\nc, Spearman's rank correlation (p) between transcriptomic TIL scores and computational TIL regional scores derived from ref. '? (left) and PC-CHiP\npredictions (right) for 13 cancer types. d, Example slides with high (top row), low (middle row) and localized TILs (bottom row). From left to right are the\noriginal hematoxylin and eosin-stained slides, predicted spatial TIL scores and example tiles with high and low TILs. Example tiles were manually selected\nfrom the best-predicted tiles. Scale bars in a and d: 100 um.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                177.8,
+                2765.8,
+                1217.1,
+                3116.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_06/region_5_text.png",
+            "text": "Reassuringly, many of the prognostic histopathological associa-\ntions automatically learned by computer vision reflect distinct cancer\nsubtypes, as for low-grade gliomas (Fig. 7c). Other features, including\nnecrosis” and high tumor grade, are associated with poor prognosis\nacross tumor types. In contrast, a higher degree of differentiation”\nand the presence of TILs are usually associated with a favorable\nrisk“. Favorable and unfavorable patterns can frequently be identi-\nfied on the same slide. This highlights the ability of computer vision\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1265.9,
+                2765.3,
+                2303.7,
+                2986.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_06/region_6_text.png",
+            "text": "to deconvolve the content of large tissue sections into molecularly and\nprognostically distinct areas (Fig. 7d), with necrosis and lymphocytic\naggregates detected on the same specimen. Similarly, areas of low- and\nhigh-grade tumor differentiation identified on the same slide pro-\nduced favorable and unfavorable risk predictions.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.75,
+            "box": [
+                1266.0,
+                3028.4,
+                2304.7,
+                3116.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_06/region_7_text.png",
+            "text": "Validation on external cohorts. The PC-CHiP algorithm exhib-\nited good generalization on two breast cancer validation cohorts,\n"
+        }
+    ]
+}

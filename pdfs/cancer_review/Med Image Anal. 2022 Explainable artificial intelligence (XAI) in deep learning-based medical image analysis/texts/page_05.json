@@ -1,0 +1,50 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 3,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 98.81,
+            "box": [
+                293.1,
+                303.0,
+                388.0,
+                337.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_05/region_1_title.png",
+            "text": "Table 2\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                293.1,
+                339.1,
+                2191.0,
+                553.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_05/region_2_text.png",
+            "text": "Papers that provide visual explanation. For readability, the papers are sorted on anatomical location and only the first paper dealing with that anatom-\nical location shows the location name. The column ‘Main XAI technique used/based on’ describes which visual explanation technique from Section 3.1\nwas used, or which technique the method in the corresponding paper is based on. When multiple visual explanation techniques have been applied, the\nmost recent technique based on Table 1 has been noted. CAM = class activation mapping, CT = computed tomography, LIME = local interpretable\nmodel-agnostic explanations, LRP = Layer-wise relevance propagation, MRI = magnetic resonance imaging, OCT = optical coherence tomography,\nPET = positron emission tomography, SHAP = Shapley additive explanations.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "table",
+            "score": 99.8,
+            "box": [
+                295.2,
+                560.0,
+                2197.0,
+                3043.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_05/region_3_table.png"
+        }
+    ]
+}

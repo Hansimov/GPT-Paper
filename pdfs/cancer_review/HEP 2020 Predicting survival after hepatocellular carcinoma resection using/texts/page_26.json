@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_26.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_26.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 2,
+        "page_idx": 26
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.35,
+            "box": [
+                28.7,
+                313.9,
+                2016.3,
+                2952.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_26/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 93.81,
+            "box": [
+                416.3,
+                3085.1,
+                1620.3,
+                3153.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_26/region_2_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

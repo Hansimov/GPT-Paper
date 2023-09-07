@@ -1,0 +1,62 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_12.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_12.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 4,
+        "page_idx": 12
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.09,
+            "box": [
+                492.6,
+                368.7,
+                1990.4,
+                884.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_12/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.68,
+            "box": [
+                515.9,
+                901.0,
+                1968.4,
+                1106.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_12/region_2_text.png",
+            "text": "Fig. 4 Silhouette scores per epoch for best run (by Silhouette score) of Lac and Lesc. A comparison of the\nSilhouette scores for each epoch for the best run (as determined by Silhouette score) for Lp (0.92) and\n\nLesc (0.7) A For Lec the Silhouette score rises in a steep and linear fashion due to the heavy influence of the\nclustering loss Lc. B Lpsc shows an upward trend, albeit with more fluctuations due to the heavy weight of the\nsurvival-based L, loss compared to the clustering-based L-\n"
+        },
+        {
+            "idx": 3,
+            "thing": "figure",
+            "score": 98.21,
+            "box": [
+                491.3,
+                1105.0,
+                1990.3,
+                2822.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_12/region_3_figure.png"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.84,
+            "box": [
+                516.3,
+                2836.9,
+                1964.6,
+                3001.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_12/region_4_text.png",
+            "text": "Fig. 5 Comparing prognostic significance of groups identified by clustering relevant deep learning features\nproduced by each loss function. A BCE (P= 6.68E-04); B MSE (P= 4.07E-04); C Lp, (P= 1.89E-96); D) Lae was\nnon-significant (P= 9.11E-02) and E) Lycc (P= 1.55E-77). Kaplan—Meier plot results presented are based on the\nbest run out of ten as determined by the log-rank P-value\n"
+        }
+    ]
+}

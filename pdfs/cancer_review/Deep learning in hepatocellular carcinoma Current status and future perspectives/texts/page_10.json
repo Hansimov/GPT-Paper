@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_10.png",
+        "image_width": 2480,
+        "image_height": 3509,
+        "regions_num": 3,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 97.17,
+            "box": [
+                811.0,
+                230.5,
+                2255.0,
+                324.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_10/region_1_text.png",
+            "text": "to increase exponentially. We anticipate that DL algorithms will soon take a major role\nin the diagnosis, prognostication, and treatment of patients with HCC.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 97.84,
+            "box": [
+                808.3,
+                450.5,
+                1088.9,
+                512.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_10/region_2_title.png",
+            "text": "REFERENCES\n"
+        },
+        {
+            "idx": 3,
+            "thing": "list",
+            "score": 62.66,
+            "box": [
+                813.7,
+                539.7,
+                2249.3,
+                3314.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_10/region_3_list.png",
+            "text": "1 Bray F, Ferlay J, Soerjomataram I, Siegel RL, Torre LA, Jemal A. Global cancer statistics 2018:\nGLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA\nCancer J Clin 2018; 68: 394-424 [PMID: 30207593 DOI: 10.3322/caac.21492]\n\n2 Yang JD, Hainaut P, Gores GJ, Amadou A, Plymoth A, Roberts LR. A global view of hepatocellular\ncarcinoma: trends, risk, prevention and management. Nat Rev Gastroenterol Hepatol 2019; 16: 589-\n604 [PMID: 31439937 DOI: 10.1038/s41575-019-0186-y]\n\n3 Stepanova M, De Avila L, Afendy M, Younossi I, Pham H, Cable R, Younossi ZM. Direct and\nIndirect Economic Burden of Chronic Liver Disease in the United States. Clin Gastroenterol Hepatol\n2017; 15: 759-766.e5 [PMID: 27464590 DOE: 10.1016/j.cgh.2016.07.020]\n\n4 Llovet JM, Kelley RK, Villanueva A, Singal AG, Pikarsky E, Roayaie S, Lencioni R, Koike K,\nZucman-Rossi J, Finn RS. Hepatocellular carcinoma. Nat Rev Dis Primers 2021; 7: 6 [PMID:\n33479224 DOI: 10.1038/s41572-020-00240-3]\n\n5 Yang JD, Heimbach JK. New advances in the diagnosis and management of hepatocellular\ncarcinoma. BMJ 2020; 371: m3544 [PMID: 33106289 DOE: 10.1136/bmj.m3544]\n\n6 Ahn JC, Connell A, Simonetto DA, Hughes C, Shah VH. Application of Artificial Intelligence for the\nDiagnosis and Treatment of Liver Diseases. Hepatology 2021; 73: 2546-2563 [PMID: 33098140 DOL\n10.1002/hep.3 1603]\n\n7 Haenlein M, Kaplan A. A Brief History of Artificial Intelligence: On the Past, Present, and Future of\nArtificial Intelligence. Calif Manage Rev 2019 [DOI: 10.1177/0008125619864925]\n\n8 Koza JR, Bennett FH, Andre D, Keane MA. Automated Design of Both the Topology and Sizing of\nAnalog Electrical Circuits Using Genetic Programming. In: Gero JS, Sudweeks F. Artificial\nIntelligence in Design ’96. Dordrecht: Springer Netherlands, 1996: 151-170\n\n9 Cunningham P, Cord M, Delany SJ. Supervised Learning. In: Cord M, Cunningham P. Machine\nLearning Techniques for Multimedia: Case Studies on Organization and Retrieval. Berlin, Heidelberg:\nSpringer Berlin Heidelberg, 2008: 21-49\n\n10 Ghahramani Z, Unsupervised Learning. In: Bousquet O, von Luxburg U, Ratsch G. Advanced\nLectures on Machine Learning: ML Summer Schools 2003, Canberra, Australia, February 2 - 14,\n2003, Tiibingen, Germany, August 4 - 16, 2003, Revised Lectures. Berlin, Heidelberg: Springer\nBerlin Heidelberg, 2004: 72-112\n\n11 Esteva A, Robicquet A, Ramsundar B, Kuleshov V, DePristo M, Chou K, Cui C, Corrado G, Thrun\nS, Dean J. A guide to deep learning in healthcare. Nat Med 2019; 25: 24-29 [PMID: 30617335 DOI:\n10.1038/s41591-018-03 16-z]\n\n12 Puttagunta M, Ravi S. Medical image analysis based on deep learning approach. Multimed Tools\nAppl 2021; 1-34 [PMID: 33841033 DOI: 10.1007/s1 1042-02 1-10707-4]\n\n13. Marrero JA, Kulik LM, Sirlin CB, Zhu AX, Finn RS, Abecassis MM, Roberts LR, Heimbach JK.\nDiagnosis, Staging, and Management of Hepatocellular Carcinoma: 2018 Practice Guidance by the\nAmerican Association for the Study of Liver Diseases. Hepatology 2018; 68: 723-750 [PMID:\n29624699 DOE: 10.1002/hep.29913]\n\n14 Ioannou GN, Tang W, Beste LA, Tincopa MA, Su GL, Van T, Tapper EB, Singal AG, Zhu J, Waljee\nAK. Assessment of a Deep Learning Model to Predict Hepatocellular Carcinoma in Patients With\nHepatitis C Cirrhosis. JAMA Netw Open 2020; 3: e2015626 [PMID: 32870314 DOI:\n\n10.100 1/jamanetworkopen.2020.15626]\n\n15 Phan DV, Chan CL, Li AA, Chien TY, Nguyen VC. Liver cancer prediction in a viral hepatitis\ncohort: A deep learning approach. Int J Cancer 2020; 147: 2871-2878 [PMID: 32761609 DOI:\n10.1002/ijc.33245]\n\n16 Nam JY, Sinn DH, Bae J, Jang ES, Kim JW, Jeong SH. Deep learning model for prediction of\nhepatocellular carcinoma in patients with HBV-related cirrhosis on antiviral therapy. JHEP Rep 2020;\n2: 100175 [PMID: 33117971 DOI: 10.1016/j.jhepr.2020.100175]\n\n17 Nam JY, Lee JH, Bae J, Chang Y, Cho Y, Sinn DH, Kim BH, Kim SH, Yi NJ, Lee KW, Kim JM,\nPark JW, Kim YJ, Yoon JH, Joh JW, Suh KS. Novel Model to Predict HCC Recurrence after Liver\nTransplantation Obtained Using Deep Learning: A Multicenter Study. Cancers (Basel) 2020; 12\n[PMID: 33003306 DOE: 10.3390/cancers 12102791]\n\n18 Behne T, Copur MS. Biomarkers for hepatocellular carcinoma. Int J Hepatol 2012; 2012: 859076\n[PMID: 22655201 DOE: 10.1155/2012/859076]\n\n19 Tzartzeva K, Obi J, Rich NE, Parikh ND, Marrero JA, Yopp A, Waljee AK, Singal AG. Surveillance\nImaging and Alpha Fetoprotein for Early Detection of Hepatocellular Carcinoma in Patients With\nCirrhosis: A Meta-analysis. Gastroenterology 2018; 154: 1706-1718.e1 [PMID: 29425931 DOL\n10.1053/j.gastro.2018.01.064]\n\n20 Xie H, Xue YQ, Liu P, Zhang PJ, Tian ST, Yang Z, Guo Z, Wang HM. Multi-parameter gene\nexpression profiling of peripheral blood for early detection of hepatocellular carcinoma. World J\nGastroenterol 2018; 24: 371-378 [PMID: 29391759 DOI: 10.3748/wjg.v24.i3.371]\n\n21. Choi J, OhI, Seo S, Ahn J. G2Vec: Distributed gene representations for identification of cancer\n"
+        }
+    ]
+}

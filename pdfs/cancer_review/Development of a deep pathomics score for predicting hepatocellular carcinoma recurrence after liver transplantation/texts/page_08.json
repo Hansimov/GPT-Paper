@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.77,
+            "box": [
+                215.1,
+                214.7,
+                2268.5,
+                2493.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_08/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.8,
+            "box": [
+                212.1,
+                2555.6,
+                2278.5,
+                2650.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_08/region_2_text.png",
+            "text": "Fig. 4 Forest plot of DPS for the entire cohort based on recurrence risk. DPS deep pathomics score, HBV hepatitis B virus, VTT vascular tumor\nthrombosis, MV/ micro vascular invasion, UCSF University of California San Francisco, AFP alpha-fetoprotein\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                212.4,
+                2729.5,
+                1216.1,
+                2890.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_08/region_3_text.png",
+            "text": "(66.20% vs. 81.51%). In particular, DPS was proven to be\na prognostic factor in all of the subgroups in terms of the\npatients’ clinicopathological characteristics.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.23,
+            "box": [
+                1274.5,
+                2729.7,
+                2091.6,
+                2787.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_08/region_4_title.png",
+            "text": "Prognostic role of antiviral therapy after LT\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1275.5,
+                2837.9,
+                2280.4,
+                2998.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_08/region_5_text.png",
+            "text": "Nucleic acid analog therapy is reported to reduce the\nrecurrence of HCC [31]. The treatment effect on LT cases\nwas evaluated. A majority of hepatitis B patients received\n"
+        }
+    ]
+}

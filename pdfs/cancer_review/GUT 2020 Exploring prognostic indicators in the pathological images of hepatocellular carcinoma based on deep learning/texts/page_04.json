@@ -1,0 +1,153 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 11,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.87,
+            "box": [
+                175.3,
+                201.7,
+                2305.2,
+                1710.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                175.3,
+                1741.9,
+                2267.2,
+                1969.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_02_text.png",
+            "text": "Figure 2. Visualisation of WSI classification for category-based sampling in the Zhongshan cohort. (A) Labelled WSI. We manually labelled WSIs to\ntrain the classification network (red for tumour tissue, green for normal liver tissue, yellow for tumour-associated stroma and blue for haemorrhage\nand necrosis) for category-based sampling. (B) Original WSI and segmentation maps of the classification network output. Left: original WSI images;\nRight: corresponding segmentation maps. (C) Confusion matrices of the classification results. (D) AUC of each tissue category of the classification\nnetwork on the validation set. (E) Visualisation of the classification results using the t-SNE algorithm.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                176.0,
+                2074.5,
+                1205.3,
+                2626.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_03_text.png",
+            "text": "performed using the predicted risk scores for the validation set.\nThe Mantel-Cox log-rank test was used for survival analysis. To\ncompare two groups, the variables were evaluated by unpaired\nStudent’s t-test. Analysis of multivariate data was performed\nusing multivariate analysis of variance with semiparametric\ndesigns. Correlation coefficients were computed by Spearman\nand distance correlation analyses. All the correlation heatmaps\nwere generated using the pheatmap function (https://github.\ncom/raivokolde/pheatmap). A two-sided p value less than 0.05\nwas considered statistically significant. Scikit-learn was used to\ncalculate the area under the curve (AUC). SPSS 25.0 was used\nfor survival analysis.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 98.96,
+            "box": [
+                175.3,
+                2707.1,
+                319.8,
+                2754.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_04_title.png",
+            "text": "RESULTS\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.28,
+            "box": [
+                175.7,
+                2754.8,
+                1169.8,
+                2850.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_05_title.png",
+            "text": "Training of tissue category-based local sampling within HCC\ntissue\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                174.6,
+                2852.6,
+                1204.6,
+                3128.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_06_text.png",
+            "text": "We first built the category-based sampling by training a classifi-\ncation network of HCC tissue. Generally, HCC tissue comprises\nvarious tissue components, including tumour cells, adjacent\nnormal liver tissues, tumour-associated stroma and haemor-\nrhage and necrosis regions. Two experienced experts manually\nannotated the four types of tissue regions on 260 WSIs using\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1276.6,
+                2072.9,
+                2307.7,
+                2164.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_07_text.png",
+            "text": "polygons of different colours to draw the outline (figure 2A),\nand this step was independently checked by another pathologist.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1278.2,
+                2165.5,
+                2307.7,
+                2623.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_08_text.png",
+            "text": "Typical examples of the output of the classification network\nare shown in figure 2B, with different colours representing\ndistinct tissue components. The number of tiles in each category\nto train the network is shown in online supplementary table S3.\nAfter full training, we tested the performance of the classification\nnetwork (figure 2C), revealing an accuracy of 0.982 (table 1).\nThe AUC of each tissue category of our classification network\nexceeded 0.973, with the highest in tumour tissue classification\n(AUC=0.999) (figure 2D). We then evaluated the discrimina-\ntion of our classification network on different tissues using the\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.41,
+            "box": [
+                1288.8,
+                2719.6,
+                2293.8,
+                2809.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_09_text.png",
+            "text": "Table 1 Performance of the classification network in the Zhongshan\ncohort\n"
+        },
+        {
+            "idx": 10,
+            "thing": "table",
+            "score": 99.53,
+            "box": [
+                1280.1,
+                2818.3,
+                2304.4,
+                3076.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_10_table.png"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 98.67,
+            "box": [
+                1292.2,
+                3089.1,
+                2017.6,
+                3125.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_11_text.png",
+            "text": "PPV, positive predictive value; NPV, negative predictive value;\n"
+        }
+    ]
+}

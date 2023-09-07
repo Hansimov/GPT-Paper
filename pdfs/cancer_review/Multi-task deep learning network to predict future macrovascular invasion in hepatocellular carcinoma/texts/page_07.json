@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 2,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.21,
+            "box": [
+                508.6,
+                221.7,
+                2015.8,
+                2950.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_07/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.68,
+            "box": [
+                176.8,
+                2984.4,
+                2346.6,
+                3058.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_07/region_2_text.png",
+            "text": "Fig. 4. Comparison of the three models. The areas under the curve for Model?®, Model’, and Model“®?® are 0¢751, 0¢822, 0¢877, respectively, in the training dataset (A) and\n0624, 0¢770, 0°836, respectively, in the validation dataset (B). Good calibrations (C and D) and decision curve (E) were also achieved.\n"
+        }
+    ]
+}

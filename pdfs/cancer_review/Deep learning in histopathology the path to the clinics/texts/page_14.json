@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 3,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 84.25,
+            "box": [
+                303.4,
+                292.3,
+                2191.3,
+                609.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_14/region_1_text.png",
+            "text": "proposed a regulatory framework [151] to implement a ‘Predetermined Change Control Plan’, in which\nmanufacturers have to explain what aspects they intend to change through learning, and how the\nalgorithm will learn and change while remaining safe and effective, as well as strategies to mitigate\nperformance loss.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 87.35,
+            "box": [
+                301.4,
+                709.5,
+                2198.6,
+                2285.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_14/region_2_text.png",
+            "text": "[H2] Ethics. The use of patient data and the deployment of machines that aid diagnostics, potentially\neven in a (partly) autonomous fashion, leads to a number of ethical concerns. The development of\nCPATH solutions requires large amounts of data (both images and associated meta-data). The use of\nhuman data for healthcare research and product development in general creates ethical and legal\nchallenges that have to be addressed properly. Respecting patient privacy and obtaining approval for\nuse of data are important requirements to comply with. Unfortunately, from a practical standpoint,\nthese requirements may reduce the options for the re-use of existing data for Al development, and\nmay lead to increased costs to arrive at the required numbers of cases. A careful balancing between\nprivacy protection and the benefits of data-driven innovation is needed [126] that requires the\ninvolvement of all stakeholders [127]. In addition, the collection of data at the scale needed for CPATH\ndevelopment (thousands of cases), which can be mad e publicly available, complicates matters even\nfurther. Aside from the danger of data breaches, collecting large amounts of data may enable\nresearchers to make connections that were previously not possible, potentially putting patient privacy\nat risk even if data are collected in an anonymized manner [126], [123]. An alternative to establishing\nlarge, multicenter datasets in a central location for machine learning is the application of so-called\nfederated learning strategies. With federated learning, the procedure for training the machine\nlearning models is adapted so that it can deal with data residing in separate locations, obviating the\nneed to bring the data together and thereby circumventing some of the problems described above\n[128] [129].\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 84.87,
+            "box": [
+                300.5,
+                2391.9,
+                2194.1,
+                3125.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_14/region_3_text.png",
+            "text": "In 2018, a special expert group of the European Commission published a set of ethics guidelines for\ntrustworthy Al [130] that detailed a framework to help achieve Al solutions that are lawful, ethical and\nrobust. An important conclusion from the guideline is that “trustworthy Al is not about ticking boxes,\nbut about continuously identifying and implementing requirements, evaluating solutions, ensuring\nimproved outcomes throughout the Al system’s lifecycle, and involving stakeholders in this” [130].\nHow the establishment of data collections may result in biases that, if used for Al development, can\namplify injustices in society has been described extensively [131], [120]. Such ‘algorithmic bias’ is not\ndirectly the consequence of Al model development, but the wide-scale deployment of such models\nmay compound “existing inequities in socioeconomic status, race, ethnic background, religion, gender,\n"
+        }
+    ]
+}

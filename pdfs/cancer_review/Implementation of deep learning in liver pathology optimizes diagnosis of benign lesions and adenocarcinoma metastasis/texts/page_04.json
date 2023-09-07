@@ -1,0 +1,154 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 11,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.49,
+            "box": [
+                491.5,
+                207.2,
+                1990.4,
+                864.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.67,
+            "box": [
+                190.1,
+                920.4,
+                2273.3,
+                1062.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_02_text.png",
+            "text": "FIGURE 1_ Workflow overview. The trained model can be used assist pathologist in their diagnosis by discriminating important classes\nwithin a given whole slide. In this study, we created data set of image tiles annotated by experienced pathologists and fitted a model to\nrespective data.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                190.1,
+                1164.4,
+                1212.1,
+                1592.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_03_text.png",
+            "text": "neoplasms, and pancreatic cancer with high accuracy.'°\"\nDeep neural networks, in particular convolutional neu-\nronal networks (CNNs) are widely used algorithms for\nimage classification.!° CNNs essentially consist of an\ninput layer, multiple hidden layers for operations such\nas convolutions or pooling among others, and usually an\noutput layer. For more detailed information on CNNs see\nAlzubaidi et al.”\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                189.1,
+                1597.6,
+                1212.4,
+                2670.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_04_text.png",
+            "text": "To address these clinically highly relevant issues,\nincluding differentiation between benign and malignant\nliver lesions, histological subtyping, small amounts of\ntissue, and accelerating infrastructural obstacles, we\nperformed the present study. Here, we train a CNN-based\ndeep learning network, which can accurately differen-\ntiate between liver metastasis benign lesions as well\nas identify and differentiate non-neoplastic anatomical\nliver structures such as bile ducts and hepatocytes on\nscanned histopathological slides. Our network can be\nimplemented in surgical pathology diagnostics to detect\nthe most frequent types of adenocarcinoma metastasis\nin the liver with high accuracy and discrimination from\nbenign structures. The trained model should provide\nmore diagnostic confidence, uses small tissue samples,\navoids multiple biopsies, assures diagnostic quality, and\nshould help with the shrinking pathology resources. In\naddition, the provided huge raw dataset can be extended\nby pathologists and researchers to refine classification\nalgorithms.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 97.26,
+            "box": [
+                188.7,
+                2775.5,
+                576.1,
+                2837.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_05_title.png",
+            "text": "2 | METHODS\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.46,
+            "box": [
+                189.9,
+                2892.2,
+                1210.3,
+                2995.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_06_text.png",
+            "text": "Figure 1 displays a schematic overview of the anticipated\nclinical implementation of the proposed algorithms.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 97.76,
+            "box": [
+                1277.7,
+                1161.9,
+                1723.4,
+                1223.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_07_title.png",
+            "text": "2.1 | Patient data\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1277.9,
+                1278.7,
+                2300.9,
+                2461.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_08_text.png",
+            "text": "Whole Hematoxilin and Eosin stained slides from patients\nwith liver metastases of colorectal adenocarcinoma\n(n = 103), liver metastases of pancreatic adenocarcinoma\n(n = 101), bile duct adenoma and peribiliary hamartoma\n(n = 53) were extracted from the archive of the Institute\nof Pathology, University Hospital Mainz. Tissue samples\nwere extracted from either resection specimen, needle\nbiopsies, or intraoperative frozen sections. All diagnoses\nwere made according to the World Health Organiza-\ntion Classification of Tumours of the Gastrointestinal\nTract by board certified surgical pathologists, all with\nspecialization in surgical liver pathology. All slides with\nrepresentative tumour regions were scanned using an\nautomated slide scanner (Aperio AT2, Leica Biosystems,\nNussloch, Germany) with 400x magnification, as previ-\nously described. The correctness of annotated areas was\ncross-validated by 4 independent surgical pathologists\n(A.H. and M.M.G. University Medical Center Mainz) and\n(T.A. and M.K. University Hospital Heidelberg). In all\nsamples, a consensus was obtained.'* Image data were\nanonymized and are provided along with this manuscript\n(Link: https://doi.org/10.11588/data/YAZWJW).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.84,
+            "box": [
+                1277.5,
+                2466.6,
+                2299.6,
+                2676.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_09_text.png",
+            "text": "The analysis was approved by the local ethics committee\nof Heidelberg University (#870/21) and of the Univer-\nsity Hospital Mainz (approval 2019-14390; Arztekammer\nRhineland-Palatinate).\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 97.18,
+            "box": [
+                1278.0,
+                2781.5,
+                1702.3,
+                2844.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_10_title.png",
+            "text": "2.2 | Image data\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.56,
+            "box": [
+                1276.8,
+                2897.0,
+                2300.5,
+                3002.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_04/region_11_text.png",
+            "text": "Scanned histopathological slides were imported into\nQuPath”” (v.0.1.2, University of Edinburgh, Edinburgh,\n"
+        }
+    ]
+}

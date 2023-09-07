@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_12.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_12.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 6,
+        "page_idx": 12
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 92.09,
+            "box": [
+                386.3,
+                223.2,
+                2174.1,
+                448.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_12/region_1_text.png",
+            "text": "with CRP immunohistochemical expression (P=0.02) (supplemental table 4 and Figure\n4F). Although histological appearance of this subtype might suggest dysregulation of\nmetabolic processes, no significant changes in genes involved in fatty acid synthesis,\nglycolysis or neoglucogenesis were observed (Supplemental Table 5).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 90.16,
+            "box": [
+                385.7,
+                443.6,
+                2169.9,
+                557.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_12/region_2_text.png",
+            "text": "-Finally, the lymphoepithelioma-like subtype was not associated with any clinical or\nmolecular feature, however our series only comprised 6 cases of this rare variant.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 47.81,
+            "box": [
+                385.3,
+                708.1,
+                2143.7,
+                826.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_12/region_3_title.png",
+            "text": "Integrative analysis of the pathological phenotype with the molecular HC\nclassification.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 95.05,
+            "box": [
+                384.6,
+                878.4,
+                2174.4,
+                1102.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_12/region_4_text.png",
+            "text": "For 265 tumours with available classification, we integrated« the various\nhistopathological, clinical and genetic features into to the G1-G6 transcriptomic\nclassification to obtain a more global view of the molecular and _ pathological\ncorrelations. (Figure 5 and Supplemental Table 7).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 95.67,
+            "box": [
+                385.6,
+                1127.7,
+                2174.5,
+                1961.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_12/region_5_text.png",
+            "text": "Tumours belonging to the transcriptomic G1G2G3 subclasses, known to be\ncharacterized by high cell proliferation and chromosomal instability, were associated\nwith several clinico-biological features: high AFP serumlevels (G1G2G3, P<0.001),\nfemale gender (G1, P<0.001) and hemochromatosis.(G3, P=0.01). Gene sequencing\nshowed enrichment in TP53 (G1G2G3, P<0.001), RPS6KA3 (G1, P=0.03), AXIN1 and ATM\n(G1G2, P=0.004 and 0.01, respectively) mutations, and FGF19 and TSC1/TSC2 alterations\n(G3, P=0.02 and 0.01, respectively). Histologically, G1G2G3 HCCs were poorly\ndifferentiated (G1G2G3, P<0.001), with frequent macrovascular invasion (G3, P=0.01)\nfoci of clear cells (G1, P=0.001), sarcomatous changes (G1G2, P=0.02), areas of compact\n(G3, P=0.01) and macrotrabecular (G3, P<0.001) histological patterns, and foci of\npleomorphic (G3, P=0.04) and multinucleated (G3, P<0.001) cells. The G1 subtype\nshowed a progenitor phenotype, with both CK19 (P=0.002) and EpCAM (P<0.001)\nimmunohistochemical expression. Activation of MAPKinase and PI3K/AKT pathways, as\nassessed by phospho-ERK and phospho-S6 protein expression, were identified in\ntumours classified as G1 (P=0.02) and G3 (P=0.02), respectively (Figure 5).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 96.07,
+            "box": [
+                386.0,
+                1983.8,
+                2174.2,
+                2651.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_12/region_6_text.png",
+            "text": "Tumours classified in G4G5G6 subclasses, characterized by low cell proliferation and\nchromosomal stability, were most often well-differentiated (G4G5G6, P<0.001). G4 HCCs\nwere additionally associated with small tumour size (P=0.03), lack of satellite nodules\n(P=0.004) and microvascular invasion (P<0.001), steatohepatitic subtype (P=0.004),\ninflammatory infiltrates (P=0.04) and CRP expression (P=0.01). They were also\ncharacterized by a lack of CTNNB1 (P<0.001) and TP53 (P=0.047) mutations (Figure 5).\nG5G6 subclasses, strongly associated with CTNNB1 activating mutations (P<0.001), were\nrelated to the microtrabecular pattern of growth (P=0.01), the presence of tumour\ncholestasis (P<0.001) and a lack of inflammatory infiltrates (P=0.01).\nImmunohistochemical experiments showed Wnt/f-catenin pathway activation with B-\ncatenin nuclear staining (P<0.001) and strong GS expression (P<0.001), along with lack\nof ARID1A expression (P=0.002).\n"
+        }
+    ]
+}

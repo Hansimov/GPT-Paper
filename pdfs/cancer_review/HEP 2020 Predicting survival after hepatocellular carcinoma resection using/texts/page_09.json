@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_09.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 6,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 79.86,
+            "box": [
+                249.6,
+                263.5,
+                2244.9,
+                406.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_09/region_1_text.png",
+            "text": "CHOWDER and SCHMOWDER respectively), suggesting that the available clinical, biological\nand pathological variables provided no additional prognostic information.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 88.34,
+            "box": [
+                249.5,
+                444.3,
+                2246.0,
+                1299.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_09/region_2_text.png",
+            "text": "The output of our neural networks is a continuous risk score. We used the risk score assigned to\neach patient by CHOWDER and SCHMOWDER to stratify the population into two subgroups. The\nmedian risk score of each model was used as a threshold for stratifying patients into low and\nhigh-risk subgroups. Our models stratified the population more accurately than the CS or any\nother clinical or pathological variable (HR=4.0, p=1.1e-6 and HR=5.38, p=5.2e-9 and HR=5.72,\np=4.4e-9 for the CS, CHOWDER and SCHMOWDER,, respectively) (Figure 3B and 4). The risk\nscore computed by SCHMOWDER was of independent prognostic value (p=3.10-5), and\npredicted survival even after stratification for other features (such as BCLC disease stage,\nsatellite nodules, AFP serum level, vascular invasion) (Figure 4). These observations\ndemonstrate that the model captures complex patterns non-redundant with baseline variables\nknown to affect survival in patients with HCC.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 87.5,
+            "box": [
+                258.0,
+                1444.1,
+                1326.1,
+                1513.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_09/region_3_title.png",
+            "text": "Validation of our models with the TCGA dataset\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 86.01,
+            "box": [
+                253.3,
+                1555.2,
+                2245.6,
+                2806.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_09/region_4_text.png",
+            "text": "We assessed the robustness of our models by testing them on an independent series from The\nCancer Genome Atlas (TCGA). Clinical, biological, and pathological data were downloaded from\nthe database, together with digital slides (9-11). In total, 328 patients met the inclusion criteria\nused for the discovery set (Supplemental Table 2 and Methods), and 115 deaths were recorded\namong these patients. Overall survival was significantly lower than that for the discovery set\n(median of 58 months vs. 91 months, p=0.02). The slides had been treated by different staining\nprotocols and were encoded in a different format from the discovery set (they were also collected\nfrom different clinical centers). The following variables were available and included in the\nanalysis: disease stage according to the American Joint Committee on Cancer (AJCC), age at\ndiagnosis, sex, serum alpha fetoprotein (AFP), alcohol consumption, HBV (hepatitis B virus) or\nHCV infection, other etiologies, undetermined etiology, tumor differentiation according to the\nWorld Health Organization criteria, macrovascular and microvascular invasion, positive surgical\nmargins, and non-tumoral liver fibrosis (cirrhosis). The clinical, biological and pathological\nfeatures associated with shorter survival were AJCC stage (HR=2.35, p=1.6E-5), and\nundetermined etiology (HR=1.97, p=3.8E-3) (Figure 5). As for the discovery set, a CS integrating\nrelevant baseline variables was calculated (Figure 5).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 82.78,
+            "box": [
+                250.4,
+                2845.5,
+                2243.8,
+                2989.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_09/region_5_text.png",
+            "text": "Tiles from 342 WSls corresponding to the 328 patients were extracted and processed by our two\nmodels. Both models were validated, with mean c-indexes for the prediction of survival of 0.68 for\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 40.42,
+            "box": [
+                246.4,
+                3294.2,
+                1398.8,
+                3363.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_09/region_6_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 9,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.47,
+            "box": [
+                616.9,
+                2101.9,
+                657.7,
+                3015.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_03/region_1_text.png",
+            "text": "~\n9\n=\n~~\n=\nv\n3\n=\n8\n€\n&\n¥\n2\n3\nx\na\n°\n£\n=\nx\nbo\n<\na\n2\n5\n3\nwn\nVv\n“\n2\nwn\n“J\nS\n2\ni\na\n7\nv\n5\nv\nx\nv\n”n\na\nv\n&\n3\na)\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.25,
+            "box": [
+                670.1,
+                257.3,
+                1291.4,
+                3025.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_03/region_2_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 92.27,
+            "box": [
+                1302.1,
+                677.7,
+                1338.1,
+                3037.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_03/region_3_text.png",
+            "text": "x\nVv\n3\n&\nS\nSs\nB\noO\nVy\ne\na\na\n&\nu\nvo\nol\no\nVv\nS\nwe\na\n3\nVv\n3\n&\nS\n3\nS\nos\n&\n£\n5\n2\n3\n7\nvu\n£\n&\nbb\nuv\nx\n&\na\n=\n&\n6\n&\nuy\ne\noO\nVy\na\n2\noO\ny\n3\n£\nso\na\nvo\na\nOo\nGo\nx=\no\n2\n5\nVy\nVy\nSs\n2\n)\nVv\nx\ny\noO\ne\nos\noo\nVy\nbo\nS\ns\ng\nVv\na\n6\no\nvu\n2\nvo\nuy\n£\nvu\ns\ns\no\n3\n€\na\noO\nvo\ne\noO\n8\n5\n<x\no\nVy\nS\nvu\nbo\nx\ni\ns\ny\n=I\n=\no\n<\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.7,
+            "box": [
+                1483.5,
+                249.7,
+                2314.3,
+                1301.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_03/region_4_text.png",
+            "text": "challenging to model because this risk can fluc-\ntuate widely in an individual over time, and such\nnon-linear changes are difficult to estimate using\nrigid, conventional regression models. Recently, the\nrapid expansion of available electronic health re-\ncord (EHR) data has provided an opportunity to\nleverage large-scale, longitudinal data elements for\nautomatic feature selection over long-term follow-\nup, and thereby improve HCC risk prediction. To\nthat end, several recent studies have applied Al\napproaches to longitudinal EHR data to improve\nprediction of incident HCC (Table 1). For example,\nin 2013, a supervised ML algorithm was found to\nhave a c-statistic of 0.64 for predicting incident\nHCC in patients with cirrhosis of any aetiology, and\nthis significantly outperformed a conventional\nsystem for HCC risk prediction.? More recently,\nanother model developed in patients with chronic\nhepatitis C infection in the U.S. Veterans Affairs\ncohort demonstrated an AUROC of 0.759 for inci-\ndent HCC.° In all cases, the models constructed by\nAI approaches significantly outperformed tradi-\ntional regression models.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.76,
+            "box": [
+                1480.8,
+                1300.1,
+                2315.3,
+                2075.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_03/region_5_text.png",
+            "text": "It has been posited that improved HCC risk\nprediction models leveraging AI techniques could\nbe used to personalise HCC surveillance strategies\nby improving risk stratification of patients with\nchronic liver disease. For example, Ioannou and\ncolleagues found that targeting patients with the\nuppermost 51% of their NN-derived HCC risk score\nwould include 80% of patients who would develop\nHCC within the subsequent 3 years.° Such an\napproach could be useful in resource-limited set-\ntings that do not have sufficient capacity for reg-\nular HCC surveillance in all at-risk patients.\nHowever, to date, the clinical utility of this and\nother Al-based scores for predicting risk of HCC is\nunclear, particularly as these data have limited\ngeneralisability, given their reliance on the size and\ndiversity of the training dataset.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 92.79,
+            "box": [
+                1479.5,
+                2113.4,
+                2131.5,
+                2210.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_03/region_6_title.png",
+            "text": "AI for diagnosing HCC: radiomics,\nhistopathology and biomarkers\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 98.31,
+            "box": [
+                1482.1,
+                2210.7,
+                2313.9,
+                2349.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_03/region_7_text.png",
+            "text": "Numerous studies have tested the utility of AI for\naccurately detecting existing HCC, based on imag-\ning modalities or biomarkers.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 87.75,
+            "box": [
+                1481.9,
+                2393.5,
+                1867.0,
+                2439.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_03/region_8_title.png",
+            "text": "Radiomics: ultrasound\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.69,
+            "box": [
+                1481.8,
+                2437.3,
+                2315.1,
+                3031.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_03/region_9_text.png",
+            "text": "Current clinical guidelines recommend regular B-\nmode abdominal ultrasound surveillance for the\nidentification of HCC in patients with cirrhosis.” °\nHowever, ultrasound has several well-described\nlimitations when it comes to detecting focal liver\nlesions, including a high degree of dependence on\noperator experience, equipment quality, and pa-\ntient body habitus, among others. For detection of\nHCC, the sensitivity of B-mode ultrasound is only\n46-63%.°\"|' To address this, several recent studies\nhave tested the ability of AI frameworks to\nimprove the diagnostic accuracy of ultrasound in\nthis setting.\n"
+        }
+    ]
+}

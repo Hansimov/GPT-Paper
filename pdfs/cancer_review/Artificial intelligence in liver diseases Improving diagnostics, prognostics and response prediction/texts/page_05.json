@@ -1,0 +1,128 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 9,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                178.1,
+                264.5,
+                1218.2,
+                628.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_05/region_1_text.png",
+            "text": "amongst HCC prognostic staging systems depending on func-\ntional status, tumour imaging characteristics, liver function, and\ngeography.”' °° In addition, several locoregional and systemic\ntherapies exist,°*°° each of which may introduce distinctive\nappearances on follow-up imaging.°° Finally, ultrasound and\nelastography are used to non-invasively assess steatosis and\nfibrosis, but the calibration and discriminative accuracy of these\nmodalities vary greatly.°”\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                177.6,
+                629.7,
+                1216.8,
+                1359.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_05/region_2_text.png",
+            "text": "To facilitate transformation of imaging data into clinically\naccessible information, Al may derive predictions in a more\npersonalised fashion. Two categories of AI that have shown\npromise in liver imaging are radiomics (relying on classical ML)\nand DL systems (relying on CNNs) (Fig. 2A). Radiomics is a\nstrongly supervised and expert-guided approach where hard-\ncoded algorithms extract quantitative image features that are\nfed into an ML algorithm.°® In contrast, DL with a CNN consti-\ntutes an automatic feature extraction where the algorithm self-\nlearns salient features and self-optimises parameters by\nrunning an input image through mathematical operations\nembedded in multiple layers.°°? Because both approaches aim to\npredict a pre-defined “ground truth,” they are considered su-\npervised learning approaches. Herein, we review AI tools for liver\nimaging in segmentation, classification of disease severity and\nlesions, and outcome prediction.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 98.64,
+            "box": [
+                177.1,
+                1403.6,
+                773.6,
+                1447.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_05/region_3_title.png",
+            "text": "Segmentation of liver and liver lesions\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                177.6,
+                1449.8,
+                1218.6,
+                1631.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_05/region_4_text.png",
+            "text": "Segmentation involves drawing boundaries of the entire organ, a\nlesion, or other structures of interest on an imaging study\n(Fig. 2B). CNNs employing a U-Net architecture have been uti-\nlised extensively in the medical imaging literature for\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1265.4,
+                264.4,
+                2303.5,
+                1176.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_05/region_5_text.png",
+            "text": "segmentation tasks.°° Namely, Christ et al.’s landmark study used\na combination of cascaded CNNs with U-Net architectures and\ndense 3D conditional random fields to determine segmentation\nof the whole liver and liver lesions on abdominal CT.°! While not\nbased on a U-Net architecture, Sun et al. used a CNN based on\nmulti-phase contrast-enhanced CT images to segment liver tu-\nmours.°” To enable head-to-head comparisons of segmentation\nalgorithms, the Liver Tumor Segmentation Benchmark (LiTS)\nsupplied a public dataset of liver CTs and showed that algorithms\ncould achieve segmentation of livers and tumours with Dice\nscores greater than 95% and 70%, respectively.°? A noteworthy\nexample that excelled in lesion segmentation on the LiTS dataset\nis the H-DenseUNet, a hybrid U-Net fusing 2D intra-slice and 3D\ninter-slice features.°* DL for liver and HCC segmentation can be\nfurther refined by excluding false positive segmentations using a\nradiomics-based random forest and thresholding of mean neural\nactivation.°° Practical studies of segmentation include delinea-\ntion of ablation zones® and anatomy-guided multimodal regis-\ntration of the liver from MRI to intraprocedural cone-beam CT for\nlocoregional therapy.°”\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 98.76,
+            "box": [
+                1264.9,
+                1221.8,
+                2047.9,
+                1266.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_05/region_6_title.png",
+            "text": "Tissue characterisation of fibrosis and liver lesions\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1263.5,
+                1267.9,
+                2303.5,
+                1630.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_05/region_7_text.png",
+            "text": "CNN classification tools may potentially replace liver biopsy for\ngrading the severity of NAFLD and liver fibrosis in some patients\n(Fig. 2B). CNNs were initially used to classify the presence of fatty\nliver disease with AUCs of almost 1.00.°%°° Since then, CNNs\nhave been applied for quantification of liver steatosis on\nabdominal CT screening”° and ultrasound.’! CNNs classified F3\nand F4 fibrosis on 2D shear wave elastography”’ and portal\nvenous phase CI images’? with AUCs of at least 0.95,\n"
+        },
+        {
+            "idx": 8,
+            "thing": "figure",
+            "score": 99.7,
+            "box": [
+                266.0,
+                1727.1,
+                2145.2,
+                2905.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_05/region_8_figure.png"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.81,
+            "box": [
+                178.1,
+                2977.4,
+                2304.8,
+                3097.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_05/region_9_text.png",
+            "text": "Fig. 2. Radiology image analysis workflows. (A) Handcrafted feature extraction, also referred to as “radiomics,” is an established image analysis technique in\nradiology image analysis. Alternatively, deep learning, in the form of neural networks, can be used to learn features and predict a target label in a supervised\nfashion (end-to-end analysis). (B) Common tasks in radiology image analysis are segmentation, classification and prognostication.\n"
+        }
+    ]
+}

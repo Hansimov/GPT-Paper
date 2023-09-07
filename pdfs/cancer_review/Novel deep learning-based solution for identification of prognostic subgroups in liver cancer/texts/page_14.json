@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 2,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 98.57,
+            "box": [
+                782.1,
+                1419.3,
+                825.2,
+                3027.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_14/region_1_text.png",
+            "text": "n\ncS\n2\np\nVv\nCc\nDD\n=\nn\nan\n2\nwy\nCc\nVU\n©\n=\nTb\nVv\nco\na)\nL\n&\n2\nVv\nO\n€\nVU\nE\nL\nwv\nra)\nan\n=\nU\n<x\n©\ni\nVU\nco\na)\nOo\n2\nOo\nras)\nUV\n&\nx\n2\n=\nTC\nCc\noO\nn\nVY\nwb\n2\n=\nVU\np\nUV\noO\nS\noO\nco\nU\noO\nLY\n&\nOo\nm\n2\n«\nEe\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 94.25,
+            "box": [
+                847.0,
+                374.5,
+                1700.5,
+                3024.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_14/region_2_table.png"
+        }
+    ]
+}

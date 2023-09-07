@@ -1,0 +1,220 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 16,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 97.87,
+            "box": [
+                178.7,
+                279.5,
+                469.7,
+                345.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_01_title.png",
+            "text": "Conclusion\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                178.2,
+                402.3,
+                1212.1,
+                1122.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_02_text.png",
+            "text": "This study used bibliometrics to conduct an in-depth analysis of\nthe published literature on AI in liver cancer. The results showed that\nAI has undergone rapid development and has a wide application in\nthe diagnosis and treatment of liver diseases, especially in China,\nwhich has one of the highest incidences of liver cancer compared to\nother countries the world. In addition, intelligent analysis of imaging\ndata is the hotspot and focus of current research in this field.\nHowever, combined with the current clinical difficulties such as\naccurate screening of early-stage liver cancer patients and high-risk\npatients, and selection of reasonable treatment decisions for advanced\nliver cancer patients, the use of AI for the fusion analysis of multiple\ntypes data in the process of diagnosis and treatment of liver cancer\nand multi-modal treatment decision-making for liver cancer are still\nrelatively rare, and may become a future research trend.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 98.45,
+            "box": [
+                179.1,
+                1239.3,
+                859.3,
+                1304.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_03_title.png",
+            "text": "Data availability statement\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.78,
+            "box": [
+                177.5,
+                1362.5,
+                1214.3,
+                1457.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_04_text.png",
+            "text": "The raw data supporting the conclusions of this article will be\nmade available by the authors, without undue reservation.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 97.95,
+            "box": [
+                178.8,
+                1570.2,
+                717.6,
+                1632.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_05_title.png",
+            "text": "Author contributions\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 98.55,
+            "box": [
+                178.0,
+                1691.4,
+                1212.3,
+                1787.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_06_text.png",
+            "text": "LL, XH, and YW conceived the study. MX, YX, YZ, SH, and QZ\ncollected and analyzed the data. MX, YX, XH, and LL wrote the\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 96.58,
+            "box": [
+                178.1,
+                1933.7,
+                466.5,
+                1997.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_07_title.png",
+            "text": "References\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 44.4,
+            "box": [
+                176.2,
+                2064.5,
+                1212.7,
+                3176.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_08_text.png",
+            "text": "1. International Agency for Research on Cancer and World Health Organization.\nCancer today (2022). Available at: https://gco.iarc.fr/today/home (Accessed June 10,\n2022).\n\n2. Allemani C, Matsuda T, Di Carlo V, Harewood R, Matz M, Niksic M, et al. Global\nsurveillance of trends in cancer survival 2000-14 (CONCORD-3): analysis of individual\nrecords for 37 513 025 patients diagnosed with one of 18 cancers from 322\npopulation-based registries in 71 countries. Lancet (2018) 391(10125):1023-75.\ndoi: 10.1016/S0140-6736(17)33326-3\n\n3. Zhang BH, Yang BH, Tang ZY. Randomized controlled trial of screening for\nhepatocellular carcinoma. J Cancer Res Clin Oncol (2004) 130(7):417-22. doi: 10.1007/\ns00432-004-0552-0\n\n4. Shin HC, Roth HR, Gao M, Lu L, Xu Z, Nogues I, et al. Deep convolutional neural\nnetworks for computer-aided detection: CNN architectures, dataset characteristics and\ntransfer learning. IEEE Trans Med Imaging (2016) 35(5):1285-98. doi: 10.1109/\nTMLI.2016.2528162\n\n5. Tran KA, Kondrashova O, Bradley A, Williams ED, Pearson JV, Waddell N. Deep\nlearning in cancer diagnosis, prognosis and treatment selection. Genome Med (2021) 13\n(1):152. doi: 10.1186/s13073-021-00968-x\n\n6. Hosny A, Parmar C, Quackenbush J, Schwartz LH, Aerts HJWL. Artificial\nintelligence in radiology. Nat Rev Cancer (2018) 18(8):500-10. doi: 10.1038/s41568-\n018-0016-5\n\n7. Schmidt-Erfurth U, Sadeghipour A, Gerendas BS, Waldstein SM, Bogunovic H.\nArtificial intelligence in retina. Prog Retin Eye Res (2018) 67:1-29. doi: 10.1016/\nj.preteyeres.2018.07.004\n\n8. Hussain HK, Londy FJ, Francis IR, Nghiem HV, Weadock WJ, Gebremariam A,\net al. Hepatic arterial phase MR imaging with automated bolus-detection three-\ndimensional fast gradient-recalled-echo sequence: comparison with test-bolus method.\nRadiology (2003) 226(2):558-66. doi: 10.1148/radiol.2262011593\n\n9. Tlizuka N, Oka M, Yamada-Okabe H, Nishida M, Maeda Y, Mori N, et al.\nOligonucleotide microarray for prediction of early intrahepatic recurrence of\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.49,
+            "box": [
+                1269.8,
+                285.3,
+                2303.7,
+                380.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_09_text.png",
+            "text": "manuscript. LL, XH, and YW revised and reviewed the manuscript. All\nauthors contributed to the article and approved the submitted version.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 97.35,
+            "box": [
+                1271.7,
+                475.0,
+                1478.1,
+                541.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_10_title.png",
+            "text": "Funding\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1270.7,
+                598.3,
+                2305.1,
+                953.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_11_text.png",
+            "text": "This work was supported by the National Natural Science\nFoundation of Chongqing (Grant No. cstc2021ljcyj-msxmX0965),\nJoint Medical Research Project of Chongqing Science and\nTechnology Commission and Health Commission\n(2021MSXM262), the National Natural Science Project (31771324\nand 31671251), and Chongqing science and technology talent\nproject (No.CQYC201905037).\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 98.04,
+            "box": [
+                1270.7,
+                1051.1,
+                1756.8,
+                1113.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_12_title.png",
+            "text": "Conflict of interest\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                1270.3,
+                1170.4,
+                2303.7,
+                1318.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_13_text.png",
+            "text": "The authors declare that the research was conducted in the\nabsence of any commercial or financial relationships that could be\nconstrued as a potential conflict of interest.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "title",
+            "score": 97.16,
+            "box": [
+                1271.5,
+                1413.1,
+                1683.5,
+                1476.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_14_title.png",
+            "text": "Publisher's note\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1270.4,
+                1534.5,
+                2304.6,
+                1785.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_15_text.png",
+            "text": "All claims expressed in this article are solely those of the authors\nand do not necessarily represent those of their affiliated organizations,\nor those of the publisher, the editors and the reviewers. Any product\nthat may be evaluated in this article, or claim that may be made by its\nmanufacturer, is not guaranteed or endorsed by the publisher.\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 45.99,
+            "box": [
+                1267.4,
+                2065.1,
+                2306.1,
+                3200.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_10/region_16_text.png",
+            "text": "hepatocellular carcinoma after curative resection. Lancet (2003) 361(9361):923-9.\ndoi: 10.1016/S0140-6736(03)12775-4\n\n10. Ye QH, Qin LX, Forgues M, He P, Kim JW, Peng AC, et al. Predicting hepatitis b\nvirus-positive metastatic hepatocellular carcinomas using gene expression profiling and\nsupervised machine learning. Nat Med (2003) 9(4):416-23. doi: 10.1038/nm843\n\n11. Lee JS, Chu IS, Heo J, Calvisi DF, Sun Z, Roskams T, et al. Classification and\nprediction of survival in hepatocellular carcinoma by gene expression profiling.\nHepatology (2004) 40(3):667-76. doi: 10.1002/hep.20375\n\n12. Kermany DS, Goldbaum M, Cai W, Valentim CCS, Liang H, Baxter SL, et al.\nIdentifying medical diagnoses and treatable diseases by image-based deep learning. Cell\n(2018) 172(5):1122-1131.e9. doi: 10.1016/j.cell.2018.02.010\n\n13. Campanella G, Hanna MG, Geneslaw L, Miraflor A, Werneck Krauss Silva V,\nBusam KJ, et al. Clinical-grade computational pathology using weakly supervised deep\nlearning on whole slide images. Nat Med (2019) 25(8):1301-9. doi: 10.1038/s41591-019-\n0508-1\n\n14. Saillard C, Schmauch B, Laifa O, Moarii M, Toldo S, Zaslavskiy M, et al. Predicting\nsurvival after hepatocellular carcinoma resection using deep learning on histological\nslides. Hepatology (2020) 72(6):2000-13. doi: 10.1002/hep.31207\n\n15. Shi JY, Wang X, Ding GY, Dong Z, Han J, Guan Z, et al. Exploring prognostic\nindicators in the pathological images of hepatocellular carcinoma based on deep learning.\nGut (2021) 70(5):951-61. doi: 10.1136/gutjnl-2020-320930\n\n16. Cucchetti A, Piscaglia F, Grigioni AD, Ravaioli M, Cescon M, Zanello M, et al.\nPreoperative prediction of hepatocellular carcinoma tumour grade and micro-vascular\ninvasion by means of artificial neural network: a pilot study. J Hepatol (2010) 52(6):880-8.\ndoi: 10.1016/j.jhep.2009.12.037\n\n17. Chaudhary K, Poirion OB, Lu L, Garmire LX. Deep learning-based multi-omics\nintegration robustly predicts survival in liver cancer. Clin Cancer Res (2018) 24(6):1248-\n59. doi: 10.1158/1078-0432.CCR-17-0853\n\n18. Vo VT, Yang HJ, Lee GS, Kang SR, Kim SH. Effects of multiple filters on liver\ntumor segmentation from CT images. Front Oncol (2021) 11:697178. doi: 10.3389/\n"
+        }
+    ]
+}

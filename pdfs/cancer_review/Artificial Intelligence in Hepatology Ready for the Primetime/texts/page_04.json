@@ -1,0 +1,115 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 8,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.9,
+            "box": [
+                279.6,
+                356.4,
+                2202.6,
+                1570.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.29,
+            "box": [
+                709.4,
+                1606.8,
+                1771.4,
+                1647.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_2_text.png",
+            "text": "Figure 3 Graphical presentation showing applications of Al in Hepatology.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                200.9,
+                1725.4,
+                1205.0,
+                2669.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_3_text.png",
+            "text": "disadvantages being haemorrhage and tumour metastasis,\nalthough very rare. So, preoperative evaluation of the\ntumour-gene expression preferably though non-invasive\nroutes are the ideal target. With the genomic revolution\nin the early 1990s, medical research has been driven to\nstudy the basis of human disease on a genomic level and\ndevise precise cancer therapies tailored to a tumour's spe-\ncific genetic makeup. The novel approach of using radio-\nmics to extract genomic data has been termed\n“radiogenomics”. It aims to correlate the genotype (gene ex-\npressions and mutations) and phenotype (imaging charac-\nteristics), to facilitate a deeper understanding of tumour\nbiology and study the intrinsic tumour heterogeneity.\nImaging characteristics can then behave as molecular sur-\nrogates that can help to predict gene-expression-associated\ntreatment responses of various forms of cancer. These find-\nings pave a way for the futuristic role of diagnostic and in-\nterventional radiologists in using radiographic images for\nthe genetic assessment of cancer patients. '*\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.16,
+            "box": [
+                202.3,
+                2740.8,
+                1060.9,
+                2796.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_4_title.png",
+            "text": "APPLICATIONS OF Al IN HEPATOLOGY\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                201.0,
+                2814.5,
+                1204.8,
+                3059.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_5_text.png",
+            "text": "Recently, there has been a great amplification of Al-based\napplications and softwares in the field of Gastroenterology\nand Endoscopy” (Table 2). We will discuss the various ap-\nplications of AI in Hepatology'* under the following sub-\nheadings-\n"
+        },
+        {
+            "idx": 6,
+            "thing": "list",
+            "score": 99.15,
+            "box": [
+                1278.9,
+                1725.8,
+                2282.2,
+                2320.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_6_list.png",
+            "text": "A. Liver fibrosis in chronic hepatitis B (CHB)\n\nB. Liver fibrosis in chronic hepatitis C (CHC)\n\nC. Alcoholic liver disease\n\nD. NASH and non-alcoholic fatty liver disease (NAFLD)\n\nE. Diagnosis of DILI, PSC and PBC.\n\nF. Prognosis of CLD, portal hypertension, oesophageal\nvarices and ACLF\n\nG. Diagnosis and characterization of liver  space-\noccupying lesions (SOLs)\n\nH. Diagnosis and management of hepatocellular carci-\nnoma (HCC)\n\nI. Liver transplantation\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 99.01,
+            "box": [
+                1277.2,
+                2373.5,
+                2119.6,
+                2422.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_7_title.png",
+            "text": "A. Liver fibrosis in chronic hepatitis B (CHB)\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1276.7,
+                2449.5,
+                2282.5,
+                3044.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_8_text.png",
+            "text": "Viral hepatitis is a significant cause of CLD. Liver\nfibrosis and CLD are risk factors for hepatocellular carci-\nnoma (HCC) and hence death. It is practically impossible\nto perform a liver biopsy in all patients; hence AI algo-\nrithms have been developed for non-invasive evaluation\nof liver fibrosis. Some of the studies done using AI algo-\nrithms will be mentioned in the following sections. Wang\nD. et al'° proposed a bayesian learning algorithm to develop\na three-layer artificial neural network (ANN) in patients\nwith CHB. Age, platelet count, aspartate aminotransferase\n(AST), alanine aminotransferase (ALT), and gamma-\nglutamyl transferase (GGTP) were the most critical factors\n"
+        }
+    ]
+}

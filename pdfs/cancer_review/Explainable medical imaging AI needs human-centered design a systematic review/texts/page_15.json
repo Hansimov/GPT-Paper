@@ -1,0 +1,155 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_15.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_15.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 11,
+        "page_idx": 15
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 96.91,
+            "box": [
+                151.4,
+                243.7,
+                583.8,
+                281.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_01_title.png",
+            "text": "AUTHOR CONTRIBUTIONS\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                148.8,
+                295.8,
+                1182.8,
+                476.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_02_text.png",
+            "text": "All authors contributed to the conception and design of the study. H.C. and CG.\ncontributed to the literature search and data extraction. H.C. and C.G. contributed to\ndata analysis and interpretation. All authors contributed to writing the manuscript,\nand all authors approved the manuscript. All authors guaranteed the integrity of the\nwork. H.C. and C.G. contributed equally in this work and are co-first authors.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 96.55,
+            "box": [
+                150.0,
+                555.8,
+                544.0,
+                592.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_03_title.png",
+            "text": "COMPETING INTERESTS\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 98.65,
+            "box": [
+                150.2,
+                607.9,
+                697.3,
+                637.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_04_text.png",
+            "text": "The authors declare no competing interests.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 96.5,
+            "box": [
+                151.1,
+                718.0,
+                616.9,
+                753.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_05_title.png",
+            "text": "ADDITIONAL INFORMATION\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 91.31,
+            "box": [
+                148.8,
+                769.5,
+                1184.1,
+                836.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_06_text.png",
+            "text": "Supplementary information The online version contains supplementary material\navailable at https://doi.org/10.1038/s41746-022-00699-2.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 94.3,
+            "box": [
+                148.9,
+                880.8,
+                1184.8,
+                949.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_07_text.png",
+            "text": "Correspondence and requests for materials should be addressed to Mathias\nUnberath.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 88.73,
+            "box": [
+                149.1,
+                993.4,
+                1182.5,
+                1060.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_08_text.png",
+            "text": "Reprints and permission information is available at http://www.nature.com/\nreprints\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.13,
+            "box": [
+                1258.5,
+                249.8,
+                2292.5,
+                317.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_09_text.png",
+            "text": "Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims\nin published maps and institutional affiliations.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.2,
+            "box": [
+                1258.0,
+                435.0,
+                2291.8,
+                836.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_10_text.png",
+            "text": "Open Access This article is licensed under a Creative Commons\n\n7 Attribution 4.0 International License, which permits use, sharing,\nadaptation, distribution and reproduction in any medium or format, as long as you give\nappropriate credit to the original author(s) and the source, provide a link to the Creative\nCommons license, and indicate if changes were made. The images or other third party\nmaterial in this article are included in the article’s Creative Commons license, unless\nindicated otherwise in a credit line to the material. If material is not included in the\narticle’s Creative Commons license and your intended use is not permitted by statutory\nregulation or exceeds the permitted use, you will need to obtain permission directly\nfrom the copyright holder. To view a copy of this license, visit http://\ncreativecommons.org/licenses/by/4.0/.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 23.74,
+            "box": [
+                1258.0,
+                918.6,
+                1522.7,
+                948.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_15/region_11_text.png",
+            "text": "© The Author(s) 2022\n"
+        }
+    ]
+}

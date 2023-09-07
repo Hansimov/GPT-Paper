@@ -1,0 +1,181 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 13,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                149.1,
+                241.8,
+                1184.6,
+                780.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_01_text.png",
+            "text": "disproportionate role in the perception of transparency. It is well\nknown that factors like format (e.g., text, images, plots)'®, channel\n(e.g. graphical interface)'?, and interactivity (e.g. whether users\ncan provide feedback or refine model outputs) can drastically\naffect users’ experience and performance????, and therefore,\nmust be aligned with the goal of transparent system develop-\nment. Clearly, the selection of presentation mode should be\nincorporated early and supported by some degree of evidence,\nthat emerges naturally when following human-centered design\nprinciples but requires justification if not (as posited for\ntransparency in Guideline 2). Ultimately, users’ experience with\nthe systems plays an important role in their willingness to adopt it\nin a real setup?!2?,\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 98.89,
+            "box": [
+                149.6,
+                835.3,
+                1099.1,
+                876.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_02_title.png",
+            "text": "Guideline 5: report task performance of the ML systems\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                148.9,
+                885.8,
+                1184.2,
+                1464.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_03_text.png",
+            "text": "Similar to ordinary ML models, the transparent system must be\nevaluated quantitatively using appropriate metrics that well reflect\nthe desired performance. In addition, the data used to evaluate\nthe algorithm and its relevance regarding the clinical target task\nmust be specified. Metrics and evaluation protocols should be\nselected to well determine the model's abilities in regard to the\nclinical requirements specified per Guideline 1. Reporting task\nperformance of the algorithm in standalone deployment is\nimportant as a baseline for empirical studies in which users may\ninteract and collaborate with the system to complete a task, and\nteam performance (human + ML system) metrics can be\nmeasured. Such comparisons are relevant to the goal of improving\nteam performance when integrating intelligent systems to assist\nhumans in complex tasks??**,\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.66,
+            "box": [
+                150.9,
+                1520.3,
+                1176.9,
+                1603.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_04_title.png",
+            "text": "Guideline 6: assess correctness and human factors of system\ntransparency\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                149.1,
+                1612.8,
+                1184.0,
+                2605.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_05_text.png",
+            "text": "In addition to task performance, transparent ML systems must be\nevaluated with respect to their transparency claims. This validation\nis generally necessary even for Level 3 (iteratively developed\nevidence) justified transparency mechanisms, because user\nstudies in the design phase commonly rely on mock-up\nprototypes of the envisioned system, and therefore, may have\ndifferent modes of failure than the final ML system. Within this\nguideline, we distinguish two types of evaluation: (1) Validating\nthe correctness of the transparency technique, which objectively\nassesses whether the information supplied to achieve transpar-\nency is in agreement with the justification. Achieving correctness\nis particularly important for systems that rely on post-hoc\nexplanations, since explanations may rely on a second model\nthat is distinct from the ML algorithm generating recommenda-\ntions. (2) Validating the effectiveness of transparency in a human-\ncentered approach, to demonstrate that the transparent ML\nsystem applied to relevant data samples and in cooperation with\ntarget users achieves the desired goals. This empirical evaluation\ndetermines the efficacy of human factors engineering. The\ndimensions that are often considered include users’ trust'®,\nreliance, satisfaction?*, mental model formation*?, and system\nacceptance. Reporting of these user studies should include details\nof the experimental design, participant sample, and techniques to\nanalyze the results.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                150.4,
+                2608.2,
+                1183.9,
+                3063.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_06_text.png",
+            "text": "Transparency of ML algorithms for medical image analysis is\ncommonly motivated by the desire of automating complex tasks\nwhile retaining a clear interface for human interaction, e.g., to\nimprove trust, avoid over-reliance, or increase acceptance.\nHowever, achieving these design goals through transparency\nrequires the development of transparent ML algorithms that are\nintelligible by the envisioned end users. In design thinking,\naligning technological developments with user needs is accom-\nplished through user involvement in the design process and\niterative user testing, which is largely infeasible in healthcare due\nto varied barriers to end user involvement. We propose a design\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1258.9,
+                241.8,
+                2292.7,
+                863.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_07_text.png",
+            "text": "and evaluation framework where ML designers actively consider\nend users’ needs, knowledge, and requirements, allowing\ndesigners to classify the reliability of their understanding of end\nuser needs using four levels of evidence. Explicitly thinking about\nthe confidence one may have in the assumptions about end users\nthat drive transparent ML system development may mitigate the\nrisks of developing solutions that are unintelligible to the target\nusers, and therefore, neither achieve the desired human factors\nengineering goals nor benefit clinical practice. Similarly, quantify-\ning the level of evidence currently available to motivate\ntransparency claims then allows developers to trade-off resources\nbetween technical ML developments and additional formative\nresearch of their target users to ensure that the resulting systems\nare fit to meet the requirements of the clinical task but foremost\nthe target users.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 98.55,
+            "box": [
+                1258.2,
+                937.7,
+                1710.1,
+                979.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_08_title.png",
+            "text": "RESULTS AND DISCUSSION\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1257.9,
+                989.5,
+                2292.2,
+                1361.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_09_text.png",
+            "text": "We discuss the INTRPRT guideline in the context of the key\nobservations from different themes of our systematic review to\nidentify opportunities to improve the design of transparent ML\nsystems for medical image analysis. Each discussion point focuses\non one or more themes that we introduced before. Furthermore,\nthe second last subsection presents successful examples of ML\nsystems designed with clinical end users and the last subsection\nalso includes the comparison of our guideline and systematic\nreview with existing literature.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 99.71,
+            "box": [
+                1258.3,
+                1416.9,
+                2232.6,
+                1499.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_10_title.png",
+            "text": "Importance of formative user research and empirical user\ntesting\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1259.1,
+                1508.1,
+                2292.9,
+                2793.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_11_text.png",
+            "text": "Both formative user research (theme incorporation and prior) and\nempirical user testing (theme reporting) are critical to ensure that\nsolutions meet user needs (theme target). On the one hand,\nformative user research helps designers navigate and understand\nend users’ domain practice and needs. On the other hand,\nempirical user testing assesses whether the designed algorithm\nindeed achieves the human factors engineering goals, such as\naffording transparency, promoting trust, or avoiding over-reliance.\nAdditionally, early user involvement in the design process using\nprototypes of increasing fidelity provides opportunities to review\nand iterate over design choices. From our systematic review of the\nliterature presented in the “Detailed Analysis of Findings during\nSystematic Review” section, we find that although most con-\ntemporary studies on transparent ML formulate human factor\nengineering goals, no study reported formative user research or\nempirical testing to inform and validate design choices. We must\nconclude that contemporary research efforts in medical image\nanalysis have disproportionately prioritized the technological\ndevelopment of algorithmic solutions that alter or augment the\npredictions of complex ML systems with the implicit—though\nunfortunately often explicit—assumption that those changes\nwould achieve transparency. However, because of the substantial\nknowledge imbalance between ML engineers and target users\namong other reasons detailed above, it is unlikely that, without\nformative user research or empirical tests, those systems truly\nafford transparency or achieve the promised human factors\nengineering goals. While demonstrating the computational\nfeasibility of advanced transparency techniques is certainly of\ninterest, grounding the need for these techniques in solid\nunderstanding of the target users should be the first step for\nmost, if not all, such developments.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 99.11,
+            "box": [
+                1258.1,
+                2848.6,
+                1865.4,
+                2889.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_12_title.png",
+            "text": "General assessment of transparency\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1258.4,
+                2898.5,
+                2292.0,
+                3063.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_05/region_13_text.png",
+            "text": "In addition to user involvement or formative research during the\ndesign phase (theme incorporation and prior), upon completion of\nML development, system transparency needs to be empirically\nvalidated (theme reporting). During the literature review, we\n"
+        }
+    ]
+}

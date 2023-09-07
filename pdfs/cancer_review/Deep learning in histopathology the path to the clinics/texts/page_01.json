@@ -1,0 +1,116 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 8,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 92.9,
+            "box": [
+                299.9,
+                296.0,
+                1654.3,
+                370.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_1_title.png",
+            "text": "Deep learning in histopathology: the path to the clinics\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 91.11,
+            "box": [
+                297.7,
+                487.4,
+                1438.8,
+                546.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_2_text.png",
+            "text": "Jeroen van der Laak*?\", Geert Litjenst and Francesco Ciompi*\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 82.33,
+            "box": [
+                300.9,
+                653.7,
+                2051.5,
+                885.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_3_text.png",
+            "text": "1Department of Pathology, Radboud University Medical Center, Nijmegen, Netherlands\nCenter for Medical Image Science and Visualization, Linképing University, Linképing, Sweden\n‘e-mail: jeroen.vanderlaak@radboudumc.nl\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 90.95,
+            "box": [
+                301.7,
+                988.5,
+                473.8,
+                1050.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_4_title.png",
+            "text": "Abstract\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 82.57,
+            "box": [
+                299.5,
+                1074.2,
+                2193.9,
+                1722.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_5_text.png",
+            "text": "Machine learning techniques have great potential to improve medical diagnostics, offering ways to\nimprove accuracy, reproducibility and speed, and to ease workloads for clinicians. In the field of\nhistopathology, deep learning algorithms have been developed that perform similarly to trained\npathologists for tasks such as tumor detection and grading. However, despite these promising results,\nvery few algorithms have reached clinical implementation, challenging the balance between hope and\nhype for these new techniques. This review provides an overview of the current state of the field, as\nwell as describing the challenges that still need to be addressed before artificial intelligence in\nhistopathology can achieve clinical value.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 89.6,
+            "box": [
+                302.9,
+                1827.4,
+                642.7,
+                1890.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_6_title.png",
+            "text": "[H1] Introduction\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 82.91,
+            "box": [
+                301.6,
+                1909.7,
+                2195.1,
+                2812.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_7_text.png",
+            "text": "Breakthroughs in the field of artificial intelligence (Al) have had a major impact on society worldwide\nin the past five years. In the field of medicine, and more specifically in diagnostic disciplines (e.g.,\nradiology, pathology), initial results from the application of Al to patient data are very promising [1],\n[2], [3]. Diagnostic disciplines often rely heavily on the recognition of patterns in data, such as images,\nby physicians and the interpretation of such patterns in the wider context of the patient. However, it\nwas shown that for many diagnostics tasks, reproducibility among physicians is less than optimal [62],\n[73]. Also, as a result of the increase in treatment options, more accurate diagnostics are needed to\nmeet the requirements of ‘precision medicine’, which may exceed the capabilities of human visual\ninspection [154]. Detecting and accurately quantifying patterns in medical data using Al could\ntherefore aid diagnostic processes, making them more efficient and reproducible, and increasing\naccuracy and precision.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 81.45,
+            "box": [
+                302.0,
+                2916.8,
+                2194.1,
+                3149.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_8_text.png",
+            "text": "An area in which the use of Al is particularly appealing is in the analysis of histopathological tissue\nsections, which currently requires specialized doctors, pathologists, to carefully assess (sometimes\nlarge numbers of) gigapixel-sized images. Pathologists diagnose and grade diseases such as cancer and\n"
+        }
+    ]
+}

@@ -1,0 +1,1767 @@
+{
+    "pdf_filename": "Deep learning in histopathology the path to the clinics.pdf",
+    "pdf_fullpath": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics.pdf",
+    "pages_num": 32,
+    "pages": [
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_01.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_01.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 8,
+                "page_idx": 1
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "title",
+                    "score": 92.9,
+                    "box": [
+                        299.9,
+                        296.0,
+                        1654.3,
+                        370.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_1_title.png",
+                    "text": "Deep learning in histopathology: the path to the clinics\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 91.11,
+                    "box": [
+                        297.7,
+                        487.4,
+                        1438.8,
+                        546.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_2_text.png",
+                    "text": "Jeroen van der Laak*?\", Geert Litjenst and Francesco Ciompi*\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 82.33,
+                    "box": [
+                        300.9,
+                        653.7,
+                        2051.5,
+                        885.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_3_text.png",
+                    "text": "1Department of Pathology, Radboud University Medical Center, Nijmegen, Netherlands\nCenter for Medical Image Science and Visualization, Linképing University, Linképing, Sweden\n‘e-mail: jeroen.vanderlaak@radboudumc.nl\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 90.95,
+                    "box": [
+                        301.7,
+                        988.5,
+                        473.8,
+                        1050.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_4_title.png",
+                    "text": "Abstract\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 82.57,
+                    "box": [
+                        299.5,
+                        1074.2,
+                        2193.9,
+                        1722.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_5_text.png",
+                    "text": "Machine learning techniques have great potential to improve medical diagnostics, offering ways to\nimprove accuracy, reproducibility and speed, and to ease workloads for clinicians. In the field of\nhistopathology, deep learning algorithms have been developed that perform similarly to trained\npathologists for tasks such as tumor detection and grading. However, despite these promising results,\nvery few algorithms have reached clinical implementation, challenging the balance between hope and\nhype for these new techniques. This review provides an overview of the current state of the field, as\nwell as describing the challenges that still need to be addressed before artificial intelligence in\nhistopathology can achieve clinical value.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "title",
+                    "score": 89.6,
+                    "box": [
+                        302.9,
+                        1827.4,
+                        642.7,
+                        1890.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_6_title.png",
+                    "text": "[H1] Introduction\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 82.91,
+                    "box": [
+                        301.6,
+                        1909.7,
+                        2195.1,
+                        2812.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_7_text.png",
+                    "text": "Breakthroughs in the field of artificial intelligence (Al) have had a major impact on society worldwide\nin the past five years. In the field of medicine, and more specifically in diagnostic disciplines (e.g.,\nradiology, pathology), initial results from the application of Al to patient data are very promising [1],\n[2], [3]. Diagnostic disciplines often rely heavily on the recognition of patterns in data, such as images,\nby physicians and the interpretation of such patterns in the wider context of the patient. However, it\nwas shown that for many diagnostics tasks, reproducibility among physicians is less than optimal [62],\n[73]. Also, as a result of the increase in treatment options, more accurate diagnostics are needed to\nmeet the requirements of ‘precision medicine’, which may exceed the capabilities of human visual\ninspection [154]. Detecting and accurately quantifying patterns in medical data using Al could\ntherefore aid diagnostic processes, making them more efficient and reproducible, and increasing\naccuracy and precision.\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 81.45,
+                    "box": [
+                        302.0,
+                        2916.8,
+                        2194.1,
+                        3149.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_01/region_8_text.png",
+                    "text": "An area in which the use of Al is particularly appealing is in the analysis of histopathological tissue\nsections, which currently requires specialized doctors, pathologists, to carefully assess (sometimes\nlarge numbers of) gigapixel-sized images. Pathologists diagnose and grade diseases such as cancer and\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_02.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_02.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 3,
+                "page_idx": 2
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 80.31,
+                    "box": [
+                        301.8,
+                        290.6,
+                        2194.4,
+                        692.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_02/region_1_text.png",
+                    "text": "inflammatory diseases, based on a variety of tissue features (e.g., disturbed tissue architecture, the\npresence or absence of specific cell characteristics or the presence of, for example, an abundance of\ninflammatory cells). While there is a worsening shortage of pathologists, their workload is increasing\nas a result of larger numbers of cases, and the requirement for more extensive diagnoses to identify\nthe most optimal treatment for patients.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 83.36,
+                    "box": [
+                        300.6,
+                        706.5,
+                        2199.9,
+                        1870.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_02/region_2_text.png",
+                    "text": "Using Al to analyze tissue sections is often referred to as computational pathology (CPATH) [4], [5],\nthe current applications of which rely heavily on the use of deep neural networks (so-called deep\nlearning). Research in this area began as early as the 1960’s, with the initial application of image\nanalysis algorithms to images of cells. Individual cells in blood smears could be classified into subtypes,\non the basis of quantitative cell characteristics such as size, shape and chromatin distribution, to\nanalyze the blood composition and help diagnose a range of diseases [6]. Early CPATH applications\nattempted to implement computational features that were painstakingly matched to a biological\nprocess or shape, and were later replaced by radiomics or pathomics approaches using generic\n‘feature banks’ of texture descriptors (i.e. a quantitative description of the characteristics of image\ntextures, such as orientation, contrast etc.)[7], operating under the assumption that complex\nclassifiers could eventually find the intricate relationships among these features for specific\nclassification tasks. For example, Kather et al showed that combining five different types of texture\ndescriptors resulted in a classifier that could recognize tumor and stroma in colorectal tissue sections\nwith 98.6% accuracy [155].\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 85.2,
+                    "box": [
+                        300.7,
+                        1967.7,
+                        2199.2,
+                        3128.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_02/region_3_text.png",
+                    "text": "The almost complete transition from feature engineering to deep learning occurred for several\nreasons. For medical imaging, and thus also for CPATH, perhaps the most important reason is the fact\nthat the construction of algorithms (almost) entirely by training, rather than by explicit programming\nor by using predefined filters, yields powerful, hierarchical feature representations that, in most cases,\noutperform more traditional image analysis methods [3]. As a consequence, the need to have domain\nknowledge in order to achieve good results is reduced because feature engineering requires the\ndefinition of problem-specific features, whereas in deep learning, the networks learn meaningful\nfeatures autonomously from the data. Automatically learning features from the data also leads to\nreduced implementation time. In feature engineering, crafting meaningful characteristics for the data\nat hand generally requires several iterations per feature and sometimes lengthy and repeated\ndiscussions with pathologists to understand what cues are used during their diagnostic process. In the\nera of deep learning, such trajectories can be reduced to months, sometimes even weeks, while\nbreaking boundaries in terms of diagnostic performance. Lastly, the importance of freely available\nsource code for the most successful neural network architectures cannot be understated.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_03.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_03.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 4,
+                "page_idx": 3
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 90.09,
+                    "box": [
+                        300.9,
+                        380.0,
+                        2191.5,
+                        1029.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_03/region_1_text.png",
+                    "text": "The history of CPATH prior to deep learning has been reviewed elsewhere [8], as has the application\nof deep learning for histopathology from a technical perspective [14]. Therefore, in this review we\nprovide an application-based approach to the use of deep learning in histopathology with an emphasis\non clinical value, future developments and challenges still to overcome before true patient value is\nachieved, as well as briefly retracing the main milestones in CPATH from the past decade. We have\nlimited the discussion to studies in which computational analysis is applied to digitized bright-field\nmicroscopic tissue sections in combination with selected meta-data, as these form the vast majority\nof current research.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 95.25,
+                    "box": [
+                        298.9,
+                        1134.8,
+                        1066.3,
+                        1196.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_03/region_2_title.png",
+                    "text": "[H1] Trends in computational pathology\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 90.39,
+                    "box": [
+                        297.7,
+                        1217.2,
+                        2195.3,
+                        2538.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_03/region_3_text.png",
+                    "text": "CPATH has moved forward significantly in the past ten years as a result of strong improvements in\nmicroscopic scanning devices, which enable the acquisition of whole-slide images (WSI), progress in\nthe development and decreases in the cost of computing hardware, and advances in Al. The field has\nfollowed a trend that was previously experienced by the computer vision community, which focusses\nits research on computational analysis of natural images, i.e. real-world photographs and videos. Initial\nreports in 2011 of efficiently training convolutional neural networks (CNN), a particular type of deep\nlearning algorithm, using graphics processing units (GPUs) [9], led to the design of much deeper CNNs\nthat outperformed the state of the art (mostly using machine learning based on handcrafted features)\nin the classification of natural images. Specifically, in the ImageNet challenge, which required\ncategorization of one million photographs in a thousand different classes ranging from specific breeds\nof dogs to airplanes and cars, these new deep neural networks reduced the error rate from 25% to 4%\nin only three years.. CPATH researchers took note of the successes of applying CNNs in computer\nvision, initially presenting methods that solely focused on the analysis of small cropped areas from\nWSI, such as mitosis counting [10]. Methods that used entire WSI followed for applications such as\nbreast cancer segmentation [11], glioma classification [12], non-alcoholic fatty liver disease [156],\nassessment of renal transplant biopsies [19] and prostate cancer detection [13].\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 88.82,
+                    "box": [
+                        300.1,
+                        2644.6,
+                        2192.0,
+                        3126.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_03/region_4_text.png",
+                    "text": "In parallel with the progression to more advanced Al models in histopathology, the complexity of the\ntasks to be solved and the size of publicly available datasets began to grow. In 2016, the CAMELYON\nchallenge was proposed with the aim of developing CPATH solutions for the detection of breast cancer\nmetastases in sentinel lymph nodes [20]. The introduction of the CAMELYON dataset was a game\nchanger in the field of CPATH, as it made available for the first time the largest collection (n=1,399) of\nfully manually annotated WSI of sentinel lymph nodes of patients with breast cancer. Participants in\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_04.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_04.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 3,
+                "page_idx": 4
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 88.97,
+                    "box": [
+                        300.6,
+                        298.8,
+                        2196.7,
+                        1364.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_04/region_1_text.png",
+                    "text": "the challenge had to solve two tasks designed to mimic routine tasks in pathology diagnostics: finding\ntumor regions in each lymph node and consequently predicting the presence of tumors at a WS level.\nSimilar to the impact that ImageNet had on the computer vision community, the large set of data and\nclinical focus of CAMELYON stimulated the creativity of both researchers and industry, who pushed\nforward the development of Al for metastasis detection, thereby enabling CPATH methods to make a\nleap from both academic and commercial technological perspectives. Furthermore, CAMELYON also\nattracted machine learning powerhouses such as Google to the field of computational pathology [21],\ncontributed to establishment of several CPATH start-up companies, and influenced government policy\nin the USA [22].Today, many research papers are published on CPATH developments, focusing on a\nwhole array of clinical applications. These applications are often found to approach or even surpass\npathologists for specific tasks. To facilitate the development of such applications, ever larger data sets\nwith associated annotations are required, posing challenges in terms of data collection and annotation\nproduction.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 88.76,
+                    "box": [
+                        298.0,
+                        1467.4,
+                        2198.3,
+                        2539.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_04/region_2_text.png",
+                    "text": "[H2] CPATH for clinical practice. The CAMELYON challenge provided a stimulus for researchers and\nindustry to focus on the actual impact of CPATH applications in pathology clinical practice. Current\napplications include tumor detection and classification (often by subtype [21], [23], [24] [25], [26], [27]\n[28], [29], [30], [31], [32], [33], [34], [35] [36], [37]), image segmentation [38], [39], [40] [41], [42] [43]\n[44], [45] [46], [47], [48], cell detection and counting [49], [50], [51], [52], [53], mitosis detection [54],\n[55], [56], [57], [58], analysis of kidney transplant biopsies [19], and tumor grading [59], [60], [61],\namong others. An example of a CPATH application for automatic tissue segmentation using a\ncombination of U-Net models [19] as well as the corresponding ground truth, is shown in Figure 1.\nFigure 1a shows a zoomed in region of a Periodic acid—Schiff-stained kidney biopsy, in which glomeruli,\ntubuli, capillaries etc can be recognized. In Figure 1b, the expert annotation is shown, which is used to\nvalidate the output of the CPATH solution (purple - glomeruli, blue - proximal tubuli, orange - distal\ntubuli, green - atrophic tubuli, etc). Figure 1c, finally, shows the output of the CPATH models, which\nclearly corresponds very well with the human annotation.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 81.96,
+                    "box": [
+                        301.0,
+                        2560.8,
+                        2195.2,
+                        3127.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_04/region_3_text.png",
+                    "text": "In the context of clinical practice, automating repetitive and time-consuming tasks such as the analysis\nof tissue samples obtained by biopsy and excised lymph nodes can have a tremendous impact on the\noptimization of the clinical workload of pathologists. Tissue samples from the breast, colon, and cervix\nare taken in large numbers as a consequence of population screening programs, and large numbers\nof lymph nodes per patient are resected during surgery, resulting in large numbers of (mostly negative)\nslides to be checked by pathologists. In these situations, Al algorithms could flag suspicious regions or\nslides for inspection or, in the future, assess cases autonomously.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_05.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_05.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 3,
+                "page_idx": 5
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 86.45,
+                    "box": [
+                        300.1,
+                        372.7,
+                        2199.9,
+                        2034.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_05/region_1_text.png",
+                    "text": "In addition to automating current diagnostic tasks, CPATH methods can also be used to support\npathologists with additional information; for example, by showing the 2mm hotspots of mitotic cells\nin breast cancer WSI that are required for tumor grading as advised by guidelines for treatment of\npatients with breast cancer (e.g., as published by the American Society of Clinical Oncology; ASCO)\n[157]. This approach performs similarly to pathologists and can reduce inter-observer variability [147].\nHighlighting regions of prostate cancer using different colors to represent different Gleason grades\n[62] [63] and highlighting lung cancer growth patterns by adenocarcinoma subtype [36] [64] using\nCPATH methods have produced similar results. Furthermore, a combination of segmentation,\ndetection and classification methods can enable the objective quantification of established\nbiomarkers that are used in clinical practice. One example is the assessment of tumor infiltrating\nlymphocytes (TILs) [65], which can be achieved by segmenting stromal regions of a slide and detecting\nintrastromal lymphocytes by hematoxylin and eosin (H&E) staining [66] [51] or by\nimmunohistochemistry (IHC) [50]. Using this method, the presence of TILs was shown to correlate with\nrecurrence and genetic mutations in lung adenocarcinoma [67]. Other examples of biomarkers include\nthose related to the amount of intra-tumoral stroma [68], such as the tumor-stroma ratio [69], which\ncan be assessed by computing the ratio between the tumor and tumor-associated stroma obtained\nvia image segmentation, and the quantification of programmed death-ligand 1 (PD-L1)-positive cells,\nwhich is used to stratify patients for immunotherapy and can be achieved via the detection of positive\n(and possibly negative) cells, by segmentation of PD-L1-positive and PD-L1-negative regions [70], or\neven predicted from H&E slides [71].\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 84.91,
+                    "box": [
+                        300.3,
+                        2134.3,
+                        2195.6,
+                        2793.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_05/region_2_text.png",
+                    "text": "[H2] Large-scale datasets. Following the promising results of the early CPATH applications, the size of\ndatasets has increased, leading to an increasing number of multi-centric efforts to cope with the large\nvariability in staining, image quality, scanning characteristics, and tissue preparation across different\nlabs. One example of how datasets have grown is in the use of Al for prostate cancer detection, one\nmethod of which was developed using a dataset of 254 prostate tissue samples in 2016 [13], whereas\na method proposed in 2019 used a dataset with >24,000 prostate tissue samples [72]. As the scale of\ndatasets grew, CPATH methods began to approach and even surpass the performance of pathologists\n[73] [74] [62].\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 84.22,
+                    "box": [
+                        300.6,
+                        2893.1,
+                        2193.2,
+                        3127.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_05/region_3_text.png",
+                    "text": "However, although collecting a large number of WSI is a manageable task for pathology laboratories\nand medical centers, collecting annotations remains an obstruction to the scaling of CPATH\nalgorithms. Annotations can mean both the manual annotation of image regions (such as the\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_06.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_06.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 3,
+                "page_idx": 6
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 86.98,
+                    "box": [
+                        301.6,
+                        298.6,
+                        2196.1,
+                        1446.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_06/region_1_text.png",
+                    "text": "identification of regions of tissue or the location of specific cells types) and clinical annotations (such\nas assessment of molecular subtypes, treatment response and survival). Acquiring manual annotations\nof images is a tedious task that requires domain expertise and is typically performed by (resident)\npathologists. By contrast, clinical annotations require access to pathology reports and electronic\npatient records, either from a hospital (to retrieve information about grade, molecular subtypes or\ntreatment responses) or from a regional or national registry (to retrieve information about survival),\nand can only be provided by authorized clinical researchers or data managers. Clinical annotation of\nWSI tends to be easier to achieve than manual annotation, and has resulted in large datasets in several\nstudies (e.g., for prostate cancer [72], lung cancer [24], and colorectal cancer [160]). Still, building\nCPATH models using only clinical annotations will not be possible or efficient for every application in\nhistopathology. For instance, if the feature that is critical for arriving at a certain diagnosis is present\nonly in very small regions of the WSI, it may require a very large number of cases before the CPATH\nmodel has learned to perform the task. Therefore, manual annotations will still be needed,\nnecessitating development of techniques to facilitate efficient production of these annotations.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 87.26,
+                    "box": [
+                        300.8,
+                        1546.6,
+                        2196.7,
+                        2623.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_06/region_2_text.png",
+                    "text": "Several approaches have been proposed to address the need for manual annotations in large scale\ndatasets. One straightforward approach is to simply scale the number of annotators with the data by\ninvolving a large number of experts. This approach has the advantage of guaranteeing high quality\nannotations, but it is very expensive as it involves a fairly large number of experienced physicians. This\nsolution was adopted by a study in 2020 [75], in which 12 senior pathologists were involved in\nexhaustively manually annotating >2,000 WSI of gastric cancer; the agreement among all experts\ninvolved was used as reference standard. A similar approach was used in the TUPAC challenge in 2016\nto define a reference standard for mitosis detection by combining the opinions of a panel of\npathologists [54]. An alternative approach to using pathologists is to assign manual annotations to a\nset of people with different amounts of expertise, ranging from medical students to junior and senior\npathologists [76] [77] [51]. In previous studies that used this approach, manual annotations were\ncrowdsourced using web-based platforms such as Mechanical Turk [76] [77]. However, in all cases,\nmanual annotations were finally reviewed and approved by (resident) pathologists.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 84.51,
+                    "box": [
+                        301.1,
+                        2724.5,
+                        2191.1,
+                        3127.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_06/region_3_text.png",
+                    "text": "Staining techniques such as IHC, in which antibodies can be used to target specific types of tissue or\ncells, may also provide valuable support to manual annotations. This strategy was used to make\nmanual annotations of breast cancer metastases to lymph nodes in the CAMELYON challenge, in which\ntwo serial sections were stained with cytokeratin (CK) and H&E, and CK was used to guide the manual\nannotation procedure [20]. This approach has the advantage of providing strong supervision to the\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_07.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_07.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 3,
+                "page_idx": 7
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 85.39,
+                    "box": [
+                        301.1,
+                        299.3,
+                        2194.5,
+                        1279.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_07/region_1_text.png",
+                    "text": "annotator and avoiding false negatives and false positives in the annotated reference standard.\nAnother useful technique is re-staining, which provides an alternative to serial sections and enables\nthe same slide to be subsequently stained with, for example, H&E and IHC, and the two digitized slides\nto be aligned via registration algorithms. This technique guarantees that exactly the same cells and\ntissue compartments are present in both slides, and that the positive marker in IHC can be transferred\nto H&E, de facto producing a strong basis for making accurate annotations automatically. This\napproach has been adopted for the detection of mitotic figures using phosphohistone H3 as a\nreference standard [55], for the segmentation of prostate epithelium using CK as reference standard\n[78], and for the detection of epithelial cells in breast cancer using CK and Ki67 [79]. Re-staining\ntechniques enable the number of cases to be scaled at relatively low cost and with only a minimal\ninteraction from human experts, thus reducing variability due to inter-observer disagreement, which\nis a well-known limitation in applications such as the detection of mitotic figures [55].\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 85.79,
+                    "box": [
+                        300.2,
+                        1381.8,
+                        2194.5,
+                        2118.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_07/region_2_text.png",
+                    "text": "[H2] Weakly supervised learning. Another approach to reduce the burden of manual annotations is\nto consider CPATH algorithms that are trained in a weakly supervised fashion. In the context of image\nsegmentation, weak supervision can come in the form of sparse manual annotations, for example,\nannotation of only small regions using dots or scribbles, as opposed to full supervision via dense\nannotations, in which all pixels of the image are manually labeled [80] [81]. Several groups have shown\nthat weak supervision combined with advanced learning strategies in model development can\napproach the performance of fully supervised systems, particularly when sparse and dense\nannotations are combined. On the basis of this idea, weak supervision has been used to address\nseveral segmentation and detection problems in CPATH methods [82], [83], [41], [58], [84], [48].\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 85.38,
+                    "box": [
+                        301.4,
+                        2219.3,
+                        2195.0,
+                        3044.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_07/region_3_text.png",
+                    "text": "In weakly supervised WSI classification (for example, making a single prediction for the entire WSI),\nonly a single label per image is available for model development, and methods based on manual\nannotations are no longer applicable. This setting is appealing in terms of scalability because\ninformation contained in clinical annotations is often sufficient to define the image-level target (such\nas the presence of cancer in WSI) without the need to make manual annotations of cancer regions.\nFurthermore, clinical annotations can often be extracted from pathology reports and health records\n[85], [86], opening a new avenue for automated analysis of those reports and for extraction of labels,\nwith the potential to scale up to several thousands of cases, which would be impossible to manually\nannotate. As an example, this type of challenge was proposed as one of the tasks in the TUPAC\ncompetition in 2016, in which participants were asked to predict a proliferation score derived from\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_08.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_08.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 4,
+                "page_idx": 8
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 75.66,
+                    "box": [
+                        302.3,
+                        292.6,
+                        2192.9,
+                        441.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_08/region_1_text.png",
+                    "text": "clinical annotations, such as molecular tests, for WSI of breast cancer, which is impossible to manually\ndelineate with annotations in the WSI [54].\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 85.78,
+                    "box": [
+                        300.9,
+                        541.6,
+                        2198.7,
+                        1867.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_08/region_2_text.png",
+                    "text": "Technically speaking, WSI classification would not be different from the image classification\nperformed in computer vision, in which CNN are trained end-to-end to predict the presence of\ncategories in natural images using image-level labels. However, end-to-end approaches cannot\nstraightforwardly be applied to WSI classification, mainly because gigapixel WSI are too large in size\nand do not fit into the memory of modern GPUs. Even switching to central processing unit\ncomputation would not resolve this problem, as a single WSI can easily require tens of gigabytes of\nmemory at full resolution. Researchers have tried to overcome this limitation through different\nmethodological innovations. A simple approach to tackle this problem is to assume that all patches in\nthe WSI contain morphological information that correlates with the WSl-level label; for example, all\npatches extracted from a WSI that contains tumor also contain tumor. Despite the simplicity of this\nassumption, it can be effective for some applications [87] [24], although it will not work when rare or\nsmall objects have to be found [88], such as small metastases in lymph nodes. The previous\nassumption can be refined by adopting a multiple instance learning (MIL) approach [89], in which at\nleast one small region in the image is considered to contain morphological information that is needed\nto classify the image; for example, the presence of a single small region containing cancer is sufficient\nto label the entire WSI as containing cancer [90] [72] [91].\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 85.21,
+                    "box": [
+                        300.3,
+                        1971.9,
+                        2194.3,
+                        2703.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_08/region_3_text.png",
+                    "text": "Another approach to make end-to-end training possible using WSI is to directly address the large WSI\nsize as the main limitation, with the aim being to make the input size smaller so that the WSI can be\nprocessed by modern hardware. Recent approaches based on this idea rely on WSI compression using\nneural networks [92] under the assumption that semantic information can be kept in the compressed\nversion of the entire WSI, which can then be used for downstream classification tasks while reducing\nthe data size. Other approaches decompose the end-to-end training procedure using WSI into parts\nand use advanced engineering techniques known as ‘gradient checkpointing’ to temporarily store\nintermediate results [93]. These approaches make use of modern GPUs to train with very large input\nsizes, with the aim of scaling up to the use of entire WSI as input.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 83.25,
+                    "box": [
+                        301.3,
+                        2807.2,
+                        2192.9,
+                        3131.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_08/region_4_text.png",
+                    "text": "In recent years, a number of CPATH methods have been presented (some of which use end-to-end\nlearning) to further enhance the pathologist by providing information currently impossible to capture\nby sole visual inspection of histopathology slides, such as prediction of response to chemotherapy or\nimmunotherapy, or even future events such as recurrence or survival [94], [95], [96], [97], [98], [99],\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_09.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_09.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 5,
+                "page_idx": 9
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 83.47,
+                    "box": [
+                        303.5,
+                        290.4,
+                        2191.9,
+                        609.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_09/region_1_text.png",
+                    "text": "[100], [101], as well as the presence of genetic mutations [102], [103], [104], [92], [105], [106], [107]\nor molecular subtypes [28], [108], [109]. These CPATH techniques could have a role in the discovery\nof predictive and prognostic biomarkers, as well as potentially being used to understand tumor growth\nmechanisms.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 91.46,
+                    "box": [
+                        301.4,
+                        713.9,
+                        759.6,
+                        776.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_09/region_2_title.png",
+                    "text": "[H1] Current challenges\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 82.97,
+                    "box": [
+                        300.9,
+                        794.6,
+                        2194.9,
+                        1362.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_09/region_3_text.png",
+                    "text": "Although considerable progress has been made in CPATH in the past five years, both in terms of\nalgorithm performance and the development of novel methodologies, many challenges still exist.\nSome of these challenges, such as the lack of public datasets that are truly representative of clinical\npractice, stand in the way of true clinical adoption of CPATH algorithms. Other challenges, such as\ndifficulties in explaining how CPATH algorithms work are, in our view, less of a barrier than often\nthought [159]. In this section, we highlight some important challenges and the work that has already\nbeen done to tackle these issues.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 86.26,
+                    "box": [
+                        301.1,
+                        1466.2,
+                        2195.2,
+                        2453.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_09/region_4_text.png",
+                    "text": "[H2] Generalizability of CPATH algorithms to clinical practice. Although dataset sizes for developing\nCPATH algorithms have grown substantially over the past few years, many still lack an important\ncharacteristic in that they are not representative of the type of data that is encountered in clinical\npractice [123]. This data has many more sources of variation than the datasets used in research\npapers. Although most work now tries to account for variations caused by different scanners or\nstaining techniques by including data from different labs, the number of labs included is typically too\nsmall for a true assessment of generalizability [120]. The number of labs that would need to be\nincluded to be representative would depend on the diagnostic question and, up until now, this aspect\nof CPATH has been poorly investigated. Other sources of variation have not yet been taken into\naccount in CPATH, such as differing patient populations between centers or countries, although they\nare starting to be considered in other fields such as radiology [110]. Such variation can cause subtle\nsources of bias in CPATH algorithms, as seen in other settings [131].\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 85.4,
+                    "box": [
+                        301.3,
+                        2557.1,
+                        2193.9,
+                        3127.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_09/region_5_text.png",
+                    "text": "These generalization issues are highlighted by the well-known phenomenon of CPATH algorithms\nperforming optimally on data from the source(s) they were trained on, but performing (sometimes\nmuch) less well on data from other sources. For example, the application of a trained model for\ndetection of prostate cancer to WSI taken from the same dataset that was used for algorithm\nconstruction, but that had been re-scanned on a different WSI scanner, gave an area under the curve\nreduction of 2.65%, whereas model performance dropped by 5.84% when applied to WSI from an\nexternal dataset [72]. Examples of performance drops in the presence of external test data can also\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_10.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_10.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 4,
+                "page_idx": 10
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 82.13,
+                    "box": [
+                        302.2,
+                        294.6,
+                        2189.8,
+                        523.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_10/region_1_text.png",
+                    "text": "be also found in several other studies [111], [112], [59]. Limited generalizability of algorithms is\nprobably the single most important obstacle for wide-scale implementation of CPATH techniques in\nthe clinic.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 85.96,
+                    "box": [
+                        300.1,
+                        627.5,
+                        2194.1,
+                        1196.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_10/region_2_text.png",
+                    "text": "To make CPATH algorithms as robust as possible in response to variations that are likely to be\nencountered in real-world practice, it is pivotal to establish a training set that contains as much\nvariation as possible, including data from different staining batches, scanners and medical centers.\nAdditional (artificial) variability may be introduced by data augmentation techniques, with a particular\nfocus on color augmentation, to mimic differences in staining from different pathology laboratories\n[113]: image patches can be transformed before being used in the training process by applying random\nrotation, flipping, addition of noise, blurring and color shifting.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 86.43,
+                    "box": [
+                        301.0,
+                        1301.5,
+                        2192.7,
+                        2035.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_10/region_3_text.png",
+                    "text": "An alternative (or possibly complementary) approach to deal with variations between data sources is\nthe normalization of images to a common standard [111] [114], [115], [116], [117]. The hypothesis is\nthat if variability can be removed and all (future) target images translated to a well-defined standard\n(mostly in terms of color specifications) then even a CPATH algorithm built on a narrow set of training\nimages would perform consistently well. The price that is paid for this approach is the need to\ntransform every target image before applying the CPATH model, which may be computationally costly.\nBoth data augmentation and image normalization are necessary requisites to increase generalizability\nof deep learning models [113], and should therefore be considered in the development of any CPATH\napproach.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 86.56,
+                    "box": [
+                        300.7,
+                        2138.8,
+                        2192.7,
+                        2955.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_10/region_4_text.png",
+                    "text": "Another important issue to contend with is the fact that a CPATH algorithm will only recognize the\npatterns it was trained to recognize. For example, if an algorithm that was trained to detect breast\ncancer metastases in lymph nodes was confronted with lymphoma, the outcome would be uncertain.\nIf such an algorithm were used to filter out obviously negative WSI (without lymph node metastases),\nwhich do not need to be inspected by a pathologist, serious diseases could remain undetected. One\npossible solution is to train algorithms for all possible pathologies; however, such an approach may be\nimpractical or even impossible in most cases. An alternative approach is the development of CNN\ntechniques that yield, in addition to the network output, a score that expresses the certainty of the\nCNN for that specific output [152] [153], which would offer CNNs the ability to essentially state ‘I do\nnot know’.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_11.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_11.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 3,
+                "page_idx": 11
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 84.32,
+                    "box": [
+                        299.8,
+                        294.9,
+                        2195.3,
+                        1114.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_11/region_1_text.png",
+                    "text": "[H2] Validation of CPATH algorithms. Algorithm validation is crucial to understand the usefulness of\nCPATH algorithms for broad applications and to collect evidence on the safety and accuracy of\nalgorithms for regulatory approval. Different levels of validation can be used during algorithm\ndevelopment (Figure 2). Typically, CPATH algorithms are validated in multiple ways during\ndevelopment. As part of the actual algorithm construction, the training process is monitored using a\nset of cases that are held apart from the rest of the dataset and are therefore not used for model\ntraining (often referred to as ‘validation set’, which is usually relatively small). Deviations between the\nresults obtained with the training data and the validation set may indicate overtraining and suggests\nfurther action is required (e.g., use additional techniques such as data augmentation or model\nregularization, or reduce the complexity of the deep learning architecture).\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 84.28,
+                    "box": [
+                        301.1,
+                        1209.4,
+                        2194.8,
+                        2032.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_11/region_2_text.png",
+                    "text": "Many CPATH studies use a fully independent set of cases (a ‘test set’) to subsequently assess\nperformance of the final model. In most studies, these are from the same data source (so-called\n‘internal validation’) and as such have characteristics which are very similar to the cases used for\ntraining. If the training data set is of limited size, sometimes ‘cross validation’ is used rather than\napplying fully independent hold-out sets. In cross-validation, multiple models are trained with\ndifferent non-overlapping subsets of cases for testing and training, and an average performance score\nis given. Using cases that were not used for model training but were held separately from the rest of\nthe dataset for performance assessment is good practice to arrive at a first indication of how well the\nalgorithm works, but should be regarded as a first step only towards a realistic assessment of the\nusefulness in clinical practice [158].\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 85.47,
+                    "box": [
+                        300.3,
+                        2134.0,
+                        2194.6,
+                        3042.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_11/region_3_text.png",
+                    "text": "A next step, which has been used in several studies [100], [62], [72], [68], is to validate the CPATH\nalgorithm using an entirely separate set of cases from a source that was not included in the training\ndata (known as external validation) (Figure 2). Such validation gives an indication of how well the\nalgorithm performs in a new diagnostic situation, and can uncover problems with generalizability\n[118], [119]. The availability of publicly accessible benchmark datasets [54] [73] may be very helpful\nfor this purpose, as it allows fair comparison between different CPATH algorithms [120]. Such datasets\nmay also support regulatory approval [148]. However, even good performance on an external data set\nis not proof of the clinical usefulness of algorithms, and should not be regarded or reported as such\n[121]. Some of the hype around the promises of Al in the medical domain may in fact result from the\noverly optimistic interpretation of results of external validation study. As with any innovation in health\ncare, well-conducted prospective studies are required to provide the evidence necessary to truly\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_12.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_12.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 5,
+                "page_idx": 12
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 77.01,
+                    "box": [
+                        307.4,
+                        295.5,
+                        2190.8,
+                        440.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_12/region_1_text.png",
+                    "text": "understand the added value of CPATH deep learning algorithms and pave the way for clinical\nimplementation [121] [120].\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 84.54,
+                    "box": [
+                        300.7,
+                        542.7,
+                        2194.0,
+                        1028.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_12/region_2_text.png",
+                    "text": "With the increasing autonomy of CPATH solutions, more rigorous clinical validation and regulatory\napproval [132] will also be required. Techniques that potentially influence diagnostic decision making\n(rather than aiming to only increase efficiency) may need to be investigated in randomized clinical\ntrials, which are currently still very rare for Al applications [149]. Ideally, such trials would use clinical\noutcomes as end points to demonstrate long-term effects [120] and apply standardized reporting\nmethods such as TRIPOD-AI [150], which is currently under development.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 87.07,
+                    "box": [
+                        300.7,
+                        1125.8,
+                        2198.7,
+                        2372.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_12/region_3_text.png",
+                    "text": "Another important issue to consider is the quality measure that is applied when evaluating a CPATH\nalgorithm — in other words, when is an algorithm good enough? Typically, studies in which CPATH\nalgorithms aim to produce a diagnosis comparable to those used by a pathologist will compare the\nCPATH algorithm with scores from a panel of pathologists, often concluding that the algorithm may\nbe applied in clinical practice if the performance is close to the average of the pathologists. However,\nas argued by Campanella and colleagues [72], a clinically useful decision support system should ideally\ntake into account the fact that, in a real-world setting, pathologists do not evaluate images as an\nisolated task but rather can opt to use IHC and consultation with colleagues as part of their diagnostic\nworkup, if deemed necessary. Campanella and colleagues conclude that “achieving 100% sensitivity\nwith an acceptable false positive rate” should be the aim to achieve “clinical grade” CPATH algorithms.\nRather than defining a threshold for clinical usefulness, conclusions about the true clinical value of\nCPATH can only be drawn from prospective trials, which incorporate the entire diagnostic process,\nincluding the use of existing reporting standards [121] [120]. Before such usefulness can be\ndemonstrated, far-ranging conclusions about the impact of CPATH on diagnostics should be avoided,\nas they may lead to an overly optimistic view.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 92.42,
+                    "box": [
+                        302.0,
+                        2476.1,
+                        730.3,
+                        2537.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_12/region_4_title.png",
+                    "text": "[H1] Future directions\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 85.04,
+                    "box": [
+                        300.3,
+                        2559.2,
+                        2193.9,
+                        3127.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_12/region_5_text.png",
+                    "text": "Even though promising results for deep learning CPATH algorithms have been shown in many studies,\nit is still too early to distinguish the hope from the hype. Although the hope is motivated by the\ndevelopment of CPATH algorithms of increasing accuracy across many fields in pathology that have\nthe potential to help pathologists in their clinical practice, the hype often leads to the question of\nwhether Al will replace pathologists? Given this question, it is important to realize the breadth of tasks\nthat a pathologist performs; pathologists do not simply analyze a piece of tissue under a microscope,\nthey also integrate information from different sources of clinical data, their own understanding of the\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_13.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_13.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 2,
+                "page_idx": 13
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 85.63,
+                    "box": [
+                        301.0,
+                        291.2,
+                        2196.2,
+                        1618.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_13/region_1_text.png",
+                    "text": "disease, the diagnostic process, and the specific circumstances of the patient, and then communicate\nand explain the outcomes of the analysis for both other clinicians and, increasingly, for patients. Thus,\nit is important to stress that pathologists are not likely to be replaced with Al algorithms anytime soon.\nWhat could be achieved relatively soon is Al algorithms that work in conjunction with pathologists,\nrather than as stand-alone solutions, to remove the need for tedious, repetitive work, such as\nidentifying lymph node metastases [73], or to increase the quality of diagnostic grading [62] [63]. In\nthis context, it is important to differentiate between most high-income countries, such as the USA or\nthe Netherlands, and low or middle-income countries, such as China or India. The former generally\nhave sufficient pathologists for their current workload (although the issue of workloads is expected to\nbecome problematic in the near future), whereas in the latter, access to pathological expertise is\nchallenging and sometimes even impossible. In the absence of pathologists, algorithms could yield\nurgently needed data to inform diagnoses, which would be an important step forward. Obviously, the\ninfrastructure around digital pathology in some settings, such as rural hospitals in low and middle-\nincome countries, would be challenging, and it is worth noting recent initiatives to address this\nlimitation by giving access to CPATH algorithms without the need for a full digital pathology\ninfrastructure [122].\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 87.08,
+                    "box": [
+                        299.3,
+                        1715.5,
+                        2196.9,
+                        3128.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_13/region_2_text.png",
+                    "text": "[H2] Explainable Al. CPATH solutions based on deep learning models are often described as ‘black\nboxes’, indicating that because of the nature of these systems (being trained rather than explicitly\nprogrammed), it is very difficult for humans to understand the exact underlying functioning of the\nsystem [159]. As a result, correcting certain erroneous behaviors may be more difficult, and\nacceptance by humans (as well as regulatory approval) may be hampered [123]. This problem has\ngiven rise to research on ‘explainable Al’, in which techniques are developed that enable better\nunderstanding of the functioning of deep learning models. Current state-of-the-art of methods that\ncan shed light inside the black box have been extensively reviewed elsewhere [124]. Interestingly, the\nauthors of that survey [124] conclude that there is no consensus on the exact meaning of the term\n‘explainable’, as it has different requirements in different contexts and for different stakeholders.\nAlthough techniques for improving the explainability of Al will support acceptance by the community,\nthe emphasis that should be placed on precise understanding of the mechanics of the technology,\nrather than on the functioning of the system as a whole in the context in which it is used [125], is\ndebatable, especially when such systems are integrated into the clinical workflow of pathology\ndiagnostics. Rigorous validation and quality assurance and checking procedures will be critical to prove\nthe correct functioning of CPATH solutions, both at initial market entrance and also after future\nupdates. This topic is highly relevant to regulatory bodies such as the FDA, which has recently\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_14.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_14.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 3,
+                "page_idx": 14
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 84.25,
+                    "box": [
+                        303.4,
+                        292.3,
+                        2191.3,
+                        609.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_14/region_1_text.png",
+                    "text": "proposed a regulatory framework [151] to implement a ‘Predetermined Change Control Plan’, in which\nmanufacturers have to explain what aspects they intend to change through learning, and how the\nalgorithm will learn and change while remaining safe and effective, as well as strategies to mitigate\nperformance loss.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 87.35,
+                    "box": [
+                        301.4,
+                        709.5,
+                        2198.6,
+                        2285.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_14/region_2_text.png",
+                    "text": "[H2] Ethics. The use of patient data and the deployment of machines that aid diagnostics, potentially\neven in a (partly) autonomous fashion, leads to a number of ethical concerns. The development of\nCPATH solutions requires large amounts of data (both images and associated meta-data). The use of\nhuman data for healthcare research and product development in general creates ethical and legal\nchallenges that have to be addressed properly. Respecting patient privacy and obtaining approval for\nuse of data are important requirements to comply with. Unfortunately, from a practical standpoint,\nthese requirements may reduce the options for the re-use of existing data for Al development, and\nmay lead to increased costs to arrive at the required numbers of cases. A careful balancing between\nprivacy protection and the benefits of data-driven innovation is needed [126] that requires the\ninvolvement of all stakeholders [127]. In addition, the collection of data at the scale needed for CPATH\ndevelopment (thousands of cases), which can be mad e publicly available, complicates matters even\nfurther. Aside from the danger of data breaches, collecting large amounts of data may enable\nresearchers to make connections that were previously not possible, potentially putting patient privacy\nat risk even if data are collected in an anonymized manner [126], [123]. An alternative to establishing\nlarge, multicenter datasets in a central location for machine learning is the application of so-called\nfederated learning strategies. With federated learning, the procedure for training the machine\nlearning models is adapted so that it can deal with data residing in separate locations, obviating the\nneed to bring the data together and thereby circumventing some of the problems described above\n[128] [129].\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 84.87,
+                    "box": [
+                        300.5,
+                        2391.9,
+                        2194.1,
+                        3125.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_14/region_3_text.png",
+                    "text": "In 2018, a special expert group of the European Commission published a set of ethics guidelines for\ntrustworthy Al [130] that detailed a framework to help achieve Al solutions that are lawful, ethical and\nrobust. An important conclusion from the guideline is that “trustworthy Al is not about ticking boxes,\nbut about continuously identifying and implementing requirements, evaluating solutions, ensuring\nimproved outcomes throughout the Al system’s lifecycle, and involving stakeholders in this” [130].\nHow the establishment of data collections may result in biases that, if used for Al development, can\namplify injustices in society has been described extensively [131], [120]. Such ‘algorithmic bias’ is not\ndirectly the consequence of Al model development, but the wide-scale deployment of such models\nmay compound “existing inequities in socioeconomic status, race, ethnic background, religion, gender,\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_15.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_15.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 5,
+                "page_idx": 15
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 75.89,
+                    "box": [
+                        302.8,
+                        293.2,
+                        2192.0,
+                        526.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_15/region_1_text.png",
+                    "text": "disability or sexual orientation” [131]. As it is not possible to recognize inequities in data collection a\npriori, the European Commission’s recommendation to continuously engage in discussions with all\nstakeholders is even more imperative [130].\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 92.22,
+                    "box": [
+                        301.0,
+                        631.1,
+                        520.8,
+                        691.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_15/region_2_title.png",
+                    "text": "Conclusion\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 84.28,
+                    "box": [
+                        301.5,
+                        704.5,
+                        2199.5,
+                        1954.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_15/region_3_text.png",
+                    "text": "Promising results of the application of Al to histopathological images have provoked a large number\nof research studies, now resulting in CPATH solutions that have comparable performance to\npathologists for several specific diagnostic tasks. In addition to the use of Al to conduct human expert\ndiagnostic tasks, we have only begun to scratch the surface with respect to the use of Al for discovery\nof prognostic features, prediction of therapy success or assessment of the relation between the\nmorphological phenotypes of disease and genotypes. Whereas many technical challenges have been\novercome, clinical usefulness has not been proven yet and several hurdles still have to be overcome.\nNext to the challenge of collecting sufficiently large sets of annotated WSI, prospective studies have\nto be conducted to show the true benefit of Al for histopathological diagnostics. Issues related to\nexplainability, ethics and regulation are also insufficiently studied and will require more attention in\nthe near future. Even though the field is not fully matured yet, we expect CPATH to play a dominant\nrole in the future of histopathology, making diagnostics more efficient and accurate, helping\npathologists meet the requirements of an increasing number of patients and the need for more\nextensive and accurate histopathological assessment to aid the increasing spectrum of treatment\noptions for many diseases.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 90.43,
+                    "box": [
+                        304.5,
+                        2061.5,
+                        690.3,
+                        2117.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_15/region_4_title.png",
+                    "text": "Acknowledgements\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 82.75,
+                    "box": [
+                        300.5,
+                        2136.0,
+                        2193.9,
+                        2960.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_15/region_5_text.png",
+                    "text": "The authors would like to thank Ms. Meyke Hermsen for providing Figure 1. Jeroen van der Laak\nacknowledges funding from the Knut and Alice Wallenberg foundation, Sweden and received funding\nfrom the Innovative Medicines Initiative 2 Joint Undertaking under grant agreement No 945358. This\nJoint Undertaking receives support from the European Union’s Horizon 2020 research and innovation\nprogram and EFPIA. Geert Litjens acknowledges funding from Dutch Cancer Society (KUN 2015-7970),\nand the Netherlands Organization for Scientific Research (NWO) (project number 016.186.152).\nFrancesco Ciompi acknowledges funding from the European Union's Horizon 2020 research and\ninnovation program under grant agreement No 825292 (ExaMode, htttp://www.examode.eu/); Dutch\nCancer Society (KWF) (project number 11917); and the Netherlands Organization for Scientific\nResearch (NWO) (project number 18388).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_16.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_16.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 4,
+                "page_idx": 16
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "title",
+                    "score": 80.11,
+                    "box": [
+                        302.0,
+                        296.6,
+                        712.7,
+                        355.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_16/region_1_title.png",
+                    "text": "Author contributions\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 94.02,
+                    "box": [
+                        297.9,
+                        383.5,
+                        2193.3,
+                        440.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_16/region_2_text.png",
+                    "text": "All authors were involved in identifying relevant literature, and in drafting and revising the manuscript.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "title",
+                    "score": 88.8,
+                    "box": [
+                        302.1,
+                        548.8,
+                        692.8,
+                        607.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_16/region_3_title.png",
+                    "text": "Competing interests\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 83.6,
+                    "box": [
+                        301.5,
+                        629.7,
+                        2195.2,
+                        1198.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_16/region_4_text.png",
+                    "text": "Jeroen van der Laak is a member of the advisory boards of Philips, The Netherlands and ContextVision,\nSweden, and received research funding from Philips, The Netherlands, ContextVision, Sweden, and\nSectra, Sweden in the last five years. Geert Litjens is a member of the Medical Advances Advisory\nBoard of Vital Images (Minnetonka, USA), received research funding from Philips Digital Pathology\nSolutions (Best, the Netherlands), and had a consultancy role for Novartis (Basel, Switzerland.\nFrancesco Ciompi is Chair of the Scientific and Medical Advisory Board of TRIBVN Healthcare, France,\nand reports advisory board fees from TRIBVN Healthcare, France.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_17.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_17.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 2,
+                "page_idx": 17
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 41.58,
+                    "box": [
+                        300.8,
+                        298.7,
+                        522.5,
+                        357.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_17/region_1_text.png",
+                    "text": "References\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "list",
+                    "score": 94.44,
+                    "box": [
+                        298.8,
+                        383.7,
+                        2198.9,
+                        3053.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_17/region_2_list.png",
+                    "text": "[1] Yu, K.H., Beam, A. L. & Kohane, I. S. Artificial intelligence in healthcare. Nature biomedical\nengineering 2, 719-731 (2018).\n\n[2] Hamet, P. & Tremblay, J., Artificial intelligence in medicine. Metabolism: clinical and\nexperimental 69S, S36—S40 (2017).\n\n[3] Litjens, G. et al. A survey on deep learning in medical image analysis. Medical image analysis\n42, 60-88 (2017).\n\n[4] Fuchs, T. J. & Buhmann, J. M. Computational pathology: challenges and promises for tissue\nanalysis. Computerized medical imaging and graphics 35, 515-530 (2011).\n\n[5] Louis, D. N. et al. Computational pathology: an emerging definition. Archives of pathology &\nlaboratory medicine 138, 1133-1138 (2014).\n\n[6] Mendelsohn, M. L., Kolman, W. A., Perry, B. & Prewitt, J. M. Computer analysis of cell images.\nPostgraduate medicine 38, 567-573 (1965).\n\n[7] Zwanenburg, A. et al. The Image Biomarker Standardization Initiative: Standardized\nQuantitative Radiomics for High-Throughput Image-based Phenotyping. Radiology 295, 328-338\n(2020).\n\n[8] Madabhushi, A. & Lee, G. Image analysis and machine learning in digital pathology: Challenges\nand opportunities. Medical image analysis 33, 170-175 (2016).\n\n[9] Ciresan, D. C., Meier, U., Masci, J., Gambardella, L. M. & Schmidhuber, J. Flexible, high\nperformance convolutional neural networks for image classification. Proceedings of the Twenty-\nSecond International Joint Conference on Artificial Intelligence, 1237-1242 (2011).\n\n[10] Ciresan, D. C., Giusti, A., Gambardella, L. M. & Schmidhuber, J. Mitosis detection in breast\ncancer histology images with deep neural networks. Proceedings of Medical Image Computing and\nComputer-Assisted Intervention. Lecture Notes in Computer Science 8150, 411-418 (2013).\n\n[11] Cruz-Roa, A. et al. Automatic detection of invasive ductal carcinoma in whole slide images with\nconvolutional neural networks. Proceedings of SPIE Medical Imaging 9041, 904103 (2014)\n\n[12] Ertosun, M. G. & Rubin, D. L. Automated Grading of Gliomas using Deep Learning in Digital\nPathology Images: A modular approach with ensemble of convolutional neural networks. Proceedings\nof American Medical Informatics Association (AMIA) Annual Symposium, 1899-1908 (2015)\n\n[13] Litjens, G. et al. Deep learning as a tool for increased accuracy and efficiency of\nhistopathological diagnosis. Scientific Reports 6, 26286 (2016).\n\n[14] Srinidhi, C. L., Ciga, O. & Martel, A. L. Deep neural network models for computational\nhistopathology: A survey. Medical image analysis 67, 101813 (2021).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_18.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_18.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 18
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 92.57,
+                    "box": [
+                        299.6,
+                        289.5,
+                        2198.2,
+                        3134.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_18/region_1_list.png",
+                    "text": "[15] Simonyan, K. & Zisserman, A. Very deep convolutional networks for large-scale image\nrecognition. International Conference on Learning Representations (ICLR) (2015).\n\n[16] Long, J., Shelhamer, E., & Darrell, T. Fully convolutional networks for semantic segmentation.\nProceedings oflEEE Conference on Computer Vision and Pattern Recognition, 3431-3440 (2015).\n\n[17] Ronneberger, O., Fischer, P. & Brox, T. U-Net: Convolutional Networks for Biomedical Image\nSegmentation. Proceedings of Medical Image Computing and Computer-Assisted Intervention, Lecture\nNotes in Computer Science 9351, 234-241 (2015).\n\n[18] Sirinukunwattana, K. et al. Gland segmentation in colon histology images: The glas challenge\ncontest. Medical image analysis 35, 489-502 (2017).\n\n[19] Hermsen, M. et al. Deep learning—based histopathologic assessment of kidney tissue. Journal\nof the American Society of Nephrology 30, 1968-1979 (2019).\n\n[20] Litjens, G. et al. 1399 H&E-stained sentinel lymph node sections of breast cancer patients: the\nCAMELYON dataset. GigaScience 7, (2018).\n\n[21] Liu, Y. et al. Detecting Cancer Metastases on Gigapixel Pathology Images.\nhttps://arxiv.org/abs/1703.02442 (2017)\n\n[22] \"Preparing for the future of Artificial Intelligence,\"\nhttps://obamawhitehouse.archives.gov/sites/default/files/whitehouse_files/microsites/ostp/NSTC/p\nreparing for the future of ai.pdf (2016).\n\n[23] Wang, D., Khosla, A., Gargeya, R., Irshad, H. & Beck, A. H. Deep Learning for Identifying\nMetastatic Breast Cancer. https://arxiv.org/abs/1606.05718 (2016).\n\n[24] Wang, X. et al. Weakly Supervised Deep Learning for Whole Slide Lung Cancer Image Analysis.\nIEEE transactions on cybernetics 50, 3950-3962 (2019).\n\n[25] Syrykh, C. et al. Accurate diagnosis of lymphoma on whole-slide histopathology images using\ndeep learning. NPJ digital medicine 3, 63 (2020).\n\n[26] Tabibu, S., Vinod, P. K. & Jawahar, C. V. Pan-Renal Cell Carcinoma classification and survival\nprediction from histopathology images using deep learning. Scientific reports 9, 10509 (2019).\n\n[27] Sari, C. T. & Gunduz-Demir, C. Unsupervised Feature Extraction via Deep Learning for\nHistopathological Classification of Colon Tissue Images. /EEE transactions on medical imaging 38,\n1139-1149 (2019).\n\n[28] Rawat, R. R. et al. Deep learned tissue “fingerprints” classify breast cancers by ER/PR/Her2\nstatus from H&E images. Scientific Reports 10 (2020).\n\n[29] Lee, B. & Paeng, K. A Robust and Effective Approach Towards Accurate Metastasis Detection\nand pN-stage Classification in Breast Cancer. Proceedings of Medical Image Computing and Computer\nAssisted Intervention, Lecture Notes in Computer Science 11071, 841-850(2018).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_19.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_19.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 19
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 96.68,
+                    "box": [
+                        299.6,
+                        297.3,
+                        2200.0,
+                        3126.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_19/region_1_list.png",
+                    "text": "[30] Awan, R., Koohbanani, N. A., Shaban, M., Lisowska, A. & Rajpoot, N. Context-Aware Learning\nusing Transferable Features for Classification of Breast Cancer Histology Images. Proceedings of\nInternational Conference on Image Analysis and Recognition, 788-795 (2018).\n\n[31] Feng, Y., Zhang, L. & Mo, J. Deep Manifold Preserving Autoencoder for Classifying Breast\nCancer Histopathological Images. /EEE transactions on computational biology and bioinformatics 17,\n91-101 (2020).\n\n[32] Galateau Salle, F. et al. Comprehensive Molecular and Pathologic Evaluation of Transitional\nMesothelioma Assisted by Deep Learning Approach: A Multi-Institutional Study of the International\nMesothelioma Panel from the MESOPATH Reference Center. Journal of thoracic oncology 15, 1037—\n1053 (2020).\n\n[33] lizuka, O. et al. Deep Learning Models for Histopathological Classification of Gastric and\nColonic Epithelial Tumours. Scientific reports 10 1504 (2020).\n\n[34] Kiani, A. et al. Impact of a deep learning assistant on the histopathologic classification of liver\ncancer. NPJ digital medicine 3, 23 (2020).\n\n[35] Kwok, S. Multiclass Classification of Breast Cancer in Whole-Slide Images. Proceedings of\nInternational Conference on Image Analysis and Recognition, 931-940 (2018)\n\n[36] Wei, J. W. et al. Pathologist-level classification of histologic patterns on resected lung\nadenocarcinoma slides with deep neural networks. Scientific reports 9, 3358 (2019).\n\n[37] Yang, H., Kim, J.Y., Kim, H. & Adhikari, S. P. Guided Soft Attention Network for Classification of\nBreast Cancer Histopathology Images. /EEE transactions on medical imaging 39, 1306-1315 (2020).\n[38] Pinckaers, H. & Litjens, G. Neural Ordinary Differential Equations for Semantic Segmentation\nof Individual Colon Glands. https://arxiv.org/abs/1910.10470 (2019).\n\n[39] Naylor, P., Lae, M., Reyal, F. & Walter, T. Segmentation of Nuclei in Histopathology Images by\nDeep Regression of the Distance Map. /EEE transactions on medical imaging 38, 448-459 (2019).\n\n[40] Long, F. Microscopy cell nuclei segmentation with enhanced U-Net. BMC bioinformatics 21, 8\n(2020).\n\n[41] Jia, Z., Huang, X., Chang, E. I.-C. & Xu, Y. Constrained Deep Weak Supervision for\nHistopathology Image Segmentation. /EEE Transactions on Medical Imaging 36, 2376 - 2388 (2017).\n[42] Graham, S. et al. MILD-Net: Minimal information loss dilated network for gland instance\nsegmentation in colon histology images. Medical Image Analysis 52, 199-211 (2019).\n\n[43] Graham, S. et al. Hover-Net: Simultaneous segmentation and classification of nuclei in multi-\ntissue histology images. Medical Image Analysis 58, 101563 (2019).\n\n[44] Agarwalla, A., Shaban, M. & Rajpoot, N. M. Representation-Aggregation Networks for\nSegmentation of Multi-Gigapixel Histology Images. https://arxiv.org/abs/1707.08814 (2017).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_20.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_20.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 20
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 97.05,
+                    "box": [
+                        300.5,
+                        291.4,
+                        2198.7,
+                        3045.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_20/region_1_list.png",
+                    "text": "[45] Bueno, G. , Fernandez-Carrobles, M. M. , Gonzalez-Lopez, L. & Deniz, O. Glomerulosclerosis\nidentification in whole slide images using semantic segmentation. Computer methods and programs\nin biomedicine 184, 105273 (2020).\n\n[46] Chen, H. et al. DCAN: Deep contour-aware networks for object instance segmentation from\nhistology images. Medical image analysis 36, 135-146 (2017).\n\n[47] de Bel, T et al. Automatic segmentation of histopathological slides of renal tissue using deep\nlearning. SPIE Medical Imaging (2018).\n\n[48] Xu, G. et al. CAMEL: A Weakly Supervised Learning Framework for Histopathology Image\nSegmentation. Proceedings of International Conference on Computer Vision, 10681-10690 (2019)\n\n[49] Sirinukunwattana, K. et al. Locality Sensitive Deep Learning for Detection and Classification of\nNuclei in Routine Colon Cancer Histology Images. /EEE transactions on medical imaging 35, 1196-1206\n(2016).\n\n[50] Swiderska-Chadaj, Z. et al. Learning to detect lymphocytes in immunohistochemistry with\ndeep learning. Medical image analysis 58, 101547 (2019).\n\n[51] Le, H. et al. Utilizing Automated Breast Cancer Detection to Identify Spatial Distributions of\nTumor-Infiltrating Lymphocytes in Invasive Breast Cancer. The American journal of pathology 190,\n1491-1504 (2020).\n\n[52] Akbar, S. et al. Automated and Manual Quantification of Tumour Cellularity in Digital Slides\nfor Tumour Burden Assessment. Scientific reports 9, 14099 (2019).\n\n[53] Hou, L. et al. Sparse Autoencoder for Unsupervised Nucleus Detection and Representation in\nHistopathology Images. Pattern recognition 86, 188-200 (2019).\n\n[54] Veta, M. et al. Predicting breast tumor proliferation from whole-slide images: The TUPAC16\nchallenge. Medical image analysis 54, 111-121 (2019).\n\n[55] Tellez, D. et al. Whole-Slide Mitosis Detection in H&E Breast Histology Using PHH3 as a\nReference to Train Distilled Stain-Invariant Convolutional Networks. /EEE transactions on medical\nimaging 37, 2126 - 2136 (2018).\n\n[56] Mahmood, T., Arsalan, M., Owais, M., Lee, M. B. & Park, K. R. Artificial Intelligence-Based\nMitosis Detection in Breast Cancer Histopathology Images Using Faster R-CNN and Deep CNNs. Journal\nof clinical medicine 9, 3 (2020).\n\n[57] Chen, H., Wang, X. & Heng, P. A. Automated mitosis detection with deep regression networks.\nProceedings of IEEE International Symposium on Biomedical Imaging, 1204-1207 (2016).\n\n[58] Li, C. et al. Weakly supervised mitosis detection in breast histopathology images using\nconcentric loss. Medical Image Analysis 53, 165-178 (2019).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_21.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_21.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 21
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 98.18,
+                    "box": [
+                        299.8,
+                        294.5,
+                        2200.0,
+                        3052.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_21/region_1_list.png",
+                    "text": "[59] Nagpal, K. et al. Development and validation of a deep learning algorithm for improving\nGleason scoring of prostate cancer. npj Digital Medicine 2, (2019).\n\n[60] Jansen, |. et al. Automated Detection and Grading of Non-Muscle-Invasive Urothelial Cell\nCarcinoma of the Bladder. The American journal of pathology 190, 1483-1490 (2020).\n\n[61] Karimi, D. et al. Deep Learning-Based Gleason Grading of Prostate Cancer From\nHistopathology Images-Role of Multiscale Decision Aggregation and Data Augmentation. /EEE journal\nof biomedical and health informatics 24, 1413-1426 (2020).\n\n[62] Bulten, W. et al. Automated deep-learning system for Gleason grading of prostate cancer\nusing biopsies: a diagnostic study. The Lancet. Oncology 21, 233-241 (2020).\n\n[63] Strom, P. et al. Artificial intelligence for diagnosis and grading of prostate cancer in biopsies:\na population-based, diagnostic study. The Lancet. Oncology 21, 222-232 (2020).\n\n[64] Gertych, A. et al. Convolutional neural networks can accurately distinguish four histologic\ngrowth patterns of lung adenocarcinoma in digital slides. Scientific reports 9, 1483 (2019).\n\n[65] Salgado, R. et al. The evaluation of tumor-infiltrating lymphocytes (TILs) in breast cancer:\nrecommendations by an International TILs Working Group 2014. Annals of Oncology 26, 259-271,\n(2015).\n\n[66] Saltz, J. et al. Spatial Organization and Molecular Correlation of Tumor-infiltrating\nLymphocytes Using Deep Learning on Pathology Images. Ce// Reports 23, 181-193.e7 (2018).\n\n[67] AbdulJabbar, K. Geospatial immune variability illuminates differential evolution of lung\nadenocarcinoma. Nature medicine 26, 1054-1062 (2020).\n\n[68] Kather, J. N. et al. Predicting survival from colorectal cancer histology slides using deep\nlearning: A retrospective multicenter study. PLoS medicine 16, e1002730 (2019).\n\n[69] Geessink, O. G. F. et al. Computer aided quantification of intratumoral stroma yields an\nindependent prognosticator in rectal cancer. Cellular oncology 42, 331-341 (2019).\n\n[70] Kapil, A. Et al. DASGAN-Joint Domain Adaptation and Segmentation for the Analysis of\nEpithelial Regions in Histopathology PD-L1 Images. https://arxiv.org/abs/1906.11118 (2019).\n\n[71] Sha, L. et al. Multi-Field-of-View Deep Learning Model Predicts Non small Cell Lung Cancer\nProgrammed Death-Ligand 1 Status from Whole-Slide Hematoxylin and Eosin Images. Journal of\npathology informatics 10, 24 (2019).\n\n[72] Campanella, G. et al. Clinical-grade computational pathology using weakly supervised deep\nlearning on whole slide images. Nature medicine 25, 1301-1309 (2019).\n\n[73] Ehteshami Bejnordi, B. et al. Diagnostic Assessment of Deep Learning Algorithms for Detection\nof Lymph Node Metastases in Women With Breast Cancer. JAMA 318, 2199-2210 (2017).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_22.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_22.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 22
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 97.23,
+                    "box": [
+                        300.1,
+                        295.1,
+                        2199.4,
+                        3133.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_22/region_1_list.png",
+                    "text": "[74] Zhang, Z. et al. Pathologist-level interpretable whole-slide cancer diagnosis with deep\nlearning. Nature Machine Intelligence 1, 236-245 (2019).\n\n[75] Song, Z. et al. Clinically applicable histopathological diagnosis system for gastric cancer\ndetection using deep learning. Nature communications 11, 4294 (2020).\n\n[76] Albarqouni, S. et al. AggNet: Deep Learning From Crowds for Mitosis Detection in Breast\nCancer Histology Images. /EEE transactions on medical imaging 35, 1313-1321 (2016).\n\n[77] Amgad, M. et al. Structured crowdsourcing enables convolutional segmentation of histology\nimages. Bioinformatics 35, 3461-3467 (2019).\n\n[78] Bulten, W. et al. Epithelium segmentation using deep learning in H&E-stained prostate\nspecimens with immunohistochemistry as reference standard. Scientific reports 9, 864 (2019).\n\n[79] Valkonen, M. et al. Cytokeratin-Supervised Deep Learning for Automatic Recognition of\nEpithelial Cells in Breast Cancers Stained for ER, PR, and Ki-67. JEEE transactions on medical imaging\n39, 534-542 (2020).\n\n[80] Alemi Koohbanani, N., Jahanifar, M., Zamani Tajadin, N. & Rajpoot, N. NuClick: A deep learning\nframework for interactive segmentation of microscopic images. Medical image analysis 65, 101771\n(2020).\n\n[81] Bokhorst, J.M. et al. Learning from sparsely annotated data for semantic segmentation in\nhistopathology images. International Conference on Medical Imaging with Deep Learning, Proceedings\nof Machine Learning Research102, 84-91 (2019).\n\n[82] Brieu, N. et al. Domain Adaptation-based Augmentation for Weakly Supervised Nuclei\nDetection. https://arxiv.org/abs/1907.04681 (2019).\n\n[83] Gadermayr, M., Gupta, L., Klinkhammer, B. M., Boor, P. & Merhof, D. Unsupervisedly Training\nGANs for Segmenting Digital Pathology with Automatically Generated Annotations. /nternational\nConference on Medical Imaging with Deep Learning, Proceedings of Machine Learning Research\n102,175-184 (2019)\n\n[84] Liang, Q. et al. Weakly Supervised Biomedical Image Segmentation by Reiterative Learning.\nIEEE J. Biomed. Health Informatics 23, 1205-1214 (2019).\n\n[85] Gao, S. et al. Using case-level context to classify cancer pathology reports. PloS one 15,\ne€0232840 (2020).\n\n[86] Alawad, M. et al. Automatic extraction of cancer registry reportable information from free-\ntext pathology reports using multitask convolutional neural networks. Journal of the American Medical\nInformatics Association : JAMIA 27, 89-98 (2020).\n\n[87] Coudray, N. et al. Classification and mutation prediction from non-small cell lung cancer\nhistopathology images using deep learning. Nature medicine 24, 1559-1567 (2018).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_23.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_23.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 23
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 95.02,
+                    "box": [
+                        298.3,
+                        294.5,
+                        2198.6,
+                        2958.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_23/region_1_list.png",
+                    "text": "[88] Pawlowski, N. Et al. Needles in Haystacks: On Classifying Tiny Objects in Large Images.\nhttps://arxiv.org/abs/1908.06037 (2019).\n\n[89] Ilse, M., Tomczak, J. M. & Welling, M. Attention-based Deep Multiple Instance Learning.\nInternational Conference on Machine Learning, Proceedings of Machine Learning Research 80, 2127-\n2136 (2018)\n\n[90] Hou, L. et al. Patch-Based Convolutional Neural Network for Whole Slide Tissue Image\nClassification. Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2424-2433\n(2016)\n\n[91] Lu, M. Y. et al. D. F. K. Williamson, T. Y. Chen, R. J. Chen, M. Barbieri and F. Mahmood, \"Data\nEfficient and Weakly Supervised Computational Pathology on Whole Slide Images,\" Nat Biomed Eng,\nhttps://doi.org/10.1038/s41551-020-00682-w (2021).\n\n[92] Tellez, D., Litjens, G., van der Laak, J. & Ciompi, F. Neural Image Compression for Gigapixel\nHistopathology Image Analysis. /EEE transactions on pattern analysis and machine intelligence, 43,\n567-578 (2021).\n\n[93] Pinckaers, J. H. F. M., van Ginneken, B. & Litjens, G. Streaming convolutional neural networks\nfor end-to-end learning with multi-megapixel images. /EEE transactions on pattern analysis and\nmachine intelligence, https:doi.org/10.1109/TPAMI.2020.3019563 (2020).\n\n[94] Wulczyn, E. et al. Deep learning-based survival prediction for multiple cancer types using\nhistopathology images. PloS one 15, p. e€0233678 (2020).\n\n[95] Skrede, O.J. Deep learning for prediction of colorectal cancer outcome: a discovery and\nvalidation study. Lancet 395, 350-360 (2020).\n\n[96] Saillard, C. et al. Predicting survival after hepatocellular carcinoma resection using deep-\nlearning on histological slides. Hepatology 72, 2000-2013 (2020).\n\n[97] Qaiser, T. et al. Digital Tumor-Collagen Proximity Signature Predicts Survival in Diffuse Large\nB-Cell Lymphoma. Proceedings of European Congress on Digital Pathology, Lecture Notes in Computer\nScience 11435, 163-171 (2019).\n\n[98] Mobadersany, P. et al. Predicting cancer outcomes from histology and genomics using\nconvolutional networks. PNAS 115, E2970-E2979 (2018).\n\n[99] Bychkov, D. et al. Deep learning based tissue analysis predicts outcome in colorectal cancer.\nScientific reports 8, 3395 (2018).\n\n[100] Courtiol, P. et al. Deep learning-based classification of mesothelioma improves prediction of\npatient outcome. Nature medicine 25, 1519-1525 (2019).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_24.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_24.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 24
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 94.1,
+                    "box": [
+                        300.4,
+                        290.1,
+                        2197.7,
+                        3055.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_24/region_1_list.png",
+                    "text": "{[101] Kulkarni, P. M. et al. Deep Learning Based on Standard H&E Images of Primary Melanoma\nTumors Identifies Patients at Risk for Visceral Recurrence and Death. Clinical cancer research 26, 1126-\n1134 (2020).\n\n{[102] Cui, D., Liu, Y., Liu, G. & Liu, L. A Multiple-Instance Learning-Based Convolutional Neural\nNetwork Model to Detect the IDH1 Mutation in the Histopathology Images of Glioma Tissues. Journal\nof computational biology 27, 1264-1272 (2020).\n\n{103] Liu, S. et al. Isocitrate dehydrogenase (IDH) status prediction in histopathology images of\ngliomas using deep learning. Scientific reports 10, 7733 (2020).\n\n[104] Kather, J. N. et al. Deep learning can predict microsatellite instability directly from histology\nin gastrointestinal cancer. Nature medicine 25, 1054-1056 (2019).\n\n[105] Kather, J. N. et al. Pan-cancer image-based detection of clinically actionable genetic\nalterations. Nature Cancer 1, 789-799 (2020).\n\n[106] Fu, Y. et al. Pan-cancer computational histopathology reveals mutations, tumor composition\nand prognosis. Nature Cancer 1, 800-810 (2020).\n\n[107] Schmauch, B. et al. A deep learning model to predict RNA-Seq expression of tumours from\nwhole slide images. Nature communications 11, 1-15 (2020).\n\n[108] Couture, H. D. et al. Image analysis with deep learning to predict breast cancer grade, ER\nstatus, histologic subtype, and intrinsic subtype. NPJ breast cancer 4, 30 (2018).\n\n[109] Sirinukunwattana, K. et al. Image-based consensus molecular subtype (imCMS) classification\nof colorectal cancer using deep learning. Gut 70, 544-554 (2021).\n\n[110] McKinney, S. M. et al. International evaluation of an Al system for breast cancer screening.\nNature 577, 89-94 (2020).\n\n[111] de Bel, T., Hermsen, M., Kers, J., van der Laak, J. & Litjens, G. J. S. Stain-Transforming Cycle-\nConsistent Generative Adversarial Networks for Improved Segmentation of Renal Histopathology.\nInternational Conference on Medical Imaging with Deep Learning, Proceedings of Machine Learning\nResearch 102, 151-163 (2019).\n\n[112] Liu, Y. et al. Artificial Intelligence-Based Breast Cancer Nodal Metastasis Detection: Insights\nInto the Black Box for Pathologists. Archives of pathology & laboratory medicine 143, 859-868 (2019).\n[113] Tellez, D. et al. Quantifying the effects of data augmentation and stain color normalization in\nconvolutional neural networks for computational pathology. Medical image analysis 58, 101544\n(2019).\n\n[114] H. Cho, S. Lim, G. Choi and H. Min, Neural Stain-Style Transfer Learning using GAN for\nHistopathological Images, https://arxiv.org/abs/1710.08543 (2017).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_25.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_25.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 25
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 93.89,
+                    "box": [
+                        299.8,
+                        299.0,
+                        2200.4,
+                        3132.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_25/region_1_list.png",
+                    "text": "[115] Janowczyk, A., Basavanhally, A. & Madabhushi, A. Stain Normalization using Sparse\nAutoEncoders (StaNoSA): Application to digital pathology. Computerized medical imaging and\ngraphics 57, 50-61 (2017).\n\n[116] Shaban, M. T., Baur, C., Navab, N. & Albarqouni, S. StainGAN: Stain Style Transfer for Digital\nHistological Images. Proceedings of IEEE International Symposium on Biomedical Imaging, 953-956\n(2019).\n\n[117] Zheng, Y. et al. Stain standardization capsule for application-driven histopathological image\nnormalization. /EEE journal of biomedical and health informatics 25, 337-347 (2021).\n\n[118] Staartjes, V. E. & Kernbach, J. M. Significance of external validation in clinical machine learning:\nlet loose too early. The spine journal 20, 1159-1160 (2020).\n\n[119] Beede, E. et al. A Human-Centered Evaluation of a Deep Learning System Deployed in Clinics\nfor the Detection of Diabetic Retinopathy. CH/ Conference on Human Factors in Computing Systems,\n1-12 (2020).\n\n[120] Kelly, C. J., Karthikesalingam, A., Suleyman, M., Corrado, G. & King, D. Key challenges for\ndelivering clinical impact with artificial intelligence. BMC medicine 17, 195 (2019).\n\n[121] Nagendran, M. et al. Artificial intelligence versus clinicians: systematic review of design,\nreporting standards, and claims of deep learning studies. BMJ 368, m689 (2020).\n\n[122] Chen, P.H. C. et al. An augmented reality microscope with real-time artificial intelligence\nintegration for cancer diagnosis. Nature medicine 25, 1453-1457 (2019).\n\n[123] Abels, E. et al. Computational pathology definitions, best practices, and recommendations for\nregulatory guidance: a white paper from the Digital Pathology Association. J Patho! 249, 286-294\n(2019).\n\n[124] Guidotti, R. et al. A Survey of Methods for Explaining Black Box Models. ACM Comput. Surv.\n51, 93:1-93:42 (2019).\n\n[125] Kroll, J. A. The fallacy of inscrutability. Philosophical transactions of the Royal Society 376,\n(2018).\n\n[126] Price, W.N. & Cohen, I.G. Privacy in the age of medical big data. Nature medicine 25, 37-43\n(2019).\n\n{127] Lai, M.C., Brian, M. & Mamzer, M.F. Perceptions of artificial intelligence in healthcare: findings\nfrom a qualitative survey study among actors in France. Journal of translational medicine 18, 14 (2020).\n[128] Rieke, N. et al. The future of digital health with federated learning. NPJ digital medicine 3, 119\n(2020).\n\n[129] Sheller, M. J. et al. Federated learning in medicine: facilitating multi-institutional\ncollaborations without sharing patient data. Scientific reports 10, 12598 (2020).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_26.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_26.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 26
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 94.32,
+                    "box": [
+                        299.2,
+                        296.8,
+                        2198.4,
+                        3060.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_26/region_1_list.png",
+                    "text": "[130] \"Ethics guidelines for trustworthy Al,\" https://ec.europa.eu/digital-single-\nmarket/en/news/ethics-guidelines-trustworthy-ai (2019).\n\n[131] Panch, T., Mattie, H. & Atun, R. Artificial intelligence and algorithmic bias: implications for\nhealth systems. Journal of global health 9, 010318 (2019).\n\n[132] Allen, T. C. Regulating Artificial Intelligence for a Successful Pathology Future. Archives of\npathology & laboratory medicine 143, 1175-1179 (2019).\n\n[133] Veta, M. et al. Assessment of algorithms for mitosis detection in breast cancer histopathology\nimages. Medical image analysis 20, 237-248 (2015).\n\n[134] Shelhamer, E., Long, J. & Darrell, T. Fully Convolutional Networks for Semantic Segmentation.\nIEEE Trans. Pattern Anal. Mach. Intell. 39, 640-651 (2017).\n\n[135] Krizhevsky, A., Sutskever, |. & Hinton, G. E. ImageNet classification with deep convolutional\nneural networks. Advances in Neural Information Processing Systems (2012).\n\n[136] Khosravi, P., Kazemi, E., Imielinski, M., Elemento, O. & Hajirasouliha, |. Deep Convolutional\nNeural Networks Enable Discrimination of Heterogeneous Digital Pathology Images. EBioMedicine 27,\n317-328 (2018).\n\n[137] Hu, B. et al. Unsupervised Learning for Cell-Level Visual Representation in Histopathology\nImages With Generative Adversarial Networks. /EEE J. Biomed. Health Informatics 23, 1316-1328,\n(2019).\n\n[138] Bejnordi, B. et al. Using deep convolutional neural networks to identify and classify tumor-\nassociated stroma in diagnostic breast biopsies. Modern pathology 31, 1502-1512 (2018).\n\n[139] Doyle, S., Feldman, M. D., Shih, N., Tomaszewski, J. & Madabhushi, A. Cascaded discrimination\nof normal, abnormal, and confounder classes in histopathology: Gleason grading of prostate cancer.\nBMC bioinformatics 13, 10 (2012).\n\n[140] Chuang, W. Y. et al. Successful Identification of Nasopharyngeal Carcinoma in Nasopharyngeal\nBiopsies Using Deep Learning. Cancers 12, 2 (2020).\n\n[141] Choi, G. et al. Automated detection algorithm for C4d immunostaining showed comparable\ndiagnostic performance to pathologists in renal allograft biopsy. Modern pathology 33, 1626-1634\n(2020).\n\n[142] Chen, C. M. et al. A computer-aided diagnosis system for differentiation and delineation of\nmalignant regions on whole-slide prostate histopathology image using spatial statistics and\nmultidimensional DenseNet. Medical physics 47, 1021-1033 (2020).\n\n[143] Bejnordi, B. E. et al. Context-aware stacked convolutional neural networks for classification of\nbreast carcinomas in whole-slide histopathology images. Journal of medical imaging 4, 044504 (2017).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_27.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_27.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 27
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 92.31,
+                    "box": [
+                        300.6,
+                        294.1,
+                        2197.7,
+                        3134.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_27/region_1_list.png",
+                    "text": "[144] Beck, A. H. et al. Systematic analysis of breast cancer morphology uncovers stromal features\nassociated with survival. Science translational medicine 3, 108-113 (2011).\n\n[145] Arvaniti, E. et al. Automated Gleason grading of prostate cancer tissue microarrays via deep\nlearning. Scientific reports 8, 12054 (2018).\n\n[146] Acs, B., Rantalainen, M. & Hartman, J. Artificial intelligence as the next step towards precision\npathology. Journal of internal medicine 288, 62—81 (2020).\n\n[147] Balkenhol, M. et al. Deep learning assisted mitotic counting for breast cancer. Laboratory\nInvestigation 99, 1596-1606 (2019).\n\n[148] Dudgeon, S. N. Et al. A Pathologist-Annotated Dataset for Validating Artificial Intelligence: A\nProject Description and Pilot Study. arXiv:2010.06995 (2020).\n\n[149] Dong, J et al. Clinical Trials for Artificial Intelligence in Cancer Diagnosis: A Cross-Sectional\nStudy of Registered Trials in ClinicalTrials.gov. Front Oncol. 15, 1629 (2020).\n\n[150] Collins, G. S. & Moons, K. G. M. Reporting of artificial intelligence prediction models. The\nLancet 393, 1577-1579 (2019).\n\n[151] https://www.fda.gov/media/145022/download\n\n[152] Linmans, J., van der Laak, J. & Litjens, G. Efficient Out-of-Distribution Detection in Digital\nPathology Using Multi-Head Convolutional Neural Networks. Medical Imaging with Deep Learning,\nProceedings of Machine Learning Research 121, 465-478 (2020).\n\n[153] Kohl, S. Et al. A Probabilistic U-Net for Segmentation of Ambiguous Images. Advances in Neural\nInformation Processing Systems (2018).\n\n[154] Bera, K., Schalper, K.A., Rimm, D. L., Velcheti, V. & Madabhushi, A. Artificial intelligence in\ndigital pathology - new tools for diagnosis and precision oncology. Nat Rev Clin Oncol. 16, 703-715\n(2019)\n\n[155] Kather, J.N. et al. Multi-class texture analysis in colorectal cancer histology. Sci Rep 6, 27988\n(2016).\n\n[156] Wong, G.L. et al. Artificial intelligence in prediction of non-alcoholic fatty liver disease and\nfibrosis. J Gastroenterol Hepatol. 36, 543-550 (2021).\n\n[157] Korde, L.A. et al. Neoadjuvant Chemotherapy, Endocrine Therapy, and Targeted Therapy for\nBreast Cancer: ASCO Guideline. J Clin Oncol. https:doi.org/10.1200/JCO.20.03399 (2021).\n\n[158] Kleppe, A. et al. Designing deep learning studies in cancer diagnostics. Nat Rev Cancer. 21,\n199-211 (2021).\n\n[159] Duran, J.M. & Jongsma, K.R. Who is afraid of black box algorithms? On the epistemological\nand ethical basis of trust in medical Al. J Med Ethics. https:doi.org/10.1136/medethics-2020-106820\n(2021).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_28.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_28.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 1,
+                "page_idx": 28
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 69.05,
+                    "box": [
+                        299.3,
+                        300.8,
+                        2183.1,
+                        441.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_28/region_1_text.png",
+                    "text": "[160] Zhou, C. Et al. Histopathology classification and localization of colorectal cancer using global\nlabels by weakly supervised deep learning. Comput Med Imaging Graph 88, 101861 (2021).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_29.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_29.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 3,
+                "page_idx": 29
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "figure",
+                    "score": 99.8,
+                    "box": [
+                        302.8,
+                        301.1,
+                        2178.1,
+                        914.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_29/region_1_figure.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 81.38,
+                    "box": [
+                        298.1,
+                        945.5,
+                        1439.5,
+                        1001.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_29/region_2_text.png",
+                    "text": "Figure 1. Computational pathology for tissue segmentation.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 84.23,
+                    "box": [
+                        300.6,
+                        1012.7,
+                        2192.8,
+                        1506.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_29/region_3_text.png",
+                    "text": "A computational pathology algorithm for kidney tissue segmentation based on convolutional neural\nnetworks has been applied to a Periodic acid—Schiff-stained section of kidney tissue. a| Original image.\nb| Original image that has been manually annotated by an expert. c| The result of processing the\noriginal image using a deep learning algorithm [18]. No added color indicates interstitium; purple\nindicates glomerulus; red indicates sclerotic glomerulus; dark blue indicates proximal tubule; orange\nindicates distal tubule; green indicates atrophic tubule; and turquoise indicates artery or arteriole.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_30.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_30.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 5,
+                "page_idx": 30
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "figure",
+                    "score": 98.74,
+                    "box": [
+                        329.9,
+                        318.7,
+                        1199.0,
+                        2233.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_30/region_1_figure.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 83.59,
+                    "box": [
+                        296.2,
+                        2279.3,
+                        1464.7,
+                        2338.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_30/region_2_text.png",
+                    "text": "Figure 2. Validation of computational pathology algorithms.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 80.83,
+                    "box": [
+                        300.4,
+                        2352.6,
+                        2193.9,
+                        2845.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_30/region_3_text.png",
+                    "text": "A schematic representation of the main steps involved in the development and validation of\ncomputational pathology algorithms using deep learning. Different levels of validation are shown in\ncolored boxes vertically (validation during training, internal and external validation, prospective\nvalidation/clinical trial). The consecutive activities in a typical deep learning workflow are shown in\ndarker colored boxes, with the corresponding products of these actions in shown in white boxes on\nthe left. Arrows indicate which products are inputs for the activities. WSI, whole slide image.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 83.4,
+                    "box": [
+                        298.9,
+                        2950.5,
+                        615.4,
+                        3011.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_30/region_4_title.png",
+                    "text": "Box: Definitions\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "title",
+                    "score": 77.15,
+                    "box": [
+                        300.5,
+                        3035.9,
+                        578.5,
+                        3095.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_30/region_5_title.png",
+                    "text": "Deep learning\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_31.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_31.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 13,
+                "page_idx": 31
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 82.8,
+                    "box": [
+                        301.8,
+                        295.8,
+                        2192.0,
+                        776.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_01_text.png",
+                    "text": "A machine learning approach in which algorithms are trained for a specific task (or set of tasks) by\nexposing a multilayered artificial neural network to (typically a large amount of) training data, without\nthe need for hand-crafted engineering of features to be extracted from the data. The resulting\nalgorithm has learned a hierarchical representation of the data that is subsequently used for tasks\nsuch as Classification, detection or segmentation. The term ‘deep’ refers to artificial neural networks\nbuilt using many layers, in other words a deep neural network.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 89.66,
+                    "box": [
+                        301.8,
+                        884.5,
+                        634.3,
+                        944.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_02_title.png",
+                    "text": "Digital pathology\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 81.74,
+                    "box": [
+                        301.5,
+                        969.5,
+                        2189.4,
+                        1112.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_03_text.png",
+                    "text": "The digitization of the traditional diagnostic process of analyzing cells and tissue with a microscope via\nwhole-slide scanners and computer screens.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 92.39,
+                    "box": [
+                        301.2,
+                        1218.5,
+                        791.6,
+                        1278.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_04_title.png",
+                    "text": "Computational pathology\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 95.9,
+                    "box": [
+                        298.8,
+                        1306.7,
+                        2129.3,
+                        1363.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_05_text.png",
+                    "text": "The computational analysis of digital images obtained through scanning slides of cells and tissues.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "title",
+                    "score": 90.39,
+                    "box": [
+                        301.4,
+                        1470.7,
+                        742.9,
+                        1530.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_06_title.png",
+                    "text": "Radiomics / pathomics\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 82.34,
+                    "box": [
+                        302.2,
+                        1555.2,
+                        2190.8,
+                        1866.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_07_text.png",
+                    "text": "Techniques to extract a (usually very large) set of features from radiological or histopathological digital\nimages, respectively, using computational algorithms of data analysis. These features are successively\nused to feed (usually supervised) prediction models targeting clinically relevant end-points, such as\nprognosis.\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "title",
+                    "score": 90.43,
+                    "box": [
+                        302.3,
+                        1976.7,
+                        681.8,
+                        2034.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_08_title.png",
+                    "text": "End-to-end training\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "text",
+                    "score": 78.2,
+                    "box": [
+                        299.3,
+                        2060.0,
+                        2191.7,
+                        2287.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_09_text.png",
+                    "text": "In the context of machine learning models, possibly consisting of a pipeline with multiple steps, end-\nto-end training refers to the procedure of learning the optimal value of all parameters of a model\nsimultaneously rather than sequentially (i.e., one step at a time).\n"
+                },
+                {
+                    "idx": 10,
+                    "thing": "title",
+                    "score": 88.23,
+                    "box": [
+                        302.4,
+                        2395.2,
+                        679.7,
+                        2453.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_10_title.png",
+                    "text": "Whole-slide images\n"
+                },
+                {
+                    "idx": 11,
+                    "thing": "text",
+                    "score": 82.05,
+                    "box": [
+                        301.2,
+                        2479.7,
+                        2189.2,
+                        2619.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_11_text.png",
+                    "text": "Digital images obtained by digitizing complete histopathological glass slides using a high-resolution\nscanner.\n"
+                },
+                {
+                    "idx": 12,
+                    "thing": "title",
+                    "score": 92.13,
+                    "box": [
+                        300.4,
+                        2730.5,
+                        894.8,
+                        2789.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_12_title.png",
+                    "text": "Convolutional neural networks\n"
+                },
+                {
+                    "idx": 13,
+                    "thing": "text",
+                    "score": 81.72,
+                    "box": [
+                        301.7,
+                        2812.3,
+                        2189.7,
+                        3130.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_13_text.png",
+                    "text": "Deep learning approach consisting of a series of convolutional layers to process data (usually bi-\ndimensional) from input to output. Each layer implements the convolution operation between the\ninput data and a set of filters (i.e., small matrices), whose numerical values are automatically learned\nin an end-to-end training fashion.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_32.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_32.png",
+                "image_width": 2481,
+                "image_height": 3507,
+                "regions_num": 10,
+                "page_idx": 32
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "title",
+                    "score": 87.55,
+                    "box": [
+                        302.4,
+                        380.8,
+                        795.1,
+                        439.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_01_title.png",
+                    "text": "Graphics processing units\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 79.83,
+                    "box": [
+                        299.8,
+                        465.8,
+                        2192.3,
+                        606.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_02_text.png",
+                    "text": "Micro-processor specifically designed to process many data samples simultaneously, such as parts of\ndigital images or features extracted from images.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "title",
+                    "score": 90.21,
+                    "box": [
+                        303.2,
+                        718.0,
+                        700.5,
+                        775.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_03_title.png",
+                    "text": "Image segmentation\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 77.76,
+                    "box": [
+                        300.2,
+                        801.2,
+                        2189.8,
+                        943.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_04_text.png",
+                    "text": "The operation of decomposing the semantic content of an image into multiple segments, where each\nsegment contains pixels belonging to the same semantic category (e.g., the tumor region).\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "title",
+                    "score": 87.42,
+                    "box": [
+                        300.2,
+                        1051.8,
+                        571.4,
+                        1111.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_05_title.png",
+                    "text": "U-Net models\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 80.88,
+                    "box": [
+                        301.6,
+                        1132.6,
+                        2195.5,
+                        1450.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_06_text.png",
+                    "text": "Deep learning models based on two convolutional neural networks, one that encodes the input image\ninto a set of features, and one that decodes those features to produce a segmentation output; The\nname, introduced in 2015 by Ronneberger et al., indicates the “U” shape that the two CNNs form,\nwhere encoder and decoder are connected via “skip connections”.\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "title",
+                    "score": 88.16,
+                    "box": [
+                        301.2,
+                        1556.2,
+                        678.5,
+                        1614.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_07_title.png",
+                    "text": "Data augmentation\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 76.36,
+                    "box": [
+                        301.1,
+                        1641.8,
+                        2193.3,
+                        1867.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_08_text.png",
+                    "text": "The operation of artificially modifying some properties of input data (e.g., image contrast, orientation,\ncolor, etc.) with the aim of feeding a computational model with multiple variations of the same piece\nof data.\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "title",
+                    "score": 87.93,
+                    "box": [
+                        302.0,
+                        1976.6,
+                        707.1,
+                        2034.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_09_title.png",
+                    "text": "Model regularization\n"
+                },
+                {
+                    "idx": 10,
+                    "thing": "text",
+                    "score": 75.64,
+                    "box": [
+                        298.3,
+                        2060.4,
+                        2188.5,
+                        2204.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_10_text.png",
+                    "text": "In machine learning, indicates the process of constraining model’s parameters to small values,\ndiscouraging complex models, therefore reducing the risk of overfitting the training data.\n"
+                }
+            ]
+        }
+    ]
+}

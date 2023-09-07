@@ -1,0 +1,103 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 7,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 94.7,
+            "box": [
+                236.8,
+                377.8,
+                1193.6,
+                513.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_14/region_1_text.png",
+            "text": "45. Gabrielson A, Wu Y, Wang H, Jiang J, Kallakury B, Gatalica Z, et al.\nIntratumoral CD3 and CD8 t-cell densities associated with relapse-free survival in\nHCC. Cancer Immunol Res (2016) 4(5):419-30. doi: 10.1158/2326-6066.CIR-15-\n0110\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 78.28,
+            "box": [
+                234.9,
+                524.3,
+                1194.2,
+                624.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_14/region_2_text.png",
+            "text": "46. Liu LZ, Zhang Z, Zheng BH, Shi Y, Duan M, Ma LJ, et al. CCL15 recruits\nsuppressive monocytes to facilitate immune escape and disease progression in\nhepatocellular carcinoma. Hepatology (2019) 69(1):143-59. doi: 10.1002/hep.30134\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 85.66,
+            "box": [
+                237.0,
+                634.8,
+                1194.4,
+                771.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_14/region_3_text.png",
+            "text": "47. Chen DP, Ning WR, Li XF, Wei Y, Lao XM, Wang JC, et al. Peritumoral\nmonocytes induce cancer cell autophagy to facilitate the progression of human\nhepatocellular carcinoma. Autophagy (2018) 14(8):1335-46. doi: 10.1080/\n15548627.2018.1474994\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 76.42,
+            "box": [
+                236.3,
+                782.4,
+                1195.2,
+                849.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_14/region_4_text.png",
+            "text": "48. Yeung OW, Lo CM, Ling CC, Qi X, Geng W, Li CX, et al. Alternatively\nactivated (M2) macrophages promote tumour growth and invasiveness in\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 88.27,
+            "box": [
+                1287.5,
+                377.5,
+                2244.1,
+                446.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_14/region_5_text.png",
+            "text": "hepatocellular carcinoma. J Hepatol (2015) 62(3):607-16. doi: 10.1016/\nj,jhep.2014.10.029\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 83.06,
+            "box": [
+                1288.1,
+                516.4,
+                1420.1,
+                546.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_14/region_6_title.png",
+            "text": "COPYRIGHT\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 95.25,
+            "box": [
+                1287.8,
+                552.7,
+                2230.4,
+                846.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_14/region_7_text.png",
+            "text": "© 2022 Qu, Tian, Qiu, Guo, Tao, Liu, Tang, Qian, Wang, Li, Hu, Zhou, Fan,\nZou, Hou and Shi. This is an open-access article distributed under the\nterms of the Creative Commons Attribution License (CC BY). The use,\ndistribution or reproduction in other forums is permitted, provided the\noriginal author(s) and the copyright owner(s) are credited and that the\noriginal publication in this journal is cited, in accordance with accepted\nacademic practice. No use, distribution or reproduction is permitted\nwhich does not comply with these terms.\n"
+        }
+    ]
+}

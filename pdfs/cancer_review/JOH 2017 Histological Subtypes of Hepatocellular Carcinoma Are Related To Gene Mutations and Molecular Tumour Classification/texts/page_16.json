@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_16.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_16.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 1,
+        "page_idx": 16
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 86.59,
+            "box": [
+                362.6,
+                226.9,
+                2181.2,
+                2927.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_16/region_1_list.png",
+            "text": "[19] Nault JC, Mallet M, Pilati C, Calderaro J, Bioulac-Sage P, Laurent C, et al. High frequency of\ntelomerase reverse-transcriptase promoter somatic mutations in hepatocellular carcinoma and\npreneoplastic lesions. Nature communications 2013;4:2218.\n\n[20] Ahn SM, Jang SJ, Shim JH, Kim D, Hong SM, Sung CO, et al. A genomic portrait of resectable\nhepatocellular carcinomas: Implications of RB1 and FGF19 aberrations for patient stratification.\nHepatology 2014.\n\n[21] Salomao M, Remotti H, Vaughan R, Siegel AB, Lefkowitch JH, Moreira RK. The steatohepatitic\nvariant of hepatocellular carcinoma and its association with underlying steatohepatitis. Human\npathology 2012;43:737-746.\n\n[22] Shibahara J, Ando S, Sakamoto Y, Kokudo N, Fukayama M. Hepatocellular carcinoma with\nsteatohepatitic features: a clinicopathological study of Japanese patients. Histopathology\n2014;64:951-962.\n\n[23] Mounajjed T, Chandan VS, Torbenson MS, SpringerLink (Online service). Surgical Pathology of\nLiver Tumors. p. IX, 477 p. 620 illus.\n\n[24] Gao J, Aksoy BA, Dogrusoz U, Dresdner G, Gross B, Sumer SO, et al. Integrative analysis of\ncomplex cancer genomics and clinical profiles using the cBioPortal. Science signaling 2013;6:pl1.\n\n[25] Cerami E, Gao J, Dogrusoz U, Gross BE, Sumer SO, Aksoy BA, et al. ThescBio cancer genomics\nportal: an open platform for exploring multidimensional cancer genomics data. Cancer discovery\n2012;2:401-404.\n\n[26] Calderaro J, Labrune P, Morcrette G, Rebouissou S, Franco D, Prevot S, et al. Molecular\ncharacterization of hepatocellular adenomas developed in patients with glycogen storage disease\ntype I. Journal of hepatology 2013;58:350-357.\n\n[27] Huang A, Zhao X, Yang XR, Li FQ, Zhou XL,;.Wu K; et al. Circumventing intratumoral\nheterogeneity to identify potential therapeutic targets in hepatocellular carcinoma. Journal of\nhepatology 2017.\n\n[28] Zhai W, Lim TK, Zhang T, Phang ST, Tiang Z, Guan P, et al. The spatial organization of intra-\ntumour heterogeneity and evolutionary trajectories of metastases in hepatocellular carcinoma.\nNature communications 2017;8:4565.\n\n[29] Villanueva A, Hoshida Y, Battiston C, Tovar V, Sia D, Alsinet C, et al. Combining clinical,\npathology, and gene expression data to predict recurrence of hepatocellular carcinoma.\nGastroenterology 2011;140:1501-1512 e1502.\n\n[30] Rebouissou S, Franconi A,-Calderaro J, Letouze E, Imbeaud S, Pilati C, et al. Genotype-\nphenotype correlation of CTNNB1 mutations reveals different ss-catenin activity associated with liver\ntumor progression. Hepatology 2016.\n\n[31] Audard V, Grimber G, Elie C, Radenen B, Audebourg A, Letourneur F, et al. Cholestasis is a\nmarker for hepatocellular carcinomas displaying beta-catenin mutations. The Journal of pathology\n2007;212:345-352.\n\n[32] Ueno A, Masugi Y, Yamazaki K, Komuta M, Effendi K, Tanami Y, et al. OATP1B3 expression is\nstrongly associated with Wnt/beta-catenin signalling and represents the transporter of gadoxetic\nacid in hepatocellular carcinoma. Journal of hepatology 2014;61:1080-1087.\n\n[33] Kitao A, Zen Y, Matsui O, Gabata T, Kobayashi S, Koda W, et al. Hepatocellular carcinoma:\nsignal intensity at gadoxetic acid-enhanced MR Imaging--correlation with molecular transporters and\nhistopathologic features. Radiology 2010;256:817-826.\n\n[34] Anson M, Crain-Denoyelle AM, Baud V, Chereau F, Gougelet A, Terris B, et al. Oncogenic\nbeta-catenin triggers an inflammatory response that determines the aggressiveness of hepatocellular\ncarcinoma in mice. The Journal of clinical investigation 2012;122:586-599.\n\n[35] Spranger S, Bao R, Gajewski TF. Melanoma-intrinsic beta-catenin signalling prevents anti-\ntumour immunity. Nature 2015;523:231-235.\n\n[36] Sugino T, Kusakabe T, Hoshi N, Yamaguchi T, Kawaguchi T, Goodison S, et al. An invasion-\nindependent pathway of blood-borne metastasis: a new murine mammary tumor model. The\nAmerican journal of pathology 2002;160:1973-1980.\n"
+        }
+    ]
+}

@@ -1,0 +1,311 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 23,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                157.7,
+                234.7,
+                1205.5,
+                756.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_01_text.png",
+            "text": "using the Active learning for Systematic Reviews toolbox (van de\nSchoot et al., 2021). This toolbox uses active learning to sort pa-\npers from most relevant to least relevant, while being updated by\nuser input. Furthermore, we had discussions with colleagues, and\nused a snowballing approach - investigating papers referenced by\nthe included papers and papers that refer to the included papers.\nWe read the title and the abstract of each of these papers, and\nbrowsed paper content if we were not sure whether to include the\npaper. In case of multiple publications by the same authors on the\nSame subject, we chose the journal publication or the most recent\npublication in case of multiple conference publications. Papers up\nto October 2020 are included in the survey.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                158.0,
+                757.4,
+                1205.3,
+                1889.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_02_text.png",
+            "text": "The survey is structured as follows: We will first introduce the\ntaxonomy of XAI and describe a framework to classify XAI tech-\nniques in Section 2. In Section 3, the discussed papers are charac-\nterized according to this XAI framework. We will discuss applica-\ntions of XAI techniques in medical image analysis. In case of mul-\ntiple papers using the same technique, we will discuss some early\nadopters and summarize the rest of the papers in the tables. Since\nXAI techniques often originate from computer vision, we will elab-\norate on papers that adapted XAI techniques from computer vision\nby adding domain knowledge from the medical imaging field. The\npapers are grouped in the tables according to explanation method\nand according to anatomical location. This survey adds to the re-\nview of Reyes et al. (2020); since they mainly discussed techniques\nin computer vision, without extensively evaluating the adaptation\nof such techniques throughout medical image analysis. Further-\nmore, we describe if and how techniques from computer vision\nhave been adapted specifically for medical image analysis. This sur-\nvey adds to the review of Huff et al. (2021), since they mostly fo-\ncused on examples of visual explanation, while our survey aims\nfor a more holistic approach including non-visual explanation, cri-\ntiques on XAI, and methods for evaluating XAI. Additionally, we\nsystematically survey papers, reflecting the current status of the\nfield of XAI in medical imaging. In Section 4, we discuss the pros\nand cons of the discussed XAI techniques. The survey is concluded\nin Section 5 by discussing the state of the art of XAI in medical\nimage analysis and an outlook of the opportunities of XAI.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.67,
+            "box": [
+                155.6,
+                1935.2,
+                1023.3,
+                1978.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_03_title.png",
+            "text": "2. Explainable artificial intelligence (XAI) framework\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                156.4,
+                2022.6,
+                1204.3,
+                2195.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_04_text.png",
+            "text": "In this section, we will give a brief overview of Explainable Arti-\nficial Intelligence (XAI) techniques found in deep learning for med-\nical image analysis. For exhaustive surveys focused solely on XAI,\nplease refer to Adadi and Berrada (2018) and Murdoch et al. (2019).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                156.6,
+                2196.8,
+                1204.5,
+                2500.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_05_text.png",
+            "text": "We will distinguish XAI techniques based on three crite-\nria: model-based versus post hoc, model-specific versus model-\nagnostic, and global versus local (i.e., the scope of the explana-\ntion). The framework of these three criteria is adapted from the\nsurveys of Adadi and Berrada (2018) and Murdoch et al. (2019) and\nis depicted in Fig. 1. The following paragraphs will describe these\ncriteria.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.38,
+            "box": [
+                156.1,
+                2547.0,
+                835.9,
+                2588.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_06_title.png",
+            "text": "2.1. Model-based versus post hoc explanation\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                157.0,
+                2633.4,
+                1202.9,
+                2719.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_07_text.png",
+            "text": "The first distinction we make is model-based explanation ver-\nsus post hoc explanation (Fig. 1).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 99.44,
+            "box": [
+                156.1,
+                2764.9,
+                614.1,
+                2806.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_08_title.png",
+            "text": "2.1.1. Model-based explanation\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.99,
+            "box": [
+                157.0,
+                2808.4,
+                1205.6,
+                3111.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_09_text.png",
+            "text": "Model-based explanation refers to models, e.g. a linear regres-\nsion model or a support vector machine, that are simple enough\nto be understood, but sophisticated enough to fit a relationship\nbetween input and output well (Murdoch et al., 2019). These are\noften the traditional machine learning models. Examples of model-\nbased explanation enforce the use of a limited amount of features\n(i.e., sparsity), or enforce a human to be able to internally reason\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1277.5,
+                234.7,
+                2325.8,
+                494.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_10_text.png",
+            "text": "about the model’s entire decision-making process (i.e., simulata-\nbility) (Murdoch et al., 2019). For example, models that enforce\nsparsity such as the least absolute shrinkage and selection operator\n(LASSO, Tibshirani (1996), force many coefficients to zero. Hence, a\nselect subset of features leads to an output, making the inner con-\nstruct of this model explainable.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.6,
+                496.3,
+                2326.3,
+                887.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_11_text.png",
+            "text": "Since the focus of our survey is on XAI methods for deep\nlearning, model-based explanation by enforcing sparsity or simu-\nlatability is infeasible. Deep learning uses a deep neural network,\ntypically with thousands to millions of weights, which is neither\nsparse, nor suited for a human to internally simulate and reason\nabout the models entire decision making. However, one of the\nmethods mentioned by Murdoch et al. (2019) was model-based\nfeature engineering, i.e., automated approaches for constructing ex-\nplainable features.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 99.39,
+            "box": [
+                1277.2,
+                940.9,
+                1677.9,
+                983.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_12_title.png",
+            "text": "2.1.2. Post hoc explanation\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.4,
+                984.4,
+                2325.9,
+                1288.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_13_text.png",
+            "text": "Analyzing a trained model (i.e., a neural network in deep learn-\ning) to achieve insight into learned relationships is referred to as\npost hoc explanation. An important distinction between post hoc\nexplanation and model-based explanation is that the former trains\na neural network and subsequently attempts to explain the behav-\nior of the ensuing black box network, whereas the latter forces the\nneural network to be explainable.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1277.7,
+                1289.5,
+                2325.5,
+                1549.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_14_text.png",
+            "text": "Methods that provide post hoc explanation include inspection\nof learned features, feature importance, and interaction of features\n(Abbasi-As] and Yu, 2017; Olden et al., 2004; Tsang et al. 2018; as\nwell as visual explanation by saliency maps (Selvaraju et al., 2017;\nSimonyan et al., 2013; Springenberg et al., 2014; Zeiler and Fer-\ngus, 2014; Zhou et al., 2016).\n"
+        },
+        {
+            "idx": 15,
+            "thing": "title",
+            "score": 99.44,
+            "box": [
+                1277.2,
+                1605.0,
+                2083.1,
+                1646.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_15_title.png",
+            "text": "2.2. Model-specific versus model-agnostic explanation\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.8,
+                1690.1,
+                2325.2,
+                1864.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_16_text.png",
+            "text": "The distinction between model-specific and model-agnostic ex-\nplanation is related to that between model-based and post hoc ex-\nplanation (Adadi and Berrada, 2018), but there are some nuanced\ndifferences.\n"
+        },
+        {
+            "idx": 17,
+            "thing": "title",
+            "score": 98.93,
+            "box": [
+                1276.2,
+                1917.9,
+                1762.9,
+                1960.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_17_title.png",
+            "text": "2.2.1. Model-specific explanation\n"
+        },
+        {
+            "idx": 18,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.4,
+                1962.4,
+                2325.6,
+                2222.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_18_text.png",
+            "text": "Model-specific explanation methods are limited to particular\nclasses of models. For example, such a method may use attributes\nthat are specific to a type of neural network. A drawback is that by\naiming at model-specific explanation, we limit our choice of neu-\nral networks, thereby potentially excluding a neural network that\ncould better fit the output to the input data.\n"
+        },
+        {
+            "idx": 19,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.2,
+                2223.5,
+                2325.6,
+                2483.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_19_text.png",
+            "text": "Model-based explanation is by definition model-specific\n(Adadi and Berrada, 2018), but model-specific explanation is\nnot necessary model-based. Some post hoc saliency mapping\ntechniques are examples of techniques that are specific to a\ncertain class of convolutional neural networks (CNNs), but are not\nmodel-based explanation methods (Murdoch et al., 2019).\n"
+        },
+        {
+            "idx": 20,
+            "thing": "title",
+            "score": 99.43,
+            "box": [
+                1277.3,
+                2537.7,
+                1783.7,
+                2579.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_20_title.png",
+            "text": "2.2.2. Model-agnostic explanation\n"
+        },
+        {
+            "idx": 21,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.9,
+                2580.9,
+                2325.3,
+                2842.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_21_text.png",
+            "text": "Model-agnostic explanation is independent of the choice of the\ntype of neural network, operating solely on the input and the out-\nput of the neural network. By perturbing the input, the user can\ninspect what the change is in the output of the neural network.\nThis can therefore explain which regions are driving the output.\nModel-agnostic explanation is naturally post hoc.\n"
+        },
+        {
+            "idx": 22,
+            "thing": "title",
+            "score": 97.83,
+            "box": [
+                1276.9,
+                2895.8,
+                1655.3,
+                2937.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_22_title.png",
+            "text": "2.3. Scope of explanation\n"
+        },
+        {
+            "idx": 23,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1277.0,
+                2982.2,
+                2324.9,
+                3111.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_02/region_23_text.png",
+            "text": "The scope of an explanation distinguishes between explanation\nfor an entire model (global) versus explanation for a single output\n(local).\n"
+        }
+    ]
+}

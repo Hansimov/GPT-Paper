@@ -1,0 +1,140 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_23.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_23.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 10,
+        "page_idx": 23
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 70.89,
+            "box": [
+                109.8,
+                57.2,
+                2276.4,
+                215.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_23/region_01_text.png",
+            "text": "data is available at the European Genome-Phenome Archive EGA https://ega-archive.org/ under accession number EGASOO000000098 through controlled access;\nclinical data is available from https://www.cbioportal.org/. For BASIS, genomic data is freely available from ftp://ftp.sanger.ac.uk/pub/cancer/Nik-\nZainalEtAl-560BreastGenomes; clinical data is published; histopathology images are available as controlled access data at the EGA via study accession\nEGAS0O0001001178.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 84.38,
+            "box": [
+                102.0,
+                341.2,
+                866.0,
+                436.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_23/region_02_title.png",
+            "text": "Field-specific reporting\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 37.82,
+            "box": [
+                102.8,
+                452.7,
+                2287.6,
+                571.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_23/region_03_text.png",
+            "text": "Please select the one below that is the best fit for your research. If you are not sure, read the appropriate sections before making your selection.\n[X] Life sciences [| Behavioural & social sciences [| Ecological, evolutionary & environmental sciences\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 37.95,
+            "box": [
+                103.1,
+                587.4,
+                1448.5,
+                623.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_23/region_04_text.png",
+            "text": "For a reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 96.12,
+            "box": [
+                98.1,
+                707.6,
+                954.4,
+                810.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_23/region_05_title.png",
+            "text": "Life sciences study design\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 74.78,
+            "box": [
+                102.5,
+                835.4,
+                1280.5,
+                876.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_23/region_06_text.png",
+            "text": "All studies must disclose on these points even when the disclosure is negative.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "table",
+            "score": 60.65,
+            "box": [
+                128.8,
+                870.7,
+                2314.0,
+                1619.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_23/region_07_table.png"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 96.78,
+            "box": [
+                95.6,
+                1686.2,
+                1911.7,
+                1790.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_23/region_08_title.png",
+            "text": "Reporting for specific materials, systems and methods\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 90.99,
+            "box": [
+                103.0,
+                1797.7,
+                2329.7,
+                1879.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_23/region_09_text.png",
+            "text": "We require information from authors about some types of materials, experimental systems and methods used in many studies. Here, indicate whether each material,\nsystem or method listed is relevant to your study. If you are not sure if a list item applies to your research, read the appropriate section before selecting a response.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "table",
+            "score": 29.68,
+            "box": [
+                114.5,
+                1907.3,
+                1597.7,
+                2376.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_23/region_10_table.png"
+        }
+    ]
+}

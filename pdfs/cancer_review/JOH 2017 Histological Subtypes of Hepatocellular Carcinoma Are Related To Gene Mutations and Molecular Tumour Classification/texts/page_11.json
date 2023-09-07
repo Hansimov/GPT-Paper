@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_11.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 5,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 98.28,
+            "box": [
+                386.1,
+                222.2,
+                2173.2,
+                392.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_11/region_1_text.png",
+            "text": "high GS expression), TP53 mutated (compact pattern, macrotrabecular-massive subtype,\nEdmondson-Steiner IJI-IV and microvascular invasion) and non-mutated (inflammatory\ninfiltrates and CRP expression) HCC cases is provided in Figure 2E.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 97.22,
+            "box": [
+                385.5,
+                386.0,
+                2177.0,
+                1327.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_11/region_2_text.png",
+            "text": "Noticeably, TP53 mutations were also strongly correlated to the novel macrotrabecular-\nmassive subtype of HCC (MTM-HCC) identified during the pathological review (P<0.001)\n(Figure 2A and 3A-D). This subtype, representing 10% of all tumours and characterised\nby a predominant (>50%) macrotrabecular growth pattern, was more frequent in HBV\ninfected patients (P=0.007), with high AFP serum levels (P=0.02) and histological\nfeatures of aggressiveness (satellite nodules P<0.001, macrovascular P<0.001 and\nmicrovascular P<0.001 invasion) (Figure 3E and supplemental Table 4). Regarding\nmolecular alterations and gene expression, we observed an association of MTM-HCC\nwith G3 subgroup (P<0.001), TP53 (P<0.001) and ATM mutations (P=0.03), FGF19\namplifications (P=0.02), and angiogenesis activation (upregulation of ANGPT2 P=0.004\nand an almost significant trend towards VEGFA overexpression P=0.07) (Figure 3E and\nSupplemental Table 5). This subtype also frequently demonstrated a progenitor\nphenotype (CK19 immunohistochemical expression P=0.02) (Figure 3E). Finally, MTM-\nHCC was significantly associated, in multivariate analysis, with early tumour relapse\n(p=0.05) and poor overall survival (p=0.03) (Table 2 and Figure 3F). Moreover, it\nretained a prognostic value even when patients were stratified according to the\nexistence of microvascular invasion and satellite nodules (p<0.001).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 83.42,
+            "box": [
+                383.8,
+                1323.4,
+                2176.6,
+                1827.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_11/region_3_text.png",
+            "text": "We took advantage of the TCGA public database to validate the relevance of this novel\nsubtype. Available digital slides were reviewed without knowledge of clinical, biological\nand molecular features. We identified 61 tumours (17%, 61/358) with histological\nfeatures of MTM-HCC (Supplemental Table 6). We were able to validate the associations\nof MTM-HCC with high AFP serum levels (p=0.001), macrovascular (p=0.002) and\nmicrovascular (p=0.003) invasion, TP53)mutations (p<0.001), FGF19 amplifications\n(p=0.007) and activation of angiogenesis with ANGPT2 upregulation (z-scores 0.55 vs -\n0.18, p<0.001) (Figure 3E). MTM-HCC was also associated, in univariate analysis, with\nearly tumour relapse (p=0.002) and poor overall survival (p=0.02) (Figure 3F).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 72.38,
+            "box": [
+                382.1,
+                2042.0,
+                1890.9,
+                2108.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_11/region_4_title.png",
+            "text": "Associations of other HCC subtypes with clinical and molecular features\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 64.38,
+            "box": [
+                376.9,
+                2149.6,
+                2177.6,
+                2985.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_11/region_5_text.png",
+            "text": "We further aimed to determine the potential clinical and/or biological implications of\nother recognized HCC subtypes:\n\n-The scirrhous HCC subtype, defined by marked stromal fibrosis, was characterized by\nTSC1/TSC2 (P=0.005), lack of CTNNB1 (P<0.001) mutations and CK19 expression\n(P<0.001) (Figure 4A-C and Supplemental Table 4). In this line, RT-PCR experiments\nrevealed up-regulation of progenitor/cancer stem cell genes (CD24, KRT19, THY1,\nCD133), and epithelial-to-mesenchymal transition activation (TGFB, VIM) (Figure 4D and\nSupplemental Table 5). A trend of increased phospho-S6 protein expression was\nobserved (50% vs 31%, P=0.2).\n\n-The steatohepatitic subtype of HCC was not related to specific clinical features, but\ndisplayed a less aggressive histological phenotype with a lack of satellite nodules\n(P=0.02) and microvascular invasion (P=0.04)(Figure 4E and F, Supplemental Table 4).\nAt the molecular level, it was associated with the G4 transcriptomic subgroup and to a\nlack of Wnt/B-catenin pathway activation (lack of CTNNB1 mutations P=0.01 and low GS\nexpression P=0.005) (Figure 4F). Activation of the IL6/JAK/STAT pathway was frequent\n"
+        }
+    ]
+}

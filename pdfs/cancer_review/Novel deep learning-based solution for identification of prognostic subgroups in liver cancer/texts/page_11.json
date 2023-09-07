@@ -1,0 +1,128 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 9,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                490.4,
+                363.9,
+                1997.9,
+                474.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_11/region_1_text.png",
+            "text": "those whose values were below or equal to the median and the high expression cluster\nincluded those whose values were above the median.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                489.6,
+                479.7,
+                1997.8,
+                886.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_11/region_2_text.png",
+            "text": "Using the pre-processed omics data before scaling, significant mRNA and methyla-\ntion features consistently identified by Lpsc were visualised in prognostic clusters using\nheatmaps. Heatmaps were produced using Seaborn [22] with expression shown as a\nz-score, which is a representation of standard deviations of expression of each gene from\nthe mean. Scale was limited to —3+3 using vmin and vmax in the clustermap function\nin Seaborn to improve the visualisation of differences between the prognostic clusters\nbeing presented.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.68,
+            "box": [
+                489.9,
+                948.7,
+                628.2,
+                1000.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_11/region_3_title.png",
+            "text": "Results\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.62,
+            "box": [
+                489.4,
+                1011.6,
+                791.9,
+                1057.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_11/region_4_title.png",
+            "text": "Cluster evaluation\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                489.9,
+                1069.9,
+                1996.7,
+                1946.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_11/region_5_text.png",
+            "text": "Cluster quality metrics were compared between models (Table 2). The clusters obtained\nby the baseline models BCE and MSE had lower Silhouette scores (0.18—0.31), indicat-\ning poorer cluster quality, i.e. more heterogeneous. For BCE and MSE, the number of\nsignificant bottleneck features to be used in clustering following filtering, as identified by\nthe univariate Cox models, was quite low and ranged from 11 to 21 out of the bottleneck\ndimension of 100. By comparison, some of the highest Silhouette scores were achieved\nby Lec, demonstrating that the k-means inspired loss produced better quality clusters\ncompared to the other losses. This provided greater confidence in sample assignment to\nclusters by the Lpc and indicated that they comprised of more homogeneous and conse-\nquently more biologically meaningful groupings. For loss functions using L¢, the bottle-\nneck layer was clustered according to group labels derived after each epoch. For Lpyc and\nLysc, the Silhouette score of the bottleneck improves as epochs increase (Fig. 4). With\nthe heavy influence of L; the ascent of the Silhouette score in Lpc (Fig. 4A) is smoother\nthan Lesc (Fig. 4B). The Silhouette score steadily rises with continued training with Lec,\nthereby indicating a continuous improvement in sample assignment for both models.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                489.7,
+                1954.2,
+                1997.4,
+                2065.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_11/region_6_text.png",
+            "text": "Clusters were also assessed for their significance in terms of prognosis (Table 2). Clus-\nters identified by the best run using the log-rank test P-value for each loss function were\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                489.8,
+                2202.7,
+                1993.8,
+                2293.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_11/region_7_text.png",
+            "text": "Table 2 A comparison of the cluster quality metrics for each loss, including the highest and lowest\nSilhouette scores and the highest and lowest log-rank P-values across ten runs for each loss function\n"
+        },
+        {
+            "idx": 8,
+            "thing": "table",
+            "score": 99.32,
+            "box": [
+                488.4,
+                2314.2,
+                1988.5,
+                2838.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_11/region_8_table.png"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.25,
+            "box": [
+                489.1,
+                2850.7,
+                1976.4,
+                3026.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_11/region_9_text.png",
+            "text": "Asummary of the highest and lowest Silhouette scores and log-rank P-values across 10 runs for each loss function. The log-\nrank P-values for MSE and BCE varied between significant and non-significant, whereas the survival-based losses produced\nthe lowest log-rank P-values. Silhouette scores for MSE and BCE remained below 0.4, indicating low confidence in group\nassignments whereas the clustering-based loss Lp- was able to produce the highest Silhouette scores, indicating high\nconfidence in group assignments\n"
+        }
+    ]
+}

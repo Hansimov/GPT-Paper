@@ -1,0 +1,155 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 11,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                213.4,
+                228.6,
+                1215.8,
+                1274.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_01_text.png",
+            "text": "U-net to capture the localized nuclear architectural informa-\ntion (Nucleus map set, = 120). The second cohort was from\nHCC patients who had received surgical resection treatment\nfrom the First hospital of Zhejiang University in 2010-2016\nand have a so-called distinct outcome (Train set, n=552).\nPatients exhibiting obvious good or bad outcomes (good:\n274, poor: 278) were used as training cohorts. Patients with\na 4-year follow-up history after resection and no recorded\nrecurrence were grouped under the good outcome cohort. At\nthe same time, the bad outcome group included patients who\nrelapsed within a period of 1.6 years (exclusive) after sur-\ngery. The third cohort was from HCC patients who received\nliver transplantation from the First hospital of Zhejiang\nUniversity between 2015 and 2019 (LT set, n= 144). The\nnucleus map set, train set, and LT set were collated from\nthese three different batches of HCC patients after obtain-\ning approval from the ethics committee of the institution. A\nfourth dataset, namely the TCGA set, with complete follow-\nup data (n= 302) from the TCGA database, was included for\nexternal validation.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                213.1,
+                1271.4,
+                1217.5,
+                1691.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_02_text.png",
+            "text": "The nucleus map set, train set, and LT set were scanned\nand digitized using a P250FLASH2 (3DHISTECHS3) at\n20 x magnification. Nucleus map sets were used for training\nU-net. The train set was used to train the MobileNet V2,\nwhile the LT set was used to externally validate the model\nin HCC treated by LT. The histology slides, clinical follow-\nup data, and histological annotation were retrieved from the\nTCGA database (https://cancergenome.nih.gov/).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.39,
+            "box": [
+                212.5,
+                1766.4,
+                925.9,
+                1822.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_03_title.png",
+            "text": "Tile cropping and color normalization\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                213.4,
+                1873.7,
+                1215.5,
+                2452.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_04_text.png",
+            "text": "Due to the limitations of graphic card memory, it was almost\nimpossible to process whole-sliced pathological images,\nwhich are usually at a resolution of 100,000 x 100,000, on\nGPU or main memory during the training phase. To cir-\ncumvent this problem, the current best practice is to cut\nlarge images into hundreds of smaller images, which are\ncalled tiles or patches [17, 26, 27]. In our study, these tiles\nwere 512X512 pixels (px) and 0.25 um per px. They were\ncropped from the nucleus map set, train set, and LT set. They\nwere finally resized to a resolution of 224 x 224 px. The tiles\nwere normalized as described previously [28].\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.79,
+            "box": [
+                212.3,
+                2524.5,
+                1173.3,
+                2632.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_05_title.png",
+            "text": "Extending features with a segmentation heat map\nof nuclear architectural information using U-net\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                212.8,
+                2683.7,
+                1217.7,
+                2950.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_06_text.png",
+            "text": "Before feeding these data into the model, we used a trained\nimage segmentation model to get the heat map of nuclei\nsegmentation for each tile. The segmentation model was a\nU-net neural network trained with a nucleus map set. Let\nI denote an image slice, p indicate the U-net output, and\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.79,
+            "box": [
+                1275.7,
+                229.3,
+                2278.6,
+                599.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_07_text.png",
+            "text": "y denote the ground-truth label in the image slice where\n€ = 0.00000001 is a smoothing term to make the denomi-\nnator non-zero. The loss function is Dice loss (1) and the\nfinal Dice Score on the TCGA test set can reach up to 82%.\nThe segmentation result is not desired to be too perfect,\nsince information other than nuclei, such as cytoplasm and\nshape of the whole cell, also contributes to the heat map.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 99.3,
+            "box": [
+                1275.3,
+                884.0,
+                2002.3,
+                939.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_08_title.png",
+            "text": "Realization of MIL in the MobileNet V2\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1275.8,
+                989.9,
+                2279.7,
+                2087.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_09_text.png",
+            "text": "The main guiding methodology in our work is MIL, which\nis a kind of weak supervised learning method to deal with\na lack of annotations. All the tiles could be fed to train the\nlearning model. However, such an approach has serious\ndrawbacks during classification. In many cases, the con-\ntent of one small tile conflicts with the label of the original\npathological image, especially in HCC cases with great\nheterogeneity. To solve this problem, MobileNet V2 was\ndeveloped using MIL for training only on tile collections\nthat carried a label for the associated whole-slide image. In\nthis way, we could use MIL to take information on features\nfrom every tile. Instead of annotating each tile with its\nancestor’s label and dumping it into the network directly,\nwe packed all the tiles into a bag with a label identical to\nthe original pathological image. Each bag, which repre-\nsents one pathological image, was then passed through\na trained neural network to calculate the scores of each\ntile in the bag, and an aggregational function was used\nto produce a weight-average score for the whole bag. By\nsetting a threshold, the pathological image was classified\ninto a certain class.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                1275.3,
+                2084.3,
+                2279.2,
+                2662.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_10_text.png",
+            "text": "Each 224 x 224 tile was color-normalized using the\nmethod described by Vahadane et al. [28]. After nuclei\nsegmentation, the color-normalized RGB tiles were then\nconcatenated with their heat map in channel level to pro-\nduce a four-channel tile. Then, these bags of four-channel\ntiles were dumped into a feature extractor, which is a\nMobileNet V2 model, and the score of each tile was cal-\nculated. A generalized mean was used as the aggregation\nfunction since it could keep the extremes while taking into\naccount the average. The aggregation function reads as (2),\nwhere p is a hyperparameter.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.74,
+            "box": [
+                1275.4,
+                2831.1,
+                2277.1,
+                2938.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_03/region_11_text.png",
+            "text": "The output of the aggregation function, which repre-\nsents the score of the pathological image, was activated by\n"
+        }
+    ]
+}

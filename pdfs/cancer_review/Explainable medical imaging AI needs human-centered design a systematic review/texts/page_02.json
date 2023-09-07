@@ -1,0 +1,128 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 9,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.73,
+            "box": [
+                250.8,
+                248.3,
+                2292.0,
+                1140.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_02/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                189.4,
+                1165.3,
+                2333.1,
+                1353.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_02/region_2_text.png",
+            "text": "Fig. 1 Schematic representation of the INTRPRT guideline within the main stages of a human-centered design process. The blue boxes\ndemonstrate the process from understanding end users and their context to the validation of the developed system, which ultimately might\nresult in large scale deployment. The guidelines are summarized below and are located within the design phases based on the aspects\npertinent to each one and the corresponding themes of each guideline are listed on the left. Opportunities for iterative design are illustrated\nwith the dashed arrows.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.69,
+            "box": [
+                189.6,
+                1399.9,
+                1223.7,
+                1482.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_02/region_3_text.png",
+            "text": "algorithms should be viewed as such. There are several\nconsequences from this definition:\n"
+        },
+        {
+            "idx": 4,
+            "thing": "list",
+            "score": 99.79,
+            "box": [
+                188.0,
+                1508.2,
+                1223.6,
+                1839.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_02/region_4_list.png",
+            "text": "@ Developing transparent ML algorithms is not purely computa-\ntional.\n\n@ Specific design choices on the mechanisms to achieve\nexplanations or interpretations may be suitable for one user\ngroup, but not for another.\n\n@ Creating transparent ML systems without prior groundwork to\nestablish that it indeed affords transparency may result in\nmisspent effort.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                188.4,
+                1857.6,
+                1222.8,
+                2396.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_02/region_5_text.png",
+            "text": "Given the user- and context-dependent nature of transparency,\nit is essential to understand the target audience and to validate\ndesign choices through iterative empirical user studies to ensure\nthat design choices of transparent models are grounded in a deep\nunderstanding of the target users and their context. In addition, to\nmaintain a user-centered approach to design from the early\nstages, rapid prototyping with users provides feedback on the\ncurrent, low- to high-fidelity embodiment of the system that is\ngoing to be built eventually. Involving users early by exposing\nthem to low-fidelity prototypes that mimic final system behavior\nallows designers to explore multiple alternatives before commit-\nting to one pre-determined approach that may not be under-\nstandable nor of interest to end users.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                188.5,
+                2397.2,
+                1222.9,
+                2938.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_02/region_6_text.png",
+            "text": "However, following a human-centered design approach to build\ntransparent ML systems for highly specialized and high stakes\ndomains, such as healthcare, is challenging. The barriers are\ndiverse and include: (1) the high knowledge mismatch between\nML developers and the varied stakeholders in medicine, including\nproviders, administrators, or patients; (2) availability restrictions or\nethical concerns that limit accessibility of potential target users for\niterated empirical tests in simulated setups for formative research\nor validation; (3) challenges inherent to clinical problems,\nincluding the complex nature of medical data (e.g., unstructured\nor high dimensional) and decision making tasks from multiple\ndata sources; and last but not least, (4) the lack of ML designers’\ntraining in design thinking and human factors engineering.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                189.2,
+                2939.8,
+                1224.4,
+                3063.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_02/region_7_text.png",
+            "text": "Starting from the considerations around designing and validat-\ning transparent ML for healthcare presented above, we investigate\nthe current state of transparent ML in medical image analysis, a\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1298.0,
+                1401.8,
+                2332.3,
+                1857.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_02/region_8_text.png",
+            "text": "trailblazing application area for ML in healthcare due to the\nabundance and structure of data. Through a systematic review\nbased on these aspects, we first identify major shortcomings in\nthe design and validation processes of developing transparent ML\nmodels. These deficiencies include the absence of formative user\nresearch, the lack of empirical user studies, and in general, the\nomission of considering ML transparency as contingent on the\ntargeted users and contexts. Together, these shortcomings of\ncontemporary practices in transparent ML development put the\nresulting solutions at substantial risk of being unintelligible to the\ntarget users, and consequently, irrelevant.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1297.6,
+                1859.8,
+                2333.8,
+                3064.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_02/region_9_text.png",
+            "text": "This paper aims to encourage model designers to actively\nconsider and work closely with the end users during the design,\nconstruction, and validation of ML models for medical imaging\nproblems. Acknowledging the barriers to widespread adoption of\nhuman-centered design techniques to develop transparent ML in\nhealthcare and grounded in our systematic review of the\nliterature, we further propose the INTRPRT guideline to help model\ndesigners for developing transparent ML for medical image\nanalysis step by step. Figure 1 summarizes our guideline within\na human-centered design process. The guideline aims at high-\nlighting the need to ground and justify design choices in a solid\nunderstanding of the users and their context when adding\ntransparency or other human factors-based goals to ML systems\nfor medical image analysis. By raising awareness of the user- and\ncontext-dependent nature of transparency, designers should\nconsider a trade-off between efforts to (1) better ground their\napproaches on user needs and domain requirements and (2)\ncommit to technological development and validation of possibly\ntransparent systems. In this way, the guideline may increase the\nlikelihood for algorithms that advance to the technological\ndevelopment stage to afford transparency, because they are well\ngrounded and justified in user and context understanding. This\nmay mitigate misspent efforts in developing complex systems\nwithout prior formative user research, and help designers make\naccurate claims about transparency and other human factors\nengineering goals when building and validating the model. To the\nbest of our knowledge, we provide the first guidelines for models\nthat afford transparency and involve end users in the design\nprocess for medical image analysis.\n"
+        }
+    ]
+}

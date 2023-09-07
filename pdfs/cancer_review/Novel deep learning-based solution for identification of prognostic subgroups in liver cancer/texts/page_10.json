@@ -1,0 +1,50 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 3,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.68,
+            "box": [
+                491.4,
+                368.8,
+                1989.6,
+                2401.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_10/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                516.5,
+                2413.4,
+                1960.8,
+                2659.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_10/region_2_text.png",
+            "text": "Fig. 3 A flowchart of the autoencoder training process. The flowchart demonstrates how multi-omics data is\ncombined into a single matrix, before being transformed by the autoencoder to produce bottleneck features.\nIf the loss is BCE or MSE these bottleneck features are reduced by univariate Cox models as in the baseline\nbefore clustering to create group labels. For Lc and Lecc group labels from the final iteration of autoencoder\ntraining are used whereas for Lg, group labels are derived by clustering all bottleneck features. Using the\nidentified cluster labels the top original omics features are identified for the run using ANOVA\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                490.2,
+                2761.5,
+                1993.8,
+                2987.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_10/region_3_text.png",
+            "text": "identified by Lpsc were then used in a survival analysis to assess their prognostic sig-\nnificance. Using the scaled data, median expression was used for patient separation in\nthe Kaplan meier survival curve. The prognostic significance of resulting clusters was\nassessed using the log-rank test (P-value < 0.05). The low expression cluster included\n"
+        }
+    ]
+}

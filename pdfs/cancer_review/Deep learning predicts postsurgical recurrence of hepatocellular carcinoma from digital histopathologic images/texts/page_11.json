@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 3,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                647.7,
+                205.0,
+                2318.8,
+                1878.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_11/region_1_text.png",
+            "text": "and alcohol intake), and clinicopathologic variables [history of hepatitis B and C viral infection, non-alcoholic\nfatty liver disease (NAFLD), HCC multi-nodularity, macro- and micro- vascular invasion, largest tumor diam-\neter, histologic World Health Organization grade*’, Batts-Ludwig” fibrosis stage, surgical margin status, and\nAJCC (8th edition) stage*] were collected for each case by review of the electronic health records by trained phy-\nsicians at Stanford University Medical Center (J.S. and A. S.). Forty-seven patients were excluded because their\nresections were performed for recurrent HCC, two were excluded because of lack of follow-up data after surgi-\ncal resection, and three were excluded due to the presence of comorbidities known to have contributed to the\npatients’ deaths. This process narrowed the final number of study patients down to 198. From each of these 198\npatients, a representative tumor H&E slide (the one containing the highest grade of tumor in the specimen) was\ndigitized at high resolution (40 x objective magnification, 0.25 um per pixel) on an Aperio AT2 scanner (Leica\nBiosystems, Nussloch, Germany), to generate a WSI in the SVS file format. This dataset (n= 198 WSL, from 198\nunique patients), referred to as the Stanford-HCC dataset, was used for external evaluation of the risk score\nprediction model. From the excluded patient pool (not included in Stanford-HCC), 36 patients were randomly\nselected and a representative tumor H&E slide from each patient was digitized using the exact same method as\ndescribed above, yielding a dataset with 36 WSI from 36 patients, referred to as the Stanford- HCCDET dataset.\nThis dataset was used to develop a model for automatically detecting tumor-containing tiles in a WSI (““DET”\nstands for “detection”). Use of all patient material and data was approved by the Stanford University Institutional\nReview Board, with waived informed consent.\n\nIn addition to the Stanford-HCC and Stanford-HCCDET datasets, a publicly-available dataset of 379 FFPE\ndiagnostic WSI from 365 unique patients in the TCGA-LIHC diagnostic slide collection were downloaded via\nthe GDC Data Portal” and used to develop the risk score prediction model for this study. The same patient\ndemographics, clinicopathologic variables, and RFI as collected for Stanford-HCC were obtained through\nreview of the accompanying metadata and pathology reports downloaded from the GDC Data Portal and the\npreviously-published Integrated TCGA Pan-Cancer Clinical Data Resource by Liu et al.*? RFI was defined as\nthe period from the date of surgery until the date of the first occurrence of a new tumor event, which included\nprogression of HCC, locoregional recurrence, distant metastasis, new primary tumor, or death with tumor”.\nPatients who were alive without these events, or who died without tumor, were censored”!. The event time was\nthe shortest period from the date of surgery to the date of an event. The censored time was the period from the\ndate of surgery to the date of last contact with the patient or the date of death without HCC. Given multiple\nchanges to the AJCC classification over the time period during which these specimens were collected (resulting\nin differences in the pathologic staging criteria across different editions of the AJCC), a reference pathologist\ntrained in the interpretation of hepatobiliary pathology (J.S.) reviewed the WSI and the downloaded pathology\nreports, in order to re-stage all of the patients based on the most current AJCC (8th edition) classification®. WSI\nscanned at 20 x base magnification were excluded (n=10 WSI, from 4 patients). One patient (n=1 WSI) with\nmissing RFI was excluded. Seven patients (n= 7 WSI) with mixed HCC-cholangiocarcinomas and one patient\n(n=1 WSJ) with an angiomyolipoma were excluded from the dataset. The final dataset (n = 360 WSI, from 352\npatients), referred to as the TCGA-HCC dataset, contained patients from 35 institutions, each with potentially\ndifferent staining and scanning protocols. The TCGA-HCC dataset was randomly split into the development\ncohort (n= 299 patients: n = 247 patients for training and n=52 patients for validation) and internal test cohort\n(n=53 patients), with no patient overlap between the splits.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                649.2,
+                1917.8,
+                2319.5,
+                2177.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_11/region_2_text.png",
+            "text": "WSI image preprocessing. First, tissue segmentation (ie. tissue separation from white background) of\nthe WSI was performed by applying a combination of filters. Second, the WSI were tiled into image patches with\na size of 1024 x 1024 pixels, at a resolution of 40 x (0.25 um/pixel). Only the tiles containing an overall tissue\npercentage of > 80% of the total surface area within each tile were saved in PNG format. Lastly, the Vahadane\nmethod* was used for stain normalization, to convert all image tiles to a reference color space. All tiles were\nsubsequently resized to 299 x 299 pixels and used for the downstream analyses.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                648.8,
+                2217.2,
+                2318.1,
+                3061.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_11/region_3_text.png",
+            "text": "Tumor tile classification. All tumor regions in each WSI in the Stanford- HCCDET dataset were manually\nannotated by the reference pathologist (J.S.) at 10 x magnification, using Aperio ImageScope (Leica Biosystems,\nNussloch, Germany). Tiles containing both tumor and normal tissue were excluded from model development\nand evaluation. Using these ground-truth annotated WSI, we developed a CNN for automatically classifying an\nimage tile into either the tumor or non-tumor class, where the model input was a 299 x 299 pixel image tile in\nPNG format, and the output was a probability for each class. The particular CNN architecture, PathCNN, which\nwas originally proposed by Bilaloglu et al.*’ was trained and tested using the Stanford-HCCDET (n= 128,222\ntiles from 36 WSI) dataset, with 78% of WSI (100,976 tiles from 28 WSI) used for training, 11% (15,834 tiles\nfrom 4 WSI) used for validation, and 11% (11,412 tiles from 4 WSI) used as an internal test set, with no patient\noverlap between any of these three sets). We used leaky ReLU™ with negative slope 0.01 as the non-linearity. The\ndropout probability was set at 0.1. The trainable parameters were initialized using a Xavier weight initialization\nscheme*®, and updated using an Adam optimization method* with an initial learning rate of 0.001. We applied\nstepwise learning rate decay with a step size of 7 and gamma of 0.1. The number of epochs was set at 25, with\na mini-batch size of 32. A loss function of binary cross entropy was applied. Input images were normalized by\n[(image — 0.5)/0.5] before passing them to the model. We augmented the training data by randomly introducing\npositional transforms: a horizontal flip and a rotation of 0°, 90°, 180° or 270°. Additionally, we randomly adjusted\nthe hue, brightness, contrast, and saturation of the image. We used validation accuracy to select the final model.\nThe final optimized tumor versus non-tumor tile classifier was externally tested on 30 WSI (n=82,532 tiles)\nrandomly sampled from the TCGA-HCC dataset. Of note, there was no patient overlap between the Stanford-\nHCCDET and Stanford-HCC datasets, where the latter was used in the downstream development of the risk\n"
+        }
+    ]
+}

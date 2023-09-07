@@ -1,0 +1,194 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 14,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.78,
+            "box": [
+                237.0,
+                373.5,
+                1202.9,
+                786.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_01_text.png",
+            "text": "presented with elevated serum AFP levels in both cohorts (55.6%\nand 59.8%). Microvascular invasion was detected in 23.2% and\n26.8% of patients in the training and validation cohorts,\nrespectively. A majority of patients had a single lesion and\nwere diagnosed as CNLC stage Ia. More patients were\ndiagnosed with BCLC stage A than stage 0 in both cohorts.\nNo significant differences were observed for the demographic\ninformation between the two cohorts.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.58,
+            "box": [
+                236.6,
+                791.8,
+                1203.0,
+                1097.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_02_text.png",
+            "text": "After a median follow-up of 54.2 months (range, 3.0 to 64.6)\nfor the Zhongshan population, 44.4% of patients (243/547)\nsuffered tumor recurrence and 25.8% (141/547) died. The 1-,\n3-, and 5-year recurrence rates were 17.1%, 33.1%, and 48.1%,\nrespectively, and the 1-, 3-, and 5-year RFS rates were 82.2%,\n66.4%, and 51.5%, respectively.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.7,
+            "box": [
+                236.7,
+                1103.0,
+                1203.0,
+                1411.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_03_text.png",
+            "text": "In terms of the TCGA cohort, the median follow-up time\nwas 27.0 months (range, 1.1 to 115.9). A total of 38.8% of\npatients (57/147) suffered tumor recurrence and 21.1% (31/147)\ndied. The 1-, 3-, and 5-year recurrence rates were 19.2%, 45.4%,\nand 62.0%, respectively, and the 1-, 3-, and 5-year RFS rates were\n76.7%, 49.5%, and 34.5%, respectively.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.34,
+            "box": [
+                235.6,
+                1506.1,
+                968.6,
+                1621.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_04_title.png",
+            "text": "Visualization of category-based\nHCC tissue\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.82,
+            "box": [
+                236.4,
+                1674.7,
+                1202.9,
+                2243.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_05_text.png",
+            "text": "We first built the category-based model by training a\nclassification network according to HCC tissue. The\ndistribution of HCC tissues in a slide is displayed in Figure 2A.\nCorresponding histological images of the six categories before\nand after staining standardization are shown in Supplementary\nFigures S1A, B. Representative examples of the raw outputs of the\nclassification network and their postprocessing results by\nmorphology are revealed in Figure 2B, with different colors\nrepresenting distinct tissue components. A visualization of a\ntypical classification map in the TCGA cohort is shown in\nSupplementary Figure S1C.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                236.2,
+                2249.1,
+                1203.3,
+                2920.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_06_text.png",
+            "text": "After comprehensive training, we used the testing dataset to\nverify the performance of the computation network, which\nrevealed an overall accuracy of 94.17%. Specifically, the\naccuracy values for normal liver tissue and tumor regions,\nshown in the confusion matrix (Figure 2C), were 0.984 and\n0.950, respectively. A precision-recall (PR) curve rather than an\nROC curve was applied to evaluate the model to minimize the\nimbalance. The area under the curve (AUC) values of each tissue\ntype, except for the portal area, in our classification model\nexceeded 0.920 with the highest in tumor region classification\n(AUC= 0.997) (Figure 2D). Figure 2E shows the t-SNE\nvisualization of the classification results. One thousand tiles\nwere randomly selected for each tissue category.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.77,
+            "box": [
+                236.6,
+                2925.6,
+                1202.5,
+                3128.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_07_text.png",
+            "text": "We then used class activation mapping (CAM) (30) of the\nlast convolution layer to visualize the outputs of each tissue\ncategory, where redder and bluer heatmaps indicated regions\nwith higher or lower interest, respectively (Figure 2F).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 99.58,
+            "box": [
+                1289.5,
+                370.1,
+                2231.5,
+                484.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_08_title.png",
+            "text": "Signature extraction and construction of\nprognostic scores\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                1288.6,
+                538.0,
+                2254.8,
+                898.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_09_text.png",
+            "text": "Next, we analyzed all 416 WSIs in the training cohort using\nthe classification network and extracted pathological signatures\nfrom tiles of each type of HCC tissue. A total of 133 signatures\nand their coefficients were derived from LASSO Cox analysis\n(Supplementary Figure $2). Univariable Cox analysis of\nsignatures that had a significant impact on RFS is shown in\nSupplementary Table S2.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.84,
+            "box": [
+                1287.8,
+                903.5,
+                2255.0,
+                1784.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_10_text.png",
+            "text": "HS and CS were then obtained by the sum of products by\nindexes and coefficients (details are provided in the\nSupplementary Methods). A calibration curve was constructed\nto evaluate the prediction accuracy. HS showed great concordance\nbetween the predicted and observed recurrence probabilities in the\ntraining, validation and TCGA cohorts (Figures 3A-C). Similarly,\nCS performed well in the training and validation cohorts\n(Supplementary Figure S3). To further compare the prediction\nreliability between the new scores and traditional biomarkers and\nstages, we carried out ROC curve analysis based on the cases in the\ntraining and validation cohorts. In terms of 1-year RFS, the AUC\nvalues of HS and CS were 0.837 and 0.857, respectively, much\nhigher than those of clinical indicators such as AFP or liver\ncirrhosis, and the CNLC or BCLC staging systems (Figure 3D).\nThe AUC values of HS and CS reached 0.857 and 0.852 for 3-year\nRES prediction and 0.826 and 0.845 for 5-year RFS prediction,\nrespectively (Figures 3E, F).\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 99.24,
+            "box": [
+                1289.1,
+                1850.3,
+                1953.5,
+                1965.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_11_title.png",
+            "text": "Comparison of HS and CS in\npredictive accuracy\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.84,
+            "box": [
+                1287.6,
+                2019.6,
+                2254.6,
+                2798.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_12_text.png",
+            "text": "The C-indexes of HS, CS and clinical signatures were calculated\nto estimate the possibility of using histological textures as a\nsubstitute for clinical indicators. Compared to the clinical\nsignatures, HS and CS presented higher C-indexes in the\nZhongshan datasets (Table 1). Specifically, the C-indexes of HS\nwere 0.804, 0.739 and 0.708 in the training, validation and TCGA\ncohorts, respectively. Both HS and CS performed better than clinical\nsignatures in RFS prediction (Supplementary Figure S4). Ultimately,\nROC curves in the two Zhongshan datasets showed no significant\ndifferences between HS and CS for 1-year, 3-year, or 5-year RFS\nprediction (Supplementary Figure $5, Supplementary Table S3).\nThe NRI elucidated the quantitative difference between HS and CS\nin TTR prediction (Supplementary Figure S6). Subsequently, the CS\nmodel was superior to HS in all three periods with a subtle\nadvantage, but statistical significance was not reached (p> 0.1).\n"
+        },
+        {
+            "idx": 13,
+            "thing": "title",
+            "score": 99.44,
+            "box": [
+                1288.5,
+                2860.6,
+                1926.7,
+                2974.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_13_title.png",
+            "text": "Survival prediction of novel\npathological predictors\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.33,
+            "box": [
+                1287.5,
+                3030.1,
+                2252.4,
+                3129.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_14_text.png",
+            "text": "Optimal cutoff values for HS and CS were determined using the\n“survminer” package (31). All the patients were then divided into a\n"
+        }
+    ]
+}

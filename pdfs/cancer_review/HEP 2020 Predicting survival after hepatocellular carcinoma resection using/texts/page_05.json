@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_05.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 10,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 49.19,
+            "box": [
+                253.8,
+                262.5,
+                777.9,
+                331.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_05/region_01_title.png",
+            "text": "Material and Methods\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 83.51,
+            "box": [
+                260.8,
+                375.3,
+                746.0,
+                443.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_05/region_02_title.png",
+            "text": "Patients and samples\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 88.5,
+            "box": [
+                250.0,
+                484.8,
+                2246.3,
+                1103.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_05/region_03_text.png",
+            "text": "The discovery set consisted of patients treated by surgical resection at Henri Mondor University\nHospital between 2004 and 2016. The independent validation set consisted of patients from The\nCancer Genome Atlas (TCGA) public dataset. The inclusion criteria for the two cohorts were as\nfollows: patients treated by surgical resection without prior anti-tumor treatment, available follow-\nup data, an unequivocal diagnosis of HCC (exclusion of cases with features suggestive of\ncombined hepatocellular-cholangiocarcinoma), available histological slides of formalin-fixed\nparaffin-embedded material, and an absence of extrahepatic metastatic disease at the time of\nsurgery (Figure 1). The clinical endpoint was overall survival (time from surgery to death).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 81.92,
+            "box": [
+                313.9,
+                1147.9,
+                688.9,
+                1211.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_05/region_04_title.png",
+            "text": "1. Discovery set\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 86.09,
+            "box": [
+                250.1,
+                1253.1,
+                2246.5,
+                1948.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_05/region_05_text.png",
+            "text": "One or two representative digital slides of hematein-eosin-saffron (HES)-stained sections were\navailable for each HCC case (NDPI format, 40 x magnification, total of 390 slides from 206\ntumors). These slides included tissues from both the HCC and the adjacent surrounding liver\ntissues. The tumor and non-tumor areas were annotated by an expert liver pathologist (JC).\nClinical (age, sex, risk factors for liver disease, disease stage), biological (pre-operative serum\nalpha-fetoprotein (AFP) serum level) and pathological (tumor size, number and differentiation,\nEdmondson-Steiner grade, vascular invasion, satellite nodules, fibrosis stage according to\nMETAVIR) features were retrieved from medical records. Informed consent was obtained for\neach patient and the study was approved by a review board.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 72.98,
+            "box": [
+                322.6,
+                1987.1,
+                691.3,
+                2051.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_05/region_06_title.png",
+            "text": "2. Validation set\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 83.52,
+            "box": [
+                250.2,
+                2091.2,
+                2247.3,
+                2632.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_05/region_07_text.png",
+            "text": "We used The Cancer Genome Atlas database as an independent validation set for testing the\nrobustness of our models. We applied the same inclusion criteria. Clinical, biological,\npathological data and WSIs were downloaded from the website (https://www.cbioportal.org/study/\nsummary?id=lihc_tcga).(9-11) In total, 342 WSls from 328 patients were available for analysis\n(several slides were available for some patients). Slides from this series had been subjected to\ndifferent staining and scanning protocols (SVS format) from those in our discovery set (the TCGA\nslides were collected from different centers).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 91.89,
+            "box": [
+                252.7,
+                2777.1,
+                1588.2,
+                2843.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_05/region_08_title.png",
+            "text": "Convolutional neural networks for predicting patient survival\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 75.85,
+            "box": [
+                249.7,
+                2883.9,
+                2248.3,
+                3031.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_05/region_09_text.png",
+            "text": "We used two deep-learning algorithms, \"CHOWDER\" and \"SCHMOWDER'\", which were\nspecifically designed for the processing of WSIs. CHOWDER is a neural network developed\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 62.01,
+            "box": [
+                248.6,
+                3294.6,
+                1398.6,
+                3362.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_05/region_10_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

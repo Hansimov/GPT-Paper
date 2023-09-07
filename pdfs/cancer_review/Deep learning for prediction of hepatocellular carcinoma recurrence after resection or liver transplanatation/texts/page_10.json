@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.89,
+            "box": [
+                213.5,
+                242.7,
+                1205.6,
+                1511.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_10/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                212.1,
+                1582.1,
+                1214.8,
+                1840.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_10/region_2_text.png",
+            "text": "Fig.5 Performance of different risk factors in tumor recurrence after\nresection. The time-dependent accuracy (a) and AUC value (b) for\ndifferent criteria based on tumor recurrence. NRI (c) according to\ndifferent factors compared with the Stage_AJCC. Stage AJCC: the\nAmerican Joint Committee on Cancer, TIL: tumor-infiltrating lym-\nphocyte\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                212.7,
+                1926.4,
+                1216.3,
+                2662.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_10/region_3_text.png",
+            "text": "It is well established that molecular and/or genetic fea-\ntures can predict the survival of patients with HCC [34,\n35]. Chaudhary et al. had adopted deep-learning methods\nfor RNA sequencing and methylation data from the TCGA\ndatabase and successfully predicted HCC survival in multi-\nple patient cohorts. High-throughput gene expression profil-\ning/sequencing techniques are restrictive due to high cost\nand poor reproducibility clinically. The proposed method\nuses merely the histological slides that are routinely avail-\nable at surgical treatment centers. We provide additional\nevidence suggesting that CNNs learning from pathology\nslides will improve precision medicine. Indeed, our mod-\nels outperformed all other common clinical or pathologi-\ncal features for predicting survival. Pathology images from\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1275.8,
+                229.5,
+                2280.8,
+                2058.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_10/region_4_text.png",
+            "text": "centers around the world can be accumulated, which would\nfurther improve the performance of the current deep learn-\ning model. With the well-developed prediction models, they\nwould likely become more widely applied to support clini-\ncal decision-making, and can benefit patients by stratifying\nrisks and guiding treatment options, as well as by avoiding\nineffective or unnecessary treatments. Additionally, the pro-\ncessing and computing time in this approach is brief enough\nto avoid delay in therapy. Therefore, this method facilitates\nthe easy application of the risk stratification system clini-\ncally. However, this study is limited by the lack of interpret-\nability. CNNs are generally seen as “black boxes” [36]. This\nis particularly true for image analysis, and the limitation of\nthis phenomenon is an active area of research. Data are pro-\ncessed through complex layers of CNNs, and it is difficult to\nidentify the most relevant features used by trained models\nfor final classification. We extracted the most pertinent tiles\nand did the subsequent analysis. We show that the classifi-\ncation obtained is at least partly based on known pathologi-\ncal features associated with the prognosis of tumor, such as\nthe presence of stroma, a high degree of cytological atypia,\nnuclear hyperchromasia, and a lack of immune cell infiltra-\ntion [37]. However, these features are just what pathologists\nknow strongly linked to a high risk of poor survival. We\nthus believe that some other important features which can-\nnot be recognized or microstructural features that cannot be\nconsistently identified by the naked eye, but these features\nwhich could potentially be reflective of tile classification\nmay be ignored. The so-called high risk or low risk are the\noverall output result of tiles via considering all risk features\non tiles learned by CNNs. That maybe can explain why low-\nrisk tiles contain some high-risk features, although the ratio\nis small. The proposed deep learning model detects not all\nbut the majority of established histological patterns related\nto recurrence in HCC patients.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1275.7,
+                2052.1,
+                2280.6,
+                2578.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_10/region_5_text.png",
+            "text": "To sum up, we successfully built a prognostic model for\nclinical use based on deep learning approaches applied on\nhistological slides from patients. The model was widely\nassessed among independent patient populations receiving\ndifferent types of treatments and gave consistently excellent\nresults across the classical clinical, biological, and patho-\nlogical features. The proposed CNN-based approach can\npotentially improve patient prognosis evaluation and help\nguide clinicians in their decision-making process about the\nuse of adjuvant therapy on their patients.\n"
+        }
+    ]
+}

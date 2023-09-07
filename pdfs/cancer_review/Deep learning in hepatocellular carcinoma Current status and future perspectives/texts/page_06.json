@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_06.png",
+        "image_width": 2480,
+        "image_height": 3509,
+        "regions_num": 6,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                808.6,
+                228.0,
+                2259.9,
+                510.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_1_text.png",
+            "text": "treated with TACE, with a higher score predicting poor prognosis [hazard ratio (HR):\n3.01; 95% cumulative incidence (CI): 2.02-4.50][53]. Finally, Zhang et al[54] built a DL-\nbased model predicting overall survival using CT images from 201 patients with\nunresectable HCC treated with TACE and sorafenib, which achieved superior\npredictive performance compared to the clinical nomogram (C-index of 0.730 vs 0.679,\nP = 0.023).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.03,
+            "box": [
+                808.1,
+                636.0,
+                1166.1,
+                700.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_2_title.png",
+            "text": "HCC PATHOLOGY\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                808.1,
+                722.6,
+                2260.6,
+                1751.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_3_text.png",
+            "text": "Automated interpretation of histopathologic images from liver biopsy is another major\narea of medical imaging in patients with HCC where DL can be utilized. In addition to\neffectively replicating the human pathologists’ jobs of diagnosing and grading HCC,\nDL models can help identify and analyze additional complex imaging features and\npatterns which are related to specific mutations and disease prognosis. Lin et al[55]\nused images from multiphoton microscopy of 113 HCC patients to train a CNN with\nover 90% accuracy for determining HCC differentiation. Kiani et al[56] developed a\nCNN-based “Liver Cancer Assistant” which accurately differentiated hematoxylin and\neosin (H&E) images of HCC and cholangiocarcinoma and helped improve the\ndiagnostic performance of nine pathologists. Liao et al[57] used TCGA dataset for\ntraining a CNN that distinguished HCC from adjacent normal tissues with perfect\nperformance (AUC: 1.00) and predicted the presence of specific somatic mutations\nwith AUCs over 0.70. Wang et al[58] trained a CNN for automated segmentation and\nclassification of individual nuclei at single-cell levels on H&E-stained tissue sections of\nHCC tumors from TCGA, and performed feature extraction to identify 246 quan-\ntitative image features. Then, a clustering analysis by an unsupervised learning\napproach identified three distinct histologic subtypes which were independent of\npreviously established genomic clusters and had different prognosis. Chen et al[59]\ntrained a CNN for automatic grading of HCC tumors on histopathological H&E\nimages, which showed 96% accuracy for benign and malignant classification and\n89.6% accuracy for the degree of tumor differentiation, and predicted the presence of\nspecific genetic mutations.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                808.1,
+                1747.8,
+                2260.1,
+                2402.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_4_text.png",
+            "text": "Lu et al[60] applied three pre-trained CNN models to extract imaging features from\nHCC histopathology and performed Cox proportional hazards analysis to predict\noverall survival and disease-free survival, and observed significant correlations\nbetween the imaging features and established biological pathways. Saillard et al[61]\nused two DL algorithms based on whole-side digitized histological slides from 194\npatients with HCC to predict the survival of patients treated by surgical resection.\nWhen tested on an independent validation set from TCGA, both DL models had a\nhigher discriminatory power than a score combining all baseline variables associated\nwith survival. Shi et al[62] built an interpretable DL framework using pathologic\nimages from 1445 patients with HCC and developed a “tumor risk score” which\nshowed prognostic performances independent of and superior to clinical staging\nsystems and stratified patients into five groups of different prognosis. A recent study\nby Yamashita et al[63] developed a histopathology-based DL based system which\nstratified patients with risk scores for postsurgical recurrence of HCC.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 98.86,
+            "box": [
+                807.2,
+                2526.9,
+                1210.7,
+                2591.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_5_title.png",
+            "text": "FUTURE DIRECTION\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                808.3,
+                2613.5,
+                2259.1,
+                3314.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_6_text.png",
+            "text": "There are several key issues to address before DL-based AI models can be universally\nimplemented in real world clinical practice settings. Due to their complexity, DL\nmodels are traditionally considered to be “black-box” models, meaning humans\ncannot understand how the DL models make their predictions. Interpretability of the\nDL models are crucial for physicians to accept and trust them in everyday clinical\npractice, and for troubleshooting and improving the models for rare cases. This is\nbeing addressed by recent developments in various “explainable AI” techniques but\ncurrently there is no clear consensus on the best methodology. Another potential\nlimitation is the generalizability of the individual DL algorithms. Concerns have been\nraised that AI algorithms developed at highly specialized academic medical centers\nusing their own patients’ data may over-represent certain groups of patients and not\naccurately reflect the real-world population of patients seen at local community\nhospitals. Finally, AI models, like other prediction models, are often not publicly\navailable, limiting external validation. Independent validation of the proposed model\nand comparison to old models are as important as deriving new models. Large-scale,\n"
+        }
+    ]
+}

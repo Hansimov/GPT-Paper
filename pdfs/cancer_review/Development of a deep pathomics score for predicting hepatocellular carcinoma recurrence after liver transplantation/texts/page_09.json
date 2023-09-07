@@ -1,0 +1,194 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_09.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 14,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                212.2,
+                230.0,
+                1216.9,
+                548.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_01_text.png",
+            "text": "routine antiviral therapy (n = 304) before or after LT.\nPatients without regular treatment were characterized by\na higher recurrence rate (p = 0.024, Fig. S6A) and a poorer\nRFS (p=0.010, Fig. S6B). Furthermore, lower recurrence\nrisk was observed in the patients with low DPS in both\ntreatment and non-treatment groups (Fig. S6C—D).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.54,
+            "box": [
+                212.2,
+                592.2,
+                1155.4,
+                648.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_02_title.png",
+            "text": "Visualization of the immune landscape in LT cases\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                212.6,
+                698.8,
+                1215.7,
+                1224.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_03_text.png",
+            "text": "Based on the significance of immune cells in recurrence\nprediction, multiplex immunofluorescence was performed\nto explore the immune microenvironment in 16 randomly\nselected patients (8 suffered recurrence within 18 months\nand 8 were without recurrence) from LT cohort. Consecu-\ntive slicing was conducted to maximally maintain the same\ncellular distribution between the H&E-stained and immu-\nnofluorescence slides. Abundant immune cell infiltration in\nthe stroma was revealed by both AI recognition and mIF\nstaining (Fig. 5a).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                212.9,
+                1220.1,
+                1216.2,
+                1746.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_04_text.png",
+            "text": "Typical immunofluorescence images are shown in\nFig. 5b, c. The number of immune cells was derived\naccording to the colocalization of stained markers: Treg\ncells (CD3*CD4*FOXP3\"*), natural killer cells (NK\ncells, CD3~CD16*CD56*), natural killer T cells (NKT\ncells, CD3+*CD56*), CD8*T cell (CD3* CD8*), CD4*T\nCells (CD3+ CD4*), Memory T cells (CD45RO*),\nB cells (CD20*), conventional dendrite cells (cDCs,\nCD1ict), monocytes (CD11b*), macrophages (CD68*),\nCD11b*CD68* cells, and neutrophils (MPO*).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                212.8,
+                1740.5,
+                1215.8,
+                2058.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_05_text.png",
+            "text": "The intratumoral immune landscape of HCC was demon-\nstrated (Fig. 5d). In the HCC nests, macrophages accounted\nfor the largest proportion of immune cells, followed by\nCD4* T cells, CD8* T cells and monocytes. Great interpa-\ntient heterogeneity existed in the composition of the immune\ncells (Fig. Se).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                212.8,
+                2053.1,
+                1217.0,
+                2475.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_06_text.png",
+            "text": "The disparities of immune infiltration among tumor nests,\ninvasive margins and normal liver tissues were further com-\npared (Fig. 5f, Fig. S7). A higher density of Treg cells and\nCD4* T cells was observed in the TN and IM than in the\nNLT. NKT cells and B cells aggregated the most in the IM.\nCompared to IM and NLT, less infiltration of NK cells was\ndetected in the TN. The other 7 kinds of immune cells did\nnot differ statistically among the TN, IM and NLT.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 99.65,
+            "box": [
+                212.2,
+                2517.9,
+                1015.6,
+                2626.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_07_title.png",
+            "text": "Exploration of recurrence related immune\nbiomarkers\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                212.7,
+                2676.5,
+                1217.4,
+                2995.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_08_text.png",
+            "text": "The heatmap of immune biomarkers combined with clini-\ncal characteristics is shown in Fig. 6a. The none-recurrence\ngroup was characterized by a clustering of NK cells and\ncDCs, while a clustering of monocytes and macrophages\nwas observed in the patients with early HCC recurrence. To\nquantitatively investigate the correlation between immune\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1275.7,
+                229.2,
+                2278.8,
+                652.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_09_text.png",
+            "text": "infiltration and recurrence risk, a comparison of immune cell\ndensity between the non-recurrence group and early-recur-\nrence group was performed. The density of intratumoral NK\ncells in the non-recurrence group was higher than that in the\nearly-recurrence group (p=0.01, Fig. 6b). A similar phe-\nnomenon was also observed in the IM and NLT, although\nstatistical significance was not reached. Typical colocaliza-\ntion of CD56 and CD16 is shown in Fig. 6c.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1276.0,
+                646.2,
+                2280.0,
+                1900.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_10_text.png",
+            "text": "The corrplot of intratumoral immune infiltration revealed\nthat NK cells probably had a close relationship with CD8tT\ncells, CD4*T cells, cDCs, Memory T cells and Treg cells\n(Fig. 6d). Intratumoral NK cells were positively corre-\nlated with cDCs and CD8\"T cells in terms of cell density\n(Fig. 6e), potentially indicating increasing antigen presen-\ntation between NK cells and cDC in tumor microenviron-\nment (TME) of LT cases. Since the interaction between NK\ncells and CD8'T cells elicit specific cytolytic outcomes [31,\n32], the spatial proximity of these two cell types was fur-\nther explored by counting the closest distance between the\nnuclear center of the cells [33] (distances over 300 tm were\neliminated). The phenotype map and proximity distance are\nshown in Fig. 6f. Overall, an average closest distance of\n122.39 ym between NK cells and CD8*T cells was measured\n(Fig. 6g). Additionally, CD8*T cells were more proximal\nto NK cells in the non-recurrence subgroup than the early-\nrecurrence subgroup, with an average distance of 114.73 um\nand 155.39 ym, respectively (Fig. 6h, i). Furthermore, the\ndistribution pattern of distance tended to be discrete in the\nearly-recurrence subgroup. These results suggested that the\ninteraction between innate and adaptive immune systems\nestablished stronger cytotoxicity against tumor cells, leading\nto a stronger suppression of recurrence.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 99.5,
+            "box": [
+                1275.0,
+                1946.1,
+                2125.1,
+                2001.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_11_title.png",
+            "text": "Evaluation of immunosuppressive molecules\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1275.5,
+                2054.1,
+                2279.1,
+                2265.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_12_text.png",
+            "text": "Since immune therapy has pioneered a new era of antitu-\nmoral systematic treatment [34], the expression of immune\ncheckpoint molecules has been great significance to the\nprognosis of liver cancer [35].\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1275.4,
+                2260.0,
+                2279.6,
+                2631.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_13_text.png",
+            "text": "Typical mIF images of six immunosuppressive molecules\nare shown in Fig. S8A. A correlation heatmap revealed that\nan enrichment of CD8*T cells with high expression of\nCTLA4t, LAG-3t, PD-L1* and PD-1* cells was observed\nin the early-recurrence subgroup (Fig. S8B, C), indicating\nan inhibitory immunological microenvironment in the early-\nrecurrent population.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1275.9,
+                2624.2,
+                2277.9,
+                2839.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_09/region_14_text.png",
+            "text": "The quantitative comparison also showed a higher infil-\ntration of immune checkpoints in the early-recurrence sub-\ngroup including PD-L1, LAG-3, and CTLA4 although no\nstatistical significance was reached (Fig. S8D).\n"
+        }
+    ]
+}

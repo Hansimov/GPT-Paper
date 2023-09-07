@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_09.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 4,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                489.9,
+                361.8,
+                2000.3,
+                1005.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_09/region_1_text.png",
+            "text": "utilized Ls or Lc, all 100 bottleneck features were used to group patients as a part of the\ntraining process of the autoencoder. For BCE, MSE, and Lpg their cluster labels were cre-\nated by clustering the relevant features using the KMeans function from Scikit-learn (16)\n(full algorithm with kmeans-+-+ initialisation). For Lc and Lesc the group assignments\nwere determined using the final centroids after the last training iteration. The quality\nof clusters was assessed using the Silhouette score, estimated using the silhouette_score\nfunction from Scikit-learn [16]. The Silhouette score can range from 1 to — 1 where 1 is\nthe best score and indicates confidence in sample assignment to a cluster. The difference\nin survival between clusters was measured using a survival analysis with the pairwise_\nlogrank_test function from lifelines [19]. The KaplanMeierFitter function from lifelines\n[19] was used to produce Kaplan Meier survival curves for the clusters.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                492.7,
+                1016.4,
+                1998.7,
+                2538.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_09/region_2_text.png",
+            "text": "Using cluster labels determined for each model in each run, the most important omics\nfeatures in differentiating clusters were identified (Fig. 3). Before identifying the key fea-\ntures differentiating clusters, the three omics sets initially underwent a two-step scaling\nprocess, like that used in the baseline [6]. First, all omics types underwent median norm\nscaling. RNA-seq and methylation then underwent robust scaling using the RobustScaler\nfrom Scikit-learn [16], with miRNA undergoing unit norm scaling. An analysis of vari-\nance (ANOVA) was then performed with the f_oneway function from scipy [20]. Ran-\ndomness introduced by factors such as the initialisation of weights could lead to slightly\ndifferent cluster labels being identified and therefore different top features being selected\neach time the pipeline is run. For this reason, the entire pipeline was run 10 times for\neach model, with clusters being evaluated and top features derived. To derive top fea-\ntures from the ANOVA, the P-values were sorted from smallest to largest for each omics\ntype. Of the top 10% of features, only those that had a significant P-value following cor-\nrection for multiple testing of ten runs using Bonferroni (P-value < 0.005) were selected.\nFor RNA-seq, 10% of features before filtering for significance was approximately 1561,\nfor methylation this was approximately 1899 and for miRNA this was approximately 42.\nThe top features identified by each of the ten runs of the different models were com-\npared, and frequently identified features in six, eight and all ten runs quantified. While\nsome features may have been identified by a small number of runs in a number of losses,\nthe focus was on those features that were consistently identified. Thus, a feature was des-\nignated as robust if it was consistently identified i.e. it appeared as a top feature in all 10\nruns for a loss. The robust omics features that were consistently identified as top features\nfor each loss were compared to see if there were any features consistently detected by\nLesc that were not consistently identified by the other losses. The consistently identified\nomics features from each loss were also compared with the top omics features identified\nby the baseline paper’s ANOVA as these differed from the recreation in this work.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.79,
+            "box": [
+                488.9,
+                2627.9,
+                1797.5,
+                2673.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_09/region_3_title.png",
+            "text": "Gene-enrichment and functional annotation analysis and prognostic validation\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                489.8,
+                2683.4,
+                1999.1,
+                3032.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_09/region_4_text.png",
+            "text": "A Gene-enrichment and Functional Annotation Analysis (GEFA) was conducted\nusing only those mRNA features consistently identified by Lysc. GEFA was imple-\nmented with DAVID, the online bioinformatics portal [21]. Entrez Ids were converted\nto gene symbols using DAVID and a KEGG pathway analysis was performed using\nsignificant mRNA features that were successfully mapped. An EASE score thresh-\nold of 0.10 was used for significance. In each omics type, the consistent top features\n"
+        }
+    ]
+}

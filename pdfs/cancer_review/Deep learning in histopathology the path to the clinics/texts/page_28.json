@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_28.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_28.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 28
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 69.05,
+            "box": [
+                299.3,
+                300.8,
+                2183.1,
+                441.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_28/region_1_text.png",
+            "text": "[160] Zhou, C. Et al. Histopathology classification and localization of colorectal cancer using global\nlabels by weakly supervised deep learning. Comput Med Imaging Graph 88, 101861 (2021).\n"
+        }
+    ]
+}

@@ -1,0 +1,194 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 14,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 92.69,
+            "box": [
+                179.5,
+                227.8,
+                1210.4,
+                2619.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_01_list.png",
+            "text": "32. Verhaak, R. G. W. et al. Integrated genomic analysis identifies clinically\nrelevant subtypes of glioblastoma characterized by abnormalities in\nPDGFRA, IDH1, EGFR, and NF1. Cancer Cell 17, 98-110 (2010).\n\n33. Kebebew, E. et al. The prevalence and prognostic value of BRAF mutation in\nthyroid cancer. Ann. Surg. 246, 466-470 (2007).\n\n34. O'Hara, A. J. & Bell, D. W. The genomics and genetics of endometrial cancer.\nAdv. Genomics Genet. 2012, 33-47 (2012).\n\n35. Thorsson, V. et al. The immune landscape of cancer. Immunity 48,\n812-830.e14 (2018).\n\n36. Nawaz, S., Heindl, A., Koelble, K. & Yuan, Y. Beyond immune density:\ncritical role of spatial heterogeneity in estrogen receptor-negative breast\ncancer. Mod. Pathol. 28, 766-777 (2015).\n\n37. Cabrita, R. et al. Tertiary lymphoid structures improve immunotherapy and\nsurvival in melanoma. Nature 577, 561-565 (2020).\n\n38. Pollheimer, M. J. et al. Tumor necrosis is a new promising prognostic factor\nin colorectal cancer. Hum. Pathol. 41, 1749-1757 (2010).\n\n39. Jogi, A., Vaapil, M., Johansson, M. & Pahlman, S. Cancer cell differentiation\nheterogeneity and aggressive behavior in solid tumors. Ups. J. Med. Sci. 117,\n217-224 (2012).\n\n40. Gooden, M. J. M., de Bock, G. H., Leffers, N., Daemen, T. & Nijman, H. W.\nThe prognostic influence of tumour-infiltrating lymphocytes in cancer: a\nsystematic review with meta-analysis. Br. J. Cancer 105, 93-103 (2011).\n\n41. Curtis, C. et al. The genomic and transcriptomic architecture of 2,000 breast\ntumours reveals novel subgroups. Nature 486, 346-352 (2012).\n\n42. Nik-Zainal, S. et al. Landscape of somatic mutations in 560 breast cancer\nwhole-genome sequences. Nature 534, 47-54 (2016).\n\n43. Stahl, P. L. et al. Visualization and analysis of gene expression in tissue\nsections by spatial transcriptomics. Science 353, 78-82 (2016).\n\n44. Bayraktar, O. A., Bartels, T., Polioudakis, D. & Holmqvist, S. Single-cell\nin situ transcriptomic map of astrocyte cortical layer diversity. Preprint at\nbioRxiv https://doi.org/10.1101/432104 (2018).\n\n45. Ke, R. et al. In situ sequencing for RNA analysis in preserved tissue and cells.\nNat. Methods 10, 857-860 (2013).\n\n46. McInnes, L., Healy, J. & Melville, J. UMAP: uniform manifold approximation\nand projection for dimension reduction. Preprint at https://arxiv.org/\nabs/1802.03426 (2018).\n\n47. Elston, R. C. On Fisher’s method of combining P-values. Biom. J. 33,\n339-345 (1991).\n\n48. Wilcoxon, FE. Individual comparisons by ranking methods. Biom. Bull. 1,\n80-83 (1945).\n\n49. Mann, H. B. & Whitney, D. R. On a test of whether one of two random\nvariables is stochastically larger than the other. Ann. Math. Stat.\n\n18, 50-60 (1947).\n\n50. Benjamini, Y. & Hochberg, Y. Controlling the false discovery rate: a practical\nand powerful approach to multiple testing. J. R. Stat. Soc. B Stat. Methodol.\n57, 289-300 (1995).\n\n51. Best, D. J. & Roberts, D. E. Algorithm AS 89: the upper tail probabilities of\nSpearman's rho. J. R. Stat. Soc. C Appl. Stat. 24, 377-379 (1975).\n\n52. Harrell, F. E. Jr, Califf, R. M., Pryor, D. B., Lee, K. L. & Rosati, R. A.\nEvaluating the yield of medical tests. J. Am. Med. Assoc. 247,\n\n2543-2546 (1982).\n\n53. Grossman, R. L. et al. Toward a shared vision for cancer genomic data.\nN. Engl. J. Med. 375, 1109-1112 (2016).\n\n54. Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J. & Wojna, Z. Rethinking the\ninception architecture for computer vision. In Proc. IEEE Conference on\nComputer Vision and Pattern Recognition 2818-2826 (IEEE, 2016).\n\n55. Tellez, D. et al. Quantifying the effects of data augmentation and stain color\nnormalization in convolutional neural networks for computational pathology.\nPreprint at https://arxiv.org/abs/1902.06543 (2019).\n\n56. Friedman, J., Hastie, T. & Tibshirani, R. Regularization paths for generalized\nlinear models via coordinate descent. J. Stat. Softw. 33, 1-22 (2010).\n\n57. LeDell, E., Petersen, M. & van der Laan, M. Computationally efficient\nconfidence intervals for cross-validated area under the ROC curve estimates.\nElectron. J. Stat. 9, 1583-1607 (2015).\n\n58. Fieller, E. C., Hartley, H. O. & Pearson, E. S. Tests for rank correlation\ncoefficients. I. Biometrika 44, 470-481 (1957).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 95.17,
+            "box": [
+                1265.2,
+                229.9,
+                2287.3,
+                1169.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_02_list.png",
+            "text": "59. Martincorena, I. et al. Universal patterns of selection in cancer and somatic\ntissues. Cell 171, 1029-1041.e21 (2017).\n\n60. Van Loo, P. et al. Allele-specific copy number analysis of tumors. Proc. Natl\nAcad. Sci. USA 107, 16910-16915 (2010).\n\n61. Taylor, A. M. et al. Genomic and functional approaches to understanding\ncancer aneuploidy. Cancer Cell 33, 676-689.e3 (2018).\n\n62. Subramanian, A. et al. Gene set enrichment analysis: a knowledge-based\napproach for interpreting genome-wide expression profiles. Proc. Natl Acad.\nSci. USA 102, 15545-15550 (2005).\n\n63. Croft, D. et al. The Reactome Pathway Knowledgebase. Nucleic Acids Res. 42,\nD472-D477 (2014).\n\n64. Cox, D. R. in Breakthroughs in Statistics (eds Kotz, S. & Johnson, N. L.)\n527-541 (Springer, 1992).\n\n65. Simon, N., Friedman, J., Hastie, T. & Tibshirani, R. Regularization paths for\nCox’s proportional hazards model via coordinate descent. J. Stat. Softw. 39,\n1-13 (2011).\n\n66. Singer, Y. & Duchi, J. C. Efficient learning using forward-backward splitting.\nAdv. Neural Inf. Proc. Syst. 22, 495-503 (2009).\n\n67. Snoek, J., Larochelle, H. & Adams, R. P. Practical Bayesian optimization\nof machine learning algorithms. Adv. Neural Inf. Proc. Syst. 25,\n\n2951-2959 (2012).\n\n68. Dentro, S. C. et al. Portraits of genetic intra-tumour heterogeneity and\nsubclonal selection across cancer types. Preprint at bioRxiv https://doi.\norg/10.1101/312041 (2018).\n\n69. Caicedo, J. C. et al. Nucleus segmentation across imaging experiments: the\n2018 Data Science Bowl. Nat. Methods 16, 1247-1253 (2019).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 97.52,
+            "box": [
+                1266.3,
+                1211.1,
+                1613.8,
+                1257.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_03_title.png",
+            "text": "Acknowledgements\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.73,
+            "box": [
+                1264.6,
+                1259.2,
+                2299.5,
+                1582.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_04_text.png",
+            "text": "A.WJ. and M.G. are supported by grant NNF170C0027594 from the Novo Nordisk\nFoundation. L.M. is a recipient of a Cancer Research UK Clinical PhD Fellowship\n(C20/A20917). L.R.Y. is funded by a Wellcome Trust Clinical Research Career\nDevelopment Fellowship (214584/Z/18/Z). The results shown here are in part based on\ndata generated by the TCGA Research Network (https://www.cancer.gov/tcga). We thank\nC. Caldas, $.-E Chin, Y. Yuan and the METABRIC consortium, as well as M. Stratton,\n\nM. Van de Vijver and the BASIS consortium for assistance and sharing data. We also\nthank all members of the Gerstung laboratory, I, Martincorena and A. Lawson for critical\ncomments on the manuscript.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 98.1,
+            "box": [
+                1266.1,
+                1623.9,
+                1635.4,
+                1671.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_05_title.png",
+            "text": "Author contributions\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                1265.0,
+                1672.6,
+                2290.5,
+                2031.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_06_text.png",
+            "text": "Y.F, retrieved and quality controlled all images, developed and trained the deep learning\nalgorithms, performed statistical tests for genomic and molecular association and\ncreated all of the figures. A.W. performed the survival analysis, reviewed the statistical\nprocedures and applied multiple testing adjustments. R.V.T. and M.G. extended the\nInception-V4 algorithm. S.G. provided copy number and annotated mutation data. H.V.\nextracted mutational signature data. A.S. performed nuclei segmentation. L.R.Y. curated\nvalidation data. L.M. oversaw the histopathology review, including blinded assessment\nof TILs, with help from M.J.-L. M.G. conceived of and supervised the study. Y.E, A.WJ.\nand M.G. wrote the manuscript with input from L.M. and all other authors, who also\napproved the manuscript.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 96.88,
+            "box": [
+                1265.7,
+                2073.8,
+                1623.1,
+                2121.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_07_title.png",
+            "text": "Competing interests\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 97.82,
+            "box": [
+                1267.4,
+                2123.2,
+                1774.8,
+                2156.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_08_text.png",
+            "text": "The authors declare no competing interests.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 97.25,
+            "box": [
+                1266.4,
+                2219.7,
+                1666.7,
+                2266.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_09_title.png",
+            "text": "Additional information\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 51.91,
+            "box": [
+                1261.8,
+                2270.1,
+                2279.0,
+                2384.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_10_text.png",
+            "text": "Extended data is available for this paper at https://doi.org/10.1038/s43018-020-0085-8.\nSupplementary information is available for this paper at https://doi.org/10.1038/\ns43018-020-0085-8.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 92.61,
+            "box": [
+                1264.4,
+                2401.5,
+                2127.2,
+                2433.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_11_text.png",
+            "text": "Correspondence and requests for materials should be addressed to M.G.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 90.97,
+            "box": [
+                1265.5,
+                2451.5,
+                2203.8,
+                2482.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_12_text.png",
+            "text": "Reprints and permissions information is available at www.nature.com/reprints.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 90.72,
+            "box": [
+                1265.3,
+                2500.3,
+                2288.5,
+                2567.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_13_text.png",
+            "text": "Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in\npublished maps and institutional affiliations.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 63.15,
+            "box": [
+                1266.6,
+                2583.6,
+                2195.6,
+                2614.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_11/region_14_text.png",
+            "text": "© The Author(s), under exclusive licence to Springer Nature America, Inc. 2020\n"
+        }
+    ]
+}

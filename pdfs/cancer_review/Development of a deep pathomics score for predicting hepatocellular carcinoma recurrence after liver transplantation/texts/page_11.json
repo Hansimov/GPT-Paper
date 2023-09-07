@@ -1,0 +1,116 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 8,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                212.5,
+                229.8,
+                1217.5,
+                492.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_11/region_1_text.png",
+            "text": "of recurrence. Clinical biomarkers have been replenished by\nrecent prognostic scoring systems to provide a quantification\nof individual HCC recurrence risk [12, 13]. A more reliable\nand efficient recurrence prediction model would be benefi-\ncial to guide HCC surveillance strategies.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                213.1,
+                491.9,
+                1216.1,
+                1534.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_11/region_2_text.png",
+            "text": "The emergence of AI has reformed multiple aspects of\ncancer management. In this large study involving 380 HCC\npatients and 495 WSIs, a deep learning algorithm managed\nto establish and validate the DPS with high accuracy, supe-\nrior to most traditional LT criteria and classic recurrence\nprediction models. The neural network originally evaluated\nthe prognostic significance of each histological structure and\nhighlighted the dominant position of the immune cells. The\nindividual recurrence risk could be automatically calculated\nvia digital identification of each WSI, which greatly facili-\ntated the pathological diagnosis and recurrence evaluation\nof the LT patients. The C-indices of DPS reached 0.827 and\n0.794 in the two cohorts and further stratified patients within\nor beyond the Milan criteria and UCSF criteria (Fig. S3),\nwhich provided a deeper perspective for clinical practice.\nIn addition, our new risk score exhibited great compatibil-\nity with the clinical features in predicting post-LT recur-\nrence (Fig. $4). In view of the effectiveness and simplicity,\ndeeper statistical analysis was not performed on the com-\nbined model.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                212.7,
+                1532.1,
+                1215.7,
+                2367.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_11/region_3_text.png",
+            "text": "Compared to previous AI predictive models, DPS was\ncharacterized by an improvement of methodology, a deeper\nexploration of pathological features and an elevation of pre-\ndiction accuracy. A previous study established HCC prog-\nnostic model after resection based on a weakly supervised\nnetwork of four tissue categories [22]. Two more critical\ntissue categories (immune cells and portal area) were input\ninto our learning network and a channel attention mecha-\nnism was added to the classification and prognostic model,\nwhich enhanced the study ability and diversity during fea-\nture extraction. Regarding discriminatory power, differences\nbetween the log-likelihood-based and the cross-entropy-\nbased predictions appear to be less pronounced [36]. There-\nfore, we combined the cross-entropy loss with the Cox loss\nto achieve model optimization, facilitating the use of sur-\nvival information and model convergence.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                213.0,
+                2367.3,
+                1216.1,
+                2941.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_11/region_4_text.png",
+            "text": "Saillard et al. proposed two deep learning-based algo-\nrithms for predicting survival after HCC resection [23].\nThey compared the attention mechanism of the tumor region\nannotated by pathologists with one that did not require\nhuman expertise. The results revealed that the method based\non manual annotation outperformed the method without\nannotation. This proved the significance and superiority of\nmanually dividing pathological sections before model con-\nstruction, which would provide more prior information for\nprognostic tasks. These facts supported the hypothesis that\nrecognition of HCC tissue categories could provide deeper\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                1275.6,
+                230.6,
+                2279.2,
+                337.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_11/region_5_text.png",
+            "text": "prognostic information about LT patients and reveal a new\nprospective on tumor microenvironment.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1275.7,
+                335.5,
+                2279.0,
+                805.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_11/region_6_text.png",
+            "text": "Recently, Liu et al. added nucleus segmentation as prior\nknowledge into a deep learning model and used a cross-\nentropy loss function to predict the recurrence of HCC after\nresection or LT [37]. Compared to their study, our model\nclearly interpreted the relationship between histologi-\ncal structures and prognosis. A much higher C-index was\nachieved in the LT cohort. Moreover, the attention heat-\nmaps intuitively showed the relationship between the tissue\nregions and prognosis.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1275.8,
+                804.8,
+                2279.9,
+                1847.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_11/region_7_text.png",
+            "text": "In many studies regarding deep learning, prediction mod-\nels have been constructed via an overall analysis of each\nWSI, which inevitably ignores the prognostic values of the\nseparate tissue structures. In the present study, after a suc-\ncessful attempt to concretize the \"black box\" of pathological\ncomputing layers, the significance of six tissue categories in\nHCC was innovatively evaluated. This procedure bypassed\nthe need for the manual recognition of numerous postprocess\ntiles [37]. Multivariate Cox regression analysis has revealed\nthat immune cells were the most important histological\nstructure, followed by the portal area and hemorrhagic and\nnecrotic tissue. This result was consistent with the visuali-\nzation of the attention machine, in which areas outlined in\nred more involved immune cells (Fig. 2f). Since compre-\nhensive therapies including liver resection, transcatheter\narterial chemoembolization (TACE) and immunotherapies\nwere given before LT [38, 39], an activated tumor immune\nmicroenvironment was common in the study population. In\ngeneral, immune cells can independently predict recurrence\nin LT patients with high accuracy and feasibility.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1275.7,
+                1846.4,
+                2280.2,
+                2994.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_11/region_8_text.png",
+            "text": "The great predictive value of the histological structure\nprompted us to focus on immune infiltration at cellular level.\nThe three panels of 7-color mIF staining covered almost\nall of the immune cells (leukocytes) and common immune\ncheckpoint molecules. Exploration of the immune biomark-\ners revealed the heterogeneity among transplant patients and\nthe prognostic value of NK cells. NK cells are one of the\nmajor cell types in HCC immune microenvironment [15].\nThe rates of tumor-infiltrating and circulating NK cells are\npositively associated with survival benefits in HCC and have\nprognostic significance, suggesting that NK-cell dysfunction\nis closely related to HCC progression [40, 41]. Furthermore,\nprevious studies have reported a connection between NK\ncell dysfunction and resistance to multiple anticancer thera-\npies [42]. In the present study, higher infiltration of intratu-\nmoral NK cells indicated a lower chance of post-LT recur-\nrence. Moreover, the spatial distance analysis revealed that\nthe closer contact between NK cells and CD8'T cells may\nlead to a reduced recurrence risk. This finding potentially\nhighlights the synergistic cytotoxicity of the innate immune\nsystem and adaptive immune system against tumor cells.\nFuture studies could focus on the mechanism of regulating\n"
+        }
+    ]
+}

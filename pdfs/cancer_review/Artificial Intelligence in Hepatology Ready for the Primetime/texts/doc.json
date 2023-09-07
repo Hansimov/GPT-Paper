@@ -1,0 +1,1584 @@
+{
+    "pdf_filename": "Artificial Intelligence in Hepatology Ready for the Primetime.pdf",
+    "pdf_fullpath": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime.pdf",
+    "pages_num": 13,
+    "pages": [
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_01.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_01.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 18,
+                "page_idx": 1
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "title",
+                    "score": 99.26,
+                    "box": [
+                        314.1,
+                        340.4,
+                        1962.8,
+                        507.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_01_title.png",
+                    "text": "Artificial Intelligence in Hepatology- Ready for\nthe Primetime\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 95.0,
+                    "box": [
+                        676.8,
+                        555.1,
+                        1798.3,
+                        602.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_02_text.png",
+                    "text": "Rakesh Kalapala**, Hardik Rughwani*, D. Nageshwar Reddy '\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 79.79,
+                    "box": [
+                        331.5,
+                        628.2,
+                        2152.0,
+                        709.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_03_text.png",
+                    "text": "*Department of Gastroenterology, Asian Institute of Gastroenterology and AIG Hospitals, Hyderabad, India and ‘Asian Institute of\nGastroenterology and AIG Hospitals, Hyderabad, India\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.75,
+                    "box": [
+                        318.6,
+                        765.7,
+                        2164.7,
+                        1202.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_04_text.png",
+                    "text": "Artificial Intelligence (AI) is a mathematical process of computer mediating designing of algorithms to support\nhuman intelligence. AI in hepatology has shown tremendous promise to plan appropriate management and\nhence improve treatment outcomes. The field of AI is in a very early phase with limited clinical use. AI tools\nsuch as machine learning, deep learning, and ‘big data’ are in a continuous phase of evolution, presently being\napplied for clinical and basic research. In this review, we have summarized various AI applications in hepatology,\nthe pitfalls and AI's future implications. Different AI models and algorithms are under study using clinical, lab-\noratory, endoscopic and imaging parameters to diagnose and manage liver diseases and mass lesions. AI has\nhelped to reduce human errors and improve treatment protocols. Further research and validation are required\nfor future use of AI in hepatology. (J Ciin Exp HepaTor 2023;13:149-161)\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.89,
+                    "box": [
+                        199.9,
+                        1330.2,
+                        1204.8,
+                        2025.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_05_text.png",
+                    "text": "n recent years, the development of Artificial Intelli-\n[= (AI) in the fields of gastroenterology and hepa-\n\ntology has made remarkable progress. The use of AI\nis studied in gastroenterology for the endoscopic evalua-\ntion of Barrett's oesophagus, oesophageal and gastric ma-\nlignancies, colorectal polyp detection and characterization,\nevaluation of inflammatory bowel disease and capsule\nendoscopy for obscure gastrointestinal bleed! (Table 1).\nWith the increased development and usage of AI in gastro-\nenterology, research in the field of hepatology also has\naccelerated. AI in hepatology can be used to detect liver\nfibrosis, diagnose non-alcoholic fatty liver disease\n(NAFLD), differentiate focal liver lesions, diagnose hepato-\ncellular cancer, prognosticate chronic liver disease (CLD)\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 69.8,
+                    "box": [
+                        201.0,
+                        2130.9,
+                        1203.0,
+                        2209.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_06_text.png",
+                    "text": "Keywords: artificial intelligence, machine learning, deep learning, hepatol-\nogy, NAFLD\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 26.96,
+                    "box": [
+                        200.6,
+                        2213.4,
+                        1138.7,
+                        2250.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_07_text.png",
+                    "text": "Received: 19.1.2022; Accepted: 23.6.2022; Available online 29 June 2022\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 82.35,
+                    "box": [
+                        199.9,
+                        2245.6,
+                        1207.2,
+                        2417.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_08_text.png",
+                    "text": "Address for correspondence: Rakesh Kalapala, Consultant Gastroenterologist\n& Endosonologist, Endoscopy (Center for Obesity & Metabolic Therapy),\nInternational Bariatric and Metabolic Endoscopy Committee - IFSO, AIG\nHospitals, Hyderabad, India.\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "text",
+                    "score": 67.49,
+                    "box": [
+                        201.3,
+                        2421.3,
+                        1128.7,
+                        2458.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_09_text.png",
+                    "text": "E-mails: drkalpala@gmail.com; drrakesh.kalapala@aighospitals.com\n"
+                },
+                {
+                    "idx": 10,
+                    "thing": "text",
+                    "score": 90.71,
+                    "box": [
+                        201.3,
+                        2460.3,
+                        1199.9,
+                        2540.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_10_text.png",
+                    "text": "“Contact address- Cluster I, 1st floor, AIG hospitals, Mindspace\nroad, Gachibowli, Hyderabad, 500032.\n"
+                },
+                {
+                    "idx": 11,
+                    "thing": "text",
+                    "score": 98.73,
+                    "box": [
+                        199.6,
+                        2546.1,
+                        1205.0,
+                        3040.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_11_text.png",
+                    "text": "Abbreviations: ACLF: acute on chronic liver failure; AI: artificial intelli-\ngence; ALD: alcoholic liver disease; ALT: alanine transaminase; ANN: arti-\nficial neural network; AST: aspartate aminotransferase; AUD: alcohol use\ndisorder; CHB: chronic hepatitis B; CHC: chronic hepatitis C; CLD:\nchronic liver disease; CNN: convolutional neural network; DL: deep\nlearning; FIB-4: fibrosis-4 score; GGTP: gamma glutamyl transferase;\nHCC: hepatocellular carcinoma; HDL: high density lipoprotein; ML: ma-\nchine learning; MLR: multi-nomial logistic regressions; NAFLD: non-alco-\nholic fatty liver disease; NASH: non-alcoholic steatohepatitis; NLP:\nnatural language processing; RF: random forest; RTE: real-time tissue\nelastography; SOLs: space-occupying lesions; SVM: support vector ma-\nchine\n"
+                },
+                {
+                    "idx": 12,
+                    "thing": "text",
+                    "score": 99.92,
+                    "box": [
+                        1277.7,
+                        1332.0,
+                        2281.7,
+                        2124.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_12_text.png",
+                    "text": "and facilitate transplant sciences. However, multiple issues\nare to be sorted out to establish the AI's full functionality\nand clinical use. Here, we review the practical applications\nand ongoing research of AI in hepatology. AI has impacted\nhealth-related systems by accurately and rapidly eluci-\ndating pathology, radiology and endoscopy images,\nreducing medical errors and improving workflow.” AI has\naided non-experts also to reach a diagnosis by increasing\nthe performance quality of images. The use of labelled\n‘big data’ along with exceptionally enhanced computers\nand cloud storage, has enabled a giant leap in the develop-\nment of AI sciences. This will impact at three different\nstrata: for physicians, via quick and precise data interpreta-\ntion; for healthcare, by increasing work efficiency; and for\npatients, by allowing them to promote healthy living using\ntheir data.\n"
+                },
+                {
+                    "idx": 13,
+                    "thing": "title",
+                    "score": 99.46,
+                    "box": [
+                        1277.6,
+                        2201.0,
+                        2194.5,
+                        2307.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_13_title.png",
+                    "text": "ARTIFICIAL INTELLIGENCE - DEFINITION,\nTERMINOLOGY AND CONCEPTS\n"
+                },
+                {
+                    "idx": 14,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        1278.1,
+                        2326.5,
+                        2280.1,
+                        2720.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_14_text.png",
+                    "text": "Artificial Intelligence is an umbrella term that mainly infers\nthe use of mathematics using computers to generate soft-\nware, performing functions as natural human intelligence\nsuch as problem-solving and decision-making.” The glos-\nsary of terms>*?°75 used in the AI platform are listed\nand defined in Table 2. The hierarchy patterns of various\ntypes of AI are shown in Figure 1. The overview of the\ndeep learning (DL) tool is demonstrated in Figure 2.\n"
+                },
+                {
+                    "idx": 15,
+                    "thing": "title",
+                    "score": 98.47,
+                    "box": [
+                        1276.8,
+                        2795.6,
+                        2066.0,
+                        2847.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_15_title.png",
+                    "text": "RADIOMICS AND RADIOGENOMICS\n"
+                },
+                {
+                    "idx": 16,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        1278.2,
+                        2869.3,
+                        2281.7,
+                        3063.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_16_text.png",
+                    "text": "The term “Radiomics” is defined as a process that uses com-\nputers to extract a large amount of information from\ndifferent types of images, form various quantifiable fea-\ntures, and using AI algorithms build models to predict\n"
+                },
+                {
+                    "idx": 17,
+                    "thing": "text",
+                    "score": 37.67,
+                    "box": [
+                        200.8,
+                        3131.0,
+                        1657.7,
+                        3167.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_17_text.png",
+                    "text": "© 2022 Indian National Association for Study of the Liver. Published by Elsevier B.V. All rights reserved.\n"
+                },
+                {
+                    "idx": 18,
+                    "thing": "text",
+                    "score": 17.14,
+                    "box": [
+                        831.8,
+                        3164.0,
+                        2275.7,
+                        3201.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_01/region_18_text.png",
+                    "text": "Journal of Clinical and Experimental Hepatology | January-February 2023 | Vol. 13 | No. 1 | 149-161\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_02.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_02.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 7,
+                "page_idx": 2
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.61,
+                    "box": [
+                        200.2,
+                        346.4,
+                        1702.0,
+                        389.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_1_text.png",
+                    "text": "Table 1 Glossary of Common Terms and Definitions Used in Artificial Intelligence Domains.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "table",
+                    "score": 99.91,
+                    "box": [
+                        199.5,
+                        394.9,
+                        2284.0,
+                        1787.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_2_table.png"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.22,
+                    "box": [
+                        200.2,
+                        1803.1,
+                        2279.2,
+                        1840.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_3_text.png",
+                    "text": "Abbreviations: Al, artificial intelligence; ANN, artificial neural network; CNN, convolutional neural network; DL, deep learning; ML, machine learning.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        201.7,
+                        1896.0,
+                        1204.7,
+                        2093.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_4_text.png",
+                    "text": "the outcomes pertaining to the diagnosis, treatment and\nprognosis of clinical problems especially cancer.’ Data is\ndrawn out from medical images using high-throughput\nmining and applied within clinical management flow-\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.46,
+                    "box": [
+                        201.2,
+                        2145.4,
+                        1215.9,
+                        2186.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_5_text.png",
+                    "text": "Table 2 Applications of Al in Various Endoscopic Procedures.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        1277.9,
+                        1896.7,
+                        2281.1,
+                        2092.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_6_text.png",
+                    "text": "charts to improve diagnostic, predictive and prognostic ac-\ncuracy. This is especially becoming useful in cancer\nresearch. Radiomic analysis uses image-based signatures\nfor precision diagnosis and treatment, providing a robust\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "table",
+                    "score": 99.86,
+                    "box": [
+                        203.3,
+                        2195.7,
+                        2280.3,
+                        3091.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_7_table.png"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_03.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_03.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 6,
+                "page_idx": 3
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "figure",
+                    "score": 99.81,
+                    "box": [
+                        376.5,
+                        355.4,
+                        2114.0,
+                        1064.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_1_figure.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.35,
+                    "box": [
+                        730.9,
+                        1101.4,
+                        1749.6,
+                        1140.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_2_text.png",
+                    "text": "Figure 1 Arrangement of the hierarchy of artificial intelligence domains.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        201.5,
+                        1219.2,
+                        1204.0,
+                        1515.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_3_text.png",
+                    "text": "tool in modern medicine. Radiomics is useful not only for\nliver malignant lesions like HCC and non-HCC malig-\nnancy but also for benign conditions like NASH, NAFLD\nand portal hypertension. Presently, the branch of radio-\nmics lacks the standard evaluation of multiple published\ninvestigations. Hence, detailed guidelines and criteria\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        1278.3,
+                        1219.4,
+                        2280.9,
+                        1514.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_4_text.png",
+                    "text": "need to be set to apply radiomics in clinical medicine.”\nThe gene-expression profile of a tumour helps to predict\nthe biological behaviour and plan further management af-\nter tumour resection. For all practical purposes, the only\nway to assess gene expression is to use tissue obtained\nthrough biopsy or tumour resection, with the\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "figure",
+                    "score": 99.86,
+                    "box": [
+                        305.5,
+                        1651.8,
+                        2173.7,
+                        2959.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_5_figure.png"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.74,
+                    "box": [
+                        202.3,
+                        2997.7,
+                        2279.0,
+                        3080.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_6_text.png",
+                    "text": "Figure 2 Overview of a Deep Learning tool using data in Input layer then running Inter-neuron connections, finally showing Model predictions in the\nOutput layer.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_04.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_04.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 8,
+                "page_idx": 4
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "figure",
+                    "score": 99.9,
+                    "box": [
+                        279.6,
+                        356.4,
+                        2202.6,
+                        1570.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_1_figure.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.29,
+                    "box": [
+                        709.4,
+                        1606.8,
+                        1771.4,
+                        1647.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_2_text.png",
+                    "text": "Figure 3 Graphical presentation showing applications of Al in Hepatology.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        200.9,
+                        1725.4,
+                        1205.0,
+                        2669.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_3_text.png",
+                    "text": "disadvantages being haemorrhage and tumour metastasis,\nalthough very rare. So, preoperative evaluation of the\ntumour-gene expression preferably though non-invasive\nroutes are the ideal target. With the genomic revolution\nin the early 1990s, medical research has been driven to\nstudy the basis of human disease on a genomic level and\ndevise precise cancer therapies tailored to a tumour's spe-\ncific genetic makeup. The novel approach of using radio-\nmics to extract genomic data has been termed\n“radiogenomics”. It aims to correlate the genotype (gene ex-\npressions and mutations) and phenotype (imaging charac-\nteristics), to facilitate a deeper understanding of tumour\nbiology and study the intrinsic tumour heterogeneity.\nImaging characteristics can then behave as molecular sur-\nrogates that can help to predict gene-expression-associated\ntreatment responses of various forms of cancer. These find-\nings pave a way for the futuristic role of diagnostic and in-\nterventional radiologists in using radiographic images for\nthe genetic assessment of cancer patients. '*\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 99.16,
+                    "box": [
+                        202.3,
+                        2740.8,
+                        1060.9,
+                        2796.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_4_title.png",
+                    "text": "APPLICATIONS OF Al IN HEPATOLOGY\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.92,
+                    "box": [
+                        201.0,
+                        2814.5,
+                        1204.8,
+                        3059.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_5_text.png",
+                    "text": "Recently, there has been a great amplification of Al-based\napplications and softwares in the field of Gastroenterology\nand Endoscopy” (Table 2). We will discuss the various ap-\nplications of AI in Hepatology'* under the following sub-\nheadings-\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "list",
+                    "score": 99.15,
+                    "box": [
+                        1278.9,
+                        1725.8,
+                        2282.2,
+                        2320.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_6_list.png",
+                    "text": "A. Liver fibrosis in chronic hepatitis B (CHB)\n\nB. Liver fibrosis in chronic hepatitis C (CHC)\n\nC. Alcoholic liver disease\n\nD. NASH and non-alcoholic fatty liver disease (NAFLD)\n\nE. Diagnosis of DILI, PSC and PBC.\n\nF. Prognosis of CLD, portal hypertension, oesophageal\nvarices and ACLF\n\nG. Diagnosis and characterization of liver  space-\noccupying lesions (SOLs)\n\nH. Diagnosis and management of hepatocellular carci-\nnoma (HCC)\n\nI. Liver transplantation\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "title",
+                    "score": 99.01,
+                    "box": [
+                        1277.2,
+                        2373.5,
+                        2119.6,
+                        2422.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_7_title.png",
+                    "text": "A. Liver fibrosis in chronic hepatitis B (CHB)\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        1276.7,
+                        2449.5,
+                        2282.5,
+                        3044.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_04/region_8_text.png",
+                    "text": "Viral hepatitis is a significant cause of CLD. Liver\nfibrosis and CLD are risk factors for hepatocellular carci-\nnoma (HCC) and hence death. It is practically impossible\nto perform a liver biopsy in all patients; hence AI algo-\nrithms have been developed for non-invasive evaluation\nof liver fibrosis. Some of the studies done using AI algo-\nrithms will be mentioned in the following sections. Wang\nD. et al'° proposed a bayesian learning algorithm to develop\na three-layer artificial neural network (ANN) in patients\nwith CHB. Age, platelet count, aspartate aminotransferase\n(AST), alanine aminotransferase (ALT), and gamma-\nglutamyl transferase (GGTP) were the most critical factors\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_05.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_05.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 8,
+                "page_idx": 5
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        200.4,
+                        346.4,
+                        1205.3,
+                        1485.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_1_text.png",
+                    "text": "in the predictive model. Similarly, using the non-invasive\nfibrosis-4 score (FIB-4 score), in the discovery dataset (n =\n490) of CHB patients, a learning algorithm known as\nGradient Boosting (GB) clearly proved the superiority of\nother methods as well as FIB-4 score (P < 0.001) in the pre-\ndiction of advanced hepatic failure and cirrhosis.'° DL and\nradiomics can be used for quantitative analyses of liver\nfibrosis'’ in CHB cirrhosis. To improve the staging of\nfibrosis, machine learning (ML)-based classification of\nreal-time tissue elastography (RTE) was developed based\non four classical classifiers (i.e. Support vector machine, Naove\nBayes, Random Forest and K-Nearest Neighbour).'® Wang K.\net al'° by a prospective multi-centre study, have shown\nthat radiomics of shear wave elastography (DLRE) per-\nformed better for liver fibrosis prediction in patients with\nCHB when compared to two-dimensional shear wave elas-\ntography (2D-SWE) or serum markers. Radiomics fibrosis in-\ndex (RFI), a new DL-based model developed using\ngadoxetic acid-enhanced MRI, was found to be superior\nto AST: platelet ratio and fibrosis-4 (FIB-4) index, for stag-\ning liver fibrosis.”° These AI models predict the risk of liver\nfibrosis with high accuracy and hence can help to prevent\nunnecessary liver biopsies.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 99.43,
+                    "box": [
+                        201.1,
+                        1514.1,
+                        1043.6,
+                        1562.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_2_title.png",
+                    "text": "B. Liver fibrosis in chronic hepatitis C (CHC)\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        200.1,
+                        1592.0,
+                        1205.4,
+                        3080.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_3_text.png",
+                    "text": "Hepatitis C virus is a significant and one of the com-\nmonest causes of CLD presently. Hepatitis C has an 85%\nlikelihood of chronicity after an acute infection. In patients\nwith CHC, followed for 20 years, progression to cirrhosis\noccurs in about 20-25% patients. Various AI modules\nhave been framed to study cirrhosis due to CHC, some of\nwhich are being mentioned. Using 414 liver biopsies\nfrom transplant explants (training dataset) and testing\non the remaining 96 biopsies (validation set), with a cut-\noff of >0.4, ANN given by Piscaglia et al*' provided an accu-\nrate prediction of significant fibrosis based on clinical vari-\nables, hence avoiding unnecessary liver biopsies,\nparticularly in the setting of liver transplantation. In\nanother study by Hasheem et al,”, using ML algorithm\non 39,567 patients with CHC, four parameters - age,\nAST, platelet count and albumin were found to be statisti-\ncally significant for advanced fibrosis. Konerman et al?\ndemonstrated AI models, constructed using two ML\nmethods (Boosting and Random Forest) and logistic regression\nin CHC patients, which helped to target costly therapies\nin patients who needed it urgently. Analysis of 72,638 pa-\ntients with CHC of the National Veterans Health Adminis-\ntration data showed that boosted survival tree-based models\nusing longitudinal information were statistically better\nthan cross-sectional or linear models for cirrhosis predic-\ntion in CHC.”* An ANN was created by Takayama et al\nthat identified patients with CHC who responded to ther-\napy with pegylated interferon a-2b plus ribavirin with 82%\nsensitivity and 88% specificity, in the era before the use of\ndirectly acting antivirals (DAA) for CHC.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 99.13,
+                    "box": [
+                        1278.4,
+                        344.9,
+                        1742.3,
+                        393.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_4_title.png",
+                    "text": "C. Alcoholic liver disease\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        1277.0,
+                        421.5,
+                        2283.7,
+                        1164.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_5_text.png",
+                    "text": "Alcohol-related liver disease is an area of hepatology, in\nwhich very few studies using AI have been done. Studies\nhave demonstrated the prediction of hepatic fibrosis in pa-\ntients with alcohol use disorder (AUD). Using a group of\n31 NAFLD patients with BMI below 30 and a group of\nAlcoholic liver disease (ALD) patients with cirrhosis\n(ALDC n = $1) or without cirrhosis (ALDNC n = 51), serum\ntransaminases, cell death markers and (adipo-) cytokines\nwere assessed. ML techniques based on ALT/AST ratio, adi-\npokines and cytokines helped to distinguish NAFLD and\nALD.*® Tumour necrosis factor (TNF)-alpha and adipo-\nnectin were significantly lower in NAFLD patients. ALDC\npatients had a significantly higher serum concentrations\nof cell death markers, hyaluronic acid, adiponectin, and\nTNF-alpha as compared to ALDNC.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "title",
+                    "score": 99.34,
+                    "box": [
+                        1276.6,
+                        1192.7,
+                        2280.3,
+                        1240.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_6_title.png",
+                    "text": "D. NASH and non-alcoholic fatty liver disease (NAFLD)\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        1276.6,
+                        1269.8,
+                        2282.9,
+                        1911.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_7_text.png",
+                    "text": "The incidence of NAFLD is increasing worldwide nowa-\ndays, and it has become one of the most common causes of\ncirrhosis. One of the primary goals of ML application\ndevelopment in hepatology is diagnosing fatty liver disease\nand staging liver fibrosis, hence substituting pathological\nanalysis. Supervised ML classifiers were trained by Vanderbeck\netal” using a digital library of pathology images of 47 liver\nbiopsies from patients with normal liver and with NAFLD\npatients. The classification algorithm performed with 89%\noverall accuracy and identified steatosis, bile ducts, portal\nveins, and sinusoids with high precision and recall. Accu-\nrate localization of microscopic liver anatomy landmarks\nfacilitates the detection of other histological lesions.\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        1277.5,
+                        1914.9,
+                        2282.9,
+                        3057.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_8_text.png",
+                    "text": "A widely used pathologist score (Kleiner score) uses\nballooning, inflammation, steatosis and fibrosis as the\nmain histopathology features of NASH/NAFLD. Auto-\nmated DL-based scores using the above findings enables\npathologist-like scoring of NASH models.”* Sowa J-P\net al used ML techniques to analyse specific liver serum pa-\nrameters, hyaluronic acid (HA) and cell death markers of\n126 patients undergoing bariatric surgery for morbid\nobesity. Out of these serum markers, a fibrosis scoring sys-\ntem could be generated using AI, even if only marginally\nfibrotic tissue is available.”? Based on findings that six pre-\ndictors including hypertension, alanine aminotransferase\n(ALT), high-density lipoprotein (HDL), triglyceride, hae-\nmoglobin Alc, white blood cell count are important pa-\nrameters for NAFLD diagnosis in general polulation, a\n‘NAFLD ridge score’ was developed as a robust and straight-\nforward reference comparable to existing NAFLD scores to\nexclude NAFLD patients in epidemiological studies.°” ML\nmethods using history, demographic details and labora-\ntory values of the patient can predict non-alcoholic steato-\nhepatitis (NASH) in NAFLD patients.”' It can help to make\npredictive models of patients having higher chances of\ndeveloping cirrhosis.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_06.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_06.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 7,
+                "page_idx": 6
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        200.4,
+                        345.7,
+                        1205.7,
+                        1585.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_1_text.png",
+                    "text": "While ultrasound is the primary modality used for treat-\ning the NAFLD, due to unavailability of the skilled sonogra-\nphers, especially in resource-scarce regions, the quality of\ndiagnosis is severely affected. To address this problem, DL\nmethods for classifying the fatty liver in ultrasound images\nwere used. The performance analysis of the proposed frame-\nwork shows that the NAFLD in ultrasound images can be\ndetected with an accuracy of 90.6%.°* Liver biopsy is pres-\nently the gold standard modality for the diagnosis of\nNAELD. To remove the intra- and inter-observer variability,\na transfer-based DL algorithm, AlexNet-CNN was developed\nusing liver biopsy images in mice and compared to conven-\ntional non-DL algorithms - ANN, multi-nomial logistic re-\ngressions (MLR), support vector machine (SVM) and\nrandom forest (RF). It was shown that AlexNet-CNN could\nautomatically score liver fibrosis stages with a level of accu-\nracy similar to conventional non-DL algorithms.”° A super-\nvised DL model with a convolutional neural network (CNN)\narchitecture using high discrimination capability of histo-\nlogical tissue alterations of NAFLD showed a classification\naccuracy of 95%. The classification capability of the new\nCNN model showed superior classification accuracy\ncompared with a pre-trained AlexNet model, a visual geom-\netry group (VGG)-16 deep architecture and a conventional\nmulti-layer perceptron (MLP).°*\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 99.53,
+                    "box": [
+                        202.3,
+                        1615.3,
+                        859.8,
+                        1662.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_2_title.png",
+                    "text": "E. Diagnosis of DILI, PSC and PBC\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        200.2,
+                        1690.4,
+                        1205.5,
+                        3080.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_3_text.png",
+                    "text": "Diagnostic dilemma exists for some hepatic conditions\nlike drug-induced liver injury (DILI), primary sclerosing\ncholangitis (PSC), primary biliary cirrhosis (PBC) even af-\nter thorough clinical and biochemical examinations.\nDILI is a condition with serious consequences, especially\nwith the rampant use of complementary and alternative\nmedicines (CAM). DILI can present with various clinico-\npathologic presentations like acute hepatitis, chronic hep-\natitis, granulomatous hepatitis, cholestatic hepatitis,\nsteatohepatitis, vascular disorders or tumours leading to\na lot of overlap in diagnosis. Hence AI tools*? with predic-\ntion models can help to predict the group of patients\nwhich can be predisposed to DILI and also can play an\nimportant role in diagnosis. Kristina et al°® demonstrated\na ML tool to detect PSC compatible cholangiographic im-\naging using 3D-MRCP images with high sensitivity. Eaton\net al’ gave a PSC Risk estimate tool (PREsTo) using 9\nbiochemical variables to predict the outcome in patients\nwith PSC, after excluding those with advanced PSC and\ncholangiocarcinoma. This ML tool using ‘Gradient Boosting’\ncan be an excellent non-invasive method for prediction of\ndecompensation, when compared to MELD score and\nMayo Risk Score. Similarly, a risk score for PBC*® was devel-\noped using ML. This unsupervised ML tool identified\nnovel subgroups of PBC patients and provided prognosis\nbased on serum albumin levels. It showed that UDCA\ninduced increase of S. Alb >1.2. Lower limit of normal is\nassociated with improved liver transplant-free survival.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 99.8,
+                    "box": [
+                        1277.8,
+                        345.9,
+                        2279.5,
+                        443.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_4_title.png",
+                    "text": "F. Prognosis of CLD, portal hypertension, oesophageal\nvarices and acute on chronic liver failure (ACLF)\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        1277.1,
+                        472.5,
+                        2283.0,
+                        1413.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_5_text.png",
+                    "text": "Prediction of disease progression in CLD and portal hy-\npertension is necessary for planning further management\nand hence prognostication. Bleeding oesophageal varices\nare an important cause of mortality in CLD patients. AI\ntools can help in the management of CLD and prediction\nof bleeding from varices. Two radiomics signatures (rGEV and\nrHRV) were developed, in a multi-centre study, using non-\ncontrast-enhanced CT images. They act as a non-invasive\ncomplementary predictor in diagnosing gastroesophageal\nvarices (GEV) and predicting high-risk varices (HRV) in\ncompensated advanced CLD.°” Using laboratory parame-\nters and liver stiffness, ML model, Extreme-gradient boosting\n(XGBoost) improved the endoscopic stratification to pre-\ndict variceal bleeding in patients with compensated CLD\nwith oesophageal varices.“° A DL-based model perfor-\nmance for CHC patients using a random forest analysis\nshowed an excellent prediction of survival without a trans-\nplant, although less robust for predicting evolution to hep-\natoma at 12 and 36 months.*!\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        1277.3,
+                        1417.1,
+                        2281.3,
+                        1861.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_6_text.png",
+                    "text": "An ANN model to predict the presence of oesophageal\nvarices in patients with CHB” was developed by Hong\net al with three variables (platelet count, portal vein diam-\neter and spleen width). An algorithmically developed for-\nmula, called the EVendo score, can predict oesophageal\nvarices (EVs) and Varices needing treatment (VNT) based\non readily available data in patients with cirrhosis. This\nscore could avoid unnecessary procedures, especially in pa-\ntients at low risk for VNT.*”\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        1277.2,
+                        1867.0,
+                        2282.8,
+                        3058.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_7_text.png",
+                    "text": "An ML algorithm employing ultrasound shear wave\nelastography has been developed for colour analysis for\nCLD classification.“* A meta-analysis of Al-assisted tools\nusing non-invasive modalities like clinical parameters, ul-\ntrasonography, elastography, computerized tomography\n(CT) and magnetic resonance imaging (MRI) has shown\nthe promise in diagnosing CLD. Validations studies are\nwarranted before their applications in clinical practice.*°\nRecently, a DL-based AI tool named ‘AL-Cirrhosis-ECG\n(ACE) score’ was proposed by Ahn et al. This score is based\non cirrhosis-related ECG (Electrocardiogram) signals. This\nscore can differentiate ECGs from patients with or without\ncirrhosis and can be a useful low-cost tool in the care of pa-\ntients with cirrhosis.*° The VIRGIN Study*” done in China\npresented an analytical method to calculate a virtual Portal\nPressure Gradient (vPPG) based on CT angiography and\nDoppler ultrasound, hence avoiding the invasive HVPG\nmeasurement for portal hypertension. Musunuri B. et al\ninvestigated the role of the ANN, which functionally\nmimics biological neural systems, in predicting 90-day liver\ndisease-related mortality in ACLF patients. An accuracy of\n94.12% was noticed in predicting 30-day mortality and\n88.2% in predicting 90-day mortality, with an area under\nthe curve of 0.915 and 0.921, respectively. ANN plays a\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_07.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_07.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 9,
+                "page_idx": 7
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.8,
+                    "box": [
+                        200.4,
+                        344.9,
+                        1205.7,
+                        540.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_1_text.png",
+                    "text": "very important role in predicting short-term mortality pa-\ntients with high accuracy. Its application in patients with\nACLF is promising as it automates and eases the method\nof identifying those patients at a higher risk of mortality.*®\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 99.53,
+                    "box": [
+                        201.9,
+                        569.5,
+                        1100.0,
+                        665.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_2_title.png",
+                    "text": "G. Diagnosis and characterization of liver space-\noccupying lesions (SOLs)\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.92,
+                    "box": [
+                        200.3,
+                        692.5,
+                        1206.2,
+                        1735.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_3_text.png",
+                    "text": "Various DL-based models have been developed using\ncontrast-enhanced ultrasound, CT scan and MRI to char-\nacterize focal liver lesions*””°”””. But extensive validation\nis needed before establishing clinical use. A DL technique\nusing Stacked Sparse Auto-encoders (SSAE) with ultrasound\nimages suggested for diagnosing hepatic nodules (liver\ncysts, haemangioma, and HCC)’ has high accuracy in\noverall classification (97.2%) compared with three estab-\nlished methods: Naive Bayes, multi-support vector machine\nand K-Nearest Neighbor. Since MRI diagnosis is affected by\nsubjective variations, CNNs were used to develop a DL sys-\ntem (DLS) to classify liver tumours based on clinical data,\nlaboratory parameters and MR images (enhanced and un-\nenhanced). Multiple prediction models were designed us-\ning CNN for 5-year metachronous liver metastasis (SYLM),\napplying combinations of clinical variables (age, sex, T\nstage, N stage) and top principal components (PCs) with\nlogistic regression classification. The model using “1st\nPC (PC1) + clinical information” had a significant correla-\ntion with sex, body mass index, alcohol consumption, and\nfatty liver status.>*\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 99.25,
+                    "box": [
+                        202.6,
+                        1763.6,
+                        1203.8,
+                        1861.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_4_title.png",
+                    "text": "H. Diagnosis and management of hepatocellular carci-\nnoma (HCC)\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.9,
+                    "box": [
+                        200.1,
+                        1889.2,
+                        1206.2,
+                        3080.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_5_text.png",
+                    "text": "ML has various applications for the study of HCC,\nincluding diagnosis, staging, management and prog-\nnosis based on the stage of HCC. Sato et al developed\na novel model for HCC diagnosis, showing high accuracy\n(87.3%) compared to a single tumour marker (alpha feto-\nprotein 70.7%, des-alpha-fetoprotein-L3 71.1% and\ngamma-carboxyprothrombin 74.9%). This model\ndecreased the rate of liver SOLs, previously misclassified\nas HCC. A study by Singal et al’°® showed that ML algo-\nrithms outperformed conventional regression models\nand markedly improved the accuracy of prediction and\nrisk stratification for HCC development in 442 patients\nwith compensated cirrhosis. A study by Nam JY et al’\ncompared a DL-based model with previous HCC predic-\ntion models, including Chinese University HCC score\n(CU-HCC), platelets, age, gender-hepatitis B score\n(PAGE-B), age, diabetes, race, aetiology of cirrhosis, sex,\nand severity HCC score (ADDRESS-HCC), HCC-Risk\nEstimating Score in CHB patients Under Entecavir\n(HCC-RESCUE), Toronto HCC risk index (THRI), and\nmodified PAGE-B score (mPAGE). This model had better\nperformance than the previous models for predicting the\nHCC risk in 424 patients with HBV-related cirrhosis on\npotent antivirals.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.9,
+                    "box": [
+                        1277.0,
+                        345.7,
+                        2283.2,
+                        1086.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_6_text.png",
+                    "text": "Multi-omics (use of multiple -“omes” such as the\ngenome, microbiome, etc) approach was used to make a\nDL-based model of 360 patients with HCC, using RNA\nsequencing, methylation data and miRNA sequencing\nfrom The Cancer Genome Atlas.°® It was the first study\nto employ DL to identify multi-omics features linked to\nthe differential survival of patients with HCC. Two DL al-\ngorithms were built, using whole-slide digitized histologi-\ncal data for predicting the survival of patients with HCC\ntreated with surgery. This analysis included two indepen-\ndent cohorts. A discovery cohort (n = 194) was used to\ndevelop the algorithm and included an independent vali-\ndation cohort (n = 328). This study highlights the impor-\ntance of machine interactions for the appropriate\nconstruction of DL algorithms using histology slides.\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 99.91,
+                    "box": [
+                        1277.4,
+                        1091.1,
+                        2283.2,
+                        1785.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_7_text.png",
+                    "text": "Randhwa et al,°’”, using support vector, with MRI images\nas data, made an AI tool to improve radiological image\nclassification of HCC. This can help radiologists diagnose\nliver tumours early. Using regularization in the vector score\nin the classification stage removes the overfitting problem\nand leads to the accurate identification of different tumour\ntypes. A DL-based assistant has been developed to help pa-\nthologists differentiate between two subtypes of primary\nliver cancer, HCC and cholangiocarcinoma, on haematox-\nylin and eosin-stained whole-slide images (WSI), and eval-\nuated its effect on the diagnostic performance of 11\npathologists with varying levels of expertise.°\" This DL-\nbased assistant helped to increase the accuracy of patholo-\ngists.\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        1277.5,
+                        1790.0,
+                        2282.8,
+                        2682.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_8_text.png",
+                    "text": "The segmentation of HCC in CT images allows assess-\nment of tumour load, treatment planning, prognosis and\nmonitoring of treatment response. Since manual segmen-\ntation is a very time-consuming task and, in many cases,\nprone to inaccuracies, automatic tools for tumour detec-\ntion and segmentation are highly desirable. One such\nnetwork architecture was formed and evaluated on data\nprovided from the radiological centre in Innsbruck,\nAustria. It consists of two consecutive nested fully CNN\ntogether with a joint minimization strategy. The first\nsub-network segments the liver, whereas the second sub-\nnetwork segments the actual tumour inside the liver.©?\nAutomatic segmentation of liver and tumours using a fully\nconvolutional neural (FCN) network is highly advanta-\ngeous as it will plan surgical management and follow-up\nassessment. A study by Alirr et al has shown this DL\nmethod as a promising tool for automatic analysis of the\nliver and its tumours.°”\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        1278.3,
+                        2686.3,
+                        2281.6,
+                        3081.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_9_text.png",
+                    "text": "A systematic review by Azer et al of data analysing pa-\nthology, cellular and radiological images of HCC or liver\nmasses using CNNs were identified and analysed.°* The re-\nview showed an optimal level of accuracy of CNNs for the\nsegmentation and classification of HCC and other liver\nmass lesions. Dynamic contrast-enhanced MRI provides\nthe most comprehensive information for differential diag-\nnosis of liver tumours. DL tools can be used for\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_08.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_08.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 14,
+                "page_idx": 8
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        201.7,
+                        344.4,
+                        1204.7,
+                        789.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_01_text.png",
+                    "text": "classification and mutation prediction based on histopa-\nthology images. Chen et al®> showed that the performance\nlevel of a DL model was close to the ability of a 5-year expe-\nrience pathologist, with high accuracy for differentiating\nbenign and malignant conditions. This model has shown\nthat four important genes, namely- FMN2, CTNNB1,\nTP53 and ZFX4, predicted from histopathology images,\ncould assist in the classification and detection of gene mu-\ntation in liver cancer.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 99.16,
+                    "box": [
+                        199.7,
+                        817.8,
+                        634.4,
+                        865.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_02_title.png",
+                    "text": "I. Liver transplantation\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        200.6,
+                        891.9,
+                        1205.1,
+                        2034.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_03_text.png",
+                    "text": "An ANN model, based on clinical and biochemical data\nof cirrhotic patients, having a high probability of mortality\nin 1 year; was developed by Banerjee et al°° for the identifi-\ncation of the best candidates for liver transplantation.\nThree-dimensional (3D) simulation software, using 3D visuali-\nzation and 3D reconstruction of CT images, is a valuable\ntool for pre-hepatectomy assessment, virtual hepatectomy\nand measuring hepatic volumes. These 3D models com-\nbined with hydrodynamic analysis have been used to diag-\nnose and manage portal hypertension.°” An ANN was used\nto predict survival times of 1168 patients planned for liver\ntransplantation, by Khosravi et al.°* It estimated a survival\nprobability of 1-5 years with an AUROC curve of 86.4% vs.\n80.7% for Cox proportional hazard regression models.\nANN has helped to make liver donor-recipient matching\nmodels by researchers, providing powerful technology\nthat would ease decision-making.” AI tools using liver seg-\nmentation will hence help to plan hepatic resection, pre-\nvent donor-recipient mismatch, improve survival of graft\nand patient overall and also help in the approval of new\nimmunosuppressant drugs by playing an important role\nin research and development in drug trials. The salient\nstudies of AI and ML are listed in Table 4.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 97.77,
+                    "box": [
+                        262.0,
+                        2125.8,
+                        539.2,
+                        2180.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_04_title.png",
+                    "text": "KEY POINTS\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.59,
+                    "box": [
+                        260.7,
+                        2198.1,
+                        1147.4,
+                        2443.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_05_text.png",
+                    "text": "Various Al-based applications and models, devel-\noped using clinical, laboratory and radiology data,\nplay an important role in diagnosis, prediction of\nseverity and prognostication of liver diseases\n(Figure 3).\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "title",
+                    "score": 99.06,
+                    "box": [
+                        202.8,
+                        2549.3,
+                        1162.6,
+                        2602.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_06_title.png",
+                    "text": "THE LIMITATIONS OF Al IMPLEMENTATION\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        200.8,
+                        2622.0,
+                        1204.2,
+                        3066.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_07_text.png",
+                    "text": "There are certain obstacles and pitfalls, despite all the ad-\nvantages of AI technology. Medicine is a field of science\nwith multiple research gaps, hence designing perfect AI\nmodels has been difficult to date, especially in gastroenter-\nology and hepatology (Table 3). A flawed algorithm can\ncause harm to a large group of patients. Instead of a single\ndoctor's mistake harming a patient, the potential for ma-\nchine algorithms causing iatrogenic risk is vast. As a result,\nsystematic amendment, extensive simulation, validation\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 98.68,
+                    "box": [
+                        1300.0,
+                        345.2,
+                        2237.7,
+                        434.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_08_text.png",
+                    "text": "Table 3 Future Research Points of Investigations for\nArtificial Intelligence in Gastroenterology and Hepatology\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "table",
+                    "score": 99.58,
+                    "box": [
+                        1302.9,
+                        443.4,
+                        2255.5,
+                        983.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_09_table.png"
+                },
+                {
+                    "idx": 10,
+                    "thing": "text",
+                    "score": 98.03,
+                    "box": [
+                        1301.6,
+                        1001.0,
+                        2279.2,
+                        1040.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_10_text.png",
+                    "text": "Abbreviation: AUROC, area under the receiver operating characteristic.\n"
+                },
+                {
+                    "idx": 11,
+                    "thing": "text",
+                    "score": 99.9,
+                    "box": [
+                        1278.3,
+                        1076.1,
+                        2281.0,
+                        1421.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_11_text.png",
+                    "text": "and audit along with prospective trials and scrutiny are\nrequired when an AI algorithm is launched in clinical prac-\ntice. Another critical aspect of the future of AI rests with\nthe preservation and protection of data and personal infor-\nmation, maintaining privacy. Given the risks of hacking\nand data robbery, there will be less interest in the use of al-\ngorithms that risk revealing a patient’s medical history.\n"
+                },
+                {
+                    "idx": 12,
+                    "thing": "text",
+                    "score": 99.91,
+                    "box": [
+                        1278.0,
+                        1425.3,
+                        2281.4,
+                        1719.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_12_text.png",
+                    "text": "Now, as AI moves towards face recognition and the use\nof genomic imprints, it further stresses the fact that data\nsecurity will be a chief concern. Developing software with\nfull-proof security systems, especially for data transfer\nand storage, will help increase the confidence of patients\nfor AI development.\n"
+                },
+                {
+                    "idx": 13,
+                    "thing": "text",
+                    "score": 99.91,
+                    "box": [
+                        1277.1,
+                        1723.5,
+                        2282.5,
+                        2218.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_13_text.png",
+                    "text": "High dependency on AI tools can result in the reduction\nof the skills of clinicians. One should remember that AI\ntools also have diagnostic errors. Hence, clinicians should\nbe vigilant in the initial phase of AI implementation, disap-\nproving the diagnosis; they believe AI has made an error.\nThe initial use of AI tools will prolong diagnostic time,\nmainly due to the clinicians learning the new process and\ntechnology adapting itself to new unprocessed data. Hence\nthere should be a dedicated team of people involved in the\ndevelopment of AI applications.\n"
+                },
+                {
+                    "idx": 14,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        1276.6,
+                        2223.4,
+                        2282.2,
+                        3065.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_14_text.png",
+                    "text": "It is improbable that the AI systems will render clini-\ncians input completely obsolete, as the AI systems are de-\nsigned to keep human intelligence as a centre-space.\nThey lack the technical complexity required to achieve au-\ntonomy. ” Rather than hinder the already skilled clini-\ncians, they will aid and further support for patient\nmanagement. Clinicians should embrace AI systems as ad-\njuncts to increase the quality of care. Machines cannot\nreplace the component of ‘human touch’; hence clinicians\nethically will play a major role in decision-making for their\npatients based on patient's preferences and comfort.\nAnother limitation of AI technology at present is the lack\nof superior quality datasets for algorithm development.\nCurrently, with the lack of utility of ML algorithms in clin-\nical practice, most of the evidence is from preclinical trials.\nHence collections of data and storage from involvements\nof multiple centres with high volume load will help in\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_09.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_09.png",
+                "image_width": 3308,
+                "image_height": 2481,
+                "regions_num": 3,
+                "page_idx": 9
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.24,
+                    "box": [
+                        240.7,
+                        315.6,
+                        1152.3,
+                        358.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_09/region_1_text.png",
+                    "text": "Table 4 Salient Studies of Al and ML in Liver Diseases.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "table",
+                    "score": 99.54,
+                    "box": [
+                        243.6,
+                        371.5,
+                        2959.1,
+                        2156.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_09/region_2_table.png"
+                },
+                {
+                    "idx": 3,
+                    "thing": "figure",
+                    "score": 20.54,
+                    "box": [
+                        231.4,
+                        2174.1,
+                        2937.5,
+                        2470.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_09/region_3_figure.png"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_10.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_10.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 10,
+                "page_idx": 10
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 96.4,
+                    "box": [
+                        194.4,
+                        2746.8,
+                        234.5,
+                        3064.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_01_text.png",
+                    "text": "3\no\n5\ns\n5\nS\n\n2\n\nt+\n\n2\n\n2\n©\n\n-\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "table",
+                    "score": 97.86,
+                    "box": [
+                        275.4,
+                        344.2,
+                        920.8,
+                        3060.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_02_table.png"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 92.33,
+                    "box": [
+                        941.2,
+                        379.9,
+                        1034.6,
+                        3068.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_03_text.png",
+                    "text": "c\n\n°\n=\n\noO\n\n°\n\noO\n\noO\n\n.\n&\n=\noO\n\noO\n\n°\nS\n\no\n\na\n\no\n=\noO\nOo\n=\n\n$\n\nwn\n\noO\n\noO\n2\nTs\n\n.\n\noO\n2Z\n2\n\nCc\n\n°o\n\n©\nx=\n\noO\na\n4\nOo\n\nOo .\n\nnw\n\n© xs\n2S\n\nn Qa\n\nco\n\nGx\nBe\nEo\n\nEo\n\n© 9\n2s\n\na\nto\n\nGo\n\nae\n\n~ 2\na\nWY _-\nax\n¥Q\noz\nzo\n\no wn\n\nCc Oo\n— oO\n\n© 2\n\n5 0\n\nor.\n\nc oO\n_2\ngS\n\noO\nZe\nef\n\nGo\n\n- OS\n25\n<6\n\n2\n\nCc\n\nG6\n&e\n\nEa\n\no\n\nWe\ncz\n\nGZ\n~\n\no\n&E\n\nee\n= O\n\n© o\na2\n5\n\n2G\n\ncfé\n\noO .«\na\na\n\noS\nes\n= 2\nBo\n\noO\neS\nca\n\noz\n\n- >\n=> 2\nae\n\n2 oO\n\noO\npx\n&\n\n> =\n\n5 i\n$a\n<tr\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.52,
+                    "box": [
+                        1278.7,
+                        345.0,
+                        2286.9,
+                        442.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_04_text.png",
+                    "text": "collecting data. Proper validation studies then need to be\ndone after the AI tools have been made.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.61,
+                    "box": [
+                        1279.9,
+                        442.1,
+                        2291.2,
+                        1141.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_05_text.png",
+                    "text": "Specific DL methods are considered ‘black-box’ models,\nso it is not easy to understand the processing of data. This\nhas prohibited physicians from finding potential con-\nfounding variables. There has been much published about\n‘black-box’ warning of algorithms.”* AI use can be ethically\nchallenging, as patient preferences cannot be machine\nlearnt. Also, in case of misdiagnosis, who shall be legally\nresponsible - whether the endoscopist, the clinician or\nthe programmer is still undecided? Moreover, the racial\ndistinction might be necessary for certain areas (as fibrosis\nin viral hepatitis), and it may be an inherent bias in AI. So,\ndifferent population groups must be considered in devel-\noping and validating AI tools, to increase their sensitivity,\nspecificity and accuracy.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "title",
+                    "score": 72.64,
+                    "box": [
+                        1338.8,
+                        1238.5,
+                        1615.9,
+                        1294.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_06_title.png",
+                    "text": "KEY POINTS\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 93.03,
+                    "box": [
+                        1336.9,
+                        1313.9,
+                        2223.5,
+                        1709.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_07_text.png",
+                    "text": "Use of AI technology is advantageous to the fields of\ngastroenterology, hepatology and medicine in gen-\neral, but have some roadblocks at present. Mainly\nbeing data security, lack of human touch, concerns\nregarding overpowering human intelligence and\nlack of proper databases. These pitfalls shall be\novercome in the future with proper clinical trials\nand studies.\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "title",
+                    "score": 99.5,
+                    "box": [
+                        1279.8,
+                        1812.2,
+                        2125.7,
+                        1921.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_08_title.png",
+                    "text": "THE FUTURE PERSPECTIVES OF AI IN\nHEPATOLOGY\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "text",
+                    "score": 99.86,
+                    "box": [
+                        1279.3,
+                        1938.4,
+                        2291.8,
+                        2936.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_09_text.png",
+                    "text": "The field of AI at present is full of promises but relatively\nless in proofs and validation. Before it is used in clinical\npractice, AI requires rigorous studies, clinical validation in\na real-world scenario and publication in peer-reviewed jour-\nnals. There are concerns that machines in the future will\nreplace doctors, but the fact is that the designers of AI mod-\nules are cautious for that to happen. Human life is too\nprecious and cannot be experimented with as a ‘self-driven\ncar’. Hence the usage of AI in clinical practice will be slow\nand cautious, first involving processes with minimal risk\nand complications. Gradually this will lay the foundation\nfor high-performance medicine, which will absorb more\nand more human data, decreasing the reliance on human\nresources and eventually form a symbiotic relationship be-\ntween human and machine intelligence for the betterment\nof humankind. The expansion of AI in gastroenterology\nand hepatology is crucial for the progress of these fields.\nAlso, the use of Al is advantageous compared to traditional\nregression analysis methods used in research by incorpo-\nrating large samples and by reducing interobserver bias.\n"
+                },
+                {
+                    "idx": 10,
+                    "thing": "text",
+                    "score": 99.84,
+                    "box": [
+                        1280.6,
+                        2936.6,
+                        2288.8,
+                        3084.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_10_text.png",
+                    "text": "An upcoming impact of Al is that it forms an important\npart of the evolution of precision and personalized medicine. It\ndescribes the revolution in health care triggered by\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_11.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_11.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 16,
+                "page_idx": 11
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        200.4,
+                        345.2,
+                        1205.0,
+                        1487.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_01_text.png",
+                    "text": "knowledge gained from sequencing the human genome.\nThe field has evolved to recognize how the intersection of\nmulti-omic data combined with medical history, social/behav-\nioural determinants, and environmental knowledge pre-\ncisely characterizes health states, disease states, and\ntherapeutic options for affected individuals. The synergy\nof Al and precision medicine has augmented the yield of highly\npersonalized medical diagnostic and therapeutic informa-\ntion. The ultimate goal of this combination is the preven-\ntion and early detection of diseases affecting the\nindividual, which could ultimately decrease the disease\nburden for the public at large, and, therefore, the cost of pre-\nventable health care for all. Genotype-guided treatment of\nHCC is an example of precision medicine. The genetic charac-\nterization of HCC is not well established like other malig-\nnancies due to a lack of genomic studies. However, ‘big\ngenomic data’ and AI analysis will help identify patients\nwith CLD who are at high risk for fibrosis or HCC. Patients\nwith advanced HCC are presently treated with newer agents\nsuch as molecular targeted therapy or immunotherapy.\nHowever, the group of patients who will respond to the\ndrugs is not known. If AI can predict this treatment\nresponse, precision medicine can become a reality soon.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        200.8,
+                        1492.0,
+                        1204.6,
+                        2633.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_02_text.png",
+                    "text": "Healthcare systems in developing countries like India\nhave a lot of challenges, especially in the rural areas. AI\nhelps in addressing these issues by assisting the doctors\nin better and quick diagnosis, delivering personalized\nhealthcare, providing high-quality healthcare to rural\nareas, and helping doctors and nurses in training to handle\ncomplex medical conditions. AI can help monitor a pa-\ntient’s condition having chronic ailments with the help\nofa smartphone. ~ Using clinical, genetic, molecular infor-\nmation from large datasets, AI can be helpful to find new\ntherapeutic targets. Apart from the extensive number of\nAI applications being made, a lot of unmet needs are\nwork on alcohol related liver injury, metabolic and autoim-\nmune liver diseases. Hence there is a lot of scope for tech-\nnical growth in the AI sub-speciality, paving the way to\nimprove the accuracy of the AI tools. AI systems for liver\nsegmentation and diagnosis should be widely available\nwithin the next 5 years, which will help in liver lesion char-\nacterization and aid in liver transplantation. Working in\nisolation from AI and data scientists will be a hindrance\nto the growth of clinical medicine. Hence, the adoption\nof coordinated research opportunities will facilitate the\ndevelopment of many clinically useful tools.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "title",
+                    "score": 92.68,
+                    "box": [
+                        261.4,
+                        2702.5,
+                        539.6,
+                        2758.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_03_title.png",
+                    "text": "KEY POINTS\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.7,
+                    "box": [
+                        260.9,
+                        2784.5,
+                        1145.9,
+                        3030.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_04_text.png",
+                    "text": "The future of AI is promising with the introduction\nof precision and personalized medicine, mainly\ninvolving data from the human genome. Overall\nhealthcare services will improve especially in rural\nareas of developing and underdeveloped countries.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "title",
+                    "score": 98.26,
+                    "box": [
+                        1277.2,
+                        341.3,
+                        1518.4,
+                        395.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_05_title.png",
+                    "text": "SUMMARY\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        1277.1,
+                        413.7,
+                        2282.2,
+                        1808.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_06_text.png",
+                    "text": "AI is an upcoming promising technology that is rapidly\nbecoming an essential part of patient management. Appli-\ncations of AI have expanded in all branches of medicines,\nespecially endoscopy and hepatology. The conglomeration\nof data which can be clinical/laboratory, multi-omics, natural\nlanguage processing (NLP) and Image recognition (both\nradiology-based and pathology-based) has contributed to the\nprediction of fibrosis, classification of liver masses and pre-\ndiction of treatment response and transplant outcomes. ’®\nIn this review the majority of studies mentioned focussed\non diagnosis part. There are very few studies that help to\npredict treatment response, post-liver transplant response,\nand prediction of hepatotoxicity in newer drug develop-\nment and more studies are needed. AI also helps for real-\ntime biomonitoring, by identification of patients at high\nrisk of clinical decompensation and hospital admission,\nso that timely intervention can be done for high-risk pa-\ntients. With the increasing advancement of image capture\nand storage, AI will bring striking changes to the diagnosis\nof various liver diseases with the ‘big data’ being available.\nHowever, there are many hurdles to overcome, which re-\nsearchers will do in the near future using validation studies\nand molecular research. It is expected that gastroenter-\nology and hepatology will be one of the first areas in med-\nicine to introduce AI tools on a wide-scale basis, due to its\ninherent reliance on endoscopic and radiological imaging.\nHence, GI and liver specialists should be proud that our\nfield sets the ground for AI development in medicine.\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "title",
+                    "score": 99.7,
+                    "box": [
+                        1277.5,
+                        1862.6,
+                        2134.5,
+                        1972.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_07_title.png",
+                    "text": "CREDIT AUTHORSHIP CONTRIBUTION\nSTATEMENT\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        1278.0,
+                        1990.8,
+                        2281.7,
+                        2236.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_08_text.png",
+                    "text": "Both the authors have drafted the manuscript and re-\nviewed the relevant databases for literature relevant to\nthis review. HR and RK conceptualized and prepared the\nmanuscript. HR designed the images. DNR critically re-\nviewed and edited the article.\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "title",
+                    "score": 98.01,
+                    "box": [
+                        1276.9,
+                        2292.0,
+                        1853.6,
+                        2348.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_09_title.png",
+                    "text": "CONFLICTS OF INTEREST\n"
+                },
+                {
+                    "idx": 10,
+                    "thing": "text",
+                    "score": 98.57,
+                    "box": [
+                        1276.8,
+                        2366.7,
+                        1850.1,
+                        2413.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_10_text.png",
+                    "text": "All authors have none to declare.\n"
+                },
+                {
+                    "idx": 11,
+                    "thing": "title",
+                    "score": 87.06,
+                    "box": [
+                        1277.1,
+                        2468.5,
+                        1487.6,
+                        2524.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_11_title.png",
+                    "text": "FUNDING\n"
+                },
+                {
+                    "idx": 12,
+                    "thing": "text",
+                    "score": 96.09,
+                    "box": [
+                        1277.9,
+                        2542.8,
+                        1382.3,
+                        2588.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_12_text.png",
+                    "text": "None.\n"
+                },
+                {
+                    "idx": 13,
+                    "thing": "title",
+                    "score": 97.86,
+                    "box": [
+                        1277.9,
+                        2627.5,
+                        1827.7,
+                        2683.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_13_title.png",
+                    "text": "ETHICAL REQUIREMENT\n"
+                },
+                {
+                    "idx": 14,
+                    "thing": "text",
+                    "score": 99.36,
+                    "box": [
+                        1277.3,
+                        2702.2,
+                        2280.4,
+                        2798.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_14_text.png",
+                    "text": "This review article does not have any studies with human\nor animal subjects.\n"
+                },
+                {
+                    "idx": 15,
+                    "thing": "title",
+                    "score": 80.36,
+                    "box": [
+                        1279.0,
+                        2841.2,
+                        1530.1,
+                        2886.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_15_title.png",
+                    "text": "REFERENCES\n"
+                },
+                {
+                    "idx": 16,
+                    "thing": "list",
+                    "score": 44.76,
+                    "box": [
+                        1296.6,
+                        2915.8,
+                        2282.0,
+                        3076.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_16_list.png",
+                    "text": "1. Chahal D, Byrne MF. A primer on artificial intelligence and its appli-\ncation to endoscopy. Gastrointest Endosc. 2020;92:813-820. e4.\n\n2. Topol EJ. High-performance medicine: the convergence of human\nand artificial intelligence. Nat Med. 2019;25:44—-56.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_12.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_12.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 2,
+                "page_idx": 12
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 98.25,
+                    "box": [
+                        205.1,
+                        352.7,
+                        1204.6,
+                        3000.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_12/region_1_list.png",
+                    "text": "3. Colom R, Karama 3s, Jung Rr, Haler RJ. Human intelligence and\nbrain networks. Dialogues Clin Neurosci. 2010;12:489-501.\n\n4. Michie D, Spiegelhalter DJ, Taylor CC. Machine Learning, Neural\nand Statistical Classification. 1994.\n\n5. Sathya R, Abraham A. Comparison of supervised and unsupervised\nlearning algorithms for pattern classification. Int J Adv Res Artif In-\ntell. 2013;2:34-38.\n\n6. LeCun Y, Bengio Y, Hinton G. Deep learning. Nature.\n2015;521:436-444.\n\n7. Zhou L-Q, Wang J-Y, Yu S-Y, et al. Artificial intelligence in medical\nimaging of the liver. World J Gastroenterol. 2019;25:672.\n\n8. Le Berre C, Sandborn WJ, Aridhi S, et al. Application of artificial in-\ntelligence to gastroenterology and hepatology. Gastroenterology.\n2020;158:76-94. e2.\n\n9. Hu W, Yang H, Xu H, Mao Y. Radiomics based on artificial intelli-\ngence in liver diseases: where are we? Gastroenterol report.\n2020;8:90-97.\n\n10. Lambin P, Leijenaar RT, Deist TM, et al. Radiomics: the bridge be-\ntween medical imaging and personalized medicine. Nat Rev Clin\nOncol. 2017;14:749-762.\n\n11. Pinker K, Shitano F, Sala E, et al. Background, current role, and po-\ntential applications of radiogenomics. J Magn Reson Imag.\n2018;47:604-620.\n\n12. Rutman AM, Kuo MD. Radiogenomics: creating a link between mo-\nlecular diagnostics and diagnostic imaging. Eur J Radiol.\n2009;70:232-241.\n\n13. Pannala R, Krishnan K, Melson J, et al. Artificial intelligence in\ngastrointestinal endoscopy. Video. 2020;5:598-613.\n\n14. Lee HW, Sung JJY, Ahn SH. Artificial intelligence in liver disease.\nJ Gastroenterol Hepatol. 2021;36:539-542.\n\n15. Wang D, Wang Q, Shan F, Liu B, Lu C. Identification of the risk for\nliver fibrosis on CHB patients using an artificial neural network\nbased on routine and serum markers. BMC Infect Dis.\n2010;10:251.\n\n16. Wei R, Wang J, Wang X, et al. Clinical prediction of HBV and HCV\nrelated hepatic fibrosis using machine learning. EBioMedicine.\n2018;35:124-132.\n\n17. Gillies RJ, Kinahan PE, Hricak H. Radiomics: images are more than\npictures, they are data. Radiology. 2016;278:563-577.\n\n18. Chen Y, Luo Y, Huang W, et al. Machine-learning-based classifica-\ntion of real-time tissue elastography for hepatic fibrosis in patients\nwith chronic hepatitis B. Comput Biol Med. 2017;89:18-23.\n\n19. Wang K, Lu X, Zhou H, etal. Deep learning Radiomics of shear wave\nelastography significantly improved diagnostic performance for as-\nsessing liver fibrosis in chronic hepatitis B: a prospective multi-\ncentre study. Gut. 2019;68:729-741.\n\n20. Park HJ, Lee SS, Park B, et al. Radiomics analysis of gadoxetic\nacid-enhanced MRI for staging liver fibrosis. Radiology.\n2019;290:380-387.\n\n21. Piscaglia F, Cucchetti A, Benlloch S, et al. Prediction of significant\nfibrosis in hepatitis C virus infected liver transplant recipients by\nartificial neural network analysis of clinical factors. Eur J Gastroen-\nterol Hepatol. 2006;18:1255-1261.\n\n22. Hashem S, Esmat G, Elakel W, et al. Comparison of machine\nlearning approaches for prediction of advanced liver fibrosis in\nchronic hepatitis C patients. IEEE ACM Trans Comput Biol Bioinf.\n2017;15:861-868.\n\n23. Konerman MA, Zhang Y, Zhu J, Higgins PD, Lok AS, Waljee AK.\nImprovement of predictive models of risk of disease progression\nin chronic hepatitis C by incorporating longitudinal data. Hepatol-\nogy. 2015;61:1832-1841.\n\n24. Konerman MA, Beste LA, Van T, et al. Machine learning models to\npredict disease progression among veterans with hepatitis C virus.\nPLoS One. 2019;14e0208141.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "list",
+                    "score": 98.8,
+                    "box": [
+                        1277.6,
+                        352.4,
+                        2280.7,
+                        2999.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_12/region_2_list.png",
+                    "text": "25. Takayama T, Ebinuma H, Tada §, et al. Prediction of effect of pegy-\nlated interferon alpha-2b plus ribavirin combination therapy in pa-\ntients with chronic hepatitis C infection. PLoS One.\n2011;6e27223.\n\n26. Sowa J-P, Atmaca 0, Kahraman A, et al. Non-invasive separation of\nalcoholic and non-alcoholic liver disease with predictive modeling.\nPLoS One. 2014;9e101444.\n\n27. Vanderbeck S, Bockhorst J, Komorowski R, Kleiner DE, Gawrieh S.\nAutomatic classification of white regions in liver biopsies by super-\nvised machine learning. Hum Pathol. 2014;45:785-792.\n\n28. Heinemann F, Birk G, Stierstorfer B. Deep learning enables\npathologistlike scoring of NASH models. Sci Rep.\n2019;918454.\n\n29. Sowa J-P, Heider D, Bechmann LP, Gerken G, Hoffmann D,\nCanbay A. Novel algorithm for non-invasive assessment of fibrosis\nin NAFLD. PLoS One. 2013;8e62439.\n\n30. Yip TF, MaA, Wong VS, et al. Laboratory parameter-based machine\nlearning model for excluding non-alcoholic fatty liver disease\n(NAFLD) in the general population. Aliment Pharmacol Ther.\n2017;46:447-456.\n\n31. Application of machine learning methods to predict non-alcoholic\nsteatohepatitis (NASH) in non-alcoholic fatty liver (NAFL) patients.\nIn: Fialoke S, Malarstig A, Miller MR, Dumitriu A, eds. AMIA Annual\nSymposium Proceedings. American Medical Informatics Associa-\ntion; 2018.\n\n32. A novel computer-aided diagnosis framework using deep learning\nfor classification of fatty liver disease in ultrasound imaging. In:\nReddy DS, Bharath R, Rajalakshmi P, eds. 2018 /JEEE 20th Interna-\ntional Conference on E-Health Networking, Applications and Ser-\nvices (Healthcom). IEEE; 2018.\n\n33. Yu Y, Wang J, Ng CW, et al. Deep learning enables automated\nscoring of liver fibrosis stages. Sci Rep. 2018;8:1-10.\n\n34. Arjmand A, Angelis CT, Christou V, et al. Training of deep convolu-\ntional neural networks to identify critical liver alterations in histopa-\nthology image samples. Appl Sci. 2020;10:42.\n\n35. Vall A, Sabnis Y, Shi J, Class R, Hochreiter S, Klambauer G. The\npromise of Al for DILI prediction. Front Artif Intell. 2021;4:15.\n\n36. Ringe KI, Vo Chieu VD, Wacker F, et al. Fully automated detection of\nprimary sclerosing cholangitis (PSC)-compatible bile duct changes\nbased on 3D magnetic resonance cholangiopancreatography using\nmachine learning. Eur Radiol. 2021;31:2482-2489,\n\n37. Eaton JE, Vesterhus M, McCauley BM, et al. Primary sclerosing\ncholangitis risk estimate tool (PRESTo) predicts outcomes of the\ndisease: a derivation and validation study using machine learning.\nHepatology. 2020;71:214-224.\n\n38. Gerussi A, Verda D, Bernasconi DP, et al. Machine learning in pri-\nmary biliary cholangitis: a novel approach for risk stratification.\nLiver Int. 2022;42:615-627.\n\n39. Huang Y, Huang F, Yang L, et al. Development and validation of a\nradiomics signature as a non-invasive complementary predictor\nof gastroesophageal varices and high-risk varices in compensated\nadvanced chronic liver disease: a multicenter study.\nJ Gastroenterol Hepatol. 2021;36:1562-1570.\n\n40. Agarwal S, Sharma S, Kumar M, et al. Development of a machine\nlearning model to predict bleed in esophageal varices in compen-\nsated advanced chronic liver disease: a proof of concept.\nJ Gastroenterol Hepatol. 2021;36:2935-2942,\n\n41. Konerman MA, Lu D, Zhang Y, et al. Assessing risk of fibrosis pro-\ngression and liver-related clinical outcomes among patients with\nboth early stage and advanced chronic hepatitis C. PLoS One.\n2017;12e0187344.\n\n42. Hong W-d, Ji Y-f, Wang D, Chen T-z, Zhu Q-h. Use of artificial neural\nnetwork to predict esophageal varices in patients with HBV related\ncirrhosis. Hepat Mon. 2011;11:544.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_13.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_13.png",
+                "image_width": 2481,
+                "image_height": 3308,
+                "regions_num": 2,
+                "page_idx": 13
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "list",
+                    "score": 90.09,
+                    "box": [
+                        201.1,
+                        351.3,
+                        1203.9,
+                        2578.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_13/region_1_list.png",
+                    "text": "43. Dong TS, Kalani A, Aby ES, et al. Machine learning-based develop-\nment and validation of a scoring system for screening high-risk\nesophageal varices. Clin Gastroenterol Hepatol. 2019;17:1894-\n1901. e1.\n\n44. Gatos |, Tsantis S, Spiliopoulos S, et al. A machine-learning algo-\nrithm toward color analysis for chronic liver disease classification,\nemploying ultrasound shear wave elastography. Ultrasound Med\nBiol. 2017;43:1797-1810.\n\n45. Decharatanachart P, Chaiteerakij R, Tiyarattanachai T,\nTreeprasertsuk S. Application of artificial intelligence in chronic\nliver diseases: a systematic review and meta-analysis. BMC Gastro-\nenterol. 2021;21:1-16.\n\n46. Ahn JC, Attia ZI, Rattan P, et al. Development of the Al-Cirrhosis-\nECG (ACE) Score: an electrocardiogram-based deep learning model\nin cirrhosis. Am J Gastroenterol. 2022;117:424—-432.\n\n47. Qi X, Li Z, Huang J, et al. Virtual portal pressure gradient from\nanatomic CT angiography. Gut. 2015;64:1004-1005.\n\n48. MusunuriB, Shetty S, Shetty DK, et al. Acute-on-chronic liver failure\nmortality prediction using an artificial neural network. Engineered\nScience. 2021;15:187-196.\n\n49. Wu K, Chen X, Ding M. Deep learning based classification of focal\nliver lesions with contrast-enhanced ultrasound. Optik.\n2014;125:4057-4063.\n\n50. Masuzaki R, Kanda T, Sasaki R, et al. Application of artificial intel-\nligence in hepatology: Minireview. Artif Intell Gastroenterol.\n2020;1:5-11.\n\n51. Yasaka K, Akai H, Abe O, Kiryu S. Deep learning with convolutional\nneural network for differentiation of liver masses at dynamic\ncontrastenhanced CT: a_ preliminary § study. Radiology.\n2018;286:887-896.\n\n52. Zhen S-h, Cheng M, Tao Y-b, et al. Deep learning for accurate diag-\nnosis of liver tumor based on magnetic resonance imaging and clin-\nical data. Front Oncol. 2020;10:680.\n\n53. Hassan TM, Elmogy M, Sallam E-S. Diagnosis of focal liver dis-\neases based on deep learning technique for ultrasound images.\nArabian J Sci Eng. 2017;42:3127-3140.\n\n54. Lee S, Choe EK, Kim SY, Kim HS, Park KJ, Kim D. Liver imaging fea-\ntures by convolutional neural network to predict the metachronous\nliver metastasis in stage [Ill colorectal cancer patients based on\npreoperative abdominal CT scan. BMC Bioinf. 2020;21:1-14.\n\n55. Sato M, Morimoto K, Kajihara S, et al. Machine-learning approach\nfor the development of a novel predictive model for the diagnosis of\nhepatocellular carcinoma. Sci Rep. 2019;9:1-7.\n\n56. Singal AG, Mukherjee A, Elmunzer BJ, et al. Machine learning algo-\nrithms outperform conventional regression models in predicting\ndevelopment of hepatocellular carcinoma. Am J Gastroenterol.\n2013;108:1723.\n\n57. Nam JY, Sinn DH, Bae J, Jang ES, Kim J-W, Jeong S-H. Deep\nlearning model for prediction of hepatocellular carcinoma in pa-\ntients with HBV-related cirrhosis on antiviral therapy. JHEP Reports.\n2020;2100175.\n\n58. Chaudhary K, Poirion OB, Lu L, Garmire LX. Deep learning—based\nmulti-omics integration robustly predicts survival in liver cancer.\nClin Cancer Res. 2018;24:1248-1259.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "list",
+                    "score": 94.2,
+                    "box": [
+                        1276.8,
+                        346.6,
+                        2278.3,
+                        2577.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_13/region_2_list.png",
+                    "text": "59. Saillard C, Schmauch B, Laifa O, et al. Predicting survival after he-\npatocellular carcinoma resection using deep learning on histologi-\ncal slides. Hepatology. 2020;72:2000-2013.\n\n60. Randhawa S, Alsadoon A, Prasad P, Al-Dala’in T, Dawoud A,\nAlrubaie A. Deep learning for liver tumour classification: enhanced\nloss function. Multimed Tool App!. 2021;80:4729-4750.\n\n61. Kiani A, Uyumazturk B, Rajpurkar P, et al. Impact of a deep learning\nassistant on the histopathologic classification of liver cancer. NPJ\ndigital medicine. 2020;3:1-8.\n\n62. A joint deep learning approach for automated liver and tumor seg-\nmentation. In: Gruber N, Antholzer S, Jaschke W, Kremser C,\nHaltmeier M, eds. 2019 13th International Conference on Sampling\nTheory and Applications (SampTA). IEEE; 2019.\n\n63. Alirr Ol. Deep learning and level set approach for liver and tumor\nsegmentation from CT scans. J Appl Clin Med Phys.\n2020;21:200-209.\n\n64. Azer SA. Deep learning with convolutional neural networks for iden-\ntification of liver masses and hepatocellular carcinoma: a system-\natic review. World J Gastrointest Oncol. 2019;11:1218.\n\n65. Chen M, Zhang B, Topatana W, et al. Classification and muta-\ntion prediction based on histopathology H&E images in liver\ncancer using deep learning. NPJ_ precision oncology.\n2020;4:1-7.\n\n66. Banerjee R, Das A, Ghoshal UC, Sinha M. Predicting mortality in pa-\ntients with cirrhosis of liver with application of neural network tech-\nnology. J Gastroenterol Hepatol. 2003;18:1054—-1060.\n\n67. Fang C, An J, Bruno A, et al. Consensus recommendations\nof three-dimensional visualization for diagnosis and manage-\nment of liver diseases. Hepatology International.\n2020;14:437-453.\n\n68. Khosravi B, Pourahmad S, Bahreini A, Nikeghbalian S, Mehrdad G.\nFive years survival of patients after liver transplantation and its\neffective factors by neural network and cox poroportional hazard\nregression models. Hepat Mon. 2015;15.\n\n69. Briceno J, Cruz-Ramirez M, Prieto M, et al. Use of artificial intelli-\ngence as an innovative donor-recipient matching model for liver\ntransplantation: results from a multicenter Spanish study.\nJ Hepatol. 2014;61:1020-1028.\n\n70. Tang A, Tam R, Cadrin-Chénevert A, et al. Canadian Association of\nRadiologists white paper on artificial intelligence in radiology. Can\nAssoc Radiol J. 2018;69:120-135.\n\n71. Castelvecchi D. Can we open the black box of Al? Nature.\n2016;538:20-23.\n\n72. Heida A, Knol M, Kobold AM, Bootsman J, Dijkstra G, van\nRheenen PF. Agreement between home-based measurement of\nstool calprotectin and ELISA results for monitoring inflammatory\nbowel disease activity. Clin Gastroenterol Hepatol.\n2017;15:1742-1749. e2.\n\n73. Ahn JC, Connell A, Simonetto DA, Hughes C, Shah VH. Application\nof artificial intelligence for the diagnosis and treatment of liver dis-\neases. Hepatology. 2021;73:2546-2563.\n\n74. Minerali E, Foil DH, Zorn KM, Lane TR, Ekins S. Comparing machine\nlearning algorithms for predicting drug-induced liver injury (DILI).\nMol Pharm. 2020;17:2628-2637.\n"
+                }
+            ]
+        }
+    ]
+}

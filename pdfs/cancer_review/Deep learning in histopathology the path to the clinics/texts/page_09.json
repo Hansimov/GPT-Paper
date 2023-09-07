@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_09.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 5,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 83.47,
+            "box": [
+                303.5,
+                290.4,
+                2191.9,
+                609.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_09/region_1_text.png",
+            "text": "[100], [101], as well as the presence of genetic mutations [102], [103], [104], [92], [105], [106], [107]\nor molecular subtypes [28], [108], [109]. These CPATH techniques could have a role in the discovery\nof predictive and prognostic biomarkers, as well as potentially being used to understand tumor growth\nmechanisms.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 91.46,
+            "box": [
+                301.4,
+                713.9,
+                759.6,
+                776.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_09/region_2_title.png",
+            "text": "[H1] Current challenges\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 82.97,
+            "box": [
+                300.9,
+                794.6,
+                2194.9,
+                1362.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_09/region_3_text.png",
+            "text": "Although considerable progress has been made in CPATH in the past five years, both in terms of\nalgorithm performance and the development of novel methodologies, many challenges still exist.\nSome of these challenges, such as the lack of public datasets that are truly representative of clinical\npractice, stand in the way of true clinical adoption of CPATH algorithms. Other challenges, such as\ndifficulties in explaining how CPATH algorithms work are, in our view, less of a barrier than often\nthought [159]. In this section, we highlight some important challenges and the work that has already\nbeen done to tackle these issues.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 86.26,
+            "box": [
+                301.1,
+                1466.2,
+                2195.2,
+                2453.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_09/region_4_text.png",
+            "text": "[H2] Generalizability of CPATH algorithms to clinical practice. Although dataset sizes for developing\nCPATH algorithms have grown substantially over the past few years, many still lack an important\ncharacteristic in that they are not representative of the type of data that is encountered in clinical\npractice [123]. This data has many more sources of variation than the datasets used in research\npapers. Although most work now tries to account for variations caused by different scanners or\nstaining techniques by including data from different labs, the number of labs included is typically too\nsmall for a true assessment of generalizability [120]. The number of labs that would need to be\nincluded to be representative would depend on the diagnostic question and, up until now, this aspect\nof CPATH has been poorly investigated. Other sources of variation have not yet been taken into\naccount in CPATH, such as differing patient populations between centers or countries, although they\nare starting to be considered in other fields such as radiology [110]. Such variation can cause subtle\nsources of bias in CPATH algorithms, as seen in other settings [131].\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 85.4,
+            "box": [
+                301.3,
+                2557.1,
+                2193.9,
+                3127.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_09/region_5_text.png",
+            "text": "These generalization issues are highlighted by the well-known phenomenon of CPATH algorithms\nperforming optimally on data from the source(s) they were trained on, but performing (sometimes\nmuch) less well on data from other sources. For example, the application of a trained model for\ndetection of prostate cancer to WSI taken from the same dataset that was used for algorithm\nconstruction, but that had been re-scanned on a different WSI scanner, gave an area under the curve\nreduction of 2.65%, whereas model performance dropped by 5.84% when applied to WSI from an\nexternal dataset [72]. Examples of performance drops in the presence of external test data can also\n"
+        }
+    ]
+}

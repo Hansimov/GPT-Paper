@@ -1,0 +1,101 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 7,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.61,
+            "box": [
+                200.2,
+                346.4,
+                1702.0,
+                389.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_1_text.png",
+            "text": "Table 1 Glossary of Common Terms and Definitions Used in Artificial Intelligence Domains.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.91,
+            "box": [
+                199.5,
+                394.9,
+                2284.0,
+                1787.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_2_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.22,
+            "box": [
+                200.2,
+                1803.1,
+                2279.2,
+                1840.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_3_text.png",
+            "text": "Abbreviations: Al, artificial intelligence; ANN, artificial neural network; CNN, convolutional neural network; DL, deep learning; ML, machine learning.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                201.7,
+                1896.0,
+                1204.7,
+                2093.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_4_text.png",
+            "text": "the outcomes pertaining to the diagnosis, treatment and\nprognosis of clinical problems especially cancer.’ Data is\ndrawn out from medical images using high-throughput\nmining and applied within clinical management flow-\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.46,
+            "box": [
+                201.2,
+                2145.4,
+                1215.9,
+                2186.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_5_text.png",
+            "text": "Table 2 Applications of Al in Various Endoscopic Procedures.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1277.9,
+                1896.7,
+                2281.1,
+                2092.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_6_text.png",
+            "text": "charts to improve diagnostic, predictive and prognostic ac-\ncuracy. This is especially becoming useful in cancer\nresearch. Radiomic analysis uses image-based signatures\nfor precision diagnosis and treatment, providing a robust\n"
+        },
+        {
+            "idx": 7,
+            "thing": "table",
+            "score": 99.86,
+            "box": [
+                203.3,
+                2195.7,
+                2280.3,
+                3091.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_02/region_7_table.png"
+        }
+    ]
+}

@@ -1,0 +1,167 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages_ordered/page_09.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 12,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.64,
+            "box": [
+                401.7,
+                232.3,
+                496.1,
+                267.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_01_title.png",
+            "text": "Table 3\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                401.0,
+                270.2,
+                2082.8,
+                412.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_02_text.png",
+            "text": "Papers that provide textual explanation. For readability, the papers are sorted on anatomical location and only the first paper deal-\ning with that anatomical location shows the location name. The column ‘Main XAI technique used/based on’ describes which textual\nexplanation technique from Section 3.2 was used, or which technique the method in the corresponding paper is based on. CT = com-\nputed tomography, TCAV = testing with concept activation vectors\n"
+        },
+        {
+            "idx": 3,
+            "thing": "table",
+            "score": 99.8,
+            "box": [
+                403.3,
+                423.4,
+                2079.4,
+                1574.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_03_table.png"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                156.5,
+                1657.4,
+                1205.2,
+                2004.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_04_text.png",
+            "text": "convolutional neural network for encoding of the image, with a re-\ncurrent neural network - specifically a long-short term memory\nnet (LSTM) (Hochreiter and Schmidhuber, 1997) - for textual en-\ncoding. They used human-generated sentences as ground truth for\ntraining, and used the bilingual evaluation understudy (BLEU) met-\nric for evaluation. The BLEU-metric describes the precision of word\nN-grams, i.e. a sequence of N words, between generated and refer-\nence sentences (Papineni et al., 2002).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                156.5,
+                2007.3,
+                1205.0,
+                2398.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_05_text.png",
+            "text": "Singh et al. (2019) used an image captioning framework to\nprovide textual explanation for chest X-rays. They used word-\nembedding databases Global Vectors (GloVe) (Pennington et al.,\n2014) and the radiology variant RadGloVe (Zhang et al., 2018) to\ntrain the LSTM, and used the aforementioned BLEU metric as well\nas variants METEOR, CIDER, and ROUGE (Banerjee and Lavie, 2005;\nLin, 2004; Vedantam et al., 2015). As expected, higher performance\nwas reached in the generated radiology report when both Rad-\nGloVe and GloVe were used instead of just GloVe.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.33,
+            "box": [
+                157.3,
+                2503.4,
+                873.0,
+                2545.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_06_title.png",
+            "text": "3.2.2. Image captioning with visual explanation\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                156.3,
+                2546.1,
+                1205.4,
+                2893.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_07_text.png",
+            "text": "Several researchers combined image captioning with visual ex-\nplanation. Zhang et al. (2017a) introduced a framework that used\ndual attention, both for text and for imaging. They used a similar\napproach as with image captioning, i.e. an encoder for the image\nand an LSTM for the text, but added dual attention. This facili-\ntated high-level interactions between image and text predictions,\nand yielded visual attention maps corresponding with textual ex-\nplanation in Histology images.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                156.6,
+                2895.3,
+                1204.6,
+                3111.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_08_text.png",
+            "text": "Wang et al. 2018 used a similar approach, and showed in their\nchest X-ray example that different parts of the textual explana-\ntion led to different areas of saliency mapping in the image. They\nshowed a saliency map of the chest with multiple regions corre-\nsponding to different radiological findings.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.6,
+                1658.2,
+                2325.3,
+                1962.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_09_text.png",
+            "text": "Lee et al. (2019a) showed image captioning with visual explana-\ntion for breast mammograms. They added a visual word constraint\nloss to the text-generating LSTM, to ensure that the provided ex-\nplanations follow the correct jargon of breast mammography re-\nports. They showed that adding this loss aids in generating better\ntextual explanation. Furthermore, they linked the radiology reports\nto visual saliency maps.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 99.35,
+            "box": [
+                1279.3,
+                2023.0,
+                2071.6,
+                2065.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_10_title.png",
+            "text": "3.2.3. Testing with concept activation vectors (TCAV)\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1276.9,
+                2066.2,
+                2324.5,
+                2851.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_11_text.png",
+            "text": "Concept attributions provide explanation corresponding to\nhigh-level concepts that humans find easy to understand\n(Kim et al., 2018). Using Testing with Concept Activation Vectors\n(TCAV), Kim et al. (2018) presented human-friendly linear explana-\ntions of the internal state of neural networks, yielding global ex-\nplanation of the networks in terms of human-understandable con-\ncepts. These concepts can be provided after training of the neu-\nral network as a post hoc analysis. The TCAV algorithm uses user-\ndefined sets of examples of a concept and of random non-concept\nexamples. Such a concept might be ‘stripes’ to assess whether an\nimage contained a zebra, or ‘spiculated mass’ to assess whether\nan image contained a cancer. TCAV quantified the sensitivity of a\ntrained model to such concepts using concept activation vectors\n(CAVs). The response of test cases to these CAVs was then used to\nmeasure the sensitivity to that concept. The authors showed fea-\nsibility of TCAV on a medical image processing example, by re-\nlating physician annotations such as ‘microaneurysm’ to diabetic\nretinopathy in fundus imaging.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1277.8,
+                2851.3,
+                2325.3,
+                3111.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_09/region_12_text.png",
+            "text": "Clough et al. (2019) identified cardiac disease in cine-MRI by\nclassifying the latent space of a VAE. They used TCAV to show\nwhich clinically known biomarkers were related to cardiac disease.\nFurthermore, they reconstructed images with low peak ejection\nrate - a characteristic that might be related to cardiac disease -\nby adding the CAV to the latent space.\n"
+        }
+    ]
+}

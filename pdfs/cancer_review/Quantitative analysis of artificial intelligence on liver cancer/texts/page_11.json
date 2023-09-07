@@ -1,0 +1,181 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 13,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 84.73,
+            "box": [
+                176.9,
+                289.6,
+                381.3,
+                319.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_01_title.png",
+            "text": "fonc.2021.697178\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 95.01,
+            "box": [
+                178.2,
+                335.3,
+                1212.1,
+                432.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_02_text.png",
+            "text": "19. Giordano S, Takeda S, Donadon M, Saiki H, Brunelli L, Pastorelli R, et al. Rapid\nautomated diagnosis of primary hepatic tumour by mass spectrometry and artificial\nintelligence. Liver Int (2020) 40(12):3117-24. doi: 10.1111/liv.14604\n"
+        },
+        {
+            "idx": 3,
+            "thing": "list",
+            "score": 67.41,
+            "box": [
+                176.0,
+                446.1,
+                1213.4,
+                2483.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_03_list.png",
+            "text": "20. Xiang K, Jiang B, Shang D. The overview of the deep learning integrated into the\nmedical imaging of liver: a review. Hepatol Int (2021) 15(4):868-80. doi: 10.1007/s12072-\n021-10229-z\n\n21. Nishida N, Yamakawa M, Shiina T, Kudo M. Current status and perspectives for\ncomputer-aided ultrasonic diagnosis of liver lesions using deep learning technology.\nHepatol Int (2019) 13(4):416-21. doi: 10.1007/s12072-019-09937-4\n\n22. Saba L, Biswas M, Kuppili V, Cuadrado Godia E, Suri HS, Edla DR, et al. The\npresent and future of deep learning in radiology. Eur J Radiol (2019) 114:14-24.\ndoi: 10.1016/j.ejrad.2019.02.038\n\n23. Khan RA, Luo Y, Wu F-X. Machine learning based liver disease diagnosis: A\nsystematic review. Neurocomputing (2022) 468(2022):492-509. doi: 10.1016/\nj-neucom.2021.08.138\n\n24. Bharti P, Mittal D, Ananthasivan R. Computer-aided characterization and\ndiagnosis of diffuse liver diseases based on ultrasound imaging: A review. Ultrason\nImaging (2017) 39(1):33-61. doi: 10.1177/0161734616639875\n\n25. Xu J, Jing M, Wang S, Yang C, Chen X. A review of medical image detection for\ncancers in digestive system based on artificial intelligence. Expert Rev Med Devices (2019)\n16(10):877-89. doi: 10.1080/17434440.2019.1669447\n\n26. Chen C, Dubin R, Kim MC. Emerging trends and new developments in\nregenerative medicine: a scientometric update (2000 - 2014). Expert Opin Biol Ther\n(2014) 14(9):1295-317. doi: 10.1517/14712598.2014.920813\n\n27. Brandt JS, Hadaya O, Schuster M, Rosen T, Sauer MV, Ananth CV. A bibliometric\nanalysis of top-cited journal articles in obstetrics and gynecology. JAMA Netw Open\n(2019) 2(12):e1918007. doi: 10.1001/jamanetworkopen.2019.18007\n\n28. Ahmad P, Slots J. A bibliometric analysis of periodontology. Periodontol (2021) 85\n(1):237-40. doi: 10.1111/prd.12376\n\n29. Wilson M, Sampson M, Barrowman N, Doja A. Bibliometric analysis of neurology\narticles published in general medicine journals. JAMA Netw Open (2021) 4(4):e215840.\ndoi: 10.1001/jamanetworkopen.2021.5840\n\n30. Hassan W, Zafar M, Duarte AE, Kamdem JP, Teixeira da Rocha JB.\nPharmacological research: A bibliometric analysis from 1989 to 2019. Pharmacol Res\n(2021) 169:105645. doi: 10.1016/j.phrs.2021.105645\n\n31. Higaki A, Uetani T, Ikeda S, Yamaguchi O. Co-Authorship network analysis in\ncardiovascular research utilizing machine learning (2009-2019). Int J Med Inform (2020)\n143:104274. doi: 10.1016/j.ijmedinf.2020.104274\n\n32. Trujillo CM, Long TM. Document co-citation analysis to enhance\ntransdisciplinary research. Sci Adv (2018) 4(1):e1701130. doi: 10.1126/sciadv.1701130\n\n33. van Eck NJ, Waltman L. Software survey: VOSviewer, a computer program for\nbibliometric mapping. Scientometrics (2010) 84(2):523-38. doi: 10.1007/s11192-009-\n0146-3\n\n34. Synnestvedt MB, Chen C, Holmes JH. CiteSpace II: visualization and knowledge\ndiscovery in bibliographic databases. AMIA Annu Symp Proc (2005) 2005:724-8.\n\n35. Chen C. Searching for intellectual turning points: Progressive knowledge domain\nvisualization. Proc Natl Acad Sci USA (2004) 101 Suppl 1(Suppl 1):5303-10. doi: 10.1073/\npnas.0307513100\n\n36. Ioannidis JPA, Baas J, Klavans R, Boyack KW. A standardized citation metrics\nauthor database annotated for scientific field. PloS Biol (2019) 17(8):e3000384.\ndoi: 10.1371/journal.pbio.3000384\n\n37. Heimbach JK, Kulik LM, Finn RS, Sirlin CB, Abecassis MM, Roberts LR, et al.\nAASLD guidelines for the treatment of hepatocellular carcinoma. Hepatology (2018) 67\n(1):358-80. doi: 10.1002/hep.29086\n\n38. European Association for the Study of the Liver. EASL clinical practice guidelines:\nManagement of hepatocellular carcinoma. J Hepatol (2018) 69(1):182-236. doi: 10.1016/\njjhep.2018.03.019\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 91.08,
+            "box": [
+                177.3,
+                2501.2,
+                1211.3,
+                2634.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_04_text.png",
+            "text": "39. Kokudo N, Hasegawa K, Akahane M, Igaki H, Izumi N, Ichida T, et al. Evidence-\nbased clinical practice guidelines for hepatocellular carcinoma: The Japan society of\nhepatology 2013 update (3rd JSH-HCC guidelines). Hepatol Res (2015) 45(2):123-7.\ndoi: 10.1111/hepr.12464\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 83.66,
+            "box": [
+                177.6,
+                2652.4,
+                1210.9,
+                2750.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_05_text.png",
+            "text": "40. European Association for the Study of the Liver. EASL clinical practice guidelines:\nManagement of hepatocellular carcinoma. J Hepatol (2019) 70(4):817. doi: 10.1016/\nj.jhep.2018.03.019\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 49.49,
+            "box": [
+                175.9,
+                2761.7,
+                1211.9,
+                2984.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_06_text.png",
+            "text": "41. National Health Commission of the People's Republic of China. Guidelines for the\ndiagnosis and treatment of primary liver cancer(V2019). J Clin Hepatob Dis (2022) 38\n(2):288-303. doi: 10.3969/j.issn.1001-5256.2022.02.009\n\n42. Zhang S, Liu Y, Chen J, Shu H, Shen S, Li Y, et al. Autoantibody signature in\nhepatocellular carcinoma using seromics. J Hematol Oncol (2020) 13(1):85. doi: 10.1186/\ns13045-020-00918-x\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 90.12,
+            "box": [
+                177.4,
+                2996.2,
+                1210.1,
+                3128.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_07_text.png",
+            "text": "43. Ma L, Wang L, Khatib SA, Chang CW, Heinrich S, Dominguez DA, et al. Single-\ncell atlas of tumor cell evolution in response to therapy in hepatocellular carcinoma and\nintrahepatic cholangiocarcinoma. J Hepatol (2021) 75(6):1397-408. doi: 10.1016/\nj,jhep.2021.06.028\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 53.3,
+            "box": [
+                1263.1,
+                288.9,
+                2308.2,
+                2465.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_08_text.png",
+            "text": "44. Zongyi Y, Xiaowu L. Immunotherapy for hepatocellular carcinoma. Cancer Lett\n(2020) 470:8-17. doi: 10.1016/j.canlet.2019.12.002\n\n45. Di Tommaso L, Spadaccini M, Donadon M, Personeni N, Elamin A, Aghemo A,\net al. Role of liver biopsy in hepatocellular carcinoma. World J Gastroenterol (2019) 25\n(40):6041-52. doi: 10.3748/wjg.v25.i40.6041\n\n46. Qayyum A, Hwang KP, Stafford J, Verma A, Maru DM, Sandesh §, et al.\nImmunotherapy response evaluation with magnetic resonance elastography (MRE) in\nadvanced HCC. J Immunother Cancer (2019) 7(1):329. doi: 10.1186/s40425-019-0766-y\n\n47. Pepin KM, Ehman RL, McGee KP. Magnetic resonance elastography (MRE) in\ncancer: Technique, analysis, and applications. Prog Nucl Magn Reson Spectrosc (2015) 90-\n91:32-48. doi: 10.1016/j.pnmrs.2015.06.001\n\n48. Zhang T, Zhang G, Deng X, Zeng J, Jin J, Zeping H, et al. APS (Age, platelets, 2D\nshear-wave elastography) score predicts hepatocellular carcinoma in chronic hepatitis b.\nRadiology (2021) 301(2):350-9. doi: 10.1148/radiol.2021204700\n\n49. Gao R, Zhao S, Aishanjiang K, Cai H, Wei T, Zhang Y, et al. Deep learning for\ndifferential diagnosis of malignant hepatic tumors based on multi-phase contrast-\nenhanced CT and clinical data. J Hematol Oncol (2021) 14(1):154. doi: 10.1186/s13045-\n021-01167-2\n\n50. Cheng N, Chen D, Lou B, Fu J, Wang H. A biosensing method for the direct\nserological detection of liver diseases by integrating a SERS-based sensor and a CNN\nclassifier. Biosens Bioelectron (2021) 186:113246. doi: 10.1016/j.bios.2021.113246\n\n51. Shi J, Liu J, Tu X, Li B, Tong Z, Wang T, et al. Single-cell immune signature for\ndetecting early-stage HCC and early assessing anti-PD-1 immunotherapy efficacy. J\nImmunother Cancer (2022) 10(1):e003133. doi: 10.1136/jitc-2021-003133\n\n52. Ta CN, Kono Y, Eghtedari M, Oh YT, Robbin ML, Barr RG, et al. Focal liver\nlesions: Computer-aided diagnosis by using contrast-enhanced US cine recordings.\nRadiology (2018) 286(3):1062-71. doi: 10.1148/radiol.2017170365\n\n53. Yang C, Huang X, Li Y, Chen J, Lv Y, Dai S. Prognosis and personalized treatment\nprediction in TP53-mutant hepatocellular carcinoma: an in silico strategy towards\nprecision oncology. Brief Bioinform (2021) 22(3):bbaal64. doi: 10.1093/bib/bbaal64\n\n54. Oestmann PM, Wang CJ, Savic LJ, Hamm CA, Stark S, Schobert I, et al. Deep\nlearning-assisted differentiation of pathologically proven atypical and typical\nhepatocellular carcinoma (HCC) versus non-HCC on contrast-enhanced MRI of the\nliver. Eur Radiol (2021) 31(7):4981-90. doi: 10.1007/s00330-020-07559-1\n\n55. Tzartzeva K, Obi J, Rich NE, Parikh ND, Marrero JA, Yopp A, et al. Surveillance\nimaging and alpha fetoprotein for early detection of hepatocellular carcinoma in patients\nwith cirrhosis: A meta-analysis. Gastroenterology (2018) 154(6):1706-1718.el.\ndoi: 10.1053/j.gastro.2018.01.064\n\n56. Wong RJ, Ahmed A, Gish RG. Elevated alpha-fetoprotein: differential diagnosis -\nhepatocellular carcinoma and other disorders. Clin Liver Dis (2015) 19(2):309-23.\ndoi: 10.1016/j.cld.2015.01.005\n\n57. Okuda H, Obata H, Nakanishi T, Furukawa R, Hashimoto E. Production of\nabnormal prothrombin (des-gamma-carboxy prothrombin) by hepatocellular carcinoma.\na clinical and experimental study. J Hepatol (1987) 4(3):357-63. doi: 10.1016/s0168-8278\n(87)80546-9\n\n58. Fujiyama S, Izuno K, Gohshi K, Shibata J, Sato T. Clinical usefulness of des-\ngamma-carboxy prothrombin assay in early diagnosis of hepatocellular carcinoma. Dig\nDis Sci (1991) 36(12):1787-92. doi: 10.1007/BF01296626\n\n59. Wu JP, Ding WZ, Wang YL, Liu S, Zhang XQ, Yang Q, et al. Radiomics analysis of\nultrasound to predict recurrence of hepatocellular carcinoma after microwave ablation.\nInt J Hyperthermia (2022) 39(1):595-604. doi: 10.1080/02656736.2022.2062463\n\n60. Yang Y, Zhou Y, Zhou C, Ma X. Deep learning radiomics based on contrast\nenhanced computed tomography predicts microvascular invasion and survival outcome\nin early stage hepatocellular carcinoma. Eur J Surg Oncol (2022) 48(5):1068-77.\ndoi: 10.1016/j.ejso.2021.11.120\n\n61. Zhang L, Jiang Y, Jin Z, Jiang W, Zhang B, Wang C, et al. Real-time automatic\nprediction of treatment response to transcatheter arterial chemoembolization in patients\nwith hepatocellular carcinoma using deep learning based on digital subtraction\nangiography videos. Cancer Imaging (2022) 22(1):23. doi: 10.1186/s40644-022-00457-3\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 83.4,
+            "box": [
+                1270.4,
+                2480.9,
+                2303.3,
+                2611.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_09_text.png",
+            "text": "62. Li Q, Luo G, Li J. Evaluation of therapeutic effects of computed tomography\nimaging classification algorithm-based transcatheter arterial chemoembolization on\nprimary hepatocellular carcinoma. Comput Intell Neurosci (2022) 2022:5639820.\ndoi: 10.1155/2022/5639820\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 88.22,
+            "box": [
+                1269.8,
+                2625.3,
+                2303.5,
+                2758.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_10_text.png",
+            "text": "63. Miiller L, Kloeckner R, Mahringer-Kunz A, Stoehr F, Diiber C, Arnhold G, et al.\nFully automated AI-based splenic segmentation for predicting survival and estimating the\nrisk of hepatic decompensation in TACE patients with HCC. Eur Radiol (2022) 32\n(9):6302-13. doi: 10.1007/s00330-022-08737-z\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 86.83,
+            "box": [
+                1268.6,
+                2770.7,
+                2303.9,
+                2869.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_11_text.png",
+            "text": "64. Liu Z, Liu Y, Zhang W, Hong Y, Meng J, Wang J, et al. Deep learning for prediction\nof hepatocellular carcinoma recurrence after resection or liver transplantation: a discovery\nand validation study. Hepatol Int (2022) 16(3):577-89. doi: 10.1007/s12072-022-10321-y\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 93.44,
+            "box": [
+                1269.2,
+                2882.2,
+                2303.0,
+                3015.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_12_text.png",
+            "text": "65. Liu F, Liu D, Wang K, Xie X, Su L, Kuang M, et al. Deep learning radiomics based\non contrast-enhanced ultrasound might optimize curative treatments for very-early or\nearly-stage hepatocellular carcinoma patients. Liver Cancer (2020) 9(4):397-413.\ndoi: 10.1159/000505694\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 87.82,
+            "box": [
+                1269.3,
+                3029.8,
+                2304.3,
+                3127.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_11/region_13_text.png",
+            "text": "66. Petrowsky H, Fritsch R, Guckenberger M, De Oliveira ML, Dutkowski P, Clavien\nPA. Modern therapeutic approaches for the treatment of malignant liver tumours. Nat\nRev Gastroenterol Hepatol (2020) 17(12):755-72. doi: 10.1038/s41575-020-0314-8\n"
+        }
+    ]
+}

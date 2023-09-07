@@ -1,0 +1,194 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 14,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.66,
+            "box": [
+                177.5,
+                359.5,
+                2031.7,
+                509.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_01_title.png",
+            "text": "Artificial intelligence in liver diseases: Improving diagnostics,\nprognostics and response prediction\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 96.25,
+            "box": [
+                176.9,
+                544.5,
+                1844.7,
+                591.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_02_text.png",
+            "text": "David Nam,! Julius Chapiro,' Valerie Paradis,” Tobias Paul Seraphin,*” Jakob Nikolas Kather?\"*”*\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 96.79,
+            "box": [
+                177.1,
+                708.1,
+                359.9,
+                752.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_03_title.png",
+            "text": "Summary\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                177.3,
+                757.7,
+                1855.9,
+                1301.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_04_text.png",
+            "text": "Clinical routine in hepatology involves the diagnosis and treatment of a wide spectrum of meta-\nbolic, infectious, autoimmune and neoplastic diseases. Clinicians integrate qualitative and quanti-\ntative information from multiple data sources to make a diagnosis, prognosticate the disease\ncourse, and recommend a treatment. In the last 5 years, advances in artificial intelligence (Al),\nparticularly in deep learning, have made it possible to extract clinically relevant information from\ncomplex and diverse clinical datasets. In particular, histopathology and radiology image data\ncontain diagnostic, prognostic and predictive information which AI can extract. Ultimately, such AI\nsystems could be implemented in clinical routine as decision support tools. However, in the context\nof hepatology, this requires further large-scale clinical validation and regulatory approval. Herein,\nwe summarise the state of the art in Al in hepatology with a particular focus on histopathology and\nradiology data. We present a roadmap for the further development of novel biomarkers in hep-\natology and outline critical obstacles which need to be overcome.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 58.96,
+            "box": [
+                175.9,
+                1304.6,
+                1854.9,
+                1438.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_05_text.png",
+            "text": "© 2022 The Authors. Published by Elsevier B.V. on behalf of European Association for the Study of the\nLiver (EASL). This is an open access article under the CC BY license (http://creativecommons.org/licenses/\nby/4.0/).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 98.34,
+            "box": [
+                177.4,
+                1513.1,
+                419.6,
+                1562.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_06_title.png",
+            "text": "Introduction\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 96.42,
+            "box": [
+                177.3,
+                1568.1,
+                643.1,
+                1610.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_07_title.png",
+            "text": "Hepatology - a complex art\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                177.1,
+                1612.9,
+                999.4,
+                2387.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_08_text.png",
+            "text": "Hepatology is the clinical study of liver disease and\nis a prime example of the complexity of modern\nmedicine. To diagnose disease, make a prognosis\nabout disease outcomes, and recommend an\noptimal treatment, clinicians rely on a vast array of\ndiagnostic data modalities. The standard clinical\nworkup of patients with suspected or confirmed\nliver disease includes taking the clinical history,\nperforming a clinical examination, running labo-\nratory tests, and interpreting imaging studies.\nLiver biopsies may even be performed, requiring\nassessment of changes in tissues, cells and molec-\nular markers. Collectively, these data modalities\ncontain a wealth of information. Interpretation of\nthis information is a challenging task, even for\nseasoned clinicians, and diagnostic ambiguities\nabound in hepatology.!\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 98.33,
+            "box": [
+                176.6,
+                2431.5,
+                799.6,
+                2474.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_09_title.png",
+            "text": "Machine learning and deep learning\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                177.4,
+                2475.4,
+                999.4,
+                2931.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_10_text.png",
+            "text": "Artificial intelligence (AI) enables computers to\nlearn from complex datasets and solve real-world\nproblems within and beyond medicine, leading to\nperformances on par with or better than those of\ntheir human counterparts. AI refers to computa-\ntional approaches to data analysis in which com-\nputer programmes are not explicitly guided by\nexperts but primarily learn from examples.\nThroughout this article, we will use AI as a broad\nterm that includes classical machine learning (ML)\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1033.7,
+                1515.3,
+                1856.1,
+                2929.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_11_text.png",
+            "text": "and deep learning (DL) techniques.* Classical ML\ntechniques do not require dedicated hardware and\nhave been used for decades in medicine, including\nhepatology and gastroenterology studies.? These\ntechniques rely on “handcrafted features” defined\nby human investigators. What does this mean in\nthe context of hepatology? An example of AI as\napplied to hepatology is automatic prognostication\nof solid tumours based on imaging data. Using a\nhandcrafted approach, human investigators\nassemble a list of quantitative visual features such\nas tumour size, roundness, symmetry and intensity\non images.* These features are subsequently\ninputted into a classification algorithm, for\nexample, the “random forest” method, which ex-\ncels at categorising such tabular data.° In radiology\nimage analysis, handcrafted image analysis ap-\nproaches are traditionally termed “radiomics” (or\n“classical radiomics”). In addition to this estab-\nlished ML approach, “deep learning” (DL) has\nblossomed in the last 10 years thanks to algo-\nrithmic advances, improved hardware, and large\ndatasets. While conceptually similar to classical ML\napproaches, DL methods usually have thousands\nmore free parameters than classical ML methods.\nThis abundance of parameters makes DL models\nmore flexible and better suited for processing and\nclassifying complex data sets such as language data\nor imaging data. In medicine, the most commonly\nused DL methods are artificial neural networks\n(used for image processing® and processing of time\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 84.12,
+            "box": [
+                1951.9,
+                712.1,
+                2303.9,
+                885.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_12_text.png",
+            "text": "Keywords: Artificial intelli-\ngence; deep learning;\nmachine learning; diagnostic\nsupport system; imaging;\nmultimodal data integration\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 96.71,
+            "box": [
+                1949.3,
+                1515.4,
+                2297.2,
+                2656.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_13_text.png",
+            "text": "\"Section of Interventional\nRadiology, Department of\nRadiology and Biomedical\nImaging, Yale School of\nMedicine, New Haven, CT,\nUSA; 7INSERM U1149 \"Centre\nde Recherche Sur\nL’inflammation\", CRI,\nUniversité de Paris, Paris,\nFrance; University Paris, AP-\nHP, Department of Pathology,\nH6pital Beaujon, Clichy,\nFrance; “Department of\nGastroenterology, Hepatology\nand Infectious Diseases,\nMedical Faculty of Heinrich\nHeine University Dtisseldorf,\nUniversity Hospital\nDiisseldorf, Diisseldorf,\nGermany; *Department of\nMedicine III, University\nHospital RWTH Aachen,\nAachen, Germany; Pathology\n& Data Analytics, Leeds\nInstitute of Medical Research\nat St James’s, University of\nLeeds, Leeds, UK; “Medical\nOncology, National Center for\nTumor Diseases (NCT),\nUniversity Hospital\nHeidelberg, Heidelberg,\nGermany\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 90.29,
+            "box": [
+                1948.9,
+                2685.7,
+                2268.4,
+                2962.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_01/region_14_text.png",
+            "text": "» Corresponding author.\nAddress: Department of\nMedicine III, RWTH\nUniversity Hospital, 52074\nAachen, Germany.\n\nE-mail address: jakob.\nkather@gmail.com\n\n(J.N. Kather).\n"
+        }
+    ]
+}

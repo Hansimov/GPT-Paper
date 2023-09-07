@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_05.png",
+        "image_width": 2480,
+        "image_height": 3509,
+        "regions_num": 5,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                808.2,
+                231.9,
+                2251.7,
+                836.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_05/region_1_text.png",
+            "text": "applied to a new dataset of 177 patients, the model achieved a weighted mean AUC of\n0.891. Recently, Brehar et al[29] conducted a study comparing CNN’s performance for\nHCC detection on ultrasound images against conventional machine learning alg-\norithms including multi-layer perceptron, support vector machines, random forest and\nAdaBoost. The CNN achieved an AUC of 0.95% with 91.0% accuracy, 94.4%\nsensitivity, and 88.4% specificity and significantly outperformed the conventional\nmachine learning algorithms. Beyond detecting the actual presence of HCC on\nultrasound images, studies have also attempted to predict the risk of future HCC\ndevelopment based on analyzing the ultrasound images of liver parenchyma in\npatients without HCC. For example, Jin et al[30] performed a DL radiomics analysis on\n2-D shear wave elastography and corresponding B-mode ultrasound images of 434\nchronic HBV patients, which predicted 5-year HCC development with AUC of 0.900 in\nthe test cohort.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                807.9,
+                837.0,
+                2252.3,
+                1762.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_05/region_2_text.png",
+            "text": "In addition to ultrasound images, cross-sectional imaging from CT or MRI studies\nserve as an extremely abundant and promising source of data for DL. In 2018, Yasaka\net al[31] used CT image sets of liver masses from 460 patients to train a CNN that can\nclassify liver lesions into five categories of: (1) HCC; (2) Other malignant tumors; (3)\nIndeterminate masses; (4) Hemangiomas; and (5) Cysts with a median AUC of 0.92.\nShi et al[32] showed that incorporation of a CNN enabled identification of HCC using\na three-phase CT imaging protocol with a diagnostic accuracy similar to that of a four-\nphase protocol, which would allow patients to receive lower doses of radiation.\nSegmentation of HCC, liver parenchyma, and other organs on CT scan is very\nimportant for determination of tumor extent and treatment planning, but manual\ncontouring of the images is highly time-consuming and subject to inter-observer\nvariability. The 2017 International Conference On Medical Image Computing\nComputer Assisted Intervention called for a Liver Tumor Segmentation Benchmark\n(LITS) challenge, encouraging researchers to develop automatic segmentation\nalgorithms to segment liver lesions using 200 CT scans (training: 130; testing: 70)\nprovided by clinical sites around the world. Several teams participating in the\nchallenge have developed DL algorithms with promising performances for HCC\nsegmentation using CT images[33-37]. Beyond the LITS challenge, there are ongoing\nresearch efforts to improve segmentation using different architectures of DL networks\n[38-42].\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                807.1,
+                1760.5,
+                2252.2,
+                2317.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_05/region_3_text.png",
+            "text": "Hamm et al[43] used MRI images from 494 patients to train a CNN which can\nclassify hepatic lesions into six different categories. When applied to random cases in\nthe test set, the CNN outperformed expert radiologists (90% sensitivity and 98%\nspecificity vs 82.5% sensitivity and 96.5% specificity) and especially for HCC detection\n(90% sensitivity vs 60%-70% sensitivity). The same group conducted additional studies\nto make their CNN interpretable by generating highlighted feature maps corres-\nponding to liver lesions[44]. Wu et al[45] built a CNN using multiphase MRI images\nand achieved an AUC of 0.95 for distinguishing Liver Imaging Reporting and Data\nSystem (LI-RADS) grade 3 from LI-RADS 4 and 5 lesions for HCC diagnosis. Zhen et al\n[46] also trained a CNN model combining unenhanced MRI images and clinical\nvariables from 1210 patients with liver tumors, which demonstrated diagnostic\nperformances on par with three experienced radiologists using enhanced MRI images.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.61,
+            "box": [
+                807.3,
+                2364.0,
+                1982.3,
+                2417.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_05/region_4_title.png",
+            "text": "HCC prognostication, treatment planning, and response to treatment\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                808.1,
+                2419.0,
+                2252.3,
+                3305.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_05/region_5_text.png",
+            "text": "In addition to serving as accurate and efficient tools for diagnosis of HCC, DL models\nutilizing radiology data can also be used for prognostication, treatment planning, and\nassessing tumor response to therapy. Vascular invasion is a key prognostic element in\npatients with HCC. Recent studies developed CNN models with promising ability to\ndetect microvascular invasion on MRI images of HCC patients undergoing surgical\nresection[47-49]. An et al[50] used an unsupervised CNN-based deformable image\nregistration technique to assess the relationship between ablative margins and local\ntumor progression in 141 patients with single HCC who underwent microwave\nablation, and demonstrated that patients with ablative margins < 5 mm were at\nsignificantly higher risk of local tumor progression. Liu et al[51] developed a DL\nradiomics model to predict responses to trans-arterial chemoembolization (TACE)\nusing ultrasound images of 130 HCC patients, which accurately predicted TACE\nresponse with an AUC of 0.93. The same group also assessed their ultrasound-based\nDL radiomics model to predict 2-year progression-free survival among 419 HCC\npatients and facilitate optimized treatment selection. Peng et al[52] trained a residual\nCNN model to predict response to TACE using CT images from 562 patients with\nintermediate-stage HCC undergoing TACE, which showed accuracies of 85.1% and\n82.8% in two external validation cohorts. Another study developed a DL score for\ndisease-specific survival by using CT images in a cohort of 243 patients with HCC\n"
+        }
+    ]
+}

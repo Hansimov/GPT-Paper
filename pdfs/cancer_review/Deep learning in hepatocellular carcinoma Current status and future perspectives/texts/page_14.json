@@ -1,0 +1,50 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_14.png",
+        "image_width": 2480,
+        "image_height": 3509,
+        "regions_num": 3,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 26.29,
+            "box": [
+                416.1,
+                66.5,
+                2237.3,
+                2137.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_14/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 24.98,
+            "box": [
+                1067.6,
+                2277.3,
+                1413.4,
+                2641.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_14/region_2_text.png",
+            "text": "Ae\ncs ae\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 35.41,
+            "box": [
+                994.6,
+                3385.6,
+                2401.5,
+                3442.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_14/region_3_text.png",
+            "text": "© 2021 Baishideng Publishing Group Inc. All rights reserved.\n"
+        }
+    ]
+}

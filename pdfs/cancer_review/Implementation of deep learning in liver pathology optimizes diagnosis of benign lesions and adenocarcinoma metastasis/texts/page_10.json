@@ -1,0 +1,115 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 8,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.89,
+            "box": [
+                238.5,
+                204.2,
+                2241.7,
+                1573.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_10/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.74,
+            "box": [
+                190.2,
+                1627.8,
+                2146.5,
+                1722.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_10/region_2_text.png",
+            "text": "FIGURE 5 _ Test data confusion matrices based on image tiles (A) and cases (B). On the level of image tiles and cases, the main\nmisclassification was cases of pancreatic adenocarcinoma predicted as colorectal adenocarcinoma.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                190.1,
+                1812.4,
+                1208.2,
+                2133.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_10/region_3_text.png",
+            "text": "Five cases of pancreatic adenocarcinoma (3%, 5/188) were\nmisclassified as colorectal adenocarcinoma. The respec-\ntive confusion matrices based on image tiles and cases are\nshown in Figure 5A,B. Importantly, malignant cases were\nnot misclassified as benign. Together, the low rates reflect\nthe high diagnostic accuracy of our model.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 98.23,
+            "box": [
+                189.9,
+                2237.1,
+                629.7,
+                2297.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_10/region_4_title.png",
+            "text": "3.3 | Limitations\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                189.2,
+                2352.0,
+                1209.6,
+                3049.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_10/region_5_text.png",
+            "text": "While the confusion matrices of our final model (Figure 5)\nand the UMAP of the activation layer (Figure 6) show\na highly satisfactory separation between classes overall,\nthey also indicate that the discrimination between pan-\ncreatic adenocarcinoma and colorectal adenocarcinoma\nremain difficult for the model: 25% of our pancreatic\nadenocarcinoma cases were misclassified as colorectal\nadenocarcinoma and ~15% of the colorectal adenocarci-\nnoma cases as pancreatic adenocarcinoma. In addition,\nthe UMAP shows a very large overlap with these two\nclasses. For routine diagnostics, these respective classifica-\ntions may require additional validation. That the data used\nfor training, validation, and testing are relatively homoge-\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1278.9,
+                1812.3,
+                2296.1,
+                2132.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_10/region_6_text.png",
+            "text": "neous (based on the preparing pathological institute and\nthe used scanner), may also influence the performance of\nour models on other data. Nonetheless our study shows\nthat discrimination of the classes in our data seems plau-\nsible and our published data and code allow to improve on\nthe limitations.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 97.43,
+            "box": [
+                1279.0,
+                2237.7,
+                1716.2,
+                2297.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_10/region_7_title.png",
+            "text": "4 | DISCUSSION\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1278.4,
+                2352.1,
+                2296.7,
+                3051.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_10/region_8_text.png",
+            "text": "Digital pathology, where images are reviewed on a com-\nputer after high-resolution scanning of tissue on glass\nslides, is an emerging method used routinely in the clini-\ncal diagnostic setting.”* In the present study, we describe\nthe digital assessment of histopathological slides, which\nhas several potential advantages compared to the analog\nmicroscopy. First, pathologists can work remote, which\nallows rapid consultation of cases where special exper-\ntise is needed, but not locally available.2> Moreover, in\nemergencies, proven important during the coronavirus\npandemic 2019/2020, this method could ensure full avail-\nability of pathological diagnostics,“ and finally, adapted\nclinical working times, which may raise surgical pathology\n"
+        }
+    ]
+}

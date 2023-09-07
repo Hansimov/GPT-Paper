@@ -1,0 +1,141 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 10,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.17,
+            "box": [
+                294.1,
+                233.3,
+                535.6,
+                268.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_07/region_01_text.png",
+            "text": "Table 2 (continued)\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.66,
+            "box": [
+                293.5,
+                279.1,
+                2187.7,
+                1625.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_07/region_02_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                157.9,
+                1710.3,
+                1205.2,
+                2276.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_07/region_03_text.png",
+            "text": "Liao et al. (2019) concatenated feature maps at three scales which\nwere subsequently provided as input for the global average pool-\ning. The provided activation maps showed higher resolution than\nsingle-scale maps, and were better at identifying small structures\non fundus images of the retina. Shinde et al. (2019a) concatenated\nthe feature maps of each layer before max-pooling and also gave\nthose as input to a global average pooling layer. Their ‘High\nResolution’ CAMs provided accurate localizations of brain tumors\non MRI. Garcia-Peraza-Herrera et al. (2020) proposed extracting\nCAMs at multiple resolutions. They showed that the CAMs at high\nresolution were accurate in highlighting interpapillary capillary\nloop patterns in endoscopy images, which were relatively small\ncompared to the entire image.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                157.7,
+                2277.2,
+                1205.4,
+                2927.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_07/region_04_text.png",
+            "text": "Gradient-weighted class activation mapping (Grad-CAM):\nSelvaraju et al. (2017) introduced Gradient-weighted Class Ac-\ntivation Mapping (Grad-CAM), which is a generalization of CAM.\nGrad-CAM can work with any type of CNN to produce post hoc\nlocal explanation, whereas CAM specifically needs global aver-\nage pooling. The authors also introduced guided Grad-CAM, an\nelement-wise multiplication between guided backpropagation and\nGrad-CAM. Grad-CAM and Guided Grad-CAM have been used in\nmedical image analysis. For example, Ji (2019) used Grad-CAM to\nshow on which areas of histology lymph node sections a classifier\nbased its decision of metastatic tissue; Kowsari et al. (2020) used\nit to pinpoint small bowel enteropathies on histology; and\nWindisch et al. (2020) used Grad-Cam to show which areas\nof brain MRI made the classifier decide on the presence of a\ntumor.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                156.6,
+                2930.4,
+                1204.7,
+                3103.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_07/region_05_text.png",
+            "text": "Layer-wise relevance propagation (LRP): Bach et al. (2015) intro-\nduced layer-wise relevance propagation (LRP). LRP uses the out-\nput of the neural network, e.g. a classification score between 0\nand 1, and iteratively backpropagates this throughout the network.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1278.2,
+                1710.6,
+                2326.2,
+                1883.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_07/region_06_text.png",
+            "text": "In each iteration (i.e., each layer), LRP assigns a relevance score\nto each of the input neurons from the previous layers. These dis-\ntributed relevance scores must equal the total relevance score of\nits source neuron, according to the conservation law.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1277.6,
+                1885.5,
+                2326.0,
+                2144.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_07/region_07_text.png",
+            "text": "LRP has been used in medical image analysis. For example,\nBohle et al. (2019) used LRP for identifying regions responsible\nfor Alzheimer’s disease from brain MR images. They compared the\nsaliency maps provided by LRP with those provided by guided\nbackpropagation, and found that LRP was more specific in iden-\ntifying regions known for Alzheimer’s disease.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1277.4,
+                2147.1,
+                2325.6,
+                2492.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_07/region_08_text.png",
+            "text": "Deep SHapley Additive exPlanations (Deep SHAP): Lundberg and\nLee (2017) proposed a unified approach for explaining predic-\ntions by using SHapley Additive exPlanations (SHAP). This model-\nagnostic approach used Shapley values (Shapley, 2016), a concept\nfrom game theory. Shapley values determine the marginal contri-\nbution of every feature to the model’s output individually. A down-\nside of Shapley values is that they are resource-intensive to com-\npute, since they require assessment of many permutations.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1277.8,
+                2495.5,
+                2325.4,
+                2841.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_07/region_09_text.png",
+            "text": "By combining DeepLIFT with Shapley values, Lundberg and\nLee (2017) proposed a fast method to approximate Shapley values\nfor CNNs called Deep SHAP. Deep SHAP has been used in medi-\ncal image analysis. For example, van der Velden et al. (2020) used\na regression CNN to estimate the volumetric breast density from\nbreast MRI. Deep SHAP was used to explain which parts of the im-\nage had a positive contribution and a which parts a negative con-\ntribution to the density estimation.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.8,
+                2844.4,
+                2326.2,
+                3103.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_07/region_10_text.png",
+            "text": "Trainable attention: While many of the previously mentioned\ntechniques highlighted what regions of the image the net-\nwork focuses on, i.e. to where the attention was directed,\nJetley et al. (2018) proposed a trainable attention mechanism. This\ntrainable attention method highlighted where and in what propor-\ntion the network payed attention to input images for classification,\n"
+        }
+    ]
+}

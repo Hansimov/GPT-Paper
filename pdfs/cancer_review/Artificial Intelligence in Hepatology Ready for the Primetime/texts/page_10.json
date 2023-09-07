@@ -1,0 +1,141 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 10,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 96.4,
+            "box": [
+                194.4,
+                2746.8,
+                234.5,
+                3064.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_01_text.png",
+            "text": "3\no\n5\ns\n5\nS\n\n2\n\nt+\n\n2\n\n2\n©\n\n-\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 97.86,
+            "box": [
+                275.4,
+                344.2,
+                920.8,
+                3060.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_02_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 92.33,
+            "box": [
+                941.2,
+                379.9,
+                1034.6,
+                3068.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_03_text.png",
+            "text": "c\n\n°\n=\n\noO\n\n°\n\noO\n\noO\n\n.\n&\n=\noO\n\noO\n\n°\nS\n\no\n\na\n\no\n=\noO\nOo\n=\n\n$\n\nwn\n\noO\n\noO\n2\nTs\n\n.\n\noO\n2Z\n2\n\nCc\n\n°o\n\n©\nx=\n\noO\na\n4\nOo\n\nOo .\n\nnw\n\n© xs\n2S\n\nn Qa\n\nco\n\nGx\nBe\nEo\n\nEo\n\n© 9\n2s\n\na\nto\n\nGo\n\nae\n\n~ 2\na\nWY _-\nax\n¥Q\noz\nzo\n\no wn\n\nCc Oo\n— oO\n\n© 2\n\n5 0\n\nor.\n\nc oO\n_2\ngS\n\noO\nZe\nef\n\nGo\n\n- OS\n25\n<6\n\n2\n\nCc\n\nG6\n&e\n\nEa\n\no\n\nWe\ncz\n\nGZ\n~\n\no\n&E\n\nee\n= O\n\n© o\na2\n5\n\n2G\n\ncfé\n\noO .«\na\na\n\noS\nes\n= 2\nBo\n\noO\neS\nca\n\noz\n\n- >\n=> 2\nae\n\n2 oO\n\noO\npx\n&\n\n> =\n\n5 i\n$a\n<tr\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.52,
+            "box": [
+                1278.7,
+                345.0,
+                2286.9,
+                442.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_04_text.png",
+            "text": "collecting data. Proper validation studies then need to be\ndone after the AI tools have been made.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.61,
+            "box": [
+                1279.9,
+                442.1,
+                2291.2,
+                1141.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_05_text.png",
+            "text": "Specific DL methods are considered ‘black-box’ models,\nso it is not easy to understand the processing of data. This\nhas prohibited physicians from finding potential con-\nfounding variables. There has been much published about\n‘black-box’ warning of algorithms.”* AI use can be ethically\nchallenging, as patient preferences cannot be machine\nlearnt. Also, in case of misdiagnosis, who shall be legally\nresponsible - whether the endoscopist, the clinician or\nthe programmer is still undecided? Moreover, the racial\ndistinction might be necessary for certain areas (as fibrosis\nin viral hepatitis), and it may be an inherent bias in AI. So,\ndifferent population groups must be considered in devel-\noping and validating AI tools, to increase their sensitivity,\nspecificity and accuracy.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 72.64,
+            "box": [
+                1338.8,
+                1238.5,
+                1615.9,
+                1294.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_06_title.png",
+            "text": "KEY POINTS\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 93.03,
+            "box": [
+                1336.9,
+                1313.9,
+                2223.5,
+                1709.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_07_text.png",
+            "text": "Use of AI technology is advantageous to the fields of\ngastroenterology, hepatology and medicine in gen-\neral, but have some roadblocks at present. Mainly\nbeing data security, lack of human touch, concerns\nregarding overpowering human intelligence and\nlack of proper databases. These pitfalls shall be\novercome in the future with proper clinical trials\nand studies.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 99.5,
+            "box": [
+                1279.8,
+                1812.2,
+                2125.7,
+                1921.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_08_title.png",
+            "text": "THE FUTURE PERSPECTIVES OF AI IN\nHEPATOLOGY\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                1279.3,
+                1938.4,
+                2291.8,
+                2936.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_09_text.png",
+            "text": "The field of AI at present is full of promises but relatively\nless in proofs and validation. Before it is used in clinical\npractice, AI requires rigorous studies, clinical validation in\na real-world scenario and publication in peer-reviewed jour-\nnals. There are concerns that machines in the future will\nreplace doctors, but the fact is that the designers of AI mod-\nules are cautious for that to happen. Human life is too\nprecious and cannot be experimented with as a ‘self-driven\ncar’. Hence the usage of AI in clinical practice will be slow\nand cautious, first involving processes with minimal risk\nand complications. Gradually this will lay the foundation\nfor high-performance medicine, which will absorb more\nand more human data, decreasing the reliance on human\nresources and eventually form a symbiotic relationship be-\ntween human and machine intelligence for the betterment\nof humankind. The expansion of AI in gastroenterology\nand hepatology is crucial for the progress of these fields.\nAlso, the use of Al is advantageous compared to traditional\nregression analysis methods used in research by incorpo-\nrating large samples and by reducing interobserver bias.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.84,
+            "box": [
+                1280.6,
+                2936.6,
+                2288.8,
+                3084.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_10/region_10_text.png",
+            "text": "An upcoming impact of Al is that it forms an important\npart of the evolution of precision and personalized medicine. It\ndescribes the revolution in health care triggered by\n"
+        }
+    ]
+}

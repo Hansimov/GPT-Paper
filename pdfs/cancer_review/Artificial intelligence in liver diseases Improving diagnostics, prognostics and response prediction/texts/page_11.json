@@ -1,0 +1,38 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 2,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 65.58,
+            "box": [
+                176.3,
+                267.2,
+                1224.4,
+                1678.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_11/region_1_list.png",
+            "text": "[90] Willemink MJ, Koszek WA, Hardell C, Wu J, Fleischmann D, Harvey H,\net al. Preparing medical imaging data for machine learning. Radiology\n2020;295:4-15.\n\n[91] Obermeyer Z, Powers B, Vogeli C, Mullainathan S. Dissecting racial bias\nin an algorithm used to manage the health of populations. Science\n2019;366:447-453.\n\n[92] Profiles nd. http://qibawikirsna.org/index.php/Profiles (accessed\nDecember 19, 2021).\n\n[93] Biomarkers inventory. European Society of Radiology n.d. https://www.\nmyesr.org/research/biomarkers-inventory (accessed December 19,\n2021).\n\n[94] Hagiwara A, Fujita S, Ohno Y, Aoki S. Variability and standardization of\nquantitative imaging: monoparametric to multiparametric quantifica-\ntion, radiomics, and artificial intelligence. Invest Radiol 2020;55:601-\n616.\n\n[95] Zwanenburg A, Valliéres M, Abdalah MA, Aerts HJWL, Andrearczyk V,\nApte A, et al. The image biomarker standardization initiative: stan-\ndardized quantitative radiomics for high-throughput image-based\nphenotyping. Radiology 2020;295:328-338.\n\n[96] Collins GS, Reitsma JB, Altman DG, Moons KGM. Transparent\nreporting of a multivariable prediction model for individual prognosis or\ndiagnosis (TRIPOD): the TRIPOD statement. Br J Cancer 2015;112:251-\n259.\n\n[97] Lambin P, Leijenaar RTH, Deist TM, Peerlings J, de Jong EEC, van\nTimmeren J, et al. Radiomics: the bridge between medical imaging and\npersonalized medicine. Nat Rev Clin Oncol 2017;14:749-762. https://doi.\norg/10.1038/nrclinonc.2017.141.\n\n[98] DeCamp M, Lindvall C. Latent bias and the implementation of artificial\nintelligence in medicine. J Am Med Inform Assoc 2020;27:2020-2023.\nhttps://doi.org/10.1093/jamia/ocaa094.\n\n[99] Bluemke DA, Moy L, Bredella MA, Ertl-Wagner BB, Fowler KJ, Goh VJ,\net al. Assessing radiology research on artificial intelligence: a brief guide\nfor authors, reviewers, and readers—from the radiology editorial board.\nRadiology 2020;294:487-489.\n\n[100] Haibe-Kains B, Adam GA, Hosny A, Khodakarami F. Massive Analysis\nQuality Control (MAQC) Society Board of Directors, Waldron L, et al.\nTransparency and reproducibility in artificial intelligence. Nature\n2020:586:E14-E16.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 57.37,
+            "box": [
+                1261.5,
+                266.7,
+                2311.4,
+                1590.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_11/region_2_list.png",
+            "text": "[101] Collins GS, Moons KGM. Reporting of artificial intelligence prediction\nmodels. Lancet 2019;393:1577-1579.\n\n[102] Mongan J, Moy L, Kahn Jr CE. Checklist for artificial intelligence in\nmedical imaging (CLAIM): a guide for authors and reviewers. Radiol Artif\nIntell 2020;2:e200029.\n\n[103] Sounderajah V, Ashrafian H, Aggarwal R, De Fauw J, Denniston AK,\nGreaves F, et al. Developing specific reporting guidelines for diagnostic\naccuracy studies assessing AI interventions: the STARD-AI Steering\nGroup. Nat Med 2020;26:807-808.\n\n[104] CONSORT-AI, SPIRIT-AI Steering Group. Reporting guidelines for clinical\ntrials evaluating artificial intelligence interventions are needed. Nat Med\n2019;25:1467-1468.\n\n[105] Omoumi P, Ducarouge A, Tournier A, Harvey H, Kahn CE, Louvet-de\nVerchére F, et al. To buy or not to buy—evaluating commercial AI solu-\ntions in radiology (the ECLAIR guidelines). Eur Radiol 2021;31:3786-\n3796.\n\n[106] Reyes M, Meier R, Pereira S, Silva CA, Dahlweid F-M, von Tengg-\nKobligk H, et al. On the interpretability of artificial intelligence in radi-\nology: challenges and opportunities. Radiol Artif Intell 2020;2:e190043.\n\n[107] Wang CJ, Hamm CA, Savic LJ, Ferrante M, Schobert I, Schlachter T, et al.\nDeep learning for liver tumor diagnosis part II: convolutional neural\nnetwork interpretation using radiologic imaging features. Eur Radiol\n2019;29:3348-3357.\n\n[108] Zhen S-H, Cheng M, Tao Y-B, Wang Y-F, Juengpanich S, Jiang Z-Y, et al.\nDeep learning for accurate diagnosis of liver tumor based on magnetic\nresonance imaging and clinical data. Front Oncol 2020;10:680.\n\n[109] Wei L, Owen D, Rosen B, Guo X, Cuneo K, Lawrence TS, et al. A deep\nsurvival interpretable radiomics model of hepatocellular carcinoma pa-\ntients. Phys Med 2021;82:295-305.\n\n[110] Goh G, Cammarata N, Voss C, Carter S, Petrov M, Schubert L, et al.\nMultimodal neurons in artificial neural networks. Distill 2021;6. https://\ndoi.org/10.23915/distill.00030.\n\n[111] Radford A, Sutskever I, Kim JW, Krueger G, Agarwal S. CLIP: Connecting\nText and Images. 2021; https://openai.com/blog/clip/. [Accessed 3\nNovember 2021].\n"
+        }
+    ]
+}

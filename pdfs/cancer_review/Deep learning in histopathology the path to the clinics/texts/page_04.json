@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 3,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 88.97,
+            "box": [
+                300.6,
+                298.8,
+                2196.7,
+                1364.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_04/region_1_text.png",
+            "text": "the challenge had to solve two tasks designed to mimic routine tasks in pathology diagnostics: finding\ntumor regions in each lymph node and consequently predicting the presence of tumors at a WS level.\nSimilar to the impact that ImageNet had on the computer vision community, the large set of data and\nclinical focus of CAMELYON stimulated the creativity of both researchers and industry, who pushed\nforward the development of Al for metastasis detection, thereby enabling CPATH methods to make a\nleap from both academic and commercial technological perspectives. Furthermore, CAMELYON also\nattracted machine learning powerhouses such as Google to the field of computational pathology [21],\ncontributed to establishment of several CPATH start-up companies, and influenced government policy\nin the USA [22].Today, many research papers are published on CPATH developments, focusing on a\nwhole array of clinical applications. These applications are often found to approach or even surpass\npathologists for specific tasks. To facilitate the development of such applications, ever larger data sets\nwith associated annotations are required, posing challenges in terms of data collection and annotation\nproduction.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 88.76,
+            "box": [
+                298.0,
+                1467.4,
+                2198.3,
+                2539.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_04/region_2_text.png",
+            "text": "[H2] CPATH for clinical practice. The CAMELYON challenge provided a stimulus for researchers and\nindustry to focus on the actual impact of CPATH applications in pathology clinical practice. Current\napplications include tumor detection and classification (often by subtype [21], [23], [24] [25], [26], [27]\n[28], [29], [30], [31], [32], [33], [34], [35] [36], [37]), image segmentation [38], [39], [40] [41], [42] [43]\n[44], [45] [46], [47], [48], cell detection and counting [49], [50], [51], [52], [53], mitosis detection [54],\n[55], [56], [57], [58], analysis of kidney transplant biopsies [19], and tumor grading [59], [60], [61],\namong others. An example of a CPATH application for automatic tissue segmentation using a\ncombination of U-Net models [19] as well as the corresponding ground truth, is shown in Figure 1.\nFigure 1a shows a zoomed in region of a Periodic acid—Schiff-stained kidney biopsy, in which glomeruli,\ntubuli, capillaries etc can be recognized. In Figure 1b, the expert annotation is shown, which is used to\nvalidate the output of the CPATH solution (purple - glomeruli, blue - proximal tubuli, orange - distal\ntubuli, green - atrophic tubuli, etc). Figure 1c, finally, shows the output of the CPATH models, which\nclearly corresponds very well with the human annotation.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 81.96,
+            "box": [
+                301.0,
+                2560.8,
+                2195.2,
+                3127.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_04/region_3_text.png",
+            "text": "In the context of clinical practice, automating repetitive and time-consuming tasks such as the analysis\nof tissue samples obtained by biopsy and excised lymph nodes can have a tremendous impact on the\noptimization of the clinical workload of pathologists. Tissue samples from the breast, colon, and cervix\nare taken in large numbers as a consequence of population screening programs, and large numbers\nof lymph nodes per patient are resected during surgery, resulting in large numbers of (mostly negative)\nslides to be checked by pathologists. In these situations, Al algorithms could flag suspicious regions or\nslides for inspection or, in the future, assess cases autonomously.\n"
+        }
+    ]
+}

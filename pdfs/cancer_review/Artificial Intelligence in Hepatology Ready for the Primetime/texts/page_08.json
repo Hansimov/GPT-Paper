@@ -1,0 +1,193 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 14,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                201.7,
+                344.4,
+                1204.7,
+                789.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_01_text.png",
+            "text": "classification and mutation prediction based on histopa-\nthology images. Chen et al®> showed that the performance\nlevel of a DL model was close to the ability of a 5-year expe-\nrience pathologist, with high accuracy for differentiating\nbenign and malignant conditions. This model has shown\nthat four important genes, namely- FMN2, CTNNB1,\nTP53 and ZFX4, predicted from histopathology images,\ncould assist in the classification and detection of gene mu-\ntation in liver cancer.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.16,
+            "box": [
+                199.7,
+                817.8,
+                634.4,
+                865.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_02_title.png",
+            "text": "I. Liver transplantation\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                200.6,
+                891.9,
+                1205.1,
+                2034.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_03_text.png",
+            "text": "An ANN model, based on clinical and biochemical data\nof cirrhotic patients, having a high probability of mortality\nin 1 year; was developed by Banerjee et al°° for the identifi-\ncation of the best candidates for liver transplantation.\nThree-dimensional (3D) simulation software, using 3D visuali-\nzation and 3D reconstruction of CT images, is a valuable\ntool for pre-hepatectomy assessment, virtual hepatectomy\nand measuring hepatic volumes. These 3D models com-\nbined with hydrodynamic analysis have been used to diag-\nnose and manage portal hypertension.°” An ANN was used\nto predict survival times of 1168 patients planned for liver\ntransplantation, by Khosravi et al.°* It estimated a survival\nprobability of 1-5 years with an AUROC curve of 86.4% vs.\n80.7% for Cox proportional hazard regression models.\nANN has helped to make liver donor-recipient matching\nmodels by researchers, providing powerful technology\nthat would ease decision-making.” AI tools using liver seg-\nmentation will hence help to plan hepatic resection, pre-\nvent donor-recipient mismatch, improve survival of graft\nand patient overall and also help in the approval of new\nimmunosuppressant drugs by playing an important role\nin research and development in drug trials. The salient\nstudies of AI and ML are listed in Table 4.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 97.77,
+            "box": [
+                262.0,
+                2125.8,
+                539.2,
+                2180.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_04_title.png",
+            "text": "KEY POINTS\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.59,
+            "box": [
+                260.7,
+                2198.1,
+                1147.4,
+                2443.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_05_text.png",
+            "text": "Various Al-based applications and models, devel-\noped using clinical, laboratory and radiology data,\nplay an important role in diagnosis, prediction of\nseverity and prognostication of liver diseases\n(Figure 3).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.06,
+            "box": [
+                202.8,
+                2549.3,
+                1162.6,
+                2602.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_06_title.png",
+            "text": "THE LIMITATIONS OF Al IMPLEMENTATION\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                200.8,
+                2622.0,
+                1204.2,
+                3066.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_07_text.png",
+            "text": "There are certain obstacles and pitfalls, despite all the ad-\nvantages of AI technology. Medicine is a field of science\nwith multiple research gaps, hence designing perfect AI\nmodels has been difficult to date, especially in gastroenter-\nology and hepatology (Table 3). A flawed algorithm can\ncause harm to a large group of patients. Instead of a single\ndoctor's mistake harming a patient, the potential for ma-\nchine algorithms causing iatrogenic risk is vast. As a result,\nsystematic amendment, extensive simulation, validation\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 98.68,
+            "box": [
+                1300.0,
+                345.2,
+                2237.7,
+                434.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_08_text.png",
+            "text": "Table 3 Future Research Points of Investigations for\nArtificial Intelligence in Gastroenterology and Hepatology\n"
+        },
+        {
+            "idx": 9,
+            "thing": "table",
+            "score": 99.58,
+            "box": [
+                1302.9,
+                443.4,
+                2255.5,
+                983.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_09_table.png"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 98.03,
+            "box": [
+                1301.6,
+                1001.0,
+                2279.2,
+                1040.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_10_text.png",
+            "text": "Abbreviation: AUROC, area under the receiver operating characteristic.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1278.3,
+                1076.1,
+                2281.0,
+                1421.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_11_text.png",
+            "text": "and audit along with prospective trials and scrutiny are\nrequired when an AI algorithm is launched in clinical prac-\ntice. Another critical aspect of the future of AI rests with\nthe preservation and protection of data and personal infor-\nmation, maintaining privacy. Given the risks of hacking\nand data robbery, there will be less interest in the use of al-\ngorithms that risk revealing a patient’s medical history.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1278.0,
+                1425.3,
+                2281.4,
+                1719.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_12_text.png",
+            "text": "Now, as AI moves towards face recognition and the use\nof genomic imprints, it further stresses the fact that data\nsecurity will be a chief concern. Developing software with\nfull-proof security systems, especially for data transfer\nand storage, will help increase the confidence of patients\nfor AI development.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1277.1,
+                1723.5,
+                2282.5,
+                2218.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_13_text.png",
+            "text": "High dependency on AI tools can result in the reduction\nof the skills of clinicians. One should remember that AI\ntools also have diagnostic errors. Hence, clinicians should\nbe vigilant in the initial phase of AI implementation, disap-\nproving the diagnosis; they believe AI has made an error.\nThe initial use of AI tools will prolong diagnostic time,\nmainly due to the clinicians learning the new process and\ntechnology adapting itself to new unprocessed data. Hence\nthere should be a dedicated team of people involved in the\ndevelopment of AI applications.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1276.6,
+                2223.4,
+                2282.2,
+                3065.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_08/region_14_text.png",
+            "text": "It is improbable that the AI systems will render clini-\ncians input completely obsolete, as the AI systems are de-\nsigned to keep human intelligence as a centre-space.\nThey lack the technical complexity required to achieve au-\ntonomy. ” Rather than hinder the already skilled clini-\ncians, they will aid and further support for patient\nmanagement. Clinicians should embrace AI systems as ad-\njuncts to increase the quality of care. Machines cannot\nreplace the component of ‘human touch’; hence clinicians\nethically will play a major role in decision-making for their\npatients based on patient's preferences and comfort.\nAnother limitation of AI technology at present is the lack\nof superior quality datasets for algorithm development.\nCurrently, with the lack of utility of ML algorithms in clin-\nical practice, most of the evidence is from preclinical trials.\nHence collections of data and storage from involvements\nof multiple centres with high volume load will help in\n"
+        }
+    ]
+}

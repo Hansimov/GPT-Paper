@@ -4,7 +4,8 @@ secrets.json
 *.pth
 pdfs/**/*.png
 pdfs/**/*.json
-pdfs/**/*.pkl
+!pdfs/**/texts/*.json
+
 data/
 
 **/.ipynb_checkpoints

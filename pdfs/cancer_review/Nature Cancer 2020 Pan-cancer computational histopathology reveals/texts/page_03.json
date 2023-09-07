@@ -1,0 +1,128 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 9,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.78,
+            "box": [
+                180.5,
+                241.0,
+                2296.8,
+                1249.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_03/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                176.4,
+                1293.7,
+                2274.0,
+                1727.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_03/region_2_text.png",
+            "text": "Fig. 2 | Widespread associations between histopathology and genomic alterations. a, Fraction of significant associations (Fisher's combined P value*”\nfrom Wilcox's rank-sum test*®*?, adjusted°° to FDR < 0.1; the number of significant associations and the total number of tests used for multiple testing\nadjustments are indicated) between histopathological features and different types of genetic alterations across cancer types. The numbers of samples\nfor each cancer type and alteration, as well as individual P values from each test can be found in Supplementary Table 2a-g. b, Boxplot with AUC values\nfor all of the associations, grouped by alteration type, as indicated above. Each box corresponds to the distribution of significant associations for each\nalteration type. The sample size of each test can be found in Supplementary Table 2. All boxplots demarcate quartiles and median values, while whiskers\nextend to 1.5x the interquartile range. ¢, Pie charts showing the fraction (number) of genomic alterations by type that can be predicted by PC-CHiP only,\nby histological subtype only, and by both combined, in 20 cancer types with available histological subtype information. d, Pie charts showing the fraction\n(number) of genomic alterations by type that can be predicted by PC-CHIP only, by histological grades only, and by both combined, in ten cancer types\nwith existing grading information.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                177.8,
+                1845.9,
+                1216.9,
+                2285.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_03/region_3_text.png",
+            "text": "using CellProfiler’** showed that the average cell nucleus size, as well\nas its variation across the tumor’, was elevated in WGD samples,\nbut these features provided a lower predictive accuracy in all but one\ncancer type compared with PC-CHiP (average AUC =0.58; range:\n0.37 to 0.78; Fig. 3b and Extended Data Fig. 3a,b). Nevertheless, the\nhistopathological features indicative of WGD appeared largely inde-\npendent of the specific tissue type, as, remarkably, WGD could be\npredicted for 18 cancer types (FDR<0.1) by models entirely trained\non all but the evaluated cancer type, albeit with slightly reduced\naccuracy (average AUC=0.68; Fig. 3c and Extended Data Fig. 3c).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.36,
+            "box": [
+                176.1,
+                2328.1,
+                1214.8,
+                2371.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_03/region_4_title.png",
+            "text": "Histopathological associations with copy number alterations.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                177.6,
+                2371.3,
+                1216.7,
+                2809.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_03/region_5_text.png",
+            "text": "The same approach revealed frequent associations between histo-\npathological patterns and gain and losses of whole chromosomes\nor chromosome arms (Fig. 2a and Supplementary Table 2). Yet, no\nsimple histopathological differences between individual aneuploi-\ndies were found, and around 10% of gains and losses were associated\nwith a higher histopathological grade (Fig. 2d). The most frequently\nassociated gain was +8gq, as identified in 12 different cancer types.\nConversely, loss of chromosome arm 17p, which harbors the TP53\ntumor suppressor gene, was identified in 12 cancers (Extended Data\nFig. 4b).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                178.1,
+                2809.5,
+                1216.7,
+                3116.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_03/region_6_text.png",
+            "text": "Focal copy number alterations occur on the scale of several mega-\nbases and are thought to lead to oncogene amplification and tumor\nsuppressor gene deletions. Based on a catalog of 140 variants (70\namplifications and deletions each)*’, 53 out of 563 (9%) alteration-\ncancer pairs with more than ten recurrences showed significant\nhistopathological associations, including ten amplifications and\n43 deletions (FDR-adjusted P<0.1; Fig. 2a,b and Supplementary\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1265.2,
+                1846.6,
+                2303.2,
+                2196.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_03/region_7_text.png",
+            "text": "Table 2). The cancer type with the largest number of significant\nfocal copy number alterations was breast invasive carcinoma (four\namplifications and 19 deletions). Notable examples include dele-\ntion of RBI (13q14.2; AUC=0.75; 95% confidence interval (95%\nCI) =0.67 to 0.83) and deletion of PTEN (10q23.31; AUC =0.69;\n95% CI=0.63 to 0.76), for which predictions based on histopatho-\nlogical subtypes were inferior (AUC =0.67; 95% CI=0.62 to 0.72\nfor RB1 and AUC =0.56; 95% CI=0.46 to 0.66 for PTEN).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1265.3,
+                2196.2,
+                2304.1,
+                2635.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_03/region_8_text.png",
+            "text": "Recurrently detected focal deletions involve CSMD1 (8p23.2;\nseven cancers) and PPP2R2A (8p21.2; seven cancers) (Supplementary\nTable 2). As these two deletions frequently co-occur (Cohen's\nk= 0.88), it is possible that these histological associations reflect the\nsame underlying alteration. Focal amplification of EGFR (located\nat 7p11.2) in glioblastoma (AUC =0.74; 95% CI=0.69 to 0.78) was\ncharacterized by a distinct small cell morphology of EGFR-amplified\ncancer cells (Fig. 4a). This histopathological association has been\nnoted previously’', although EGFR amplifications do not exclusively\ndefine a molecular glioblastoma subtype”.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1265.1,
+                2678.7,
+                2304.0,
+                3115.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_03/region_9_text.png",
+            "text": "Driver gene mutations. Many oncogenic mutations are point\nmutations in cancer driver genes. Among all driver genes and can-\ncers tested, 43 out of 151 (28%) gene-cancer pairs displayed sig-\nnificant histopathology associations involving 29 genes (FDR<0.1;\nFig. 2a and Supplementary Table 2). Interestingly, driver mutations\nin TP53—the most frequently mutated gene in cancers—could be\ndetected in 12 out of 27 (44%) cancer types, including low-grade gli-\noma (AUC =0.84; 95% CI=0.80 to 0.88), breast invasive carcinoma\n(AUC =0.82; 95% CI=0.78 to 0.87) and uterine cancer (AUC = 0.80;\n95% CI=0.73 to 0.87; Fig. 2b). Tumors with TP53 mutations were\n"
+        }
+    ]
+}

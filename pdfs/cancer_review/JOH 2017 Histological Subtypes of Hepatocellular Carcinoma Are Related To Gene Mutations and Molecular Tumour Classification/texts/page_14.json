@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_14.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 1,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 53.44,
+            "box": [
+                377.8,
+                223.3,
+                2184.0,
+                2832.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_14/region_1_text.png",
+            "text": "VEGFA signaling are available and have shown remarkable in vivo anti-tumour efficacy if\nused in combination [39].\n\nOther well-recognized HCC subtypes were also related to clinical and/or molecular\ncharacteristics. The so-called steatohepatitic HCC is characterized by its resemblance\nwith non-neoplastic steatohepatitis and is considered to preferentially occur in patients\nwith metabolic syndrome [7, 21]. In our series, we did not identify any association of this\nsubtype with liver disease etiology despite a proportion of 17% of patients with\nmetabolic syndrome. We were however able to demonstrate, in keeping with a previous\nreport by Ando and collaborators,[40] that steatohepatitic HCC display a particular\nmolecular profile mainly defined by the lack of Wnt/B-catenin pathway activation. The\noncogenic mechanisms involved in the progression of this variant thus remain to be\nidentified.\n\nA link between scirrhous HCC and progenitor traits has been previously evidenced. [41]\nWe have here confirmed these results, with the association with CK19 expression and\nthe upregulation of various cancer stem cell/progenitor genes,,and have additionally\ndemonstrated that this HCC subtype is also related to the activation of PI3K/AKT\npathway, with TSC1/TSC2 mutations and a trend towards phospho-S6 overexpression.\nFurther studies will have to determine if patients with this particular variant might\nbenefit from PI3K/AKT pathway inhibitors.\n\nFinally, integration of clinical, genetic, and pathological features into HCC classification\nshowed strong associations with tumour subclasses. Different oncogenic pathways drive\nthe progression of HCC subgroups and they thusyresult in distinct tumour phenotypes.\nThese findings are in keeping with those of Tan et al., who showed that\nclinicopathological features were associated with Hoshida HCC classification [42].\nAltogether, our study provides a comprehensive overview of the relationship between\nHCC phenotype and its molecular characteristics. We have showed that histological\nfeatures recognized by the WHO Classification of Tumours are related to particular gene\nmutations and transcriptomic subgroups, and further unraveled a novel histological\nsubtype linked to molecular,alterations that may have clinical relevance. Our next\nchallenge is to validate our findings in different clinical settings, for example in advanced\ntumours with only biopsy samples available. However, our results already provide the\ntools to translate HCC molecular classification into clinical practice.\nAcknowledgements\n\nWe warmly thank the TCGA Research Network, J. Saric, C. Laurent, L. Chiche, B. Le Bail\nand C. Castain (Centre Hospitalier Universitaire Bordeaux), D. Cherqui, A. Laurent and J.\nTran Van Nhieu (Centre Hospitalier Universitaire Henri Mondor, Créteil),\nTumorotheque/Plateforme des Ressources Biologiques of Bordeaux Pellegrin and Henri\nMondor Hospitals, and Réseau Frangais des CRB foie for contributing to the tissue\ncollection. and Servier medical art for image templates (smart.servier.fr).\n"
+        }
+    ]
+}

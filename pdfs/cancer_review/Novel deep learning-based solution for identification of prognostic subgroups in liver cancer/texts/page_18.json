@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_18.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_18.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 18
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.31,
+            "box": [
+                489.7,
+                363.4,
+                802.5,
+                408.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_18/region_1_text.png",
+            "text": "Table 6 (continued)\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.39,
+            "box": [
+                489.3,
+                426.9,
+                1989.5,
+                1946.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_18/region_2_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 98.54,
+            "box": [
+                490.5,
+                1955.6,
+                1935.6,
+                2062.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_18/region_3_text.png",
+            "text": "A summary of the results of the survival analysis of the mRNAs identified by Lpcc. A total of 75 genes were prognostic in\nthe TCGA HCC cohort as indicated by a significant log-rank result; 29 of these were also prognostic in the LIRI-JP cohort,\nindicated here in bold. NA—Not applicable for testing as gene not available in validation dataset\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                491.2,
+                2130.5,
+                2001.0,
+                2484.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_18/region_4_text.png",
+            "text": "The combined loss Lpsc produced a set of clusters that balanced the requirements of\nboth Le, and Lg. In this study, the Silhouette score was lower for Lesc (0.59-0.7) than\nfor Les (0.62—0.77). While Lysc wasn’t able to produce lower P-values in the log-rank\ntest and higher Silhouette scores than Lg, combining L, with Lp, produced more robust\nand biologically meaningful clusters. Baseline models BCE and MSE had low Silhouette\nscores (0.18—0.31) indicating less accurate sample assignment to clusters.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                490.4,
+                2484.9,
+                2002.0,
+                3018.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_18/region_5_text.png",
+            "text": "Despite the complexity of the patient cohorts and their underlying conditions in\naddition to HCC, the hybrid model successfully identified robust features of biological\nand prognostic significance in different omics data types (nRNA, miRNA, methyla-\ntion). Features were identified consistently across ten runs of the model. This included\n377 mRNAS, 231 of which were novel compared to the other losses explored and\nthose listed in the baseline paper’s top 100 mRNA features as identified by ANOVA.\nA total of 75 of the 231 mRNAs were significant for prognosis in the TCGA cohort\nwhen groups were separated by median expression. Amongst the mRNAs identified\nby Lpesc was LCAT. Low expression of LCAT has been linked to poor survival in HCC,\n"
+        }
+    ]
+}

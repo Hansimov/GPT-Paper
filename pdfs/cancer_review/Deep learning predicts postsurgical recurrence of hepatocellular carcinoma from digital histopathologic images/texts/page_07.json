@@ -1,0 +1,62 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 4,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.5,
+            "box": [
+                298.6,
+                208.4,
+                2306.2,
+                1424.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_07/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.36,
+            "box": [
+                651.6,
+                1466.7,
+                2301.6,
+                1640.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_07/region_2_text.png",
+            "text": "Figure 4. Top 100 tiles selected by the tumor tile classification model. Spatial distribution of the top 100 tiles\nclassified as being tumor tiles by the tumor tile classification model. The top row represents examples from the\nTCGA-HCC test dataset, and the bottom row represents examples from the Stanford-HCC dataset. The top 100\ntiles were subsequently used for development of the survival prediction model. WSI, whole-slide image.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "figure",
+            "score": 99.11,
+            "box": [
+                649.2,
+                1657.9,
+                2302.5,
+                2799.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_07/region_3_figure.png"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.62,
+            "box": [
+                650.4,
+                2838.7,
+                2305.8,
+                2970.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_07/region_4_text.png",
+            "text": "Figure 5. Kaplan-Meier plots for the high- and low-risk subgroups in the internal (TCGA-HCC) test set. The\nKaplan-Meier plot shows the difference in the survival distributions for the low- and high-risk subgroups,\nstratified based on the risk scores predicted by HCC-SurvNet on the internal test set (log-rank p value = 0.0013).\n"
+        }
+    ]
+}

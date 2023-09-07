@@ -1,0 +1,89 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 6,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                176.0,
+                197.4,
+                1203.7,
+                927.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_02/region_1_text.png",
+            "text": "Pathological analysis of HCC specimens is essential for patient\nprognostic classification beyond diagnosis. The phenotypic infor-\nmation present in pathological tissue reflects the overall effect\nof the tumour microenvironment on the behaviour of cancer\ncells. In addition to conventional pathological features such as\nmicrovascular invasion and tumour differentiation, novel prog-\nnostic histopathological features, including intratumour tertiary\nlymphoid structures,’ vessels encapsulating tumour clusters’ and\nthe macrotrabecular-massive subtype,° have been reported in HCC\nrecently. However, histopathological images that contain numerous\nphenotypic descriptions of the molecular processes underlying\nHCC initiation and progression remain largely unknown to\nsubjective judgement.’ Further in-depth analysis is needed to trans-\nlate the histopathological features of HCC into prognostic and\npredictive algorithms to improve patient stratification and clinical\nmanagement.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                175.7,
+                930.7,
+                1204.1,
+                1157.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_02/region_2_text.png",
+            "text": "Deep learning can adaptively extract image features based on\nlearning objectives, emerging as a novel approach for tumour\ndiagnosis and prognosis based on histopathological images.*\"'°\nDeep learning, as a ‘black box’ model, is difficult to decon-\nstruct and interpret the features it extracts, making its clinical\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1278.0,
+                196.1,
+                2306.0,
+                928.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_02/region_3_text.png",
+            "text": "application impracticable. A method that integrates the patient\nprognostication and visualisation of prognostic pathological\nphenotypes may facilitate oncologists to explore new patholog-\nical features. In this regard, network activations as saliency masks\nfor visualisations have become a popular method to explain deep\nlearning;'' '? however, their application in pathological images\nneeds further improvement. The existing methods can only visu-\nalise local coarse features rather than accurately decode cell-level\npathological features, such as nuclear atypia, mitotic activity,\ncellular density and tissue architecture. Additionally, a patho-\nlogical image contains enormous subtle and complex informa-\ntion, rendering pixel-level annotations a huge challenge. Weakly\nsupervised learning that only requires slide-level labels for\ntraining partially addresses the above considerations. However,\nthe existing weakly supervised learning usually requires tens of\nthousands of samples to converge, making it not widely used.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1278.5,
+                931.1,
+                2307.4,
+                1157.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_02/region_4_text.png",
+            "text": "Herein, we present a deep learning framework for predicting\nHCC patient prognosis based on pathological images from the\nZhongshan cohort and the Cancer Genome Atlas (TCGA) HCC\ncohort (figure 1). We first used manually labelled haematoxylin\nand eosin (H&E) images as learning materials to train tissue\n"
+        },
+        {
+            "idx": 5,
+            "thing": "figure",
+            "score": 99.89,
+            "box": [
+                177.5,
+                1241.9,
+                2303.7,
+                2861.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_02/region_5_figure.png"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                175.2,
+                2900.0,
+                2307.3,
+                3126.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_02/region_6_text.png",
+            "text": "Figure 1 Data and workflow for the prognostic analysis of liver cancer with deep learning. We first developed the classification network using 260\nwhole-slide images (WSls) as the category-based sampling. The network was then used to analyse the remaining WSls and generate the segmentation\nmaps. We randomly sampled tiles from each type of tissue based on these segmentation maps. Next, we trained the prognostic network and\ncalculated a tumour risk score (TRS) for each patient. Finally, we used TRS to predict patient prognosis, and integrate transcriptomics, genomics and\nneural network heatmaps to identify interpretable features. TCGA, The Cancer Genome Atlas.\n"
+        }
+    ]
+}

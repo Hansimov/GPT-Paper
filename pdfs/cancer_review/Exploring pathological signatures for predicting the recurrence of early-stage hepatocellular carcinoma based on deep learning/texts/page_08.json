@@ -1,0 +1,114 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 8,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.54,
+            "box": [
+                233.8,
+                376.2,
+                2243.9,
+                1605.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 90.25,
+            "box": [
+                285.0,
+                1630.7,
+                384.4,
+                1664.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_2_title.png",
+            "text": "FIGURE 4\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 96.49,
+            "box": [
+                278.7,
+                1665.5,
+                2063.0,
+                1740.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_3_text.png",
+            "text": "Kaplan-Meier curves for recurrence rate, OS, and RFS in the training (A—C), validation (D—F) and TCGA cohorts (G-I) based on HS. HS,\nhistological score; OS, overall survival; RFS, recurrence free survival.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.6,
+            "box": [
+                235.7,
+                1839.8,
+                1203.6,
+                2200.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_4_text.png",
+            "text": "correlation analysis in different risk subgroups of HS\n(Figures 6C, D). Compared to the low-risk group, the\npredominant immune cells in the high-risk group were\ncharacterized by CD66-, CD68-, CD103- and CXCR5-\npositive cells infiltrating both tumoral and peritumoral\ntissues, which implied that macrophages or neutrophils\nmay play a potential role in the progression of recurrence.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.74,
+            "box": [
+                1288.0,
+                1840.0,
+                2255.1,
+                2200.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_5_text.png",
+            "text": "The immune microenvironment of cases in the TCGA\ndatasets was investigated by CIBERSORT algorithm (28). The\nboxplot revealed significantly higher expression of monocytes\nand lower expression of M2 macrophages in the HS low-risk\nsubgroup (Figure 6E). HS was positively correlated with the\ninfiltration of M2 macrophages (p= 0.011, R=0.275, Figure 6F).\nSimilar findings suggested an increased interaction among\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.16,
+            "box": [
+                236.9,
+                2221.7,
+                1610.1,
+                2260.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_6_text.png",
+            "text": "TABLE 2 Cox proportional hazards regression model showing the association of variables with RFS.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "table",
+            "score": 99.03,
+            "box": [
+                234.0,
+                2293.3,
+                2246.2,
+                3050.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_7_table.png"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 97.46,
+            "box": [
+                235.3,
+                3063.4,
+                2251.5,
+                3133.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_08/region_8_text.png",
+            "text": "«Values are presented as HR and 95%CI. HR, hazard ratio; CI, confidence interval; HBsAg, Hepatitis B virus surface antigen; AFP, o.-fetoprotein; GGT, y-glutamyl transpeptidase; PT,\nprothrombin time; MVI, micro vascular invasion.\n"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_27.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_27.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 27
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 92.31,
+            "box": [
+                300.6,
+                294.1,
+                2197.7,
+                3134.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_27/region_1_list.png",
+            "text": "[144] Beck, A. H. et al. Systematic analysis of breast cancer morphology uncovers stromal features\nassociated with survival. Science translational medicine 3, 108-113 (2011).\n\n[145] Arvaniti, E. et al. Automated Gleason grading of prostate cancer tissue microarrays via deep\nlearning. Scientific reports 8, 12054 (2018).\n\n[146] Acs, B., Rantalainen, M. & Hartman, J. Artificial intelligence as the next step towards precision\npathology. Journal of internal medicine 288, 62—81 (2020).\n\n[147] Balkenhol, M. et al. Deep learning assisted mitotic counting for breast cancer. Laboratory\nInvestigation 99, 1596-1606 (2019).\n\n[148] Dudgeon, S. N. Et al. A Pathologist-Annotated Dataset for Validating Artificial Intelligence: A\nProject Description and Pilot Study. arXiv:2010.06995 (2020).\n\n[149] Dong, J et al. Clinical Trials for Artificial Intelligence in Cancer Diagnosis: A Cross-Sectional\nStudy of Registered Trials in ClinicalTrials.gov. Front Oncol. 15, 1629 (2020).\n\n[150] Collins, G. S. & Moons, K. G. M. Reporting of artificial intelligence prediction models. The\nLancet 393, 1577-1579 (2019).\n\n[151] https://www.fda.gov/media/145022/download\n\n[152] Linmans, J., van der Laak, J. & Litjens, G. Efficient Out-of-Distribution Detection in Digital\nPathology Using Multi-Head Convolutional Neural Networks. Medical Imaging with Deep Learning,\nProceedings of Machine Learning Research 121, 465-478 (2020).\n\n[153] Kohl, S. Et al. A Probabilistic U-Net for Segmentation of Ambiguous Images. Advances in Neural\nInformation Processing Systems (2018).\n\n[154] Bera, K., Schalper, K.A., Rimm, D. L., Velcheti, V. & Madabhushi, A. Artificial intelligence in\ndigital pathology - new tools for diagnosis and precision oncology. Nat Rev Clin Oncol. 16, 703-715\n(2019)\n\n[155] Kather, J.N. et al. Multi-class texture analysis in colorectal cancer histology. Sci Rep 6, 27988\n(2016).\n\n[156] Wong, G.L. et al. Artificial intelligence in prediction of non-alcoholic fatty liver disease and\nfibrosis. J Gastroenterol Hepatol. 36, 543-550 (2021).\n\n[157] Korde, L.A. et al. Neoadjuvant Chemotherapy, Endocrine Therapy, and Targeted Therapy for\nBreast Cancer: ASCO Guideline. J Clin Oncol. https:doi.org/10.1200/JCO.20.03399 (2021).\n\n[158] Kleppe, A. et al. Designing deep learning studies in cancer diagnostics. Nat Rev Cancer. 21,\n199-211 (2021).\n\n[159] Duran, J.M. & Jongsma, K.R. Who is afraid of black box algorithms? On the epistemological\nand ethical basis of trust in medical Al. J Med Ethics. https:doi.org/10.1136/medethics-2020-106820\n(2021).\n"
+        }
+    ]
+}

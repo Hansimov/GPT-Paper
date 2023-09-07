@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages_ordered/page_13.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 3,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 97.54,
+            "box": [
+                212.9,
+                233.8,
+                1214.2,
+                863.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_13/region_1_list.png",
+            "text": "24. Calderaro J, Couchy G, Imbeaud S, et al. Histological subtypes\nof hepatocellular carcinoma are related to gene mutations and\nmolecular tumour classification. J Hepatol. 2017;67:727-738\n\n25. Hashizume H, Falcon BL, Kuroda T, et al. Complementary actions\nof inhibitors of angiopoietin-2 and VEGF on tumor angiogenesis\nand growth. Cancer Res. 2010;70:2213-2223\n\n26. Burrell RA, McGranahan N, Bartek J, et al. The causes and con-\nsequences of genetic heterogeneity in cancer evolution. Nature.\n2013;501:338-345\n\n27. Parker TM, Henriques V, Beltran A, et al. Cell competition and\ntumor heterogeneity. Semin Cancer Biol. 2020;63:1—10\n\n28. Zhang Q, Lou Y, Yang J, et al. Integrated multiomic analysis\nreveals comprehensive tumour heterogeneity and novel immu-\nnophenotypic classification in hepatocellular carcinomas. Gut.\n2019;68:2019-2031\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 99.18,
+            "box": [
+                1273.8,
+                232.1,
+                2276.8,
+                612.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_13/region_2_list.png",
+            "text": "29. Wada Y, Nakashima O, Kutami R, et al. Clinicopathological study\non hepatocellular carcinoma with lymphocytic infiltration. Hepa-\ntology. 1998;27:407-414\n\n30. Unitt E, Marshall A, Gelson W, et al. Tumour lymphocytic infil-\ntrate and recurrence of hepatocellular carcinoma following liver\ntransplantation. J Hepatol. 2006;45:246—253\n\n31. Teng MW, Swann JB, Koebel CM, et al. Immune-medi-\nated dormancy: an equilibrium with cancer. J Leukoc Biol.\n2008;84:988-993\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.68,
+            "box": [
+                1273.4,
+                651.2,
+                2276.8,
+                739.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_13/region_3_text.png",
+            "text": "Publisher's Note Springer Nature remains neutral with regard to\njurisdictional claims in published maps and institutional affiliations.\n"
+        }
+    ]
+}

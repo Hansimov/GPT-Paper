@@ -1,0 +1,102 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_09.png",
+        "image_width": 2480,
+        "image_height": 3509,
+        "regions_num": 7,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "table",
+            "score": 95.81,
+            "box": [
+                230.6,
+                231.1,
+                2248.9,
+                1236.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_1_table.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.8,
+            "box": [
+                236.9,
+                1305.0,
+                2250.5,
+                1605.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_2_text.png",
+            "text": "ANN: Artificial neural network; AUC: Area under the curve; CC: Cholangiocarcinoma; CNN: Convolutional neural network; CV: Cross-validation; FLL:\nFocal liver lesion; GDC: Genomic Data Commons; HBV: Hepatitis B virus; HCC: Hepatocellular carcinoma; HCV: Hepatitis C virus; HV: Healthy\nvolunteers; LT: Liver transplant; MVI: Microvascular invasion, MWA: Microwave ablation; OS: Overall survival; PFS: Progression-free survival; RFA:\nRadio-frequency ablation; RNN: Recurrent neural network; SR: Surgical resection; STS-net: Spatial transformed similarity network; SVR: Sustained\nvirologic response; T: Training; TCGA: The Cancer Genome Atlas; V: Validation; VHA: Veterans Health Administration; WSI: Whole slide image; CT:\nComputed tomography; MRI: Magnetic resonance imaging; NHIRD: National Health Insurance Research Database; TNM: Tumor, Nodes, Metastasis;\nTACE: Trans-arterial chemoembolization; LI-RADS: Liver Imaging Reporting and Data System.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                808.0,
+                1697.3,
+                2257.5,
+                1792.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_3_text.png",
+            "text": "prospective, multi-centered studies involving diverse populations with external\nvalidation will be necessary before DL algorithms can be widely accepted.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                808.6,
+                1789.5,
+                2259.7,
+                2585.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_4_text.png",
+            "text": "A currently under-explored, but highly promising and exciting area for the\napplication of DL is the field of autonomous robotics. In a recent editorial, Gumbs et al\n[64] state that while the current form of robotic surgery seems like a form of minimally\ninvasive surgery, the true power of robotic surgery exists in its potential to create\nautonomous actions. Recently, a DL-based surgical instrument tracking algorithm was\nable to closely track the instruments during robotic surgery and evaluate the surgeons’\nperformance, demonstrating that DL algorithms can learn the correct steps of robotic\nsurgery[65]. With the help of DL and other AI technologies, it may be possible to\nimagine a future where fully autonomous robots perform resection of large, complex\nHCC in ways that no human surgeons can mimic. However, there are significant\nbarriers before the idea of fully autonomous robotic surgery can become a reality,\nincluding the current technical limitations of autonomous surgical robotics, as well as\nthe hesitation of patients and providers to fully trust autonomous robots to perform\ninvasive operations. “Explainability” of the DL algorithms will be critical here, as\nhumans would need to be able to understand and correct every single mistake that an\nautonomous robot makes during surgery. Therefore, for the foreseeable future, DL will\nmost likely remain as a helpful, adjunctive tool to assist human surgeons.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.46,
+            "box": [
+                808.3,
+                2710.2,
+                1084.7,
+                2774.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_5_title.png",
+            "text": "CONCLUSION\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                808.1,
+                2795.7,
+                2259.5,
+                3125.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_6_text.png",
+            "text": "This review has provided a comprehensive overview of various ways in which DL\nalgorithms can be employed to assist medical providers and enhance the care of\npatients with HCC (Table 1). DL algorithms not only can efficiently and accurately\nreplicate the same jobs performed by human physicians, but more importantly can\nhelp discover novel biologic pathways and disease subgroups with clinical sig-\nnificance by processing and analyzing complex high-dimensional data in ways\nimpossible for the human brain.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                808.5,
+                3122.2,
+                2260.1,
+                3310.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_7_text.png",
+            "text": "Despite some important limitations to overcome, application of state-of-the-art AI\ntechnologies such as DL for the care of patients with HCC is no longer a futuristic idea\nbut is rapidly becoming a reality. Most of the studies covered in this review were\npublished within the past two years, and the number of studies utilizing DL continues\n"
+        }
+    ]
+}

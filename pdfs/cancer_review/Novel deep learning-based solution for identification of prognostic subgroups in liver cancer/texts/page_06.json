@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 98.67,
+            "box": [
+                489.8,
+                362.5,
+                1999.0,
+                712.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_06/region_1_text.png",
+            "text": "This is an iterative process where each group is represented by a centroid which is calcu-\nlated as the mean of the data points (samples) within this group. Samples are assigned to\nthe cluster with the nearest centroid. Following group assignments, centroids are recalcu-\nlated. Typically, this process continues until group assignments no longer change. The Lc.\nwas driven from the Silhouette score, commonly used for cluster evaluation. The Silhouette\nscore [17] of a data point i from a cluster A is formulated as per Eq. 2:\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 97.77,
+            "box": [
+                489.0,
+                905.8,
+                1999.7,
+                1197.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_06/region_2_text.png",
+            "text": "where a(i) is the mean distance of i to all other data points in A and b(i) is the small-\nest mean distance between i and all data points of any other cluster of which i is not a\nmember. With our model, the L; aims to minimise the distance of each sample to its\nnearest centroid and to maximise the distance to its next closest centroid. The formula\nof Lc is presented in Eq. 3.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.28,
+            "box": [
+                489.5,
+                1413.2,
+                1998.3,
+                1525.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_06/region_3_text.png",
+            "text": "where /u; represents the centroid closest to the bottleneck vector of input x; (¢(«;)). Con-\nversely 4; represents the next nearest centroid to the bottleneck vector of input x;\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                490.4,
+                1529.7,
+                1999.6,
+                2116.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_06/region_4_text.png",
+            "text": "In order to determine the initial centroids and group assignments for losses utilising L.,\nthe custom autoencoder was initially run with only the L, loss for one epoch. All data was\nthen passed through the network and the bottleneck layer predicted. The two vectors with\nthe furthest Euclidean distance were selected to be the initial centroids. Each sample was\nthen assigned to the centroid with the shortest squared Euclidean distance to their bot-\ntleneck vector. With the seed centroids and group assignments determined, the custom\nautoencoder was then trained using Lp-. After each epoch, centroids were updated by tak-\ning the mean of each bottleneck feature for the samples in the relevant group, followed by\nthe reassignment of groups as before. For losses using L,, samples were not shuffled during\ntraining for the purposes of maintaining the group assignments.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                490.1,
+                2119.8,
+                2000.2,
+                2705.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_06/region_5_text.png",
+            "text": "Survival-based losses were explored to see if embedding survival analysis techniques\ndirectly into the autoencoder training can produce a latent space which, when clustered,\nproduces better (in terms of survival) and more biologically meaningful groupings. Like\nBello et al. [9], a branch of dimension 1 stemming from the bottleneck layer was added to\nthe custom autoencoder (Fig. 1) and a Cox partial likelihood inspired loss L; was applied.\nFor losses using Ls, survival information was used to sort the samples in descending order\nof survival before being fed to the autoencoder for the functioning of the survival loss\nimplementation. For losses using Ls, samples were not shuffled during training for the pur-\nposes of maintaining the survival ordering. The formula for calculating L, is presented in\nEq. 4\n"
+        }
+    ]
+}

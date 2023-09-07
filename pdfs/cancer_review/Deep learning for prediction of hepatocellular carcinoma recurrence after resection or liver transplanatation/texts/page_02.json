@@ -1,0 +1,116 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 8,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.45,
+            "box": [
+                213.1,
+                231.5,
+                494.5,
+                293.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_02/region_1_title.png",
+            "text": "Introduction\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                213.3,
+                345.1,
+                1216.2,
+                2118.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_02/region_2_text.png",
+            "text": "Hepatocellular carcinoma (HCC) is the seventh most\ncommon malignant tumor and the third primary cause of\nmortality worldwide [1, 2]. The prevalence of HCC is rela-\ntively high in the Asia—Pacific countries [3]. Hepatectomy\nand liver transplantation (LT) are still the main treatment\napproaches of HCC. Despite significant progress in diag-\nnostic and management techniques for HCC, the recur-\nrence rate is still high (up to 70-80%) following hepatec-\ntomy and 20-40% following LT [4-6]. A refinement of\nprognostic models, especially those based on the acces-\nsible data, could easily allow for detection of early warn-\ning signs during follow-up and prolonging adjuvant thera-\npeutic decisions [7]. The establishment of precise HCC\nrecurrence model for HCC patients after operation is dif-\nficult. Several clinical risk factors, using conventional Cox\nproportional hazards regression, have been identified to\npredict HCC recurrence, including maximum tumor diam-\neter, tumor number, tumor differentiation, macrovascular\ninvasion, serum alpha-fetoprotein (AFP) level [8-11].\nMetroticket 2.0 Model was developed based on level of\nAFP, tumor size, and tumor number, to determine risk of\ndeath from HCC-related factors after liver transplantation\nusing a competing-risk Cox_PH regression analysis [12].\nIn addition, the biomarkers such as genes, proteins, and\nmiRNAs are investigated and integrated into the diagnosis\nand prognosis model [13-15]. miRNAs with the advantage\nof reliability are good choice for biomarkers. The biomark-\ners were proved to have a better survival prediction power\nthan tumor-node-metastasis (TNM) stage (miRNA-AUC\ntest =0.64 vs. TNM-AUC test = 0.61) [16]. However, the\nbiomarkers suffer from economic and time costs. The\nwidely available pathology slides contain morphological\nmarkers of disease progression [17, 18], which is not rou-\ntinely used to objectively extract prognostic biomarkers.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                212.9,
+                2114.6,
+                1216.0,
+                2953.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_02/region_3_text.png",
+            "text": "The prognosis of a disease is closely associated with its\npathological features. Histological analysis of tumor tis-\nsues can certainly provide information for patient stratifi-\ncation and treatment allocation. Histological slides contain\na vast amount of information that can be quantitatively\nassessed by deep learning algorithms. In recent times,\nconvolutional neural networks (CNNs) have been exten-\nsively employed in the fields of speech recognition, traf-\nfic sign management, and face recognition [8—10]. CNNs\nhave successfully passed numerous image interpretation\ntests and also retrieved extra information from histopatho-\nlogical images. Recently, a pioneering survey revealed that\nsimulating routine pathology workflows, i.e., using sub-\nset algorithms based on deep learning, achieved a better\ndiagnostic performance than an exert group consisting of\n11 pathologists in monitoring lymph node metastasis in\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1275.4,
+                233.6,
+                2280.6,
+                1381.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_02/region_4_text.png",
+            "text": "breast cancers [19]. Coudray et al. have shown in their\nwork that CNNs successfully identified the prime histo-\nlogical subtypes of non-small cell lung cancer and pre-\ndicted the gene mutation status of genes such as STK11\nand EGFR [20]. CNNs are also found to be useful for\npredicting the aggressiveness of colorectal cancer [21].\nMore recently, there is growing evidence that suggests the\ncomputational processing applied on histological slides\nbetter refines prediction for patient prognosis, thus lead-\ning to an improvement in treatment allocation. A model\nbased on deep learning developed by Saillard et al. could\ncorrectly predict the survival in HCC patients. They used\npre-trained CNNs to extract features from images and then\nthe network selected 25 tiles with maximum and minimum\nscores to predict patient survival [22]. Skrede et al. suc-\ncessfully developed a marker to predict the prognosis of\ncolorectal cancer in large cohorts using MobileNet V2,\none of the CNNs [17], building the model using Multiple\nInstance Learning (MIL). Interestingly, the local spatial\narrangement of nuclei in the histopathology images proved\nto be vital information of high prognostic value in cases of\noropharyngeal cancer [23].\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1275.3,
+                1379.1,
+                2280.6,
+                2475.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_02/region_5_text.png",
+            "text": "In the present study, four independent cohorts of postop-\nerative HCC patients were investigated for developing and\nvalidating a MobileNet V2-based model to improve prog-\nnosis and prediction. The scientific and innovative features\nof our method are inspired by two studies: (1) the study by\nSkrede et al. trained MobileNet V2 using the MIL, which\nallowed training on large tile collections labeled with the\nassociated whole-slide images [17], and (2) the study by Ji\net al. in which nuclear architectural information was used\nin building a model, which proved to be effective for cancer\ngrading and prediction of patient outcomes [24]. To capture\nlocalized nuclear architectural information in the independ-\nent cohort, local nuclei measurements were constructed\nby U-net, a convolutional networks for biomedical image\nsegmentation [25]. Here we conclude that the models have\nhigher accuracy in survival prediction relative to conven-\ntional methods. Our research aimed at using MobileNet V2\nto analyze histopathology images and propose an automatic\nprognostic classifier exclusive to HCC patients that have\nundergone liver resection. In addition, we validated the\nprognostic power of MobileNet V2 across different cohorts.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.07,
+            "box": [
+                1275.4,
+                2570.2,
+                1473.1,
+                2631.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_02/region_6_title.png",
+            "text": "Methods\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 99.41,
+            "box": [
+                1275.3,
+                2678.5,
+                1679.7,
+                2733.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_02/region_7_title.png",
+            "text": "Patients and samples\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1276.5,
+                2786.9,
+                2279.6,
+                2945.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_02/region_8_text.png",
+            "text": "Four different cohorts were enrolled in this study. Stained\ntumor tissue sections obtained from patients with adequate\nquality and tiles were used. The first cohort was used to train\n"
+        }
+    ]
+}

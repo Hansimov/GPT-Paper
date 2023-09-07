@@ -1,0 +1,168 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 12,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.5,
+            "box": [
+                212.8,
+                229.4,
+                564.0,
+                286.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_01_title.png",
+            "text": "Statistical analysis\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                213.2,
+                335.4,
+                1216.9,
+                1074.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_02_text.png",
+            "text": "Continuous variables are expressed as the median (IQR) and\nwere compared with the Mann—Whitney U test. Categori-\ncal variables are expressed as numbers and percentages,\nand were compared with the y’ test or Fisher’s exact test.\nKaplan—Meier curves with the log-rank test were used to\ncompare survival. Hazard ratios (HRs) and 95% confidence\nintervals (CIs) were also estimated by means of univariable\nand multivariable Cox analyses. The paired comparison of\nimmune infiltration among the tumor nest, invasive margin\nand normal region was conducted using Dunn's multiple\ncomparisons test. A two-tailed p value < 0.05 was considered\nstatistically significant. Statistical analysis was performed\nusing R-software 4.0.3 (R Foundation, Vienna, Austria) and\nSPSS® 22.0 (IBM, Armonk, New York, USA).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.55,
+            "box": [
+                213.0,
+                1163.0,
+                373.9,
+                1224.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_03_title.png",
+            "text": "Results\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.67,
+            "box": [
+                212.2,
+                1272.0,
+                1094.4,
+                1328.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_04_title.png",
+            "text": "Patient demographics and clinical information\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                213.1,
+                1377.3,
+                1216.5,
+                2166.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_05_text.png",
+            "text": "Table S1 describes the demographic, clinical, and tumor\ncharacteristics of patients in the training and validation\ncohorts. The LT cohort was predominantly male. More than\n80% of the patients were diagnosed with hepatitis B virus\n(HBV)-induced liver cirrhosis. Over half of the patients were\nwithin the Milan and UCSF criteria, with median Model for\nEnd-Stage Liver Disease (MELD) scores of 9.8 and 10.0 in\nthe training and validation cohorts, respectively. The median\ntumor diameters in the training and validation cohorts were\n3.0 cm, 3.5 cm, respectively. BCLC stages 0 and A were\nthe most common stages in the entire cohort. Microvascular\ninvasion was detected in approximately 35% of the patients\nafter surgery. The demographics of the annotated subpopu-\nlation (n=55, 60 WSIs) are shown in Table S2. Patients\nshared the similar tumor stages with the whole dataset.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.81,
+            "box": [
+                213.7,
+                2209.0,
+                1142.9,
+                2318.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_06_title.png",
+            "text": "Construction of the classification and prognostic\nnetwork\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                213.3,
+                2367.3,
+                1217.0,
+                2947.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_07_text.png",
+            "text": "A total of 75,387 patches (512 x 512 pixels) were extracted\nfrom the annotated WSIs to build the classification net-\nwork. With reliable identification accuracy, the neural net-\nwork discriminated the tumor region, normal liver tissue,\nfibrous tissue, portal area, immune cells, hemorrhagic and\nnecrotic tissue. Typical examples of a WSI and correspond-\ning processed image are displayed in Fig. 2a. The t-SNE\nvisualization of the classification results reflected good\ndiscrimination of the pathological structures (Fig. 2b). The\narea under curve (AUC) value of both the micro-average and\nmacro-average recognition accuracy achieved 0.97 (Fig. 2c).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1275.8,
+                228.7,
+                2279.5,
+                342.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_08_text.png",
+            "text": "Specifically, the confusion matrix of each tissue category\nrevealed high precision (Fig. 2d).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1275.8,
+                332.7,
+                2280.7,
+                1278.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_09_text.png",
+            "text": "We applied the classified tiles as the inputs with the\nrecurrence condition and TTR as the labels to train the prog-\nnostic network via ResNet-50 [25]. The deep-learning net-\nwork output the optimal prediction score of each HCC tissue\ncategory with the highest C-indices (Fig. 2e). Furthermore,\nsix corresponding risk scores were derived. All categories\nwere independent factors for predicting recurrence after LT\n(Fig. 2f). Consequently, the multivariate Cox regression\nmodel revealed that immune cells were the only prognos-\ntic determinant (HR 1.907, 95% CI 1.490—2.440), indicat-\ning the great significance of immune cells at the structural\nlevel. An immune score (IS) was constructed according to\nthe risk score of immune cells. DPS was derived based on\nthe weighted algorithm for all tissue categories except for\nNLT. The attention heatmap was then used to interpret the\nsignificance of different tissue categories. Higher attention\nscores (shown in red) indicated closer relationship to cancer\nrecurrence (Fig. 2g).\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 99.58,
+            "box": [
+                1275.0,
+                1372.6,
+                2266.4,
+                1429.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_10_title.png",
+            "text": "Model discrimination and survival prediction of DPS\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1275.4,
+                1479.0,
+                2280.6,
+                2372.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_11_text.png",
+            "text": "The C-indices of DPS in the training and validation cohorts\nwere 0.827 (95% CI 0.801-0.853) and 0.794 (95% CI\n0.75 1-0.837), respectively. The C-indices of IS in the train-\ning and validation cohorts were 0.808 (95% CI 0.781-0.835)\nand 0.768 (95% CI 0.725-0.810), respectively. Calibrate\ncurves revealed great concordance between the predicted\nand observed probabilities of recurrence and RFS (Fig. 3a,\nb, SIA, B). ROC curves were constructed to compare the\nprediction power between DPS and traditional prediction\nmodels (Fig. 3c, S2). The area under curve (AUC) values\nof DPS achieved 0.861 and 0.795 according to TTR and\nRFS, respectively, indicating the superior performance of\nthe pathological signature. The prediction power of IS was\nalso compared, with AUC values of 0.825 and 0.744 for TTR\nand RFS (Fig. SIC, D). DPS outperformed IS in recurrence\nprediction, probably due to the compensation for the invis-\nible prognostic value of other tissue categories.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1275.5,
+                2364.7,
+                2279.5,
+                2996.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_05/region_12_text.png",
+            "text": "The optimal cutoff value for the prediction score was\ndetermined using the “survminer” package [30]. All\nthe patients were then divided into the high-risk group\n(DPS > 0.5161266) and low-risk group (DPS <0.5161266)\naccording to the optimal cutoff value. Generally, the 5-year\nrecurrence rates were 4.59% and 47.20% in the low-risk and\nhigh-risk groups, respectively, while the short-term (within 2\nyears) recurrence rates were 3.96% and 37.88%. The 5-year\nRFS rate in the low-risk group was 88.65%, compared to\n49.31% in the high-risk group. The time-dependent ROC\ncurves showed good concordance of DPS and IS in the\ntraining and validation cohorts based on 1-year, 2-year, and\n"
+        }
+    ]
+}

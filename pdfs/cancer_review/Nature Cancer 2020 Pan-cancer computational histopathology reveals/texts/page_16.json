@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_16.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_16.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 2,
+        "page_idx": 16
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.56,
+            "box": [
+                486.9,
+                231.9,
+                1985.3,
+                2235.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_16/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                176.0,
+                2285.7,
+                2304.5,
+                2719.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_16/region_2_text.png",
+            "text": "Extended Data Fig. 5 | Histopathological associations with transcriptomic cell proliferation scores. a, Example tiles for low proliferation (top row) and\nhigh (bottom row) for breast invasive carcinoma, liver hepatocellular carcinoma, thymoma and lung adenocarcinoma. Four example tiles manually selected\nfrom best predicted tiles are shown for each tumour type. b, Boxplots show the different transcriptomic proliferation score for tumors with different\nhistological grades for 10 cancer types with available data (n=11,080). G1-G4 corresponds to different grades with G1 being the lowest and G4 the\n\nhighest, GX stands for “Grade cannot be assessed”, GB stands for “Borderline grade”. p-values were calculated by ANOVA. Boxplots depict the quartiles\nand median, whiskers extend to 1.5x the inter quartile range. ¢, Figure shows the increases of predictive accuracy of proliferation score from PC-CHiP\ncompared to conventional histological grades. Each line represents one cancer type with the same colors as in Fig. le-g. d, Barplots showing the correlation\nof transcriptomic proliferation score and the tumor purity estimated by ASCAT (at patient level), histopathology (at patient level) and predicted tumor\nprobability from PC-CHiP (at tile level) in each cancer (n=10,762 tumor samples for ASCAT, n=11,080 tumor samples for histopathology and n=6,188\ntumor samples for PC-CHiP).\n"
+        }
+    ]
+}

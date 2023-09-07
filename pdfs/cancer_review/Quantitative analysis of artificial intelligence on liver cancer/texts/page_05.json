@@ -1,0 +1,140 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 10,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.42,
+            "box": [
+                176.1,
+                287.5,
+                2301.6,
+                1205.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_05/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 87.54,
+            "box": [
+                225.5,
+                1228.4,
+                326.7,
+                1262.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_05/region_02_title.png",
+            "text": "FIGURE 3\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 97.98,
+            "box": [
+                226.6,
+                1265.0,
+                1699.6,
+                1300.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_05/region_03_text.png",
+            "text": "Citation network visualization map of countries/regions. The thickness of the lines reflects the citation strength.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.8,
+            "box": [
+                177.8,
+                1411.2,
+                1223.0,
+                1564.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_05/region_04_text.png",
+            "text": "large number of co-citation references were focused on the period\nfrom 2015 to 2019, indicating that research in this field was a hotspot\nin these years.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 98.94,
+            "box": [
+                178.9,
+                1659.1,
+                657.6,
+                1720.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_05/region_05_title.png",
+            "text": "Analysis of keywords\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                177.1,
+                1774.4,
+                1222.1,
+                2291.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_05/region_06_text.png",
+            "text": "An in-depth analysis of keywords from the diseases, data types,\nclinical goals, and methods (Figure 8) were conducted. Most articles\nfocused on liver cancer, and HCC was widely studied as a single type\nof disease, followed by cirrhosis, fatty liver disease, liver fibrosis,\nliver transplantation, and hepatectomy, accounting for 30.76%,\n33.52%, 11.10%, 9.45%, 8.39%, 4.41%, and 2.37%, respectively\n(Figure 8A). In terms of the data type, computed tomography\n(CT, 46.79%) was the most used, followed by ultrasound\n(23.58%), magnetic resonance imaging (MRI, 22.83%), and biopsy\n(6.79%) (Figure 8B). Figure 8E shows that in the study of liver\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                1269.2,
+                1409.6,
+                2314.0,
+                2290.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_05/region_07_text.png",
+            "text": "cancer, including HCC, CT was the most used, followed by\nultrasound and MRI. In addition, CT was mainly used for the\nresearch of liver fibrosis, ultrasound was mainly used for the\nresearch of fatty liver disease, and biopsy was mainly used for\nliver fibrosis research (Figure 8E). The differential diagnosis of\nHCC, are the key points, followed by the diagnosis of liver\ncirrhosis, liver fibrosis and fatty liver disease, are key points\namong the specific diagnosis, classification, and treatment of liver\ndiseases. In terms of the prognosis of liver disease, the prognosis of\nHCC is a key focus, and the surgical methods for its treatment\nmainly include radiofrequency ablation and transarterial\nchemoembolization (Figure 8F). Three quarters of these papers\nwere about diagnosis, classification, segmentation, or prediction,\nwith relatively less attention to prognosis. Moreover, most liver\ncancer studies used CNNs, with a minority exclusively using more\ntraditional techniques like support vector machine and decision\ntrees (Figure 8D).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.41,
+            "box": [
+                178.9,
+                2373.7,
+                1599.1,
+                2410.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_05/region_08_text.png",
+            "text": "TABLE 2 Top 10 institutes with publications researching the use of artificial intelligence in liver cancer.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "table",
+            "score": 99.64,
+            "box": [
+                177.9,
+                2445.8,
+                2304.2,
+                3209.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_05/region_09_table.png"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 97.43,
+            "box": [
+                178.5,
+                3220.0,
+                770.6,
+                3252.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_05/region_10_text.png",
+            "text": "NP, number of publications; NC, number of citations.\n"
+        }
+    ]
+}

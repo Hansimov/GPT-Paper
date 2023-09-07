@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_10.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 5,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 92.51,
+            "box": [
+                383.0,
+                216.5,
+                1732.5,
+                281.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_10/region_1_title.png",
+            "text": "Associations between molecular alterations and HCC phenotype\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 92.74,
+            "box": [
+                385.7,
+                320.9,
+                2182.9,
+                1486.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_10/region_2_text.png",
+            "text": "CTNNB1 mutations define a specific cholestatic well-differentiated subtype of HCC.\nWe further searched for correlations between gene mutations/alterations and\npathological features. Interestingly, the major correlations were identified with CTNNB1\nexon 3 and TP53 mutations, which showed, as formerly reported, a significant tendency\ntowards mutual exclusivity (P<0.001) (Supplemental Table 3).[30] CTNNB1 mutated\ntumours represented 40% of the series and were more frequently large (Odds ratio (OR)\n2.14, P=0.002), well-differentiated (OR 2.46, P<0.001), with intact tumour capsule (OR\n2.54, P=0.02), areas of microtrabecular (OR 4.32, P<0.001) and pseudoglandular (OR\n3.27, P<0.001) histological patterns, tumour cholestasis (OR 6.53, P<0.001), and alack of\ninflammatory infiltrates (OR 3.41, P<0.001) (Table 2 and Figure 1A-C). There were no\nassociations of CTNNB1 mutations with the degree of intra-tumor “heterogeneity\n(median number of architectural patterns/cytological variants per tumor: CTNNB1\nmutated 4 vs CTNNB1 non mutated 4). As expected, elevated mRNA levels of Wnt/B-\ncatenin pathway targets and surrogate immunohistochemical markers of its activation\n(B-catenin nuclear staining and high GS expression) were also associated with CTNNB1\nmutations (P<0.001) (Supplemental Table 3 and Figure 1A, 1D,and 1E). Consistent with\nthe observed lack of inflammatory infiltrates in CTNNB1 mutated HCC, these tumours\nalso exhibited downregulation of the IL6/JAK/STAT pathway, with low IL6, CRP and\nSAA2 mRNA levels and low CRP immunohistochemical expression (P<0.001) (Figure 1A\net 1E). Lack of ARID1A immunohistochemical expression was also frequently observed\n(Figure 1A).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 94.59,
+            "box": [
+                385.8,
+                1528.3,
+                2174.1,
+                1976.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_10/region_3_text.png",
+            "text": "Gene expression experiments showed that CTNNB1 mutations were associated with the\nmaintenance of various markers of hepatocellular differentiation and function (APOB,\nCYP1A1, CYP1A2, CYP3A4, CYP2E1, CYP2C9, HNF1A, HNF4A), low AFP expression and low\ncell proliferation compared to non-mutated HCC (Figure 1E). Interestingly, a major\nderegulation in bile salts transporters expression (up-regulation of transporters\ninvolved in canalicular bile Salts efflux and down-regulation of those responsible for bile\nsalts efflux into blood,flow),was observed and may contribute to the cholestatic\nphenotype of these tumours (Figure 1E and 1F).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 97.86,
+            "box": [
+                385.0,
+                2070.1,
+                2174.2,
+                2901.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_10/region_4_text.png",
+            "text": "TP53 mutated HCC are poorly differentiated, highly proliferative and\nmacrotrabecular-massive. TP53 mutations, identified in 21% of the tumours, were\nassociated with poor differentiation (OR 6.41, P<0.001), macrovascular (OR 2.57,\nP=0.004) and microvascular (OR 2.03, P=0.02) invasion, areas of compact histological\npattern (OR 1.90, P=0.02), foci of sarcomatous changes (OR 2.67, P=0.01), pleomorphic\n(OR 3.33, P=0.02) and multinucleated (OR 2.27, P=0.01) cells, and lack of tumour\ncholestasis (OR 5.75, P<0.001) (Supplemental Table 3 and Figure 2A-C). No relationship\nbetween TP53 mutations and the degree of intra-tumor heterogeneity was observed\n(median number of architectural patterns/cytological variants per tumor: TP53 mutated\n4 vs TP53 non-mutated 4). Interestingly, TP53 mutated tumours exhibited PI3K/AKT\npathway activation, as assessed by an over-expression of phospho-S6 protein by tumour\ncells using immunohistochemistry (Supplemental Table 3 and Figure 2A). Gene\nexpression experiments showed an association of TP53 mutations with increased cell\nproliferation, epithelial-to-mesenchymal transition and angiogenesis activation (Figure\n2D).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 98.2,
+            "box": [
+                385.7,
+                2901.7,
+                2173.8,
+                3013.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_10/region_5_text.png",
+            "text": "A heat-map graphical representation of the main pathological and immunohistochemical\nfeatures linked to CTNNB1 mutated (tumour cholestasis, B-catenin nuclear staining and\n"
+        }
+    ]
+}

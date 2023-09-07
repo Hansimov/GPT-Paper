@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 10,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                189.2,
+                242.3,
+                1223.9,
+                697.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_06/region_01_text.png",
+            "text": "observed that hardly any study reported quantitative empirical\nuser evaluations as part of final method validation, and many of\nthe included articles limited analysis of transparency goals to\nqualitative analysis by presenting a limited number of illustrative\nexamples, e.g., pixel-attribution visualizations. While such analysis\nmay suggest fidelity of the transparency design to the cause of the\nprediction in those few select samples, its utility beyond is unclear.\nIn cases where no empirical user evaluation is conducted, neither\nduring conceptualization nor during development, claims around\nsystem transparency or human factors are at high risk of being\noptimistic and should be avoided.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.73,
+            "box": [
+                189.3,
+                752.5,
+                1034.6,
+                835.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_06/region_02_title.png",
+            "text": "Transparent machine learning systems for diverse\nstakeholders\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                188.6,
+                845.9,
+                1222.9,
+                1674.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_06/region_03_text.png",
+            "text": "The purpose of adding transparency to an ML model varies across\nend users and their context, which we covered in the target\ntheme. The current literature on transparent ML for medical image\nanalysis focuses heavily on care providers. In fact, all of the\nincluded articles that explicitly specify end users targeted\nclinicians, such as radiologists, pathologists, and physicians.\nHowever, clear opportunities for transparent ML systems exist\nfor other clinical stakeholders, such as other care team members\nincluding nurses or techs, healthcare administrators, insurance\nproviders, or patients. Designing transparent ML systems for these\nstakeholder groups will likely require different approaches, both\ntechnological as well in regards to human factors engineering,\nbecause these target users are likely to exhibit distinct needs,\nrequirements, prior knowledge, and expectations. In light of\nrecent articles that question the utility of transparency in high\nstakes clinical decision making tasks?°, driving transparent ML\ndevelopment using a “human factors first’ mindset while\nexpanding target user considerations to more diverse stakeholder\ngroups may increase the likelihood of transparent ML having an\nimpact on some aspects of the healthcare system.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.36,
+            "box": [
+                188.9,
+                1727.4,
+                1157.4,
+                1768.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_06/region_04_title.png",
+            "text": "Transparency for tasks with and without human baseline\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                188.4,
+                1777.5,
+                1222.7,
+                3064.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_06/region_05_text.png",
+            "text": "Clearly specifying and formulating the medical task that the ML\nsystem solves is fundamental to determine the assistance that it\ncan provide to clinical practice. Along with the disproportionate\nconsideration of clinicians as end users goes a disproportionate\nfocus on clinical tasks that are routinely performed in current\nclinical practice (n = 60/68) by those target users. One motivation\nfor investigating transparency in such tasks is the existence of\nclear and systematic clinical workflows and guidelines, e.g., the\nBreast Imaging Reporting and Data System (BI-RADS) system for\nmammography, the AO/OTA Tile grading of pelvic fractures, or\nother easily intelligible covariates associated with outcomes. The\navailability of such human-defined baselines that are already used\nfor clinical decision making provides immediate Level 2 evidence\nof transparency for ML systems attempting their replication. In\naddition, it facilitates data collection and annotation, because\nintermediate outputs that may be required to build such system\nare known a priori. Conversely, justifying specific attempts at\nachieving transparency is much more complicated for tasks that\ndo not readily have human-based baselines or clinical best\npractice guidelines. Some such tasks may already be performed in\nclinical practice, such as segmentation or super-resolution, the\ninterpretation of which may be ambiguous and result in high\nvariability among observers’. Other tasks may be beyond the\ncurrent human understanding of the underlying mechanisms that\nenable ML-based prediction, e.g., ethnicity prediction from chest\nX-ray”® or various tasks in digital pathology?**° In these scenarios,\nwhile it may be possible to derive some justification from the\nliterature, e.g., how target users generally approach tasks of the\nkind, achieving even Level 2 justification is difficult if not\nimpossible. Empirically validating the envisioned mechanisms for\ntransparency with respect to their ability to afford transparency\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                1297.3,
+                242.4,
+                2332.0,
+                323.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_06/region_06_text.png",
+            "text": "and achieve the human factors engineering goals is thus\nparamount when attempting to benefit such tasks.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 99.73,
+            "box": [
+                1297.0,
+                378.0,
+                2299.4,
+                461.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_06/region_07_title.png",
+            "text": "Successful examples of machine learning systems designed\nwith clinical end users\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1297.7,
+                470.9,
+                2333.2,
+                1840.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_06/region_08_text.png",
+            "text": "Early identification and direct communication with end users, as it\nis emphasized in the target and incorporation themes, allows ML\ndesigners to bridge the knowledge gap and design for users in\nhighly specialized contexts. By following human-centered design\nand HCI practices, previous works have illustrated ways to\nincorporate end users in the design process of ML systems for\nclinical applications. For instance, target users were consulted in\nthe design of an ML tool in an image retrieval system for medical\ndecision making'*, enabling the team to design a system that\npreserves human agency to guide the search process. Through an\niterative design process, functional prototypes of different\nrefinement techniques based on documented user needs were\nimplemented and further validated in a user study. To enable\nusers to explore and understand an Artificial Intelligence (Al)\nenabled analysis tool for Chest X-ray (CXR) images, a user-centered\niterative design assessed the utility of potential explanatory\ninformation in the Al system!'®. Users’ needs during their\nintroduction to an Al-based assistance system for digital\npathology were identified through open-ended interviews and a\nqualitative laboratory study?'. Iterative co-design processes were\nfollowed to identify clinicians’ perceptions of ML tools for real\nclinical workflows, e.g., antidepressant treatment decisions'® and\nphenotype diagnosis in the intensive care unit”. Determining the\nefficacy of envisioned ML systems or ML-enabled interaction\nparadigms in empirical user studies before committing resources\nto their fully-fledged implementation has become common\npractice in human-centered Al, e.g.,7'7234, with many studies\nconsidering tasks that are related to medical image analysis'>*>.\nIncreasing the acceptance of empirical formative user research as\nan integral component of human-centered ML design for\nhealthcare tasks, including medical image analysis, will be critical\nin ensuring that the assumptions on which human-centered\nsystems are built hold in the real world.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 99.73,
+            "box": [
+                1297.9,
+                1893.0,
+                2315.0,
+                1977.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_06/region_09_title.png",
+            "text": "Increasing demand for guidelines to build machine learning\nsystems\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1297.8,
+                1985.3,
+                2333.1,
+                3063.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_06/region_10_text.png",
+            "text": "Motivated by advances in Al technologies and the wide range of\napplications in which it can be used to assist humans, there are\nongoing efforts to guide the design and evaluation of Al-infused\nsystems that people can interact with (theme target). Generally\napplicable design guidelines were compiled and iteratively refined\nby HCI experts to design and evaluate human-Al interactions*°.\nAlthough these guidelines are relevant and suitable for a wide\nrange of common Al-enabled systems, more nuanced guidelines\nare desirable for domains where study participants cannot be\nrecruited nor interviewed in abundance. Similarly, previous\nattempts to guide the design of effective transparency mechan-\nisms acknowledge that real stakeholders involved should be\nconsidered and understood'”373”. Starting from the identification\nof diverse design goals according to users’ needs and their level of\nexpertise on Al technology, and a categorization of evaluation\nmeasures for Explainable Artificial Intelligence (XAI) systems*®,\naddressed the multidisciplinary efforts needed to build such\nsystems. A set of guidelines, summarized in a unified framework,\nsuggests iterative design and evaluation loops to account for both\nalgorithmic and human factors of XAI systems. However, similar to\nref. 3°, these guidelines are intended for generic applications, e.g.,\nloan and insurance rate prediction’? and personalized advertise-\nments“°, and do not consider additional challenges, barriers, and\nlimitations when developing algorithms for domains that exhibit\nusers with very specific needs and in highly specific contexts, such\nas healthcare. Other considerations to build interpretable Al\n"
+        }
+    ]
+}

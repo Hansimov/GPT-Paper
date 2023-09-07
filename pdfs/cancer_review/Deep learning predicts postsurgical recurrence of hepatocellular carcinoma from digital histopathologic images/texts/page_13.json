@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_13.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 4,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 95.4,
+            "box": [
+                650.4,
+                330.8,
+                870.8,
+                385.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_13/region_1_title.png",
+            "text": "References\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 62.28,
+            "box": [
+                650.4,
+                381.2,
+                2318.3,
+                2911.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_13/region_2_text.png",
+            "text": "1. Yang, J. D. et al. A global view of hepatocellular carcinoma: trends, risk, prevention and management. Nat. Rev. Gastroenterol.\nHepatol. 16, 589-604 (2019).\n\n2. Forner, A., Reig, M. & Bruix, J. Hepatocellular carcinoma. Lancet 391, 1301-1314 (2018).\n\n3. Brierley, J. et al. (eds) Liver in TNM Classification of Malignant Tumours 80-84 (Wiley, New York, 2017).\n\n4. Forner, A., Reig, M. E., de Lope, C. R. & Bruix, J. Current strategy for staging and treatment: the BCLC update and future prospects.\nSemin. Liver Dis. 30, 61-74 (2010).\n\n5. Villanueva, A. Hepatocellular carcinoma. N. Engl. J. Med. 380, 1450-1462 (2019).\n\n6. Ishizawa, T. et al. Neither multiple tumors nor portal hypertension are surgical contraindications for hepatocellular carcinoma.\nGastroenterology 134, 1908-1916 (2008).\n\n7. Hasegawa, K. et al. Comparison of resection and ablation for hepatocellular carcinoma: a cohort study based on a Japanese nation-\nwide survey. J. Hepatol. 58, 724-729 (2013).\n\n8. Roayaie, S. et al. A system of classifying microvascular invasion to predict outcome after resection in patients with hepatocellular\ncarcinoma. Gastroenterology 137, 850-855 (2009).\n\n9. Kamiyama, T. et al. Analysis of the risk factors for early death due to disease recurrence or progression within 1 year after hepa-\ntectomy in patients with hepatocellular carcinoma. World J. Surg. Oncol. 10, 107 (2012).\n\n10. Cucchetti, A. et al. Comparison of recurrence of hepatocellular carcinoma after resection in patients with cirrhosis to its occur-\nrence in a surveilled cirrhotic population. Ann. Surg. Oncol. 16, 413-422 (2009).\n\n11. Colecchia, A. et al. Prognostic factors for hepatocellular carcinoma recurrence. World J. Gastroenterol. 20, 5935-5950 (2014).\n\n12. Shim, J. H. et al. Prognostic nomograms for prediction of recurrence and survival after curative liver resection for hepatocellular\ncarcinoma. Ann. Surg. 261, 939-946 (2015).\n\n13. Rodriguez-Peralvarez, M. et al. A systematic review of microvascular invasion in hepatocellular carcinoma: diagnostic and prog-\nnostic variability. Ann. Surg. Oncol. 20, 325-339 (2013).\n\n14. Mobadersany, P. et al. Predicting cancer outcomes from histology and genomics using convolutional networks. Proc. Natl. Acad.\nSci. USA 115, E2970-E2979 (2018).\n\n15. Zhu, X., Yao, J. & Huang, J. Deep convolutional neural network for survival analysis with pathological images. In 2016 IEEE Interna-\ntional Conference on Bioinformatics and Biomedicine (BIBM) 544-547 (IEEE, 2016). doi: https://doi.org/10.1109/BIBM.2016.78225\n79.\n\n16. Kather, J. N. et al. Predicting survival from colorectal cancer histology slides using deep learning: a retrospective multicenter study.\nPLoS Med. 16, e1002730 (2019).\n\n17. Kim, D. W. et al. Deep learning-based survival prediction of oral cancer patients. Sci. Rep. 9, 6994 (2019).\n\n18. Wulczyn, E. et al. Deep learning-based survival prediction for multiple cancer types using histopathology images. PLoS ONE 15,\n0233678 (2020).\n\n19. Liao, H. et al. Classification and prognosis prediction from histopathological images of hepatocellular carcinoma by a fully auto-\nmated pipeline based on machine learning. Ann. Surg. Oncol. 27, 2359-2369 (2020).\n\n20. Skrede, O.-J. et al. Deep learning for prediction of colorectal cancer outcome: a discovery and validation study. Lancet 395, 350-360\n(2020).\n\n21. Saillard, C. et al. Predicting survival after hepatocellular carcinoma resection using deep-learning on histological slides. Hepatology\nhttps://doi.org/10.1002/hep.31207 (2020).\n\n22. Batts, K. P. & Ludwig, J. Chronic hepatitis. An update on terminology and reporting. Am. J. Surg. Pathol. 19, 1409-1417 (1995).\n\n23. Sandler, M., Howard, A., Zhu, M., Zhmoginov, A. & Chen, L.-C. MobileNetV2: inverted residuals and linear bottlenecks. In\n2018 IEEE Conference on Computer Vision and Pattern Recognition 4510-4520 (IEEE, 2018). doi: https://doi.org/10.1109/\nCVPR.2018.00474.\n\n24. Russakovsky, O. et al. ImageNet large scale visual recognition challenge. Int. J. Comput. Vis. 115, 211-252 (2015).\n\n25. Harrell, F E. Evaluating the yield of medical tests. JAMA 247, 2543 (1982).\n\n26. Uno, H., Cai, T., Pencina, M. J., D'Agostino, R. B. & Wei, L. J. On the C-statistics for evaluating overall adequacy of risk prediction\nprocedures with censored survival data. Stat. Med. 30, 1105-1117 (2011).\n\n27. Mormont, R., Geurts, P. & Maree, R. Comparison of deep transfer learning strategies for digital pathology. In 2018 IEEE/CVF Con-\nference on Computer Vision and Pattern Recognition Workshops (CVPRW) 2343-234309 (IEEE, 2018). doi: https://doi.org/10.1109/\nCVPRW.2018.00303.\n\n28. WHO. Classification of Tumours Editorial Board. Digestive System Tumours 635 (International Agency for Research on Cancer\nPress, IARC, Lyon, 2019).\n\n29. Cancer Genome Atlas Research Network. Comprehensive and integrative genomic characterization of hepatocellular carcinoma.\nCell 169(7), 1327-1341 (2017).\n\n30. Liu, J. et al. An integrated TCGA pan-cancer clinical data resource to drive high-quality survival outcome analytics. Cell 173,\n400-416.e11 (2018).\n\n31. Hudis, C. A. et al. Proposal for standardized definitions for efficacy end points in adjuvant breast cancer trials: the STEEP system.\nJ. Clin. Oncol. 25, 2127-2132 (2007).\n\n32. Vahadane, A. et al. Structure-preserving color normalization and sparse stain separation for histological images. IEEE Trans. Med.\nImaging 35, 1962-1971 (2016).\n\n33. Bilaloglu, S. et al. Efficient pan-cancer whole-slide image classification and outlier detection using convolutional neural networks.\nPreprint at https://www.biorxiv.org/content/10.1101/633123v1 (2019).\n\n34. Maas, A. L., Hannun A. Y. & Ng A. Y. Rectifier nonlinearities improve neural network acoustic models. In Proceedings of the 30th\nInternational Conference on Machine Learning (2013).\n\n35. Glorot, X. & Bengio, Y. Understanding the difficulty of training deep feedforward neural networks. Proc. Thirteen. Int. Conf. Artif.\nIntell. Stat. JMLR 9, 249-256 (2010).\n\n36. Kingma, D. P. & Ba, J. Adam: A Method for Stochastic Optimization. Preprint at https://arxiv.org/abs/1412.6980 (2014).\n\n37. Loshchilov, I. & Hutter, F. Decoupled Weight Decay Regularization. Preprint at https://arxiv.org/abs/1711.05101 (2017).\n\n38. Paszke, A., et al. PyTorch: an imperative style, high-performance deep learning library. Preprint at https://arxiv.org/abs/1912.01703\n(2019).\n\n39. Goode, A., Gilbert, B., Harkes, J., Jukic, D. & Satyanarayanan, M. OpenSlide: a vendor-neutral software foundation for digital\npathology. J. Pathol. Inform. 4, 27 (2013).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 98.47,
+            "box": [
+                650.3,
+                2929.8,
+                1046.5,
+                2982.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_13/region_3_title.png",
+            "text": "Acknowledgements\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.45,
+            "box": [
+                648.9,
+                2979.3,
+                2318.4,
+                3068.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_13/region_4_text.png",
+            "text": "This work was funded by the Stanford Departments of Pathology and Biomedical Data Science, through a\nStanford Clinical Data Science Fellowship to R.Y. Additional computational infrastructure was provided by the\n"
+        }
+    ]
+}

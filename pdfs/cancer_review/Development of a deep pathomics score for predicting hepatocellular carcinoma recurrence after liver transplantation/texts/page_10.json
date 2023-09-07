@@ -1,0 +1,89 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 6,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.86,
+            "box": [
+                211.5,
+                219.8,
+                2271.3,
+                2354.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_10/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                212.2,
+                2419.9,
+                1215.8,
+                2718.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_10/region_2_text.png",
+            "text": "Fig.5 The immune landscape in LT patients. a Image projection of\nmlIF-stained WSI, segmentation image for immune cells and H&E-\nstained WSI based on the same patient. b Representative seven-color\nmlF illustration of CD3 (cyan), CD8 (green), CD4 (orange), CD56\n(yellow), CD16 (white), FOXP3 (red), and DAPI (blue) staining.\nScale bar, 50 ym. ¢ Representative seven-color mIF illustration of\nCD20 (cyan), CD68 (green), CD11c (orange), CD45RO (yellow),\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.15,
+            "box": [
+                212.8,
+                2780.0,
+                450.4,
+                2843.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_10/region_3_title.png",
+            "text": "Discussion\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                212.2,
+                2893.1,
+                1215.0,
+                2998.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_10/region_4_text.png",
+            "text": "Different from hepatectomy, LT is a distinct and effec-\ntive therapeutic option for HCC. Nevertheless, the dismal\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1276.5,
+                2419.5,
+                2278.5,
+                2717.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_10/region_5_text.png",
+            "text": "MPO (white), CD11b (red), and DAPI (blue) staining. Scale bar,\n50 um. d Pie chart for composition of intratumoral immune cells. e\nThe heterogeneity of proportion of immune infiltration among six-\nteen patients. f Comparisons of the Treg cell, NKT cell, NK cell,\nCD4*T cell and B cell densities in tumor nest, invasive margin, and\nnormal liver tissue. Data are presented as the mean +SEM. *p<0.05;\n**p <0.01; ***p <0.001\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1276.1,
+                2782.3,
+                2280.6,
+                2993.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_10/region_6_text.png",
+            "text": "prognosis and lack of effective treatment after HCC recur-\nrence remain critical problems for post-LT recovery. Tradi-\ntional transplantation criteria, including the Milan criteria\nand UCSF criteria, fail to precisely predict patients at risk\n"
+        }
+    ]
+}

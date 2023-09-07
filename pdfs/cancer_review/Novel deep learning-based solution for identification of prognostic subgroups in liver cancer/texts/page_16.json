@@ -1,0 +1,50 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_16.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_16.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 3,
+        "page_idx": 16
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.81,
+            "box": [
+                489.9,
+                368.9,
+                1993.4,
+                1828.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_16/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                517.0,
+                1843.6,
+                1957.6,
+                2092.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_16/region_2_text.png",
+            "text": "Fig. 6 Visualisation of the methylation patterns of robust significant methylation features that were\nconsistently identified by Lycc. A visualisation of the methylation patterns of the 233 significant methylation\nfeatures consistently identified across all ten runs by Lgcc. Cluster labels were taken from the best run of Lege\nas determined by log-rank P-value. Methylation is shown as a z-score. Scale was limited to — 3+ 3 using vmin\nand vmax in the clustermap function in Seaborn to improve visualisation of differences between prognostic\nclusters. The distribution of HCC grades between clusters appears to be relatively even\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                490.2,
+                2239.5,
+                1991.5,
+                2998.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_16/region_3_text.png",
+            "text": "their strong predictive power for increased / reduced risks to HCC survival. By com-\nparison, only 11—21 significant bottleneck features could be identified by the baseline\nmodels following training. The Lesc latent space, when clustered, provided more insight-\nful patient groups than the baseline method [6]. Pipelines utilising survival informa-\ntion, either to filter bottleneck features after network training (BCE, MSE) or directly\nwithin the loss function (Lps, Lpysc) were able to separate patients in terms of survival\nmore significantly than the unsupervised Ly loss, as assessed using the log-rank test.\nAs expected, the clustering loss Lac produced quality clusters that had higher Silhouette\nscores (best = 0.92) than the other loss functions. This was likely due to the high weight\nof L; in the loss, meaning that the latent spaces produced were more complementary\nto clustering. It was interesting to note that applying Lp, led to very distinct clusters in\nterms of survival but it also gave good quality clusters in terms of the Silhouette score\n(best = 0.77). However, the structure of the clusters obtained by Lyc and Lpg differed.\n"
+        }
+    ]
+}

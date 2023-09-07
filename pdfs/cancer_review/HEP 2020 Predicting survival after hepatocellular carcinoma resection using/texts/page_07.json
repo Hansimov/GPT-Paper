@@ -1,0 +1,116 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_07.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 8,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 87.77,
+            "box": [
+                251.3,
+                262.9,
+                2246.8,
+                801.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_07/region_1_text.png",
+            "text": "CHOWDER is an interpretable-by-design model, and this particular feature makes pathological\nassessments of the image tiles most significantly associated with patient outcome possible. This\napproach can thus provide insights into the features associated with tumor aggressiveness. Tiles\nwith high and low risk scores were thus extracted and further analyzed by a pathologist expert in\nliver disease (J.C). He was blinded to the risk scores associated with each tile. In total, 27\nhistological features of tumoral and non-tumoral liver tissues were systematically recorded\n(Supplemental Figure 1).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 83.93,
+            "box": [
+                248.0,
+                838.9,
+                2246.3,
+                1220.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_07/region_2_text.png",
+            "text": "To obtain a deeper understanding of morphological similarities of tiles reviewed, we then applied\nUMAP algorithm on these tiles. For both discovery and validations series, the set of low-risk and\nhigh-risk tiles reviewed was augmented with a random selection of 500 tiles that cover the whole\ndistribution of predicted risks. UMAP was fitted on the tile features of the discovery set and then\nused to embed tiles of the discovery and validation sets.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 82.44,
+            "box": [
+                250.6,
+                1259.3,
+                2245.3,
+                1407.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_07/region_3_text.png",
+            "text": "K-Means clustering with 8 clusters was further fitted on the reduced data of the discovery set and\napplied on the validation set.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 82.19,
+            "box": [
+                255.0,
+                1548.8,
+                671.4,
+                1618.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_07/region_4_title.png",
+            "text": "Statistical analysis\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 86.76,
+            "box": [
+                252.3,
+                1660.8,
+                2245.5,
+                2043.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_07/region_5_text.png",
+            "text": "Survival analyses were performed with univariate and multivariate Cox proportional hazards\nmodels implemented in the lifelines package of Python.(13) Log-rank tests were used to compare\nsurvival distributions between stratification subgroups. We used Harrel’s concordance index (c-\nindex) as a metric for assessing the predictive performance of our model, and to compare the\npredictive performances of this model and baseline clinical, biological and pathological features.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 83.55,
+            "box": [
+                251.8,
+                2076.2,
+                2247.4,
+                2384.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_07/region_6_text.png",
+            "text": "The results were first validated on the discovery dataset with the following cross-validation\nstrategy: 5 stratified folds, with 10 repeats. Folds were stratified based on censoring. The dataset\nfrom the TCGA database was kept entirely separate from the discovery series, and was used\nonly for external validation by the same cross-validation strategy.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 82.89,
+            "box": [
+                250.5,
+                2419.6,
+                2246.5,
+                2724.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_07/region_7_text.png",
+            "text": "Model performances were compared in Student’s t-tests. The qualitative variables included in the\nhistological analysis of tiles of high predictive value were compared in Z-tests of proportions. The\nHolm-Sidak procedure was used to correct for multiple testing. All tests were two-tailed, and p-\nvalues < 0.05 were considered statistically significant.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 33.99,
+            "box": [
+                248.3,
+                3295.8,
+                1397.7,
+                3363.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_07/region_8_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

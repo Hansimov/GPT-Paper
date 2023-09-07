@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages_ordered/page_09.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 5,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.89,
+            "box": [
+                187.1,
+                198.3,
+                2291.3,
+                2328.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_09/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                174.5,
+                2358.5,
+                2301.6,
+                2724.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_09/region_2_text.png",
+            "text": "Figure 6 Visualisation and clustering of the risk heatmaps. (A) Visualisation of the heatmaps of high-risk (sinusoidal capillarisation, high N/C ratio\nand prominent nucleoli and karyotheca) and low-risk features (inflammatory cells) related to TRS at the 40xscale. Pathologists reviewed and defined\neach feature. On the left of each panel is the original tile of WSls; on the right is the heatmap. The red area indicates potentially increased risk, and\nthe blue area indicates reduced risk. Red curve circled indicates sinusoidal capillarisation and blue arrows indicate inflammatory cells. (B) The four\npotential features extracted from heatmaps at the 40xscale were separated by the t-SNE algorithm. (C) Immunostaining revealed that the sinusoids\nin the tumour were outlined by CD34+ cells, suggesting sinusoidal capillarisation in these areas. (D) The distribution of each potential feature was\nquantified using a stacked histogram in patients grouped by TRS. The data were compared using multivariate analysis of variance. (E) C-index for each\npotential feature and the combination of these features. ***, p < 0.001. N/C,nucleus/cytoplasm; TRS, tumour risk score; WSls, whole-slide images.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                175.6,
+                2808.8,
+                1203.8,
+                3128.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_09/region_3_text.png",
+            "text": "power in HCC (C-index, 0.731) with an extended range of\nsignificant cut-offs (10%~90%) and independently correlated\nwith patient outcome. Clinically, our prognostic risk network\ncould be used to automatically detect HCC tumour regions\nand calculate TRS for each patient. Notably, TRS predicted the\nsurvival of HCC patients stratified for all the conventional clin-\nicopathological characteristics, indicating its value in identifying\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.65,
+            "box": [
+                1278.3,
+                2808.5,
+                2305.5,
+                2899.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_09/region_4_text.png",
+            "text": "HCC patients at higher risk of rapid progression, even in an\nearly-stage subpopulation.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1278.5,
+                2899.8,
+                2305.8,
+                3129.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_09/region_5_text.png",
+            "text": "Using TCGA HCC data, we validated our prognostic risk\nmodel and further revealed the relevance of TRS to gene muta-\ntions. In particular, TRS was correlated with mutations of FAT3\nand RYR2, which are associated with tumour progression.*! *”\nNevertheless, the findings need to be prospectively verified in a\n"
+        }
+    ]
+}

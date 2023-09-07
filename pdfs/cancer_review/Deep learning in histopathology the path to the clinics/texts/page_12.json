@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_12.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_12.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 5,
+        "page_idx": 12
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 77.01,
+            "box": [
+                307.4,
+                295.5,
+                2190.8,
+                440.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_12/region_1_text.png",
+            "text": "understand the added value of CPATH deep learning algorithms and pave the way for clinical\nimplementation [121] [120].\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 84.54,
+            "box": [
+                300.7,
+                542.7,
+                2194.0,
+                1028.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_12/region_2_text.png",
+            "text": "With the increasing autonomy of CPATH solutions, more rigorous clinical validation and regulatory\napproval [132] will also be required. Techniques that potentially influence diagnostic decision making\n(rather than aiming to only increase efficiency) may need to be investigated in randomized clinical\ntrials, which are currently still very rare for Al applications [149]. Ideally, such trials would use clinical\noutcomes as end points to demonstrate long-term effects [120] and apply standardized reporting\nmethods such as TRIPOD-AI [150], which is currently under development.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 87.07,
+            "box": [
+                300.7,
+                1125.8,
+                2198.7,
+                2372.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_12/region_3_text.png",
+            "text": "Another important issue to consider is the quality measure that is applied when evaluating a CPATH\nalgorithm — in other words, when is an algorithm good enough? Typically, studies in which CPATH\nalgorithms aim to produce a diagnosis comparable to those used by a pathologist will compare the\nCPATH algorithm with scores from a panel of pathologists, often concluding that the algorithm may\nbe applied in clinical practice if the performance is close to the average of the pathologists. However,\nas argued by Campanella and colleagues [72], a clinically useful decision support system should ideally\ntake into account the fact that, in a real-world setting, pathologists do not evaluate images as an\nisolated task but rather can opt to use IHC and consultation with colleagues as part of their diagnostic\nworkup, if deemed necessary. Campanella and colleagues conclude that “achieving 100% sensitivity\nwith an acceptable false positive rate” should be the aim to achieve “clinical grade” CPATH algorithms.\nRather than defining a threshold for clinical usefulness, conclusions about the true clinical value of\nCPATH can only be drawn from prospective trials, which incorporate the entire diagnostic process,\nincluding the use of existing reporting standards [121] [120]. Before such usefulness can be\ndemonstrated, far-ranging conclusions about the impact of CPATH on diagnostics should be avoided,\nas they may lead to an overly optimistic view.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 92.42,
+            "box": [
+                302.0,
+                2476.1,
+                730.3,
+                2537.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_12/region_4_title.png",
+            "text": "[H1] Future directions\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 85.04,
+            "box": [
+                300.3,
+                2559.2,
+                2193.9,
+                3127.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_12/region_5_text.png",
+            "text": "Even though promising results for deep learning CPATH algorithms have been shown in many studies,\nit is still too early to distinguish the hope from the hype. Although the hope is motivated by the\ndevelopment of CPATH algorithms of increasing accuracy across many fields in pathology that have\nthe potential to help pathologists in their clinical practice, the hype often leads to the question of\nwhether Al will replace pathologists? Given this question, it is important to realize the breadth of tasks\nthat a pathologist performs; pathologists do not simply analyze a piece of tissue under a microscope,\nthey also integrate information from different sources of clinical data, their own understanding of the\n"
+        }
+    ]
+}

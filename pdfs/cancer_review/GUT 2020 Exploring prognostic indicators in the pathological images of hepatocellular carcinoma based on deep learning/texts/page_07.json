@@ -1,0 +1,115 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 8,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.69,
+            "box": [
+                417.4,
+                205.0,
+                2064.6,
+                1866.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.59,
+            "box": [
+                175.8,
+                1895.4,
+                1540.4,
+                1939.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_2_text.png",
+            "text": "Figure 4 Forest plot of tumour risk score for the Zhongshan cohort in overall survival analysis.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                176.2,
+                2029.5,
+                1205.1,
+                3127.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_3_text.png",
+            "text": "By visualising and clustering the featured regions in heat-\nmaps, we detected four separated features at the 40 Xscale\n(figure 6A,B), and two features at the 10xscale and 4xscale\n(online supplementary figure S8A-C). Next, our pathologists\nreviewed and proposed the possible annotations on the featured\nregions. In the heatmaps at the 40 xscale, some sinusoidal areas\nwere labelled in red, and immunostaining revealed that these\nsinusoids were outlined by CD34+ cells (figure 6C), suggesting\nsinusoidal capillarisation in these areas. Likewise, prominent\nnucleoli and karyotheca cells and a high nucleus/cytoplasm\n(N/C) ratio were also displayed in red. Thus, the above three\nfeatures were probably associated with the increased risks of\nrecurrence and death. By contrast, the heatmaps specifically\nhighlighted the regions of inflammatory cells in blue, indicating a\nlow risk of recurrence and death. These inflammatory cells tend\nto be smaller and rounder with dark and homogeneous staining\ncompared with tumour cells. Additionally, sinusoidal capillari-\nsation and inflammatory cells were identified at the 10xscale\nand 4xscale. Importantly, most (>60%) sinusoidal capillarisa-\ntion, prominent nucleoli and karyotheca cells and high N/C ratio\ncells appeared in patients with high TRS, while most (>60%)\ninfiltrated inflammatory cells occurred in patients with low TRS\n(p<0.001) (figure 6D and online supplemental figure 8D). The\nC-index for the combination of the four features reached 0.724\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.56,
+            "box": [
+                1277.8,
+                2029.0,
+                2306.3,
+                2120.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_4_text.png",
+            "text": "(figure 6E), indicating the deconstruction of the TRS predicted\nby our model.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1278.1,
+                2121.5,
+                2306.6,
+                2306.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_5_text.png",
+            "text": "Together, the heatmaps implied that the histological features\nof tumour angiogenesis, cell morphology and inflammatory\nmicroenvironment might correlate with patient outcome, which\ncould be captured by our prognostic network.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.41,
+            "box": [
+                1278.4,
+                2386.3,
+                1490.1,
+                2433.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_6_title.png",
+            "text": "DISCUSSION\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1278.3,
+                2435.0,
+                2307.1,
+                2897.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_7_text.png",
+            "text": "Although genetic, transcriptomic and proteomic profiles are\nincreasingly attempted to predict tumour aggressiveness,\ntumour histology remains essential in prognostic stratification.\nSeveral recent studies have preliminarily demonstrated that\ndeep learning-based architecture could contribute to predicting\npatient prognosis from digital pathological images.***° Herein,\nwe developed an interpretable prognosis network based on\nweakly supervised learning incorporating prior knowledge. It\ncan visualise the prognostic-related features at a fine-grained\nlevel and has surprising accuracy in prognostic prediction.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1278.1,
+                2898.6,
+                2307.3,
+                3126.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_8_text.png",
+            "text": "Some authors’ *» have reported the method of only using clin-\nical diagnostic records as labels for training neural networks to\navoid expensive and time-consuming pixel-wise manual annota-\ntions. However, they need at least 10 000 cases to obtain good\nperformance, a requirement that is time-consuming and costly.\n"
+        }
+    ]
+}

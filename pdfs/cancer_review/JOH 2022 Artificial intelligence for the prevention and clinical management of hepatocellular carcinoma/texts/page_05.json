@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 10,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 29.63,
+            "box": [
+                201.1,
+                872.6,
+                360.0,
+                911.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_05/region_01_text.png",
+            "text": "Key point\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 95.92,
+            "box": [
+                202.2,
+                937.0,
+                556.9,
+                1271.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_05/region_02_text.png",
+            "text": "Al reflects a broad and\nrapidly evolving field that\nincludes ML and DL\ncomputational algorithms,\nwhich are iteratively\nrepeated, in order to pro-\ngressively improve model\nperformance and classifi-\ncation over time.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                626.4,
+                250.5,
+                1455.0,
+                888.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_05/region_03_text.png",
+            "text": "study combined clinical data with MRI-based\nclassifiers to distinguish HCC from metastases and\nfrom liver adenomas, cysts or haemangiomas, and\ndemonstrated a sensitivity of 0.73 for identifying\nHCC, albeit with a specificity of just 0.56.27 Addi-\ntionally, Hamm et al. developed a NN algorithm\nthat successfully classified MRI liver lesions with a\nsensitivity of 92%, a specificity of 98%, and an\noverall accuracy of 92%.?? Zhang and colleagues\ntested an automated approach to segmentation of\nmulti-parameter MR images in 20 patients with\nHCC, and demonstrated the feasibility of bypassing\nthe time-consuming process of manually designing\nMRI-based features.”*\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                626.6,
+                892.5,
+                1453.9,
+                1983.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_05/region_04_text.png",
+            "text": "More recently, Zhen et al. used CNNs to develop a\nnovel DL system that incorporated enhanced MR\nimages, unenhanced MR images and both struc-\ntured and unstructured clinical data, from 1,210\npatients with liver tumours, and an external vali-\ndation set (n = 201).”° This DL system demonstrated\nexcellent performance for classifying liver tumours\n— including HCC - with sensitivity and specificity on\na par with that observed for experienced radiolo-\ngists. Importantly, this DL model also showed\nexcellent performance when combining unen-\nhanced MR imaging with clinical data, suggesting\nthat, with further validation, these models may\npermit patients to avoid contrast-related complica-\ntions of MRI. Finally, Wang and colleagues recently\ndescribed a DL model designed to address the\nlimited interpretability of Al-based radiomics as-\nsessments of HCC.”° This innovative model provides\nfeedback on the relative importance of various\nradiological input features, and thereby serves as an\nimportant proof of concept, demonstrating that\n“interpretable” DL models could one day be used to\nimprove standardised HCC reporting systems and\nthereby clinical outcomes.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                626.5,
+                1987.0,
+                1454.4,
+                2394.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_05/region_05_text.png",
+            "text": "To date, published AI algorithms for radiomics\nassessments of HCC share important limitations,\nincluding relatively small input datasets, lack of\nsufficiently large or diverse cohorts for robust\nexternal validation and lack of standardisation of\nmethods or analytical tools. It will be important to\ndefine the utility of Al-based prediction tools in\nprospective cohorts, and in pooled, large-scale and\ndiverse populations.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 89.9,
+            "box": [
+                627.7,
+                2443.7,
+                891.2,
+                2484.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_05/region_06_title.png",
+            "text": "Histopathology\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                626.9,
+                2489.2,
+                1454.0,
+                3034.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_05/region_07_text.png",
+            "text": "Histopathology is a cornerstone in the manage-\nment of many liver diseases, including autoim-\nmune hepatitis and non-alcoholic steatohepatitis\n(for grading and staging). Although non-invasive\ncriteria allow for the diagnosis of HCC in partic-\nular clinical settings, the histological examination\nof tumour samples is often required for masses\nwith atypical features on imaging or to rule out a\ndiagnosis of benign primary liver tumour, chol-\nangiocarcinoma or even metastasis. However, pre-\ncise histopathological characterisation of liver\ntumours can often prove challenging for\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1482.6,
+                250.5,
+                2313.1,
+                1161.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_05/region_08_text.png",
+            "text": "hepatopathologists, and significant inter-observer\ndisagreement may be observed. To address this,\nseveral recent studies have applied Al to assist with\nthe diagnosis of liver tumours. Using 2 large data\nsets of H&E-stained digital slides, Liao et al. used a\nCNN to distinguish HCC from adjacent normal tis-\nsues, with AUCs above 0.90.7” Kiana et al. devel-\noped a tool able to classify image patches as HCC or\ncholangiocarcinoma. The model reached an accu-\nracy of 0.88 on the validation set and, interestingly,\nthe authors observed that the combination of the\nmodel and the pathologist outperformed both the\nmodel alone and the pathologist alone, suggesting\nthat AI tools should be used to augment, rather\nthan replace, the conventional histological diag-\nnosis. They also showed how an incorrect predic-\ntion may negatively impact the final diagnosis\nmade by pathologists, underscoring the need to be\ncautious with AI models aimed at auto-\nmating diagnosis.”°\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1482.3,
+                1164.5,
+                2313.6,
+                1938.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_05/region_09_text.png",
+            "text": "It has been widely demonstrated that the histo-\nlogical appearance of human cancers, including\nHCC, contain a massive amount of information\nrelated to their underlying molecular alterations\nand/or to patient prognosis.°~*! In this line, Wang\net al. trained a multitask DL NN for automated\nsingle-cell segmentation and classification on digital\nslides. This approach allowed the authors to extract\nquantitative image features related to individual\ncells as well as spatial relationships between\nneoplastic cells and infiltrating lymphocytes. Unsu-\npervised consensus clustering of these features led\nto the identification of 3 subtypes associated with\nparticular somatic genomic alterations and molec-\nular pathways.** Another study showed that DL\ncould predict a subset of recurrent HCC genetic de-\nfects with AUCs ranging from 0.71 to 0.89.°?\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1483.0,
+                1941.2,
+                2313.8,
+                3034.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_05/region_10_text.png",
+            "text": "Recent pioneering studies have thus aimed to\npredict molecular signatures/alterations predictive\nof response to systemic therapies, by processing\ndigital slides through NNs. In gastrointestinal can-\ncers, for example, high performance is achieved for\nthe prediction of microsatellite instability, a feature\nstrongly associated with sensitivity to immuno-\nmodulating therapies.** Two other pan-cancer\nstudies also demonstrated that NN models were\nable to predict a wide range of molecular alter-\nations or signatures, some of which are related to\nresponse to particular systemic therapies.***° For\nHCC, no molecular feature is currently used to\npredict response to the systemic therapies avail-\nable for patients with advanced disease. However,\nSangro et al. recently reported that responses to the\nanti-programmed death 1 receptor (PD1) antibody\nnivolumab were more frequently observed in pa-\ntients with tumours showing overexpression of\nparticular immune gene signatures.*’ This was\nfurther confirmed by Haber et al. who also\nobserved increased sensitivity to immunotherapy\nin HCCs in which interferon gamma and gene sets\nassociated with antigen presentation were\n"
+        }
+    ]
+}

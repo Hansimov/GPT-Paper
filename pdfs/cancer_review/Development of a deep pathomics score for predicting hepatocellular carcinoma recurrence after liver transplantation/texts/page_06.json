@@ -1,0 +1,89 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 6,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.89,
+            "box": [
+                214.2,
+                230.6,
+                2268.0,
+                2101.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_06/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                212.4,
+                2170.4,
+                1215.1,
+                2512.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_06/region_2_text.png",
+            "text": "Fig.2 Visualization of classification and prognostic network. a Six\nclassic categories of HCC tissue, including normal liver tissue, por-\ntal area, fibrous tissue, immune cells, tumor region and hemorrhage/\nnecrotic tissue were labeled in both H&E staining slides (left) and\nsegmentation images (right). b t-SNE analysis for visualization of\nsix tissue categories. c The ROC curves of identification precision of\neach category in the testing dataset. d Normalized confusion matrix\nfor the classification network. e C-indices of the optimal models in\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                212.6,
+                2571.5,
+                1216.5,
+                2943.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_06/region_3_text.png",
+            "text": "5-year RFS (Fig. 3d, g, SIE, F). Specifically, the AUC val-\nues of 5-year RFS were 0.781 and 0.814 in the training and\nvalidation cohorts, respectively. Patients with lower DPS\nhad longer RFS and a lower recurrence risk in both cohorts\n(Fig. 3e, f, h, 1). Furthermore, the combination of DPS with\nthe Milan criteria and UCSF criteria enabled a better sur-\nvival discrimination for LT patients (Fig. S3).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1275.7,
+                2170.0,
+                2277.0,
+                2470.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_06/region_4_text.png",
+            "text": "each tissue category. f Cox regression analysis for risk scores of six\ntissue categories. g Attention heatmaps for visualization of HCC tis-\nsues. HCC hepatocellular carcinoma, t-SNE t-distributed stochastic\nneighbor embedding, AUC area under curve, ROC receiver operating\ncharacteristic, C7 confidential interval, NLT normal liver tissue, PA\nportal area, /C immune cells, H&NT hemorrhagic/necrotic tissue, TR\ntumor region, FT fibrous tissue\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.48,
+            "box": [
+                1275.5,
+                2573.5,
+                2078.6,
+                2631.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_06/region_5_title.png",
+            "text": "Prognostic predictors of RFS in LT datasets\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1275.8,
+                2679.7,
+                2279.2,
+                3000.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_06/region_6_text.png",
+            "text": "Cox proportional hazards regression analysis was performed\nto explore the independent predictors for RFS in the LT\ncohort (Table $3). Fourteen candidates were proven to be\nsignificant in the univariate analysis and were then evaluated\nwith multivariate Cox regression. The multivariable analysis\nrevealed that the RETREAT score [13] (HR 1.353, 95% CI\n"
+        }
+    ]
+}

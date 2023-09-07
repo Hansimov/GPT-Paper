@@ -1,0 +1,168 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 12,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                213.2,
+                230.1,
+                1216.3,
+                912.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_01_text.png",
+            "text": "Next, we evaluated the optimate sample counts for the\ninput patches and select the sample count with the best train-\ning efficacy under each magnification scales. We chose 8\npatches for the 5 x, 32 patches for the 10 x and 64 patches\nfor the 20 x magnification scales to achieve the best training\nefficacy and sufficient sampling numbers to represent the\nfeatures of the tumor area (Fig. 2c). The ensemble model\nintegrating different magnification scales reached an AUC\nof 0.831 for tumor area and was significantly higher than\nthose under a single magnification scale (p =0.004, Fig. 2d).\nTherefore, we took the ensemble model for the tumor area as\nthe backbone model for the following training and validation\nof the MVI-DL model (Fig. 2a).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.52,
+            "box": [
+                212.9,
+                956.3,
+                810.8,
+                1012.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_02_title.png",
+            "text": "Validation of the MVI-DL model\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                212.2,
+                1063.5,
+                1216.6,
+                1484.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_03_text.png",
+            "text": "We validated the performances of the MVI-DL model on\nthe FAHSYSU and DG-SD test set (Fig. 3a, b). On the\nFAHSYSU test set, the AUC of the MVI-DL model was\n0.904 (95% CI 0.888-0.920), and the accuracy, sensitivity\nand specificity were 83.3%, 92.6% and 71.0%, respectively.\nFor the DG-SD cohort, the AUC reached 0.871 (95% CI\n0.837—-0.905), and its accuracy, sensitivity and specificity\nwere 79.1%, 90.0% and 69.8%, respectively (Table S4).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                212.5,
+                1480.0,
+                1217.3,
+                1955.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_04_text.png",
+            "text": "Furthermore, we also compared the RFS and OS between\npatients predicted with different MVI status, and the results\nshowed that patients who were predicted to be MVI (+)\nhad significantly worse survival outcomes than patients with\nMVI (—) (median RFS: 9.39 vs. 66.15 months, p< 0.001;\n13.09 vs. 40.20 months, p< 0.001; 7.23 vs. 36.70 months,\np <0.001 in the FAHSYSU test set, DG-SD cohort and\nTCGA cohort, respectively) (Fig. 3c). The OS analysis also\nindicated the similar results (Fig. S4).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                213.2,
+                1948.8,
+                1216.5,
+                2579.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_05_text.png",
+            "text": "To compare the predictive performance of the MVI-\nDL model to the clinical characteristics and the combined\nclinical-MVI-DL model, we performed a univariable and\nmultivariable logistic regression analysis of factors associ-\nated with MVI in the training set (Table S5). Multivariable\nanalysis revealed that the MVI-DL prediction score (OR\n1.07, 95% CI 1.05-1.09, p <0.0001) was an independent\npredictive factor of MVI and was higher than the combined\nclinical score (p <0.001, Fig. S5). The combination of the\nclinical score with the MVI-DL model did not improve the\npredictive performance of the MVI-DL model (p =0.304 and\n0.289 for the FAHSYSU and DG-SD test set, respectively).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.53,
+            "box": [
+                210.9,
+                2622.2,
+                1123.9,
+                2731.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_06_title.png",
+            "text": "Visualization and interpretability of the MVI-DL\nmodel\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                212.2,
+                2781.4,
+                1217.0,
+                2995.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_07_text.png",
+            "text": "Figure 4a shows two WSIs predicted with MVI (+) and MVI\n(—) by the model and the corresponding heatmaps as exam-\nples. The unsupervised classification classified the patches\ninto 8 clusters (Fig. 4b). Clusters with over 60% patches\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1275.6,
+                228.9,
+                2280.6,
+                807.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_08_text.png",
+            "text": "from MVI (+) patients were defined as MVI (+)-related\nclusters, while those with over 60% patches from MVI (—)\nwere defined as MVI (—)-related clusters (Fig. 4c). We found\nthat high intratumor heterogeneity (Cluster 2), rich tumor\nstroma (Cluster 7), and macrotrabecular architecture with a\nrich blood sinus (Cluster 8) were associated with MVI (+).\nIn contrary, severe immune infiltration (Cluster 4) and highly\ndifferentiated tumor cells (Cluster 5) were associated with\nMVI (—) (Fig. $6). Grad-CAMs also showed that regions\noccupied by these features received higher or lower weights\n(Fig. 4d).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 99.48,
+            "box": [
+                1275.0,
+                879.1,
+                2134.1,
+                935.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_09_title.png",
+            "text": "Clinical implementation of the MVI-DL model\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1275.8,
+                985.5,
+                2281.1,
+                2293.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_10_text.png",
+            "text": "Clinically, patients with limited surgical margins or patients\nwho underwent ablation therapy could hardly acquire suf-\nficient histological sections to evaluate MVI. Therefore, we\nnext simulated the implementation of the MVI-DL model\nin these two clinical scenarios (Fig. 5a). First, we validated\nthe performance of the MVI-DL model using only one WSI\nfrom each patient in the FAHSYSU and DG-SD test set to\nsimulate patients with limited surgical margins. The results\nshowed that the AUC was 0.875 (95% CI 0.855—0.895) and\n0.837 (95% CI 0.800—0.874), respectively (Fig. 5b). The\ndetailed evaluation metrics are shown in Table S6. Addi-\ntionally, we also performed a sensitivity analysis to explore\nthe impact of the number of the WSIs per patient fed to the\nmodel on the performance of the MVI-DL model, and the\nresults showed that the predictive accuracy of the model did\nnot increase significantly as the number of the input WSIs\nincreased (the AUCs range from 0.849 to 0.878, Fig. S7).\nThen, we validated the performance of MVI-DL model in\nsimulated biopsy specimens to evaluate the performance of\nthe MVI-DL model in patients with only biopsy tissues. The\nresults showed that the predictive performance positively\ncorrelated with the number and length of simulated biopsy\ntissues (Fig. 5c, Table S6 and Fig. S8), and the AUC reached\n0.879 (95% CI 0.853—0.906) by three biopsies and similar\ntrends were shown in the external test set.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 99.44,
+            "box": [
+                1274.8,
+                2411.0,
+                1513.1,
+                2472.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_11_title.png",
+            "text": "Discussion\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1276.1,
+                2522.4,
+                2279.9,
+                2997.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_07/region_12_text.png",
+            "text": "In this study, we constructed MVI-DL model for MVI evalu-\nation in HCC patients. The MVI-DL model was well-vali-\ndated in the independent external cohort. We found that the\ntumor areas contributed the most to the MVI-DL model,\nindicating that some imaging features of the tumor area\nwere strongly associated with the existence of peri-tumoral\nMVI. We then identified these histological features by clus-\ntering and visualization. We further simulated the clinical\nscenarios where tissue samples were insufficient for MVI\n"
+        }
+    ]
+}

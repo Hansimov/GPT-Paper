@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_20.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_20.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 20
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 97.05,
+            "box": [
+                300.5,
+                291.4,
+                2198.7,
+                3045.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_20/region_1_list.png",
+            "text": "[45] Bueno, G. , Fernandez-Carrobles, M. M. , Gonzalez-Lopez, L. & Deniz, O. Glomerulosclerosis\nidentification in whole slide images using semantic segmentation. Computer methods and programs\nin biomedicine 184, 105273 (2020).\n\n[46] Chen, H. et al. DCAN: Deep contour-aware networks for object instance segmentation from\nhistology images. Medical image analysis 36, 135-146 (2017).\n\n[47] de Bel, T et al. Automatic segmentation of histopathological slides of renal tissue using deep\nlearning. SPIE Medical Imaging (2018).\n\n[48] Xu, G. et al. CAMEL: A Weakly Supervised Learning Framework for Histopathology Image\nSegmentation. Proceedings of International Conference on Computer Vision, 10681-10690 (2019)\n\n[49] Sirinukunwattana, K. et al. Locality Sensitive Deep Learning for Detection and Classification of\nNuclei in Routine Colon Cancer Histology Images. /EEE transactions on medical imaging 35, 1196-1206\n(2016).\n\n[50] Swiderska-Chadaj, Z. et al. Learning to detect lymphocytes in immunohistochemistry with\ndeep learning. Medical image analysis 58, 101547 (2019).\n\n[51] Le, H. et al. Utilizing Automated Breast Cancer Detection to Identify Spatial Distributions of\nTumor-Infiltrating Lymphocytes in Invasive Breast Cancer. The American journal of pathology 190,\n1491-1504 (2020).\n\n[52] Akbar, S. et al. Automated and Manual Quantification of Tumour Cellularity in Digital Slides\nfor Tumour Burden Assessment. Scientific reports 9, 14099 (2019).\n\n[53] Hou, L. et al. Sparse Autoencoder for Unsupervised Nucleus Detection and Representation in\nHistopathology Images. Pattern recognition 86, 188-200 (2019).\n\n[54] Veta, M. et al. Predicting breast tumor proliferation from whole-slide images: The TUPAC16\nchallenge. Medical image analysis 54, 111-121 (2019).\n\n[55] Tellez, D. et al. Whole-Slide Mitosis Detection in H&E Breast Histology Using PHH3 as a\nReference to Train Distilled Stain-Invariant Convolutional Networks. /EEE transactions on medical\nimaging 37, 2126 - 2136 (2018).\n\n[56] Mahmood, T., Arsalan, M., Owais, M., Lee, M. B. & Park, K. R. Artificial Intelligence-Based\nMitosis Detection in Breast Cancer Histopathology Images Using Faster R-CNN and Deep CNNs. Journal\nof clinical medicine 9, 3 (2020).\n\n[57] Chen, H., Wang, X. & Heng, P. A. Automated mitosis detection with deep regression networks.\nProceedings of IEEE International Symposium on Biomedical Imaging, 1204-1207 (2016).\n\n[58] Li, C. et al. Weakly supervised mitosis detection in breast histopathology images using\nconcentric loss. Medical Image Analysis 53, 165-178 (2019).\n"
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_18.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_18.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 6,
+        "page_idx": 18
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 49.66,
+            "box": [
+                238.8,
+                266.6,
+                2250.6,
+                407.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_18/region_1_text.png",
+            "text": "nonalcoholic steatohepatitis, BCLB: Barcelona Clinic liver cancer, AFP: alpha fetoprotein. ***: p <\n0.001, **: p < 0.01, *: p< 0.05, +: p< 0.1, -: p > 0.1.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 84.47,
+            "box": [
+                248.2,
+                469.9,
+                2249.0,
+                856.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_18/region_2_text.png",
+            "text": "Figure 4. Prognostic value of SCHMOWDER risk subclasses in the whole discovery series\nand after stratification for common baseline variables. The median SCHMOWDER risk score\nwas used as a threshold to categorize patients into low-risk and high-risk subgroups. The\nprognostic value of SCHMOWDER was conserved, even after stratification according to common\nclinical and pathological variables. AFP: alpha fetoprotein.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 84.97,
+            "box": [
+                253.1,
+                1038.3,
+                2250.1,
+                2059.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_18/region_3_text.png",
+            "text": "Figure 5. The SCHMOWDER and CHOWDER models can predict survival after\nhepatocellular carcinoma resection, outperforming all other clinical, biological or\npathological variables in the validation set (The Cancer Genome Atlas: TCGA) A) C-indices\nfor the prediction of survival of the SCHMOWDER and CHOWDER models trained on the\ndiscovery set and tested on the validation set, the composite score and the most relevant clinical,\nbiological and pathological features of the TCGA cohort. Both models significantly outperformed\nthe composite score and all baseline variables. B) Hazard ratios and 95% confidence intervals for\nthe prediction of survival by the CHOWDER and SCHMOWDER models, the composite score and\nbaseline features. The SCHMOWDER model score was converted into a binary score (high or low\nrisk), using the median value for the discovery set as a threshold. HR: hazard ratio; Cl: confidence\ninterval. HBV: hepatitis B virus, HCV: hepatitis C virus, NASH: nonalcoholic steatohepatitis,\nBCLB: Barcelona Clinic liver cancer, AFP: alpha fetoprotein. ***: p < 0.001, **: p < 0.01, *: p<\n0.05, +:p < 0.1, -: p> 0.1.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 84.95,
+            "box": [
+                250.1,
+                2252.4,
+                2248.5,
+                2634.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_18/region_4_text.png",
+            "text": "Figure 6. Prognostic of SCHMOWDER risk subclasses for the whole validation set and\nafter stratification for common baseline variables. The median SCHMOWDER risk score for\nthe discovery set was used as a threshold to categorize patients into low-risk and high-risk\nsubgroups. The risk scores obtained also predict survival after stratification for common baseline\nvariables.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 78.23,
+            "box": [
+                244.6,
+                2823.4,
+                2251.8,
+                2972.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_18/region_5_text.png",
+            "text": "Figure 7. Examples of tiles classified as low or high risk by CHOWDER. An expert\npathologist (JC) blinded to risk scores analyzed the 400 most predictive tiles. A) The features\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 42.81,
+            "box": [
+                244.8,
+                3295.6,
+                1405.0,
+                3363.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_18/region_6_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

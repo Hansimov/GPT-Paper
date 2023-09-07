@@ -1,0 +1,89 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages/page_12.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages_ordered/page_12.png",
+        "image_width": 2481,
+        "image_height": 3249,
+        "regions_num": 6,
+        "page_idx": 12
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 98.3,
+            "box": [
+                210.1,
+                369.3,
+                481.1,
+                415.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_12/region_1_text.png",
+            "text": "Table 3 (continued)\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.57,
+            "box": [
+                190.3,
+                424.7,
+                2290.4,
+                1569.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_12/region_2_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 98.4,
+            "box": [
+                208.5,
+                1580.8,
+                2177.9,
+                1624.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_12/region_3_text.png",
+            "text": "XAI, explainable artificial intelligence; SHAP, SHapley Additive exPlanations; LIME, Local Interpretable Model-agnostic Explanations.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.84,
+            "box": [
+                188.8,
+                1728.3,
+                1204.3,
+                2010.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_12/region_4_text.png",
+            "text": "utilized to improve the oncology clinic. These will help\nharness ongoing advances in oncology, including big data\nand personalized medicine, to be able to provide better,\npersonalized, more economic, and less-demanding/toxic\ndiagnostic and treatment options.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                188.1,
+                2009.2,
+                1205.4,
+                2964.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_12/region_5_text.png",
+            "text": "Although XAT is a powerful tool for improving the\ninterpretability and thereby adoption of ML models in\nthe oncology clinic, it is not without limitations, which do\nalso apply to oncology research (65). First, as discussed\npreviously, an active area of research is implementation\nof models that are both accurate and interpretable,\nwhich potentially bypassed the need for XAI entirely.\nTherefore, the notion that ML inherently is a black\nbox that must be explained must not always be true.\nNevertheless, less interpretable models continue to be\npopular in oncology, as detailed by this review, meaning\nXAI still has a niche to fill as long as the gap between\nusing accurate and interpretable models is being bridged.\nNext, there are inherent inaccuracies in explanations of\ncertain ML models; many “explanations” are actually\napproximations or probabilistic measures, as creating exact\nrepresentations is computationally prohibitive (9,10).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                1286.9,
+                1729.7,
+                2302.9,
+                2964.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_12/region_6_text.png",
+            "text": "Furthermore, attempts to distill models may necessitate\nsimplifications in order to be interpretable, which can\nraise concerns for applicability as well as human error\nwhen the explanations are used to make modifications for\nindividual cases. Of course, this is a major hindrance to\nadoption in a high-stakes field such as oncology. When\naddressing this problem, a critical question for researchers\nis model selection; “simpler” models such as LASSO\nregression may yield superior generalization results (thanks\nto decreased overfitting) relative to feature selection\nfacilitated with XAI and a complex ML model. Notably,\nXAI complements feature selection (or includes feature\nselection, in the explainability-embedded ML methods),\nnot “competes” with it. A potential analysis framework\nmight include variable selection, then XAI, then further\nvariable selection guided by XAT if necessary. Future work\nshould also seek to characterize “significance” of resulting\nmodel explanations, which might be accomplished with a\npermutation test such as a permutation LASSO for variable\nselection (66) or aforementioned efforts to generate hazard\nratios and p-values from explanations (62). Lastly, the\nexplanations can only be as good as their models, so it is\n"
+        }
+    ]
+}

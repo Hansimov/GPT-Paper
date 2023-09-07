@@ -1,0 +1,141 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 10,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.91,
+            "box": [
+                180.6,
+                242.4,
+                1212.1,
+                1920.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_05/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                177.9,
+                1969.0,
+                1217.1,
+                2181.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_05/region_02_text.png",
+            "text": "Fig. 4 | Histopathological characteristics of driver mutations. a-c, Example\ntiles indicating the presence (left) and absence (right) of particular genomic\nalterations: EGFR-amplified glioblastoma (a); TP53 mutant breast cancer\n(b); and BRAF mutant thyroid cancer (¢). For each panel, four representative\ntiles from the 100 best-predicted tiles are shown. Scale bars: 100 um.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                177.5,
+                2283.0,
+                1216.7,
+                2547.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_05/region_03_text.png",
+            "text": "due to the enrichment of PTEN mutations in endometrial cancer™.\nWhen combined with histopathology subtypes, the AUC for PTEN\nmutations in uterine cancer increased to 0.92 (95% CI=0.85 to 1).\nThese widespread associations between genomics and histopathol-\nogy illustrate how alterations either change cellular morphology or\noccur preferentially in a histopathologically distinct cellular context.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                177.3,
+                2589.5,
+                1215.5,
+                3116.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_05/region_04_text.png",
+            "text": "Transcriptomic associations reflect tumor composition and pro-\nliferation. Associations between gene expression and histopathol-\nogy may not only reflect distinct tumor cell types with different\nmorphological features, but also stromal and infiltrating immune\ncells. Overall, we found that 42% of all of the gene-cancer pairs\ntested showed an association between bulk transcriptome and\nhistology across all cancer types (fivefold cross-validated p> 0.25;\nFDR<0.1; Fig. 5a; Supplementary Table 2). For 6% of gene-cancer\npairs, a correlation of p > 0.5 was found, and 0.2% displayed p > 0.75.\nHistopathological grade and subtype contributed to approximately\n25% of these associations, but usually only accounted for a frac-\ntion of the signal (Fig. 5b,c). No obvious mechanistic insights were\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1265.0,
+                227.7,
+                2304.6,
+                533.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_05/region_05_text.png",
+            "text": "provided by the highest-scoring genes, yet many associations corre-\nlated with the extent of normal tissue. Interpretable trends emerged\nat the level of gene sets, showing that genes were enriched in path-\nways related to the immune system (24 cancers; n= 106 pathways),\nfollowed by cell cycle (11 cancers; n =76 pathways) and signal trans-\nduction (20 cancers; n=59 pathways; Fig. 5d), in broad agreement\nwith recent reports”).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1265.4,
+                533.4,
+                2304.1,
+                1015.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_05/region_06_text.png",
+            "text": "The emerging association between histopathology and tran-\nscriptional signals of cell proliferation was further supported by an\nanalysis of transcriptomic proliferation scores*, which had histo-\npathologically detectable signals in 25 out of 28 cancer types (p > 0;\nFDR<0.1; Supplementary Table 2 and Extended Data Fig. 5a).\nWhile the histopathological patterns associated with high prolifera-\ntion differed between cancer types, a common feature was elevated\ngrade in tumors with high transcriptomic proliferation (eight out of\nten cancers with available data; FDR < 0.1; Extended Data Fig. 5b,c).\nNo systematic trends were observed in relation to histopathological\nand molecular tumor content (Extended Data Fig. 5d).\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1264.7,
+                1057.0,
+                2305.2,
+                1453.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_05/region_07_text.png",
+            "text": "Localization of immune cells. Tumor-infiltrating lymphocyte (TIL)\nscores” showed a significant p with histology for all 28 cancer types\n(p >0; FDR<0.1), with p=0.73 (95% CI=0.6 to 0.82) for thymoma\nand notable correlations for breast cancer (9 =0.59; 95% CI=0.52\nto 0.64), bladder cancer (9 =0.63; 95% CI=0.51 to 0.72) and lung\nadenocarcinoma (p=0.48; 95% CI=0.39 to 0.57; Supplementary\nTable 2). Tiles predictive of TILs indeed contained lymphocytes,\nwhich typically were relatively small cells with dark nuclei and scant\ncytoplasm, often occurring at high densities (Fig. 6a).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1265.8,
+                1452.5,
+                2303.9,
+                1978.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_05/region_08_text.png",
+            "text": "These associations were confirmed by a blinded evaluation of\ntile-level TIL counts and densities by two expert pathologists for\nthree representative cancer types (Fig. 6b, Extended Data Fig. 6a,b\nand Methods). Of note, tile-level predictions were independent of\nthe bulk molecular TIL score, confirming the algorithm's ability\nto localize the TIL signal to specific areas (P=3 x 10-? for bladder;\nP=6xX 107’ for breast; P=3 x 10-> for lung adenocarcinoma; Wald\ntest, including whole-slide TIL score). Although a transcriptomic\ntraining approach is likely to be inferior in its ability to map his-\ntopathological patterns of TILs compared with training on his-\ntopathologically labeled image areas’, it compares favorably in\nreconstructing overall molecular TIL signals (Fig. 6c).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1264.8,
+                1977.8,
+                2304.5,
+                2416.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_05/region_09_text.png",
+            "text": "Patterns of lymphocytic infiltration are recognized prognostic\nand therapeutic biomarkers'’’***’. On many slides, predicted TIL\ndensities appeared relatively uniform, perhaps as a consequence of\nlearning from bulk signals (Fig. 6d, top and middle panels); how-\never, in other cases, the signals stemmed from confined regions\ncontaining defined lymphocytic aggregates (Fig. 6d, bottom panel).\nGiven that the algorithm was never provided with explicitly labeled\ntiles, it is remarkable that these localized patterns of TILs were auto-\nmatically learned to be a feature shared by a subset of tiles from dif-\nferent slides with a high overall transcriptomic TIL signal.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1266.3,
+                2458.9,
+                2304.0,
+                3115.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_05/region_10_text.png",
+            "text": "Prognostic effects across cancer types. There was a significant\nassociation of computational histopathological features with overall\nsurvival in 15 out of 18 cancer types with available data (family-wise\nerror rate (FWER) <0.05; mean concordance, C=0.6; range: 0.53\nto 0.67; Methods, Fig. 7a and Supplementary Table 3). Compared\nwith canonical histological subtypes and grades, which are rou-\ntinely used to assess prognosis, the computational histopathological\nfeatures showed a significant improvement in 10 out of 16 cancer\ntypes. This prognostic signal remained measurable in the major-\nity of these cancer types, even when further including age, gender\nand tumor stage (Fig. 7b, Extended Data Fig. 7 and Supplementary\nTable 3). As illustrated by the survival curves, PC-CHiP may be used\nto refine existing stage-based prognosis in breast, head and neck,\nand stomach cancer, as well as (to a lesser extent) clear cell renal\ncell carcinoma.\n"
+        }
+    ]
+}

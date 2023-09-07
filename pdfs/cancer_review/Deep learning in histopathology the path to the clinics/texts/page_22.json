@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_22.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_22.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 22
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 97.23,
+            "box": [
+                300.1,
+                295.1,
+                2199.4,
+                3133.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_22/region_1_list.png",
+            "text": "[74] Zhang, Z. et al. Pathologist-level interpretable whole-slide cancer diagnosis with deep\nlearning. Nature Machine Intelligence 1, 236-245 (2019).\n\n[75] Song, Z. et al. Clinically applicable histopathological diagnosis system for gastric cancer\ndetection using deep learning. Nature communications 11, 4294 (2020).\n\n[76] Albarqouni, S. et al. AggNet: Deep Learning From Crowds for Mitosis Detection in Breast\nCancer Histology Images. /EEE transactions on medical imaging 35, 1313-1321 (2016).\n\n[77] Amgad, M. et al. Structured crowdsourcing enables convolutional segmentation of histology\nimages. Bioinformatics 35, 3461-3467 (2019).\n\n[78] Bulten, W. et al. Epithelium segmentation using deep learning in H&E-stained prostate\nspecimens with immunohistochemistry as reference standard. Scientific reports 9, 864 (2019).\n\n[79] Valkonen, M. et al. Cytokeratin-Supervised Deep Learning for Automatic Recognition of\nEpithelial Cells in Breast Cancers Stained for ER, PR, and Ki-67. JEEE transactions on medical imaging\n39, 534-542 (2020).\n\n[80] Alemi Koohbanani, N., Jahanifar, M., Zamani Tajadin, N. & Rajpoot, N. NuClick: A deep learning\nframework for interactive segmentation of microscopic images. Medical image analysis 65, 101771\n(2020).\n\n[81] Bokhorst, J.M. et al. Learning from sparsely annotated data for semantic segmentation in\nhistopathology images. International Conference on Medical Imaging with Deep Learning, Proceedings\nof Machine Learning Research102, 84-91 (2019).\n\n[82] Brieu, N. et al. Domain Adaptation-based Augmentation for Weakly Supervised Nuclei\nDetection. https://arxiv.org/abs/1907.04681 (2019).\n\n[83] Gadermayr, M., Gupta, L., Klinkhammer, B. M., Boor, P. & Merhof, D. Unsupervisedly Training\nGANs for Segmenting Digital Pathology with Automatically Generated Annotations. /nternational\nConference on Medical Imaging with Deep Learning, Proceedings of Machine Learning Research\n102,175-184 (2019)\n\n[84] Liang, Q. et al. Weakly Supervised Biomedical Image Segmentation by Reiterative Learning.\nIEEE J. Biomed. Health Informatics 23, 1205-1214 (2019).\n\n[85] Gao, S. et al. Using case-level context to classify cancer pathology reports. PloS one 15,\ne€0232840 (2020).\n\n[86] Alawad, M. et al. Automatic extraction of cancer registry reportable information from free-\ntext pathology reports using multitask convolutional neural networks. Journal of the American Medical\nInformatics Association : JAMIA 27, 89-98 (2020).\n\n[87] Coudray, N. et al. Classification and mutation prediction from non-small cell lung cancer\nhistopathology images using deep learning. Nature medicine 24, 1559-1567 (2018).\n"
+        }
+    ]
+}

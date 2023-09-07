@@ -1,0 +1,181 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 13,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                148.6,
+                238.5,
+                1184.8,
+                866.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_01_text.png",
+            "text": "systemso>:7481,82,106,113-115,118,119,74,113,1 14 followed the clinical work-\nflow to encode multiple sources of images and fused the encoded\ninformation for the final prediction. Other works followed the\nspecific clinical guidelines of the problems to create transparent\nsystems® split brain MRIs into 96 clinical meaningful regions as\nwould be done in established clinical workflows and analyze all the\nregions separately. Some other clinical knowledge priors were also\npresented®°**°°'2 established a hierarchical label structure accord-\ning to clinical taxonomy for image classification’’ leveraged the\ntransparency from the correlation between the changes of\npolarization characteristics and the pathological development of\ncervical precancerous lesions. Clinical knowledge from human\nexperts was used to refine an image grouping algorithm through\nan interactive mechanism in which experts iteratively provided\ninputs to the model'%.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                148.4,
+                870.5,
+                1183.4,
+                1745.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_02_text.png",
+            "text": "Priors that were derived from computer vision concepts rather\nthan the clinical workflow were usually not specific or limited to a\nsingle application. The justification of transparency with computer\nvision priors was more general than that with clinical knowledge\npriors. Image visualization-based techniques to achieve transpar-\nency were most commonly considered in image classification\nproblems. Common ways of retrieving relevance information\nwere: Visual relevancy through attention®>-°*°°©8; region occlu-\nsion by blank areas'°”\"\"' or healthy-looking regions''; and other\ntechniques such as supervision of activated image regions by\nclinically relevant areas®®8%9794.9597,°8° and image similarity”®.\nFeature-based computer vision transparency priors focused on the\nimpact of feature evolution or perturbation on the decoded\noutput. Encoded features were evolved according to the gradient\nascent direction to create the evolution of the decoded image\nfrom one class to the other8”''°'. Some articles directly\nanalyzed the feature sensitivity to the final prediction by feature\nperturbation'°''!°°\"!° and importance analysis’”'°7'°8, feature\ndistribution'®*'°> or image distribution based on encoded\nfeatures'°?''®, Confidence calibration and uncertainty estimation\nalso increased the transparency of the ML systems'7°-'22,\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                148.6,
+                1747.3,
+                1184.3,
+                2625.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_03_text.png",
+            "text": "Even though we attempted to identify the type of prior\nevidence used to justify the development of a specific algorithm\nin each ML system, none of the included articles formally\ndescribed the process to formulate such priors to achieve\ntransparency in the proposed system. While the use of clinical\nguidelines and routine workflows may provide Level 2 evidence in\nsupport of the method affording transparency if the end users are\nmatched with those priors, relying solely on computer vision\ntechniques may not provide the same level of justification. This is\nbecause computer vision algorithms are often developed as an\nanalysis tool for ML developers to verify model correctness, but\nare not primarily designed nor evaluated for use in end user-\ncentered interfaces. The lack of justification and formal processes\nto inform design choices at the early stages of model develop-\nment results in substantial risk of creating transparent systems\nthat rely on inaccurate, unintelligible, or irrelevant insights for end\nusers. Being explicit about the assumptions and evidence\navailable in support of the envisioned transparent ML system is\nparamount to build fewer but better-justified transparent ML\nsystems that are more likely to live up to expectations in final user\ntesting, the resources for which are heavily constrained.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 98.03,
+            "box": [
+                151.0,
+                2680.6,
+                262.0,
+                2720.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_04_title.png",
+            "text": "T: task\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                149.5,
+                2729.7,
+                1183.9,
+                3063.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_05_text.png",
+            "text": "Various types of medical image analysis tasks were explored in the\nincluded articles. Most of the articles (n = 57) proposed transparent\nML algorithms for classification and detection problems, such as\nimage classification and abnormality detection. Three-dimensional\n(3D) radiology images (n= 24) and pathological images (n = 15)\nwere the most popular modalities involved in the development of\ntransparent algorithms. The complex nature of both 3D imaging in\nradiology and pathological images makes image analysis tasks more\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1259.1,
+                242.4,
+                2292.5,
+                1071.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_06_text.png",
+            "text": "time consuming than 2D image analysis that is more prevalent in\nother specialities, such as dermatology, which motivates transpar-\nency as an alternative to complete human image analysis to save\ntime while retaining trustworthiness. In detail, classification pro-\nblems in 3D radiological images and pathological images included\nabnormality detection in computed tomography (CT)\nsca 1Ns2029.6,73,75,90,95,1 06, MRIs22:00:65:77-79:83,84,98,1 00,105,110,112,11 7\npathology images°??7-99.6269-71 ,77,104,107-109,116,121 and positron\nemission tomography (PET) images®*?. Mammography dominated\nthe 2D radiology image applications’°2'87879294114.119.125 mainly\nfocusing on breast cancer classification and mass detection. For\nother 2D radiology image applications**''®, aimed at pneumonia\nand pneumothorax prediction from chest X-rays and''? created a\ntransparent model for liver fibrosis stage prediction in liver\nultrasound images. Classification and detection tasks were explored\nin other clinical specialities, including melanoma® and skin lesion\ngrade prediction®®*°*” in dermatology, glaucoma detection from\nfundus images®’*°” and retinopathy diagnosis''' in ophthalmol-\nogy, and polyp classification from colonoscopy images in\ngastroenterology®®'”°.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1258.3,
+                1073.9,
+                2291.5,
+                1445.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_07_text.png",
+            "text": "Segmentation was another major application field (n=9).\nResearch about transparency mainly focused on segmentation\nproblems for brain and cardiac MRIs°’4+6”7289103115. Other\nsegmentation problems included mass segmentation in mammo-\ngrams’°, cardiac segmentation in ultrasound\", liver tumor seg-\nmentation in hepatic CT images, and skin lesion segmentation in\ndermatological images>*®. There also existed other applications, e.g.,\nimage grouping in dermatological images'°? and image enhance-\nment (super resolution task) in brain MRIs'?? and cardiac MRIs''°.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1259.3,
+                1447.5,
+                2293.0,
+                2274.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_08_text.png",
+            "text": "Most of the application tasks were routinely performed by\nhuman experts in current clinical practice (n = 60). A much smaller\nsample of articles (n= 4) aimed to build transparent systems for\nmuch more difficult tasks where no human baseline exists, e.g.,\n5-class molecular phenotype classification from Whole Slide Images\n(WSls)’°®8, 5-class polyp classification from colonoscopy images'”°,\ncardiac resynchronization therapy response prediction from cardiac\nMRIs®?, and super resolution of brain MRIs'22. The remaining articles\n(n=4) did not include explicit information on whether human\nbaselines and established criteria exist for the envisioned applica-\ntion, e.g., magnification level and nuclei area prediction in breast\ncancer histology images”®, age estimation in brain MRIs°°, AD status\nin Diffusion Tensor Images (DTIs), and risk of sudden cardiac death\nprediction in cardiac MRIs’°. As previously mentioned, tasks that are\nroutinely performed in clinical evidence may have robust human\nbaselines and clinical guidelines to guide transparent ML develop-\nment. Applications that are beyond the current possibilities,\nhowever, require a more nuanced and human-centered approach\nthat should involve the target end users as early as possible to\nverify that the assumptions that drive transparency are valid.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 95.64,
+            "box": [
+                1258.4,
+                2358.6,
+                1594.0,
+                2398.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_09_title.png",
+            "text": "DATA AVAILABILITY\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.75,
+            "box": [
+                1258.6,
+                2410.9,
+                2292.0,
+                2667.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_10_text.png",
+            "text": "Figure 2 contains images from the ORIGA'*’ and BraTS2020 datasets'*°. The ORIGA\ndataset is a public dataset at Kaggle website (https://www.kaggle.com/datasets/\nsshikamaru/glaucoma-detection/metadata). The BraTS2020 dataset is also a public\ndataset at Kaggle website (https://www.kaggle.com/datasets/awsaf49/brats2020-\ntraining-data). The authors declare that all the data included in this study are\navailable within the paper and its Supplementary Information files. Please contact\nauthor HC to request the data.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 85.91,
+            "box": [
+                1258.1,
+                2719.2,
+                2150.4,
+                2803.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_11_text.png",
+            "text": "Received: 15 April 2022; Accepted: 29 September 2022;\nPublished online: 19 October 2022\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 89.14,
+            "box": [
+                1259.7,
+                2936.3,
+                1467.3,
+                2975.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_12_title.png",
+            "text": "REFERENCES\n"
+        },
+        {
+            "idx": 13,
+            "thing": "list",
+            "score": 89.1,
+            "box": [
+                1286.8,
+                2989.2,
+                2291.4,
+                3057.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_11/region_13_list.png",
+            "text": "1. Topol, E. J. High-performance medicine: the convergence of human and artificial\nintelligence. Nat. Med. 25, 44-56 (2019).\n"
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_32.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_32.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 10,
+        "page_idx": 32
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 87.55,
+            "box": [
+                302.4,
+                380.8,
+                795.1,
+                439.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_01_title.png",
+            "text": "Graphics processing units\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 79.83,
+            "box": [
+                299.8,
+                465.8,
+                2192.3,
+                606.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_02_text.png",
+            "text": "Micro-processor specifically designed to process many data samples simultaneously, such as parts of\ndigital images or features extracted from images.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 90.21,
+            "box": [
+                303.2,
+                718.0,
+                700.5,
+                775.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_03_title.png",
+            "text": "Image segmentation\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 77.76,
+            "box": [
+                300.2,
+                801.2,
+                2189.8,
+                943.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_04_text.png",
+            "text": "The operation of decomposing the semantic content of an image into multiple segments, where each\nsegment contains pixels belonging to the same semantic category (e.g., the tumor region).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 87.42,
+            "box": [
+                300.2,
+                1051.8,
+                571.4,
+                1111.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_05_title.png",
+            "text": "U-Net models\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 80.88,
+            "box": [
+                301.6,
+                1132.6,
+                2195.5,
+                1450.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_06_text.png",
+            "text": "Deep learning models based on two convolutional neural networks, one that encodes the input image\ninto a set of features, and one that decodes those features to produce a segmentation output; The\nname, introduced in 2015 by Ronneberger et al., indicates the “U” shape that the two CNNs form,\nwhere encoder and decoder are connected via “skip connections”.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 88.16,
+            "box": [
+                301.2,
+                1556.2,
+                678.5,
+                1614.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_07_title.png",
+            "text": "Data augmentation\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 76.36,
+            "box": [
+                301.1,
+                1641.8,
+                2193.3,
+                1867.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_08_text.png",
+            "text": "The operation of artificially modifying some properties of input data (e.g., image contrast, orientation,\ncolor, etc.) with the aim of feeding a computational model with multiple variations of the same piece\nof data.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 87.93,
+            "box": [
+                302.0,
+                1976.6,
+                707.1,
+                2034.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_09_title.png",
+            "text": "Model regularization\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 75.64,
+            "box": [
+                298.3,
+                2060.4,
+                2188.5,
+                2204.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_32/region_10_text.png",
+            "text": "In machine learning, indicates the process of constraining model’s parameters to small values,\ndiscouraging complex models, therefore reducing the risk of overfitting the training data.\n"
+        }
+    ]
+}

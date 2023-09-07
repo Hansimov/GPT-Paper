@@ -1,0 +1,38 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_19.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_19.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 2,
+        "page_idx": 19
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 74.95,
+            "box": [
+                83.8,
+                272.1,
+                2245.1,
+                3128.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_19/region_1_text.png",
+            "text": "predictive of a high risk of death included cellular atypia, vascular spaces, and macrotrabecular\narchitectural pattern (all identified on tiles extracted from tumoral areas). The features predictive\nof a low risk of death included tumoral fibrotic stroma, the presence of immune cells and fibrosis\n(in both tumor and non-tumor areas). In each case, the tissue area containing the tile is also\nshown. B) Features of low and high risk tiles reviewed by an expert pathologist, as well as an\nadditional set of tiles selected randomly, were analyzed using UMAP. K-means clustering was\nfurther applied on the reduced data. Tiles tend to cluster according to their risk class, and\nclustering of Mondor data show that most high-risk tiles are grouped in cluster 1, while the\nmajority of low-risk tiles are located in cluster 0 (enriched in fibrosis and immune cells). Cluster 3\nis also associated with a lower risk, and essentially includes tiles with steatosis. Cluster 4\ncontains both high and low-risk tiles, including a majority of tiles with fibrosis or immune cells.\nWhen applied to TCGA data, the same clustering gives overall consistent results, with a few\ndifferences. Cluster 3, characterized by steatosis, is almost absent and cluster 4 is associated\nwith an increased risk.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 58.46,
+            "box": [
+                246.5,
+                3294.6,
+                1401.9,
+                3362.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_19/region_2_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

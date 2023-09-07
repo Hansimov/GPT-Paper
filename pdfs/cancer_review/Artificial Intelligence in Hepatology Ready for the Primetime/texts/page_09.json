@@ -1,0 +1,49 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_09.png",
+        "image_width": 3308,
+        "image_height": 2481,
+        "regions_num": 3,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.24,
+            "box": [
+                240.7,
+                315.6,
+                1152.3,
+                358.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_09/region_1_text.png",
+            "text": "Table 4 Salient Studies of Al and ML in Liver Diseases.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.54,
+            "box": [
+                243.6,
+                371.5,
+                2959.1,
+                2156.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_09/region_2_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "figure",
+            "score": 20.54,
+            "box": [
+                231.4,
+                2174.1,
+                2937.5,
+                2470.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_09/region_3_figure.png"
+        }
+    ]
+}

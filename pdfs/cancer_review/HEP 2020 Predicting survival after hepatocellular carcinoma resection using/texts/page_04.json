@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_04.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 5,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 75.07,
+            "box": [
+                250.3,
+                261.7,
+                559.0,
+                332.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_04/region_1_title.png",
+            "text": "Introduction\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 87.09,
+            "box": [
+                250.0,
+                396.9,
+                2246.6,
+                938.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_04/region_2_text.png",
+            "text": "Hepatocellular carcinoma (HCC) is the fourth cause of cancer-related death worldwide and its\nincidence is increasing in most Western countries.(1) It is characterized by an aggressive clinical\ncourse, with approximately two thirds of patients diagnosed at advanced stages.(1) Curative\ntreatments, such as surgical resection and percutaneous ablation, are hampered by high\nrecurrence rates (up to 70-80%).(1) Improvements in the identification of patients with poor\nclinical outcomes are required for the development of better therapeutic strategies and the\ninvestigation of the potential benefits of adjuvant systemic therapies.(1)\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 88.44,
+            "box": [
+                254.7,
+                972.4,
+                2244.8,
+                2227.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_04/region_3_text.png",
+            "text": "In most human cancers, prognosis is strongly related to pathological criteria.(2) Indeed, the\nhistological analysis of tumor tissues provides crucial information for the stratification of patients\nand treatment  allocation.(2) The recent development of slide digitization and\ncomputational/mathematical image processing promises to improve and standardize various\npathological and morphological analyses, and may also facilitate the extraction of “hidden”\nimaging features potentially providing useful clinical and/or biological information.(3) In a recent\npioneering study simulating routine pathology workflows, a subset of deep learning-based\nalgorithms outperformed a panel of 11 pathologists at detecting lymph node metastases of breast\ncancers.(4) Coudray and coworkers have also shown that neural networks applied on whole-slide\ndigitized histological images (WSls) can diagnose the main histological subtypes of non-small cell\nlung cancer and predict the mutational status of various genes (e.g. STK11, EGFR).(5) There is\ngrowing evidence to suggest that the computational processing of WSls will refine the prediction\nof patient prognosis, thereby improving treatment allocation.(6, 7) Yu and coworkers have\ndemonstrated that digital image analysis software can extract significant prognostic features from\nhematein and eosin-stained slides in lung cancer.(6) Convolutional neural networks have also\nbeen reported to predict the aggressiveness of various human malignancies.(7, 8)\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 86.03,
+            "box": [
+                250.5,
+                2263.8,
+                2247.1,
+                2728.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_04/region_4_text.png",
+            "text": "In this study, we investigated two independent cohorts of patients with HCC treated by surgical\nresection, to determine whether computational approaches of this type could help to refine the\nprediction of prognosis. We show that models based on convolutional neural networks predict\nsurvival more accurately than baseline clinical, biological and pathological features. By analyzing\nareas classified as “low-risk” and “high-risk” by our model, we were able to obtain insight into the\nmost relevant features used by the network for patient stratification.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 32.53,
+            "box": [
+                248.0,
+                3294.6,
+                1402.0,
+                3361.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_04/region_5_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

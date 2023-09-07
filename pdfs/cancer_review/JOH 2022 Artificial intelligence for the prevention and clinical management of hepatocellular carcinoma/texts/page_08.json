@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 10,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.52,
+            "box": [
+                177.1,
+                250.2,
+                998.7,
+                340.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_08/region_01_text.png",
+            "text": "validation cohort, compared to other state-of-the-\nart predictive models, like the Milan criteria.°7\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                177.2,
+                344.9,
+                999.3,
+                1937.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_08/region_02_text.png",
+            "text": "The morphological features of HCC have a\nmajor impact on patient prognosis, and several DL\nalgorithms have thus been developed to improve\nthe prediction of HCC recurrence/survival using\nCT scans, MRI or histopathological images. Saillard\net al. built a model based on the processing of HCC\ndigital slides that was able to predict the survival\nof patients with HCC treated by surgical resection\nwith a higher accuracy than scores including all\nrelevant clinical, biological and pathological fea-\ntures. Notably, they were validated in a series of\ncases for which slides were stained with different\nprotocols, suggesting that such models may\ngeneralise well when tested in different clinical\ncentres.°* A recent study from Yamashita et al.\nconfirmed the capability of AI algorithms to pre-\ndict outcomes based on digital histologic slides.°*\nLu and Daigle used 3 state-of-the-art CNNs (VGG\n16, Inception v3, ResNet50), pretrained on\nImageNet for feature extraction using HCC histo-\npathology slides from the TCGA-LIHC cohort, and\nselected features significantly associated with\nsurvival using multivariable Cox regression anal-\nysis. While this again highlights the possibility of\nperforming outcome prediction using histopa-\nthology slides, the conclusions are limited by the\nmissing adjustment for other prognostic factors,\nas well as the lack of an external validation\ncohort.°° Saito et al. applied classical ML methods\nto handcrafted whole slide image features from a\nrelatively small cohort of 158 patients with HCC to\ndevelop a combined model, predicting HCC\nrecurrence after resection with an accuracy of\n89%. The next step will be to validate these\npromising results in a larger cohort.°°\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                177.2,
+                1942.2,
+                999.5,
+                3033.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_08/region_03_text.png",
+            "text": "An exponentially growing number of studies\nalso investigate the predictive performance of im-\nages from MRI or CT scans. Ji et al. combined\nseveral clinical and biological features (including\nserum alpha-fetoprotein, albumin-bilirubin [ALBI]\ngrade and tumour margin status), and radiomics\nsignatures to assess the risk of HCC recurrence after\nsurgical resection.°’ Other authors also aimed to\nprocess CT scan or MR images to predict micro-\nvascular invasion, cytokeratin 19 expression (pro-\ngenitor phenotype) or early tumour recurr-\nence.°°-7! Several studies investigated the ability of\nAI methods to predict responses to transarterial\nchemoembolisation (TACE) in patients with\nadvanced HCC. Abajian et al. used handcrafted\nradiomics features from MR images to train logistic\nregression and random forest models to classify\npatients treated with TACE as responders or non-\nresponders. The models achieved a maximal over-\nall accuracy of 78% but revealed the potential of ML\nalgorithms in TACE response prediction.” Classical\nML, as well as DL techniques were used on CT\nimage radiomics features by Liu et al. to develop Al-\nbased prognostic risk factors for overall survival.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.83,
+            "box": [
+                1033.7,
+                251.9,
+                1857.1,
+                1297.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_08/region_04_text.png",
+            "text": "Interestingly, these factors were shown to be\nindependently associated with survival; yet, it is\nimportant to highlight that the study lacked\nexternal validation and a simple train-validate-test\nsplit approach was used, which may limit gen-\neralisability.’* Similarly, Zhang et al.’s DL score,\nbased on a DenseNet-121 feature extraction archi-\ntecture was also derived from CT images of patients\nwith HCC treated with TACE plus sorafenib. The DL\nscore was independently associated with overall\nsurvival, after controlling for known prognostic\nfactors.“ Using residual CNNs, Peng et al. trained\n(562 patients) and externally validated (89 and 138\npatients) an algorithm yielding AUCs of at least\n0.94 for prediction of complete or partial response\nand stable or progressive disease after TACE ther-\napy.”? A single study involving ultrasound was\nconducted by Oezdemir et al., who extracted\nhandcrafted HCC microvascular features from CEUS\nimages to predict response to TACE. The model\nachieved an accuracy of 86%, yet the results require\nfurther evaluation due to the small sample size\n(n = 36).”°\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 97.66,
+            "box": [
+                1033.4,
+                1340.5,
+                1816.7,
+                1483.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_08/region_05_title.png",
+            "text": "Current challenges limiting the use of Al\nfor HCC risk prediction and\nprognostication\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 96.3,
+            "box": [
+                1032.6,
+                1485.0,
+                1703.7,
+                1569.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_08/region_06_title.png",
+            "text": "Need for standardisation of algorithms\nand software\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                1034.7,
+                1574.0,
+                1856.9,
+                2483.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_08/region_07_text.png",
+            "text": "Although AI holds many promises for the\nimprovement of HCC detection and patient strat-\nification, deployment of ML algorithms in clinical\nsettings remains very rare. The safe translation of\nDL models will indeed require standardisation\nand robust evaluation using metrics that would\nideally include patient outcomes and quality of\ncare, as well as appropriate stakeholder engage-\nment and oversight. To date, there are no stand-\nardised methods for Al-based data analysis or\ninterpretation, and no universal approaches to\naddress missing data, which is a fundamental\nconcern in large-scale datasets. A significant\nnumber of published studies have investigated\nlarge series of patients with extensive bench-\nmarking against expert performance, but, in the\nvast majority of cases, these studies were retro-\nspective. Further, the performance of these\nmodels is likely to decrease when assessed pro-\nspectively using “real-world” data.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1034.2,
+                2487.8,
+                1856.5,
+                3030.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_08/region_08_text.png",
+            "text": "The establishment of consensus guidelines in\nreporting data from ML studies is also critical. A\ngroup is currently working on the definition of an\nAl-specific version of the STARD checklist (STARD-\nAl-Standards for Reporting of Diagnostic Accuracy\nStudy-Al). These guidelines will aim to improve the\ncompleteness and transparency of studies investi-\ngating diagnostic test accuracy. Other recommen-\ndations will be needed for prognostic or\ntheranostic biomarkers. Their performance should\nfinally be compared to existing diagnostic, staging\nand predictive systems.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 29.38,
+            "box": [
+                1914.1,
+                1235.9,
+                2069.2,
+                1276.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_08/region_09_text.png",
+            "text": "Key point\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 98.02,
+            "box": [
+                1915.5,
+                1302.3,
+                2278.5,
+                1676.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_08/region_10_text.png",
+            "text": "Key limitations of existing\nAl algorithms include\noverfitting of data, limited\n‘explainability’ of results,\nand the possibility of poor\ngeneralisability, due to the\ninherent reliance of ML and\nDL models on the size and\ndiversity of their training\ndatasets.\n"
+        }
+    ]
+}

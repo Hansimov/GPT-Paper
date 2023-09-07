@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_14.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 5,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 87.94,
+            "box": [
+                247.9,
+                260.6,
+                2247.5,
+                1118.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_14/region_1_text.png",
+            "text": "atypia.(17, 18) We also identified a new feature, the presence of vascular spaces, as strongly\nlinked to a high risk of poor overall survival. This observation suggests that the vascular\narchitecture of HCC is a key determinant of the aggressiveness of this cancer, warranting further\nbiological research. It is also consistent with previous histological and biological studies showing\nan association between pro-angiogenic phenotype and poor clinical outcome.(19-22) An analysis\nof tiles extracted from the non-tumoral liver yielded unexpected results, with an enrichment in\nfibrosis and inflammatory infiltrates, features commonly related to severe liver disease, in tiles\nclassified as low risk.(23) However, this model may have identified a particular type of fibrosis\nthat can regress and immune cell subsets preventing liver damage. We thus believe that\ndisrupting new scientific hypotheses can be generated with models of this type, facilitating\nanalyses of the most important features affecting tile classification.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 81.64,
+            "box": [
+                247.8,
+                1157.7,
+                2248.9,
+                1541.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_14/region_2_text.png",
+            "text": "In conclusion, using convolutional neural networks on HCC digital slides, we have developed a\nmodel predicting survival with a greater discriminatory power than an optimal combination of all\nclassical and relevant clinical, biological and pathological features. Approaches of this type may\nlead to improvements in the assessment of patient prognosis, and will also add to our scientific\nknowledge, through analyses of the most relevant tumor areas.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 70.82,
+            "box": [
+                253.1,
+                1680.5,
+                669.7,
+                1746.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_14/region_3_title.png",
+            "text": "Acknowledgments\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 81.04,
+            "box": [
+                244.6,
+                1784.8,
+                2246.9,
+                1931.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_14/region_4_text.png",
+            "text": "We warmly thank all the physicians (surgeons, hepatologists, oncologists, radiologists and\npathologists) involved in the clinical care of the patients.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 61.57,
+            "box": [
+                247.8,
+                3294.9,
+                1399.7,
+                3362.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_14/region_5_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

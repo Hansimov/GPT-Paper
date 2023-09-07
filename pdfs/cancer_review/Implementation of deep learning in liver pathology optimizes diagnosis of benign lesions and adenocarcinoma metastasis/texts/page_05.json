@@ -1,0 +1,180 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 13,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.49,
+            "box": [
+                186.5,
+                196.0,
+                1562.6,
+                240.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_01_text.png",
+            "text": "TABLE 1. Number of image patches and patients in the training, validation and test set.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.58,
+            "box": [
+                189.8,
+                254.9,
+                2289.8,
+                822.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_02_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                189.1,
+                942.7,
+                1207.5,
+                1478.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_03_text.png",
+            "text": "UK) and annotated for the following 7 categories: liver\nmetastases of colorectal adenocarcinoma, liver metastases\nof pancreatic adenocarcinoma, bile duct adenoma and\nperibiliary hamartoma, necrosis, non-neoplastic hepatic\ntissue, bile ducts, and connective tissue. Image patches\n100 x 100 wm (~395 x 395 px) in size were gener-\nated in QuPath, extracted on the local hard drive and\nsubsequently reviewed. Blurry images were deleted. The\nnumber of image patches per class is highlighted in Table 1.\nRepresentative image patches are displayed in Figure 2.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.84,
+            "box": [
+                189.6,
+                1580.8,
+                1134.5,
+                1695.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_04_title.png",
+            "text": "2.3 | Splitting of datasets into training,\nvalidation and test set\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                188.8,
+                1751.3,
+                1207.1,
+                2719.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_05_text.png",
+            "text": "Images from patients were separated into a training, a vali-\ndation, and a test set with a target to achieve a distribution\nof 60% (training), 20% (validation) and 20% (test), respec-\ntively. All image patches from one patient were used in\nonly one of the respective sets. Since a single patient may\nprovide images for multiple classes, a naive random allo-\ncation of all patients to the three sets might not result in\nall classes being represented well in all three sets. Thus,\nwe performed an iterative stratified sampling, described\nas follows. First we counted for each class the number\nof patients that provided images for the respective class.\nThen we iterated from the class with the lowest count to\nthe class with the highest count. In each iteration, we ran-\ndomly assigned patients to our sets that provide images for\nthe respective class and have not already been assigned in\na previous iteration to one of our three sets. The resulting\nsets were not changed during the analyses. The splits by\nimage patches and patients are displayed in Table 1.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 98.98,
+            "box": [
+                190.8,
+                2822.2,
+                905.2,
+                2883.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_06_title.png",
+            "text": "2.4 | Hardware and software\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.67,
+            "box": [
+                189.9,
+                2938.8,
+                1208.2,
+                3042.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_07_text.png",
+            "text": "For training we used a Graphics Processing Unit\n(GPU) instance from the bwForCluster Helix\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1278.9,
+                942.1,
+                2295.0,
+                1262.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_08_text.png",
+            "text": "(https://wiki.bwhpc.de/e/Helix) service from Heidel-\nberg University with a single GPU, 8 processors and 16 GB\nRAM. Further we used the Scientific Data Storage service\nfrom Heidelberg University. Training was performed using\na singularity container image based on the TensorFlow\nDocker container image.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 99.48,
+            "box": [
+                1278.0,
+                1351.1,
+                2275.0,
+                1467.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_09_title.png",
+            "text": "2.5 | Training and validation of different\nmodels\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1277.7,
+                1523.7,
+                2295.0,
+                2005.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_10_text.png",
+            "text": "Each model was based on the EfficientNetV2 or the\nResNetRS architecture.*°*! Each trained configuration\nmakes use of random augmentation via the imgaug python\nmodule, uses a batch size of 128, the AMSGrad optimizer (a\nvariant of the Adam optimizer” with 61 = .9, 62 = .999 and\n¢=1.0*10~’) and during training the data are sampled such\nthat there is no class imbalance and patients are not over\nrepresented. In particular within each epoch, we sample\nwith replacement from all training tiles as follows:\n"
+        },
+        {
+            "idx": 11,
+            "thing": "list",
+            "score": 99.62,
+            "box": [
+                1279.2,
+                2063.2,
+                2292.4,
+                2273.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_11_list.png",
+            "text": "1. We sample uniformly (each class is selected with equal\nprobability) from the available classes.\n\n2. Within each class, we sample the patients that provide\ntiles for these classes uniformly.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1279.3,
+                2332.5,
+                2293.1,
+                2716.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_12_text.png",
+            "text": "This strategy ensures that no class is under- or overrep-\nresented during training. While classes are balanced with\nthis strategy, it might be that patients which provide tiles\nfor many classes are shown to the network more often than\npatients which provide tiles for fewer classes. Each epoch\nconsists of 911 steps ( = —eee |. We always use\nrandom augmentation with N = 2 and M = 10.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1278.7,
+                2720.4,
+                2292.7,
+                3039.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_05/region_13_text.png",
+            "text": "For each model configuration, the learning rate and\nthe used architecture is trained six different times to\naccount for the randomness involved in training a\nmodel (e.g., the random weights initialization). We\ndisplay Matthews correlation coefficient (MCC) (cf.\n‘metrics.MatthewsCorrelationCoefficient’ in python\n"
+        }
+    ]
+}

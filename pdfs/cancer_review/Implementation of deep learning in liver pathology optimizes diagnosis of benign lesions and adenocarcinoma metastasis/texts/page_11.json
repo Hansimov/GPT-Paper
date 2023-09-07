@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 5,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.9,
+            "box": [
+                237.8,
+                210.1,
+                2238.0,
+                1753.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_11/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.75,
+            "box": [
+                190.6,
+                1809.3,
+                2289.5,
+                1949.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_11/region_2_text.png",
+            "text": "FIGURE 6 _ Uniform manifold approximation and projection of the test set based on tiles (A) and patients (B). Dimensionality reduction\nallows to recognize classes that are similar for the algorithm. Similar classes for the algorithm show close proximity, while classes that are not\nsimilar are displayed with a larger distance.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                188.8,
+                2074.7,
+                1204.6,
+                3041.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_11/region_3_text.png",
+            "text": "to a more personal life situation compatible specialization\nin medicine. The use of digital pathology tools will improve\nthe overall attractiveness to the field of surgical pathol-\nogy, which is required to sustain the increase in numbers\nof complex cases and decline in specialized pathologists.’\nSecond, digital scanning has the advantage of automatic\nquality control, which can be performed for each slide,\nfor example, to test for equivalency of block and slide\nnumbers or to assess correct staining. Thus, some steps in\nthe workflow, such as assigning slides to cases or archiv-\ning, can be accelerated. Third, digital images are usually\nsaved on local hard drives for a certain period of time,\nwhich allows a rapid comparison of current to prior speci-\nmen. Besides the aforementioned infrastructural features,\ndigitalization of tissue sections allows the application of\ndeep learning algorithms with the potential to support\nthe objective, consistent clinical and diagnostic decision\nmaking.”>°\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1278.1,
+                2074.7,
+                2293.0,
+                2717.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_11/region_4_text.png",
+            "text": "Deep learning algorithms and CNN have been previ-\nously used to classify benign and malignant diseases on\nconventionally stained, scanned histopathological slides\nin various organs such as skin,'”?’ lung,!°’ breast,”*°\nprostate,*?*! or intestinal tissue.''* In addition, it was\nused for the assignment of the tumour origin in unknown\nprimary cancers using a metastasized tumours from dif-\nferent anatomical sites (e.g., lymph node, liver), including\ndifferent types of adenocarcinoma, squamous cell carci-\nnoma, renal, or urothelial carcinoma; although without\ndiscrimination of adjacent non-neoplastic or benign sim-\nilarly appearing structures,*’ as shown here.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1279.1,
+                2722.4,
+                2293.3,
+                3041.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_11/region_5_text.png",
+            "text": "For hepatobiliary and pancreatic tumours, there are\nconsiderably much less publications on deep learning\nhistopathological classification algorithms.'+** °° Impor-\ntantly, deep learning classification to differentiate his-\ntologically similar appearing benign structures within\nthe liver, such as non-neoplastic biliary ducts or benign\n"
+        }
+    ]
+}

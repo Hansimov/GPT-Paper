@@ -1,0 +1,116 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3249,
+        "regions_num": 8,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                189.1,
+                352.5,
+                1203.4,
+                569.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_06/region_1_text.png",
+            "text": "information to surgeons on risk of extraprostatic extension\nbut also providing explanations of how that risk was\ncalculated for given patient, where identification of non-\nlinear interactions is valuable.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 98.0,
+            "box": [
+                190.1,
+                649.8,
+                364.8,
+                706.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_06/region_2_title.png",
+            "text": "Radiomics\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                188.5,
+                731.6,
+                1204.8,
+                1441.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_06/region_3_text.png",
+            "text": "A primary field of oncology that has benefited greatly from\nXAI is radiomics, given that it has the reputation of being\na “black box” or “fishing expedition” (27,28). Radiomics\nis defined as a process designed to extract quantitative\nfeatures from imaging, which can subsequently be used for\nhypothesis generation, testing, or both (29). In oncology,\nthis might mean using imaging characteristics to predict\ntumor molecular features, behavior, and prognosis. In\ndoing so, a patient’s image might be input into a radiomic\nalgorithm and predict risk of relapse. However accurate\nsuch a prediction might be, it is also of vital importance that\nproviders be able to understand why the imaging produces\nsuch a prediction.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                188.5,
+                1439.8,
+                1204.7,
+                2745.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_06/region_4_text.png",
+            "text": "Radiomics specifically represents a field where LIME\nmight be preferred in certain scenarios, given that\nradiomics is highly interested in individual predictions\nand commonly uses non-tree-based algorithms, meaning\nSHAP becomes computationally intensive. Several\nradiomics studies focus on using XAI and focusing\non individual predictions. One example that has been\nexplored in the literature is molecular classification\nof gliomas. In gliomas, molecular subtypes related to\nisocitrate dehydrogenase (IDH) mutations and 1p/19q co-\ndeletion are of vital relevance to prognosis and might also\ninform treatment options (30). Although confirmation of\nsuch abnormalities occurs via pathologic analysis, it can be\nuseful to identify patients with such abnormalities prior\nto surgery or if pathologic conformation is not possible.\nManikis et a/. reported on radiomic patterns that can\npredict IDH mutational status with an accuracy of 73.6%\nand an associated sensitivity and specificity of 0.6 and\n0.736, respectively (31). Following model development,\nresults were explained using both the SHAP and LIME\nframeworks, which were able to identify important\nradiomic features that lead to an image being classified\nas IDH-mutant, which the authors were then able to\ncorrelate with biological behavior of [DH-mutant gliomas.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                189.1,
+                2747.0,
+                1204.1,
+                2964.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_06/region_5_text.png",
+            "text": "XAI can also be used to describe how a given imaging\nvoxel contributes to a model’s output. Gaur ez a/. used a\ndeep learning model to identify brain tumor subtypes,\nwith accuracy of 94.64% (32). To explain how their model\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1287.2,
+                350.9,
+                2303.0,
+                1276.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_06/region_6_text.png",
+            "text": "made its predictions, they provide examples using the\nSHAP framework where SHAP values are superimposed\non imaging voxels, and in doing so illustrate graphically\nand intuitively how example images are classified as\nnormal or meningioma, as illustrated in Figure 3. In these\nimages, the probability of a given classification is increased\nwith red pixels and decreased with blue pixels. As can be\nseen, for the normal MRI, the normal classification has\nthe greatest amount of red pixels. The same idea holds\ntrue for the meningioma classification. The authors use\nboth SHAP and LIME, again because this classification\nproblem in highly interested in individual cases. Another\nsimilar published application is classification of ultrasound\nimaging of lymph nodes to predict nodal metastasis and\nearly breast cancer (achieving an accuracy of 81.05%,\nwhich used LIME to graphically identify regions of\ninterest in individual images) (33).\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1287.5,
+                1276.9,
+                2302.7,
+                2363.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_06/region_7_text.png",
+            "text": "In addition to explaining the radiomic features, XAI also\ncan aid in development of the models. A major problem\nin ML is overfitting training data, which can be a result of\nfeeding the excessive features in the algorithm, including\nfeatures that are largely irrelevant or strongly correlated\nwith the causative features. This is particularly relevant in\nradiomics, where massive amounts of data points might be\ngenerated from a given image set. A challenge XAI helps\naddress is identifying only the most important features\npredictive of the outcome, which improves final model\nfeature selection, thus eliminating the irrelevant ones,\nleading to a better model that is more robust and less prone\nto overfitting. Kha et a/. have reported on identification of\na radiomic signature predictive of 1p/19q co-deletion (34).\nDuring model development, the SHAP framework was used\nto identify the most important features to include in their\nmodel, leading to improved model performance when less\nimportant features, based on average SHAP values, were\nremoved, with an AUC of 0.710 before feature selection\nand 0.753 after.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1287.3,
+                2366.2,
+                2302.8,
+                2965.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_06/region_8_text.png",
+            "text": "Other applications of combination ML and XAI\nin radiomics simply use the resulting visualizations to\nidentify global feature importance, to better understand\nand build trust in their respective models. These include\nprediction of early progression of nasopharyngeal cancer\nfollowing intensity-modulated radiation therapy using\nMRI (which used the SHAP framework to demonstrate\nthat select radiomic features were more predictively\npowerful than staging) (35), classification of breast\ncancer molecular subtypes using non-contract computed\ntomography (achieving an accuracy of 71.3%, using SHAP\n"
+        }
+    ]
+}

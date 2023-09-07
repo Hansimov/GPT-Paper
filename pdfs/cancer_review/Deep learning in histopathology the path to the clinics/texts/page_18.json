@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_18.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_18.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 18
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 92.57,
+            "box": [
+                299.6,
+                289.5,
+                2198.2,
+                3134.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_18/region_1_list.png",
+            "text": "[15] Simonyan, K. & Zisserman, A. Very deep convolutional networks for large-scale image\nrecognition. International Conference on Learning Representations (ICLR) (2015).\n\n[16] Long, J., Shelhamer, E., & Darrell, T. Fully convolutional networks for semantic segmentation.\nProceedings oflEEE Conference on Computer Vision and Pattern Recognition, 3431-3440 (2015).\n\n[17] Ronneberger, O., Fischer, P. & Brox, T. U-Net: Convolutional Networks for Biomedical Image\nSegmentation. Proceedings of Medical Image Computing and Computer-Assisted Intervention, Lecture\nNotes in Computer Science 9351, 234-241 (2015).\n\n[18] Sirinukunwattana, K. et al. Gland segmentation in colon histology images: The glas challenge\ncontest. Medical image analysis 35, 489-502 (2017).\n\n[19] Hermsen, M. et al. Deep learning—based histopathologic assessment of kidney tissue. Journal\nof the American Society of Nephrology 30, 1968-1979 (2019).\n\n[20] Litjens, G. et al. 1399 H&E-stained sentinel lymph node sections of breast cancer patients: the\nCAMELYON dataset. GigaScience 7, (2018).\n\n[21] Liu, Y. et al. Detecting Cancer Metastases on Gigapixel Pathology Images.\nhttps://arxiv.org/abs/1703.02442 (2017)\n\n[22] \"Preparing for the future of Artificial Intelligence,\"\nhttps://obamawhitehouse.archives.gov/sites/default/files/whitehouse_files/microsites/ostp/NSTC/p\nreparing for the future of ai.pdf (2016).\n\n[23] Wang, D., Khosla, A., Gargeya, R., Irshad, H. & Beck, A. H. Deep Learning for Identifying\nMetastatic Breast Cancer. https://arxiv.org/abs/1606.05718 (2016).\n\n[24] Wang, X. et al. Weakly Supervised Deep Learning for Whole Slide Lung Cancer Image Analysis.\nIEEE transactions on cybernetics 50, 3950-3962 (2019).\n\n[25] Syrykh, C. et al. Accurate diagnosis of lymphoma on whole-slide histopathology images using\ndeep learning. NPJ digital medicine 3, 63 (2020).\n\n[26] Tabibu, S., Vinod, P. K. & Jawahar, C. V. Pan-Renal Cell Carcinoma classification and survival\nprediction from histopathology images using deep learning. Scientific reports 9, 10509 (2019).\n\n[27] Sari, C. T. & Gunduz-Demir, C. Unsupervised Feature Extraction via Deep Learning for\nHistopathological Classification of Colon Tissue Images. /EEE transactions on medical imaging 38,\n1139-1149 (2019).\n\n[28] Rawat, R. R. et al. Deep learned tissue “fingerprints” classify breast cancers by ER/PR/Her2\nstatus from H&E images. Scientific Reports 10 (2020).\n\n[29] Lee, B. & Paeng, K. A Robust and Effective Approach Towards Accurate Metastasis Detection\nand pN-stage Classification in Breast Cancer. Proceedings of Medical Image Computing and Computer\nAssisted Intervention, Lecture Notes in Computer Science 11071, 841-850(2018).\n"
+        }
+    ]
+}

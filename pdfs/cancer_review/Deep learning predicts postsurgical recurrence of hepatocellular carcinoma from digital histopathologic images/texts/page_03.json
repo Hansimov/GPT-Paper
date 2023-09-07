@@ -1,0 +1,62 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 4,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.6,
+            "box": [
+                646.5,
+                207.7,
+                2304.0,
+                1271.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_03/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.84,
+            "box": [
+                649.2,
+                1312.8,
+                2307.8,
+                1568.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_03/region_2_text.png",
+            "text": "Figure 2. Performance of the tumor tile classification model on the internal test set. The AUROC for tumor tile\nclassification was 0.952 (95% CI 0.948, 0.957) on the internal test set (a). Model outputs differed significantly\nbetween tiles with a ground truth of tumor versus non-tumor (p value < 0.0001) (b). *The 95% CI for AUC\n\nis shown in parentheses in the ROC plot. **Error bars represent 95% CI in the bar chart. The p value was\ncomputed using the Wilcoxon rank sum test. AUC, area under the ROC curve; CI, confidence interval; ROC,\nreceiver operating characteristic.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "figure",
+            "score": 99.44,
+            "box": [
+                648.0,
+                1592.1,
+                2302.0,
+                2729.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_03/region_3_figure.png"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                649.9,
+                2769.6,
+                2313.6,
+                3025.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_03/region_4_text.png",
+            "text": "Figure 3. Performance of the tumor tile classification model on the external test set. The AUROC for tumor tile\nclassification was 0.956 (95% CI 0.955, 0.958) on the external test set (a). Model outputs differed significantly\nbetween tiles with a ground truth of tumor versus non-tumor (p value < 0.0001) (b). *95% CI for AUC is shown\nin parentheses in the ROC plot. **Error bars represent 95% CI in the bar chart. The p value was computed using\nthe Wilcoxon rank sum test. AUC, area under the ROC curve; CI, confidence interval; ROC, receiver operating\ncharacteristic.\n"
+        }
+    ]
+}

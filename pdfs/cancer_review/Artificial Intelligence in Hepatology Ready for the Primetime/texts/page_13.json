@@ -1,0 +1,38 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_13.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 2,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 90.09,
+            "box": [
+                201.1,
+                351.3,
+                1203.9,
+                2578.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_13/region_1_list.png",
+            "text": "43. Dong TS, Kalani A, Aby ES, et al. Machine learning-based develop-\nment and validation of a scoring system for screening high-risk\nesophageal varices. Clin Gastroenterol Hepatol. 2019;17:1894-\n1901. e1.\n\n44. Gatos |, Tsantis S, Spiliopoulos S, et al. A machine-learning algo-\nrithm toward color analysis for chronic liver disease classification,\nemploying ultrasound shear wave elastography. Ultrasound Med\nBiol. 2017;43:1797-1810.\n\n45. Decharatanachart P, Chaiteerakij R, Tiyarattanachai T,\nTreeprasertsuk S. Application of artificial intelligence in chronic\nliver diseases: a systematic review and meta-analysis. BMC Gastro-\nenterol. 2021;21:1-16.\n\n46. Ahn JC, Attia ZI, Rattan P, et al. Development of the Al-Cirrhosis-\nECG (ACE) Score: an electrocardiogram-based deep learning model\nin cirrhosis. Am J Gastroenterol. 2022;117:424—-432.\n\n47. Qi X, Li Z, Huang J, et al. Virtual portal pressure gradient from\nanatomic CT angiography. Gut. 2015;64:1004-1005.\n\n48. MusunuriB, Shetty S, Shetty DK, et al. Acute-on-chronic liver failure\nmortality prediction using an artificial neural network. Engineered\nScience. 2021;15:187-196.\n\n49. Wu K, Chen X, Ding M. Deep learning based classification of focal\nliver lesions with contrast-enhanced ultrasound. Optik.\n2014;125:4057-4063.\n\n50. Masuzaki R, Kanda T, Sasaki R, et al. Application of artificial intel-\nligence in hepatology: Minireview. Artif Intell Gastroenterol.\n2020;1:5-11.\n\n51. Yasaka K, Akai H, Abe O, Kiryu S. Deep learning with convolutional\nneural network for differentiation of liver masses at dynamic\ncontrastenhanced CT: a_ preliminary § study. Radiology.\n2018;286:887-896.\n\n52. Zhen S-h, Cheng M, Tao Y-b, et al. Deep learning for accurate diag-\nnosis of liver tumor based on magnetic resonance imaging and clin-\nical data. Front Oncol. 2020;10:680.\n\n53. Hassan TM, Elmogy M, Sallam E-S. Diagnosis of focal liver dis-\neases based on deep learning technique for ultrasound images.\nArabian J Sci Eng. 2017;42:3127-3140.\n\n54. Lee S, Choe EK, Kim SY, Kim HS, Park KJ, Kim D. Liver imaging fea-\ntures by convolutional neural network to predict the metachronous\nliver metastasis in stage [Ill colorectal cancer patients based on\npreoperative abdominal CT scan. BMC Bioinf. 2020;21:1-14.\n\n55. Sato M, Morimoto K, Kajihara S, et al. Machine-learning approach\nfor the development of a novel predictive model for the diagnosis of\nhepatocellular carcinoma. Sci Rep. 2019;9:1-7.\n\n56. Singal AG, Mukherjee A, Elmunzer BJ, et al. Machine learning algo-\nrithms outperform conventional regression models in predicting\ndevelopment of hepatocellular carcinoma. Am J Gastroenterol.\n2013;108:1723.\n\n57. Nam JY, Sinn DH, Bae J, Jang ES, Kim J-W, Jeong S-H. Deep\nlearning model for prediction of hepatocellular carcinoma in pa-\ntients with HBV-related cirrhosis on antiviral therapy. JHEP Reports.\n2020;2100175.\n\n58. Chaudhary K, Poirion OB, Lu L, Garmire LX. Deep learning—based\nmulti-omics integration robustly predicts survival in liver cancer.\nClin Cancer Res. 2018;24:1248-1259.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 94.2,
+            "box": [
+                1276.8,
+                346.6,
+                2278.3,
+                2577.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_13/region_2_list.png",
+            "text": "59. Saillard C, Schmauch B, Laifa O, et al. Predicting survival after he-\npatocellular carcinoma resection using deep learning on histologi-\ncal slides. Hepatology. 2020;72:2000-2013.\n\n60. Randhawa S, Alsadoon A, Prasad P, Al-Dala’in T, Dawoud A,\nAlrubaie A. Deep learning for liver tumour classification: enhanced\nloss function. Multimed Tool App!. 2021;80:4729-4750.\n\n61. Kiani A, Uyumazturk B, Rajpurkar P, et al. Impact of a deep learning\nassistant on the histopathologic classification of liver cancer. NPJ\ndigital medicine. 2020;3:1-8.\n\n62. A joint deep learning approach for automated liver and tumor seg-\nmentation. In: Gruber N, Antholzer S, Jaschke W, Kremser C,\nHaltmeier M, eds. 2019 13th International Conference on Sampling\nTheory and Applications (SampTA). IEEE; 2019.\n\n63. Alirr Ol. Deep learning and level set approach for liver and tumor\nsegmentation from CT scans. J Appl Clin Med Phys.\n2020;21:200-209.\n\n64. Azer SA. Deep learning with convolutional neural networks for iden-\ntification of liver masses and hepatocellular carcinoma: a system-\natic review. World J Gastrointest Oncol. 2019;11:1218.\n\n65. Chen M, Zhang B, Topatana W, et al. Classification and muta-\ntion prediction based on histopathology H&E images in liver\ncancer using deep learning. NPJ_ precision oncology.\n2020;4:1-7.\n\n66. Banerjee R, Das A, Ghoshal UC, Sinha M. Predicting mortality in pa-\ntients with cirrhosis of liver with application of neural network tech-\nnology. J Gastroenterol Hepatol. 2003;18:1054—-1060.\n\n67. Fang C, An J, Bruno A, et al. Consensus recommendations\nof three-dimensional visualization for diagnosis and manage-\nment of liver diseases. Hepatology International.\n2020;14:437-453.\n\n68. Khosravi B, Pourahmad S, Bahreini A, Nikeghbalian S, Mehrdad G.\nFive years survival of patients after liver transplantation and its\neffective factors by neural network and cox poroportional hazard\nregression models. Hepat Mon. 2015;15.\n\n69. Briceno J, Cruz-Ramirez M, Prieto M, et al. Use of artificial intelli-\ngence as an innovative donor-recipient matching model for liver\ntransplantation: results from a multicenter Spanish study.\nJ Hepatol. 2014;61:1020-1028.\n\n70. Tang A, Tam R, Cadrin-Chénevert A, et al. Canadian Association of\nRadiologists white paper on artificial intelligence in radiology. Can\nAssoc Radiol J. 2018;69:120-135.\n\n71. Castelvecchi D. Can we open the black box of Al? Nature.\n2016;538:20-23.\n\n72. Heida A, Knol M, Kobold AM, Bootsman J, Dijkstra G, van\nRheenen PF. Agreement between home-based measurement of\nstool calprotectin and ELISA results for monitoring inflammatory\nbowel disease activity. Clin Gastroenterol Hepatol.\n2017;15:1742-1749. e2.\n\n73. Ahn JC, Connell A, Simonetto DA, Hughes C, Shah VH. Application\nof artificial intelligence for the diagnosis and treatment of liver dis-\neases. Hepatology. 2021;73:2546-2563.\n\n74. Minerali E, Foil DH, Zorn KM, Lane TR, Ekins S. Comparing machine\nlearning algorithms for predicting drug-induced liver injury (DILI).\nMol Pharm. 2020;17:2628-2637.\n"
+        }
+    ]
+}

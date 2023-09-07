@@ -1,0 +1,181 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 13,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.8,
+            "box": [
+                213.4,
+                436.0,
+                2068.8,
+                586.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_01_title.png",
+            "text": "Development of a deep pathomics score for predicting hepatocellular\ncarcinoma recurrence after liver transplantation\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 95.62,
+            "box": [
+                212.9,
+                655.0,
+                2088.7,
+                861.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_02_text.png",
+            "text": "Wei-Feng Qu’? - Meng-Xin Tian? - Hong-Wei Lu‘ - Yu-Fu Zhou? - Wei-Ren Liu!” - Zheng Tang!” - Zhao Yao? -\nRun Huang? - Gui-Qi Zhu’? - Xi-Fei Jiang!” - Chen-Yang Tao! - Yuan Fang!” - Jun Gao’? - Xiao-Ling Wu\"? -\nJia-Feng Chen’? - Qian-Fu Zhao’? - Rui Yang!” - Tian-Hao Chu! - Jian Zhou’? - Jia Fan’? - Jin-Hua Yu‘ -\nYing-Hong Shi'?®\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 12.8,
+            "box": [
+                213.5,
+                979.2,
+                501.7,
+                1020.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_03_text.png",
+            "text": "© The Author(s) 2023\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.11,
+            "box": [
+                212.8,
+                1094.8,
+                372.3,
+                1143.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_04_title.png",
+            "text": "Abstract\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                211.9,
+                1149.1,
+                2275.1,
+                1300.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_05_text.png",
+            "text": "Background and purpose Tumor recurrence after liver transplantation (LT) impedes the curative chance for hepatocellular\ncarcinoma (HCC) patients. This study aimed to develop a deep pathomics score (DPS) for predicting tumor recurrence after\nliver transplantation using deep learning.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                213.7,
+                1304.7,
+                2277.8,
+                1563.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_06_text.png",
+            "text": "Patients and methods Two datasets of 380 HCC patients who underwent LT were enrolled. Residual convolutional neural\nnetworks were used to identify six histological structures of HCC. The individual risk score of each structure and DPS were\nderived by a modified DeepSurv network. Cox regression analysis and Concordance index were used to evaluate the prog-\nnostic significance. The cellular exploration of prognostic immune biomarkers was performed by quantitative and spatial\nproximity analysis according to three panels of 7-color immunofluorescence.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                212.4,
+                1566.0,
+                2278.5,
+                1876.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_07_text.png",
+            "text": "Results The overall classification accuracy of HCC tissue was 97%. At the structural level, immune cells were the most sig-\nnificant tissue category for predicting post-LT recurrence (HR 1.907, 95% CI 1.490-2.440). The C-indices of DPS achieved\n0.827 and 0.794 in the training and validation cohorts, respectively. Multivariate analysis for recurrence-free survival (RFS)\nshowed that DPS (HR 4.795, 95% CI 3.017—7.619) was an independent risk factor. Patients in the high-risk subgroup had a\nshorter RFS, larger tumor diameter and a lower proportion of clear tumor borders. At the cellular level, a higher infiltration\nof intratumoral NK cells was negatively correlated with recurrence risk.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                213.5,
+                1877.3,
+                2275.9,
+                1980.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_08_text.png",
+            "text": "Conclusions This study established an effective DPS. Immune cells were the most significant histological structure related to\nHCC recurrence. DPS performed well in post-LT recurrence prediction and the identification of clinicopathological features.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.47,
+            "box": [
+                210.8,
+                2033.6,
+                2073.9,
+                2084.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_09_text.png",
+            "text": "Keywords Hepatocellular carcinoma - Liver transplantation - Recurrence - Artificial intelligence - Immune cells\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 95.85,
+            "box": [
+                213.6,
+                2365.5,
+                1107.3,
+                2449.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_10_text.png",
+            "text": "Wei-Feng Qu, Meng-Xin Tian, Hong-Wei Lu and Yu-Fu Zhou\ncontributed equally to this work.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 49.84,
+            "box": [
+                210.6,
+                2493.4,
+                434.2,
+                2536.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_11_text.png",
+            "text": "Db] Jin-Hua Yu\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 6.75,
+            "box": [
+                265.7,
+                2536.3,
+                548.7,
+                2576.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_12_text.png",
+            "text": "jhyu @fudan.edu.cn\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 43.32,
+            "box": [
+                270.1,
+                2599.5,
+                487.7,
+                2640.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_01/region_13_text.png",
+            "text": "Ying-Hong Shi\n"
+        }
+    ]
+}

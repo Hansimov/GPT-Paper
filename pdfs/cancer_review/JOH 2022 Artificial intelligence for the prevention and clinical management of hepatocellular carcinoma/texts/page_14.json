@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 3,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 54.25,
+            "box": [
+                175.5,
+                252.0,
+                1229.2,
+                2344.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_14/region_1_text.png",
+            "text": "[57] Marouf M, Machart P, Bansal V, Kilian C, Magruder DS, Krebs CF, et al.\nRealistic in silico generation and augmentation of single-cell RNA-seq\ndata using generative adversarial networks. Nat Commun 2020;11:166.\n\n[58] Eraslan G, Simon LM, Mircea M, Mueller NS, Theis FJ. Single-cell RNA-seq\ndenoising using a deep count autoencoder. Nat Commun 2019;10:390.\n\n[59] Genshaft AS, Li S, Gallant CJ, Darmanis S, Prakadan SM, Ziegler CGK, et al.\nMultiplexed, targeted profiling of single-cell proteomes and _tran-\nscriptomes in a single reaction. Genome Biol 2016;17. https://doi.org/10.\n1186/s13059-016-1045-6.\n\n[60] Dey SS, Kester L, Spanjaard B, Bienko M, van Oudenaarden A. Integrated\ngenome and transcriptome sequencing of the same cell. Nat Biotechnol\n2015;33:285-289.\n\n[61] Macaulay IC, Haerty W, Kumar P, Li YI, Hu TX, Teng MJ, et al. G&T-seq:\nparallel sequencing of single-cell genomes and transcriptomes. Nat\nMethods 2015;12:519-522.\n\n[62] Nam JY, Lee J-H, Bae J, Chang Y, Cho Y, Sinn DH, et al. Novel model to\npredict HCC recurrence after liver transplantation obtained using deep\nlearning: a multicenter study. Cancers 2020;12:2791. https://doi.org/10.\n3390/cancers12102791.\n\n[63] Saillard C, Schmauch B, Laifa O, Moarii M, Toldo S, Zaslavskiy M, et al.\nPredicting survival after hepatocellular carcinoma resection using deep\nlearning on histological slides. Hepatology 2020;72:2000-2013.\n\n[64] Yamashita R, Long J, Saleem A, Rubin DL, Shen J. Deep learning predicts\npostsurgical recurrence of hepatocellular carcinoma from digital histo-\npathologic images. Sci Rep 2021;11:2047.\n\n[65] Lu L, Daigle Jr BJ. Prognostic analysis of histopathological images using\npre-trained convolutional neural networks: application to hepatocellular\ncarcinoma. Peer] 2020;8:e8668.\n\n[66] Saito A, Toyoda H, Kobayashi M, Koiwa Y, Fujii H, Fujita K, et al. Prediction\nof early recurrence of hepatocellular carcinoma after resection using\ndigital pathology images assessed by machine learning. Mod Pathol\n2021;34:417-425.\n\n[67] Ji G-W, Zhu F-P, Xu Q, Wang K, Wu M-Y, Tang W-W, et al. Machine-\nlearning analysis of contrast-enhanced CT radiomics predicts recurrence\nof hepatocellular carcinoma after resection: a multi-institutional study.\nEBioMedicine 2019;50:156-165.\n\n[68] Song D, Wang Y, Wang W, Wang Y, Cai J, Zhu K, et al. Using deep learning\nto predict microvascular invasion in hepatocellular carcinoma based on\ndynamic contrast-enhanced MRI combined with clinical parameters.\nJ Cancer Res Clin Oncol 2021. https://doi.org/10.1007/s00432-021-\n03617-3.\n\n[69] Zhang Y, Lv X, Qiu J, Zhang B, Zhang L, Fang J, et al. Deep learning with 3D\nconvolutional neural network for noninvasive prediction of microvascular\ninvasion in hepatocellular carcinoma. J Magn Reson Imaging\n2021;54:134-143.\n\n[70] Jiang Y-Q, Cao S-E, Cao S, Chen J-N, Wang G-Y, Shi W-Q, et al. Preoperative\nidentification of microvascular invasion in hepatocellular carcinoma by\nXGBoost and deep learning. J Cancer Res Clin Oncol 2021;147:821-833.\n\n[71] Wang W, Chen Q, Iwamoto Y, Han X, Zhang Q, Hu H, et al. Deep learning-\nbased radiomics models for early recurrence prediction of hepatocellular\ncarcinoma with multi-phase CT images and clinical data. Conf Proc IEEE\nEng Med Biol Soc 2019;2019:4881-4884.\n\n[72] Abajian A, Murali N, Savic LJ, Laage-Gaupp FM, Nezami N, Duncan Js,\net al. Predicting treatment response to intra-arterial therapies for he-\npatocellular carcinoma with the use of supervised machine learning-an\nartificial intelligence concept. J Vasc Interv Radiol 2018;29:850-857.e1.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 11.88,
+            "box": [
+                1886.6,
+                146.4,
+                2304.4,
+                206.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_14/region_2_title.png",
+            "text": "OF HEPATOLOGY\n"
+        },
+        {
+            "idx": 3,
+            "thing": "list",
+            "score": 61.78,
+            "box": [
+                1260.4,
+                263.6,
+                2311.9,
+                2362.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_14/region_3_list.png",
+            "text": "[/3} LIU Q-rF, AU A, ZNU F-F, 2ZNdng Y-V, LIU A-o. Freaiction OF Prognostic Fisk\nfactors in hepatocellular carcinoma with transarterial chemoembolization\nusing multi-modal multi-task deep learning. EClinicalMedi-\ncine 2020;23:100379.\n\n[74] Zhang L, Xia W, Yan Z-P, Sun J-H, Zhong B-Y, Hou Z-H, et al. Deep learning\npredicts overall survival of patients with unresectable hepatocellular\ncarcinoma treated by transarterial chemoembolization plus sorafenib.\nFront Oncol 2020;10:593292.\n\n[75] Peng J, Kang S, Ning Z, Deng H, Shen J, Xu Y, et al. Residual convolutional\nneural network for predicting response of transarterial chemo-\nembolization in hepatocellular carcinoma from CT imaging. Eur Radiol\n2020;30:413-424.\n\n[76] Oezdemir I, Wessner CE, Shaw C, Eisenbrey JR, Hoyt K. Tumor vascular\nnetworks depicted in contrast-enhanced ultrasound images as a predictor\nfor transarterial chemoembolization treatment response. Ultrasound Med\nBiol 2020;46:2276-2286.\n\n[77] Bauchner H, Golub RM, Fontanarosa PB. Data sharing: an ethical and\nscientific imperative. JAMA 2016;315:1237-1239.\n\n[78] Xu F, Uszkoreit H, Du Y, Fan W, Zhao D, Zhu J. Explainable Al: a brief\nsurvey on history, research areas, approaches and challenges. Natural\nlanguage processing and Chinese computing. Springer International\nPublishing; 2019. p. 563-574.\n\n[79] Wang P, Berzin TM, Glissen Brown JR, Bharadwaj S, Becq A, Xiao X, et al.\nReal-time automatic detection system increases colonoscopic polyp and\nadenoma detection rates: a prospective randomised controlled study. Gut\n2019;68:1813-1819.\n\n[80] WuL, Zhang J, Zhou W, AnP, Shen L, Liu J, et al. Randomised controlled trial of\nWISENSE, a real-time quality improving system for monitoring blind spots\nduring esophagogastroduodenoscopy. Gut 2019;68:2161-2169.\n\n[81] Cruz Rivera S, Liu X, Chan A-W, Denniston AK, Calvert MJ, et al., SPIRIT-AI\nand CONSORT-AI Working Group. Guidelines for clinical trial protocols for\ninterventions involving artificial intelligence: the SPIRIT-AI extension. Nat\nMed 2020;26:1351-1363.\n\n[82] Liu X, Cruz Rivera S, Moher D, Calvert MJ, Denniston AK, SPIRIT-AI and\nCONSORT-AI Working Group. Reporting guidelines for clinical trial re-\nports for interventions involving artificial intelligence: the CONSORT-AI\nextension. Nat Med 2020;26:1364-1374.\n\n[83] (md) CGB. Identifier NCT04843176. A prototype Artificial intelligence al-\ngorithm versus liver imaging reporting and data system (LI-RADS) criteria\nin diagnosing hepatocellular carcinoma on computed tomography: a\nrandomized trial. National Library of Medicine (US); 2021.\n\n[84] Gov C. NCT04802954. Risk stratification of hepatocarcinogenesis using a\ndeep learning based clinical, biological and ultrasound model in high-risk\npatients (STARHE). 2021.\n\n[85] Hodi FS, O’Day SJ, McDermott DF, Weber RW, Sosman JA, Haanen JB, et al.\nImproved survival with ipilimumab in patients with metastatic mela-\nnoma. N Engl J Med 2010;363:711-723.\n\n[86] Borghaei H, Paz-Ares L, Horn L, Spigel DR, Steins M, Ready NE, et al.\nNivolumab versus docetaxel in advanced nonsquamous non-small-cell\nlung cancer. N Engl J Med 2015;373:1627-1639.\n\n[87] Garon EB, Rizvi NA, Hui R, Leigh! N, Balmanoukian AS, Eder JP, et al.\nPembrolizumab for the treatment of non-small-cell lung cancer. N Engl J\nMed 2015;372:2018-2028.\n\n[88] Li X, Ramadori P, Pfister D, Seehawer M, Zender L, Heikenwalder M. The\nimmunological and metabolic landscape in primary and metastatic liver\ncancer. Nat Rev Cancer 2021;21:541-557.\n"
+        }
+    ]
+}

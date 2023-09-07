@@ -1,0 +1,38 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 2,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 75.96,
+            "box": [
+                177.4,
+                196.2,
+                1205.0,
+                1209.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_1_list.png",
+            "text": "16 LiY, Ping W. Cancer metastasis detection with neural conditional random field. arXiv\n2018.\n\n17 He K, Zhang X, Ren S, et a/. Deep residual learning for image recognition. Proc IEEE\nConf Comput Vis Pattern Recognit 2016.\n\n18 Zhou N, Cai D, Han X, et a/. Enhanced Cycle-Consistent Generative Adversarial\nNetwork for Color Normalization of H&E Stained Images. Med Image Comput Comput\nAssist Interv 2019;11764:694—702.\n\n19 Newman AM, Liu CL, Green MR, et a/. Robust enumeration of cell subsets from tissue\nexpression profiles. Nat Methods 2015;12:453-7.\n\n20 McDermott DF, Huseni MA, Atkins MB, et a/. Clinical activity and molecular correlates\nof response to atezolizumab alone or in combination with bevacizumab versus\nsunitinib in renal cell carcinoma. Nat Med 2018;24:749-57.\n\n21 Gao Q, Wang Z-C, Duan M, et a/. Cell Culture System for Analysis of Genetic\nHeterogeneity Within Hepatocellular Carcinomas and Response to Pharmacologic\nAgents. Gastroenterology 2017;152:232-42.\n\n22 Hoshida Y, Villanueva A, Kobayashi M, et a/. Gene expression in fixed tissues and\noutcome in hepatocellular carcinoma. N Eng/ J Med 2008;359:1995-2004.\n\n23 Gao Q, Wang X-Y, Qiu S-J, et a/. Tumor stroma reaction-related gene signature predicts\nclinical outcome in human hepatocellular carcinoma. Cancer Sci 2011;102:1522-31.\n\n24 Mobadersany P, Yousefi S, Amgad M, et a/. Predicting cancer outcomes from\nhistology and genomics using convolutional networks. Proc Natl Acad Sci USA\n2018;115:E2970-9.\n\n25 N Kalimuthu S, Wilson GW, Grant RC, et a/. Morphological classification of pancreatic\nductal adenocarcinoma that predicts molecular subtypes and correlates with clinical\noutcome. Gut 2020;69:317—28.\n\n26 Kleppe A, Albregtsen F, Viatkovic L, et a/. Chromatin organisation and cancer\nprognosis: a pan-cancer study. Lancet Oncol 2018;19:356-69.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 61.14,
+            "box": [
+                1279.6,
+                196.2,
+                2298.1,
+                1210.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_2_list.png",
+            "text": "27 Reichling C, Taieb J, Derangere V, et a/. Artificial intelligence-guided tissue analysis\ncombined with immune infiltrate assessment predicts stage III colon cancer outcomes\nin PETACC08 study. Gut 2020;69:68 1-90.\n\n28 Liao H, Xiong T, Peng J, et a/. Classification and prognosis prediction from\nhistopathological images of hepatocellular carcinoma by a fully automated pipeline\nbased on machine learning. Ann Surg Oncol 2020;27:2359-69.\n\n29 Saillard C, Schmauch B, Laifa O, et a/. Predicting survival after hepatocellular\ncarcinoma resection using deep-learning on histological slides. Hepatology 2020.\ndoi:10.1002/hep.31207. [Epub ahead of print: 28 Feb 2020].\n\n30 Courtiol P, Maussion C, Moarii M, et a/. Deep learning-based classification\nof mesothelioma improves prediction of patient outcome. Vat Med\n2019;25:1519-25.\n\n31 Katoh M. Function and cancer genomics of fat family genes (review). /nt J Oncol\n2012;41:1913-8.\n\n32 Liang JQ, Teoh N, Xu L, et a/. Dietary cholesterol promotes steatohepatitis related\nhepatocellular carcinoma through dysregulated metabolism and calcium signaling.\nNat Commun 2018;9:4490.\n\n33 Chaudhary K, Poirion OB, Lu L, et a/. Deep Learning-Based multi-omics integration\nrobustly predicts survival in liver cancer. Clin Cancer Res 2018;24:1248-59.\n\n34 Ringelhan M, Pfister D, O'Connor T, et a/. The immunology of hepatocellular\ncarcinoma. Nat Immunol 2018;19:222-32.\n\n35 Dong Z-R, Sun D, Yang Y-F, et a/. Tmprss4 drives angiogenesis in hepatocellular\ncarcinoma by promoting HB-EGF expression and proteolytic cleavage. Hepatology\n2019. doi:10.1002/hep.3 1076. [Epub ahead of print: 22 Dec 2019].\n\n36 Finn RS, Qin S, Ikeda M, et a/. Atezolizumab plus bevacizumab in unresectable\nhepatocellular carcinoma. NV Engl J Med 2020;382:1894-905.\n"
+        }
+    ]
+}

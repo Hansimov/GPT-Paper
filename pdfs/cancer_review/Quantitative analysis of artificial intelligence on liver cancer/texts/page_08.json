@@ -1,0 +1,128 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 9,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.34,
+            "box": [
+                176.9,
+                286.9,
+                2301.4,
+                1115.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_08/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 76.89,
+            "box": [
+                225.4,
+                1122.9,
+                325.4,
+                1156.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_08/region_2_title.png",
+            "text": "FIGURE 7\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 95.96,
+            "box": [
+                221.8,
+                1159.9,
+                1448.3,
+                1194.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_08/region_3_text.png",
+            "text": "Visualization map of top 25 references with the strongest citation bursts from 2003 to 2022.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                177.3,
+                1306.9,
+                1221.2,
+                2758.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_08/region_4_text.png",
+            "text": "Regarding data type, studies of AI in liver cancer started from the\nsimple data modeling of genetic or molecular data (9-11). With the\ndevelopment of medical imaging, research on medical imaging has\nbeen gradually increasing. CT, ultrasound, and MRI are the top three\nmost used data types. First, this may because CT and MRI can be used\nas the basis for clinical treatment strategies for patients with liver\ncancer based on guidelines for liver cancer diagnosis. Moreover,\nultrasound, as a screening method for patients at high risk of liver\ncancer, needs to be checked every six months. Therefore, the data\nvolume of these three imaging methods has greatly increased, which\nhas promoted the development of AI in liver cancer (37-39). Second,\ncompared with MRI, CT has the advantages of fast inspection speed\nand cost-effectiveness, and is an indispensable and important imaging\nmethod in the diagnosis and treatment of liver cancer. Finally,\nalthough ultrasound is widely used in clinical practice, its image\nacquisition is seriously affected by the doctor’s operation technique\nand machine model, the resolution is low, and the processing is\ndifficult. Therefore, it is used less often than CT. However, it is worth\nnoting that contrast-enhanced ultrasound has now been included as a\nrecommended imaging modality for the diagnosis of liver cancer (40,\n41) and is also widely used in the development and prognostic\nevaluation of ultrasound-guided radiofrequency ablation. This\nsuggests that we could pay attention to the important role of\nultrasound in liver cancer clinics in future research. At the same\ntime, few studies used pathological, genetic, and other clinical data\n(42-44). The main reason may be that the medical cost of genetic\nexamination is high and the realization of AI in multiomics research\nis difficult.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                178.0,
+                2764.5,
+                1221.0,
+                3227.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_08/region_5_text.png",
+            "text": "In the cross-analysis of data types and diseases, we found that\nbiopsy was used as an important data type in studies of AI in liver\nfibrosis. This is mainly because the histopathological examination of\nliver biopsy is still the gold standard for the diagnosis of liver fibrosis\n(45). Conventional CT/MRI examinations can observe morphological\nchanges of the liver; however, quantitative assessment of early-stage\nliver fibrosis is still difficult and is therefore less used. Although\nultrasound elastography and magnetic resonance elastography (MRE)\nare highly effective non-invasive assessment methods in the diagnosis\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                1269.7,
+                1306.2,
+                2312.9,
+                1716.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_08/region_6_text.png",
+            "text": "of liver fibrosis, a unified MRE liver elasticity value for liver fibrosis\nwith different etiologies has not been established (46-48). This also\nindicates that the use of AI to quantitatively analyze liver fibrosis by\nimaging is a problem worthy of further study. In studies of AI in fatty\nliver disease, ultrasound is the first choice, mainly because of its high\nsensitivity in the diagnosis of diffuse fatty liver, convenience, cost-\neffectiveness, and safety, and plays an important role in judging the\nstatus of liver parenchyma.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                1269.1,
+                1722.2,
+                2313.6,
+                2393.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_08/region_7_text.png",
+            "text": "In terms of clinical goals, the diagnosis and differential diagnosis\nof liver cancer on medical imaging are still major research priorities\n(19, 49-53). However, the clinical diagnosis of liver cancer is a\ncomprehensive process, especially because of the variety and\natypical characteristics of focal liver lesions. For example, dysplastic\nnodules in the state of liver cirrhosis have strong malignant potential,\nespecially high-grade dysplastic nodules, and they are difficult to\ndistinguish from early liver cancer in imaging. A comprehensive\nevaluation of the clinical indicators of the patient is usually required,\nincluding alpha-fetoprotein and abnormal prothrombin (54-58).\nHowever, there are still few studies that combine multiple types of\ndata such as genetic data, molecular data, imaging data, and clinical\nindicators, and lack the support of large data and multi-center studies.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                1269.3,
+                2399.8,
+                2313.5,
+                2966.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_08/region_8_text.png",
+            "text": "Studies on the treatment and prognosis of liver cancer mainly\nfocused on the survival of a specific surgical method (59-66), such as\nradiofrequency ablation, transarterial chemoembolization and etc.\nReports have proven that the modern therapies integrate a variety\nof neoadjuvant and adjuvant strategies have achieved dramatic\nimprovements in survival, especially for patients with advanced\nHCC (66, 67). But the division of the patient population, the choice\nof potentially disclosing novel biomarkers still are controversies and\nthe decision-making of precision treatment methods adapted to the\nspecific patients, AI can play a role in this, but related research has not\nyet been seen.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                1270.3,
+                2972.5,
+                2313.8,
+                3227.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_08/region_9_text.png",
+            "text": "In terms of methods used, some studies used traditional\nalgorithms (51-53), such as support vector machine and random\nforests models, which were mainly concentrated in the early research\nstage. Since 2012, deep learning with CNNs has been widely used in\nthe field, involving common tasks in the field of machine learning\n"
+        }
+    ]
+}

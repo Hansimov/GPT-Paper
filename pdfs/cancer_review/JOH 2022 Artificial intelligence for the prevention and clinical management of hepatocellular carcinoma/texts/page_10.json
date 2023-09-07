@@ -1,0 +1,89 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 6,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.87,
+            "box": [
+                204.8,
+                273.8,
+                2275.9,
+                1639.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_10/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                177.6,
+                1684.7,
+                2306.1,
+                1872.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_10/region_2_text.png",
+            "text": "Fig. 4. Artificial intelligence could support doctors in decision making in tumour therapy in the future. (A) Current oncologic therapy pattern. After an initial\nfirst-line therapy, the tumour is evading therapy through resistance mechanisms. The following tumour growth is recognised during radiologic follow-up leading\nto therapy adjustment. (B) Hypothetical, future, Al-supported therapy pattern. Initial, individualized first-line therapy decision, accounting for an Al-based\nrecommendation. After an AI algorithm predicts progression of a tumour, doctors decide to adjust therapy before the tumour can develop resistance to ther-\napy and grow again.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                177.7,
+                1952.1,
+                1000.4,
+                2906.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_10/region_3_text.png",
+            "text": "models were developed for the fields of radiology\n(e.g. CT scan image reconstruction or brain MRI\ninterpretation), cardiology (e.g. electrocardiogram\nanalysis, cardiac monitoring) and ophthalmology\n(detection of diabetic retinopathy). Interestingly the\nFDA has also very recently granted its first clearance\nfor an Al-based pathology software application. The\nproduct analyses digital slides of prostatic biopsies,\nhighlights areas that are most likely to contain\ncancer and flags them for further review by a\npathologist (https://www.paige.ai/). This landmark\napproval marks the beginning of a new era in the\nuse of Al-assisted diagnostics for pathology, and it is\nvery likely that models aiming to assist HCC histo-\nlogical diagnosis/prognosis assessment will also be\navailable soon. They are particularly needed to assist\nwith the differentiation of benign vs. malignant\nhepatocellular tumours, and also for a more robust\nand standardised diagnosis of rare pathological en-\ntities, such as combined hepatocellular-cholangio-\ncarcinoma or fibrolamellar carcinoma.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 96.06,
+            "box": [
+                1034.2,
+                1952.0,
+                1584.8,
+                1993.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_10/region_4_title.png",
+            "text": "Explaining “the black box” of AI\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1034.4,
+                1998.3,
+                1860.1,
+                2723.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_10/region_5_text.png",
+            "text": "A common issue for all existing and future AI ap-\nplications is to make their decisions comprehen-\nsible to the user. The term “explainable Al” refers to\na particular set of methods that allows users to\ncomprehend how the AI models work and make\ntheir decisions. It thus provides feedback on the\nmost important features involved in the pre-\ndictions and helps to understand the potential\nbiases. This transparency is critical to build up the\ntrust needed to convince doctors to rely on these\ncomputer-aided devices they might be using in the\nfuture. The approaches most commonly used in DL\nconsist of extremely complex layers of mathemat-\nical computation, and it is thus very difficult to gain\ninsights into how the data are transformed\nthroughout the whole network.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1034.7,
+                2728.7,
+                1859.9,
+                2906.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_10/region_6_text.png",
+            "text": "Explainable AI is however an active field of\nresearch and many aim to open the black boxes of\nNNs. The main strands of work are making the\nnetworks “transparent”, learning the semantics of\n"
+        }
+    ]
+}

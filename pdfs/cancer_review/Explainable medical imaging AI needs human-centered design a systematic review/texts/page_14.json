@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 97.62,
+            "box": [
+                192.8,
+                246.8,
+                1222.7,
+                3048.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_14/region_1_list.png",
+            "text": "91. Chen, H., Miao, S., Xu, D., Hager, G. D. & Harrison, A. P. Deep hiearchical multi-\nlabel classification applied to chest x-ray abnormality taxonomies. Med. Image\nAnal. 66, 101811 (2020).\n\n92. Verma, A., Shukla, P. & Verma, S. An interpretable SVM based model for cancer\nprediction in mammograms. 1st International Conference on Communication,\nNetworks and Computing, CNC 2018, March 22, 2018 - March 24, 2018 839,\n443-451 (2019).\n\n93. Li, Y. et al. Computer-aided cervical cancer diagnosis using time-lapsed colpo-\nscopic images. /EEE Trans. Med. Imaging 39, 3403-3415 (2020).\n\n94. Wang, K. et al. A dual-mode deep transfer learning (D2TL) system for breast\ncancer detection using contrast enhanced digital mammograms. //SE Trans.\nHealthcare Syst. Eng. 9, 357-370 (2019).\n\n95. Zhao, G., Zhou, B., Wang, K., Jiang, R. & Xu, M. Respond-CAM: Analyzing deep\nmodels for 3D imaging data by visualizations. 21st International Conference on\nMedical Image Computing and Computer Assisted Intervention, MICCAI 2018,\nSeptember 16, 2018 - September 20, 2018 11070 LNCS, 485-492 (2018).\n\n96. Folke, T., Yang, S. C.-H., Anderson, S. & Shafto, P. Explainable Al for medical\nimaging: Explaining pneumothorax diagnoses with Bayesian teaching. Artificial\nIntelligence and Machine Learning for Multi-Domain Operations Applications III\n2021, April 12, 2021 - April 16, 2021 11746, The Society of Photo-Optical\nInstrumentation Engin. https://doi.org/10.1117/12.2585967NS (2021).\n\n97. Liao, W. et al. Clinical interpretable deep learning model for glaucoma diagnosis.\nIEEE J. Biomed. Health Inf. 24, 1405-1412 (2020).\n\n98. Shinde, S., Chougule, T., Saini, J. & Ingalhalikar, M. HR-CAM: Precise localization\nof pathology using multi-level learning in CNNS. 22nd International Conference\non Medical Image Computing and Computer-Assisted Intervention, MICCAI 2019,\nOctober 13, 2019 - October 17, 2019 11767 LNCS, 298-306 (2019).\n\n99. Ballard, D. H. Modular learning in neural networks. AAA! 647, 279-284 (1987).\n\n100. Biffi, C. et al. Learning interpretable anatomical features through deep gen-\nerative models: Application to cardiac remodeling. 27st International Conference\non Medical Image Computing and Computer Assisted Intervention, MICCAI 2018,\nSeptember 16, 2018 - September 20, 2018 11071 LNCS, 464-471 (2018).\n\n101. Couteaux, V., Nempont, O., Pizaine, G. & Bloch, |. Towards interpretability of\nsegmentation networks by analyzing deepDreams. 2nd International Workshop\non Interpretability of Machine Intelligence in Medical Image Computing, iMIMIC\n2019, and the 9th International Workshop on Multimodal Learning for Clinical\nDecision Support, ML-CDS 2019, held in conjunction with the 22nd Interna 11797\nLNCS, 56-63 (2019).\n\n102. Guo, X. et al. Intelligent medical image grouping through interactive learning.\nInt. J. Data Sci. Anal. 2, 95-105 (2016).\n\n103. Janik, A., Dodd, J., Ifrim, G., Sankaran, K. & Curran, K. Interpretability of a deep\nlearning model in the application of cardiac MRI segmentation with an ACDC\nchallenge dataset. Medical Imaging 2021: Image Processing, February 15, 2021 -\nFebruary 19, 2021 11596, The Society of Photo-Optical Instrumentation Engin.\nhttps://doi.org/10.1117/12.2582227NS (2021).\n\n104. Sari, C. T. & Gunduz-Demir, C. Unsupervised feature extraction via deep learning\nfor histopathological classification of colon tissue images. [EEE Trans. Med.\nImaging 38, 1139-1149 (2019).\n\n105. Venugopalan, J., Tong, L., Hassanzadeh, H. R. & Wang, M. D. Multimodal deep\nlearning models for early detection of Alzheimer’s disease stage. Sci. Rep. 11,\n3254 (2021).\n\n106. Zhu, P. & Ogino, M. Guideline-based additive explanation for computer-aided\ndiagnosis of lung nodules. 2nd International Workshop on Interpretability of\nMachine Intelligence in Medical Image Computing, iMIMIC 2019, and the 9th\nInternational Workshop on Multimodal Learning for Clinical Decision Support, ML-\nCDS 2019, held in conjunction with the 22nd Interna 11797 LNCS, 39-47 (2019).\n\n107. Pirovano, A., Heuberger, H., Berlemont, S., Ladjal, S. & Bloch, |. Improving\ninterpretability for computer-aided diagnosis tools on whole slide imaging with\nmultiple instance learning and gradient-based explanations. 3rd International\nWorkshop on Interpretability of Machine Intelligence in Medical Image Computing,\niMIMIC 2020, the 2nd International Workshop on Medical Image Learning with Less\nLabels and Imperfect Data, MIL3ID 2020, and the 5th International Workshop o\n12446 LNCS, 43-53 (2020).\n\n108. Hao, J., Kosaraju, S. C., Tsaku, N. Z., Song, D. H. & Kang, M. PAGE-Net: inter-\npretable and integrative deep learning for survival analysis using histopatho-\nlogical images and genomic data. Pacific Symposium on Biocomputing. Pacific\nSymposium on Biocomputing 25, 355-366 (2020).\n\n109. de Sousa, |. P., Vellasco, M. M. B. R. & da Silva, E. C. Approximate explanations for\nclassification of histopathology patches. Workshops of the 20th Joint European\nConference on Machine Learning and Knowledge Discovery in Databases, ECML\nPKDD, September 14, 2020 - September 18, 2020 1323, 517-526 (2020).\n\n110. Li, X., Dvornek, N. C., Zhuang, J., Ventola, P. & Duncan, J. S. Brain biomarker\ninterpretation in ASD using deep learning and fMRI. 27st International Con-\nference on Medical Image Computing and Computer Assisted Intervention, MICCAI\n2018, September 16, 2018 - September 20, 2018 11072 LNCS, 206-214 (2018).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 98.97,
+            "box": [
+                1303.6,
+                252.3,
+                2331.6,
+                2820.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_14/region_2_list.png",
+            "text": "111. Quellec, G. et al. ExplAln: Explanatory artificial intelligence for diabetic retino-\npathy diagnosis. Med. Image Anal. 72, https://www.embase.com/search/results?\nsubaction=viewrecord&id=L2012995582&from=exporthttps://doi.org/10.1016/\nj.media.2021.102118 (2021).\n\n112. Uzunova, H., Ehrhardt, J., Kepp, T. & Handels, H. Interpretable explanations of\nblack box classifiers applied on medical images by meaningful perturbations\nusing variational autoencoders. Medical Imaging 2019: Image Processing, Feb-\nruary 19, 2019 - February 21, 2019 10949, The Society of Photo-Optical Instru-\nmentation Engin. https://doi.org/10.1117/12.2511964NS (2019).\n\n113. Liu, J. et al. Ultrasound liver fibrosis diagnosis using multi-indicator guided deep\nneural networks. 70th International Workshop on Machine Learning in Medical\nImaging, MLMI 2019 held in conjunction with the 22nd International Conference\non Medical Image Computing and Computer-Assisted Intervention, MICCAI 2019,\nOctober 13, 2019 - October 13, 2019 11861 LNCS, 230-237 (2019).\n\n114. Liu, Y. et al. Act like a radiologist: towards reliable multi-view correspondence\nreasoning for mammogram mass detection. /EEE Trans. Pattern Anal. Mach. Intell.\nhttps://doi.org/10.1109/TPAMI.2021.3085783NS (2021).\n\n115. Oktay, O. et al. Anatomically constrained neural networks (ACNNs): application\nto cardiac image enhancement and segmentation. /EEE Trans. Med. Imaging 37,\n384-395 (2018).\n\n116. Peng, T., Boxberg, M., Weichert, W., Navab, N. & Marr, C. Multi-task learning of a\ndeep K-nearest neighbour network for histopathological image classification\nand retrieval. 22nd International Conference on Medical Image Computing and\nComputer-Assisted Intervention, MICCAI 2019, October 13, 2019 - October 17, 2019\n11764 LNCS, 676-684 (2019).\n\n117. Liu, Y., Li, Z, Ge, Q, Lin, N. & Xiong, M. Deep Feature Selection and Causal\nAnalysis of Alzheimer's Disease. Front. Neurosci. 13, https://www.embase.com/\nsearch/results?subaction=viewrecord&id=L629992085&\nfrom=exporthttps://doi.org/10.3389/fnins.2019.01198 (2019).\n\n118. Ren, H. et al. Interpretable pneumonia detection by combining deep learning\nand explainable models with multisource data. IEEE Access 9, 95872-95883\n(2021).\n\n119. Velikova, M., Lucas, P. J. F., Samulski, M. & Karssemeijer, N. On the interplay of\nmachine learning and background knowledge in image interpretation by\nBayesian networks. Artif. Intell. Med. 57, 73-86 (2013).\n\n120. Carneiro, G. Zorron Cheng Tao Pu, L., Singh, R. & Burt, A. Deep learning\nuncertainty and confidence calibration for the five-class polyp classification\nfrom colonoscopy. Med. Image Anal. 62, https://www.embase.com/search/\nresults?subaction=viewrecord&id=L2005 189093&from=exporthttps://doi.org/\n10.1016/j.media.2020.101653 (2020).\n\n121. Sabol, P. et al. Explainable classifier for improving the accountability in decision-\nmaking for colorectal cancer diagnosis from histopathological images. J.\nBiomed. Inf. 109, https://www.embase.com/search/results?subaction=\nviewrecord&id=L2007460563&from=exporthttps://doi.org/10.1016/j jbi.2020.\n103523 (2020).\n\n122. Tanno, R. et al. Uncertainty modelling in deep learning for safer neuroimage\nenhancement: Demonstration in diffusion MRI. Neurolmage 225, https://\nwww.embase.com/search/results?subaction=viewrecord&id=L2008373754&\nfrom=exporthttps://doi.org/10.1016/j.neuroimage.2020.117366 (2021).\n\n123. Doshi-Velez, F. & Kim, B. Towards a rigorous science of interpretable machine\nlearning. preprint athttps://arxiv.org/abs/1702.08608 (2017).\n\n124. Adebayo, J. et al. Sanity checks for saliency maps. In Bengio, S. et al. (eds.)\nAdvances in Neural Information Processing Systems, vol. 31, https://\nproceedings.neurips.cc/paper/2018/file/294a8ed24b1ad22ec2e7efea049b8737-\nPaper.pdf (Curran Associates, Inc., 2018).\n\n125. Yeche, H., Harrison, J. & Berthier, T. UBS: A dimension-agnostic metric for con-\ncept vector interpretability applied to radiomics. 2nd International Workshop on\nInterpretability of Machine Intelligence in Medical Image Computing, iMIMIC 2019,\nand the 9th International Workshop on Multimodal Learning for Clinical Decision\nSupport, ML-CDS 2019, held in conjunction with the 22nd Interna 11797 LNCS,\n12-20 (2019).\n\n126. Chen, H., Miao, S., Xu, D., Hager, G. D. & Harrison, A. P. Deep hierarchical multi-\nlabel classification of chest x-ray images. In International Conference on Medical\nImaging with Deep Learning, 109-120 (PMLR, 2019).\n\n127. Zhang, Z. et al. Origa-light: An online retinal fundus image database for glau-\ncoma analysis and research. In 2070 Annual International Conference of the IEEE\nEngineering in Medicine and Biology, 3065-3068 (IEEE, 2010).\n\n128. Menze, B. H. et al. The multimodal brain tumor image segmentation benchmark\n(brats). IEEE Trans. Med. Imaging 34, 1993-2024 (2014).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 97.83,
+            "box": [
+                1299.1,
+                2977.8,
+                1677.6,
+                3017.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_14/region_3_title.png",
+            "text": "ACKNOWLEDGEMENTS\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.13,
+            "box": [
+                1297.3,
+                3030.7,
+                2205.6,
+                3062.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_14/region_4_text.png",
+            "text": "We acknowledge all authors for the contribution. No funding is included.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 9.31,
+            "box": [
+                1295.8,
+                3135.0,
+                2331.4,
+                3170.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_14/region_5_text.png",
+            "text": "Published in partnership with Seoul National University Bundang Hospital\n"
+        }
+    ]
+}

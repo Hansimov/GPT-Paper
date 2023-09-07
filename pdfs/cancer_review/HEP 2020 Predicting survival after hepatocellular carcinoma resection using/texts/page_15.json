@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_15.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_15.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 3,
+        "page_idx": 15
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 62.05,
+            "box": [
+                248.7,
+                261.8,
+                509.4,
+                328.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_15/region_1_title.png",
+            "text": "References\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 88.15,
+            "box": [
+                240.1,
+                389.1,
+                2246.4,
+                2899.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_15/region_2_list.png",
+            "text": "1. Llovet JM, Zucman-Rossi J, Pikarsky E, Sangro B, Schwartz M, Sherman M, Gores G.\nHepatocellular carcinoma. Nat Rev Dis Primers 2016;2:16018.\n\n2. Goldblum JR, Lamps LW, McKenney JK, Myers JL, Ackerman LV, Rosai J. Rosai and\nAckerman's surgical pathology. Eleventh edition. ed. Philadelphia, PA: Elsevier, 2018: 2 volumes\n(xiv, 2142 pages).\n\n3. Niazi MKK, Parwani AV, Gurcan MN. Digital pathology and artificial intelligence. Lancet\nOncol 2019;20:e253-e261.\n\n4. Ehteshami Bejnordi B, Veta M, Johannes van Diest P, van Ginneken B, Karssemeijer N,\nLitjens G, van der Laak J, et al. Diagnostic Assessment of Deep Learning Algorithms for\nDetection of Lymph Node Metastases in Women With Breast Cancer. JAMA 2017;318:2199-\n2210.\n\n5. Coudray N, Ocampo PS, Sakellaropoulos T, Narula N, Snuderl M, Fenyo D, Moreira AL,\net al. Classification and mutation prediction from non-small cell lung cancer histopathology\nimages using deep learning. Nat Med 2018;24:1559-1567.\n\n6. Yu KH, Zhang C, Berry GJ, Altman RB, Re C, Rubin DL, Snyder M. Predicting non-small\ncell lung cancer prognosis by fully automated microscopic pathology image features. Nat\nCommun 2016;7:12474.\n\n7. Mobadersany P, Yousefi S, Amgad M, Gutman DA, Barnholtz-Sloan JS, Velazquez Vega\nJE, Brat DJ, et al. Predicting cancer outcomes from histology and genomics using convolutional\nnetworks. Proc Natl Acad Sci U S A 2018;115:E2970-E2979.\n\n8. Kather JN, Krisam J, Charoentong P, Luedde T, Herpel E, Weis CA, Gaiser T, et al.\nPredicting survival from colorectal cancer histology slides using deep learning: A retrospective\nmulticenter study. PLoS Med 2019;16:e1002730.\n\n9. Cerami E, Gao J, Dogrusoz U, Gross BE, Sumer SO, Aksoy BA, Jacobsen A, et al. The\ncBio cancer genomics portal: an open platform for exploring multidimensional cancer genomics\ndata. Cancer Discov 2012;2:401-404.\n\n10. Gao J, Aksoy BA, Dogrusoz U, Dresdner G, Gross B, Sumer SO, Sun Y, et al. Integrative\nanalysis of complex cancer genomics and clinical profiles using the cBioPortal. Sci Signal\n2013;6:pl1.\n\n11. Cancer Genome Atlas Research Network. Electronic address wbe, Cancer Genome Atlas\nResearch N. Comprehensive and Integrative Genomic Characterization of Hepatocellular\nCarcinoma. Cell 2017;169:1327-1341 €1323.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 26.08,
+            "box": [
+                246.9,
+                3294.7,
+                1400.5,
+                3361.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_15/region_3_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

@@ -1,0 +1,1210 @@
+{
+    "pdf_filename": "Deep learning in hepatocellular carcinoma Current status and future perspectives.pdf",
+    "pdf_fullpath": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives.pdf",
+    "pages_num": 14,
+    "pages": [
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_01.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_01.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 17,
+                "page_idx": 1
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "title",
+                    "score": 99.64,
+                    "box": [
+                        233.7,
+                        867.1,
+                        2256.4,
+                        1067.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_01_title.png",
+                    "text": "Deep learning in hepatocellular carcinoma: Current status and future\nperspectives\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 96.93,
+                    "box": [
+                        238.9,
+                        1208.5,
+                        1706.4,
+                        1263.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_02_text.png",
+                    "text": "Joseph C Ahn, Touseef Ahmad Qureshi, Amit G Singal, Debiao Li, Ju-Dong Yang\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 97.56,
+                    "box": [
+                        239.5,
+                        1671.5,
+                        755.8,
+                        2411.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_03_text.png",
+                    "text": "Author contributions: Yang JD\ndevised the project and the main\nconceptual ideas for the review;\nAhn JC conducted the literature\nsearch and identified relevant\nstudies to be included in the\nreview; Qureshi TA and Li D\nprovided the technical expertise on\nartificial intelligence and deep\nlearning; Ahn JC drafted the\nmanuscript; Yang JD and Singal\nAG revised the manuscript\ncritically for important intellectual\ncontent; and all authors approved\nthe final version to be published.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 97.27,
+                    "box": [
+                        239.1,
+                        2452.2,
+                        770.7,
+                        2943.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_04_text.png",
+                    "text": "Conflict-of-interest statement: Dr.\nYang provides a consulting service\nfor Exact Sciences and Gilead; Dr.\nSingal has been on advisory boards\nand served as a consultant for\nGenentech, Bayer, Eisai, BMS,\nExelixis, AstraZeneca, and\nTARGET RWE. No other potential\nconflicts of interest relevant to this\narticle exist.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 92.4,
+                    "box": [
+                        239.5,
+                        2982.7,
+                        751.4,
+                        3081.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_05_text.png",
+                    "text": "Country/Territory of origin: United\nStates\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 94.88,
+                    "box": [
+                        239.5,
+                        3123.2,
+                        724.8,
+                        3216.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_06_text.png",
+                    "text": "Specialty type: Gastroenterology\nand hepatology\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "title",
+                    "score": 17.39,
+                    "box": [
+                        1933.7,
+                        771.8,
+                        2244.2,
+                        831.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_07_title.png",
+                    "text": "MINIREVIEWS\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 97.82,
+                    "box": [
+                        811.7,
+                        1350.4,
+                        2258.6,
+                        1448.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_08_text.png",
+                    "text": "Joseph C Ahn, Gastroenterology and Hepatology, Mayo Clinic, Rochester, MN 55904, United\nStates\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "text",
+                    "score": 97.4,
+                    "box": [
+                        809.0,
+                        1486.3,
+                        2257.6,
+                        1583.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_09_text.png",
+                    "text": "Touseef Ahmad Qureshi, Debiao Li, Biomedical Imaging Research Institute, Cedars-Sinai\nMedical Center, Los Angeles, CA 90048, United States\n"
+                },
+                {
+                    "idx": 10,
+                    "thing": "text",
+                    "score": 96.84,
+                    "box": [
+                        809.1,
+                        1620.5,
+                        2257.9,
+                        1716.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_10_text.png",
+                    "text": "Amit G Singal, Internal Medicine, University of Texas Southwestern Medical Center, Dallas, TX\n75390, United States\n"
+                },
+                {
+                    "idx": 11,
+                    "thing": "text",
+                    "score": 98.67,
+                    "box": [
+                        808.5,
+                        1755.6,
+                        2257.0,
+                        1852.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_11_text.png",
+                    "text": "Ju-Dong Yang, Karsh Division of Gastroenterology and Hepatology, Cedars-Sinai Medical\nCenter, Los Angeles, CA 90048, United States\n"
+                },
+                {
+                    "idx": 12,
+                    "thing": "text",
+                    "score": 98.84,
+                    "box": [
+                        808.4,
+                        1890.0,
+                        2260.2,
+                        2037.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_12_text.png",
+                    "text": "Corresponding author: Ju-Dong Yang, MD, MS, Assistant Professor, Karsh Division of\nGastroenterology and Hepatology, Cedars-Sinai Medical Center, 8900 Beverly Blvd, Los\nAngeles, CA 90048, United States. judong.yang@cshs.org\n"
+                },
+                {
+                    "idx": 13,
+                    "thing": "title",
+                    "score": 98.92,
+                    "box": [
+                        810.3,
+                        2124.5,
+                        1012.6,
+                        2190.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_13_title.png",
+                    "text": "Abstract\n"
+                },
+                {
+                    "idx": 14,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        807.9,
+                        2206.6,
+                        2261.0,
+                        2846.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_14_text.png",
+                    "text": "Hepatocellular carcinoma (HCC) is among the leading causes of cancer incidence\nand death. Despite decades of research and development of new treatment\noptions, the overall outcomes of patients with HCC continue to remain poor.\nThere are areas of unmet need in risk prediction, early diagnosis, accurate pro-\ngnostication, and individualized treatments for patients with HCC. Recent years\nhave seen an explosive growth in the application of artificial intelligence (AI)\ntechnology in medical research, with the field of HCC being no exception. Among\nthe various AI-based machine learning algorithms, deep learning algorithms are\nconsidered state-of-the-art techniques for handling and processing complex\nmultimodal data ranging from routine clinical variables to high-resolution\nmedical images. This article will provide a comprehensive review of the recently\npublished studies that have applied deep learning for risk prediction, diagnosis,\nprognostication, and treatment planning for patients with HCC.\n"
+                },
+                {
+                    "idx": 15,
+                    "thing": "text",
+                    "score": 99.41,
+                    "box": [
+                        808.5,
+                        2915.0,
+                        2011.8,
+                        2967.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_15_text.png",
+                    "text": "Key Words: Hepatocellular carcinoma; Artificial intelligence; Deep learning\n"
+                },
+                {
+                    "idx": 16,
+                    "thing": "text",
+                    "score": 98.59,
+                    "box": [
+                        808.8,
+                        3020.3,
+                        2171.8,
+                        3069.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_16_text.png",
+                    "text": "©The Author(s) 2021. Published by Baishideng Publishing Group Inc. All rights reserved.\n"
+                },
+                {
+                    "idx": 17,
+                    "thing": "text",
+                    "score": 94.31,
+                    "box": [
+                        835.5,
+                        3160.2,
+                        2228.7,
+                        3213.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_17_text.png",
+                    "text": "Core Tip: There are emerging roles for deep learning technology in the field of hepato-\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_02.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_02.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 19,
+                "page_idx": 2
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 5.18,
+                    "box": [
+                        232.0,
+                        124.6,
+                        750.9,
+                        172.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_01_text.png",
+                    "text": "Ahn JC et al. Deep learning in HCC\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 95.74,
+                    "box": [
+                        239.9,
+                        246.5,
+                        696.1,
+                        391.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_02_text.png",
+                    "text": "Provenance and peer review:\nInvited article; Externally peer\nreviewed.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 89.0,
+                    "box": [
+                        239.2,
+                        430.3,
+                        711.7,
+                        478.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_03_text.png",
+                    "text": "Peer-review model: Single blind\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 88.34,
+                    "box": [
+                        238.8,
+                        517.8,
+                        688.5,
+                        615.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_04_text.png",
+                    "text": "Peer-review report’s scientific\nquality classification\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 81.97,
+                    "box": [
+                        236.5,
+                        629.7,
+                        617.4,
+                        873.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_05_text.png",
+                    "text": "Grade A (Excellent): A, A\nGrade B (Very good): 0\nGrade C (Good): 0\n\nGrade D (Fair): D\n\nGrade E (Poor): 0\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 89.61,
+                    "box": [
+                        240.5,
+                        912.0,
+                        761.0,
+                        1648.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_06_text.png",
+                    "text": "Open-Access: This article is an\nopen-access article that was\nselected by an in-house editor and\nfully peer-reviewed by external\nreviewers. It is distributed in\naccordance with the Creative\nCommons Attribution\nNonCommercial (CC BY-NC 4.0)\nlicense, which permits others to\ndistribute, remix, adapt, build\nupon this work non-commercially,\nand license their derivative works\non different terms, provided the\noriginal work is properly cited and\nthe use is non-commercial. See: htt\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 5.31,
+                    "box": [
+                        238.5,
+                        2005.3,
+                        681.7,
+                        2051.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_07_text.png",
+                    "text": "Accepted: November 15, 2021\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 25.49,
+                    "box": [
+                        238.5,
+                        2113.2,
+                        725.4,
+                        2207.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_08_text.png",
+                    "text": "Published online: December 27,\n2021\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "text",
+                    "score": 43.09,
+                    "box": [
+                        240.3,
+                        2250.9,
+                        728.1,
+                        2453.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_09_text.png",
+                    "text": "P-Reviewer: Gumbs A, Shafgat S\nS-Editor: Wang JJ\n\nL-Editor: Webster JR\n\nP-Editor: Wang JJ\n"
+                },
+                {
+                    "idx": 10,
+                    "thing": "text",
+                    "score": 98.55,
+                    "box": [
+                        835.1,
+                        285.4,
+                        2232.0,
+                        576.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_10_text.png",
+                    "text": "cellular carcinoma (HCC) including HCC risk prediction, as well as diagnosis,\nprognostication, and treatment planning leveraging readily available data from\nradiologic and histopathologic medical images. This article will provide a compre-\nhensive review of the recently published studies that have applied deep learning for\nrisk prediction, diagnosis, prognostication, and treatment planning for patients with\nHCC.\n"
+                },
+                {
+                    "idx": 11,
+                    "thing": "text",
+                    "score": 81.89,
+                    "box": [
+                        808.3,
+                        684.5,
+                        2258.7,
+                        784.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_11_text.png",
+                    "text": "Citation: Ahn JC, Qureshi TA, Singal AG, Li D, Yang JD. Deep learning in hepatocellular\ncarcinoma: Current status and future perspectives. World J Hepatol 2021; 13(12): 2039-2051\n"
+                },
+                {
+                    "idx": 12,
+                    "thing": "text",
+                    "score": 17.54,
+                    "box": [
+                        808.7,
+                        787.2,
+                        1780.1,
+                        835.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_12_text.png",
+                    "text": "URL: https://www.wjgnet.com/1948-5182/full/v13/i12/2039.htm\n"
+                },
+                {
+                    "idx": 13,
+                    "thing": "text",
+                    "score": 15.32,
+                    "box": [
+                        808.3,
+                        839.1,
+                        1547.5,
+                        885.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_13_text.png",
+                    "text": "DOI: https://dx.doi.org/10.4254/wjh.v13.i12.2039\n"
+                },
+                {
+                    "idx": 14,
+                    "thing": "title",
+                    "score": 98.72,
+                    "box": [
+                        808.3,
+                        1058.7,
+                        1121.3,
+                        1126.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_14_title.png",
+                    "text": "INTRODUCTION\n"
+                },
+                {
+                    "idx": 15,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        808.4,
+                        1144.7,
+                        2260.6,
+                        1754.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_15_text.png",
+                    "text": "Hepatocellular carcinoma (HCC) is an aggressive primary liver cancer that develops in\nthe setting of chronic parenchymal liver diseases, and is among the top causes of\ncancer incidence and mortality worldwide[1,2]. While the burden of HCC has been\ndeclining with effective antiviral therapy against hepatitis B virus (HBV) and hepatitis\nC virus (HCV), HCC incidence related to metabolic syndrome will likely continue to\nrise due to the dramatic increase in the prevalence of non-alcoholic fatty liver disease\n(NAFLD) in the general population[3]. Decades of HCC research led to the deve-\nlopment of a screening protocol, non-invasive diagnostic modalities based on imaging,\nand various treatment modalities including surgical, locoregional and systemic\ntherapies[4,5]. However, the overall outcomes of patients with HCC continue to\nremain poor and there are areas of significant unmet need in risk prediction, early\ndetection, accurate prognostication, and individualized treatments for patients with\nHCc.\n"
+                },
+                {
+                    "idx": 16,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        807.8,
+                        1749.7,
+                        2261.4,
+                        2360.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_16_text.png",
+                    "text": "Patients with HCC generate enormous amounts of health data. While promising for\nresearchers, ensuring that such high volumes of data are turned into actionable\nknowledge can be a significant challenge. Artificial intelligence (AI) is thought to be\ncapable of synthesizing and analyzing multimodal data with superhuman degrees of\naccuracy or reliability, and recent years have seen a rapid growth in the application of\nAI to many fields of medicine including hepatology[6]. This “AI revolution” over the\npast decade has been possible due to the advent of deep learning technology. Deep\nlearning algorithms can process a broad spectrum of medical data from structured\nnumeric data such as vital signs and laboratory values, high dimensional data from\nmulti-omics studies, as well as digitized high-resolution images from various\nradiologic and histopathologic studies. This review aims to provide an overview as\nwell as highlight examples of the many potential applications of deep learning to\nimprove the care of patients with HCC.\n"
+                },
+                {
+                    "idx": 17,
+                    "thing": "title",
+                    "score": 98.19,
+                    "box": [
+                        808.9,
+                        2482.4,
+                        1747.4,
+                        2550.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_17_title.png",
+                    "text": "Al, MACHINE LEARNING, AND DEEP LEARNING\n"
+                },
+                {
+                    "idx": 18,
+                    "thing": "text",
+                    "score": 99.91,
+                    "box": [
+                        808.6,
+                        2567.8,
+                        2259.3,
+                        2949.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_18_text.png",
+                    "text": "Al-based approaches provide a variety of methods for a range of tasks and clinical\napplication including image classification, organ and lesion segmentation, accurate\nextraction of key imaging features and measurements, tumor detection, stratification\nof high-risk subjects, prediction of disease and treatment outcome (Figure 1). Advan-\ncements in Al in recent years, particularly in the realm of medical image processing\nand analysis, offer an enormous range of automated tools for extracting precise\nmeasurements of biomarkers, revealing complex features, quantifying tissue character-\nistics and performing radiomics for deep analysis of raw imaging data.\n"
+                },
+                {
+                    "idx": 19,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        808.1,
+                        2944.8,
+                        2260.6,
+                        3321.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_02/region_19_text.png",
+                    "text": "The term “artificial intelligence” encompasses a broad range of technology that\nenables machines to perform tasks typically thought to require human reasoning and\nproblem-solving skills[7]. “Machine learning” is a branch of AI in which computer\nalgorithms train on sample data to build a mathematical model that makes predictions\nor decisions without being explicitly programmed to do so[8]. Machine learning\nalgorithms can be broadly divided into supervised and unsupervised learning.\nSupervised learning algorithms train on sample data with labeled outcome data, and\ntheir goal is to learn the relationship between the input data and the outcomes to make\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_03.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_03.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 7,
+                "page_idx": 3
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "figure",
+                    "score": 99.7,
+                    "box": [
+                        261.5,
+                        260.6,
+                        2157.8,
+                        1076.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_1_figure.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.33,
+                    "box": [
+                        237.4,
+                        1149.2,
+                        2254.9,
+                        1248.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_2_text.png",
+                    "text": "Figure 1 Schematic representation of the relationships between the terms artificial intelligence, machine learning, and deep learning, and\nhow deep learning can utilize multimodal data to improve care for patients with hepatocellular carcinoma.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        808.7,
+                        1338.9,
+                        2260.0,
+                        1716.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_3_text.png",
+                    "text": "accurate predictions about the outcome when provided with a new set of input data\n[9]. Examples of supervised learning algorithms include traditional techniques such as\nlinear regression and logistic regression, as well as more sophisticated techniques\nincluding support vector machines, random forest and gradient boosting. On the other\nhand, unsupervised learning algorithms train on unlabeled sample data and analyze\nthe underlying structure or distribution within the data to discover new clusters or\npatterns[10]. Examples of unsupervised learning algorithms include K-means and\nprinciple component analysis among many others.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        807.9,
+                        1713.9,
+                        2260.5,
+                        2228.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_4_text.png",
+                    "text": "Among the various Al-based machine learning algorithms, artificial neural\nnetworks (ANNs) consist of layers of interconnected mathematical formulas that\nenable them to analyze complex non-linear relationships[11]. “Deep learning (DL)”\nrefers to highly complex AI models utilizing multiple layers of ANNs and has recently\nemerged as a state-of-the-art AI technique for analyzing complex, high-dimensional\nhealthcare data. Some of the commonly used DL techniques include convolutional\nneural networks (CNNs) and recurrent neural networks (RNNs)[12]. CNNs have\nconnective patterns resembling those of an animal visual cortex and can detect\ninherent spatial features of high dimensional images. RNNs have connections forming\na directed graph along a temporal sequence, and therefore can be highly useful in time\nseries prediction.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        808.1,
+                        2225.2,
+                        2259.7,
+                        2461.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_5_text.png",
+                    "text": "It is crucial to recognize that any Al-based machine learning algorithms require\nexternal validation in an independent dataset as models could be overfitted and end\nup overestimating the performance. In this review article, the performance character-\nistics of the various DL models are from the validation cohorts, and not the original\nderivation cohorts used to train the algorithms.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "title",
+                    "score": 99.2,
+                    "box": [
+                        807.5,
+                        2587.1,
+                        1224.8,
+                        2651.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_6_title.png",
+                    "text": "HCC CLINICAL DATA\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        808.3,
+                        2670.9,
+                        2260.0,
+                        3281.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_7_text.png",
+                    "text": "Despite multiple available risk prediction tools for HCC, none have been rigorously\nvalidated or endorsed by major liver societies. Currently, HCC surveillance is recom-\nmended for patients with cirrhosis and high risk patients with chronic HBV infection\n[13]. Accurate prediction models utilizing more specific risk factors for HCC\ndevelopment at individual levels would allow health systems to implement targeted\nscreening strategies. loannou et al[14] trained a RNN to predict HCC development\nwithin 3 years using 4 baseline variables and 27 longitudinal variables from 48151\npatients with HCV-related cirrhosis in the national Veterans Health Administration.\nThe RNN model significantly outperformed logistic regression and exhibited an area\nunder the curve (AUC) of 0.759 among all samples and an AUC of 0.806 among\npatients with sustained virologic response. Phan et al[15] surveyed 1 million random\nsamples from Taiwan's National Health Insurance Research Database between 2002 to\n2010 to predict liver cancer among patients with viral hepatitis. The disease history of\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_04.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_04.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 7,
+                "page_idx": 4
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        808.1,
+                        229.5,
+                        2260.3,
+                        837.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_1_text.png",
+                    "text": "each patient was transformed into a 108 x 998 matrix and applied to a CNN, which\npredicted liver cancer with an AUC of 0.886 and an accuracy of 0.980. Another study\nby Nam et al[16] constructed a deep neural network to predict 3-year and 5-year\nincidence of HCC in 424 patients with HBV-related cirrhosis on entecavir therapy.\nWhen applied to an external validation cohort of 316 patients, the DL model achieved\na Harrell’s C-index of 0.782 and significantly outperformed 6 previously reported\nmodels based on traditional modeling. The same group also developed another DL\nmodel called the Al-based Model of Recurrence after Liver Transplantation (MoRAL-\nAJ) to predict HCC recurrence after liver transplantation using variables such as tumor\ndiameter, age, alpha-fetoprotein (AFP), and prothrombin time[17]. The MoRAL-AI\nshowed significantly better predictive performance compared to conventional models\nsuch as the Milan, UCSF, up-to-seven, and Kyoto criteria (C-index = 0.75 vs 0.64, 0.62,\n0.50, 0.50, respectively; P < 0.001).\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 99.17,
+                    "box": [
+                        807.9,
+                        961.9,
+                        1181.9,
+                        1027.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_2_title.png",
+                    "text": "HCC MULTI-OMICS\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        808.0,
+                        1048.8,
+                        2260.2,
+                        2216.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_3_text.png",
+                    "text": "Serum AFP has been widely used as a predictive and prognostic biomarker for HCC\n[18], but AFP has limited sensitivity for detecting early-stage HCC and its levels do not\nreliably correlate with disease progression[19]. Recent advances in multi-omics related\nto HCC are expected to address this unmet need for novel biomarkers. Multi-omics\nrefers to an approach to biological analysis which utilizes data sets from multiple\n\"omics\", such as the genome, epigenome, transcriptome, proteome, metabolome and\nmicrobiome. Multi-omics experiments generate an enormous amount of information,\nand various machine learning techniques including DL that can help with the\ncomputational challenges of processing and analyzing such high dimensional data. Xie\net al[20] used gene expression profiling of peripheral blood to build an ANN model\nthat classifies HCC patients from a control group. Using a nine-gene expression\nsystem, the ANN was able to distinguish HCC patients from controls with an AUC of\n0.943, 98% sensitivity, and 85% specificity, although it should be noted that the control\ngroup was healthy individuals rather than patients with cirrhosis, which could have\noverestimated the performance of the model. Choi et al[21] proposed a novel network-\nbased DL method to identify prognostic gene signatures via G2Vec, a modified\nWord2Vec model originally used for natural language processing (NLP). When\napplied to gene expression data for HCC from the Cancer Genome Atlas (TCGA),\nG2Vec showed superior prediction accuracy for patient outcomes compared to\nexisting gene selection methods and was able to identify two distinct gene modules\nsignificantly associated with HCC prognosis. Chaudhary et al[22] used RNA\nsexquencing, miRNA, and methylation data of 360 HCC patients from TCGA to build\nan autoencoder, which is an unsupervised feed-forward neural network. Using this\nDL model, they were able to distinguish patients with survival differences and identify\nspecific mutations and pathways as predictors of aggressive tumor behavior.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 99.07,
+                    "box": [
+                        807.1,
+                        2340.2,
+                        1056.5,
+                        2406.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_4_title.png",
+                    "text": "RADIOLOGY\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "title",
+                    "score": 98.82,
+                    "box": [
+                        808.6,
+                        2429.9,
+                        1380.6,
+                        2488.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_5_title.png",
+                    "text": "HCC diagnosis and segmentation\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        808.6,
+                        2487.0,
+                        2258.7,
+                        2770.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_6_text.png",
+                    "text": "In recent years, there have been remarkable advances in the application of AI for the\ninterpretation of medical imaging, primarily due to the use of DL algorithms using\nCNN[23]. CNN algorithms trained on ultrasound, computed tomography (CT), or\nmagnetic resonance imaging (MRI) images have shown excellent performances in\ndetection of lesions, classification of lesions, segmentation of organs or anatomic\nstructures, and imaging reconstruction[24].\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        807.9,
+                        2768.1,
+                        2258.3,
+                        3282.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_04/region_7_text.png",
+                    "text": "In 2012, Streba et al[25] prospectively studied contrast-enhanced ultrasound images\nof 112 patients to train an ANN that classified five different types of liver tumors. The\nANN showed promising performances with accuracies of 94.5% in the training set and\n87.1% in the testing set. In 2017, Hassan et al[26] reported using the stacked sparse\nauto-encoder, an unsupervised DL technique, to segment and classify liver lesions on\nultrasound images with a classification accuracy of 97.2%. Additionally, Bharti et al[27]\nbuilt a CNN using echotexture and roughness of liver surface on 754 segmented\nultrasound images, which differentiated between normal liver, chronic liver disease,\ncirrhosis, and HCC with a classification accuracy of 96.6%. Schmauch ef al[28] also\ncreated a CNN which detects and characterizes benign and malignant focal liver\nlesions on 2-D ultrasound images from 367 patients from various institutions. When\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_05.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_05.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 5,
+                "page_idx": 5
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        808.2,
+                        231.9,
+                        2251.7,
+                        836.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_05/region_1_text.png",
+                    "text": "applied to a new dataset of 177 patients, the model achieved a weighted mean AUC of\n0.891. Recently, Brehar et al[29] conducted a study comparing CNN’s performance for\nHCC detection on ultrasound images against conventional machine learning alg-\norithms including multi-layer perceptron, support vector machines, random forest and\nAdaBoost. The CNN achieved an AUC of 0.95% with 91.0% accuracy, 94.4%\nsensitivity, and 88.4% specificity and significantly outperformed the conventional\nmachine learning algorithms. Beyond detecting the actual presence of HCC on\nultrasound images, studies have also attempted to predict the risk of future HCC\ndevelopment based on analyzing the ultrasound images of liver parenchyma in\npatients without HCC. For example, Jin et al[30] performed a DL radiomics analysis on\n2-D shear wave elastography and corresponding B-mode ultrasound images of 434\nchronic HBV patients, which predicted 5-year HCC development with AUC of 0.900 in\nthe test cohort.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        807.9,
+                        837.0,
+                        2252.3,
+                        1762.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_05/region_2_text.png",
+                    "text": "In addition to ultrasound images, cross-sectional imaging from CT or MRI studies\nserve as an extremely abundant and promising source of data for DL. In 2018, Yasaka\net al[31] used CT image sets of liver masses from 460 patients to train a CNN that can\nclassify liver lesions into five categories of: (1) HCC; (2) Other malignant tumors; (3)\nIndeterminate masses; (4) Hemangiomas; and (5) Cysts with a median AUC of 0.92.\nShi et al[32] showed that incorporation of a CNN enabled identification of HCC using\na three-phase CT imaging protocol with a diagnostic accuracy similar to that of a four-\nphase protocol, which would allow patients to receive lower doses of radiation.\nSegmentation of HCC, liver parenchyma, and other organs on CT scan is very\nimportant for determination of tumor extent and treatment planning, but manual\ncontouring of the images is highly time-consuming and subject to inter-observer\nvariability. The 2017 International Conference On Medical Image Computing\nComputer Assisted Intervention called for a Liver Tumor Segmentation Benchmark\n(LITS) challenge, encouraging researchers to develop automatic segmentation\nalgorithms to segment liver lesions using 200 CT scans (training: 130; testing: 70)\nprovided by clinical sites around the world. Several teams participating in the\nchallenge have developed DL algorithms with promising performances for HCC\nsegmentation using CT images[33-37]. Beyond the LITS challenge, there are ongoing\nresearch efforts to improve segmentation using different architectures of DL networks\n[38-42].\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        807.1,
+                        1760.5,
+                        2252.2,
+                        2317.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_05/region_3_text.png",
+                    "text": "Hamm et al[43] used MRI images from 494 patients to train a CNN which can\nclassify hepatic lesions into six different categories. When applied to random cases in\nthe test set, the CNN outperformed expert radiologists (90% sensitivity and 98%\nspecificity vs 82.5% sensitivity and 96.5% specificity) and especially for HCC detection\n(90% sensitivity vs 60%-70% sensitivity). The same group conducted additional studies\nto make their CNN interpretable by generating highlighted feature maps corres-\nponding to liver lesions[44]. Wu et al[45] built a CNN using multiphase MRI images\nand achieved an AUC of 0.95 for distinguishing Liver Imaging Reporting and Data\nSystem (LI-RADS) grade 3 from LI-RADS 4 and 5 lesions for HCC diagnosis. Zhen et al\n[46] also trained a CNN model combining unenhanced MRI images and clinical\nvariables from 1210 patients with liver tumors, which demonstrated diagnostic\nperformances on par with three experienced radiologists using enhanced MRI images.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 99.61,
+                    "box": [
+                        807.3,
+                        2364.0,
+                        1982.3,
+                        2417.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_05/region_4_title.png",
+                    "text": "HCC prognostication, treatment planning, and response to treatment\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.98,
+                    "box": [
+                        808.1,
+                        2419.0,
+                        2252.3,
+                        3305.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_05/region_5_text.png",
+                    "text": "In addition to serving as accurate and efficient tools for diagnosis of HCC, DL models\nutilizing radiology data can also be used for prognostication, treatment planning, and\nassessing tumor response to therapy. Vascular invasion is a key prognostic element in\npatients with HCC. Recent studies developed CNN models with promising ability to\ndetect microvascular invasion on MRI images of HCC patients undergoing surgical\nresection[47-49]. An et al[50] used an unsupervised CNN-based deformable image\nregistration technique to assess the relationship between ablative margins and local\ntumor progression in 141 patients with single HCC who underwent microwave\nablation, and demonstrated that patients with ablative margins < 5 mm were at\nsignificantly higher risk of local tumor progression. Liu et al[51] developed a DL\nradiomics model to predict responses to trans-arterial chemoembolization (TACE)\nusing ultrasound images of 130 HCC patients, which accurately predicted TACE\nresponse with an AUC of 0.93. The same group also assessed their ultrasound-based\nDL radiomics model to predict 2-year progression-free survival among 419 HCC\npatients and facilitate optimized treatment selection. Peng et al[52] trained a residual\nCNN model to predict response to TACE using CT images from 562 patients with\nintermediate-stage HCC undergoing TACE, which showed accuracies of 85.1% and\n82.8% in two external validation cohorts. Another study developed a DL score for\ndisease-specific survival by using CT images in a cohort of 243 patients with HCC\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_06.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_06.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 6,
+                "page_idx": 6
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.92,
+                    "box": [
+                        808.6,
+                        228.0,
+                        2259.9,
+                        510.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_1_text.png",
+                    "text": "treated with TACE, with a higher score predicting poor prognosis [hazard ratio (HR):\n3.01; 95% cumulative incidence (CI): 2.02-4.50][53]. Finally, Zhang et al[54] built a DL-\nbased model predicting overall survival using CT images from 201 patients with\nunresectable HCC treated with TACE and sorafenib, which achieved superior\npredictive performance compared to the clinical nomogram (C-index of 0.730 vs 0.679,\nP = 0.023).\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 99.03,
+                    "box": [
+                        808.1,
+                        636.0,
+                        1166.1,
+                        700.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_2_title.png",
+                    "text": "HCC PATHOLOGY\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        808.1,
+                        722.6,
+                        2260.6,
+                        1751.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_3_text.png",
+                    "text": "Automated interpretation of histopathologic images from liver biopsy is another major\narea of medical imaging in patients with HCC where DL can be utilized. In addition to\neffectively replicating the human pathologists’ jobs of diagnosing and grading HCC,\nDL models can help identify and analyze additional complex imaging features and\npatterns which are related to specific mutations and disease prognosis. Lin et al[55]\nused images from multiphoton microscopy of 113 HCC patients to train a CNN with\nover 90% accuracy for determining HCC differentiation. Kiani et al[56] developed a\nCNN-based “Liver Cancer Assistant” which accurately differentiated hematoxylin and\neosin (H&E) images of HCC and cholangiocarcinoma and helped improve the\ndiagnostic performance of nine pathologists. Liao et al[57] used TCGA dataset for\ntraining a CNN that distinguished HCC from adjacent normal tissues with perfect\nperformance (AUC: 1.00) and predicted the presence of specific somatic mutations\nwith AUCs over 0.70. Wang et al[58] trained a CNN for automated segmentation and\nclassification of individual nuclei at single-cell levels on H&E-stained tissue sections of\nHCC tumors from TCGA, and performed feature extraction to identify 246 quan-\ntitative image features. Then, a clustering analysis by an unsupervised learning\napproach identified three distinct histologic subtypes which were independent of\npreviously established genomic clusters and had different prognosis. Chen et al[59]\ntrained a CNN for automatic grading of HCC tumors on histopathological H&E\nimages, which showed 96% accuracy for benign and malignant classification and\n89.6% accuracy for the degree of tumor differentiation, and predicted the presence of\nspecific genetic mutations.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        808.1,
+                        1747.8,
+                        2260.1,
+                        2402.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_4_text.png",
+                    "text": "Lu et al[60] applied three pre-trained CNN models to extract imaging features from\nHCC histopathology and performed Cox proportional hazards analysis to predict\noverall survival and disease-free survival, and observed significant correlations\nbetween the imaging features and established biological pathways. Saillard et al[61]\nused two DL algorithms based on whole-side digitized histological slides from 194\npatients with HCC to predict the survival of patients treated by surgical resection.\nWhen tested on an independent validation set from TCGA, both DL models had a\nhigher discriminatory power than a score combining all baseline variables associated\nwith survival. Shi et al[62] built an interpretable DL framework using pathologic\nimages from 1445 patients with HCC and developed a “tumor risk score” which\nshowed prognostic performances independent of and superior to clinical staging\nsystems and stratified patients into five groups of different prognosis. A recent study\nby Yamashita et al[63] developed a histopathology-based DL based system which\nstratified patients with risk scores for postsurgical recurrence of HCC.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "title",
+                    "score": 98.86,
+                    "box": [
+                        807.2,
+                        2526.9,
+                        1210.7,
+                        2591.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_5_title.png",
+                    "text": "FUTURE DIRECTION\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        808.3,
+                        2613.5,
+                        2259.1,
+                        3314.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_06/region_6_text.png",
+                    "text": "There are several key issues to address before DL-based AI models can be universally\nimplemented in real world clinical practice settings. Due to their complexity, DL\nmodels are traditionally considered to be “black-box” models, meaning humans\ncannot understand how the DL models make their predictions. Interpretability of the\nDL models are crucial for physicians to accept and trust them in everyday clinical\npractice, and for troubleshooting and improving the models for rare cases. This is\nbeing addressed by recent developments in various “explainable AI” techniques but\ncurrently there is no clear consensus on the best methodology. Another potential\nlimitation is the generalizability of the individual DL algorithms. Concerns have been\nraised that AI algorithms developed at highly specialized academic medical centers\nusing their own patients’ data may over-represent certain groups of patients and not\naccurately reflect the real-world population of patients seen at local community\nhospitals. Finally, AI models, like other prediction models, are often not publicly\navailable, limiting external validation. Independent validation of the proposed model\nand comparison to old models are as important as deriving new models. Large-scale,\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_07.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_07.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 2,
+                "page_idx": 7
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 93.98,
+                    "box": [
+                        245.5,
+                        242.2,
+                        1250.0,
+                        291.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_07/region_1_text.png",
+                    "text": "Table 1 Studies applying deep learning for hepatocellular carcinoma\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "table",
+                    "score": 99.77,
+                    "box": [
+                        230.2,
+                        298.4,
+                        2248.5,
+                        3235.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_07/region_2_table.png"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_08.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_08.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 1,
+                "page_idx": 8
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "table",
+                    "score": 98.53,
+                    "box": [
+                        231.1,
+                        228.4,
+                        2247.8,
+                        3220.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_08/region_1_table.png"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_09.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_09.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 7,
+                "page_idx": 9
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "table",
+                    "score": 95.81,
+                    "box": [
+                        230.6,
+                        231.1,
+                        2248.9,
+                        1236.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_1_table.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.8,
+                    "box": [
+                        236.9,
+                        1305.0,
+                        2250.5,
+                        1605.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_2_text.png",
+                    "text": "ANN: Artificial neural network; AUC: Area under the curve; CC: Cholangiocarcinoma; CNN: Convolutional neural network; CV: Cross-validation; FLL:\nFocal liver lesion; GDC: Genomic Data Commons; HBV: Hepatitis B virus; HCC: Hepatocellular carcinoma; HCV: Hepatitis C virus; HV: Healthy\nvolunteers; LT: Liver transplant; MVI: Microvascular invasion, MWA: Microwave ablation; OS: Overall survival; PFS: Progression-free survival; RFA:\nRadio-frequency ablation; RNN: Recurrent neural network; SR: Surgical resection; STS-net: Spatial transformed similarity network; SVR: Sustained\nvirologic response; T: Training; TCGA: The Cancer Genome Atlas; V: Validation; VHA: Veterans Health Administration; WSI: Whole slide image; CT:\nComputed tomography; MRI: Magnetic resonance imaging; NHIRD: National Health Insurance Research Database; TNM: Tumor, Nodes, Metastasis;\nTACE: Trans-arterial chemoembolization; LI-RADS: Liver Imaging Reporting and Data System.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        808.0,
+                        1697.3,
+                        2257.5,
+                        1792.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_3_text.png",
+                    "text": "prospective, multi-centered studies involving diverse populations with external\nvalidation will be necessary before DL algorithms can be widely accepted.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        808.6,
+                        1789.5,
+                        2259.7,
+                        2585.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_4_text.png",
+                    "text": "A currently under-explored, but highly promising and exciting area for the\napplication of DL is the field of autonomous robotics. In a recent editorial, Gumbs et al\n[64] state that while the current form of robotic surgery seems like a form of minimally\ninvasive surgery, the true power of robotic surgery exists in its potential to create\nautonomous actions. Recently, a DL-based surgical instrument tracking algorithm was\nable to closely track the instruments during robotic surgery and evaluate the surgeons’\nperformance, demonstrating that DL algorithms can learn the correct steps of robotic\nsurgery[65]. With the help of DL and other AI technologies, it may be possible to\nimagine a future where fully autonomous robots perform resection of large, complex\nHCC in ways that no human surgeons can mimic. However, there are significant\nbarriers before the idea of fully autonomous robotic surgery can become a reality,\nincluding the current technical limitations of autonomous surgical robotics, as well as\nthe hesitation of patients and providers to fully trust autonomous robots to perform\ninvasive operations. “Explainability” of the DL algorithms will be critical here, as\nhumans would need to be able to understand and correct every single mistake that an\nautonomous robot makes during surgery. Therefore, for the foreseeable future, DL will\nmost likely remain as a helpful, adjunctive tool to assist human surgeons.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "title",
+                    "score": 99.46,
+                    "box": [
+                        808.3,
+                        2710.2,
+                        1084.7,
+                        2774.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_5_title.png",
+                    "text": "CONCLUSION\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        808.1,
+                        2795.7,
+                        2259.5,
+                        3125.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_6_text.png",
+                    "text": "This review has provided a comprehensive overview of various ways in which DL\nalgorithms can be employed to assist medical providers and enhance the care of\npatients with HCC (Table 1). DL algorithms not only can efficiently and accurately\nreplicate the same jobs performed by human physicians, but more importantly can\nhelp discover novel biologic pathways and disease subgroups with clinical sig-\nnificance by processing and analyzing complex high-dimensional data in ways\nimpossible for the human brain.\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        808.5,
+                        3122.2,
+                        2260.1,
+                        3310.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_09/region_7_text.png",
+                    "text": "Despite some important limitations to overcome, application of state-of-the-art AI\ntechnologies such as DL for the care of patients with HCC is no longer a futuristic idea\nbut is rapidly becoming a reality. Most of the studies covered in this review were\npublished within the past two years, and the number of studies utilizing DL continues\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_10.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_10.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 3,
+                "page_idx": 10
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 97.17,
+                    "box": [
+                        811.0,
+                        230.5,
+                        2255.0,
+                        324.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_10/region_1_text.png",
+                    "text": "to increase exponentially. We anticipate that DL algorithms will soon take a major role\nin the diagnosis, prognostication, and treatment of patients with HCC.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 97.84,
+                    "box": [
+                        808.3,
+                        450.5,
+                        1088.9,
+                        512.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_10/region_2_title.png",
+                    "text": "REFERENCES\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "list",
+                    "score": 62.66,
+                    "box": [
+                        813.7,
+                        539.7,
+                        2249.3,
+                        3314.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_10/region_3_list.png",
+                    "text": "1 Bray F, Ferlay J, Soerjomataram I, Siegel RL, Torre LA, Jemal A. Global cancer statistics 2018:\nGLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA\nCancer J Clin 2018; 68: 394-424 [PMID: 30207593 DOI: 10.3322/caac.21492]\n\n2 Yang JD, Hainaut P, Gores GJ, Amadou A, Plymoth A, Roberts LR. A global view of hepatocellular\ncarcinoma: trends, risk, prevention and management. Nat Rev Gastroenterol Hepatol 2019; 16: 589-\n604 [PMID: 31439937 DOI: 10.1038/s41575-019-0186-y]\n\n3 Stepanova M, De Avila L, Afendy M, Younossi I, Pham H, Cable R, Younossi ZM. Direct and\nIndirect Economic Burden of Chronic Liver Disease in the United States. Clin Gastroenterol Hepatol\n2017; 15: 759-766.e5 [PMID: 27464590 DOE: 10.1016/j.cgh.2016.07.020]\n\n4 Llovet JM, Kelley RK, Villanueva A, Singal AG, Pikarsky E, Roayaie S, Lencioni R, Koike K,\nZucman-Rossi J, Finn RS. Hepatocellular carcinoma. Nat Rev Dis Primers 2021; 7: 6 [PMID:\n33479224 DOI: 10.1038/s41572-020-00240-3]\n\n5 Yang JD, Heimbach JK. New advances in the diagnosis and management of hepatocellular\ncarcinoma. BMJ 2020; 371: m3544 [PMID: 33106289 DOE: 10.1136/bmj.m3544]\n\n6 Ahn JC, Connell A, Simonetto DA, Hughes C, Shah VH. Application of Artificial Intelligence for the\nDiagnosis and Treatment of Liver Diseases. Hepatology 2021; 73: 2546-2563 [PMID: 33098140 DOL\n10.1002/hep.3 1603]\n\n7 Haenlein M, Kaplan A. A Brief History of Artificial Intelligence: On the Past, Present, and Future of\nArtificial Intelligence. Calif Manage Rev 2019 [DOI: 10.1177/0008125619864925]\n\n8 Koza JR, Bennett FH, Andre D, Keane MA. Automated Design of Both the Topology and Sizing of\nAnalog Electrical Circuits Using Genetic Programming. In: Gero JS, Sudweeks F. Artificial\nIntelligence in Design ’96. Dordrecht: Springer Netherlands, 1996: 151-170\n\n9 Cunningham P, Cord M, Delany SJ. Supervised Learning. In: Cord M, Cunningham P. Machine\nLearning Techniques for Multimedia: Case Studies on Organization and Retrieval. Berlin, Heidelberg:\nSpringer Berlin Heidelberg, 2008: 21-49\n\n10 Ghahramani Z, Unsupervised Learning. In: Bousquet O, von Luxburg U, Ratsch G. Advanced\nLectures on Machine Learning: ML Summer Schools 2003, Canberra, Australia, February 2 - 14,\n2003, Tiibingen, Germany, August 4 - 16, 2003, Revised Lectures. Berlin, Heidelberg: Springer\nBerlin Heidelberg, 2004: 72-112\n\n11 Esteva A, Robicquet A, Ramsundar B, Kuleshov V, DePristo M, Chou K, Cui C, Corrado G, Thrun\nS, Dean J. A guide to deep learning in healthcare. Nat Med 2019; 25: 24-29 [PMID: 30617335 DOI:\n10.1038/s41591-018-03 16-z]\n\n12 Puttagunta M, Ravi S. Medical image analysis based on deep learning approach. Multimed Tools\nAppl 2021; 1-34 [PMID: 33841033 DOI: 10.1007/s1 1042-02 1-10707-4]\n\n13. Marrero JA, Kulik LM, Sirlin CB, Zhu AX, Finn RS, Abecassis MM, Roberts LR, Heimbach JK.\nDiagnosis, Staging, and Management of Hepatocellular Carcinoma: 2018 Practice Guidance by the\nAmerican Association for the Study of Liver Diseases. Hepatology 2018; 68: 723-750 [PMID:\n29624699 DOE: 10.1002/hep.29913]\n\n14 Ioannou GN, Tang W, Beste LA, Tincopa MA, Su GL, Van T, Tapper EB, Singal AG, Zhu J, Waljee\nAK. Assessment of a Deep Learning Model to Predict Hepatocellular Carcinoma in Patients With\nHepatitis C Cirrhosis. JAMA Netw Open 2020; 3: e2015626 [PMID: 32870314 DOI:\n\n10.100 1/jamanetworkopen.2020.15626]\n\n15 Phan DV, Chan CL, Li AA, Chien TY, Nguyen VC. Liver cancer prediction in a viral hepatitis\ncohort: A deep learning approach. Int J Cancer 2020; 147: 2871-2878 [PMID: 32761609 DOI:\n10.1002/ijc.33245]\n\n16 Nam JY, Sinn DH, Bae J, Jang ES, Kim JW, Jeong SH. Deep learning model for prediction of\nhepatocellular carcinoma in patients with HBV-related cirrhosis on antiviral therapy. JHEP Rep 2020;\n2: 100175 [PMID: 33117971 DOI: 10.1016/j.jhepr.2020.100175]\n\n17 Nam JY, Lee JH, Bae J, Chang Y, Cho Y, Sinn DH, Kim BH, Kim SH, Yi NJ, Lee KW, Kim JM,\nPark JW, Kim YJ, Yoon JH, Joh JW, Suh KS. Novel Model to Predict HCC Recurrence after Liver\nTransplantation Obtained Using Deep Learning: A Multicenter Study. Cancers (Basel) 2020; 12\n[PMID: 33003306 DOE: 10.3390/cancers 12102791]\n\n18 Behne T, Copur MS. Biomarkers for hepatocellular carcinoma. Int J Hepatol 2012; 2012: 859076\n[PMID: 22655201 DOE: 10.1155/2012/859076]\n\n19 Tzartzeva K, Obi J, Rich NE, Parikh ND, Marrero JA, Yopp A, Waljee AK, Singal AG. Surveillance\nImaging and Alpha Fetoprotein for Early Detection of Hepatocellular Carcinoma in Patients With\nCirrhosis: A Meta-analysis. Gastroenterology 2018; 154: 1706-1718.e1 [PMID: 29425931 DOL\n10.1053/j.gastro.2018.01.064]\n\n20 Xie H, Xue YQ, Liu P, Zhang PJ, Tian ST, Yang Z, Guo Z, Wang HM. Multi-parameter gene\nexpression profiling of peripheral blood for early detection of hepatocellular carcinoma. World J\nGastroenterol 2018; 24: 371-378 [PMID: 29391759 DOI: 10.3748/wjg.v24.i3.371]\n\n21. Choi J, OhI, Seo S, Ahn J. G2Vec: Distributed gene representations for identification of cancer\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_11.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_11.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 1,
+                "page_idx": 11
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 51.47,
+                    "box": [
+                        815.0,
+                        229.5,
+                        2251.2,
+                        3326.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_11/region_1_text.png",
+                    "text": "prognostic genes. Sci Rep 2018; 8: 13729 [PMID: 30213980 DOI: 10.1038/s41598-018-32180-0]\n\n22. Chaudhary K, Poirion OB, Lu L, Garmire LX. Deep Learning-Based Multi-Omics Integration\nRobustly Predicts Survival in Liver Cancer. Clin Cancer Res 2018; 24: 1248-1259 [PMID: 28982688\nDOI: 10.1158/1078-0432.CCR-17-0853]\n\n23 Chartrand G, Cheng PM, Vorontsov E, Drozdzal M, Turcotte S, Pal CJ, Kadoury S, Tang A. Deep\nLearning: A Primer for Radiologists. Radiographics 2017; 37: 2113-2131 [PMID: 29131760 DOL\n10.1148/rg.2017170077]\n\n24 Azer SA. Deep learning with convolutional neural networks for identification of liver masses and\nhepatocellular carcinoma: A systematic review. World J Gastrointest Oncol 2019; 11: 1218-1230\n[PMID: 31908726 DOL: 10.425 lAvjgo.v11.112.1218]\n\n25 Streba CT, Ionescu M, Gheonea DI, Sandulescu L, Ciurea T, Saftoiu A, Vere CC, Rogoveanu I.\nContrast-enhanced ultrasonography parameters in neural network diagnosis of liver tumors. World J\nGastroenterol 2012; 18: 4427-4434 [PMID: 22969209 DOI: 10.3748/wjg.v18.132.4427]\n\n26 Hassan TM, Elmogy M, Sallam E-S. Diagnosis of Focal Liver Diseases Based on Deep Learning\nTechnique for Ultrasound Images. Arab J Sci Eng 2017; 42: 3127-3140 [DOL\n10.1007/s13369-016-2387-9]\n\n27 Bharti P, Mittal D, Ananthasivan R. Preliminary Study of Chronic Liver Classification on Ultrasound\nImages Using an Ensemble Model. Ultrason Imaging 2018; 40: 357-379 [PMID: 30015593 DOL:\n10.1177/0161734618787447]\n\n28 Schmauch B, Herent P, Jehanno P, Dehaene O, Saillard C, Aubé C, Luciani A, Lassau N, Jégou S.\nDiagnosis of focal liver lesions from ultrasound using deep learning. Diagn Interv Imaging 2019; 100:\n227-233 [PMID: 30926443 DOI: 10.1016/j.diii.2019.02.009]\n\n29.‘ Brehar R, Mitrea DA, Vancea F, Marita T, Nedevschi S, Lupsor-Platon M, Rotaru M, Badea RI.\nComparison of Deep-Learning and Conventional Machine-Learning Methods for the Automatic\nRecognition of the Hepatocellular Carcinoma Areas from Ultrasound Images. Sensors (Basel) 2020;\n20 [PMID: 32485986 DOI: 10.3390/s20113085]\n\n30 ~=Jin J, Yao Z, Zhang T, Zeng J, Wu L, Wu M, Wang J, Wang Y, Yu J, Zheng R. Deep learning\nradiomics model accurately predicts hepatocellular carcinoma occurrence in chronic hepatitis B\npatients: a five-year follow-up. Am J Cancer Res 2021; 11: 576-589 [PMID: 33575088]\n\n31 Yasaka K, Akai H, Abe O, Kiryu S. Deep Learning with Convolutional Neural Network for\nDifferentiation of Liver Masses at Dynamic Contrast-enhanced CT: A Preliminary Study. Radiology\n2018; 286: 887-896 [PMID: 29059036 DOI: 10.1148/radiol.2017170706]\n\n32. Shi W, Kuang S, Cao S, Hu B, Xie S, Chen S, Chen Y, Gao D, Zhu Y, Zhang H, Liu H, Ye M, Sirlin\nCB, Wang J. Deep learning assisted differentiation of hepatocellular carcinoma from focal liver\nlesions: choice of four-phase and three-phase CT imaging protocol. Abdom Radiol (NY) 2020; 45:\n2688-2697 [PMID: 32232524 DOI: 10.1007/s00261-020-02485-8]\n\n33. Alirr OI. Deep learning and level set approach for liver and tumor segmentation from CT scans. J\nAppl Clin Med Phys 2020; 21: 200-209 [PMID: 33113290 DOL: 10.1002/acm2.13003]\n\n34 ~Chlebus G, Schenk A, Moltz JH, van Ginneken B, Hahn HK, Meine H. Automatic liver tumor\nsegmentation in CT with fully convolutional neural networks and object-based postprocessing. Sci\nRep 2018; 8: 15497 [PMID: 30341319 DOI: 10.1038/s41598-018-33860-7]\n\n35 Deng Z, Guo Q, Zhu Z. Dynamic Regulation of Level Set Parameters Using 3D Convolutional Neural\nNetwork for Liver Tumor Segmentation. J Healthc Eng 2019; 2019: 4321645 [PMID: 30918620 DOL\n10.1155/2019/4321645]\n\n36 Wardhana G, Naghibi H, Sirmacek B, Abayazid M. Toward reliable automatic liver and tumor\nsegmentation using convolutional neural network based on 2.5D models. Int J Comput Assist Radiol\nSurg 2021; 16: 41-51 [PMID: 33219906 DOI: 10.1007/s11548-020-02292-y]\n\n37 Li X, Chen H, Qi X, Dou Q, Fu CW, Heng PA. H-DenseUNet: Hybrid Densely Connected UNet for\nLiver and Tumor Segmentation From CT Volumes. JEEE Trans Med Imaging 2018; 37: 2663-2674\n[PMID: 29994201 DOL: 10.1109/TML2018.2845918]\n\n38 Ahn SH, Yeo AU, Kim KH, Kim C, Goh Y, Cho S, Lee SB, Lim YK, Kim H, Shin D, Kim T, Kim\nTH, Youn SH, Oh ES, Jeong JH. Comparative clinical evaluation of atlas and deep-learning-based\nauto-segmentation of organ structures in liver cancer. Radiat Oncol 2019; 14: 213 [PMID: 31775825\nDOI: 10.1186/s13014-019-1392-z]\n\n39 + Almotairi S, Kareem G, Aouf M, Almutairi B, Salem MA. Liver Tumor Segmentation in CT Scans\nUsing Modified SegNet. Sensors (Basel) 2020; 20 [PMID: 32164153 DOI: 10.3390/s20051516]\n\n10 Ayalew YA, Fante KA, Mohammed MA. Modified U-Net for liver cancer segmentation from\ncomputed tomography images with a new class balancing method. BMC Biomed Eng 2021; 3: 4\n[PMID: 33641679 DOL: 10.1186/s42490-02 1-00050-y]\n\n41. Budak U, Guo Y, Tanyildizi E, Sengiir A. Cascaded deep convolutional encoder-decoder neural\nnetworks for efficient liver tumor segmentation. Med Hypotheses 2020; 134: 109431 [PMID:\n31669758 DOI: 10.1016/j.mehy.2019.10943 1]\n\n42 Chen Y, Wang K, Liao X, Qian Y, Wang Q, Yuan Z, Heng PA. Channel-Unet: A Spatial Channel-\nWise Convolutional Neural Network for Liver and Tumors Segmentation. Front Genet 2019; 10:\n1110 [PMID: 31827487 DOI: 10.3389/fgene.2019.01110]\n\n43. Hamm CA, Wang CJ, Savic LJ, Ferrante M, Schobert I, Schlachter T, Lin M, Duncan JS, Weinreb\nJC, Chapiro J, Letzen B. Deep learning for liver tumor diagnosis part I: development of a\nconvolutional neural network classifier for multi-phasic MRI. Eur Radiol 2019; 29: 3338-3347\n[PMID: 31016442 DOL: 10.1007/s00330-019-06205-9]\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_12.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_12.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 1,
+                "page_idx": 12
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 51.76,
+                    "box": [
+                        810.6,
+                        243.4,
+                        2251.4,
+                        3304.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_12/region_1_text.png",
+                    "text": "44 Wang CJ, Hamm CA, savic LJ, Ferrante M, Schobert I, Schlachter I, Lin M, Weinreb JC, Duncan\nJS, Chapiro J, Letzen B. Deep learning for liver tumor diagnosis part II: convolutional neural network\ninterpretation using radiologic imaging features. Eur Radiol 2019; 29: 3348-3357 [PMID: 31093705\nDOI: 10.1007/s00330-019-06214-8]\n\nAS Wu Y, White GM, Cornelius T, Gowdar I, Ansari MH, Supanich MP, Deng J. Deep learning LI-\nRADS grading system based on contrast enhanced multiphase MRI for differentiation between LR-3\nand LR-4/LR-S liver tumors. Ann Trans! Med 2020; 8: 701 [PMID: 32617321 DOI:\n10.21037/atm.2019.12.151]\n\n46 Zhen SH, Cheng M, Tao YB, Wang YF, Juengpanich S, Jiang ZY, Jiang YK, Yan YY, Lu W, Lue\nJM, Qian JH, Wu ZY, Sun JH, Lin H, Cai XJ. Deep Learning for Accurate Diagnosis of Liver Tumor\nBased on Magnetic Resonance Imaging and Clinical Data. Front Oncol 2020; 10: 680 [PMID:\n32547939 DOI: 10.3389/fonc.2020.00680]\n\n47 Zhang Y, Lv X, Qiu J, Zhang B, Zhang L, Fang J, Li M, Chen L, Wang F, Liu S, Zhang S. Deep\nLearning With 3D Convolutional Neural Network for Noninvasive Prediction of Microvascular\nInvasion in Hepatocellular Carcinoma. J Magn Reson Imaging 2021; 54: 134-143 [PMID: 33559293\nDOI: 10.1002/jmri.27538]\n\n48 Wang G, Jian W, Cen X, Zhang L, Guo H, Liu Z, Liang C, Zhou W. Prediction of Microvascular\nInvasion of Hepatocellular Carcinoma Based on Preoperative Diffusion-Weighted MR Using Deep\nLearning. Acad Radio! 2020 [PMID: 33303346 DOI: 10.1016/j.acra.2020.11.014]\n\n49 Jiang YQ, Cao SE, Cao S, Chen JN, Wang GY, Shi WQ, Deng YN, Cheng N, Ma K, Zeng KN, Yan\nXJ, Yang HZ, Huan WJ, Tang WM, Zheng Y, Shao CK, Wang J, Yang Y, Chen GH. Preoperative\nidentification of microvascular invasion in hepatocellular carcinoma by XGBoost and deep learning. J\nCancer Res Clin Oncol 2021; 147: 821-833 [PMID: 32852634 DOI: 10.1007/s00432-020-03366-9]\n\n50 AnC, Jiang Y, Huang Z, Gu Y, Zhang T, Ma L, Huang J. Assessment of Ablative Margin After\nMicrowave Ablation for Hepatocellular Carcinoma Using Deep Learning-Based Deformable Image\nRegistration. Front Oncol 2020; 10: 573316 [PMID: 33102233 DOI: 10.3389/fone.2020.5733 16]\n\n51 Liu F, Liu D, Wang K, Xie X, Su L, Kuang M, Huang G, Peng B, Wang Y, Lin M, Tian J. Deep\nLearning Radiomics Based on Contrast-Enhanced Ultrasound Might Optimize Curative Treatments\nfor Very-Early or Early-Stage Hepatocellular Carcinoma Patients. Liver Cancer 2020; 9: 397-413\n[PMID: 32999867 DOI: 10.1159/000505694]\n\n52 Peng J, Kang S, Ning Z, Deng H, Shen J, Xu Y, Zhang J, Zhao W, Li X, Gong W, Huang J, Liu L.\nResidual convolutional neural network for predicting response of transarterial chemoembolization in\nhepatocellular carcinoma from CT imaging. Eur Radiol 2020; 30: 413-424 [PMID: 31332558 DOI:\n10.1007/s00330-019-063 18-1]\n\n53. Liu QP, Xu X, Zhu FP, Zhang YD, Liu XS. Prediction of prognostic risk factors in hepatocellular\ncarcinoma with transarterial chemoembolization using multi-modal multi-task deep learning.\nEClinicalMedicine 2020; 23: 100379 [PMID: 32548574 DOI: 10.1016/j.eclinm.2020.100379]\n\n54. Zhang L, Xia W, Yan ZP, Sun JH, Zhong BY, Hou ZH, Yang MJ, Zhou GH, Wang WS, Zhao XY,\nJian JM, Huang P, Zhang R, Zhang S, Zhang JY, Li Z, Zhu XL, Gao X, Ni CF. Deep Learning\nPredicts Overall Survival of Patients With Unresectable Hepatocellular Carcinoma Treated by\nTransarterial Chemoembolization Plus Sorafenib. Front Oncol 2020; 10: 593292 [PMID: 33102242\nDOI: 10.3389/fone.2020.593292]\n\n55 Lin H, Wei C, Wang G, Chen H, Lin L, Ni M, Chen J, Zhuo S. Automated classification of\nhepatocellular carcinoma differentiation using multiphoton microscopy and deep learning. J\nBiophotonics 2019; 12: 201800435 [PMID: 30868728 DOI: 10.1002/jbio.201800435]\n\n56 Kiani A, Uyumazturk B, Rajpurkar P, Wang A, Gao R, Jones E, Yu Y, Langlotz CP, Ball RL,\nMontine TJ, Martin BA, Berry GJ, Ozawa MG, Hazard FK, Brown RA, Chen SB, Wood M, Allard\nLS, Ylagan L, Ng AY, Shen J. Impact of a deep learning assistant on the histopathologic classification\nof liver cancer. NPJ Digit Med 2020; 3: 23 [PMID: 32140566 DOI: 10.1038/s41746-020-0232-8]\n\n57 Liao H, Long Y, Han R, Wang W, Xu L, Liao M, Zhang Z, Wu Z, Shang X, Li X, Peng J, Yuan K,\nZeng Y. Deep learning-based classification and mutation prediction from histopathological images of\nhepatocellular carcinoma. Clin Transl Med 2020; 10: e102 [PMID: 32536036 DOI:\n10.1002/ctm2.102]\n\n58 Wang H, Jiang Y, Li B, Cui Y, Li D, Li R. Single-Cell Spatial Analysis of Tumor and Immune\nMicroenvironment on Whole-Slide Image Reveals Hepatocellular Carcinoma Subtypes. Cancers\n(Basel) 2020; 12 [PMID: 33260561 DOI: 10.3390/cancers 12123562]\n\n59 Chen M, Zhang B, Topatana W, Cao J, Zhu H, Juengpanich S, Mao Q, Yu H, Cai X. Classification\nand mutation prediction based on histopathology H&E images in liver cancer using deep learning.\nNPJ Precis Oncol 2020; 4: 14 [PMID: 32550270 DOE: 10.1038/s41698-020-0120-3]\n\n60 LuL, Daigle BJ Jr. Prognostic analysis of histopathological images using pre-trained convolutional\nneural networks: application to hepatocellular carcinoma. PeerJ 2020; 8: e8668 [PMID: 32201640\nDOI: 10.7717/peerj.8668]\n\n61 Saillard C, Schmauch B, Laifa O, Moarii M, Toldo S, Zaslavskiy M, Pronier E, Laurent A, Amaddeo\nG, Regnault H, Sommacale D, Ziol M, Pawlotsky JM, Mulé S, Luciani A, Wainrib G, Clozel T,\nCourtiol P, Calderaro J. Predicting Survival After Hepatocellular Carcinoma Resection Using Deep\nLearning on Histological Slides. Hepatology 2020; 72: 2000-2013 [PMID: 32108950 DOI:\n10.1002/hep.3 1207]\n\n62 Shi JY, Wang X, Ding GY, Dong Z, Han J, Guan Z, Ma LJ, Zheng Y, Zhang L, Yu GZ, Wang XY,\nDing ZB, Ke AW, Yang H, Wang L, Ai L, Cao Y, Zhou J, Fan J, Liu X, Gao Q. Exploring prognostic\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_13.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_13.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 1,
+                "page_idx": 13
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 52.9,
+                    "box": [
+                        806.3,
+                        235.5,
+                        2243.9,
+                        682.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_13/region_1_text.png",
+                    "text": "indicators in the pathological images of hepatocellular carcinoma based on deep learning. Gut 2021;\n70: 951-961 [PMID: 32998878 DOE: 10.1136/gutjnl-2020-320930]\n\n63 Yamashita R, Long J, Saleem A, Rubin DL, Shen J. Deep learning predicts postsurgical recurrence\nof hepatocellular carcinoma from digital histopathologic images. Sci Rep 2021; 11: 2047 [PMID:\n33479370 DOI: 10.1038/s41598-02 1-8 1506-y]\n\n64 Gumbs AA, Perretta S, d’ Allemagne B, Chouillard E. What is Artificial Intelligence Surgery? Art Int\nSurg 2021; 1: 1-10 [DOL 10.20517/ais.2021.01]\n\n65 Lee D, Yu HW, Kwon H, Kong HJ, Lee KE, Kim HC. Evaluation of Surgical Skills during Robotic\nSurgery by Deep Learning-Based Multiple Surgical Instrument Tracking in Training and Actual\nOperations. J Clin Med 2020; 9 [PMID: 32585953 DOI: 10.3390/jcm9061964]\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_14.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_14.png",
+                "image_width": 2480,
+                "image_height": 3509,
+                "regions_num": 3,
+                "page_idx": 14
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "figure",
+                    "score": 26.29,
+                    "box": [
+                        416.1,
+                        66.5,
+                        2237.3,
+                        2137.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_14/region_1_figure.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 24.98,
+                    "box": [
+                        1067.6,
+                        2277.3,
+                        1413.4,
+                        2641.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_14/region_2_text.png",
+                    "text": "Ae\ncs ae\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 35.41,
+                    "box": [
+                        994.6,
+                        3385.6,
+                        2401.5,
+                        3442.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_14/region_3_text.png",
+                    "text": "© 2021 Baishideng Publishing Group Inc. All rights reserved.\n"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_07.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 7,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.31,
+            "box": [
+                385.0,
+                224.0,
+                2174.1,
+                723.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_07/region_1_text.png",
+            "text": "large series of HCC samples with available clinical annotations, digital slides, and\nmolecular data. [24, 25] The website (www.cbioportal.org) was accessed on December\n2016. One digital slide was available for each case, and, after the exclusion of cases with\nhistological features suggestive of either cholangiocarcinoma (n=8) or\nhepatocholangiocarcinoma (n=3), a series of 359 HCC with molecular data was finally\nselected for further analysis (\"TCGA Cohort\"). For survival and early relapse studies,\npatients with a prior history of anti-tumour treatment and/or incomplete surgical\nresection (R1 or R2) were excluded. Survival and relapse status were available in 313\nand 277 cases, respectively.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 88.45,
+            "box": [
+                386.3,
+                793.2,
+                886.9,
+                856.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_07/region_2_title.png",
+            "text": "Immunohistochemistry\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 97.25,
+            "box": [
+                385.4,
+                885.7,
+                2172.9,
+                1276.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_07/region_3_text.png",
+            "text": "Expression of Glutamine Synthetase (GS), B-catenin, CK19, Epithelial cell adhesion\nmolecule (EpCAM), C-reactive protein (CRP), ARID1A, phospho-S6 protein, and\nphospho-ERK was investigated on whole tumour sections to. avoid sampling\nheterogeneity inherent to tissue-micro-array techniques. Stainings were performed\nmanually or using Leica Bondmax or Dako autostainers (a detailed description of\nquotation methods, antibodies used and staining protocols is provided in Supplemental\nTable 1, Supplemental Material and Methods and CTAT table).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 79.27,
+            "box": [
+                385.5,
+                1375.0,
+                1777.7,
+                1440.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_07/region_4_title.png",
+            "text": "Transcriptomic classification of HCC samples and gene expression\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 96.04,
+            "box": [
+                386.3,
+                1467.1,
+                2174.6,
+                2136.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_07/region_5_text.png",
+            "text": "Total RNAs were extracted with the RNeasy kit (Qiagen®), and quality assessment was\nperformed as previously described.[26] Five hundred nanograms of RNA were further\nreverse-transcribed using the High Capacity Transcription kit (Life technologies®).\nAfter preamplification of the specific targets, Real-Time Polymerase Chain Reaction\n(PCR) was performed using the high throughput BioMark Real-Time PCR system\n(Fluidigm®, South San Francisco,.CA) according to manufacturer’s instructions, using\nFluidigm 96.96 dynamic arrays and TaqMan predesigned assays (Supplemental Material\nand Methods). Ct values» were calculated using the Fluidigm Real-Time PCR Analysis\nsoftware (4.1.3). Gene expression was normalized to ribosomal 18S mRNA, and\nexpression level ofthe tumour samples was compared with the mean level of the\ncorresponding gene expression in normal liver tissues (n = 5), expressed as an n-fold\nratio. The relative amount of RNA was calculated with the 2-delta delta CT method.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 94.5,
+            "box": [
+                381.9,
+                2160.3,
+                2175.0,
+                2882.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_07/region_6_text.png",
+            "text": "Transcriptomic classification of HCC samples was performed in 265 cases using a\ncombination of 16 genes, as previously described.[11] In addition, the expression of the\nfollowing genes was investigated in a subset of 186 tumours: ALB, AFP, APOB, CYP1A1,\nCYP1A2, CYP3A4, CYP2E1, CYP2C9, HNF4A, HNF1A (hepatocellular differentiation and\nfunction), GCK, GCKR, GPI (glycolysis), FBP1, PCK1, PCK2 (gluconeogenesis), ACACA,\nACLY, FADS1, FADS2, FASN, ME1 (fatty acid synthesis), ABCB11, ABCG2, ABCB4, ABCC2,\nABCB1, SLCO1B3 (transporters involved in bile salts efflux into canaliculi), ABCC1, ABCC3,\nABCC4 (transporters involved in bile salts efflux into blood flow), GLUL, LGR5, TBX3\n(Wnt/B-catenin pathway target gene), MKI67, RRM2, AURKA, EZH2 (cell proliferation),\nANGPT1, ANGPT2, VEGFA (angiogenesis), KRT19, EPCAM, SOX9, SALL4, ALDH1A, CD44,\nCD24, KRT7, CD133, THY1 (progenitor/cancer stem cell markers), and TGFB1, TGFBR1,\nSMAD4 and VIM (TGFB pathway /epithelial-to-mesenchymal transition) (Supplemental\nMaterial and Methods).\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 50.92,
+            "box": [
+                386.3,
+                2955.5,
+                741.2,
+                3016.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_07/region_7_text.png",
+            "text": "Gene sequencing\n"
+        }
+    ]
+}

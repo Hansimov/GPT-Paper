@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 4,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.67,
+            "box": [
+                191.0,
+                409.3,
+                2240.0,
+                701.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_01/region_1_title.png",
+            "text": "Implementation of deep learning in liver pathology\noptimizes diagnosis of benign lesions and adenocarcinoma\nmetastasis\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 93.5,
+            "box": [
+                187.7,
+                786.5,
+                2237.8,
+                1005.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_01/region_2_text.png",
+            "text": "Mark Kriegsmann'”* | Katharina Kriegsmann*** | Georg Steinbuss** |\nChristiane Zgorzelski' | Thomas Albrecht’ | Stefan Heinrich® | Stefan Farkas® |\nWilfried Roth’ | Hien Dang® | Anne Hausen’ | Matthias M. Gaida””'°®\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 46.3,
+            "box": [
+                153.4,
+                1100.8,
+                2281.5,
+                2443.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_01/region_3_text.png",
+            "text": "linstitute of Pathology, Heidelberg .\nUniversity, Heidelberg, Germany Grap hical Abstract\nPathology Wiesbaden, Wiesbaden, Create Data Fit Model\nGermany x Class 1 be (4) Spit tay (6) Train (EFV2B0 |\n3Department of Hematology, Oncology ap Class 2 i a SS © ResNetRS |\n. : Validation\n\nand Rheumatology, Heidelberg Casd ee yy. » (6) Evaluate\nUniversity, Heidelberg, Germany rel\n4Laborarztpraxis Rhein-Main MVZ GbR, oe lo Extract | ©) Select Best\nFrankfurt am Main, Frankfurt, Germany a e\n\n: ; Pe (@)Evaluate se -\n>Department of Surgery, JGU-Mainz, Z\\ n~ 2 iy ee.\n\n(2) Tile © Final Model\nUniversity Medical Center Mainz, Mainz, \" |\nGermany Prediction Quality Estimate\n°Department of Surgery, St. Josefs-\nHospital, Wiesbaden, Germany Artificial intelligence algorithms allow the separation of anatomical, benign, and\ng 8 Pp &\nInstitute of Pathology, JGU-Mainz, malignant structures in histological slides of the liver.\n\nUniversity Medical Center Mainz, Mainz, oa. . . . .\nGermany Digital image analysis on case level revealed overall highly satisfactory prediction\n8Department of Surgery, Department of capability of our algorithm for the different histological classes, resulting in a tile\nSurgical Research, Thomas Jefferson accuracy of 89% (38413/43059) and case accuracy of 94% (198/211).\nUniversity, Philadelphia, Pennsylvania, . . . . . .\nUSA y P y A large curated data set of liver histology is provided for further optimization and\n°TRON, JGU-Mainz, Translational research.\nOncology at the University Medical Our algorithm can be applied in surgical liver pathology supporting decision\nCenter, Mainz, Germany making in establishing the diagnosis.\n10Research Center for Immunotherapy,\nJGU-Mainz, University Medical Center\nMainz, Mainz, Germany\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 50.0,
+            "box": [
+                187.0,
+                2492.7,
+                778.9,
+                3018.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_01/region_4_text.png",
+            "text": "Correspondence\n\nMark Kriegsmann, Institute of Pathology,\nHeidelberg University, 69120 Heidelberg,\nGermany.\n\nEmail:\nkriegsmann@pathologie-wiesbaden.de\nAnne Hausen, Institute of Pathology, JGU-\nMainz, University Medical Center Mainz,\n55131 Mainz, Germany.\n\nEmail:\nAnne.Hausen@unimedizin-mainz.de\n"
+        }
+    ]
+}

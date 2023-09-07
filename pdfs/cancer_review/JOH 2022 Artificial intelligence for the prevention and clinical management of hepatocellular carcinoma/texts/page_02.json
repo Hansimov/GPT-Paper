@@ -1,0 +1,140 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 10,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.44,
+            "box": [
+                466.5,
+                269.9,
+                2010.0,
+                1084.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_02/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 98.36,
+            "box": [
+                175.3,
+                1126.5,
+                1503.9,
+                1163.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_02/region_02_text.png",
+            "text": "Fig. 1. Definitions of artificial intelligence (AI), machine learning (ML) and deep learning (DL).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                177.3,
+                1242.8,
+                1000.3,
+                2061.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_02/region_03_text.png",
+            "text": "(ie. input data) to the last layer (i.e. output data)\nafter passing through multiple, intervening hidden\nlayers (Fig. 2). To train an NN, data are divided into\na training set and a testing set. The training set\ncharacterises the architecture of the network and\ndefines and adjusts the weights between neurons,\nin order to improve classification of the desired\noutput. The testing set then evaluates the utility of\nthe NN for identifying or predicting that output.\nThis validation can be conducted internally or\nexternally. Internal validation is commonly per-\nformed by k-fold cross validation within one\ndataset, by splitting that dataset into k parts and\nthen training k times on k-1 parts, and then sub-\nsequently testing on the remaining part of the\ndataset. External validation is typically considered\nmore robust, as it demonstrates model general-\nisability across populations.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                1034.3,
+                1242.8,
+                1863.1,
+                1603.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_02/region_04_text.png",
+            "text": "Current limitations of DL approaches include\noverfitting of data, limited ‘explainability’ of data,\nand the possibility of poor generalisability, due to\nthe inherent reliance of DL models on the size and\ndiversity of their training dataset. In this review,\nwe will outline the rapidly evolving role and\nchallenges for AI in the prediction, diagnosis, and\nprognostication of HCC.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 96.07,
+            "box": [
+                1035.4,
+                1650.3,
+                1610.4,
+                1696.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_02/region_05_title.png",
+            "text": "AI for predicting incident HCC\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1033.9,
+                1697.4,
+                1860.9,
+                2060.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_02/region_06_text.png",
+            "text": "Several previous case-control and cohort studies\nhave developed predictive models for the devel-\nopment of HCC using clinical, demographic and/or\nlaboratory risk factors, selected using conventional\nstatistical approaches. However, these models have\nlargely been criticised for their limited general-\nisability, modest accuracy, and lack of broad\nexternal validity. Moreover, HCC risk is notoriously\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 71.24,
+            "box": [
+                1912.4,
+                1587.5,
+                2068.5,
+                1628.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_02/region_07_title.png",
+            "text": "Key point\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 97.38,
+            "box": [
+                1913.3,
+                1653.1,
+                2279.5,
+                1992.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_02/region_08_text.png",
+            "text": "Due to the broad hetero-\ngeneity in risk factors for\nHCC and the lack of estab-\nlished strategies for pre-\ndiction or prognostication,\nAI has recently emerged as\na unique opportunity to\nimprove the full spectrum\nof HCC clinical care.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "figure",
+            "score": 99.52,
+            "box": [
+                201.5,
+                2191.5,
+                2274.2,
+                2832.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_02/region_09_figure.png"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.68,
+            "box": [
+                178.2,
+                2884.4,
+                2310.1,
+                3032.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_02/region_10_text.png",
+            "text": "Fig. 2. General concept of pipelines using neural networks. Different input data are pre-processed in such a way that they can be used as input values for the\ntraining of a neural network. The neural network consists of one input layer, multiple hidden convolutional and/or multiple fully connected layers extracting\nfeatures from the input data, and one output layer with nodes that refer to different labels. These networks can then - among others — be used to classify data or\nto predict therapeutic response or prognosis.\n"
+        }
+    ]
+}

@@ -1,0 +1,194 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_13.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 14,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                207.9,
+                234.4,
+                1214.3,
+                1029.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_01_text.png",
+            "text": "(Fig.6 Spatial density of NK cells in HCC samples and its correla-\ntions with post-LT recurrence. a The clinical heatmap and clustering\nof intratumoral immunological infiltration. b Comparisons of the NK\ncell density in the early recurrence and none recurrence subgroups\naccording to the tumor nest, invasive margin, and normal liver tissue.\nData are presented as the mean+SEM. *p<0.05. ¢ Representative\ncolocalization of CD16 (yellow) and CD56 (white) in early recur-\nrence and none recurrence subgroups, Scale bar 50 pm. d The inter-\naction analysis for immune markers in the tumor environment of LT\npatients. e The correlation plot of NK cell with cDC, and NK cell\nwith CD8'*T cell. f The representative mIF image and proximity dis-\ntance map showing the closest distances from the nuclear center of\nCD8°*T cells to NK cells. Scale bar 100 pm. g The distribution histo-\ngram of distances from CD8*T cells to closest NK cells. h Compari-\nson of average closest distances from CD8*T cells to NK cells in the\nearly recurrence and none recurrence subgroups. Data are presented\nas the mean+ SEM. ****p<0.0001. i The distribution histogram of\ndistances from CD8*T cells to closest NK cells in the none recur-\nrence subgroup (above) and early recurrence subgroup (down)\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                212.7,
+                1115.0,
+                1217.7,
+                1272.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_02_text.png",
+            "text": "all LT patients have received immunosuppressive therapy\nafter transplantation, which impedes further evaluation of\nits impact on relapse.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                212.9,
+                1272.9,
+                1215.8,
+                2209.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_03_text.png",
+            "text": "Immune checkpoint molecules induce T-cell dysfunction\nand immune escape in the HCC TME [43], while immune\ncheckpoint inhibitors restore the effector function of T cells\nin the tumor microenvironment [44]. The cluster results\nreflected a closer correlation between CD8*T cells and\nPD-L1, CTLA4 and TIM-3 in the early-recurrence subgroup\nthan in the none-recurrence subgroup (Fig. S8), suggest-\ning impaired antitumor cytotoxicity caused by immunosup-\npressive molecules. Except for IDO, all immunosuppressive\nmolecules were highly expressed in the early-recurrence\nsubgroup. The role of IDO in human LT remains unknown,\nwhile controversial conclusions have been drawn about its\nprognostic value after liver resection [45, 46]. Since the\nimmune balance between antitumor cytotoxicity and post-\nLT rejection is a complicated process regulated by effector\nimmune cells and immunosuppressive molecules, the prog-\nnostic role of immunosuppressive molecules is by no means\nconclusive in LT cases.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                213.5,
+                2209.6,
+                1215.8,
+                2783.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_04_text.png",
+            "text": "There are several limitations of our study. First, our train-\ning data came from a single institution. A more rigorous\nexternal validation dataset is needed. Second, the patients\nin both cohorts were predominantly HBV infected, which\nreduced the representativeness of our HCC population.\nThird, the poor effects for image fusion of different mIF pan-\nels inhibited a deeper exploration of the immune microenvi-\nronment including the interaction between antitumor cyto-\ntoxic cells and immune checkpoint molecules. Fourth, the\ncorrelation between pathological signatures and multiomics\nsequencing data should be investigated via AI computing.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.36,
+            "box": [
+                1276.5,
+                226.5,
+                1521.1,
+                290.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_05_title.png",
+            "text": "Conclusion\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1275.8,
+                341.0,
+                2278.7,
+                913.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_06_text.png",
+            "text": "In conclusion, this study proposed an efficient pathological\nrisk score based on artificial intelligence for HCC patients\nwho underwent LT. DPS was superior to most clinical mod-\nels in guiding HCC surveillance strategies by accurately\npredicting post-LT recurrence and survival. DPS facilitated\nthe histological diagnosis of HCC-specific structures and\nhighlighted the prognostic significance of immune cells in\nthe TME of LT patients. Patients with low recurrence risk\nwere characterized by a state of immune activation. Future\nstudies should focus on the correlation between pathological\nsignatures and multiomics data.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 98.52,
+            "box": [
+                1275.2,
+                950.8,
+                2275.4,
+                1037.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_07_text.png",
+            "text": "Supplementary Information The online version contains supplemen-\ntary material available at https://doi.org/10.1007/s 12072-023-105 11-2.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                1275.7,
+                1077.0,
+                2276.6,
+                1372.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_08_text.png",
+            "text": "Author contributions (1) Conception and design: YHS, JHY, JZ, and\nJF; (II) administrative support: YHS and JHY; (IID) provision of study\nmaterials or patients: YHS, JHY, YFZ, WRL, ZT, JZ, and JF; (IV) col-\nlection and assembly of data: WFQ, MXT, HWL, ZY, GQZ, XFJ, RH,\nCYT, YF, JG, XLW, JFC, QFZ, RY, and THC; (V) data analysis and\ninterpretation: WFQ, MXT, and HWL; (VI) manuscript writing: WFQ,\nMXT, HWL, and YFZ; (VID) final approval of manuscript: all authors.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1276.0,
+                1408.8,
+                2277.4,
+                1788.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_09_text.png",
+            "text": "Funding This work was supported by the grants from the National\nNatural Science Foundation of China (no. 81902963, 81773067,\n882073217, 82073218, and 82003084), National Key Research\nand Development Program of China (2018YFC1312100 and\n2020 YFE0202200). Shanghai Municipal Science and Technology\nMajor Project (No. 2018SHZDZX05). Shanghai Municipal Key\nClinical Specialty, CAMS Innovation Fund for Medical Sciences\n(CIFMS) (2019-I2M-5-058). Clinical Research Plan of SHDC (No.\nSHDC2020CRS5007).\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.81,
+            "box": [
+                1276.0,
+                1825.3,
+                2277.1,
+                1954.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_10_text.png",
+            "text": "Data availability All data generated or analyzed during this study are\nincluded in this article. Further enquiries can be directed to the cor-\nresponding author.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 99.01,
+            "box": [
+                1275.2,
+                1993.7,
+                1517.7,
+                2049.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_11_title.png",
+            "text": "Declarations\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                1276.4,
+                2085.1,
+                2277.5,
+                2340.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_12_text.png",
+            "text": "Conflict of interest Wei-Feng Qu, Meng-Xin Tian, Hong-Wei Lu, Yu-\nFu Zhou, Wei-Ren Liu, Zheng Tang, Zhao Yao, Run Huang, Gui-Qi\nZhu, Xi-Fei Jiang, Chen-Yang Tao, Yuan Fang, Jun Gao, Xiao-Ling\nWu, Jia-Feng Chen, Qian-Fu Zhao, Rui Yang, Tian-Hao Chu, Jian\nZhou, Jia Fan, Jin-Hua Yu and Ying-Hong Shi have no relevant finan-\ncial or non-financial interests to disclose.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                1275.6,
+                2376.9,
+                2277.1,
+                2548.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_13_text.png",
+            "text": "Statement of ethics This study protocol was reviewed and approved\nby the Institutional Review Board of Zhongshan Hospital (approval\nnumber B2021-611). Written informed consent was obtained from\nparticipants to participate in the study.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1276.3,
+                2607.7,
+                2277.1,
+                2986.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_13/region_14_text.png",
+            "text": "Open Access This article is licensed under a Creative Commons Attri-\nbution 4.0 International License, which permits use, sharing, adapta-\ntion, distribution and reproduction in any medium or format, as long\nas you give appropriate credit to the original author(s) and the source,\nprovide a link to the Creative Commons licence, and indicate if changes\nwere made. The images or other third party material in this article are\nincluded in the article's Creative Commons licence, unless indicated\notherwise in a credit line to the material. If material is not included in\nthe article's Creative Commons licence and your intended use is not\n"
+        }
+    ]
+}

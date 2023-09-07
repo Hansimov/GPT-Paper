@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 10,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.77,
+            "box": [
+                648.3,
+                205.7,
+                2313.9,
+                293.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_01_text.png",
+            "text": "and fifty-one patients experienced disease recurrence during follow-up (median follow-up time of 12.2 months)\n(Table 1).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                648.4,
+                287.1,
+                2317.4,
+                627.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_02_text.png",
+            "text": "The TCGA-HCC test dataset consisted of 53 patients (median age of 61 years, with an IQR of 51-68 years,\n62% male and 38% female). The frequencies of risk factors for HCC were: 33% for hepatitis B virus infection,\n16% for hepatitis C virus infection, 39% for alcohol intake, and 10% for NAFLD. The AJCC stage grouping was\nIA in 1.9%, IB in 46%, II in 31%, IIIA in 17%, IIIB in 1.9%, and IVB in 1.9% of the patients. Twenty-five patients\nexperienced recurrence during follow-up (median follow-up time of 12.7 months) (Table 1). None of the clin-\nicopathologic features were significantly associated with shorter RFI upon univariable Cox regression analysis,\nwhile a Batts-Ludwig” fibrosis stage > 2 showed borderline significance (hazard ratio (HR) =2.7 (95% confidence\ninterval (CI) 0.98, 7.7), p=0.0543) (Table 2).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                647.9,
+                620.2,
+                2317.7,
+                1084.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_03_text.png",
+            "text": "The Stanford-HCC dataset consisted of 198 patients (median age of 64 years, with an IQR of 57-69 years, 79%\nmale and 21% female). The frequencies of risk factors for HCC were: 26% for hepatitis B virus infection, 52% for\nhepatitis C virus infection, 8.6% for alcohol intake, and 7.1% for NAFLD. The overall AJCC stage grouping was IA\nin 22%, IB in 21%, I] in 34%, IIIA in 5.6%, IIIB in 3.5%, and IVA in 1.0% of the patients, respectively. Sixty-two\npatients experienced disease recurrence during follow-up (median follow-up time of 24.9 months) (Table 1). The\nclinical and pathologic features associated with shorter RFI were AJCC stage grouping > II [HR=4.4 (95% CI 2.3,\n8.3), p< 0.0001], greatest tumor diameter >5 cm [HR=3.5 (95% CI 2.1, 5.8), p< 0.0001], histologic grade > moder-\nately differentiated [HR =2.1 (95% CI 1.2, 3.9), p=0.0128], presence of microvascular invasion [HR=3.9 (95% CI\n2.4, 6.5), p< 0.0001], presence of macrovascular invasion [HR=5.3 (95% CI 2.1, 13), p< 0.0001], positive surgical\nmargin [HR=6.8 (95% CI 1.6, 28), p=0.009], and fibrosis stage > 2 [HR=0.33 (95% CI 0.2, 0.55), p< 0.0001]\nusing univariable Cox regression analysis (Table 2).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                648.6,
+                1126.9,
+                2317.4,
+                1636.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_04_text.png",
+            "text": "HCC-SurvNet performance for RFI prediction. The tumor tile classification model was applied to each tissue-\ncontaining image tile in the TCGA-HCC development (n=299 WSI) and test (n=53 WSJ) datasets and the Stan-\nford-HCC dataset (n= 198 WSI). From each WSF, the 100 tiles with the highest probabilities for the tumor class\nwere selected for input into the subsequent risk score model. Figure 4 shows examples of tiles with probabilities\nin the top 100 for containing tumor, overlaid onto the original WSI. A MobileNetV2” pre-trained on ImageNet™*\nwas modified by replacing the fully-connected layers, and fine-tuned by transfer learning with on-the-fly data\naugmentation on the tiles from the TCGA-HCC development dataset (n=307 WSI from 299 patients), where\nthe model input was a 299 x 299 pixel image tile, and the output was a continuous tile-level risk score from the\nhazard function for RFI. The negative partial log-likelihood of the Cox proportional hazards model was used as a\nloss function’*'>. The model’s performance was evaluated internally on the TCGA-HCC test dataset (n =53 WSI\nfrom 53 patients), and externally on the Stanford-HCC dataset (n= 198 WSI from 198 patients). All tile-level risk\nscores from a patient were averaged to yield a patient-level risk score.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                649.7,
+                1628.7,
+                2319.3,
+                1885.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_05_text.png",
+            "text": "We assessed HCC-SurvNet’s performance using Harrell’s** and Uno’s** concordance indices (c-indices). On\nthe internal test set (TCGA-HCC test dataset, n=53 patients), Harrell’s and Uno’s c-indices were 0.724 and\n0.724, respectively. On the external test set (Stanford-HCC, n= 198 patients), the indices were 0.683 and 0.670,\nrespectively. We observed statistically significant differences in the survival distributions between the low- and\nhigh-risk subgroups, as stratified by the risk scores predicted by HCC-SurvNet, on both the internal and external\ntest sets (log-rank p value: 0.0013 and <0.0001, respectively) (Figs. 5, 6).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                649.3,
+                1877.5,
+                2317.8,
+                2177.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_06_text.png",
+            "text": "Histograms of HCC-SurvNet’s risk scores, along with the threshold used for risk group stratification, are\nshown in Supplementary Fig. 1. On univariable Cox proportional hazards analysis, the HCC-SurvNet risk\nscore was a predictor of the RFI, for both the internal [HR=6.52 (95% CI 1.83, 23.2), p=0.0038] and external\n[HR = 3.72 (95% CI 2.17, 6.37), p< 0.0001] test sets (Table 2). A continuous linear association between HCC-\nSurvNet’s risk score and the log relative hazard for RFI was observed by analysis of the internal and external test\ncohorts by univariable Cox proportional hazards regression with restricted cubic splines (Supplementary Fig. 2),\nvalidating the use of HCC-SurvNet’s risk score as a linear factor in the Cox analyses.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                650.0,
+                2169.6,
+                2316.9,
+                2302.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_07_text.png",
+            "text": "On multivariable Cox proportional hazards analysis, HCC-SurvNet’s risk score was an independent predic-\ntor of the RFI, for both the internal [HR =7.44 (95% CI 1.60, 34.6), p=0.0105] and external [HR =2.37 (95% CI\n1.27, 4.43), p=0.00685] test sets (Table 3).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                648.5,
+                2295.0,
+                2317.2,
+                2801.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_08_text.png",
+            "text": "No other clinicopathologic variable was statistically significant on the internal test set. Microvascular invasion\n[HR =2.84 (95% CI 1.61, 5.00), p= 0.000294] and fibrosis stage [HR = 0.501 (95% CI: 0.278, 0.904), p = 0.0217]\nshowed statistical significance on the external test set, along with HCC-SurvNet’s risk score. Schoenfeld’s global\ntest showed p values greater than 0.05 on both the internal (p = 0.083) and external (p =0.0702) test sets. On\nmixed-effect Cox regression analysis with the TCGA institution as a random effect, HCC-SurvNet’s risk score\nwas an independent predictor (p=0.014), along with the histologic grade (p=0.014) and macrovascular inva-\nsion (p=0.013). In the external test (Stanford-HCC) cohort, HCC-SurvNet’s risk score was positively associated\nwith the AJCC stage grouping, greatest tumor diameter, and microvascular invasion, and negatively associated\nwith fibrosis stage (Table 4). HCC-SurvNet's risk score yielded a significantly higher Harrell’s c-index (0.72 for\nthe internal and 0.68 for the external test cohort) than that obtained using the AJCC Stage grouping (0.56 for\nthe internal and 0.60 for the external test cohort), on both the internal and external test cohorts (p= 0.018 and\n0.025, respectively).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 99.76,
+            "box": [
+                649.9,
+                2837.2,
+                858.6,
+                2892.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_09_title.png",
+            "text": "Discussion\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                650.0,
+                2887.2,
+                2318.5,
+                3060.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_10_text.png",
+            "text": "Building upon recent advances in deep learning, we have developed a system for predicting RFI after curative-\nintent surgical resection in patients with HCC, directly from H&E-stained FFPE WSI. The system outputs an\nRFI risk score by first applying a deep CNN to automatically detect tumor-containing tiles. Then, a second model\noutputs a continuous risk score based on analysis of the top 100 tumor-containing tiles from each WSI. In the\n"
+        }
+    ]
+}

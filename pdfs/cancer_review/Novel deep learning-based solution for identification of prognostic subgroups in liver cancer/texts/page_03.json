@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                490.6,
+                362.4,
+                1996.5,
+                1121.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_03/region_1_text.png",
+            "text": "to produce features of survival relevance, a supervised approach can be taken, with the\ninclusion of survival analysis techniques directly into the loss function. The Cox propor-\ntional hazards model, a popular survival analysis technique, evaluates variables to assess\ntheir impact on an event, usually death. It has been utilised in deep learning solutions\nto help make survival predictions [8, 9]. In addition to assessing the survival relevance\nof the latent space in the loss function, the clustering quality of the space can also be\nexamined using methods underpinning common clustering techniques such as k-means.\nIncorporating a k-means objective into the loss function of a network has been explored\nsingly in order to produce cluster-friendly representations of data [10]. Clustering data\ncan formulate substructure to reveal distinct groups that are biologically homogeneous\nand consequently meaningful. In precision medicine, biologically distinct patient groups\nmay have clinical relevance for diagnosing patients into disease subtypes and receiving\ntheir particular treatments.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                493.5,
+                1130.7,
+                1993.8,
+                2479.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_03/region_2_text.png",
+            "text": "This study aimed to explore solutions which take advantage of both survival analysis\nand clustering techniques when training an autoencoder with multi-omics data. The\nmotivation for considering both metrics (together with the autoencoder reconstruction\nloss) in the training process was to obtain groups of patients which are distinct in terms\nof survival and that are biologically insightful. Methods are applied in HCC, a disease\nthat is very heterogeneous and complex due to diverse risk factors. The autoencoder\narchitecture used by Chaudhary et al. [6] for multi-omics data analysis is used as a state-\nof-the-art baseline. The baseline first trains a standard autoencoder model and then uti-\nlises survival information to filter bottleneck features, which are further used for patient\nclustering. In our work, autoencoder architectures were explored that incorporated\nsurvival-based and clustering-based losses directly into the loss function of an autoen-\ncoder model. The losses were examined separately and combined together as a hybrid\nmodel. Evaluation of the five different models and their cluster quality was performed\nusing the Silhouette score and with survival analysis via the log-rank test statistic. The\nhybrid model proved to be a superior method as it identified significantly different prog-\nnostic groups that were far more homogeneous than those of the baseline models. Prog-\nnostic groups were distinguished by a large number of features that were consistently\nidentified by the hybrid model. Many of these robust features were novel compared to\nthe other losses and a proportion could be validated as prognostic in two HCC cohorts,\nthereby indicating their biological relevance and potential for therapeutic applications as\nbiomarkers or targets. This new information increases our understanding of the aetiol-\nogy of this heterogeneous disease. Potentially in future it may also improve the clinical\ndiagnosis and treatment of HCC implementing a precision medicine approach.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.56,
+            "box": [
+                489.8,
+                2562.2,
+                659.8,
+                2613.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_03/region_3_title.png",
+            "text": "Methods\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.73,
+            "box": [
+                489.9,
+                2626.9,
+                634.7,
+                2672.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_03/region_4_title.png",
+            "text": "Datasets\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                489.8,
+                2684.1,
+                1995.7,
+                3030.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_03/region_5_text.png",
+            "text": "Multi-omics (miRNA, RNA-Seq, methylation) and survival data for primary liver tumour\nsamples of HCC from The Cancer Genome Atlas (TCGA) was analysed. TCGA data was\ndownloaded and pre-processed using TCGA-assembler 2 [11], in an approach following\nthat of Chaudhary et al. [6] For RNA-seq, normalized counts of genes collected using\nthe Illumina HiSeq assay were analysed. For miRNA, data collected using the Illumina\nHiSeq assay was analysed, with hg19 as the reference genome and miRNA information\n"
+        }
+    ]
+}

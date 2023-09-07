@@ -1,0 +1,89 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_09.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 6,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.7,
+            "box": [
+                176.7,
+                289.0,
+                2304.3,
+                2127.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_09/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 92.7,
+            "box": [
+                225.4,
+                2149.8,
+                326.2,
+                2182.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_09/region_2_title.png",
+            "text": "FIGURE 8\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.21,
+            "box": [
+                224.3,
+                2185.3,
+                2201.9,
+                2296.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_09/region_3_text.png",
+            "text": "(A) Distribution of publications by disease category. (B) Distribution of publications by data modality. (C) Distribution of publications by goal.\n(D) Distribution of publications by Al/ML method. (E) Distribution of publications by disease by data type. (F) Distribution of publications by disease by\nclinical goal. MRI, magnetic resonance imaging; CNN, Convolutional Neural Network; SVM, support vector machine; CT, computed tomography.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                177.9,
+                2409.2,
+                1214.7,
+                2870.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_09/region_4_text.png",
+            "text": "such as diagnosis, prediction, and segmentation, and achieved good\nresults (9, 49, 50, 68-70). Most tumor segmentation tasks use a U-Net\nmethod with a good effect, showing that U-Net has a good effect in the\nsegmentation task in the medical field, especially for tasks with small\namount of medical data (71, 72). It is estimated that the main research\nmethods in later stages of research are still concentrated in the field of\ndeep learning, which also indicates that future research aims to\nachieve better results and has higher technical requirements,\nespecially for fusion modeling of multimodal data.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                177.9,
+                2878.6,
+                1214.9,
+                3183.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_09/region_5_text.png",
+            "text": "Previous meta-analyses and literature reviews focused on the\napplications of specific technologies in liver cancer or the\ndevelopment status of specific liver disease (22-29), such as\nreviewing studies on AI on assisted imaging in the diagnosis,\nprognosis and detection of liver cancer, or explaining the latest\nresearch, limitations, and future development trends of AI in a\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                1269.9,
+                2407.6,
+                2306.0,
+                3184.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_09/region_6_text.png",
+            "text": "certain direction. However, they lack a quantitative analysis based\non the available literatures. Therefore, a bibliometrics analysis was\nconducted in our study to summary the research status of AI in liver\ncancer. Bibliometrics analysis uses mathematical and statistical\nmethods to study the literature system and bibliometric\ncharacteristics in a given field to mine the distribution structure,\nquantitative relationships, and changes of literature in this field.\nVisual display with the help of special software plays an important\nrole in understanding the current development status and\ndevelopment trend of the field. However, our research also has\nlimitations. First, we only included English articles in the WoSCC\ndatabase and did not include articles in other databases or\nlanguages, which could lead to the omission of many studies.\nSecond, keyword screening may not be perfect and could lead to\nomission of literature.\n"
+        }
+    ]
+}

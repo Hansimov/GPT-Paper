@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_16.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_16.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 4,
+        "page_idx": 16
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 80.11,
+            "box": [
+                302.0,
+                296.6,
+                712.7,
+                355.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_16/region_1_title.png",
+            "text": "Author contributions\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 94.02,
+            "box": [
+                297.9,
+                383.5,
+                2193.3,
+                440.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_16/region_2_text.png",
+            "text": "All authors were involved in identifying relevant literature, and in drafting and revising the manuscript.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 88.8,
+            "box": [
+                302.1,
+                548.8,
+                692.8,
+                607.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_16/region_3_title.png",
+            "text": "Competing interests\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 83.6,
+            "box": [
+                301.5,
+                629.7,
+                2195.2,
+                1198.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_16/region_4_text.png",
+            "text": "Jeroen van der Laak is a member of the advisory boards of Philips, The Netherlands and ContextVision,\nSweden, and received research funding from Philips, The Netherlands, ContextVision, Sweden, and\nSectra, Sweden in the last five years. Geert Litjens is a member of the Medical Advances Advisory\nBoard of Vital Images (Minnetonka, USA), received research funding from Philips Digital Pathology\nSolutions (Best, the Netherlands), and had a consultancy role for Novartis (Basel, Switzerland.\nFrancesco Ciompi is Chair of the Scientific and Medical Advisory Board of TRIBVN Healthcare, France,\nand reports advisory board fees from TRIBVN Healthcare, France.\n"
+        }
+    ]
+}

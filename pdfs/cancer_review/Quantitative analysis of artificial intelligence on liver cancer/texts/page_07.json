@@ -1,0 +1,153 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 11,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 98.91,
+            "box": [
+                178.3,
+                283.1,
+                1334.5,
+                320.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_01_text.png",
+            "text": "TABLE 4 Top 10 journals related to research on artificial intelligence in liver cancer.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.13,
+            "box": [
+                176.6,
+                356.2,
+                2304.4,
+                1120.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_02_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 96.27,
+            "box": [
+                176.6,
+                1129.3,
+                713.2,
+                1166.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_03_text.png",
+            "text": "IF, impact factor; JCR, Journal Citation Ranking.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 97.74,
+            "box": [
+                179.1,
+                1216.5,
+                453.1,
+                1286.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_04_title.png",
+            "text": "Discussion\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                177.2,
+                1325.2,
+                1221.3,
+                1789.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_05_text.png",
+            "text": "In this quantitative study, in order to systematically and\nquantitatively analyze the research status of AI in liver cancer, and\nexplore the future research trends and hotspots in this field, we used a\nbibliometrics method to analyze the current research status of AI in\nliver cancer in terms of publication and citation trends, countries/\nregions and institutions, authors and co-cited authors, journals, cited\nreferences and co-citation references, and keywords. Ultimately, 1724\narticles focusing on Al in liver cancer were collected from the WoSCC\ndatabase and analyzed.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                176.8,
+                1792.0,
+                1221.8,
+                2414.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_06_text.png",
+            "text": "Research on AI in liver cancer mainly started in 2003 and\nentered a stage of rapid development in 2017. China is the most\nproductive country with 35.33% of total publications; however, the\nUSA ranked first according to the H-index, citations, and average\ncitations per paper. It is notable that China, as a country with a high\nincidence of liver cancer, has a high number of studies on AI in liver\ncancer. However, most studies in China have limited impact, which\nmay need further improvement from topic selection and research\nimplementation. The League Of European Research Universities is\nthe most productive institution, followed by Sun Yat Sen University\nand Zhejiang University. This is consistent with the conclusion of\nthe most productive country above. We also found that cooperation\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.82,
+            "box": [
+                1269.0,
+                1218.4,
+                2314.0,
+                1686.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_07_text.png",
+            "text": "between medical and industrial universities contributes to better\nresearch. For example, Sun Yat Sen University and the Chinese\nAcademy Of Sciences (the second and fifth most productive\ninstitutions, respectively) have a strong TLS. Fu Dan University\nand Shanghai Jiaotong University also have a strong TLS. This\nindicated that the combination of medicine with engineering is\nhelpful for the development of AI in medicine. It also suggested that\nstudies should pay attention to the reasonable allocation of\nresearch teams.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1270.2,
+                1689.3,
+                2314.6,
+                2102.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_08_text.png",
+            "text": "The top three most productive journals had JCR scores of at least\nQ2. This shows that the field of AI in liver cancer is relatively mature\nand has a high level of concern and recognition. Moreover, most of\nthe top 10 journals in this field are medical journals and include a\nsmall number of engineering journals, showing that the medical field\npays more attention to AI in liver cancer. This suggests that we can\nconsider and design studies from both medical and engineering\naspects when conducting research, especially in medicine.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                1270.2,
+                2105.7,
+                2314.0,
+                2414.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_09_text.png",
+            "text": "In the in-depth analysis of keywords, we found that most studies\nfocused on liver cancer, especially HCC, showing that this is a\nresearch priority of liver disease. The second most common area of\nresearch was chronic hepatitis diseases such as liver cirrhosis, liver\nfibrosis, and fatty liver disease, which are more important for the\nprevention of liver cancer.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "figure",
+            "score": 94.66,
+            "box": [
+                173.5,
+                2510.4,
+                2302.0,
+                3095.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_10_figure.png"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 64.19,
+            "box": [
+                223.6,
+                3126.4,
+                1433.0,
+                3199.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_07/region_11_text.png",
+            "text": "FIGURE 6\nA dual-map overlap of journals with studies researching artificial intelligence in liver cancer.\n"
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 3,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 80.31,
+            "box": [
+                301.8,
+                290.6,
+                2194.4,
+                692.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_02/region_1_text.png",
+            "text": "inflammatory diseases, based on a variety of tissue features (e.g., disturbed tissue architecture, the\npresence or absence of specific cell characteristics or the presence of, for example, an abundance of\ninflammatory cells). While there is a worsening shortage of pathologists, their workload is increasing\nas a result of larger numbers of cases, and the requirement for more extensive diagnoses to identify\nthe most optimal treatment for patients.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 83.36,
+            "box": [
+                300.6,
+                706.5,
+                2199.9,
+                1870.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_02/region_2_text.png",
+            "text": "Using Al to analyze tissue sections is often referred to as computational pathology (CPATH) [4], [5],\nthe current applications of which rely heavily on the use of deep neural networks (so-called deep\nlearning). Research in this area began as early as the 1960’s, with the initial application of image\nanalysis algorithms to images of cells. Individual cells in blood smears could be classified into subtypes,\non the basis of quantitative cell characteristics such as size, shape and chromatin distribution, to\nanalyze the blood composition and help diagnose a range of diseases [6]. Early CPATH applications\nattempted to implement computational features that were painstakingly matched to a biological\nprocess or shape, and were later replaced by radiomics or pathomics approaches using generic\n‘feature banks’ of texture descriptors (i.e. a quantitative description of the characteristics of image\ntextures, such as orientation, contrast etc.)[7], operating under the assumption that complex\nclassifiers could eventually find the intricate relationships among these features for specific\nclassification tasks. For example, Kather et al showed that combining five different types of texture\ndescriptors resulted in a classifier that could recognize tumor and stroma in colorectal tissue sections\nwith 98.6% accuracy [155].\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 85.2,
+            "box": [
+                300.7,
+                1967.7,
+                2199.2,
+                3128.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_02/region_3_text.png",
+            "text": "The almost complete transition from feature engineering to deep learning occurred for several\nreasons. For medical imaging, and thus also for CPATH, perhaps the most important reason is the fact\nthat the construction of algorithms (almost) entirely by training, rather than by explicit programming\nor by using predefined filters, yields powerful, hierarchical feature representations that, in most cases,\noutperform more traditional image analysis methods [3]. As a consequence, the need to have domain\nknowledge in order to achieve good results is reduced because feature engineering requires the\ndefinition of problem-specific features, whereas in deep learning, the networks learn meaningful\nfeatures autonomously from the data. Automatically learning features from the data also leads to\nreduced implementation time. In feature engineering, crafting meaningful characteristics for the data\nat hand generally requires several iterations per feature and sometimes lengthy and repeated\ndiscussions with pathologists to understand what cues are used during their diagnostic process. In the\nera of deep learning, such trajectories can be reduced to months, sometimes even weeks, while\nbreaking boundaries in terms of diagnostic performance. Lastly, the importance of freely available\nsource code for the most successful neural network architectures cannot be understated.\n"
+        }
+    ]
+}

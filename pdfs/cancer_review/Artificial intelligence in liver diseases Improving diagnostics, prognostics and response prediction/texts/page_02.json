@@ -1,0 +1,194 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 14,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                177.9,
+                263.8,
+                1214.9,
+                993.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_01_text.png",
+            "text": "series’) and transformers (used for language processing® and,\nmore recently, image processing’). Importantly, in a DL\napproach, investigators do not assemble lists of handcrafted\nfeatures. Rather, a DL network is entrusted with automatically\nfinding features associated with an endpoint, specifically the\nclinical outcome. Given today’s technologies, DL methods usually\noutperform handcrafted feature-based approaches and conse-\nquently dominate the field of AI in hepatology. However, the\ndemarcation between handcrafted approaches and DL is not\nabsolute; multiple studies have used DL systems to extract fea-\ntures, which are subsequently combined with handcrafted fea-\ntures.'°'! Application-wise, ML/DL approaches can be used for\ntwo ends. First, they can recapitulate, and thus automate, the\ninterpretation of data normally performed by human experts.\nSecond, they can extract subtle features from complex data\nwhich are not immediately obvious to the human eye.'”\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.11,
+            "box": [
+                176.5,
+                1041.1,
+                846.7,
+                1087.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_02_title.png",
+            "text": "Academic research on Al in hepatology\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                177.7,
+                1088.5,
+                1216.8,
+                2639.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_03_text.png",
+            "text": "Academic research groups from multiple countries are actively\nengaged in ML/DL research in hepatology. Based on a quantita-\ntive survey of the MEDLINE database (supplementary\ninformation), researchers from China and the USA are the most\nprolific, with between 30 and 40 total publications on ML/DL in\nhepatology (Fig. 1A). By far the most common application is\nautomatic diagnosis of liver disease from imaging data (Fig. 1B).\nIn these cases, the ground truth is derived from the image data\nitself. For instance, an expert radiologist diagnoses a malignant\nliver mass in a CT dataset and the ML/DL algorithm is tasked with\nreproducing this diagnosis in a supervised training experiment.\nAnother group of studies involves prognosis prediction from\nimage-based data. Forecasting the natural course of a disease can\nhave direct implications for the clinical management of patients.\nAccurate prognostication allows clinicians to adjust follow-up\nintervals, convey the urgency of lifestyle changes to patients,\nand adjust the intensity or type of pharmacological treatment. A\nthird category of applications is segmentation of structures of\ninterest. Segmentation studies aim to generate an accurate\noutline around a region of interest. As a clinical example, algo-\nrithms can delineate organs at risk before radiation therapy of\ncancer. While ML/DL studies in hepatology address a range of\ndiseases, almost all published studies address either neoplastic\nor metabolic diseases of the liver, which are the major causes of\nliver-related morbidity and mortality besides viral hepatitis !*\n(Fig. 1C). ML/DL studies in hepatology currently incorporate a\nrange of imaging modalities. The 3 most commonly analysed\nmodalities are CT scans, MRI scans and H&E-stained histopa-\nthology slides (Fig. 1D). In the last 4 years, the number of ML/DL\nstudies in hepatology has exponentially grown (Fig. 1E), even\nmore so in radiology than in histopathology (Fig. 1F), and only 1\nstudy has combined both data modalities so far.'* In addition, a\ntrend toward a larger growth of DL studies compared to hand-\ncrafted feature-based studies can be observed (Fig. 1G).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.06,
+            "box": [
+                177.0,
+                2688.1,
+                793.5,
+                2734.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_04_title.png",
+            "text": "Implementation of AI in hepatology\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                177.5,
+                2735.2,
+                1218.3,
+                3098.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_05_text.png",
+            "text": "At this point, a number of ML/DL tools are already approved for\nclinical use by the US FDA and similar regulatory agencies\nworldwide.'° Nevertheless, there is a wide gap between the\nburgeoning number of research articles and the limited number\nof clinically approved, available applications. This discrepancy is\nexacerbated by missing external and prospective validation of\nmodels, lack of technological infrastructure in health facilities,\nlack of knowledge and trust in ML/DL systems amongst medical\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 52.65,
+            "box": [
+                1289.4,
+                288.2,
+                1458.6,
+                332.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_06_title.png",
+            "text": "Key points\n"
+        },
+        {
+            "idx": 7,
+            "thing": "list",
+            "score": 97.92,
+            "box": [
+                1288.5,
+                362.0,
+                2285.5,
+                892.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_07_list.png",
+            "text": "e Clinical decision making in hepatology relies on a diverse set of data\nmodalities.\n\ne Classical machine learning tools such as random forests and deep\nlearning tools such as convolutional neural networks can extract clin-\nically useful information from complex data.\n\ne In particular, histopathology and radiology images of liver diseases\ncontain a wealth of information.\n\ne A number of proof-of-concept studies have demonstrated the useful-\nness of these methods in hepatology.\n\ne Future efforts from academic and industry partners are required to\nestablish machine learning and deep learning tools in the clinical\npractice of hepatology.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1265.1,
+                946.4,
+                2303.8,
+                1586.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_08_text.png",
+            "text": "personnel, as well as data privacy issues.'*'? Furthermore, the\nclinical implementation of ML and DL methods in hepatology\nlags far behind that in other fields of medicine. Recently, the first\nML/DL algorithms for management of patients with liver dis-\neases were clinically approved in Europe and the US. In contrast,\nML/DL algorithms have already been available in other areas of\nmedicine for a few years, such as polyp detection in colonoscopy,\nfracture detection in X-ray images and brain volume quantifi-\ncation in magnetic resonance scans.'° This is possibly due to the\ncomplex nature of hepatology, which rarely depends on a single\ndata type for diagnosis and clinical management. In the\nfollowing sections, we will review the current progress of ML/DL\nin hepatology from clinical and technical perspectives, focusing\non histopathology and radiology image analysis.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 98.73,
+            "box": [
+                1264.1,
+                1673.8,
+                1753.1,
+                1724.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_09_title.png",
+            "text": "Al in liver histopathology\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 95.28,
+            "box": [
+                1263.6,
+                1726.3,
+                1522.0,
+                1772.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_10_title.png",
+            "text": "State of the art\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 98.87,
+            "box": [
+                1264.4,
+                1777.3,
+                1789.2,
+                1823.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_11_title.png",
+            "text": "Challenges in liver histopathology\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1265.2,
+                1822.2,
+                2303.3,
+                2599.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_12_text.png",
+            "text": "One of the key challenges in liver histopathology is the clinical\ndecision to obtain liver tissue via biopsy. While liver biopsy is a\nsafe procedure for most patients, it is associated with non-\nnegligible morbidity. Moreover, national guidelines and clinical\npractice are not always consistent about when a biopsy’s benefits\noutweigh its risks.'® This explains the obvious need for non-\ninvasive biomarkers and likely explains the abundance of ML/\nDL studies in liver radiology (Fig. 1F). Nevertheless, once a biopsy\nhas been obtained, there is a clinical need for a fast, definitive,\nreliable, reproducible and quantitative diagnosis.'° It was not\nuntil 2020 that the application of ML/DL methods in liver his-\ntopathology gathered pace. Unlike radiology which adopted\nradiomics in several studies, histopathology did not extensively\napply ML methods using handcrafted features. Rather, most\nresearch groups immediately adopted emerging DL algorithms\nbased on convolutional neural networks (CNNs), which were\noriginally developed for non-medical computer vision tasks.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "title",
+            "score": 99.08,
+            "box": [
+                1263.6,
+                2643.1,
+                2027.4,
+                2687.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_13_title.png",
+            "text": "Diagnosis and segmentation in fatty liver disease\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1263.9,
+                2688.8,
+                2303.3,
+                3098.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_02/region_14_text.png",
+            "text": "Most studies in histopathology have used data (whole slide im-\nages [WSIs]) from patients with non-alcoholic fatty liver disease\n(NAFLD), non-alcoholic steatohepatitis (NASH) or hepatocellular\ncarcinoma (HCC) (Table S1). All of these diseases share the\nclinical need for clear-cut diagnostic and prognostic systems.\nSeveral studies have focused on models quantifying steatosis,\ninflammation, hepatocellular ballooning and other morpholog-\nical patterns in patients with NAFLD, as well as the staging of\nliver fibrosis.2°-27 In 2014, Vanderbeck et al. published one of the\n"
+        }
+    ]
+}

@@ -1,0 +1,181 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 13,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.79,
+            "box": [
+                178.4,
+                250.0,
+                999.4,
+                385.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_01_text.png",
+            "text": "upregulated.?* Immune cells are easily identified\nby DCNNs, and it is likely that DL will be able to\npredict this type of gene expression profile.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                177.9,
+                388.2,
+                999.3,
+                841.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_02_text.png",
+            "text": "Most of these different studies share the same\nlimitations, including the limited number of pa-\ntients, sensitivity to staining protocols and lack of\nprospective validation. The standardisation of slide\nencoding and processing will also be key to enable\ncomparisons of model performance. Finally, it will\nbe critical to determine how predictions are\nimpacted by artifacts such as tissue folds or stains.\nAutomated quality control of slides may help to\novercome these issues.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 98.31,
+            "box": [
+                176.6,
+                891.2,
+                766.9,
+                934.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_03_title.png",
+            "text": "Molecular biology and biomarkers\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                177.7,
+                937.7,
+                999.3,
+                1434.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_04_text.png",
+            "text": "The past 20 years have witnessed an explosion in\nthe availability of large, complex data sets with\ngenomic and molecular data from bulk tissues and\nfrom single cells. Consequently, AI algorithms\nleveraging integrative multiomics approaches have\nalso been designed to improve the detection and\ncharacterisation of HCC tumours. Such integrated\nalgorithms have shown promise for informing\ndisease diagnosis and staging, and for the predic-\ntion of disease recurrence and _ therapeu-\ntic response.?**°\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                177.9,
+                1438.5,
+                999.3,
+                1938.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_05_text.png",
+            "text": "As an example, integrated multiomics analyses\nare increasingly used to assess individual variation\nin key patterns of hepatic gene expression, and to\ndefine intratumoural heterogeneity.*! Zeng and\ncolleagues constructed a DL model based on RNA-\nsequencing (RNA-seq)-defined samples, and used\nthose classified features to construct gene expres-\nsion signatures for cancer.** The DL-defined auto-\nencoder was found to outperform numerous\ntraditional analytical approaches based on prin-\ncipal component analysis or top varying genes.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                176.9,
+                1941.8,
+                999.5,
+                2531.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_06_text.png",
+            "text": "In another study of HCC samples, Chaudhary\nand colleagues applied supervised and unsuper-\nvised DL approaches to RNA-seq, miRNA-seq and\nDNA methylation data, and identified 2 distinct\nHCC subpopulations with significant survival dif-\nferences, with a C-statistic of 0.68 in the training\ndataset and 0.67-0.82 in 5 external validation\nsets.“? This algorithm has subsequently been\napplied to external HCC cohorts (n = 1,494),\nrevealing consensus driver genes linked to HCC\nsurvival.“ Future work will need to demonstrate\nthe utility of those signatures for informing thera-\npeutic decision making.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                177.6,
+                2534.1,
+                999.5,
+                3033.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_07_text.png",
+            "text": "Finally, single-cell RNA-seq technologies now\npermit thousands of single cells to be profiled\nsimultaneously and in an unbiased fashion, which\nholds great promise for powerful DL approaches.\nSingle-cell RNA-seq permits the identification of\nunique cellular subpopulations and their tran-\nscriptomic profiles, as well as complex gene regu-\nlatory networks.*? Within the liver, single-cell\nRNA-seq has been used to more comprehensively\nelucidate the cellular transcriptomes of non-\nalcoholic steatohepatitis and cirrhosis, and to\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1034.9,
+                250.9,
+                1856.2,
+                658.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_08_text.png",
+            "text": "identify novel cell types and cell-cell in-\nteractions.*°-** In HCC, it has permitted identifi-\ncation of new subsets of tumour-infiltrating\nlymphocytes, including clonally expanded exhaus-\nted CD8+ T cells and regulatory T cells, and tumour-\nassociated macrophages.**°° Collectively, these\nfindings are helping to uncover the immunological\nlandscape of chronic liver disease and HCC, with\nunprecedented resolution.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1034.6,
+                661.9,
+                1856.2,
+                1709.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_09_text.png",
+            "text": "The field of single-cell RNA-seq is still in its in-\nfancy and key challenges remain, including the\nvariation between methods in terms of data quality\nand sensitivity, as well as the noisiness and incom-\npleteness of generated data.°!~°* Specifically, low-\nabundance data is frequently lost, rendering an\nexpressed transcript undetectable (a phenomenon\ncalled, “dropout”).° On the other hand, unnecessary\namplification of noise risks artificially accentuating\nthe significance of less relevant pathways.*° Several\nDL-based tools are currently available to address\nthese issues in single-cell RNA-seq datasets,\nincluding DeepImpute and SAUCIE, which apply\nnode/gene interaction structures, as well as adap-\ntations of generative adversarial networks, which\ncan generate single-cell RNA-seq data and ascertain\nindividual cell types using NNs.°?->’ It is hoped that\nfurther improvements in DL algorithms will help to\nimprove the validity of single-cell RNA-seq datasets\nthrough imputation, by “denoising” with an auto-\nencoder that predicts genes’ mean, standard devia-\ntion and likelihood of dropout, or by streamlining\ndownstream data analyses.°*?®\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1034.4,
+                1713.3,
+                1856.2,
+                2393.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_10_text.png",
+            "text": "New technologies incorporating DL have\nrecently been developed to integrate single-cell\nRNA-seq profiling with epigenetic and proteomic\nassays, in order to more comprehensively profile\nindividual cells.°°-°' Such multi-omics ap-\nproaches have tremendous potential utility for\nuncovering novel biomarkers and therapeutic\ntargets in HCC. However, universal, standardised\nmethods and protocols must first be established,\nand much larger datasets will be needed, given\nthat the accuracy of DL algorithms depends upon\nthe size and quality of input data. This, in turn,\nwill require collaboration between investigators\nand the sharing of algorithms, approaches and\nraw datasets.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 97.31,
+            "box": [
+                1033.8,
+                2443.3,
+                1741.6,
+                2485.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_11_title.png",
+            "text": "Al for prognostication in established HCC\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1033.8,
+                2488.6,
+                1855.9,
+                3034.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_12_text.png",
+            "text": "The development of robust prognostic scoring\nsystems is key to improve patient risk stratification\nand to plan clinical trials testing neoadjuvant or\nadjuvant therapies (see Table 2). A DL algorithm\nbased on a residual NN architecture was recently\ndeveloped in a Korean multicentre study to predict\nHCC recurrence after transplantation. The features\nincluded age, tumour size, and serum levels of\nalpha-fetoprotein and PIVKA-II (prothrombin\ninduced by vitamin K absence or antagonist-II); the\nauthors showed the advantages of their model\n(MoRAL-AI, assessed by C-indices) in their external\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 95.72,
+            "box": [
+                1916.1,
+                2583.5,
+                2276.6,
+                2955.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_06/region_13_text.png",
+            "text": "A growing body of research\nhas applied AI approaches\nto improve HCC risk pre-\ndiction, and to more accu-\nrately detect and risk\nstratify existing HCC tu-\nmours, based on EHR data,\nradiomics approaches, and\nmolecular or histopatho-\nlogical biomarkers.\n"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3249,
+        "regions_num": 2,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 98.53,
+            "box": [
+                192.1,
+                353.8,
+                1194.8,
+                2961.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_14/region_1_list.png",
+            "text": "2020;27:592-600.\n\n4. Price WN. Big data and black-box medical algorithms. Sci\nTransl Med 2018;10:eaa05333.\n\n5. Vilone G, Longo L. Explainable artificial intelligence: a\nsystematic review. arXiv preprint 2020. arXiv:200600093.\n\n6. Gunning D, Stefik M, Choi J, et al. XAI-Explainable\nartificial intelligence. Sci Robot 2019;4:eaay7 120.\n\n7. Holzinger A, Biemann C, Pattichis CS, et al. What do\nwe need to build explainable AI systems for the medical\ndomain? arXiv preprint 2017. arXiv:171209923.\n\n8. Doshi-Velez F, Kim B. Towards a rigorous science of\ninterpretable machine learning. arXiv preprint 2017.\narXiv:170208608.\n\n9. Ribeiro MT, Singh S, Guestrin C. editors. “Why should\nI trust you?” Explaining the predictions of any classifier.\nIn: Proceedings of the 22nd ACM SIGKDD International\nConference on Knowledge Discovery and Data Mining,\n2016.\n\n10. Lundberg SM, Lee SI. A unified approach to interpreting\nmodel predictions. In: Advances in Neural Information\nProcessing Systems, 2017.\n\n11. Mokhtari KE, Higdon BP, Basar A. editors. Interpreting\nfinancial time series with SHAP values. In: Proceedings of\nthe 29th Annual International Conference on Computer\nScience and Software Engineering, 2019.\n\n12. Kuo K, Lupton D. Towards explainability of machine\nlearning models in insurance pricing. arXiv preprint 2020.\narXiv:2003 10674.\n\n13. Lundberg SM, Nair B, Vavilala MS, et al. Explainable\nmachine-learning predictions for the prevention\nof hypoxaemia during surgery. Nat Biomed Eng\n2018;2:749-60.\n\n14. van der Velden BHM, Kuijf HJ, Gilhuijs KGA, et\nal. Explainable artificial intelligence (XAI) in deep\nlearning-based medical image analysis. Med Image Anal\n2022;79:102470.\n\n15. LiR, Shinde A, Liu A, et al. Machine Learning-Based\nInterpretation and Visualization of Nonlinear Interactions\nin Prostate Cancer Survival. JCO Clin Cancer Inform\n2020;4:637-46.\n\n16. Bertsimas D, Margonis GA, Huang Y, et al. Toward\nan Optimized Staging System for Pancreatic Ductal\nAdenocarcinoma: A Clinically Interpretable, Artificial\nIntelligence-Based Model. JCO Clin Cancer Inform\n2021;5:1220-31.\n\n17. Jansen T, Geleijnse G, Van Maaren M, et al. Machine\nLearning Explainability in Breast Cancer Survival. Stud\nHealth Technol Inform 2020;270:307-11.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 99.11,
+            "box": [
+                1289.7,
+                357.9,
+                2296.7,
+                2961.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_14/region_2_list.png",
+            "text": "18. Chen X, Li Y, Li X, et al. An interpretable machine\nlearning prognostic system for locoregionally advanced\nnasopharyngeal carcinoma based on tumor burden\nfeatures. Oral Oncol 2021;118:105335.\n\n19. Moncada-Torres A, van Maaren MC, Hendriks MP, et\nal. Explainable machine learning can outperform Cox\nregression predictions and provide insights in breast cancer\nsurvival. Sci Rep 2021;11:6968.\n\n20. van den Bosch T, Warps AK, de Nerée Tot Babberich\nMPM, et al. Predictors of 30-Day Mortality Among Dutch\nPatients Undergoing Colorectal Cancer Surgery, 2011-\n2016. JAMA Netw Open 2021;4:e217737.\n\n21. Gong X, Zheng B, Xu G, et al. Application of machine\nlearning approaches to predict the 5-year survival\nstatus of patients with esophageal cancer. J Thorac Dis\n2021;13:6240-51.\n\n22. Farswan A, Gupta A, Sriram K, et al. Does Ethnicity\nMatter in Multiple Myeloma Risk Prediction in the Era of\nGenomics and Novel Agents? Evidence From Real-World\nData. Front Oncol 2021;11:720932.\n\n23. Alsinglawi B, Alshari O, Alorjani M, et al. An explainable\nmachine learning framework for lung cancer hospital\nlength of stay prediction. Sci Rep 2022;12:607.\n\n24. Jacobson D, Cadieux B, Higano CS, et al. Risk factors\nassociated with skeletal-related events following\ndiscontinuation of denosumab treatment among patients\nwith bone metastases from solid tumors: A real-world\nmachine learning approach. J Bone Oncol 2022;34:100423.\n\n25. Suh J, Yoo S, Park J, et al. Development and validation\nof an explainable artificial intelligence-based\ndecision-supporting tool for prostate biopsy. BJU Int\n2020;126:694-703.\n\n26. Kwong JCC, Khondker A, Tran C, et al. Explainable\nartificial intelligence to predict the risk of side-specific\nextraprostatic extension in pre-prostatectomy patients.\nCan Urol Assoc J 2022;16:213-21.\n\n27. Incoronato M, Aiello M, Infante T, et al. Radiogenomic\nAnalysis of Oncological Data: A Technical Survey. Int J\nMol Sci 2017;18:805.\n\n28. Liu Z, Wang S, Dong D, et al. The Applications of\nRadiomics in Precision Diagnosis and Treatment of\nOncology: Opportunities and Challenges. Theranostics\n2019;9:1303-22.\n\n29. Gillies RJ, Kinahan PE, Hricak H. Radiomics: Images\nAre More than Pictures, They Are Data. Radiology\n2016;278:563-77.\n\n30. Ludwig K, Kornblum HI. Molecular markers in glioma. J\nNeurooncol 2017;134:505-12.\n"
+        }
+    ]
+}

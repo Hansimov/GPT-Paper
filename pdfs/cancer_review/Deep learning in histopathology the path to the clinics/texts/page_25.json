@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_25.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_25.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 25
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 93.89,
+            "box": [
+                299.8,
+                299.0,
+                2200.4,
+                3132.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_25/region_1_list.png",
+            "text": "[115] Janowczyk, A., Basavanhally, A. & Madabhushi, A. Stain Normalization using Sparse\nAutoEncoders (StaNoSA): Application to digital pathology. Computerized medical imaging and\ngraphics 57, 50-61 (2017).\n\n[116] Shaban, M. T., Baur, C., Navab, N. & Albarqouni, S. StainGAN: Stain Style Transfer for Digital\nHistological Images. Proceedings of IEEE International Symposium on Biomedical Imaging, 953-956\n(2019).\n\n[117] Zheng, Y. et al. Stain standardization capsule for application-driven histopathological image\nnormalization. /EEE journal of biomedical and health informatics 25, 337-347 (2021).\n\n[118] Staartjes, V. E. & Kernbach, J. M. Significance of external validation in clinical machine learning:\nlet loose too early. The spine journal 20, 1159-1160 (2020).\n\n[119] Beede, E. et al. A Human-Centered Evaluation of a Deep Learning System Deployed in Clinics\nfor the Detection of Diabetic Retinopathy. CH/ Conference on Human Factors in Computing Systems,\n1-12 (2020).\n\n[120] Kelly, C. J., Karthikesalingam, A., Suleyman, M., Corrado, G. & King, D. Key challenges for\ndelivering clinical impact with artificial intelligence. BMC medicine 17, 195 (2019).\n\n[121] Nagendran, M. et al. Artificial intelligence versus clinicians: systematic review of design,\nreporting standards, and claims of deep learning studies. BMJ 368, m689 (2020).\n\n[122] Chen, P.H. C. et al. An augmented reality microscope with real-time artificial intelligence\nintegration for cancer diagnosis. Nature medicine 25, 1453-1457 (2019).\n\n[123] Abels, E. et al. Computational pathology definitions, best practices, and recommendations for\nregulatory guidance: a white paper from the Digital Pathology Association. J Patho! 249, 286-294\n(2019).\n\n[124] Guidotti, R. et al. A Survey of Methods for Explaining Black Box Models. ACM Comput. Surv.\n51, 93:1-93:42 (2019).\n\n[125] Kroll, J. A. The fallacy of inscrutability. Philosophical transactions of the Royal Society 376,\n(2018).\n\n[126] Price, W.N. & Cohen, I.G. Privacy in the age of medical big data. Nature medicine 25, 37-43\n(2019).\n\n{127] Lai, M.C., Brian, M. & Mamzer, M.F. Perceptions of artificial intelligence in healthcare: findings\nfrom a qualitative survey study among actors in France. Journal of translational medicine 18, 14 (2020).\n[128] Rieke, N. et al. The future of digital health with federated learning. NPJ digital medicine 3, 119\n(2020).\n\n[129] Sheller, M. J. et al. Federated learning in medicine: facilitating multi-institutional\ncollaborations without sharing patient data. Scientific reports 10, 12598 (2020).\n"
+        }
+    ]
+}

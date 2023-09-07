@@ -1,0 +1,206 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 15,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.19,
+            "box": [
+                584.3,
+                249.1,
+                1933.4,
+                697.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                189.6,
+                724.7,
+                2331.9,
+                873.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_02_text.png",
+            "text": "Fig. 3 Relationships of components in ML systems. a Shows the relationship between the clinical scenario and requirements in non-\ntransparent ML systems, where the system may not be human-facing, and as such, meeting quantitative performance requirements is\nsufficient. b Shows the relationship between the clinical scenario, requirements, and end users in transparent ML systems, as they arise in a\nhuman-centered system that seeks to enable users to accomplish a certain task.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.74,
+            "box": [
+                189.5,
+                917.7,
+                1223.0,
+                997.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_03_text.png",
+            "text": "the INTRPRT guideline, we introduce a case study (see Supple-\nmentary information A).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.66,
+            "box": [
+                190.5,
+                1054.8,
+                1079.5,
+                1135.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_04_title.png",
+            "text": "Guideline 1: specify the clinical scenario, constraints,\nrequirements, and end users\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                188.8,
+                1146.7,
+                1222.9,
+                1849.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_05_text.png",
+            "text": "The first step to designing any ML algorithm for healthcare is to\nwell define the clinical scenario, the constraints the solution will\nhave to abide by, and all hard or soft requirements the algorithm\nneeds to meet for the clinical task to be addressed adequately (cf.\nFig. 3). For ML algorithms that do not attempt to be transparent, it\nis essential but sufficient to assess whether the envisioned ML\nalgorithm design will satisfy the clinical constraints and require-\nments, e.g., an acceptable classification accuracy in allowable\nprocessing time. In addition, when designing transparent ML\nalgorithms it is equally critical to determine and characterize the\nend users. It is of particular importance to investigate end user\ncharacteristics specifically in the clinical context of the chosen\ntask. This is because, depending on the task, stakeholders have\nvaried interest, prior knowledge, responsibilities, and require-\nments'’. Deep understanding of the role target users play in the\nchosen clinical task and their unique needs is critical in\ndetermining how to achieve transparency (Guideline 2).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.67,
+            "box": [
+                190.0,
+                1906.6,
+                1222.6,
+                1986.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_06_title.png",
+            "text": "Guideline 2: justify the choice of transparency and determine\nthe level of evidence\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                188.8,
+                1998.7,
+                1223.0,
+                2783.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_07_text.png",
+            "text": "There exists a wide gap in domain expertise and contextualization\nbetween target users and ML model designers in most use cases\nin healthcare. Furthermore, there are multiple “transparency”\ntechniques and choices, such as the transparent working\nmechanism or user-centered interactions in practice. Simply\nselecting a “transparency” technique, without incorporating and\nconsulting target users puts the resulting ML models at risk of not\nachieving the desired transparency. The human-centered design\napproach addresses this challenge through iterative empirical\nstudies that over time guide the development and refinement of\nthe technical approach such that, upon completion, the design\nchoices are well justified by empirical target user feedback. This\napproach may not always be feasible in healthcare due to\naccessibility and availability barriers of target users. To address this\nlimitation while still enabling technological progress in transpar-\nent ML, we introduce four distinct levels of evidence. These levels\nallow designers to classify the level of confidence one may have\nthat the specific design choices will indeed result in a model that\naffords transparency.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                189.8,
+                2786.7,
+                1222.5,
+                2905.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_08_text.png",
+            "text": "The levels of evidence are based on increasingly thorough\napproaches to understand the chosen end users in context of the\nenvisioned task:\n"
+        },
+        {
+            "idx": 9,
+            "thing": "list",
+            "score": 99.58,
+            "box": [
+                189.6,
+                2935.3,
+                1224.4,
+                3056.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_09_list.png",
+            "text": "@ Level 0: No evidence. No dedicated investigations about the\nend users are performed to develop transparent ML systems.\n@ Level 1: One-way evidence. Formative user research\n"
+        },
+        {
+            "idx": 10,
+            "thing": "list",
+            "score": 99.76,
+            "box": [
+                1298.6,
+                921.0,
+                2332.9,
+                1910.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_10_list.png",
+            "text": "techniques, such as surveys and diary studies, are only\nperformed once without further feedback from end users\nabout the findings extracted from the research phase,\nresulting in one-way evidence. Such user research suffers\nrisks of potential bias in concluding about justification of\ntransparency because there is no opportunity for dialog, i.e.,\ndesigners may ask irrelevant questions or target users may\nprovide non-insightful, potentially biased responses.\n\n@ Level 2: Public evidence. Public evidence refers to information\nabout target user knowledge, preference, or behavior that is\npublic domain and vetted in a sensible way. Public evidence\nincludes clinical best practice guidelines, Delphi consensus\nreports, peer-reviewed empirical studies of closely related\napproaches in large cohorts, or well documented socio-\nbehavioral phenomena.\n\n@ Level 3: Iteratively developed evidence. Iteratively developed\nevidence is transparency evidence that is iteratively refined\nthrough user feedback where designers and end _ users\ncommunicate with each other throughout method develop-\nment. The purpose of iteratively validating and refining the\ncurrent transparency mechanism is to identify any potential\nbias in the assumptions that motivate the transparency\ntechnique while ensuring that it is understandable to\nend users.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1297.2,
+                1929.5,
+                2331.8,
+                2095.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_11_text.png",
+            "text": "Being actively cognizant of the level of evidence that supports\nthe development enables trading off development efforts\nbetween ML method development vs. gathering richer evidence\nin support of the intended developments.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 99.78,
+            "box": [
+                1298.5,
+                2153.2,
+                2329.8,
+                2233.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_12_title.png",
+            "text": "Guideline 3: clarify how the model follows the justification of\ntransparency\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1297.5,
+                2243.9,
+                2333.3,
+                2877.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_13_text.png",
+            "text": "This guideline is designed to ensure that the transparency\ntechnique used in the ML model is indeed consistent with the\nassumptions made during its justification. While complying with\nthis guideline is trivial if the model is developed in a human-\ncentered design approach (Level 3: Iteratively developed evi-\ndence), in all other cases designers should be explicit about the\nintellectual proximity of the developed technical approach to the\nmotivating evidence. To this end, after specifying which\ncomponents of the ML model require transparency for users to\ncapitalize on the intended benefits, it is desirable for the method\nto be as simple as possible so that it can be easily derived from\nand linked to the justification of transparency. Once confirmed\nthat the envisioned model is indeed consistent with the\njustification, computational development of the model, including\ntraining, refinement, and validation, begins.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "title",
+            "score": 99.3,
+            "box": [
+                1298.1,
+                2932.9,
+                2313.6,
+                2970.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_14_title.png",
+            "text": "Guideline 4: determine how to communicate with end users\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1298.5,
+                2982.6,
+                2330.1,
+                3063.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_04/region_15_text.png",
+            "text": "In addition to content (Guidelines 1, 2, and 3), seemingly\nperipheral factors on the presentation of information may play a\n"
+        }
+    ]
+}

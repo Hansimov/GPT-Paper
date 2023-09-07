@@ -1,0 +1,128 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_09.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 9,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.76,
+            "box": [
+                309.2,
+                260.6,
+                2103.7,
+                1416.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_09/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                177.5,
+                1456.9,
+                2305.8,
+                1641.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_09/region_2_text.png",
+            "text": "Fig. 3. Explainable artificial intelligence: example of pathology. This virtual model is dedicated to the prediction of the tumour or non-tumour nature of\nimages from digital slides. The aim of explainable artificial intelligence is to better understand, through transparency, semantics and explanation, how the model\nmakes its predictions. Transparency (1) consists of having an in-depth knowledge of the structure of the neural network and the activation status of its different\nneurons/nodes. Semantics will provide insights on the type of objects that result in the activation of particular parts of the network). Finally, explanation will\nenable clinicians to understand how the association of different features impact the final prediction.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 93.46,
+            "box": [
+                627.6,
+                1719.2,
+                1417.7,
+                1762.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_09/region_3_title.png",
+            "text": "Need for data sharing/open-source algorithms\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                626.3,
+                1767.0,
+                1450.2,
+                2996.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_09/region_4_text.png",
+            "text": "As the performance of AI models is highly depen-\ndent on the amount of data used for training, the\navailability of large data sets is key to fostering the\ndevelopment of research and its future impact on\nclinical care. To this end, the deposition and\nsharing of large datasets should be encouraged.\nThis includes utilisation and sharing of large-scale\ndata from EHRs across and between health sys-\ntems. Moreover, sharing of individual-participant\ndata (IPD) from clinical trials or purely academic\nresearch studies, a clear “ethical and _ scientific\nimperative”, has gained increasing traction and is\nnow advocated by many scientists and organisa-\ntions, and would assist in constructing datasets of\nsufficient size and detail to appropriately train and\nvalidate AI models.’” Moreover, a_ universal,\nstandardised method for addressing and analysing\nmissing data in Al models is necessary, and this is\nparticularly important when considering shared\ndatasets. The International Committee of Medical\nJournal Editors has thus implemented a clinical\ntrial data policy that requires an IPD sharing\nstatement for manuscripts reporting clinical trials.\nAlthough several repositories are now able to store\nIPD and make it available to third parties, the rate\nof sharing remains very low. The main obstacle is\nlikely to be cultural, however other issues remain,\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1482.3,
+                1722.2,
+                2308.9,
+                2037.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_09/region_5_text.png",
+            "text": "such as patients’ anonymity and the residual risk of\nre-identification, cost of data storage/provision,\nand need for specific consent regarding sharing.\nHowever, the availability of IPD from clinical trials\n(including imaging and digital slides) testing sys-\ntemic therapies will be key for the development of\nAI models able to predict response/survival.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 97.26,
+            "box": [
+                1484.1,
+                2087.0,
+                2177.8,
+                2129.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_09/region_6_title.png",
+            "text": "Need for sufficiently diverse populations\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1482.9,
+                2131.9,
+                2309.7,
+                2812.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_09/region_7_text.png",
+            "text": "To date, cohorts used to develop and train Al\nmodels focused on HCC risk prediction, diagnosis\nand prognostication have lacked sufficient racial,\nethnic and socioeconomic diversity. This is a crit-\nical issue, given that the accuracy of Al-based al-\ngorithms depends upon the validity and size of\ntheir input data. Consequently, future studies will\nneed to ensure that promising Al-based tools are\nthoughtfully validated in diverse cohorts that\ninclude racial and ethnic minorities as well as pa-\ntients across the complete socioeconomic spec-\ntrum. This once again underscores the need for\ndata sharing between investigators and across in-\nstitutions, so that representative cohorts can\nbe constructed.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 96.72,
+            "box": [
+                1484.1,
+                2862.2,
+                2033.5,
+                2905.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_09/region_8_title.png",
+            "text": "Examples from other disciplines\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.59,
+            "box": [
+                1481.6,
+                2909.7,
+                2306.8,
+                2997.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_09/region_9_text.png",
+            "text": "Currently, approximately 150 Al-based medical de-\nvices have been approved by the FDA. Most of these\n"
+        }
+    ]
+}

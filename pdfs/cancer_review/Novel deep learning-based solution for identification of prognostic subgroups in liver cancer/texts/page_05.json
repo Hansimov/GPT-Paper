@@ -1,0 +1,89 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 6,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.68,
+            "box": [
+                489.9,
+                362.6,
+                1735.7,
+                407.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_05/region_1_text.png",
+            "text": "Table 1 Clinical characteristics and risk factors of the TCGA and LIRI-JP HCC cohorts\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.72,
+            "box": [
+                490.0,
+                431.6,
+                1989.2,
+                1909.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_05/region_2_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 98.15,
+            "box": [
+                490.8,
+                1918.6,
+                1942.1,
+                1991.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_05/region_3_text.png",
+            "text": "A summary of the clinical characteristics and risk factors associated with the TCGA (N = 352) and the LIRI-JP HCC cohorts\n(N=203)\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                490.3,
+                2079.1,
+                1998.3,
+                2311.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_05/region_4_text.png",
+            "text": "as the activation function throughout, dropout was set to 0.5, an L2 regularization pen-\nalty of 0.0001 was applied to the output and an L1 regularization penalty of 0.001 was\napplied to the kernel. Stochastic gradient descent was used as the optimizer with the\nbatch size set to one and epochs set to ten.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                490.5,
+                2315.9,
+                1997.7,
+                2843.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_05/region_5_text.png",
+            "text": "To explore a cluster-based loss and determine whether it could identify prognostic\nsubgroups in HCC that were biologically distinct, a custom autoencoder was created.\nFor the custom autoencoder construction, hidden layers of dimension 1000, 100 and\n1000 were used, with Sigmoid activation throughout. Data from the three omics types\nwas stacked by sample to form a single matrix. The matrix was scaled in the range of 0\nto 1 using the MinMaxScaler from Scikit-learn [16]. Batch size was set to sample size\n(N= 352) and the Adam optimiser selected. An L1 regularization penalty of 0.001 was\napplied to the kernel to control exploding gradients. The overall clustering loss used La\nand Lc to form: Lyc=aLpg+ Le where a and f are the parameters of the model.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                489.7,
+                2846.2,
+                1999.5,
+                3018.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_05/region_6_text.png",
+            "text": "The clustering-based loss Lc was used to evaluate the quality of cluster produced as an\noutput of the k-means clustering on the bottleneck of the autoencoder. With a k-means\nclustering algorithm, samples are divided into k groups, where k is a pre-defined parameter.\n"
+        }
+    ]
+}

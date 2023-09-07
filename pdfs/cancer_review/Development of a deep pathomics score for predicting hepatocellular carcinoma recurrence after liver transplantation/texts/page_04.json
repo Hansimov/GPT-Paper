@@ -1,0 +1,168 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 12,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                212.6,
+                228.8,
+                1217.8,
+                547.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_01_text.png",
+            "text": "datasets and selected sixty annotated WSIs to build a clas-\nsification network. The classification network automatically\nsegmented the remaining WSIs to obtain patches of each\ntissue category. 380 patients were divided into the training\ncohort and validation cohort at a ratio of 7:3 to construct the\nprognostic network (Fig. 1a).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                213.3,
+                542.4,
+                1216.0,
+                1275.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_02_text.png",
+            "text": "The follow-up was censored in June 2021. Recurrence\ncondition and time to recurrence (TTR) were the primary\nendpoints in the present study. HCC recurrence was defined\nas the appearance of a newly detected HCC tumor confirmed\non two radiologic images, with or without an elevation in\nserum tumor markers. TTR was defined as the time between\nsurgery and recurrence or metastasis. Recurrence-free sur-\nvival (RFS) was the secondary endpoint. RFS was defined as\nthe time from the date of hepatectomy to the date of recur-\nrence, metastasis, death, or the last follow-up. This study\nobtained ethical approval from the Institutional Review\nBoard of Zhongshan Hospital and complied with the stand-\nards of the Declaration of Helsinki. Informed consent was\nreceived from each patient before surgery.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.59,
+            "box": [
+                212.4,
+                1321.4,
+                1154.7,
+                1376.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_03_title.png",
+            "text": "Preparation of digital WSIs and image annotation\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                213.0,
+                1426.5,
+                1215.9,
+                2162.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_04_text.png",
+            "text": "All specimens were fixed with 4% neutral formaldehyde,\nembedded in paraffin, consecutively sectioned at 4 um thick-\nness and stained with hematoxylin and eosin (H&E). The\nstained slides were then converted into digital images by a\nwhite light scanner (C13220-0, Hamamatsu, Japan). Sixty\nWSIs were selected for annotation using ASAP 1.8. The\ninclusion criteria were as follows: (1) The annotated subpop-\nulation had the similar tumor stage with the overall dataset;\n(2) Abundance of six tissue categories were confirmed by\npathologists, and the labeling results were highly consistent.\nTwo pathologists manually annotated and fully examined\nthe slides in six categories: tumor region (TR), normal liver\ntissue (NLT), portal area (PA), fibrous tissue (FT), hemor-\nrhagic and necrotic tissue (H&NT), and immune cells (IC).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.59,
+            "box": [
+                212.4,
+                2205.7,
+                1130.5,
+                2262.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_05_title.png",
+            "text": "Classification network and model establishment\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                213.3,
+                2313.7,
+                1216.1,
+                2995.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_06_text.png",
+            "text": "A ResNet-50 convolutional neural network [25] was trained\nfor the multiclassification of images (Fig. 1b) and the\nSqueeze-and-Excitation Module [26] was added to the resid-\nual structure. After separating H&E-stained tissue from the\nbackground by Otsu's binarization [27], pathological regions\nof interest (ROIs) were extracted from the annotated WSIs.\nImages were taken at 40 x magnification by extracting and\ncropping these ROIs into patches, with each labeled as the\ncorresponding tissue category (details provided in the sup-\nplementary methods). Data augmentation including random\nflips, random rotations, random translations, and random con-\ntrasts was applied to enhance the generality and robustness.\nClassification maps were derived after image recognition.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1276.2,
+                229.2,
+                2279.3,
+                340.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_07_text.png",
+            "text": "The t-distributed stochastic neighbor embedding (t-SNE)\nalgorithm was used to visualize the segmental results.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1275.8,
+                332.4,
+                2280.7,
+                1173.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_08_text.png",
+            "text": "The classification network output the predicted structural\nlabels corresponding to each patch. The DeepSurv network\nstructure [28] was used to construct the prognostic network\nmodels by analyzing the pathological signatures of six tissue\ncategories: (details provided in the supplementary methods).\nThe loss function of the model was jointly built with the cox\nproportional hazards and binary cross-entropy (Fig. |b). In\nthe training process, to avoid model overfitting, the model\nwas targeted once the error started to rise in the validation\nset. The optimal risk score was then output for each tissue\ncategory based on the recurrence status and TTR. DPS was\nultimately constructed according to the proportional hazards\nmodel. The predictive power was assessed by the overall\nconcordance index (C-index) and receiver operating charac-\nteristic (ROC) curves. The attention machine was applied to\nhighlight critical regions in the image for model prediction.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 99.84,
+            "box": [
+                1275.2,
+                1216.3,
+                2243.1,
+                1324.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_09_title.png",
+            "text": "Preparation and quantitative analysis of multiplex\nimmunofluorescence\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1275.8,
+                1375.1,
+                2280.5,
+                2527.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_10_text.png",
+            "text": "Multiplex staining was performed using a TSA 7-color kit\n(D110071-S50T, Yuanxibio), according to the manufacturer’s\ninstruction. After being consecutively sectioned, the slides\nwere incubated with antibodies according to three panels:\nthe first panel was CD3 (ab16669, Abcam), CD4 (4827s,\nCST), CD8 (85336s, CST), CD16 (ab183354, Abcam), CD\n56 (cst3576s, CST) and Foxp3 (12653s, CST); the second\npanel was CD11b (ab52478, Abcam), CD1 1c (ab52632,\nAbcam), CD20 (48750s, CST), CD68 (76437, CST), MPO\n(14569, CST), and CD45RO (55618, CST); and the third\npanel was PD-1 (86163, CST), PD-L1 (13684, CST), TIM-3\n(45208, CST), LAG-3 (15372, CST), CTLA-4 (ab237712,\nAbcam), and IDO (ab228468, Abcam). Primary antibod-\nies were sequentially applied, followed by enzyme-labeled\nsecondary antibodies (PV-6001 and PV-6002, ZSGB-BIO)\nand tyramide signal amplification (M-D110051, WiSee\nBiotechnology). The slides were microwave heat-treated\nafter each TSA operation. Nuclei were stained with DAPI\n(D1306, Thermo Fisher) after all of the antigens above were\nlabeled. The stained slides were scanned to obtain multi-\nspectral images using the Pannoramic MIDI imaging system\n(3D HISTECH).\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1276.5,
+                2520.8,
+                2279.9,
+                2786.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_11_text.png",
+            "text": "The tumor border was manually annotated to divide the\nWSI into three parts: tumor nest (TN), invasive margin\n(IM) and normal tissue area (NLT). The invasive margin\nwas defined as a 500 um width on each side of the intra- and\nperitumor interface [29].\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                1276.8,
+                2782.0,
+                2279.1,
+                2993.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_04/region_12_text.png",
+            "text": "HALO Software (Indica Labs) was applied to quantita-\ntively evaluate the signal quantity and spatial distribution\nof the immune cells (details provided in the supplementary\nmethods).\n"
+        }
+    ]
+}

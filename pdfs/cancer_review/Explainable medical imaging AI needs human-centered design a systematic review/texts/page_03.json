@@ -1,0 +1,115 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 8,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.75,
+            "box": [
+                468.5,
+                247.2,
+                1969.6,
+                986.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_03/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.81,
+            "box": [
+                150.4,
+                1015.2,
+                2293.6,
+                1167.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_03/region_2_text.png",
+            "text": "Fig. 2 Illustrative examples of different techniques used in transparent ML systems for classification and segmentation tasks from the\nsystematic review. Within each task, a non-interpretable model generates the task outcome from the input image (top). The use of clinical\nknowledge or computer vision information as priors attempts to add transparency in the outcome generation process (bottom). Images\nretrieved from the ORIGA'2” and BraTS2020 datasets'7°.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.72,
+            "box": [
+                151.6,
+                1264.7,
+                1069.9,
+                1348.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_03/region_3_title.png",
+            "text": "AN OVERVIEW OF CURRENT TRENDS IN TRANSPARENT\nMACHINE LEARNING DEVELOPMENT\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                149.1,
+                1357.4,
+                1184.2,
+                2771.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_03/region_4_text.png",
+            "text": "Compared to developing generic ML algorithms, designing and\nvalidating transparent ML algorithms in medical imaging tasks\nrequires consideration of human factors and clinical context. We\ngroup these additional considerations into six themes according\nto the initial review, iteratively defined prior to data extraction and\nabbreviated to I/NTRPRT; the themes are incorporation (IN),\ninterpretability (IN), target (T), reporting (R), prior (PR), and task\n(T). Incorporation refers to the communication and cooperation\nbetween designers and end users before and during the\nconstruction of the transparent model. Formative user research\nis one possible strategy that can help designers to understand end\nusers’ needs and background knowledge'*'®, but other\napproaches exist'®. interpretability considers the technicalities of\nalgorithmic realization of a transparent ML system. Figure 2\nprovides illustrative examples of some of these techniques. Target\ndetermines the end users of the transparent ML algorithms.\nReporting summarizes all aspects pertaining to the validation of\ntransparent algorithms. This includes task performance evaluation\nas well as the assessment of technical correctness and human\nfactors of the proposed transparency technique (e.g., intelligibility\nof the model output, trust, or reliability). Prior refers to previously\npublished, otherwise public, or empirically established sources of\ninformation about target users and their context. This prior\nevidence can be used to conceptualize and justify design choices\naround achieving transparency. Finally, task specifies the con-\nsidered medical image analysis task, such as prediction, segmen-\ntation, or super resolution, and thus determines the clinical\nrequirements on performance. We emphasize that these themes\nshould not be considered in isolation because they interact with\nand are relevant to each other. For example, technical feasibility of\ninnovative transparency mechanisms based on the desired task\nmay influence both, the priors that will be considered during\ndevelopment as well as the incorporation of target users to\nidentify and validate alternatives.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                150.6,
+                2773.5,
+                1183.8,
+                3063.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_03/region_5_text.png",
+            "text": "Having identified and refined the themes iteratively after an\ninitial review, we structured the systematic review according to\nthe six themes. We identify and summarize dominant trends\namong the 68 included studies aiming to design transparent ML\nfor medical image analysis. In the incorporation theme, cross-\ndisciplinary study teams may constitute a first step towards\nincorporating target users during ML design, however, only 33 of\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1259.0,
+                1268.5,
+                2293.3,
+                2511.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_03/region_6_text.png",
+            "text": "the included articles were authored by multidisciplinary clinician-\nengineering teams. More importantly, no paper introduced\nformative user research to understand user needs and contextual\nconsiderations before model construction, which is reflected in\nthe lack of justifying the prior theme. Around half of the selected\narticles (n=28) chose clinical priors and guidelines as an\ninspiration for transparent systems. In the target theme, we found\nthat only 30 of the included articles specified end users, and all of\nthese papers were aimed at clinical care providers, a stark\nimbalance considering the variety of stakeholders. In the task\ntheme, prediction tasks were by far the most common application\nfor transparent ML algorithm design (57/68). In the interpretability\ntheme, methods relying on clinical guidelines resulted in\nalgorithms that adopted multiple sub-steps of a clinical guideline\nto build the model and generate outcomes, while methods that\nwere based on computer vision techniques for transparency most\ncommonly relied on post-hoc explanations. In the Reporting\ntheme, the methods used for assessing transparency varied with\nthe problem formulation and transparency design, and included\nhuman perception, qualitative visualizations, quantitative metrics,\nand empirical user studies; we note that an evaluation with end\nusers was highly uncommon (only 3 of the 68 included studies).\nHowever, no paper considered the six themes comprehensively.\nMore importantly, there is no evidence that any papers considered\nthe dependency and interaction between different themes. The\nreviewed literature further supports that one guideline consider-\ning all themes and the interaction between them is highly desired\nin the medical image analysis community to construct transparent\nML models following human-centered design practices.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 97.97,
+            "box": [
+                1258.6,
+                2583.9,
+                1594.1,
+                2626.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_03/region_7_title.png",
+            "text": "INTRPRT GUIDELINE\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1257.9,
+                2635.5,
+                2292.2,
+                3063.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_03/region_8_text.png",
+            "text": "We distilled a set of guidelines for designing transparent ML\nmodels according to the interaction and relevancy among the six\nthemes, which is proposed here as INTRPRT guideline. The INTRPRT\nguideline provides suggestions for designing and _ validating\ntransparent ML systems in healthcare in hopes to increase the\nlikelihood that the resulting algorithms indeed afford transpar-\nency for the designated end users. The guidelines also address the\nchallenges of following a human-centered design approach in the\nhealthcare domain, propose potential solutions, and apply to\ndifferent kinds of transparency ML algorithms. To further illustrate\n"
+        }
+    ]
+}

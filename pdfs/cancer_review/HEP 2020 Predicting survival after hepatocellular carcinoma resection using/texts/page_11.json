@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_11.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 5,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 81.25,
+            "box": [
+                249.0,
+                264.6,
+                2246.0,
+                565.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_11/region_1_text.png",
+            "text": "figure), one contained essentially artefacts such as folds or ink (cluster 2). The 4 remaining\nclusters, in the bulk of the distribution, were not specifically associated with high or low-risk or a\nwell-defined pattern, so we decided to merge them together (cluster 4). The same clustering was\nsubsequently applied to the TCGA data.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 81.97,
+            "box": [
+                248.0,
+                738.7,
+                2247.4,
+                1202.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_11/region_2_text.png",
+            "text": "In the discovery set, most high-risk tiles are grouped in cluster 1, that is essentially defined\nvisually by the presence of vascular spaces (Supplemental table 3). Other common features of\nthis cluster are blood, atypia and macrotrabecular pattern. A majority of low-risk tiles are located\nin cluster 0, that is enriched in fibrosis and immune cells. Cluster 3 is associated with a low risk,\nand contains essentially tiles with steatosis. Finally, both high and low-risk tiles are found in\nCluster 4, including a majority of tiles with fibrosis or immune cells (Supplemental table 3).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 78.55,
+            "box": [
+                249.0,
+                1257.0,
+                2247.6,
+                1560.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_11/region_3_text.png",
+            "text": "The same clustering gives overall consistent results on the validation set, with a few differences\n(Supplemental table 3). Cluster 3, characterized by steatosis, is almost absent and cluster 4 is\nassociated with an increased risk. The patterns found in cluster 4 are also different, with a\npredominance of atypia and hyperchromasia.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "figure",
+            "score": 17.29,
+            "box": [
+                74.0,
+                1587.7,
+                348.9,
+                3117.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_11/region_4_figure.png"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 71.28,
+            "box": [
+                247.9,
+                3294.4,
+                1400.6,
+                3363.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_11/region_5_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

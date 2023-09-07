@@ -1,0 +1,50 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_19.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_19.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 3,
+        "page_idx": 19
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.79,
+            "box": [
+                493.3,
+                367.9,
+                1989.5,
+                1822.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_19/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                515.8,
+                1834.8,
+                1947.8,
+                2126.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_19/region_2_text.png",
+            "text": "Fig. 7 Visualisation of the 75 mRNAs consistently identified by Lycc that were significant for prognosis. A\nvisualisation of the gene expression patterns of the 75 mRNAs that were consistently identified across all ten\nruns by Lecc and were significant for prognosis using a median split in gene expression. Cluster labels were\ntaken from the best run of Lgcc as determined by log-rank P-value. Expression is shown as a z-score. Scale\nwas limited to — 3+ 3 using vmin and vmax in the clustermap function in Seaborn to improve visualisation\nof differences between prognostic clusters. The distribution of HCC grades between clusters appears to be\nrelatively even\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                490.3,
+                2330.7,
+                1991.7,
+                3030.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_19/region_3_text.png",
+            "text": "and furthermore it has been used in prognostic models for the disease [23, 24]. In all,\n29 of the 75 (38.67%) mRNA features significant for prognosis in the TCGA cohort\nwere also significant in the LIRI-JP cohort. The complexity of underlying risk factors\nof the HCC patients in the different cohorts may have accounted for why only a pro-\nportion of features could be validated as prognostic in both cohorts. A total of 15\nrobust miRNAs were also identified by the hybrid model. Of the two miRNA features\nof interest that were novel, hsa-let-7g has been linked to inhibition of HCC cells pro-\nliferation [25]. The other novel miRNA identified, hsa-mir-550a-1, has not previously\nbeen linked with HCC and would warrant experimental investigation perhaps. Of the\n328 methylation features consistently identified by Lg.c, 233 were significant for prog-\nnosis. Some of these genes have been previously linked with HCC, including RIC-\nTOR, which was found to be dysregulated in cancers, including HCC [26].\n"
+        }
+    ]
+}

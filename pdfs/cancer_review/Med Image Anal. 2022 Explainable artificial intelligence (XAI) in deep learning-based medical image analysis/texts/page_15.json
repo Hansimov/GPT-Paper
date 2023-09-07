@@ -1,0 +1,428 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages/page_15.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages_ordered/page_15.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 32,
+        "page_idx": 15
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                156.4,
+                233.9,
+                1205.1,
+                538.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_01_text.png",
+            "text": "It is likely that XAI in medical imaging will increasingly in-\nclude domain information. To reach this goal, physicians should\nbe included when designing task-specific interpretation methods\n(Fan et al., 2021). Active collaboration among physicians, theoreti-\ncal researchers, medical imaging experts, and medical image anal-\nysis experts will be an important avenue for future development\nof deep learning methods (Fan et al., 2021).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                158.0,
+                539.5,
+                1205.7,
+                1451.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_02_text.png",
+            "text": "Other directions of XAI in medical image analysis may include\nthe link between causality and XAI. Typical medical image analy-\nsis consists of correlation rather than causation. Causality describes\nthe relation between cause and effect, and can be mathematically\ndescribed (Pearl, 2009). Current XAI techniques that aim to be free\nof bias such as prototypes are potentially still sensitive to differ-\nences in training population, which might hamper generalizability.\nCastro et al. (2020) describe how causal reasoning may be useful\nto assess biases in the data. DeGrave et al. (2021) gave an exam-\nple how dataset bias can be detected using XAI: In studies that\ndistinguish between X-rays of patients who were Coronavirus dis-\nease 2019 (COVID-19)-positive and of patients who were COVID-\n19-negative, they used visual explanation to demonstrate that high\nperformance of the deep learning models was actually attributed\nto how the datasets were composed, rather than to actual COVID-\n19 detection in the X-rays. van Amsterdam et al. (2019) show an\nexample of eliminating bias using causality, yielding unbiased pre-\ndiction of prognosis for patients with lung cancer. It would be of\ninterest to incorporate such analyses in explanation of medical im-\nages, as Chattopadhyay et al. (2019) have done for visual explana-\ntion of MNIST data.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                156.6,
+                1455.7,
+                1205.0,
+                1715.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_03_text.png",
+            "text": "There is no consensus on a priori estimations for required sam-\nple size for XAI and deep learning in medical imaging in general\n(Balki et al., 2019). Given the costly nature of acquiring medical\nimaging datasets in terms of money, time, and patient burden, it is\ndesired to have guidelines describing what minimum sample sizes\nwould be required for which XAI techniques.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 98.71,
+            "box": [
+                157.1,
+                1784.3,
+                389.8,
+                1825.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_04_title.png",
+            "text": "5.5. Limitations\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                158.1,
+                1869.8,
+                1204.9,
+                2391.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_05_text.png",
+            "text": "We derived our XAI framework from the frameworks of\nAdadi and Berrada (2018) and Murdoch et al. (2019). Other frame-\nworks also exist, such as the framework by Kim et al. that di-\nvides XAI in pre-, during-, and post-model explanation. During-\nand post-model explanation are captured by our XAI framework\nwith model-based and post hoc explanation. Pre-model explana-\ntion mainly focuses on the structure of a dataset, such as inspect-\ning outliers. One could state that an example-based explanation\nthat utilizes the latent distributions of a dataset could be perceived\nas a pre-model explanation. We have, however, not made this dis-\ntinction, since in deep learning, these latent distributions are dis-\ncovered by training a neural network.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                156.7,
+                2393.0,
+                1205.6,
+                2696.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_06_text.png",
+            "text": "We tried to be as comprehensive as possible with the inclusion\nof papers in our survey. However, XAI often is a technique used\nto support methods, and keywords are often not mentioned in the\ntitle or body of papers (Rudin, 2019). Therefore, we cannot guar-\nantee that we covered all the work in the field. Nevertheless, we\nprovided the search strategy to be as transparent as possible about\nthe selection of papers.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 98.74,
+            "box": [
+                156.2,
+                2764.2,
+                380.2,
+                2806.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_07_title.png",
+            "text": "6. Conclusion\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                157.0,
+                2850.4,
+                1204.5,
+                3111.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_08_text.png",
+            "text": "This paper surveyed 223 papers using explainable artificial in-\ntelligence (XAI) in deep-learning based medical image analysis,\nclassified according to an XAI framework, and categorized accord-\ning to anatomical location and imaging technique. The paper dis-\ncussed how to evaluate XAI, current critiques on XAI, and future\nperspectives for XAI in medical image analysis.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 98.68,
+            "box": [
+                1277.5,
+                233.5,
+                1655.5,
+                276.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_09_title.png",
+            "text": "Additional information\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.81,
+            "box": [
+                1275.6,
+                320.9,
+                2324.6,
+                406.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_10_text.png",
+            "text": "This work was partially funded by the Dutch Cancer Society\n(KWF) Grant No.: 10755. We have no conflicts of interest.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 99.0,
+            "box": [
+                1276.2,
+                468.4,
+                1834.4,
+                510.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_11_title.png",
+            "text": "Declaration of Competing Interest\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1278.7,
+                554.3,
+                2325.7,
+                685.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_12_text.png",
+            "text": "The authors declare that they have no known competing finan-\ncial interests or personal relationships that could have appeared to\ninfluence the work reported in this paper.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "title",
+            "score": 97.43,
+            "box": [
+                1277.4,
+                735.2,
+                1452.9,
+                776.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_13_title.png",
+            "text": "References\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 66.62,
+            "box": [
+                1277.9,
+                820.4,
+                2323.6,
+                884.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_14_text.png",
+            "text": "Abbasi-Asl, Reza, Yu, Bin, 2017. Structural compression of convolutional neural net-\nworks arXiv preprint arXiv:1705.07356.\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 77.53,
+            "box": [
+                1277.5,
+                885.4,
+                2327.7,
+                985.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_15_text.png",
+            "text": "Achanta, R., Shaji, A., Smith, K., Lucchi, A., Fua, P., Siisstrunk, S., 2012. SLIC superpix-\nels compared to state-of-the-art superpixel methods. IEEE Trans. Pattern Anal.\nMach. Intell. 34, 2274-2281. doi: 10.1109/TPAMI.2012.120.\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 79.05,
+            "box": [
+                1277.2,
+                985.1,
+                2326.9,
+                1084.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_16_text.png",
+            "text": "Adadi, A., Berrada, M., 2018. Peeking Inside the Black-Box: A Survey on Explainable\nArtificial Intelligence (XAI). IEEE Access 6, 52138-52160. doi:10.1109/ACCESS.\n2018.2870052.\n"
+        },
+        {
+            "idx": 17,
+            "thing": "text",
+            "score": 80.36,
+            "box": [
+                1277.3,
+                1085.5,
+                2325.9,
+                1184.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_17_text.png",
+            "text": "Adebayo, J., Gilmer, J., Muelly, M., Goodfellow, I., Hardt, M., Kim, B., 2018. Sanity\nchecks for saliency maps. Advances in neural information processing systems,\np. 31.\n"
+        },
+        {
+            "idx": 18,
+            "thing": "text",
+            "score": 87.23,
+            "box": [
+                1279.9,
+                1185.2,
+                2325.5,
+                1316.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_18_text.png",
+            "text": "Ahmad, A., Sarkar, S., Shah, A., Gore, S., Santosh, V., Saini, J., Ingalhalikar, M., 2019.\nPredictive and discriminative localization of IDH genotype in high grade gliomas\nusing deep convolutional neural nets. In: Proceedings of the IEEE 16th Interna-\ntional Symposium on Biomedical Imaging (ISBI 2019), pp. 372-375.\n"
+        },
+        {
+            "idx": 19,
+            "thing": "text",
+            "score": 89.47,
+            "box": [
+                1281.1,
+                1318.7,
+                2324.9,
+                1415.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_19_text.png",
+            "text": "Ahmad, M., Kasukurthi, N., Pande, H., 2019. Deep learning for weak supervision of\ndiabetic retinopathy abnormalities. In: Proceedings of the IEEE 16th Interna-\ntional Symposium on Biomedical Imaging (ISBI), pp. 573-577.\n"
+        },
+        {
+            "idx": 20,
+            "thing": "text",
+            "score": 89.56,
+            "box": [
+                1279.4,
+                1418.6,
+                2325.7,
+                1587.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_20_text.png",
+            "text": "Akselrod-Ballin, A., Chorev, M., Shoshan, Y., Spiro, A.. Hazan, A., Melamed, R.,\nBarkan, E., Herzel, E., Naor, S., Karavani, E., Koren, G., Goldschmidt, Y., Shalev, V.,\nRosen-Zvi, M., Guindy, M., 2019. Predicting breast cancer by applying deep\nlearning to linked health records and mammograms. Radiology 292, 331-342.\ndoi: 10.1148 /radiol.2019182622.\n"
+        },
+        {
+            "idx": 21,
+            "thing": "text",
+            "score": 83.94,
+            "box": [
+                1278.1,
+                1585.0,
+                2325.1,
+                1681.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_21_text.png",
+            "text": "Allaouzi, I., Ben Ahmed, M., Benamrou, B., Ouardouz, M., 2018. Automatic caption\ngeneration for medical images. In: Proceedings of the 3rd International Confer-\nence on Smart City Applications, pp. 1-6. :\n"
+        },
+        {
+            "idx": 22,
+            "thing": "text",
+            "score": 91.37,
+            "box": [
+                1279.7,
+                1680.0,
+                2324.5,
+                1815.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_22_text.png",
+            "text": "Aratijo, T., Aresta, G., Mendonca, L., Penas, S., Maia, C., Carneiro, A., Mendonca, A.M.,\nCampilho, A., 2020. DRJGRADUATE: uncertainty-aware deep learning-based di-\nabetic retinopathy grading in eye fundus images. Med. Image Anal. 63. doi:10.\n1016/j.media.2020.101715.\n"
+        },
+        {
+            "idx": 23,
+            "thing": "text",
+            "score": 67.8,
+            "box": [
+                1278.3,
+                1816.8,
+                2327.2,
+                1908.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_23_text.png",
+            "text": "Arun, N., Gaw, N., Singh, P., Chang, K., Aggarwal, M., Chen, B., Hoebel, K., Gupta, S.,\nPatel, J., Gidwani, M., 2021. Assessing the (un) trustworthiness of saliency maps\nfor localizing abnormalities in medical imaging. Radiol. Artif. Intell., e200267.\n"
+        },
+        {
+            "idx": 24,
+            "thing": "text",
+            "score": 53.87,
+            "box": [
+                1275.0,
+                1915.2,
+                2328.0,
+                2046.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_24_text.png",
+            "text": "Ausawalaithong, W., Thirach, A., Marukatat, S., Wilaiprasitporn, T., 2018. Automatic\nlung cancer prediction from chest X-ray images using the deep learning ap-\nproach. In: Proceedings of the 11th Biomedical Engineering International Con-\nference (BMEICON), pp. 1-5.\n"
+        },
+        {
+            "idx": 25,
+            "thing": "text",
+            "score": 77.84,
+            "box": [
+                1279.0,
+                2046.5,
+                2326.6,
+                2147.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_25_text.png",
+            "text": "Bach, S., Binder, A., Montavon, G., Klauschen, F., Miller, K.R., Samek, W., 2015. On\npixel-wise explanations for non-linear classifier decisions by layer-wise rele-\nvance propagation. PLoS One 10, 1-46. doi:10.1371/journal.pone.0130140.\n"
+        },
+        {
+            "idx": 26,
+            "thing": "text",
+            "score": 80.55,
+            "box": [
+                1279.4,
+                2142.1,
+                2326.8,
+                2414.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_26_text.png",
+            "text": "Balki, I., Amirabadi, A., Levman, J., Martel, A.L., Emersic, Z., Meden, B., Garcia-\nPedrero, A., Ramirez, S.C., Kong, D., Moody, A.R., Tyrrell, P.N., 2019. Sample-\nsize determination methodologies for machine learning in medical imaging re-\nsearch: a systematic review. Can. Assoc. Radiol. J. doi:10.1016/j.carj.2019.06.002.\n\nBanerjee, S., Lavie, A., 2005. METEOR: An automatic metric for MT evaluation with\nimproved correlation with human judgments. In: Proceedings of the ACL Work-\nshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation\nand/or Summarization, pp. 65-72.\n"
+        },
+        {
+            "idx": 27,
+            "thing": "text",
+            "score": 77.35,
+            "box": [
+                1278.0,
+                2412.5,
+                2326.5,
+                2479.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_27_text.png",
+            "text": "Barata, C., Celebi, M.E., Marques, J.S., 2020. Explainable skin lesion diagnosis using\ntaxonomies. Pattern Recognit. doi:10.1016/j.patcog.2020.107413.\n"
+        },
+        {
+            "idx": 28,
+            "thing": "text",
+            "score": 91.89,
+            "box": [
+                1279.9,
+                2476.8,
+                2325.9,
+                2645.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_28_text.png",
+            "text": "Baumgartner, C.F, Koch, L.M., Tezcan, K.C., Ang, J.X., Konukoglu, E., 2018. Visual fea-\nture attribution using Wasserstein GANs. In: Proceedings of the 31st Meeting\nof the IEEE/CVF Conference on Computer Vision and Pattern Recognition, CVPR\n2018, Switzerland, pp. 8309-8319. doi:10.1109/CVPR.2018.00867 IEEE Computer\nSociety, Computer Vision Lab, ETH Zurich.\n"
+        },
+        {
+            "idx": 29,
+            "thing": "text",
+            "score": 79.47,
+            "box": [
+                1280.4,
+                2646.7,
+                2325.5,
+                2744.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_29_text.png",
+            "text": "Bian, Z., Xia, S., Xia, C., Shao, M., 2019. Weakly supervised vitiligo segmentation in\nskin image through saliency propagation. In: Proceedings of the IEEE Interna-\ntional Conference on Bioinformatics and Biomedicine (BIBM), pp. 931-934.\n"
+        },
+        {
+            "idx": 30,
+            "thing": "text",
+            "score": 82.99,
+            "box": [
+                1278.3,
+                2757.6,
+                2326.3,
+                2878.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_30_text.png",
+            "text": "DICH, IN., NajPUIKal, F., Dall, NL, LEVIL, J., Falk, /i., JULES, £., DELCKEL, IVI, Pal€l, D.IN.,\nYeom, K.W., Shpanskaya, K., et al., 2018. Deep-learning-assisted diagnosis for\nknee magnetic resonance imaging: development and retrospective validation of\nMRNet. PLoS Med. 15, e1002699.\n"
+        },
+        {
+            "idx": 31,
+            "thing": "text",
+            "score": 92.4,
+            "box": [
+                1281.7,
+                2876.1,
+                2324.9,
+                3043.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_31_text.png",
+            "text": "Biff, C., Doumou, G., Duan, J., Prasad, S.K., Cook, S.A. O Regan, D.P., Rueckert, D.,\nCerrolaza, J.J., Tarroni, G., Bai, W., De Marvao, A., Oktay, O., Ledig, C., Le Fol-\ngoc, L., Kamnitsas, K., 2020. Explainable anatomical shape analysis through deep\nhierarchical generative models. IEEE Trans. Med. Imaging doi:10.1109/tmi.2020.\n2964499, 1-1.\n"
+        },
+        {
+            "idx": 32,
+            "thing": "text",
+            "score": 82.18,
+            "box": [
+                1274.5,
+                3043.1,
+                2327.2,
+                3110.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_15/region_32_text.png",
+            "text": "Bismeijer, T., van der Velden, B.H.M., Canisius, S., Lips, E.H., Loo, C.E., Viergever, M.A.,\nWesseling, J., Gilhuijs, K.G.A.. Wessels, L.A. 2020. Radiogenomic analysis of\n"
+        }
+    ]
+}

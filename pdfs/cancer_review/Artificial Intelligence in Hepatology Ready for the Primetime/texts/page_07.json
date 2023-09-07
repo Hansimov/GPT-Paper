@@ -1,0 +1,129 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 9,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.8,
+            "box": [
+                200.4,
+                344.9,
+                1205.7,
+                540.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_1_text.png",
+            "text": "very important role in predicting short-term mortality pa-\ntients with high accuracy. Its application in patients with\nACLF is promising as it automates and eases the method\nof identifying those patients at a higher risk of mortality.*®\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.53,
+            "box": [
+                201.9,
+                569.5,
+                1100.0,
+                665.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_2_title.png",
+            "text": "G. Diagnosis and characterization of liver space-\noccupying lesions (SOLs)\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                200.3,
+                692.5,
+                1206.2,
+                1735.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_3_text.png",
+            "text": "Various DL-based models have been developed using\ncontrast-enhanced ultrasound, CT scan and MRI to char-\nacterize focal liver lesions*””°”””. But extensive validation\nis needed before establishing clinical use. A DL technique\nusing Stacked Sparse Auto-encoders (SSAE) with ultrasound\nimages suggested for diagnosing hepatic nodules (liver\ncysts, haemangioma, and HCC)’ has high accuracy in\noverall classification (97.2%) compared with three estab-\nlished methods: Naive Bayes, multi-support vector machine\nand K-Nearest Neighbor. Since MRI diagnosis is affected by\nsubjective variations, CNNs were used to develop a DL sys-\ntem (DLS) to classify liver tumours based on clinical data,\nlaboratory parameters and MR images (enhanced and un-\nenhanced). Multiple prediction models were designed us-\ning CNN for 5-year metachronous liver metastasis (SYLM),\napplying combinations of clinical variables (age, sex, T\nstage, N stage) and top principal components (PCs) with\nlogistic regression classification. The model using “1st\nPC (PC1) + clinical information” had a significant correla-\ntion with sex, body mass index, alcohol consumption, and\nfatty liver status.>*\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.25,
+            "box": [
+                202.6,
+                1763.6,
+                1203.8,
+                1861.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_4_title.png",
+            "text": "H. Diagnosis and management of hepatocellular carci-\nnoma (HCC)\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                200.1,
+                1889.2,
+                1206.2,
+                3080.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_5_text.png",
+            "text": "ML has various applications for the study of HCC,\nincluding diagnosis, staging, management and prog-\nnosis based on the stage of HCC. Sato et al developed\na novel model for HCC diagnosis, showing high accuracy\n(87.3%) compared to a single tumour marker (alpha feto-\nprotein 70.7%, des-alpha-fetoprotein-L3 71.1% and\ngamma-carboxyprothrombin 74.9%). This model\ndecreased the rate of liver SOLs, previously misclassified\nas HCC. A study by Singal et al’°® showed that ML algo-\nrithms outperformed conventional regression models\nand markedly improved the accuracy of prediction and\nrisk stratification for HCC development in 442 patients\nwith compensated cirrhosis. A study by Nam JY et al’\ncompared a DL-based model with previous HCC predic-\ntion models, including Chinese University HCC score\n(CU-HCC), platelets, age, gender-hepatitis B score\n(PAGE-B), age, diabetes, race, aetiology of cirrhosis, sex,\nand severity HCC score (ADDRESS-HCC), HCC-Risk\nEstimating Score in CHB patients Under Entecavir\n(HCC-RESCUE), Toronto HCC risk index (THRI), and\nmodified PAGE-B score (mPAGE). This model had better\nperformance than the previous models for predicting the\nHCC risk in 424 patients with HBV-related cirrhosis on\npotent antivirals.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1277.0,
+                345.7,
+                2283.2,
+                1086.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_6_text.png",
+            "text": "Multi-omics (use of multiple -“omes” such as the\ngenome, microbiome, etc) approach was used to make a\nDL-based model of 360 patients with HCC, using RNA\nsequencing, methylation data and miRNA sequencing\nfrom The Cancer Genome Atlas.°® It was the first study\nto employ DL to identify multi-omics features linked to\nthe differential survival of patients with HCC. Two DL al-\ngorithms were built, using whole-slide digitized histologi-\ncal data for predicting the survival of patients with HCC\ntreated with surgery. This analysis included two indepen-\ndent cohorts. A discovery cohort (n = 194) was used to\ndevelop the algorithm and included an independent vali-\ndation cohort (n = 328). This study highlights the impor-\ntance of machine interactions for the appropriate\nconstruction of DL algorithms using histology slides.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1277.4,
+                1091.1,
+                2283.2,
+                1785.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_7_text.png",
+            "text": "Randhwa et al,°’”, using support vector, with MRI images\nas data, made an AI tool to improve radiological image\nclassification of HCC. This can help radiologists diagnose\nliver tumours early. Using regularization in the vector score\nin the classification stage removes the overfitting problem\nand leads to the accurate identification of different tumour\ntypes. A DL-based assistant has been developed to help pa-\nthologists differentiate between two subtypes of primary\nliver cancer, HCC and cholangiocarcinoma, on haematox-\nylin and eosin-stained whole-slide images (WSI), and eval-\nuated its effect on the diagnostic performance of 11\npathologists with varying levels of expertise.°\" This DL-\nbased assistant helped to increase the accuracy of patholo-\ngists.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1277.5,
+                1790.0,
+                2282.8,
+                2682.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_8_text.png",
+            "text": "The segmentation of HCC in CT images allows assess-\nment of tumour load, treatment planning, prognosis and\nmonitoring of treatment response. Since manual segmen-\ntation is a very time-consuming task and, in many cases,\nprone to inaccuracies, automatic tools for tumour detec-\ntion and segmentation are highly desirable. One such\nnetwork architecture was formed and evaluated on data\nprovided from the radiological centre in Innsbruck,\nAustria. It consists of two consecutive nested fully CNN\ntogether with a joint minimization strategy. The first\nsub-network segments the liver, whereas the second sub-\nnetwork segments the actual tumour inside the liver.©?\nAutomatic segmentation of liver and tumours using a fully\nconvolutional neural (FCN) network is highly advanta-\ngeous as it will plan surgical management and follow-up\nassessment. A study by Alirr et al has shown this DL\nmethod as a promising tool for automatic analysis of the\nliver and its tumours.°”\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1278.3,
+                2686.3,
+                2281.6,
+                3081.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_07/region_9_text.png",
+            "text": "A systematic review by Azer et al of data analysing pa-\nthology, cellular and radiological images of HCC or liver\nmasses using CNNs were identified and analysed.°* The re-\nview showed an optimal level of accuracy of CNNs for the\nsegmentation and classification of HCC and other liver\nmass lesions. Dynamic contrast-enhanced MRI provides\nthe most comprehensive information for differential diag-\nnosis of liver tumours. DL tools can be used for\n"
+        }
+    ]
+}

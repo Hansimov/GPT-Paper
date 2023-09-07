@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_15.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_15.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 3,
+        "page_idx": 15
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 98.85,
+            "box": [
+                213.5,
+                231.5,
+                1214.7,
+                1404.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_15/region_1_list.png",
+            "text": "anti-tumor antibody-producing plasma cells in renal cell cancer.\nImmunity. 2022;55(527-541): e525\n\n34. Cheng AL, Hsu C, Chan SL, Choo SP, Kudo M. Challenges of\ncombination therapy with immune checkpoint inhibitors for hepa-\ntocellular carcinoma. J Hepatol 2020;72:307-319\n\n35. Ma J, Zheng B, Goswami S, Meng L, Zhang D, Cao C, et al.\nPD1(Hi) CD8(+) T cells correlate with exhausted signature and\npoor clinical outcome in hepatocellular carcinoma. J Immunother\nCancer 2019;7:331\n\n36. Zadeh SG, Schmid M. Bias in cross-entropy-based training of\ndeep survival networks. IEEE Trans Pattern Anal Mach Intell\n2021;43:3126-3137\n\n37. Liu Z, Liu Y, Zhang W, Hong Y, Meng J, Wang J, et al. Deep\nlearning for prediction of hepatocellular carcinoma recurrence\nafter resection or liver transplantation: a discovery and validation\nstudy. Hepatol Int 2022;16:577-589\n\n38. Kulik L, Heimbach JK, Zaiem F, Almasri J, Prokop LJ, Wang Z,\net al. Therapies for patients with hepatocellular carcinoma await-\ning liver transplantation: a systematic review and meta-analysis.\nHepatology 2018;67:381—400\n\n39. Qiao ZY, Zhang ZJ, Lv ZC, Tong H, Xi ZF, Wu HX, et al. Neo-\nadjuvant programmed cell death | (PD-1) inhibitor treatment in\npatients with hepatocellular carcinoma before liver transplant:\na cohort study and literature review. Front Immunol 2021;12:\n653437\n\n40. Sajid M, Liu L, Sun C. The dynamic role of NK cells in liver\ncancers: role in HCC and HBV associated HCC and its therapeutic\nimplications. Front Immunol 2022;13: 887186\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 99.56,
+            "box": [
+                1275.3,
+                231.7,
+                2279.2,
+                1111.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_15/region_2_list.png",
+            "text": "41. Xue JS, Ding ZN, Meng GX, Yan LJ, Liu H, Li HC, et al. The\nprognostic value of natural killer cells and their receptors/ligands\nin hepatocellular carcinoma: a systematic review and meta-anal-\nysis. Front Immunol 2022;13: 872353\n\n42. Zhang PF, Gao C, Huang XY, Lu JC, Guo XJ, Shi GM, et al.\nCancer cell-derived exosomal circUHRF1 induces natural killer\ncell exhaustion and may cause resistance to anti-PD1 therapy in\nhepatocellular carcinoma. Mol Cancer 2020;19:110\n\n43. Jiang X, Wang J, Deng X, Xiong F, Ge J, Xiang B, et al. Role\nof the tumor microenvironment in PD-L1/PD-1-mediated tumor\nimmune escape. Mol Cancer 2019;18:10\n\n44. Zou W, Wolchok JD, Chen L. PD-L1 (B7—H1) and PD-1 pathway\nblockade for cancer therapy: mechanisms, response biomarkers,\nand combinations. Sci Trans] Med 2016;8:328rv324\n\n45. Ishio T, Goto S, Tahara K, Tone S, Kawano K, Kitano S. Immu-\nnoactivative role of indoleamine 2,3-dioxygenase in human hepa-\ntocellular carcinoma. J Gastroenterol Hepatol 2004; 19:319-326\n\n46. Pan K, Wang H, Chen MS, Zhang HK, Weng DS, Zhou J,\net al. Expression and prognosis role of indoleamine 2,3-dioxy-\ngenase in hepatocellular carcinoma. J Cancer Res Clin Oncol\n2008;134:1247-1253\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.66,
+            "box": [
+                1274.3,
+                1148.7,
+                2275.1,
+                1236.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_15/region_3_text.png",
+            "text": "Publisher's Note Springer Nature remains neutral with regard to\njurisdictional claims in published maps and institutional affiliations.\n"
+        }
+    ]
+}

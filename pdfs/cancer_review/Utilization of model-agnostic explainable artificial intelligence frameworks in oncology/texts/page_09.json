@@ -1,0 +1,102 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages_ordered/page_09.png",
+        "image_width": 2481,
+        "image_height": 3249,
+        "regions_num": 7,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.78,
+            "box": [
+                380.3,
+                360.5,
+                2106.3,
+                1472.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_09/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.27,
+            "box": [
+                189.3,
+                1500.1,
+                2301.3,
+                1656.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_09/region_2_text.png",
+            "text": "Figure 4 SHAP dependence plots (A,C) and interaction plots (B,D) illustrating thresholds for lymph node burden predictive of benefit of\nPORT in completely resected N2 NSCLC. [Credit: ref. (45)]. SHAP, SHapley Additive exPlanations; PORT, post-operative radiotherapy;\nNSCLC, non-small cell lung cancer.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                188.9,
+                1759.9,
+                1204.4,
+                2909.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_09/region_3_text.png",
+            "text": "an almost 13-fold higher risk of mortality than Summit\nCounty, Utah, but also show that elevation is the largest\nprotective factor in Summit County, while smoking is the\nlargest risk factor in Union County. These conclusions\nwere made possible by the authors using waterfall plots\nfor corresponding individual explanations to visualize how\nmodel behavior can vary drastically based on the given\nexample. This information permits the model to be both\npredictive and able to inform possible interventions. In a\nstudy by Kobylinska et a/., XAI was used to investigate the\ninfluence of factors on lung cancer screening (53). The\nauthors used the SHAP framework to produce summary\nplots, to overall illustrate lung cancer risk in lung cancer\nscreening populations, dependence plots to show how\nchanging individual variables influenced risk, and plots of\nindividual predictions, which can be used how individual\npatient risk is calculated. This information is useful, as it\ncan be broadly used to counsel patients on decreasing lung\ncancer risk, but can also inform specific patients of the best\nway to decrease their risk by identifying the most impactful\nfactors to them.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 98.77,
+            "box": [
+                237.0,
+                2909.3,
+                1202.0,
+                2965.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_09/region_4_text.png",
+            "text": "Similar to other disciplines, studies in epidemiology\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1287.0,
+                1761.8,
+                2302.5,
+                2362.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_09/region_5_text.png",
+            "text": "have also benefitted from XAI aiding with feature selection/\nconstruction. In a study by Richter et a/., electronic health\nrecord (EHR) data was utilized to predict risk of developing\nmelanoma (54). In the study, use of XAI not only depicted\nimportant factors that are associated with risk of developing\nmelanoma, but it also facilitated improvements in model\nefficiency that would facilitate use of ML algorithms on\nEHR data by helping to select only the most relevant\nand impactful features, which would otherwise require\nprohibitive computational resources due to large data size\nand data missingness.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 97.92,
+            "box": [
+                1287.5,
+                2445.5,
+                1803.2,
+                2498.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_09/region_6_title.png",
+            "text": "Radiation treatment workflow\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1287.8,
+                2526.5,
+                2302.9,
+                2963.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_09/region_7_text.png",
+            "text": "One more niche area where XAI has been evaluated is in the\nradiation oncology clinic aiding in workflow for treatment\nplanning. The first scenario that was evaluated by Siciarz\net al. was clinical decision support systems for radiation plan\nevaluation in brain tumors (55). The authors used XAI to\nlook at the model globally, to examine interactions within\nfeatures, and evaluate individual predictions. This model\nclassified treatment plans based on whether the target\n"
+        }
+    ]
+}

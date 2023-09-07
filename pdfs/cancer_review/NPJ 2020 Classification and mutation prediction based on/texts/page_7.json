@@ -1,0 +1,259 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages/page_7.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages_ordered/page_7.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 19,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 95.8,
+            "box": [
+                150.2,
+                240.2,
+                486.5,
+                282.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_01_title.png",
+            "text": "CODE AVAILABILITY\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 98.46,
+            "box": [
+                149.1,
+                294.6,
+                1182.9,
+                439.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_02_text.png",
+            "text": "The codes that were used to train and validate the deep-learning model in the\nmanuscript are available at https://github.com/drmaxchen-gbc/HCC-deep-learning. It\nalso used other open-source codes (inception V3), which were available at https://\ngithub.com/openslide/openslide-python.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 49.0,
+            "box": [
+                149.9,
+                489.8,
+                990.3,
+                574.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_03_title.png",
+            "text": "Received: 17 February 2020; Accepted: 7 May 2020;\nPublished online: 08 June 2020\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 95.51,
+            "box": [
+                151.0,
+                689.9,
+                360.3,
+                730.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_04_title.png",
+            "text": "REFERENCES\n"
+        },
+        {
+            "idx": 5,
+            "thing": "list",
+            "score": 69.26,
+            "box": [
+                151.8,
+                741.8,
+                1180.4,
+                3022.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_05_list.png",
+            "text": "1. Siegel, R. L., Miller, K. D. & Jemal, A. Cancer statistics, 2019. Cancer J. Clin. 69, 7-34\n(2019).\n\n2. Miller, K. D. et al. Cancer statistics for Hispanics/Latinos, 2018. Cancer J. Clin. 68,\n425-445 (2018).\n\n3. Bray, F. et al. Global cancer statistics 2018: GLOBOCAN estimates of incidence and\nmortality worldwide for 36 cancers in 185 countries. Cancer J. Clin. 68, 394-424 (2018).\n\n4. Kudo, M. et al. Brivanib as adjuvant therapy to transarterial chemoembolization in\npatients with hepatocellular carcinoma: a randomized phase Ill trial. Hepatology 60,\n1697-1707 (2014).\n\n5. Sayiner, M., Golabi, P. & Younossi, Z. M. Disease burden of hepatocellular carci-\nnoma: a global perspective. Dig. Dis. Sci. https://doi.org/10.1007/s10620-019-\n05537-2 (2019).\n\n6. Chaturvedi, V. K. et al. Molecular mechanistic insight of hepatitis B virus mediated\nhepatocellular carcinoma. Microb. Pathog. 128, 184-194 (2019).\n\n7. Torres, H. A. et al. The oncologic burden of hepatitis C virus infection: a clinical\nperspective. Cancer J. Clin. 67, 411-431 (2017).\n\n8. Vandenbulcke, H. et al. Alcohol intake increases the risk of HCC in hepatitis C virus-\nrelated compensated cirrhosis: a prospective study. J. Hepatol. 65, 543-551 (2016).\n\n9. Rao, C. V., Asch, A. S. & Yamada, H. Y. Frequently mutated genes/pathways and\ngenomic instability as prevention targets in liver cancer. Carcinogenesis 38, 2-11\n(2017).\n\n10. Juengpanich, S. et al. Role of cellular, molecular, and tumor microenvironment in\nhepatocellular carcinoma: possible targets and future directions in the Regor-\nafenib Era. Int. J. Cancer. https://doi.org/10.1002/ijc.32970 (2020).\n\n11. Zucman-Rossi, J., Villanueva, A., Nault, J. C. & Llovet, J. M. Genetic landscape and\nbiomarkers of hepatocellular carcinoma. Gastroenterology 149, 1226-1239 (2015).\n\n12. Nault, J. C. & Villanueva, A. Intratumor molecular and phenotypic diversity in\nhepatocellular carcinoma. Clin. Cancer Res. 21, 1786-1788 (2015).\n\n13. Calderaro, J. et al. Histological subtypes of hepatocellular carcinoma are related to\ngene mutations and molecular tumour classification. J. Hepatol. 67, 727-738 (2017).\n\n14. Zhou, Q. et al. Grading of hepatocellular carcinoma using 3D SE-DenseNet in\ndynamic enhanced MR images. Comput. Biol. Med. 107, 47-57 (2019).\n\n15. Weston, A. D. et al. Automated abdominal segmentation of CT scans for body\ncomposition analysis using deep learning. Radiology 290, 669-679 (2019).\n\n16. Yi, F., Huang, J., Yang, L., Xie, Y. & Xiao, G. Automatic extraction of cell nuclei from\nH&E-stained histopathological images. J. Med. Imaging 4, 027502 (2017).\n\n17. Xing, F., Xie, Y. & Yang, L. An automatic learning-based framework for robust\nnucleus segmentation. /EEE Trans. Med. Imaging 35, 550-566 (2016).\n\n18. Lin, H. et al. Automated classification of hepatocellular carcinoma differentiation\nusing multiphoton microscopy and deep learning. J. Biophoton. https://doi.org/\n10.1002/jbi0.201800435 (2019).\n\n19. Li, S., Jiang, H. & Pang, W. Joint multiple fully connected convolutional neural\nnetwork with extreme learning machine for hepatocellular carcinoma nuclei\ngrading. Comput. Biol. Med. 84, 156-167 (2017).\n\n20. Coudray, N. et al. Classification and mutation prediction from non-small cell lung\ncancer histopathology images using deep learning. Nat. Med. 24, 1559-1567 (2018).\n\n21. Darcy, A. M., Louie, A. K. & Roberts, L. W. Machine learning and the profession of\nmedicine. JAMA 315, 551-552 (2016).\n\n22. Skrede, O. J. et al. Deep learning for prediction of colorectal cancer outcome: a\ndiscovery and validation study. Lancet 395, 350-360 (2020).\n\n23. Kather, J. N. et al. Deep learning can predict microsatellite instability directly from\nhistology in gastrointestinal cancer. Nat. Med. 25, 1054-1056 (2019).\n\n24. Ehteshami Bejnordi, B. et al. Using deep convolutional neural networks to identify and\nclassify tumor-associated stroma in diagnostic breast biopsies. Mod. Pathol. 31,\n1502-1512 (2018).\n\n25. Bera, K., Schalper, K. A., Rimm, D. L, Velcheti, V. & Madabhushi, A. Artificial\nintelligence in digital pathology—new tools for diagnosis and precision oncol-\nogy. Nat. Rev. Clin. Oncol. 16, 703-715 (2019).\n\n26. Szegedy, C., Vanhoucke, V., loffe, S., Shlens, J. & Wojna, Z. Rethinking the\nInception Architecture for Computer Vision. In Proceedings of the IEEE Conference\non Computer Vision and Pattern Recognition. 2818-2826 (2015).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "list",
+            "score": 98.74,
+            "box": [
+                1259.8,
+                249.8,
+                2292.2,
+                990.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_06_list.png",
+            "text": "27. Agarwal, R., Narayan, J., Bhattacharyya, A. Saraswat, M. & Tomar, A. K. Gene\nexpression profiling, pathway analysis and subtype classification reveal molecular\nheterogeneity in hepatocellular carcinoma and suggest subtype specific ther-\napeutic targets. Cancer Genet 216-217, 37-51 (2017).\n\n28. Zaman, G. J. R. et al. TTK inhibitors as a targeted therapy for CTNNB1 (beta-\ncatenin) mutant cancers. Mol. Cancer Ther. 16, 2609-2617 (2017).\n\n29. Liu, X., Liao, W.,, Yuan, Q., Ou, Y. & Huang, J. TTK activates Akt and promotes\nproliferation and migration of hepatocellular carcinoma cells. Oncotarget 6,\n34309-34320 (2015).\n\n30. Liang, X. D. et al. Expression and function analysis of mitotic checkpoint genes\nidentifies TTK as a potential therapeutic target for human hepatocellular carci-\nnoma. PLoS ONE 9, e97739 (2014).\n\n31. Dietz, R. L. & Pantanowitz, L. The future of anatomic pathology: deus ex machina?\nJ. Med. Artif. Intell. 2, 4 (2019).\n\n32. Tizhoosh, H. R. & Pantanowitz, L. Artificial intelligence and digital pathology:\nchallenges and opportunities. J. Pathol. Inf. 9, 38 (2018).\n\n33. Maddox, T. M., Rumsfeld, J. S. & Payne, P. R. O. Questions for artificial intelligence\nin health care. JAMA 321, 31-32 (2019).\n\n34. Stead, W. W. Clinical implications and challenges of artificial intelligence and\ndeep learning. JAMA 320, 1107-1108 (2018).\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 97.69,
+            "box": [
+                1259.0,
+                1067.4,
+                1639.0,
+                1107.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_07_title.png",
+            "text": "ACKNOWLEDGEMENTS\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1257.7,
+                1120.8,
+                2292.4,
+                1415.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_08_text.png",
+            "text": "We would like to thank the EASY DL team and Hangzhou Xixuan Health technology\nCo., Ltd. for their assistance in training our models. Thanks to Y.C., J.H.H., SJ.L., F.-Y.\nand all our colleagues for their assistance in this study. This abstract of the study was\npresented at The International Liver Congress ™ 3019 (EASL 2019) as Late-Breaker\nposter, in Vienna, Austria, on April 11-13, 2019. This work was supported by the\nOpening Fund of Engineering Research Center of Cognitive Healthcare of Zhejiang\nProvince (No.2018KFJJO9), Zhejiang Medical Health Science and Technology Project\n(No.2016133597), and National Natural Science Foundation of China (No.81827804).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 97.65,
+            "box": [
+                1259.0,
+                1490.5,
+                1691.2,
+                1531.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_09_title.png",
+            "text": "AUTHOR CONTRIBUTIONS\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1258.0,
+                1543.6,
+                2291.7,
+                1689.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_10_text.png",
+            "text": "MY.C., J.S.C., W.T,, H.Y., and B.Z. were involved in the study design, data collection and\nanalysis, and drafted the paper; H.P.Z., S.J., and Q.J.M. collected and checked data; M.\nY.C., J.S.C.,, XJ.C.,, and W.T. revised the paper; XJ.C. designed, supervised the study;\nand all authors wrote the paper.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 94.07,
+            "box": [
+                1258.4,
+                1763.9,
+                1651.8,
+                1804.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_11_title.png",
+            "text": "COMPETING INTERESTS\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 97.72,
+            "box": [
+                1258.6,
+                1819.0,
+                1804.4,
+                1850.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_12_text.png",
+            "text": "The authors declare no competing interests.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "title",
+            "score": 97.07,
+            "box": [
+                1258.9,
+                1926.6,
+                1726.1,
+                1966.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_13_title.png",
+            "text": "ADDITIONAL INFORMATION\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 98.44,
+            "box": [
+                1258.8,
+                1980.3,
+                2292.0,
+                2049.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_14_text.png",
+            "text": "Supplementary information is available for this paper at https://doi.org/10.1038/\ns41698-020-0120-3.\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 98.5,
+            "box": [
+                1257.9,
+                2091.5,
+                2246.7,
+                2124.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_15_text.png",
+            "text": "Correspondence and requests for materials should be addressed to H.Y. or X.C.\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 97.58,
+            "box": [
+                1258.8,
+                2166.4,
+                2291.7,
+                2236.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_16_text.png",
+            "text": "Reprints and permission information is available at http://www.nature.com/\nreprints\n"
+        },
+        {
+            "idx": 17,
+            "thing": "text",
+            "score": 99.18,
+            "box": [
+                1258.1,
+                2279.5,
+                2292.6,
+                2348.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_17_text.png",
+            "text": "Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims\nin published maps and institutional affiliations.\n"
+        },
+        {
+            "idx": 18,
+            "thing": "text",
+            "score": 99.77,
+            "box": [
+                1258.0,
+                2503.0,
+                2292.2,
+                2908.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_18_text.png",
+            "text": "Open Access This article is licensed under a Creative Commons\n\n7 Attribution 4.0 International License, which permits use, sharing,\nadaptation, distribution and reproduction in any medium or format, as long as you give\nappropriate credit to the original author(s) and the source, provide a link to the Creative\nCommons license, and indicate if changes were made. The images or other third party\nmaterial in this article are included in the article’s Creative Commons license, unless\nindicated otherwise in a credit line to the material. If material is not included in the\narticle’s Creative Commons license and your intended use is not permitted by statutory\nregulation or exceeds the permitted use, you will need to obtain permission directly\nfrom the copyright holder. To view a copy of this license, visit http://creativecommons.\norg/licenses/by/4.0/.\n"
+        },
+        {
+            "idx": 19,
+            "thing": "text",
+            "score": 40.5,
+            "box": [
+                1258.6,
+                2984.7,
+                1523.5,
+                3015.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_7/region_19_text.png",
+            "text": "© The Author(s) 2020\n"
+        }
+    ]
+}

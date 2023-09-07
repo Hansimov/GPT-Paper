@@ -1,0 +1,89 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 6,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.9,
+            "box": [
+                202.9,
+                281.6,
+                2196.5,
+                1847.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_03/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                176.3,
+                1916.8,
+                2304.6,
+                2162.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_03/region_2_text.png",
+            "text": "Fig. 1. Digital pathology and radiology using artificial intelligence for management of liver diseases. (A) Number of studies by country of the first author. (B)\nNumber of studies by prediction of the models. (C) Number of studies by liver disease. (D) Number of studies stratified by the clinical input data used. Raw data for\nthis figure is available in Tables S1 and S2. Methodological details are available in the supplementary materials and methods. (E) Cumulative number of published\noriginal studies per half-year from 2010 to mid-2021. (F) Cumulative number of published original studies per half-year by research field. (G) Cumulative number\nof published original studies per half-year by either deep learning or handcrafted feature extraction. CCA, cholangiocarcinoma; CLD, chronic liver disease; HCC,\nhepatocellular carcinoma; NAFLD, non-alcoholic fatty liver disease; NASH, non-alcoholic steatohepatitis.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                177.9,
+                2233.7,
+                1216.9,
+                3099.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_03/region_3_text.png",
+            "text": "first studies using handcrafted features in a support vector ma-\nchine algorithm to identify and quantify macrosteatosis, central\nveins, bile ducts and other structures on scanned H@E slides\nfrom NAFLD and healthy liver biopsies, with an overall accuracy\nof 89%.*? In the following year, the same group extended their\nalgorithm for the classification of lobular inflammation and he-\npatocyte ballooning with AUCs of 0.95 and 0.98, respectively.\nAnother study developed a ML quantifier of morphological fea-\ntures of NAFLD to calculate a diagnostic score for NASH, yielding\nan AUC of 0.80 (95% CI 0.68-0.89).”* Applying classical ML\ntechniques, Leow et al. used unstained liver biopsies and second-\nharmonic imaging microscopy to stratify stage 1 and 2 NASH\nfibrosis.?° Roy et al. developed an algorithm with a U-Net ar-\nchitecture which adequately segmented and quantified hepatic\nsteatosis.*° Another benchmark study in the field of quantifying\nmorphological features and staging of fibrosis in NASH biopsies\nwas conducted by Taylor-Weiner et al, who developed and\nvalidated their models retrospectively on 3 patient cohorts from\nlarge randomised controlled trials. Their quantifications\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1265.1,
+                2233.6,
+                2303.0,
+                2733.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_03/region_4_text.png",
+            "text": "correlated with the assessment of 3 experienced pathologists.\nSpecifically, the feature outputs of their model were able to\npredict disease progression in patients with NASH, with C-\nindices of up to 0.73.2’ Gawrieh et al. designed a model to\nquantify fibrosis in trichrome-stained biopsies of patients with\nNASH, achieving good correlation with pathologists’ assess-\nments. Additionally, their model was able to classify different\npatterns of fibrosis with AUCs between 0.77 and 0.95.2° Overall,\nthese studies show the potential of ML/DL technology for seg-\nmentation, quantification and standardisation of diagnosis in\npatients with NAFLD and NASH.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.3,
+            "box": [
+                1264.7,
+                2779.0,
+                2071.6,
+                2822.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_03/region_5_title.png",
+            "text": "Diagnosis and segmentation in primary liver cancer\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1264.3,
+                2823.9,
+                2303.2,
+                3096.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_03/region_6_text.png",
+            "text": "In recent years, multiple studies have generated AI models for\nclassifying, segmenting and diagnosing tissue from HCC sam-\nples.*°-*! Li et al. published a CNN-based DL algorithm that was\nable to grade HCC nuclei on liver histopathology, while Lal et al.\npublished a more complex model to fulfil the same task 4 years\nlater in 2021.°*°? Wang et al. developed a DL model which\n"
+        }
+    ]
+}

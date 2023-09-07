@@ -1,0 +1,168 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 12,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.79,
+            "box": [
+                190.1,
+                441.1,
+                2238.5,
+                723.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_01_title.png",
+            "text": "Implementation of deep learning in liver pathology\noptimizes diagnosis of benign lesions and adenocarcinoma\nmetastasis\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 93.02,
+            "box": [
+                189.5,
+                815.5,
+                2228.9,
+                1028.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_02_text.png",
+            "text": "Mark Kriegsmann’** | Katharina Kriegsmann*** | Georg Steinbuss** |\nChristiane Zgorzelski' | Thomas Albrecht’ | Stefan Heinrich’ | Stefan Farkas® |\nWilfried Roth’ | HienDang® | Anne Hausen’ | Matthias M. Gaida”*’° ®\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.25,
+            "box": [
+                188.6,
+                1094.5,
+                1905.0,
+                1657.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_03_text.png",
+            "text": "‘Institute of Pathology, Heidelberg University, Heidelberg, Germany\n\nPathology Wiesbaden, Wiesbaden, Germany\n\n3Department of Hematology, Oncology and Rheumatology, Heidelberg University, Heidelberg, Germany\n4Laborarztpraxis Rhein-Main MVZ GbR, Frankfurt am Main, Frankfurt, Germany\n\n>Department of Surgery, JGU-Mainz, University Medical Center Mainz, Mainz, Germany\n\n°Department of Surgery, St. Josefs- Hospital, Wiesbaden, Germany\n\n7Institute of Pathology, JGU-Mainz, University Medical Center Mainz, Mainz, Germany\n\n8Department of Surgery, Department of Surgical Research, Thomas Jefferson University, Philadelphia, Pennsylvania, USA\n°TRON, JGU-Mainz, Translational Oncology at the University Medical Center, Mainz, Germany\n\n10Research Center for Immunotherapy, JGU-Mainz, University Medical Center Mainz, Mainz, Germany\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 97.96,
+            "box": [
+                190.1,
+                1756.2,
+                776.7,
+                2021.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_04_text.png",
+            "text": "Correspondence\n\nMark Kriegsmann, Institute of Pathology,\nHeidelberg University, 69120 Heidelberg,\nGermany.\n\nEmail:\nkriegsmann@pathologie-wiesbaden.de\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 93.9,
+            "box": [
+                191.2,
+                2050.1,
+                741.2,
+                2272.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_05_text.png",
+            "text": "Anne Hausen, Institute of Pathology,\nJGU-Mainz, University Medical Center\nMainz, 55131 Mainz, Germany.\n\nEmail:\nAnne.Hausen@unimedizin-mainz.de\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 24.61,
+            "box": [
+                189.1,
+                2324.5,
+                783.2,
+                2681.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_06_text.png",
+            "text": "Funding information\n\nGerman Research Foundation (DFG),\nGrant/Award Number: INST 35/1597-1\nFUGG; the Ministry of Science Research\nand the Arts Baden-Wiirttemberg (MWK);\nGerman Research Foundation (DFG),\nGrant/Award Numbers: INST 35/1314-1\nFUGG, INST 35/1503-1 FUGG; Biobank of\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 97.92,
+            "box": [
+                876.2,
+                1789.3,
+                1039.6,
+                1841.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_07_title.png",
+            "text": "Abstract\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 5.73,
+            "box": [
+                1385.1,
+                211.4,
+                1984.5,
+                266.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_08_title.png",
+            "text": "CLINICAL ND TRANSLATIONAL MEDICINE\nFE\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                874.4,
+                1851.2,
+                2268.7,
+                2275.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_09_text.png",
+            "text": "Introduction: Differentiation of histologically similar structures in the liver,\nincluding anatomical structures, benign bile duct lesions, or common types\nof liver metastases, can be challenging with conventional histological tis-\nsue sections alone. Accurate histopathological classification is paramount for\nthe diagnosis and adequate treatment of the disease. Deep learning algo-\nrithms have been proposed for objective and consistent assessment of digital\nhistopathological images.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.82,
+            "box": [
+                875.8,
+                2288.2,
+                2269.6,
+                2713.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_10_text.png",
+            "text": "Materials and methods: In the present study, we trained and evaluated deep\nlearning algorithms based on the EfficientNetV2 and ResNetRS architectures\nto discriminate between different histopathological classes. For the required\ndataset, specialized surgical pathologists annotated seven different histological\nclasses, including different non-neoplastic anatomical structures, benign bile\nduct lesions, and liver metastases from colorectal and pancreatic adenocarci-\nnoma in a large patient cohort. Annotation resulted in a total of 204.159 image\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 93.79,
+            "box": [
+                190.1,
+                2847.1,
+                1933.5,
+                2886.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_11_text.png",
+            "text": "*Mark Kriegsmann, Katharina Kriegsmann and Georg Steinbuss contributed equally to this work and share first authorship.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 39.12,
+            "box": [
+                184.3,
+                2928.8,
+                2290.3,
+                3050.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_02/region_12_text.png",
+            "text": "This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the\noriginal work is properly cited.\n© 2023 The Authors. Clinical and Translational Medicine published by John Wiley & Sons Australia, Ltd on behalf of Shanghai Institute of Clinical Bioinformatics.\n"
+        }
+    ]
+}

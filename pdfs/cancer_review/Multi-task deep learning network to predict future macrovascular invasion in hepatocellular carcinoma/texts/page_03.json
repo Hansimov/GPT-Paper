@@ -1,0 +1,167 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 12,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.69,
+            "box": [
+                516.7,
+                234.2,
+                2005.6,
+                1693.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                178.0,
+                1847.7,
+                1225.2,
+                2023.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_02_text.png",
+            "text": "The study protocols were approved by the Ethics Review Commit-\ntee of the Zhuhai People’s Hospital. Informed consent for medical\nresearch was waived because patient data were collected retrospec-\ntively. All patient data were anonymized before analysis.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.53,
+            "box": [
+                176.4,
+                2066.2,
+                698.4,
+                2110.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_03_title.png",
+            "text": "2.2. Patient and public involvement\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                178.4,
+                2152.7,
+                1224.2,
+                2284.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_04_text.png",
+            "text": "Patient and public involvement Patients and/or the public were\nnot involved in the design, conduct, reporting or dissemination plans\nof this research.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.43,
+            "box": [
+                177.5,
+                2328.2,
+                637.2,
+                2371.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_05_title.png",
+            "text": "2.3. Treatments and follow-ups\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.03,
+            "box": [
+                176.4,
+                2938.3,
+                391.0,
+                2982.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_06_title.png",
+            "text": "2.4, Outcomes\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.29,
+            "box": [
+                932.3,
+                1729.0,
+                1589.2,
+                1765.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_07_text.png",
+            "text": "Fig. 1. Inclusion and exclusion flowchart of this study.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                177.2,
+                2413.3,
+                1224.0,
+                2895.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_08_text.png",
+            "text": "The initial treatment options for liver resection, TACE, and abla-\ntion were determined by multi-disciplinary teams according to the\nguidelines [2—3,20] (tumor characteristics, liver function, and\npatients’ will). After the initial treatments, regular follow-ups were\narranged every four to six weeks for the first year. Subsequently, the\ninterval was doubled every year if the patients had no disease pro-\ngression (PD). After three years, the interval was stabilized to three\nmonths if the patients had no PD. During every follow-up, chest X-\nrays, abdominal CT or MRI, and necessary laboratory tests were per-\nformed. When symptoms of extrahepatic metastasis were identified,\nan additional CT or MRI for the suspected region was acquired.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                178.2,
+                3025.6,
+                1224.3,
+                3113.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_09_text.png",
+            "text": "The primary outcome of this study was macrovascular invasion\nduring follow-ups, which was confirmed by two radiologists (Y.L. and\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1297.7,
+                1848.6,
+                2345.3,
+                2241.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_10_text.png",
+            "text": "JY.) with 10 years of work experience. Whenever disagreements\nbetween Y.L. and J.-Y. occurred, a third radiologist (L.L. with over\n20 years of working experience) was asked to perform another inde-\npendent assessment. Then macrovascular invasion was finally con-\nfirmed by at least two of the three radiologists. Macrovascular\ninvasion was determined based on the enhancement of arterial phase\nimaging, expanding vessel, and/or direct extension into the vascula-\nture [21]. The secondary outcome was OS, which was calculated from\nthe initial treatments to the date of death.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 99.59,
+            "box": [
+                1296.9,
+                2328.1,
+                2190.3,
+                2371.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_11_title.png",
+            "text": "2.5. Candidate clinical factors and radiological characteristics\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1299.3,
+                2413.7,
+                2347.0,
+                3112.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_03/region_12_text.png",
+            "text": "The clinical factors included patients’ status (age, sex, Child-Pugh\ngrade, HBV infection, and CT identified cirrhosis); tumor burden\n(location, lesion number, maximum diameters, alpha fetoprotein\nlevel, and BCLC stages); and initial treatments. Considering the\npotential value of the qualitative radiological characteristics, we\nadded nine qualitative radiological characteristics as previously\nreported: [22] fusion lesions, invasive shape, HCC capsule, HCC cap-\nsule breakthrough, corona enhancement, corona with low attenua-\ntion, mosaic architecture, nodule-in-nodule architecture, and\nenhancement ratio of the HCC lesions. All these radiological charac-\nteristics were assessed by two radiologists (Y.L. and J.Y., both have a\nworking experience of over 10 years) independently. Whenever dis-\nagreements between Y.L. and J.Y. occurred, a third radiologist (L.L.\nwith over 20 years of working experience) was asked to perform\nanother independent assessment. Then the final results were decided\nby at least two among the three radiologists.\n"
+        }
+    ]
+}

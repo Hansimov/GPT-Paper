@@ -1,0 +1,62 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 4,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 98.83,
+            "box": [
+                489.4,
+                368.4,
+                1991.4,
+                1706.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_07/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.46,
+            "box": [
+                512.6,
+                1721.1,
+                1959.4,
+                1804.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_07/region_2_text.png",
+            "text": "Fig. 1 Custom autoencoder construction. The construction of the custom autoencoder with hidden layers, a\nbottleneck layer and a survival branch of dimension 1\n"
+        },
+        {
+            "idx": 3,
+            "thing": "table",
+            "score": 24.76,
+            "box": [
+                494.8,
+                1820.0,
+                1992.1,
+                2352.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_07/region_3_table.png"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                489.8,
+                2447.3,
+                1991.9,
+                3034.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_07/region_4_text.png",
+            "text": "The log L(f) estimates the coefficients, denoted by £, of predictor variables repre-\nsented by vector z. 6 is an indication of whether subject i is alive (0) or dead (1) and\nR(t;) is the risk set (subjects still alive at the time subject i died). Coefficients describe\nthe effect size of a particular variable, with positive 6 suggesting a worse prognosis\nand negative 6 suggesting a protective effect for that variable. For example, in a Cox\nmodel a positive coefficient for a variable such as age could mean that increasing age\nresults in poorer prognosis. In Le, W'@(x;) represents the single scaler output for the\ninput of sample i from the single dimension branch stemming from the bottleneck\nlayer. Like before [9], Ls is combined with Lp forming: Lp; =aLg+ Ls. For both, Lp\nand Les different parameter values were evaluated, with a = 0.25 and B = 0.75 found\n"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_12.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_12.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 2,
+        "page_idx": 12
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.79,
+            "box": [
+                188.3,
+                230.3,
+                2287.4,
+                1176.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_12/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.76,
+            "box": [
+                177.7,
+                1231.0,
+                2240.1,
+                1400.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_12/region_2_text.png",
+            "text": "Extended Data Fig. 1 | Computational histopathological features discriminate between different tissue types. a, UMAP dimensionality reduction\nrepresentation of the 1,536 histopathological features from randomly selected tiles colored by groups of cancer types (n=200 tiles per tissue type and\nJPEG quality). b, Example tiles from H&E-stained tissue sections of normal and tumor samples from different cancer types (arranged by row, manually\nselected from best predicted tiles). All tiles are manually selected from best predicted tiles.\n"
+        }
+    ]
+}

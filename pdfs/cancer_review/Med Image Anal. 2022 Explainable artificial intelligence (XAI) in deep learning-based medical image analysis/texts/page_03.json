@@ -1,0 +1,193 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 14,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.8,
+            "box": [
+                404.1,
+                238.8,
+                2077.8,
+                1388.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                156.6,
+                1424.2,
+                2328.9,
+                1494.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_02_text.png",
+            "text": "Fig. 1. The eXplainable Artificial Intelligence (XAI) framework proposed in this paper. A rough overview of XAI techniques (discussed in Section 3) is classified according to\nthis framework. The orange number refers to the section number in the manuscript where the XAI technique is described.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.21,
+            "box": [
+                157.5,
+                1569.9,
+                525.8,
+                1611.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_03_title.png",
+            "text": "2.3.1. Global explanation\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                158.2,
+                1611.6,
+                1206.1,
+                2092.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_04_text.png",
+            "text": "Global explanation, also called dataset-level explanation, pro-\nvides general relationships learned by the neural network. For ex-\nample, global explanation could provide feature importance scores\nat the dataset level, i.c., how much do features contribute to the\noutput across the entire dataset (Olden et al., 2004). As an illus-\ntration, one might observe from a neural network that - or even\nhow much - high blood pressure increases the risk of a cardiac\nevent. Another example of global explanation could be visualiza-\ntion of learned filters, i.e., which features are extracted by the neu-\nral network and to what extent are they meaningful to the task at\nhand (Olah et al., 2017; Zeiler and Fergus, 2014).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.21,
+            "box": [
+                155.5,
+                2145.9,
+                512.7,
+                2186.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_05_title.png",
+            "text": "2.3.2. Local explanation\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.99,
+            "box": [
+                157.8,
+                2189.2,
+                1205.8,
+                2710.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_06_text.png",
+            "text": "Local explanation provides explanation of a single input. In the\nexample of cardiac risk, an input would be a single person. Local\nexplanation would therefore explain why blood pressure is impor-\ntant to the risk of cardiac event for that single person, whereas\nglobal explanation would describe the relation of blood pressure\nwith risk of cardiac events across the entire dataset. Another ex-\nample of a local explanation could be a saliency map pinpointing\nto a brain tumor on magnetic resonance imaging (MRI) to explain\nwhich part of the MRI mainly contributed to the classifier output\n‘tumor’. Since this explains which part of the image drives the clas-\nsifier to its output ‘tumor’ for that single person, this is a local ex-\nplanation.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 99.3,
+            "box": [
+                156.1,
+                2764.5,
+                693.6,
+                2807.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_07_title.png",
+            "text": "3. XAI in medical image analysis\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.99,
+            "box": [
+                156.7,
+                2851.1,
+                1205.1,
+                3112.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_08_text.png",
+            "text": "In this section, we will present which XAI techniques are\nused in medical image analysis, and we will discuss adaptations\nof the methods typically seen in computer vision. We catego-\nrize the explanation methods into three types: visual, textual, and\nexample-based; and we will classify each method according to the\nframework of model-based versus post hoc, model-specific ver-\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1277.5,
+                1568.7,
+                2325.3,
+                1742.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_09_text.png",
+            "text": "sus model-agnostic, and global versus local explanation (Fig. 1).\nTable 1 provides an overview of the most frequently used tech-\nniques and shows their connections according to the taxonomy de-\nfined in Section 2.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 99.09,
+            "box": [
+                1277.8,
+                1797.0,
+                1616.6,
+                1838.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_10_title.png",
+            "text": "3.1. Visual explanation\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.99,
+            "box": [
+                1278.2,
+                1882.8,
+                2326.2,
+                2231.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_11_text.png",
+            "text": "Visual explanation, also called saliency mapping, is the most\ncommon form of XAI in medical image analysis (Fig. 2). Saliency\nmaps show the important parts of an image for a decision.\nMost saliency mapping techniques use backpropagation-based ap-\nproaches, but some use perturbation-based or multiple instance\nlearning-based approaches. These approaches will be discussed be-\nlow. An overview of papers using saliency maps in medical imag-\ning is shown in Table 2.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 99.47,
+            "box": [
+                1277.9,
+                2285.6,
+                1884.3,
+                2327.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_12_title.png",
+            "text": "3.1.1. Backpropagation-based approaches\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1277.2,
+                2327.0,
+                2324.6,
+                2850.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_13_text.png",
+            "text": "(Guided) backpropagation and deconvolution: Some of the ear-\nliest techniques to create saliency maps highlighted pixels that\nhad the highest impact on the analysis output. Examples included\nvisualization of partial derivatives of the output on pixel level\n(Simonyan et al., 2013), deconvolution (Zeiler and Fergus, 2014),\nand guided backpropagation (Springenberg et al., 2014). These\ntechniques provided local, model-specific (only for CNNs), post hoc\nexplanation. These techniques have been used in medical image\nanalysis. For example, de Vos et al. (2019) estimated the amount\nof coronary artery calcium per cardiac or chest computed tomog-\nraphy (CT) image slice, and used deconvolution to visualize from\nwhere in the slice the decision was based on.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1277.7,
+                2852.0,
+                2326.2,
+                3111.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_03/region_14_text.png",
+            "text": "Class activation mapping (CAM): Zhou et al. (2016) introduced\nClass Activation Mapping (CAM). They replaced the fully con-\nnected layers at the end of a CNN by global average pooling\non the last convolutional feature maps. The class activation map\nwas a weighted linear sum of presence of visual patterns (cap-\ntured by the filters) at different spatial locations. This technique\n"
+        }
+    ]
+}

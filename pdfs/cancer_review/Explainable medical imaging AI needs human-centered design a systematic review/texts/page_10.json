@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 10,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                189.3,
+                241.4,
+                1224.3,
+                656.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_10/region_01_text.png",
+            "text": "further comparisons with traditional explanations methods. Simi-\nlarly''®, defined a multi-task learning framework for image classifica-\ntion and retrieval, evaluating retrieval precision and providing a\nconfidence score based on the retrieved neighbors as an attempt to\ncheck the learned embedding space. Capturing relevant features\nconsistent with human intuition was proposed in ref. '°° by\nmeasuring the fraction of reference features recovered, which were\ndefined according to a guideline. Overall, the evaluation of\nexplanations through auxiliary tasks required additional manual\nefforts to get the necessary ground truth annotations.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                188.6,
+                656.7,
+                1222.8,
+                1652.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_10/region_02_text.png",
+            "text": "Properties of the explanation itself were also quantified as their\nusefulness to identify risky and safe predictions at a voxel-level for\nthe main task by thresholding on their predictive uncertainty\nvalues'*?. Other properties of explanations, such as their correct-\nness (accuracy of rules), completeness (fraction of the training set\ncovered) and compactness (size in bytes) were measured in ref. °”.\nA measure related to completeness was defined in ref. °° and\naimed to capture the proportion of training images represented\nby the learned visual concepts, in addition to two other metrics:\nthe inter- and intra-class diversity and the faithfulness of\nexplanations computed by perturbing relevant patches and\nmeasuring the drop in classification confidence. Other articles\nfollowed a similar approach to validate relevant pixels or features\nidentified with a transparent method; for example, in ref. % a\ndeletion curve was constructed by plotting the dice score vs. the\npercentage of pixels removed and ref. °° defined a recall rate\nwhen the model proposes certain number of informative\nchannels?’ proposed to evaluate the consistency of visualization\nresults and the outputs of a CNN by computing the L7 error\nbetween predicted class scores and explanation pixel-attribution\nmaps. In summary, while the methods grouped in this theme are\ncapable of evaluating how well a method aligns with it's intended\nmechanism of transparency, they fall short of capturing any\nhuman factors-related aspects of transparency design.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                188.8,
+                1654.8,
+                1222.7,
+                2357.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_10/region_03_text.png",
+            "text": "The third, and most common approach, involved a qualitative\nvalidation of the transparent systems (n= 40) by showing pixel-\nattribution visualizations overlaid with the input image or rankings\nof feature relevance, along with narrative observations on how these\nvisualizations may relate to the main task. These qualitative\nnarratives might include comparisons with other visualization\ntechniques in terms of the highlighted regions or the granularity/\nlevel of details. Furthermore, following a retrospective analysis, the\nconsistency between the identified relevant areas/features and prior\nclinical knowledge in a specific task was a common discussion item\nin 37% of all the articles (n = 25); refer to articles®?:2°8%'19'!7 for\nexamples. While grounding of feature visualizations in the relevant\nclinical task is a commendable effort, the methods to generate the\noverlaid information have been criticized in regards to their fidelity\nand specificity>*'**, Further, as was the case for methods that\nevaluate the fidelity of transparency information, these methods do\nnot inherently account for human factors.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                188.4,
+                2361.0,
+                1222.8,
+                3063.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_10/region_04_text.png",
+            "text": "Lastly, transparent systems can be directly evaluated through\nuser studies on the target population, in which the end users\ninteract with the developed ML system to complete a task based\non a specific context. In ref. °°, the evaluation was centered on the\nutility of example-based and feature-based explanations for\nradiologists (8 study participants) to understand the Al decision\nprocess. Users’ understanding was evaluated as the accuracy to\npredict the Al's diagnosis for a target image and a binary\njudgment on whether they certify the Al for similar images (and\njustify using multiple-choice options). Users’ agreement with the\nAl's predictions was measured as well. The empirical evidence\nsuggested that explanations enabled radiologists to develop\nappropriate trust by making an accurate prediction and judgment\nof the Al's recommendations. Even though radiologists could\ncomplete the task by themselves, a comparison with the team\nperformance was not included, nor the performance of the Al\nmodel in standalone operation. An alternative evaluation of\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1298.6,
+                242.2,
+                2333.2,
+                1287.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_10/region_05_text.png",
+            "text": "example-based explanation usefulness was performed in ref. '*',\nin which pathologists (14 study participants) determined the\nacceptability of a decision support tool by rating adjectives related\nto their perceived objectivity, details, reliability, and quality of the\nsystem. Compared to a CNN without explanations, the subjective\nratings were more positive towards the explainable systems.\nHowever, neither the team (expert + Al) nor expert baseline\nperformance was evaluated. The benefit of involving a dermatol-\nogist to complete an image grouping task was demonstrated in\nref. '°2, in which domain knowledge was used to constrain\nupdates of the algorithm’s training, resulting in a better grouping\nperformance than a fully automated method. The user evaluation\nonly measured the task performance. These studies that explicitly\ninvolve target users to identify whether the envisioned human\nfactors engineering goals were met stand out from the large body\nof work that did not consider empirical user tests. It is, however,\nnoteworthy that even these exemplary studies are based on very\nsmall sample sizes that may not be sufficiently representative of\nthe target users. Careful planning of the study design (including\nhypothesis statement, experimental design and_ procedure,\nparticipants, and measures) that allows to properly evaluate\nwhether the system achieves the intended goals by adding\ntransparency to the ML system is fundamental, especially\nconsidering the resources needed and challenges involved in\nconducting user testing in the healthcare domain.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1297.9,
+                1289.9,
+                2332.0,
+                1662.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_10/region_06_text.png",
+            "text": "Even though there were articles that assessed human factors-\nrelated properties of the transparency mechanism, a striking\nmajority of articles did not report metrics beyond performance in\nthe main task (n=49) or did not discuss the transparency\ncomponent at all (n = 9). Task performance was evaluated in the\nmajority of the articles, 91% (n = 62), and most of them contrasted\nthe performance of the transparent systems with a non-\ntransparent baseline (n = 41). Of those, 36 works (88%) reported\nimproved performance and 5 (12%) comparable results.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 97.52,
+            "box": [
+                1298.7,
+                1719.2,
+                1460.4,
+                1757.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_10/region_07_title.png",
+            "text": "PR: priors\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1298.4,
+                1769.8,
+                2332.7,
+                2143.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_10/region_08_text.png",
+            "text": "We differentiate two types of priors that can be used as a source of\ninspiration to devise transparent ML techniques: (1) Priors based on\ndocumented knowledge, and especially clinical guidelines consider-\ning the unvaried end user specification identified above; and (2)\nPriors based on computer vision concepts. Most (93%) articles that\nincorporated clinical knowledge priors (n = 28) directly implemen-\nted these priors into the model structure and/or inference, while\nonly 68% articles with computer vision priors (n = 40) provided\ntransparency by the model itself and/or the inference procedure.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1296.7,
+                2145.7,
+                2333.0,
+                2895.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_10/region_09_text.png",
+            "text": "A direct way to include clinical knowledge priors was through\nthe prediction, extraction, or use of human-understandable\nfeatures. Morphological features, e.g., texture, shape and edge\nfeatures were frequently considered and used to support the\ntransparency of ML_ systems’®’%73:75.7681,83,93 Biomarkers for\nspecific problems, e.g., end-diastolic volume (EDV) in cardiac\nMRI’®:72 and mean diameter, consistency, and margin of\npulmonary nodules®° were commonly computed to establish\ntransparency. For problems with a well-established image report-\ning and diagnosis systems, routinely-used clinical features, e.g.,\nLiver Imaging Reporting and Data System (LI-RADS) features for\nHepatocellular carcinoma (HCC) classification®* or BI-RADS for\nbreast mass®* suggested that the ML systems may be intuitively\ninterpretable to experts that are already familiar with these\nguidelines. Human-understandable features relevant to the task\ndomain were extracted from pathology images, e.g., area and\ntissue structure features’°. Radiomic features were also computed\nto establish the transparency of ML systems’*'”°.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1298.5,
+                2898.2,
+                2332.4,
+                3062.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_10/region_10_text.png",
+            "text": "Besides human-understandable features, clinical knowledge can\nbe used to guide the incorporation of transparency within a\nmodel. Some articles (n=11) mimicked or started from\nclinical guidelines and workflows to construct the ML\n"
+        }
+    ]
+}

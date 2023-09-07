@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages_ordered/page_13.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 3,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 96.15,
+            "box": [
+                213.7,
+                231.7,
+                1214.5,
+                986.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_13/region_1_list.png",
+            "text": "28. Wahadane A, Peng T, Sethi A, Albarqouni S, Wang L, Baust M,\net al. Structure-preserving color normalization and sparse stain\nseparation for histological images. IEEE Trans Med Imaging.\n2016;35(8):1962-1971\n\n29. Heagerty PJ, Zheng Y. Survival model predictive accuracy and\nROC curves. Biometrics. 2005;61(1):92—105\n\n30. Pencina MJ, D’Agostino RB Sr, Steyerberg EW. Extensions of net\nreclassification improvement calculations to measure usefulness\nof new biomarkers. Stat Med. 2011;30(1):11-21\n\n31. Niazi MKK, Parwani AV, Gurcan MN. Digital pathology and arti-\nficial intelligence. Lancet Oncol. 2019;20(5):e253-e261\n\n32. Mobadersany P, Yousefi S, Amgad M, Gutman DA, Barnholtz-\nSloan JS, Velazquez Vega JE, et al. Predicting cancer outcomes\nfrom histology and genomics using convolutional networks. Proc\nNatl Acad Sci USA. 2018;115(13):E2970-e2979\n\n33. Bychkov D, Linder N, Turkki R, Nordling S, Kovanen PE, Verrill\nC, et al. Deep learning based tissue analysis predicts outcome in\ncolorectal cancer. Sci Rep. 2018;8(1):3395\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 99.03,
+            "box": [
+                1276.4,
+                233.1,
+                2279.0,
+                737.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_13/region_2_list.png",
+            "text": "34, Zucman-Rossi J, Villanueva A, Nault JC, Llovet JM. Genetic land-\nscape and biomarkers of hepatocellular carcinoma. Gastroenterol-\nogy. 2015;149(5):1226-1239.e1224\n\n35. Pan Y, Chen H, Yu J. Biomarkers in hepatocellular carci-\nnoma: current status and future perspectives. Biomedicines.\n2020;8(12):576\n\n36. Price WN. Big data and black-box medical algorithms. Sci Transl\nMed. 2018. https://doi.org/10.1126/scitranslmed.aao5333\n\n37. Calderaro J, Couchy G, Imbeaud S, Amaddeo G, Letouzé E, Blanc\nJF, et al. Histological subtypes of hepatocellular carcinoma are\nrelated to gene mutations and molecular tumour classification. J\nHepatol. 2017;67(4):727-738\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.63,
+            "box": [
+                1273.6,
+                775.4,
+                2277.5,
+                865.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_13/region_3_text.png",
+            "text": "Publisher's Note Springer Nature remains neutral with regard to\njurisdictional claims in published maps and institutional affiliations.\n"
+        }
+    ]
+}

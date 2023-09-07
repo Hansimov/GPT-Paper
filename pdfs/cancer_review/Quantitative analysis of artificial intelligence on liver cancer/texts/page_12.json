@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_12.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_12.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 4,
+        "page_idx": 12
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 96.95,
+            "box": [
+                177.9,
+                287.8,
+                1211.9,
+                421.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_12/region_1_text.png",
+            "text": "67. Gao Q, Wang ZC, Duan M, Lin YH, Zhou XY, Worthley DL, et al. Cell culture system\nfor analysis of genetic heterogeneity within hepatocellular carcinomas and response to\npharmacologic agents. Gastroenterology (2017) 152(1):232-242.e4. doi: 10.1053/\nj-gastro.2016.09.008\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 94.81,
+            "box": [
+                176.8,
+                431.6,
+                1211.0,
+                532.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_12/region_2_text.png",
+            "text": "68. Phan DV, Chan CL, Li AA, Chien TY, Nguyen VC. Liver cancer prediction in a\nviral hepatitis cohort: A deep learning approach. Int J Cancer (2020) 147(10):2871-8.\ndoi: 10.1002/ijc.33245\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 91.3,
+            "box": [
+                177.8,
+                544.9,
+                1211.9,
+                677.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_12/region_3_text.png",
+            "text": "69. Chaichana A, Frey EC, Teyateeti A, Rhoongsittichai K, Tocharoenchai C, Pusuwan\nP, et al. Automated segmentation of lung, liver, and liver tumors from Tc-99m MAA\nSPECT/CT images for y-90 radioembolization using convolutional neural networks. Med\nPhys (2021) 48(12):7877-90. doi: 10.1002/mp.15303\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 48.76,
+            "box": [
+                1268.6,
+                278.2,
+                2303.1,
+                693.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_12/region_4_text.png",
+            "text": "70. Tsujimura K, Asamoto M, Suzuki S, Hokaiwado N, Ogawa K, Shirai T. Prediction\nof carcinogenic potential by a toxicogenomic approach using rat hepatoma cells. Cancer\nSci (2006) 97(10):1002-10. doi: 10.1111/j.1349-7006.2006.00280.x\n\n71. Seo H, Huang C, Bassenne M, Xiao R, Xing L. Modified U-net (mU-net) with\nincorporation of object-dependent high level features for improved liver and liver-tumor\nsegmentation in CT images. IEEE Trans Med Imaging (2020) 39(5):1316-25. doi: 10.1109/\nTMI.2019.2948320\n\n72. Wang J, Lv P, Wang H, Shi C. SAR-U-Net: Squeeze-and-excitation block and\natrous spatial pyramid pooling based residual U-net for automatic liver segmentation in\ncomputed tomography. Comput Methods Programs BioMed (2021) 208:106268.\ndoi: 10.1016/j.cmpb.2021.106268\n"
+        }
+    ]
+}

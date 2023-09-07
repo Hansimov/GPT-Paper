@@ -1,0 +1,50 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3249,
+        "regions_num": 3,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 98.17,
+            "box": [
+                213.2,
+                354.0,
+                1225.4,
+                395.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_11/region_1_text.png",
+            "text": "Table 3 Summary of identified model-agnostic XAI studies in oncology\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.7,
+            "box": [
+                189.4,
+                400.1,
+                2289.2,
+                2769.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_11/region_2_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 85.29,
+            "box": [
+                214.4,
+                2780.0,
+                481.5,
+                2820.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_11/region_3_text.png",
+            "text": "Table 3 (continued)\n"
+        }
+    ]
+}

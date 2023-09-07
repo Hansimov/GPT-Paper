@@ -1,0 +1,181 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_31.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_31.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 13,
+        "page_idx": 31
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 82.8,
+            "box": [
+                301.8,
+                295.8,
+                2192.0,
+                776.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_01_text.png",
+            "text": "A machine learning approach in which algorithms are trained for a specific task (or set of tasks) by\nexposing a multilayered artificial neural network to (typically a large amount of) training data, without\nthe need for hand-crafted engineering of features to be extracted from the data. The resulting\nalgorithm has learned a hierarchical representation of the data that is subsequently used for tasks\nsuch as Classification, detection or segmentation. The term ‘deep’ refers to artificial neural networks\nbuilt using many layers, in other words a deep neural network.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 89.66,
+            "box": [
+                301.8,
+                884.5,
+                634.3,
+                944.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_02_title.png",
+            "text": "Digital pathology\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 81.74,
+            "box": [
+                301.5,
+                969.5,
+                2189.4,
+                1112.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_03_text.png",
+            "text": "The digitization of the traditional diagnostic process of analyzing cells and tissue with a microscope via\nwhole-slide scanners and computer screens.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 92.39,
+            "box": [
+                301.2,
+                1218.5,
+                791.6,
+                1278.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_04_title.png",
+            "text": "Computational pathology\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 95.9,
+            "box": [
+                298.8,
+                1306.7,
+                2129.3,
+                1363.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_05_text.png",
+            "text": "The computational analysis of digital images obtained through scanning slides of cells and tissues.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 90.39,
+            "box": [
+                301.4,
+                1470.7,
+                742.9,
+                1530.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_06_title.png",
+            "text": "Radiomics / pathomics\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 82.34,
+            "box": [
+                302.2,
+                1555.2,
+                2190.8,
+                1866.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_07_text.png",
+            "text": "Techniques to extract a (usually very large) set of features from radiological or histopathological digital\nimages, respectively, using computational algorithms of data analysis. These features are successively\nused to feed (usually supervised) prediction models targeting clinically relevant end-points, such as\nprognosis.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 90.43,
+            "box": [
+                302.3,
+                1976.7,
+                681.8,
+                2034.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_08_title.png",
+            "text": "End-to-end training\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 78.2,
+            "box": [
+                299.3,
+                2060.0,
+                2191.7,
+                2287.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_09_text.png",
+            "text": "In the context of machine learning models, possibly consisting of a pipeline with multiple steps, end-\nto-end training refers to the procedure of learning the optimal value of all parameters of a model\nsimultaneously rather than sequentially (i.e., one step at a time).\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 88.23,
+            "box": [
+                302.4,
+                2395.2,
+                679.7,
+                2453.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_10_title.png",
+            "text": "Whole-slide images\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 82.05,
+            "box": [
+                301.2,
+                2479.7,
+                2189.2,
+                2619.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_11_text.png",
+            "text": "Digital images obtained by digitizing complete histopathological glass slides using a high-resolution\nscanner.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 92.13,
+            "box": [
+                300.4,
+                2730.5,
+                894.8,
+                2789.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_12_title.png",
+            "text": "Convolutional neural networks\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 81.72,
+            "box": [
+                301.7,
+                2812.3,
+                2189.7,
+                3130.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_31/region_13_text.png",
+            "text": "Deep learning approach consisting of a series of convolutional layers to process data (usually bi-\ndimensional) from input to output. Each layer implements the convolution operation between the\ninput data and a set of filters (i.e., small matrices), whose numerical values are automatically learned\nin an end-to-end training fashion.\n"
+        }
+    ]
+}

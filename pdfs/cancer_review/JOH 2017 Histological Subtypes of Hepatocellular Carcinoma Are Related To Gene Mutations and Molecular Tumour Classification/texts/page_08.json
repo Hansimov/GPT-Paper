@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_08.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 3,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 98.62,
+            "box": [
+                384.9,
+                224.0,
+                2174.3,
+                835.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_08/region_1_text.png",
+            "text": "For 129 cases, we extracted data from our former whole-exome sequencing study and\nselected genes mutated or altered in at least 5% of the tumours (TERT promoter,\nCTNNB1 exon 3, TP53, ALB, ARID1A, AXIN1, APOB, NEF2L2, ARID2, TSC1/TSC2, ATM,\nCDKN2A, ACVR2A, RPS6KA3, FGF19) [16]. For additional cases, genomic DNA was\nextracted using a Promega Maxwell® Instrument and samples were further sequenced\nfor TERT promoter, CTNNB1, TP53, AXIN1, ALB, APOB, ARID1A, ARID2, NFE2L2, ATM,\nTSC1/TSC2 and RPS6KA3, using a MiSeq instrument (Illumina, San Diego, CA, USA)\n(Supplemental Material and Methods), or direct Sanger sequencing, as previously\ndescribed [15]. It has been formerly demonstrated that HCC display a relatively modest\ndegree of intra-tumour heterogeneity regarding driver genetic alterations [27-29], and\none frozen sample was available and analyzed for each case.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 86.2,
+            "box": [
+                385.2,
+                937.3,
+                787.5,
+                1000.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_08/region_2_title.png",
+            "text": "Statistical analysis\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 96.38,
+            "box": [
+                385.5,
+                1028.9,
+                2170.8,
+                1799.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_08/region_3_text.png",
+            "text": "Statistical analysis was performed using R software (3.2.2)..C€omparison between\nqualitative and quantitative data was performed using Chi-square,and Fisher exact tests\nand Mann-Whitney U and Kruskall-Wallis tests, respectively..Monte-Carlo method was\nused to adjust the P value for multiple tests. Patients»with curative (RO) resection\n(n=278) and features with more than 10% infrequency were included in survival\nanalysis. Variables associated with disease-specific»survival were identified using\nunivariate and multivariate Cox proportional hazards regression models (Wald test),\nusing the survival, rms and Publish packages. Prior tothe multivariate analysis, collinear\nvariables (BCLC B-C and macrovascular invasion; macrotrabecular histological pattern\nand macrotrabecular-massive subtype) were first tested in a bivariate analysis and the\nvariable with the highest OR was further included in the multivariate analysis. Kaplan-\nMeier plots were used to describe survival rates among all cases. All reported P values\nwere two-tailed and differences were considered significant when the P value was under\n0.05.\n"
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_15.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_15.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 5,
+        "page_idx": 15
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 75.89,
+            "box": [
+                302.8,
+                293.2,
+                2192.0,
+                526.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_15/region_1_text.png",
+            "text": "disability or sexual orientation” [131]. As it is not possible to recognize inequities in data collection a\npriori, the European Commission’s recommendation to continuously engage in discussions with all\nstakeholders is even more imperative [130].\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 92.22,
+            "box": [
+                301.0,
+                631.1,
+                520.8,
+                691.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_15/region_2_title.png",
+            "text": "Conclusion\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 84.28,
+            "box": [
+                301.5,
+                704.5,
+                2199.5,
+                1954.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_15/region_3_text.png",
+            "text": "Promising results of the application of Al to histopathological images have provoked a large number\nof research studies, now resulting in CPATH solutions that have comparable performance to\npathologists for several specific diagnostic tasks. In addition to the use of Al to conduct human expert\ndiagnostic tasks, we have only begun to scratch the surface with respect to the use of Al for discovery\nof prognostic features, prediction of therapy success or assessment of the relation between the\nmorphological phenotypes of disease and genotypes. Whereas many technical challenges have been\novercome, clinical usefulness has not been proven yet and several hurdles still have to be overcome.\nNext to the challenge of collecting sufficiently large sets of annotated WSI, prospective studies have\nto be conducted to show the true benefit of Al for histopathological diagnostics. Issues related to\nexplainability, ethics and regulation are also insufficiently studied and will require more attention in\nthe near future. Even though the field is not fully matured yet, we expect CPATH to play a dominant\nrole in the future of histopathology, making diagnostics more efficient and accurate, helping\npathologists meet the requirements of an increasing number of patients and the need for more\nextensive and accurate histopathological assessment to aid the increasing spectrum of treatment\noptions for many diseases.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 90.43,
+            "box": [
+                304.5,
+                2061.5,
+                690.3,
+                2117.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_15/region_4_title.png",
+            "text": "Acknowledgements\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 82.75,
+            "box": [
+                300.5,
+                2136.0,
+                2193.9,
+                2960.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_15/region_5_text.png",
+            "text": "The authors would like to thank Ms. Meyke Hermsen for providing Figure 1. Jeroen van der Laak\nacknowledges funding from the Knut and Alice Wallenberg foundation, Sweden and received funding\nfrom the Innovative Medicines Initiative 2 Joint Undertaking under grant agreement No 945358. This\nJoint Undertaking receives support from the European Union’s Horizon 2020 research and innovation\nprogram and EFPIA. Geert Litjens acknowledges funding from Dutch Cancer Society (KUN 2015-7970),\nand the Netherlands Organization for Scientific Research (NWO) (project number 016.186.152).\nFrancesco Ciompi acknowledges funding from the European Union's Horizon 2020 research and\ninnovation program under grant agreement No 825292 (ExaMode, htttp://www.examode.eu/); Dutch\nCancer Society (KWF) (project number 11917); and the Netherlands Organization for Scientific\nResearch (NWO) (project number 18388).\n"
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 7,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                200.4,
+                345.7,
+                1205.7,
+                1585.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_1_text.png",
+            "text": "While ultrasound is the primary modality used for treat-\ning the NAFLD, due to unavailability of the skilled sonogra-\nphers, especially in resource-scarce regions, the quality of\ndiagnosis is severely affected. To address this problem, DL\nmethods for classifying the fatty liver in ultrasound images\nwere used. The performance analysis of the proposed frame-\nwork shows that the NAFLD in ultrasound images can be\ndetected with an accuracy of 90.6%.°* Liver biopsy is pres-\nently the gold standard modality for the diagnosis of\nNAELD. To remove the intra- and inter-observer variability,\na transfer-based DL algorithm, AlexNet-CNN was developed\nusing liver biopsy images in mice and compared to conven-\ntional non-DL algorithms - ANN, multi-nomial logistic re-\ngressions (MLR), support vector machine (SVM) and\nrandom forest (RF). It was shown that AlexNet-CNN could\nautomatically score liver fibrosis stages with a level of accu-\nracy similar to conventional non-DL algorithms.”° A super-\nvised DL model with a convolutional neural network (CNN)\narchitecture using high discrimination capability of histo-\nlogical tissue alterations of NAFLD showed a classification\naccuracy of 95%. The classification capability of the new\nCNN model showed superior classification accuracy\ncompared with a pre-trained AlexNet model, a visual geom-\netry group (VGG)-16 deep architecture and a conventional\nmulti-layer perceptron (MLP).°*\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.53,
+            "box": [
+                202.3,
+                1615.3,
+                859.8,
+                1662.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_2_title.png",
+            "text": "E. Diagnosis of DILI, PSC and PBC\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                200.2,
+                1690.4,
+                1205.5,
+                3080.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_3_text.png",
+            "text": "Diagnostic dilemma exists for some hepatic conditions\nlike drug-induced liver injury (DILI), primary sclerosing\ncholangitis (PSC), primary biliary cirrhosis (PBC) even af-\nter thorough clinical and biochemical examinations.\nDILI is a condition with serious consequences, especially\nwith the rampant use of complementary and alternative\nmedicines (CAM). DILI can present with various clinico-\npathologic presentations like acute hepatitis, chronic hep-\natitis, granulomatous hepatitis, cholestatic hepatitis,\nsteatohepatitis, vascular disorders or tumours leading to\na lot of overlap in diagnosis. Hence AI tools*? with predic-\ntion models can help to predict the group of patients\nwhich can be predisposed to DILI and also can play an\nimportant role in diagnosis. Kristina et al°® demonstrated\na ML tool to detect PSC compatible cholangiographic im-\naging using 3D-MRCP images with high sensitivity. Eaton\net al’ gave a PSC Risk estimate tool (PREsTo) using 9\nbiochemical variables to predict the outcome in patients\nwith PSC, after excluding those with advanced PSC and\ncholangiocarcinoma. This ML tool using ‘Gradient Boosting’\ncan be an excellent non-invasive method for prediction of\ndecompensation, when compared to MELD score and\nMayo Risk Score. Similarly, a risk score for PBC*® was devel-\noped using ML. This unsupervised ML tool identified\nnovel subgroups of PBC patients and provided prognosis\nbased on serum albumin levels. It showed that UDCA\ninduced increase of S. Alb >1.2. Lower limit of normal is\nassociated with improved liver transplant-free survival.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.8,
+            "box": [
+                1277.8,
+                345.9,
+                2279.5,
+                443.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_4_title.png",
+            "text": "F. Prognosis of CLD, portal hypertension, oesophageal\nvarices and acute on chronic liver failure (ACLF)\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1277.1,
+                472.5,
+                2283.0,
+                1413.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_5_text.png",
+            "text": "Prediction of disease progression in CLD and portal hy-\npertension is necessary for planning further management\nand hence prognostication. Bleeding oesophageal varices\nare an important cause of mortality in CLD patients. AI\ntools can help in the management of CLD and prediction\nof bleeding from varices. Two radiomics signatures (rGEV and\nrHRV) were developed, in a multi-centre study, using non-\ncontrast-enhanced CT images. They act as a non-invasive\ncomplementary predictor in diagnosing gastroesophageal\nvarices (GEV) and predicting high-risk varices (HRV) in\ncompensated advanced CLD.°” Using laboratory parame-\nters and liver stiffness, ML model, Extreme-gradient boosting\n(XGBoost) improved the endoscopic stratification to pre-\ndict variceal bleeding in patients with compensated CLD\nwith oesophageal varices.“° A DL-based model perfor-\nmance for CHC patients using a random forest analysis\nshowed an excellent prediction of survival without a trans-\nplant, although less robust for predicting evolution to hep-\natoma at 12 and 36 months.*!\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1277.3,
+                1417.1,
+                2281.3,
+                1861.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_6_text.png",
+            "text": "An ANN model to predict the presence of oesophageal\nvarices in patients with CHB” was developed by Hong\net al with three variables (platelet count, portal vein diam-\neter and spleen width). An algorithmically developed for-\nmula, called the EVendo score, can predict oesophageal\nvarices (EVs) and Varices needing treatment (VNT) based\non readily available data in patients with cirrhosis. This\nscore could avoid unnecessary procedures, especially in pa-\ntients at low risk for VNT.*”\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1277.2,
+                1867.0,
+                2282.8,
+                3058.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_06/region_7_text.png",
+            "text": "An ML algorithm employing ultrasound shear wave\nelastography has been developed for colour analysis for\nCLD classification.“* A meta-analysis of Al-assisted tools\nusing non-invasive modalities like clinical parameters, ul-\ntrasonography, elastography, computerized tomography\n(CT) and magnetic resonance imaging (MRI) has shown\nthe promise in diagnosing CLD. Validations studies are\nwarranted before their applications in clinical practice.*°\nRecently, a DL-based AI tool named ‘AL-Cirrhosis-ECG\n(ACE) score’ was proposed by Ahn et al. This score is based\non cirrhosis-related ECG (Electrocardiogram) signals. This\nscore can differentiate ECGs from patients with or without\ncirrhosis and can be a useful low-cost tool in the care of pa-\ntients with cirrhosis.*° The VIRGIN Study*” done in China\npresented an analytical method to calculate a virtual Portal\nPressure Gradient (vPPG) based on CT angiography and\nDoppler ultrasound, hence avoiding the invasive HVPG\nmeasurement for portal hypertension. Musunuri B. et al\ninvestigated the role of the ANN, which functionally\nmimics biological neural systems, in predicting 90-day liver\ndisease-related mortality in ACLF patients. An accuracy of\n94.12% was noticed in predicting 30-day mortality and\n88.2% in predicting 90-day mortality, with an area under\nthe curve of 0.915 and 0.921, respectively. ANN plays a\n"
+        }
+    ]
+}

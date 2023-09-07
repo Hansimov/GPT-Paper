@@ -1,0 +1,38 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_17.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_17.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 2,
+        "page_idx": 17
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 51.45,
+            "box": [
+                380.3,
+                226.0,
+                2184.8,
+                2601.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_17/region_1_text.png",
+            "text": "[37] Fang JH, Zhou HC, Zhang C, Shang LR, Zhang L, Xu J, et al. A novel vascular pattern promotes\nmetastasis of hepatocellular carcinoma in an_ epithelial-mesenchymal transition-independent\nmanner. Hepatology 2015;62:452-465.\n\n[38] Gerald D, Chintharlapalli S, Augustin HG, Benjamin LE. Angiopoietin-2: an attractive target for\nimproved antiangiogenic tumor therapy. Cancer research 2013;73:1649-1657.\n\n[39] Rigamonti N, Kadioglu E, Keklikoglou 1, Wyser Rmili C, Leow CC, De Palma M. Role of\nangiopoietin-2 in adaptive tumor resistance to VEGF signaling blockade. Cell reports 2014;8:696-706.\n\n[40] Ando S, Shibahara J, Hayashi A, Fukayama M. beta-catenin alteration is rare in hepatocellular\ncarcinoma with steatohepatitic features: immunohistochemical and mutational study. Virchows\nArchiv : an international journal of pathology 2015.\n\n[41] Seok JY, Na DC, Woo HG, Roncalli M, Kwon SM, Yoo JE, et al. A fibrous stromal component in\nhepatocellular carcinoma reveals a cholangiocarcinoma-like gene expression trait and, epithelial-\nmesenchymal transition. Hepatology 2012;55:1776-1786.\n\n[42] Tan PS, Nakagawa S, Goossens N, Venkatesh A, Huang T, Ward SC, et al. Clinicopathological\nindices to predict hepatocellular carcinoma molecular classification. Liver international : official\njournal of the International Association for the Study of the Liver 2015.\n\nFigure legends\n\nFigure 1. (A) Gross, microscopic and immunohistochemical features associated with\nCTNNB1 mutations. (B) Gross appearance of aCTNNB1 mutated tumour: the tumour has\nan intact capsule and a green color due to,bile production. (C) Microscopic features of a\nCTNNB1 mutated HCC: microtrabecular and pseudoglandular architectural pattern with\nnumerous bile plugs within the, lumens of the pseudoglands (black arrows)\n(#CHC1715T). (D) Nuclear B-catenin staining (left panel, #CHC1715T) with strong GS\nexpression (right panel, #CHC1715T). (E) Gene expression profiling of CTNNB1 mutated\ntumours: maintenance of markers of hepatocellular differentiation and function, low cell\nproliferation, dysregulation in bile salts transporters expression with up-regulation of\ntransporters involved in canalicular bile salts efflux and down-regulation of transporters\nresponsible for bile salts efflux into blood flow, low IL6/JAK/STAT pathway activation\nand upregulation of Wnt/B-catenin pathway targets (CTNNB1 mutated cases n=35;\nCTNNB1 non-mutated cases, n=149). (F) Schematic representation of a CTNNB1 mutated\nneoplastic cell: the dysregulation of bile salts transporters (upregulation=red, down\nregulation= green) leads to bile salts uptake from the blood flow and excretion into the\ncanaliculi _(pseudogland lumen). HES=Hematein-Eosin-Saffron, Expres= expression,\nT=tumour, NT=non-tumour. Comparison between qualitative and quantitative data was\nperformed using Chi-square and Fisher exact tests and Mann-Whitney U and Kruskall-\nWallis tests, respectively. Monte-Carlo method was used to adjust the P value for\nmultiple tests.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 98.61,
+            "box": [
+                388.1,
+                2654.6,
+                2171.4,
+                2988.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_17/region_2_text.png",
+            "text": "Figure 2. (A) Gross, microscopic and immunohistochemical features associated with\nTP53 mutations. (B) Micrographs of compact (left panel) and macrotrabecular (right\npanel) architectural patterns. (C) Micrographs of pleomorphic (black arrow) and\nmultinucleated (white arrow) cells (left panel, #CHC1754T), and sarcomatous changes\ncharacterized by elongated neoplastic cells embedded in a fibrous stroma (black arrow,\nright panel, #CHC1182T). (D) RT-PCR expriments showed increased cell profileration\n"
+        }
+    ]
+}

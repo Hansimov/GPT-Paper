@@ -1,0 +1,141 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 10,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.31,
+            "box": [
+                488.3,
+                197.9,
+                1991.3,
+                1709.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_06/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.4,
+            "box": [
+                190.4,
+                1763.9,
+                2253.0,
+                1855.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_06/region_02_text.png",
+            "text": "FIGURE 2 _ Examples of image tiles. Image tiles 100 x 100 ym in size from colorectal adenocarinoma (A), pancreatic adenocarcinoma\n(B), benign bile duct lesions (C), necrosis (D), hepatic cells (E), bile duct (F) and connective tissue (G) are displayed.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                189.7,
+                1921.0,
+                1212.9,
+                2296.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_06/region_03_text.png",
+            "text": "package tensorflow_addons) and the macro average of the\narea under the receiver operating characteristics curve\n(AUC_MA) (cf. ‘keras.metrics. AUC’ in python package\ntensorflow) to indicate overall prediction accuracy. Each\nmodel was proposed with different input image sizes and\nwe resized our tiles to the particular size a model required\nvia the TensorFlow function tf.image.resize.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.63,
+            "box": [
+                189.8,
+                2299.0,
+                1212.4,
+                2510.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_06/region_04_text.png",
+            "text": "The baseline model (EfficientNetV2BO) was trained\nwith a learning rate of .01 and .001, an input size of\n260 X 260 px, a dropout of .2 and M = 10 for random\naugmentation.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.68,
+            "box": [
+                189.8,
+                2514.0,
+                1213.6,
+                2777.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_06/region_05_text.png",
+            "text": "Next, we scaled up, that is, input size, network depth\nand width. In particular, we used the S instead of the BO\narchitecture (EfficientNetV2S). These models were trained\nwith learning rates .01, .001 and .0001 and an input size of\n384 X 384 px.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 98.91,
+            "box": [
+                189.5,
+                2785.4,
+                1212.1,
+                2942.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_06/region_06_text.png",
+            "text": "Last, the ResNetRS50 architecture was trained with\nlearning rates .01, .001 and .0001, each with an input size\nof 224 x 224 px.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.74,
+            "box": [
+                189.3,
+                2946.2,
+                1211.1,
+                3050.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_06/region_07_text.png",
+            "text": "We compared the different configurations (application\nand learning rates) by plotting the respective best epochs\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1278.9,
+                1920.5,
+                2300.5,
+                2187.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_06/region_08_text.png",
+            "text": "for each trained model. In particular, for each model we\nplotted the five best epochs according to the validation\nAUC_MA and the five best epochs according to MCC.\nMoreover, the training times were compared between the\nthree architectures as a surrogate for the inference time.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1278.1,
+                2193.0,
+                2301.2,
+                2889.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_06/region_09_text.png",
+            "text": "To evaluate the performance of the models, confusion\nmatrices for image tiles and patients were created and\ncompared for validation and test data. Each confusion\nmatrix shows the number of tiles in respective actual and\npredicted class, along with the percentage of actual tiles\naffected. That is, the percentages in a row add up to 100%.\nFor case-based results, majority prediction of all tiles of a\nspecific class was calculated from that case. That is, a case\nis composed of all tiles of a specific class (by annotation of\na pathologist) from a specific whole slide. We excluded the\nEfficientNetV2S architecture form this evaluation, since its\nperformance was not significantly better compared to the\nother models, but training times were much higher.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                1278.7,
+                2893.0,
+                2301.2,
+                3050.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_06/region_10_text.png",
+            "text": "To visualize the similarity of the different classes, the\nuniform manifold approximation and projection (UMAP)\nwas plotted of the activation layer just before the top dense\n"
+        }
+    ]
+}

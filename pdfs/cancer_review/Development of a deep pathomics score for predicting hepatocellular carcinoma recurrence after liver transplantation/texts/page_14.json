@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 4,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.72,
+            "box": [
+                212.5,
+                232.4,
+                1216.1,
+                360.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_14/region_1_text.png",
+            "text": "permitted by statutory regulation or exceeds the permitted use, you will\nneed to obtain permission directly from the copyright holder. To view a\ncopy of this licence, visit http://creativecommons.org/licenses/by/4.0/.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 98.93,
+            "box": [
+                212.6,
+                469.1,
+                458.9,
+                531.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_14/region_2_title.png",
+            "text": "References\n"
+        },
+        {
+            "idx": 3,
+            "thing": "list",
+            "score": 99.3,
+            "box": [
+                217.8,
+                579.7,
+                1216.9,
+                2919.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_14/region_3_list.png",
+            "text": "1. Bray F, Ferlay J, Soerjomataram I, Siegel RL, Torre LA, Jemal\nA. Global cancer statistics 2018: GLOBOCAN estimates of inci-\ndence and mortality worldwide for 36 cancers in 185 countries.\nCA Cancer J Clin 2018;68:394-424\n\n2. Halazun KJ, Patzer RE, Rana AA, Verna EC, Griesemer AD,\nParsons RF, et al. Standing the test of time: outcomes of a dec-\nade of prioritizing patients with hepatocellular carcinoma,\nresults of the UNOS natural geographic experiment. Hepatology\n2014;60:1957-1962\n\n3. de Villa V, Lo CM. Liver transplantation for hepatocellular carci-\nnoma in Asia. Oncologist 2007; 12:1321-1331\n\n4. Kardashian A, Florman SS, Haydel B, Ruiz RM, Klintmalm GB,\nLee DD, et al. Liver transplantation outcomes in a U.S. multi-\ncenter cohort of 789 patients with hepatocellular carcinoma pre-\nsenting beyond Milan criteria. Hepatology 2020;72:2014—2028\n\n5. Pinna AD, Yang T, Mazzaferro V, De Carlis L, Zhou J, Roayaie\nS, et al. Liver transplantation and hepatic resection can achieve\ncure for hepatocellular carcinoma. Ann Surg 2018;268:868-875\n\n6. Agopian VG, Harlander-Locke MP, Ruiz RM, Klintmalm GB,\nSenguttuvan S, Florman SS, et al. Impact of pretransplant\nbridging locoregional therapy for patients with hepatocellular\ncarcinoma within Milan criteria undergoing liver transplanta-\ntion: analysis of 3601 patients from the US Multicenter HCC\nTransplant Consortium. Ann Surg 2017;266:525-535\n\n7. Verna EC, Patel YA, Aggarwal A, Desai AP, Frenette C, Pil-\nlai AA, et al. Liver transplantation for hepatocellular car-\ncinoma: management after the transplant. Am J Transpl\n2020;20:333-347\n\n8. Bodzin AS, Lunsford KE, Markovic D, Harlander-Locke MP,\nBusuttil RW, Agopian VG. Predicting mortality in patients\ndeveloping recurrent hepatocellular carcinoma after liver trans-\nplantation: impact of treatment modality and recurrence char-\nacteristics. Ann Surg 2017;266:118-125\n\n9. Sapisochin G, Goldaracena N, Astete S, Laurence JM, Davidson\nD, Rafael E, et al. Benefit of treating hepatocellular carcinoma\nrecurrence after liver transplantation and analysis of prognostic\nfactors for survival in a large Euro-American series. Ann Surg\nOncol 2015;22:2286-2294\n\n10. Sapisochin G, Bruix J. Liver transplantation for hepatocellular\ncarcinoma: outcomes and novel surgical approaches. Nat Rev\nGastroenterol Hepatol 2017; 14:203-217\n\n11. Notarpaolo A, Layese R, Magistri P, Gambato M, Colledan M,\nMagini G, et al. Validation of the AFP model as a predictor\nof HCC recurrence in patients with viral hepatitis-related cir-\nrhosis who had received a liver transplant for HCC. J Hepatol\n2017;66:552-559\n\n12. Halazun KJ, Najjar M, Abdelmessih RM, Samstein B, Griese-\nmer AD, Guarrera JV, et al. Recurrence after liver transplanta-\ntion for hepatocellular carcinoma: a new MORAL to the story.\nAnn Surg 2017;265:557-564\n\n13. Mehta N, Heimbach J, Harnois DM, Sapisochin G, Dodge JL,\nLee D, et al. Validation of a risk estimation of tumor recurrence\nafter transplant (RETREAT) score for hepatocellular carcinoma\nrecurrence after liver transplant. JAMA Oncol 2017;3:493-500\n\n14. Zhang Q, Lou Y, Yang J, Wang J, Feng J, Zhao Y, et al. Inte-\ngrated multiomic analysis reveals comprehensive tumour\n"
+        },
+        {
+            "idx": 4,
+            "thing": "list",
+            "score": 98.68,
+            "box": [
+                1274.8,
+                232.8,
+                2278.8,
+                2991.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_14/region_4_list.png",
+            "text": "heterogeneity and novel immunophenotypic classification in\nhepatocellular carcinomas. Gut 2019;68:2019-2031\n\n15. Sun Y, Wu L, Zhong Y, Zhou K, Hou Y, Wang Z, et al. Single-\ncell landscape of the ecosystem in early-relapse hepatocellular\ncarcinoma. Cell 2021;184(404—421): e416\n\n16. Calderaro J, Petitprez F, Becht E, Laurent A, Hirsch TZ, Rous-\nseau B, et al. Intra-tumoral tertiary lymphoid structures are\nassociated with a low risk of early recurrence of hepatocellular\ncarcinoma. J Hepatol 2019;70:58-65\n\n17. Tian MX, Liu WR, Wang H, Zhou YF, Jin L, Jiang XF, et al.\nTissue-infiltrating lymphocytes signature predicts survival in\npatients with early/intermediate stage hepatocellular carcinoma.\nBMC Med 2019;17:106\n\n18. Bhinder B, Gilvary C, Madhukar NS, Elemento O. Artificial\nintelligence in cancer research and precision medicine. Cancer\nDiscov 2021;11:900-915\n\n19. Calderaro J, Kather JN. Artificial intelligence-based pathol-\nogy for gastrointestinal and hepatobiliary cancers. Gut\n2021;70:1183-1193\n\n20. Niazi MKK, Parwani AV, Gurcan MN. Digital pathology and\nartificial intelligence. Lancet Oncol 2019;20:e253-e261\n\n21. Bera K, Schalper KA, Rimm DL, Velcheti V, Madabhushi\nA. Artificial intelligence in digital pathology—new tools\nfor diagnosis and precision oncology. Nat Rev Clin Oncol\n2019;16:703-715\n\n22. Shi JY, Wang X, Ding GY, Dong Z, Han J, Guan Z, et al.\nExploring prognostic indicators in the pathological images\nof hepatocellular carcinoma based on deep learning. Gut\n2021;70:951-961\n\n23. Saillard C, Schmauch B, Laifa O, Moarii M, Toldo S, Zaslavs-\nkiy M, et al. Predicting survival after hepatocellular carcinoma\nresection using deep learning on histological slides. Hepatology\n2020;72:2000-2013\n\n24. Mazzaferro V, Sposito C, Zhou J, Pinna AD, De Carlis L, Fan\nJ, et al. Metroticket 2.0 model for analysis of competing risks\nof death after liver transplantation for hepatocellular carcinoma.\nGastroenterology 2018;154:128-139\n\n25. He KM, Zhang XY, Ren SQ, Sun J. Deep residual learning for\nimage recognition. Ieee Conf Comput Vis Pattern Recogn (Cvpr)\n2016;2016:770-778\n\n26. Hu J, Shen L, Albanie S, Sun G, Wu E. Squeeze-and-\nexcitation networks. IEEE Trans Pattern Anal Mach Intell\n2020;42:2011-2023\n\n27. Otsu N. Threshold selection method from gray-level histograms.\nIEEE Trans Syst Man Cybern 1979;9:62-66\n\n28. Katzman JL, Shaham U, Cloninger A, Bates J, Jiang TT, Kluger\nY. DeepSurv: personalized treatment recommender system using\na Cox proportional hazards deep neural network. Bmc Med Res\nMethodol 2018;18:1\n\n29. Ding GY, Ma JQ, Yun JP, Chen X, Ling Y, Zhang S, et al. Dis-\ntribution and density of tertiary lymphoid structures predict\nclinical outcome in intrahepatic cholangiocarcinoma. J Hepatol\n2022;76:608-618\n\n30. Xi J, Yin J, Liang J, Zhan C, Jiang W, Lin Z, et al. Prognos-\ntic impact of radiological consolidation tumor ratio in clinical\nstage IA pulmonary ground glass opacities. Front Oncol 2021511:\n616149\n\n31. Uzhachenko RV, Shanker A. CD8(+) T lymphocyte and NK cell\nnetwork: circuitry in the cytotoxic domain of immunity. Front\nImmunol 2019;10:1906\n\n32. Lin D, Lei L, Liu Y, Zhang Y, Hu B, Bao G, et al. Membrane\nILlalpha Inhibits the development of hepatocellular carci-\nnoma via promoting T- and NK-cell activation. Cancer Res\n2016;76:3179-3188\n\n33. Meylan M, Petitprez F, Becht E, Bougouin A, Pupier G, Calvez\nA, et al. Tertiary lymphoid structures generate and propagate\n"
+        }
+    ]
+}

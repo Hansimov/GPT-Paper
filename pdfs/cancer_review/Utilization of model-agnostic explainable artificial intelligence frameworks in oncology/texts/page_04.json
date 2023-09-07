@@ -1,0 +1,127 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3249,
+        "regions_num": 9,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.35,
+            "box": [
+                213.1,
+                352.2,
+                753.7,
+                396.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_04/region_1_text.png",
+            "text": "Table 2 The search strategy summary\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 98.99,
+            "box": [
+                189.3,
+                402.2,
+                2290.6,
+                929.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_04/region_2_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 95.72,
+            "box": [
+                209.3,
+                936.6,
+                2279.2,
+                1028.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_04/region_3_text.png",
+            "text": "XAI, explainable artificial intelligence; EAI, explainable artificial intelligence; SHAP, SHapley Additive exPlanations; LIME, Local\nInterpretable Model-agnostic Explanations.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "figure",
+            "score": 99.49,
+            "box": [
+                346.4,
+                1141.8,
+                2146.5,
+                1728.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_04/region_4_figure.png"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.06,
+            "box": [
+                189.1,
+                1757.2,
+                2300.7,
+                1915.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_04/region_5_text.png",
+            "text": "Figure 2 SHAP plots visualizing non-linear interactions between prognostic features in prostate cancer, including interaction between\nGleason score and PSA (A), and PPCs and Gleason score (B). [Credit: ref. (15)]. SHAP, SHapley Additive exPlanations; PSA, prostate\nspecific antigen; PPC, percent positive core.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.82,
+            "box": [
+                188.6,
+                2017.0,
+                1204.7,
+                2742.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_04/region_6_text.png",
+            "text": "PPC is largely irrelevant if Gleason score is 7 or less.\nAdditionally, when Gleason score is 8 or higher, a PPC\nthreshold of 0.7 best illustrates differences in outcomes,\nas opposed to the threshold of 0.5 that is used in modern\npractice to differentiate between favorable and unfavorable\nintermediate risk prostate cancer. The plots are also\nable to illustrate phenomena such as patients with high\nGleason score and exceedingly low PSA counterintuitively\nhaving inferior survival compared to patients with more\nintermediate PSA levels. These example plots can be\nfound in Figure 2. In these interaction plots, the combined\neffect of the two variables are plotted, with a value of zero\nrepresenting an overall neutral effect.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                189.1,
+                2741.6,
+                1204.2,
+                2964.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_04/region_7_text.png",
+            "text": "Bertsimas et a/. also used XAI to visualize nonlinear\nrelationships, thereby identifying prognostic thresholds.\nThe authors used an XGB model and the SHAP framework\nto explore the impact of lymph node ratio on survival\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                1287.2,
+                2019.3,
+                2302.6,
+                2909.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_04/region_8_text.png",
+            "text": "compared to lymph node count in pancreatic cancer, which\nis used in the current American Joint Committee on Cancer\n(AJCC) staging system (16). Their model using lymph node\nratio outperformed the AJCC schema at predicting 1-year\noverall survival with an area under the curve (AUC) of\n0.638 vs. 0.586 (though not validated via DeLong’s test or\nconfidence intervals). Using the SHAP dependence plots,\nthe authors, via inspection, identified thresholds for lymph\nnode ratio and tumor size. The authors’ identification of\nrelevant lymph node ratio thresholds was feasible by using\ngraphical interpretation of dependence plots generated\nby the SHAP framework, and given the interaction is\nnonlinear, identification of thresholds with linear methods\nsuch as logistic regression or Cox regression would have\nrequired some trial and error and would not have been as\nprecise.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 98.58,
+            "box": [
+                1341.3,
+                2908.8,
+                2300.9,
+                2966.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_04/region_9_text.png",
+            "text": "The aforementioned studies primarily examined XAI\n"
+        }
+    ]
+}

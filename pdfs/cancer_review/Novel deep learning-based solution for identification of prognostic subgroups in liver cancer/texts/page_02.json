@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 6,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 84.95,
+            "box": [
+                516.5,
+                390.5,
+                1868.9,
+                487.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_02/region_1_text.png",
+            "text": "aetiology. Moreover, the gene features identified may have clinical applications as\ntherapeutic targets.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 98.04,
+            "box": [
+                515.4,
+                506.8,
+                1785.3,
+                606.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_02/region_2_text.png",
+            "text": "Keywords: Hepatocellular carcinoma, Deep learning, Clustering, Prognostic\nsubgroups, Autoencoders, Survival analysis, Liver cancer\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.1,
+            "box": [
+                490.0,
+                666.2,
+                723.7,
+                717.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_02/region_3_title.png",
+            "text": "Background\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                490.6,
+                728.3,
+                1997.2,
+                1368.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_02/region_4_text.png",
+            "text": "Hepatocellular carcinoma (HCC) contributes to around 90% of primary liver cancers [1]\nand is associated with cirrhosis linked to hepatitis B and C infection [2]. In the US, it\nis one of the fastest growing causes of death from cancer [3]. Thus, the expansion of\nknowledge on HCC disease aetiology is important. Identifying patient subgroups that\nstratify by survival due to biological differences will be a step forward towards this goal.\nThis information could in future enable precision medicine whereby patients, when pro-\nfiled using omics technologies, are stratified into subgroups and have their treatments\ntailored accordingly. This approach to patient management could improve overall sur-\nvival in HCC. Moreover, the biological information gained through the identification of\nprognostic subgroups could facilitate the discovery of new biomarkers and targets for\ntherapies.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                490.8,
+                1377.5,
+                1996.7,
+                2252.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_02/region_5_text.png",
+            "text": "Availability of omics data for diseases, including cancers and HCC, is growing expo-\nnentially. However, the high dimensionality of this data can make identifying biologically\nrelevant patterns extremely challenging. This scenario necessitates the development of\nnew analytical solutions that harness the power of artificial intelligence (AI) to reveal\nnew information. Deep learning has been explored for patient subgroup identification\nin different cancers using high-dimensional multi-omics data [4, 5]. Chaudhary et al.\napplied deep learning in the area of HCC [6] to identify significantly different survival\nsubgroups using autoencoders. Autoencoders are feedforward neural networks which\ncan be used to learn a new representation of data, typically for dimensionality reduc-\ntion. They encode their input into a latent space and then decode this latent representa-\ntion as their output. The latent space can be used for further analysis, such as clustering\npatients into groups and identifying key features. Autoencoders have proven popular in\nbioinformatics as they can integrate multiple omics and data types [5, 6]. Autoencoder\ntransformation can often aggregate genes by pathway, which is useful for biological\ninterpretation and revealing the underlying patterns [7].\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                490.9,
+                2259.8,
+                1996.7,
+                3018.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_02/region_6_text.png",
+            "text": "Training an Artificial Neural Network (ANN), such as an autoencoder, is typically an\niterative process which uses an objective function, also known as a loss function. The\nloss function comprises of a mathematical formula that is designed for a specific task\nthat we are trying to train our model for (e.g. clustering). The loss function is used to\nassess how well the network is performing and to guide the network updates for the\nnext iteration to help arrive at the optimum solution for the task at hand. For an autoen-\ncoder, where the goal is reconstruction of the data (i.e. dimensionality reduction), the\nloss function is used to evaluate how well the original (input) data can be retrieved from\nthe learnt (reduced) data representation (referred to as bottleneck). However, the effec-\ntiveness of an autoencoder can be measured in a way more suited to the problem space.\nIf the latent space an autoencoder produces is used to group patients in a survival sensi-\ntive way and identify features of interest, then using an objective function that incen-\ntivises a latent space with survival and clustering relevance is important. For an ANN\n"
+        }
+    ]
+}

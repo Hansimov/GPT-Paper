@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages/page_12.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages_ordered/page_12.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 12
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.74,
+            "box": [
+                213.1,
+                231.0,
+                1213.1,
+                321.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_12/region_1_text.png",
+            "text": "Code availability The U-net or MobileNet V2 neural networks are\navailable from the corresponding author on request.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                212.5,
+                388.0,
+                1214.2,
+                892.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_12/region_2_text.png",
+            "text": "Open Access This article is licensed under a Creative Commons Attri-\nbution 4.0 International License, which permits use, sharing, adapta-\ntion, distribution and reproduction in any medium or format, as long\nas you give appropriate credit to the original author(s) and the source,\nprovide a link to the Creative Commons licence, and indicate if changes\nwere made. The images or other third party material in this article are\nincluded in the article's Creative Commons licence, unless indicated\notherwise in a credit line to the material. If material is not included in\nthe article's Creative Commons licence and your intended use is not\npermitted by statutory regulation or exceeds the permitted use, you will\nneed to obtain permission directly from the copyright holder. To view a\ncopy of this licence, visit http://creativecommons.org/licenses/by/4.0/.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.26,
+            "box": [
+                212.4,
+                988.7,
+                458.4,
+                1049.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_12/region_3_title.png",
+            "text": "References\n"
+        },
+        {
+            "idx": 4,
+            "thing": "list",
+            "score": 99.5,
+            "box": [
+                217.1,
+                1096.5,
+                1214.5,
+                2935.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_12/region_4_list.png",
+            "text": "1. Bray F, Ferlay J, Soerjomataram I, Siegel RL, Torre LA, Jemal\nA. Global cancer statistics 2018: GLOBOCAN estimates of\nincidence and mortality worldwide for 36 cancers in 185 coun-\ntries. CA Cancer J Clin. 2018;68(6):394—-424\n\n2. Ferlay J, Colombet M, Soerjomataram I, Mathers C, Parkin DM,\nPifieros M, et al. Estimating the global cancer incidence and\nmortality in 2018: GLOBOCAN sources and methods. Int J\nCancer. 2019;144(8):1941-1953\n\n3. Omata M, Cheng AL, Kokudo N, Kudo M, Lee JM, Jia J,\net al. Asia-Pacific clinical practice guidelines on the manage-\nment of hepatocellular carcinoma: a 2017 update. Hepatol Int.\n2017;11(4):317-370\n\n4. Kudo M. Systemic therapy for hepatocellular carcinoma: 2017\nupdate. Oncology. 2017;93(Suppl 1):135-146\n\n5. Llovet JM, Zucman-Rossi J, Pikarsky E, Sangro B, Schwartz\nM, Sherman M, et al. Hepatocellular carcinoma. Nat Rev Dis\nPrimers. 2016;2:16018\n\n6. Llovet JM, Montal R, Villanueva A. Randomized trials and end-\npoints in advanced HCC: role of PFS as a surrogate of survival.\nJ Hepatol. 2019;70(6): 1262-1277\n\n7. Fujiwara N, Friedman SL, Goossens N, Hoshida Y. Risk factors\nand prevention of hepatocellular carcinoma in the era of preci-\nsion medicine. J Hepatol. 2018;68(3):526—-549\n\n8. D’Amico F, Schwartz M, Vitale A, Tabrizian P, Roayaie S,\nThung S, et al. Predicting recurrence after liver transplantation\nin patients with hepatocellular carcinoma exceeding the up-to-\nseven criteria. Liver Transpl. 2009; 15(10):1278—1287\n\n9. Ling Q, Liu J, Zhuo J, Zhuang R, Huang H, He X, et al. Devel-\nopment of models to predict early post-transplant recurrence\nof hepatocellular carcinoma that also integrate the quality and\ncharacteristics of the liver graft: a national registry study in\nChina. Surgery. 2018. https://doi.org/10.1016/j.surg.2018.01.\n022\n\n10. Agopian VG, Harlander-Locke M, Zarrinpar A, Kaldas FM,\nFarmer DG, Yersiz H, et al. A novel prognostic nomogram accu-\nrately predicts hepatocellular carcinoma recurrence after liver\ntransplantation: analysis of 865 consecutive liver transplant recipi-\nents. J Am Coll Surg. 2015;220(4):416—427\n\n11. Mehta N, Heimbach J, Harnois DM, Sapisochin G, Dodge JL, Lee\nD, et al. Validation of a risk estimation of tumor recurrence after\ntransplant (RETREAT) score for hepatocellular carcinoma recur-\nrence after liver transplant. JAMA Oncol. 2017;3(4):493-500\n\n12. Mazzaferro V, Sposito C, Zhou J, Pinna AD, De Carlis L, Fan\nJ, et al. Metroticket 2.0 model for analysis of competing risks\n"
+        },
+        {
+            "idx": 5,
+            "thing": "list",
+            "score": 98.91,
+            "box": [
+                1275.4,
+                226.8,
+                2278.2,
+                2906.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_12/region_5_list.png",
+            "text": "of death after liver transplantation for hepatocellular carcinoma.\nGastroenterology. 2018;154(1):128-139\n\n13. Elhendawy M, Abdul-Baki EA, Abd-Elsalam S, Hagras MM,\nZidan AA, Abdel-Naby AY, et al. MicroRNA signature in hepa-\ntocellular carcinoma patients: identification of potential markers.\nMol Biol Rep. 2020;47(7):4945-4953\n\n14. Zhang Q, Sun L, Zhang Q, Zhang W, Tian W, Liu M, et al.\nConstruction of a disease-specific IncRNA-miRNA-mRNA\nregulatory network reveals potential regulatory axes and prog-\nnostic biomarkers for hepatocellular carcinoma. Cancer Med.\n2020;9(24):92 19-9235\n\n15. El-Gebaly F, Abou-Saif S, Elkadeem M, Helmy A, Abd-Elsalam S,\nYousef M, et al. Study of serum soluble programmed death ligand\n1 as a prognostic factor in hepatocellular carcinoma in egyptian\npatients. Curr Cancer Drug Targets. 2019;19(11):896-905\n\n16. Wang S, Zhang JH, Wang H, Yang L, Hong S, Yu B, et al. A novel\nmultidimensional signature predicts prognosis in hepatocellular\ncarcinoma patients. J Cell Physiol. 2019;234(7):11610-11619\n\n17. Skrede OJ, De Raedt S, Kleppe A, Hveem TS, Liestgl K,\nMaddison J, et al. Deep learning for prediction of colorec-\ntal cancer outcome: a discovery and validation study. Lancet.\n2020;395(10221):350-360\n\n18. Chen CL, Chen CC, Yu WH, Chen SH, Chang YC, Hsu TI, et al.\nAn annotation-free whole-slide training approach to pathological\nclassification of lung cancer types using deep learning. Nat Com-\nmun. 2021;12(1):1193\n\n19. Ehteshami Bejnordi B, Veta M, Johannes van Diest P, van Gin-\nneken B, Karssemeijer N, Litjens G, et al. Diagnostic assessment\nof deep learning algorithms for detection of lymph node metasta-\nses in women with breast cancer. JAMA. 2017;318(22):2199-2210\n\n20. Coudray N, Ocampo PS, Sakellaropoulos T, Narula N, Snuderl M,\nFenyo D, et al. Classification and mutation prediction from non-\nsmall cell lung cancer histopathology images using deep learning.\nNat Med. 2018;24(10):1559-1567\n\n21. Kather JN, Krisam J, Charoentong P, Luedde T, Herpel E, Weis\nCA, et al. Predicting survival from colorectal cancer histology\nslides using deep learning: a retrospective multicenter study. PLoS\nMed. 2019;16(1): €1002730\n\n22. Saillard C, Schmauch B, Laifa O, Moarii M, Toldo S, Zaslavs-\nkiy M, et al. Predicting survival after hepatocellular carcinoma\nresection using deep-learning on histological slides. J Hepatology.\n2020. https://doi.org/10.1016/S0168-8278(20)31254-X\n\n23. Lu C, Koyuncu C, Corredor G, Prasanna P, Leo P, Wang X,\net al. Feature-driven local cell graph (FLocK): New computa-\ntional pathology-based descriptors for prognosis of lung cancer\nand HPV status of oropharyngeal cancers. Med Image Anal.\n2020;68:101903\n\n24. Ji MY, Yuan L, Jiang XD, Zeng Z, Zhan N, Huang PX, et al.\nNuclear shape, architecture and orientation features from H&E\nimages are able to predict recurrence in node-negative gastric\nadenocarcinoma. J Transl Med. 2019;17(1):92\n\n25. Ronneberger O, Fischer P, Brox T. U-net: Convolutional networks\nfor biomedical image segmentation. In Navab N, Hornegger J,\nWells WM, Frangi AF, editors., International conference on medi-\ncal image computing and computer-assisted intervention. Cham:\nSpringer; 2015. 234-241\n\n26. Corredor G, Wang X, Zhou Y, Lu C, Fu P, Syrigos K, et al. Spatial\narchitecture and arrangement of tumor-infiltrating lymphocytes for\npredicting likelihood of recurrence in early-stage non-small cell\nlung cancer. Clin Cancer Res. 2019;25(5):1526—-1534\n\n27. Kather JN, Pearson AT, Halama N, Jager D, Krause J, Loosen SH,\net al. Deep learning can predict microsatellite instability directly\nfrom histology in gastrointestinal cancer. Nat Med. 2019. https://\ndoi.org/10.1038/s41591-019-0462-y\n"
+        }
+    ]
+}

@@ -1,0 +1,166 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 12,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 98.87,
+            "box": [
+                175.6,
+                285.9,
+                2301.5,
+                982.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 42.1,
+            "box": [
+                224.2,
+                1008.8,
+                1669.2,
+                1082.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_02_text.png",
+            "text": "FIGURE 2\nGlobal trend of publications and citations on artificial intelligence research in liver cancer from 2003 to 2022.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.62,
+            "box": [
+                177.9,
+                1172.6,
+                1221.8,
+                1324.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_03_text.png",
+            "text": "shows the TLS between institutions, and the top 3 TLSs were\nassociated with Sun Yat Sen University (TLS = 187), Zhejiang\nUniversity (TLS = 173), and the Mayo Clinic (TLS = 124).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.13,
+            "box": [
+                178.6,
+                1419.7,
+                1112.8,
+                1486.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_04_title.png",
+            "text": "Analysis of authors and co-cited authors\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                178.2,
+                1537.3,
+                1221.5,
+                2000.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_05_text.png",
+            "text": "A total of 9916 authors and 37290 co-cited authors were included in\nthe study. Table 3 shows the top 10 most productive authors, including 4\nChinese, 3 American, 2 Singaporean, and 1 Italian author. Jasjit S. Suri,\nLuca Saba, and Udyavara Rajendra Acharya were the top 3 authors, with\n18, 17, and 15 articles, respectively. VOSviewer was also used to visualize\nthe map of co-authorship of authors and co-citations (Figure 5). There\nwere 78 authors with more than 45 citations, among which the top 3\nTLSs were associated with U.R. Acharya (TLS = 2274), L. Saba (TLS =\n1299), and O. Ronneberger (TLS = 1102).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 98.92,
+            "box": [
+                179.3,
+                2077.6,
+                712.0,
+                2138.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_06_title.png",
+            "text": "Analysis of top journals\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                178.4,
+                2191.5,
+                1220.7,
+                2344.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_07_text.png",
+            "text": "All related studies have been published in 585 journals. Table 4\nshows the top 10 most productive journals, including their paper\ncount, impact factor (IF), Journal Citation Ranking (JCR), H-index,\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.81,
+            "box": [
+                1269.0,
+                1170.8,
+                2314.0,
+                2001.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_08_text.png",
+            "text": "and total count. The top 3 journals were Frontiers in Oncology (50,\n2.90%), European Radiology (45, 2.61%), and Scientific Reports (41,\n2.38%). Of the top 10 journals, there are 4 comprehensive medical\njournals (Frontiers in Oncology, Scientific Reports, PLoS One,\nInternational Journal of Computer Assisted Radiology and Surgery),\n1 hepatobiliary professional journal (World Journal of\nGastroenterology), 1 medical imaging journal (European Radiology),\nand 2 engineering journals (Medical Physics, IEEE Access). Forty\npercent of journals had a JCR of Q1. Figure 6 shows the dual map of\njournals and the relationship between citing journals and cited\njournals. There were mainly four citation paths, and the citing\npapers were mainly concentrated in three fields: (1) molecular,\nbiology, and immunology; (2) medicine, medical, clinical; and (3)\nneurology, sports, ophthalmology. The cited papers were mainly\nlocated in 3 fields: (1) molecular, biology, genetics; (2) health,\nnursing, medicine; and (3) dermatology, dentistry, surgery.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 99.7,
+            "box": [
+                1270.4,
+                2076.4,
+                2193.8,
+                2190.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_09_title.png",
+            "text": "Analysis of top cited references and co-\ncitation references\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.71,
+            "box": [
+                1269.5,
+                2244.9,
+                2312.2,
+                2343.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_10_text.png",
+            "text": "Figure 7 shows the top 25 references with the strongest citation\nbursts. The explosion of citations in this field began in 2003, and a\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.16,
+            "box": [
+                177.0,
+                2408.1,
+                1704.1,
+                2445.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_11_text.png",
+            "text": "TABLE 1 Top 10 productive countries/regions producing studies related to artificial intelligence in liver cancer.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "table",
+            "score": 99.59,
+            "box": [
+                177.8,
+                2480.7,
+                2302.5,
+                3243.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_04/region_12_table.png"
+        }
+    ]
+}

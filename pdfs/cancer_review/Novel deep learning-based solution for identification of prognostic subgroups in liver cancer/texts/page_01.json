@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 10,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 5.26,
+            "box": [
+                250.1,
+                370.0,
+                936.8,
+                428.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_01/region_01_text.png",
+            "text": "METHODOLOGY ARTICLE\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.92,
+            "box": [
+                234.4,
+                481.0,
+                1971.6,
+                820.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_01/region_02_title.png",
+            "text": "Novel deep learning-based solution\nfor identification of prognostic subgroups\nin liver cancer (Hepatocellular carcinoma)\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 98.53,
+            "box": [
+                234.7,
+                877.8,
+                2166.3,
+                932.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_01/region_03_text.png",
+            "text": "Alice R. Owens\", Caitriona E. Mcinerney*\", Kevin M. Prise?, Darragh G. McArt? and Anna Jurek-Loughrey! ©\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 93.15,
+            "box": [
+                236.4,
+                1061.0,
+                605.1,
+                1578.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_01/region_04_text.png",
+            "text": "*Correspondence:\na,jurek@qub.ac.uk\n\n*Alice R. Owens and Caitriona\nE. McInerney contributed\nequally to this work\n\n' School of Electronics,\nElectrical Engineering\n\nand Computer Science,\nQueen's University Belfast,\n\n18 Malone Road, Belfast BT9\n5BN, Northern Ireland, UK\nFull list of author information\nis available at the end of the\narticle\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.3,
+            "box": [
+                771.5,
+                1066.0,
+                933.9,
+                1117.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_01/region_05_title.png",
+            "text": "Abstract\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 30.8,
+            "box": [
+                1932.1,
+                370.7,
+                2232.6,
+                426.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_01/region_06_text.png",
+            "text": "Open Access\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                771.2,
+                1130.4,
+                2220.3,
+                1880.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_01/region_07_text.png",
+            "text": "Background: Liver cancer (Hepatocellular carcinoma; HCC) prevalence is increas-\n\ning and with poor clinical outcome expected it means greater understanding of HCC\naetiology is urgently required. This study explored a deep learning solution to detect\nbiologically important features that distinguish prognostic subgroups. A novel architec-\nture of an Artificial Neural Network (ANN) trained with a customised objective function\n(Lesc) was developed. The ANN should discover new data representations, to detect\npatient subgroups that are biologically homogenous (clustering loss) and similar in sur-\nvival (survival loss) while removing noise from the data (reconstruction loss). The model\nwas applied to TCGA-HCC multi-omics data and benchmarked against baseline models\nthat only use a reconstruction objective function (BCE, MSE) for learning. With the base-\nline models, the new features are then filtered based on survival information and used\nfor clustering patients. Different variants of the customised objective function, incorpo-\nrating only reconstruction and clustering losses (Lp-); and reconstruction and survival\nlosses (Lgs) were also evaluated. Robust features consistently detected were compared\nbetween models and validated in TCGA and LIRI-JP HCC cohorts.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                771.3,
+                1892.2,
+                2213.6,
+                2442.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_01/region_08_text.png",
+            "text": "Results: The combined loss (Lgc-) discovered highly significant prognostic subgroups\n(P-value = 1.55E—77) with more accurate sample assignment (Silhouette scores:\n0.59-0.7) compared to baseline models (0.18-0.3). All Lgg- bottleneck features (N = 100)\nwere significant for survival, compared to only 11-21 for baseline models. Prognostic\nsubgroups were not explained by disease grade or risk factors. Instead Lpcc identified\nrobust features including 377 mRNAs, many of which were novel (61.27%) compared\nto those identified by the other losses. Some 75 mRNAs were prognostic in TCGA,\nwhile 29 were prognostic in LIRI-JP also. Lycc also identified 15 robust miRNAs including\ntwo novel (hsa-let-7g; hsa-mir-550a-1) and 328 methylation features with 71% being\nprognostic. Gene-enrichment and Functional Annotation Analysis identified seven\npathways differentiating prognostic clusters.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.8,
+            "box": [
+                771.9,
+                2456.1,
+                2199.6,
+                2704.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_01/region_09_text.png",
+            "text": "Conclusions: Combining cluster and survival metrics with the reconstruction objec-\ntive function facilitated superior prognostic subgroup identification. The hybrid model\nidentified more homogeneous clusters that consequently were more biologically\nmeaningful. The novel and prognostic robust features extracted provide additional\ninformation to improve our understanding of a complex disease to help reveal its\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 24.88,
+            "box": [
+                746.7,
+                2816.7,
+                2241.4,
+                3075.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_01/region_10_text.png",
+            "text": "© The Author(s), 2021. Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits\nuse, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original\nauthor(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third\nparty material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the mate-\nrial. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or\nexceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://\ncreativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publi\ncdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data.\n"
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 8,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                200.4,
+                346.4,
+                1205.3,
+                1485.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_1_text.png",
+            "text": "in the predictive model. Similarly, using the non-invasive\nfibrosis-4 score (FIB-4 score), in the discovery dataset (n =\n490) of CHB patients, a learning algorithm known as\nGradient Boosting (GB) clearly proved the superiority of\nother methods as well as FIB-4 score (P < 0.001) in the pre-\ndiction of advanced hepatic failure and cirrhosis.'° DL and\nradiomics can be used for quantitative analyses of liver\nfibrosis'’ in CHB cirrhosis. To improve the staging of\nfibrosis, machine learning (ML)-based classification of\nreal-time tissue elastography (RTE) was developed based\non four classical classifiers (i.e. Support vector machine, Naove\nBayes, Random Forest and K-Nearest Neighbour).'® Wang K.\net al'° by a prospective multi-centre study, have shown\nthat radiomics of shear wave elastography (DLRE) per-\nformed better for liver fibrosis prediction in patients with\nCHB when compared to two-dimensional shear wave elas-\ntography (2D-SWE) or serum markers. Radiomics fibrosis in-\ndex (RFI), a new DL-based model developed using\ngadoxetic acid-enhanced MRI, was found to be superior\nto AST: platelet ratio and fibrosis-4 (FIB-4) index, for stag-\ning liver fibrosis.”° These AI models predict the risk of liver\nfibrosis with high accuracy and hence can help to prevent\nunnecessary liver biopsies.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.43,
+            "box": [
+                201.1,
+                1514.1,
+                1043.6,
+                1562.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_2_title.png",
+            "text": "B. Liver fibrosis in chronic hepatitis C (CHC)\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                200.1,
+                1592.0,
+                1205.4,
+                3080.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_3_text.png",
+            "text": "Hepatitis C virus is a significant and one of the com-\nmonest causes of CLD presently. Hepatitis C has an 85%\nlikelihood of chronicity after an acute infection. In patients\nwith CHC, followed for 20 years, progression to cirrhosis\noccurs in about 20-25% patients. Various AI modules\nhave been framed to study cirrhosis due to CHC, some of\nwhich are being mentioned. Using 414 liver biopsies\nfrom transplant explants (training dataset) and testing\non the remaining 96 biopsies (validation set), with a cut-\noff of >0.4, ANN given by Piscaglia et al*' provided an accu-\nrate prediction of significant fibrosis based on clinical vari-\nables, hence avoiding unnecessary liver biopsies,\nparticularly in the setting of liver transplantation. In\nanother study by Hasheem et al,”, using ML algorithm\non 39,567 patients with CHC, four parameters - age,\nAST, platelet count and albumin were found to be statisti-\ncally significant for advanced fibrosis. Konerman et al?\ndemonstrated AI models, constructed using two ML\nmethods (Boosting and Random Forest) and logistic regression\nin CHC patients, which helped to target costly therapies\nin patients who needed it urgently. Analysis of 72,638 pa-\ntients with CHC of the National Veterans Health Adminis-\ntration data showed that boosted survival tree-based models\nusing longitudinal information were statistically better\nthan cross-sectional or linear models for cirrhosis predic-\ntion in CHC.”* An ANN was created by Takayama et al\nthat identified patients with CHC who responded to ther-\napy with pegylated interferon a-2b plus ribavirin with 82%\nsensitivity and 88% specificity, in the era before the use of\ndirectly acting antivirals (DAA) for CHC.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.13,
+            "box": [
+                1278.4,
+                344.9,
+                1742.3,
+                393.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_4_title.png",
+            "text": "C. Alcoholic liver disease\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1277.0,
+                421.5,
+                2283.7,
+                1164.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_5_text.png",
+            "text": "Alcohol-related liver disease is an area of hepatology, in\nwhich very few studies using AI have been done. Studies\nhave demonstrated the prediction of hepatic fibrosis in pa-\ntients with alcohol use disorder (AUD). Using a group of\n31 NAFLD patients with BMI below 30 and a group of\nAlcoholic liver disease (ALD) patients with cirrhosis\n(ALDC n = $1) or without cirrhosis (ALDNC n = 51), serum\ntransaminases, cell death markers and (adipo-) cytokines\nwere assessed. ML techniques based on ALT/AST ratio, adi-\npokines and cytokines helped to distinguish NAFLD and\nALD.*® Tumour necrosis factor (TNF)-alpha and adipo-\nnectin were significantly lower in NAFLD patients. ALDC\npatients had a significantly higher serum concentrations\nof cell death markers, hyaluronic acid, adiponectin, and\nTNF-alpha as compared to ALDNC.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.34,
+            "box": [
+                1276.6,
+                1192.7,
+                2280.3,
+                1240.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_6_title.png",
+            "text": "D. NASH and non-alcoholic fatty liver disease (NAFLD)\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1276.6,
+                1269.8,
+                2282.9,
+                1911.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_7_text.png",
+            "text": "The incidence of NAFLD is increasing worldwide nowa-\ndays, and it has become one of the most common causes of\ncirrhosis. One of the primary goals of ML application\ndevelopment in hepatology is diagnosing fatty liver disease\nand staging liver fibrosis, hence substituting pathological\nanalysis. Supervised ML classifiers were trained by Vanderbeck\netal” using a digital library of pathology images of 47 liver\nbiopsies from patients with normal liver and with NAFLD\npatients. The classification algorithm performed with 89%\noverall accuracy and identified steatosis, bile ducts, portal\nveins, and sinusoids with high precision and recall. Accu-\nrate localization of microscopic liver anatomy landmarks\nfacilitates the detection of other histological lesions.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1277.5,
+                1914.9,
+                2282.9,
+                3057.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_05/region_8_text.png",
+            "text": "A widely used pathologist score (Kleiner score) uses\nballooning, inflammation, steatosis and fibrosis as the\nmain histopathology features of NASH/NAFLD. Auto-\nmated DL-based scores using the above findings enables\npathologist-like scoring of NASH models.”* Sowa J-P\net al used ML techniques to analyse specific liver serum pa-\nrameters, hyaluronic acid (HA) and cell death markers of\n126 patients undergoing bariatric surgery for morbid\nobesity. Out of these serum markers, a fibrosis scoring sys-\ntem could be generated using AI, even if only marginally\nfibrotic tissue is available.”? Based on findings that six pre-\ndictors including hypertension, alanine aminotransferase\n(ALT), high-density lipoprotein (HDL), triglyceride, hae-\nmoglobin Alc, white blood cell count are important pa-\nrameters for NAFLD diagnosis in general polulation, a\n‘NAFLD ridge score’ was developed as a robust and straight-\nforward reference comparable to existing NAFLD scores to\nexclude NAFLD patients in epidemiological studies.°” ML\nmethods using history, demographic details and labora-\ntory values of the patient can predict non-alcoholic steato-\nhepatitis (NASH) in NAFLD patients.”' It can help to make\npredictive models of patients having higher chances of\ndeveloping cirrhosis.\n"
+        }
+    ]
+}

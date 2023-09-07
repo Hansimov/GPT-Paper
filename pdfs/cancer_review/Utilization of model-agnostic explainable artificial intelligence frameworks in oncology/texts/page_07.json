@@ -1,0 +1,102 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3249,
+        "regions_num": 7,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.8,
+            "box": [
+                347.3,
+                355.2,
+                2130.1,
+                1226.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_07/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.26,
+            "box": [
+                190.3,
+                1252.4,
+                2301.0,
+                1355.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_07/region_2_text.png",
+            "text": "Figure 3 SHAP plots visualizing neural network identification of a normal brain and meningioma. [Credit: ref. (32)]. SHAP, SHapley\nAdditive exPlanations.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                189.4,
+                1459.7,
+                1203.0,
+                1737.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_07/region_3_text.png",
+            "text": "to identify important radiomic features) (36). In total,\nthese explanations of radiomic models allows providers to\nbetter understand what the model is looking at, which eases\napplication to the clinic by presenting them as more than\nabstract “black boxes”.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 97.88,
+            "box": [
+                190.0,
+                1821.5,
+                357.3,
+                1876.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_07/region_4_title.png",
+            "text": "Pathology\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                188.3,
+                1905.2,
+                1204.8,
+                2963.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_07/region_5_text.png",
+            "text": "Pathology is another diagnostic specialty in oncology\nwhere XAI has improved predictive ML models. Like\nradiomics, pathology is also a field highly interested in\nindividual predictions, where both SHAP and LIME can\noften be applicable. In a study similar to the one performed\nby Gaur et a/. (32) in radiomics, Palatnik de Sousa et al.\nused XAI to depict how a neural network identified tumors\nin histology samples of lymph node metastases (37). Given\nthat this problem involved a convolution neural network\nand was primarily interested in individual patients, this\nwas a prime example where LIME was a good choice,\nwhere SHAP would be more computationally inefficient.\nUsing this method, the model output can overlay histology\nslides, and end-users can see locations of interest identified\nby the model. These overlays permitted the authors to\nbiologically validate results by comparing highlighted\nareas of interest with clinical intuition. This technique\nhas also been applied to diagnosing leukemia (accuracy of\n98.38%) (38). Examination of individual patients has also\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.69,
+            "box": [
+                1287.7,
+                1458.8,
+                2302.0,
+                1625.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_07/region_6_text.png",
+            "text": "been used on structured data to help classify primary and\nmetastatic cancers using origin-based DNA methylation\nprofiles (39).\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1286.5,
+                1626.1,
+                2303.0,
+                2965.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_07/region_7_text.png",
+            "text": "Next, pathology studies have harnessed plots of non-\nlinear interactions to identify prognostic thresholds\nor make a case for policy change. Chakraborty et al.\nexamined the influence of the tumor microenvironment\non prognosis in breast cancer (40). In this study, not only\ndid XAI facilitate identification of prognostic factors\nvia global feature importance, but it also illustrated\nnon-linear interactions that permitted identification\nprognostic thresholds for each factor, which could help\ntailor identification of treatments that could manipulate\nthe tumor microenvironment and improve prognosis.\nIn this study, the authors used SHAP dependence plots\nto identify inflection points to correspond to potentially\nclinically relevant thresholds, generally corresponding\nto where SHAP values crossed zero. Similarly, in a\npaper examining the impact of synoptic reporting on\nsurvival in patients with prostate cancer using an XGB\nmodel explained by SHAP, Janssen et a/. reported (41).\nWhere this study has the possibility to benefit pathology is\nusing XAI summary plots, the authors could conclude that\nsynoptic reporting, specifically reporting pathologic data in\na structured manner, is the second most important factor\nafter age. In this example, these plots allow interpretation of\na ML model that could lead to real policy changes, such as\n"
+        }
+    ]
+}

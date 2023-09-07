@@ -1,0 +1,206 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 15,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.89,
+            "box": [
+                286.2,
+                235.7,
+                2190.4,
+                1177.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                155.8,
+                1206.9,
+                2326.4,
+                1277.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_02_text.png",
+            "text": "Fig. 3. Papers included in this survey, categorized by modality (left) and anatomical location (right). Papers discussing multiple modalities or anatomical locations were\ngrouped as ‘multiple’. Modalities or anatomical locations that were used in fewer than five papers were grouped as ‘other’.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                156.2,
+                1352.1,
+                1205.5,
+                1569.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_03_text.png",
+            "text": "highly trained domain experts, the advantage of human-grounded\nevaluation is that it is less costly, while still receiving general no-\ntions of the quality of an explanation. The disadvantage is that the\nassessment of the quality of an explanation is a proxy of the actual\nquality.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.58,
+            "box": [
+                156.0,
+                1606.2,
+                750.7,
+                1647.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_04_title.png",
+            "text": "5.2.3. Functionally-grounded evaluation\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                157.6,
+                1648.6,
+                1205.9,
+                2301.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_05_text.png",
+            "text": "Functionally-grounded evaluation does not use human experi-\nments, but uses other proxies to assess the quality of the explana-\ntion. These proxies may include measurements that have already\nbeen validated using human users. In our example of explaining\nthe location and size of a cancer, this might involve comparing the\nexplanation with manually drawn tumor delineations of a radiolo-\ngist. The advantages of functionally-grounded evaluation stated by\nDoshi-Velez and Kim (2017) include that they are relatively cheap\nto acquire. This is, however, not necessarily the case in medical im-\nage analysis, since acquiring for example manual annotations is a\nvery resource intensive process. When these manual annotations\ndo already exist, e.g. when using curated data from a challenge,\nevaluation of explanations are easily extracted, and can be auto-\nmatically extracted multiple times. This can be useful, for example\nin the development phase of explanation methods.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.67,
+            "box": [
+                158.0,
+                2337.7,
+                911.0,
+                2379.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_06_title.png",
+            "text": "5.2.4. Evaluation of XAI in medical image analysis\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                157.9,
+                2380.3,
+                1205.2,
+                2859.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_07_text.png",
+            "text": "Evaluation of XAI as proposed above is currently not yet stan-\ndard practice in papers in medical image analysis. Furthermore, in\nmedicine a good explanation can differ between areas of expertise\nof the person for whom the explanation is given. For example, a\nvisual explanation pinpointing where disease is located could be\na sufficient explanation for a radiologist or a medical image anal-\nysis researcher. However, clinicians such as an oncologist, neurol-\nogist, or hematologist would probably like to have XAI added to\ntheir clinical decision-making framework. Such framework would\nalso incorporate the patient’s history, previous and current treat-\nments, treatment options, and expected effects or outcomes.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 98.68,
+            "box": [
+                156.8,
+                2896.3,
+                455.1,
+                2937.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_08_title.png",
+            "text": "5.3. Critique on XAI\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.99,
+            "box": [
+                157.0,
+                2981.9,
+                1204.4,
+                3112.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_09_text.png",
+            "text": "Rudin (2019) advised caution when using a black box with ex-\nplanation for high-stakes decision making. Rudin raised several is-\nsues with explaining black boxes. For example, XAI may provide\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1278.2,
+                1352.4,
+                2326.1,
+                1744.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_10_text.png",
+            "text": "an explanation that is not completely faithful to what the origi-\nnal model computes: If the explanation explains 90% true to the\nmodel, that means that 10% is untrue (Rudin, 2019). Furthermore,\nan explanation may not make sense or provide enough detail to\nunderstand what the black box is doing. For example, a saliency\nmap of the class with the highest probability may look similar to\na saliency map of a class with a lower probability. Rudin therefore\nadvices to use interpretable model-based XAI instead, such as the\nprototype network discussed in Section 3.3.3.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1276.6,
+                1745.2,
+                2326.4,
+                1831.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_11_text.png",
+            "text": "Critiques also often focus on the robustness of XAI techniques,\nas discussed in Section 4.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 98.43,
+            "box": [
+                1278.7,
+                1893.6,
+                1461.2,
+                1935.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_12_title.png",
+            "text": "5.4. Outlook\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1278.0,
+                1979.8,
+                2326.5,
+                2327.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_13_text.png",
+            "text": "Since high stakes decision-making is intertwined with\nmedicine, we are convinced that XAI will be increasingly im-\nportant. We have investigated the trends, and noticed that an\nincreasing amount of papers contain a holistic approach, combin-\ning multiple forms of explanation. Examples of such more holistic\napproaches include combinations of textual explanation and visual\nexplanation (e.g. Graziani et al., 2020), or combinations of example\nbased explanation and visual explanation (e.g. Wang et al., 2019).\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1276.9,
+                2328.6,
+                2324.5,
+                2808.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_14_text.png",
+            "text": "Future directions of XAI in medical image analysis may in-\nclude biological explanation. Several researchers have predicted\nbiological processes from imaging features using deep learning.\nFor example, Matsui et al. (2020) predicted the molecular sub-\ntype of lower-grade gliomas on multimodal brain imaging, and\nZhu et al. (2019) predicted the molecular subtype luminal A of\nbreast cancer on MRI. These analyses used a biological target to\ntrain the neural network. However, performing such analysis the\nother way around, for example by performing a pathway analysis\non imaging phenotypes (e.g. Bismeijer et al. (2020), not deep learn-\ning), could provide interesting biological explanation.\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1278.1,
+                2809.0,
+                2326.0,
+                3111.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_14/region_15_text.png",
+            "text": "XAI may also be useful to aid physicians in the diagnostic pro-\ncess or in identifying unknown information from medical images.\nFor example, a study on the diagnosis of tuberculosis on chest X-\nrays showed that 10 out of the 13 participating physicians (77%)\nhad better diagnostic accuracy when assessing chest X-rays with\nan XAI providing a visual explanation compared to assessing the\nchest X-ray without XAI (Rajpurkar et al., 2020a).\n"
+        }
+    ]
+}

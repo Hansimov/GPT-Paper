@@ -1,0 +1,233 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 17,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.68,
+            "box": [
+                236.5,
+                372.7,
+                1202.6,
+                577.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_01_text.png",
+            "text": "microarray (TMA) construction and immunohistochemistry for\n28 immune markers were conducted as previously described (11,\n24). Some of the previous data were used directly as a\ncomplement to the results (11).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 98.47,
+            "box": [
+                237.3,
+                673.4,
+                1007.8,
+                737.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_02_title.png",
+            "text": "Image annotation and processing\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                236.0,
+                789.3,
+                1203.6,
+                1410.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_03_text.png",
+            "text": "We randomly selected 116 WSIs for annotation in the\nZhongshan cohort. Using ASAP 1.8, two pathologists\nmanually annotated and fully examined the slides in six\ncategories: tumor region, normal liver tissue, portal area,\nfibrosis, hemorrhage/necrotic area, and lymphocyte area. The\nannotated WSIs were divided into training, validation, and\ntesting datasets at a ratio of 8:1:1. The annotated tissue areas\nwere extracted based on the binary mask obtained by OTSU (25)\nand then divided into small squares, 299 pixelsx299 pixels in\nsize, called “tiles”. After image incision, data enhancement\nmethods were used to balance the number of tiles for the six\ncategories (details are provided in the Supplementary Methods).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 98.47,
+            "box": [
+                235.5,
+                1505.3,
+                809.0,
+                1621.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_04_title.png",
+            "text": "Standardization of TCGA\ndiagnostic slides\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                236.7,
+                1673.9,
+                1203.0,
+                1930.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_05_text.png",
+            "text": "Due to the disparity in the staining and scanning process\nbetween the Zhongshan and TCGA cohorts, the trained neural\nmodel could not be directly applied to the TCGA WSIs. We\nmodified the traditional Reinhard algorithm (26) to standardize\nstainingin both the Zhongshan and TCGA cohorts.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.18,
+            "box": [
+                237.8,
+                2026.7,
+                746.1,
+                2090.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_06_title.png",
+            "text": "Classification network\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                236.7,
+                2144.3,
+                1202.7,
+                2658.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_07_text.png",
+            "text": "We mainly proposed training a classification network to\ndiscriminate six types of HCC tissues. Inception V3 (27) was\nused as the basic model. Classification maps were derived after\nimage recognition. Morphological processing was utilized to\noptimize the original classification maps. We used the t-\ndistributed stochastic neighbor embedding (t-SNE) algorithm\nto visualize the segmental results. The pathological signatures\nwere then extracted from the ten tiles with the highest prediction\nprobability for each type (details are provided in the\nSupplementary Methods).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 99.66,
+            "box": [
+                236.9,
+                2757.0,
+                1136.1,
+                2871.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_08_title.png",
+            "text": "Establishment of the histological score\nand combined score\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                237.1,
+                2925.3,
+                1202.9,
+                3129.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_09_text.png",
+            "text": "LASSO Cox regression (9) was applied to obtain high-\ndimensional prognostic features in histology. With recurrence\nstatus and TTR as labels, a combined score (CS) was constructed\nby integrally analyzing the histological signatures and clinical\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.83,
+            "box": [
+                1288.2,
+                372.8,
+                2254.3,
+                838.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_10_text.png",
+            "text": "markers. The clinical markers included sex, age, serum levels of\nalpha-fetoprotein (AFP) and alanine transaminase (ALT), and\nmorphological information such as tumor number and size. In\nthe same way, we constructed a histological score (HS) through\npure histological features (details are provided in the online\nSupplementary Materials). The optimal cutoff value for survival\ntime was obtained through the “survminer” package. The\npatients were then divided into high-risk and low-risk\nsubgroups for further survival comparisons.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 99.3,
+            "box": [
+                1288.2,
+                934.0,
+                1950.1,
+                1048.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_11_title.png",
+            "text": "Correlation between HS and\nimmune infiltration\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1288.4,
+                1102.0,
+                2254.2,
+                1410.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_12_text.png",
+            "text": "To evaluate the correlation between the HS and immune\ninfiltration conditions, we applied hierarchical clustering\nanalysis for specific immune markers in the TMA. In the\nTCGA datasets, the CIBERSORT algorithm (28) was used to\nexplore the quantity of tumor-infiltrating immune cells based on\nthe transcriptome signature.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "title",
+            "score": 98.42,
+            "box": [
+                1289.2,
+                1505.8,
+                1698.1,
+                1570.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_13_title.png",
+            "text": "Statistical analysis\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                1287.9,
+                1622.7,
+                2253.5,
+                2401.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_14_text.png",
+            "text": "Continuous variables are expressed as the median (IQR) and\nwere compared with using Mann-Whitney U test. Categorical\nvariables are expressed as numbers and percentages, and were\ncompared with the x” test or Fisher’s exact test. Kaplan-Meier\ncurves with the log-rank test were used to compare survival. The\nLASSO Cox method was used to select independent factors\nassociated with recurrence. Hazard ratios (HRs) and 95%\nconfidence intervals (CIs) were also estimated by means of\nunivariable and multivariable Cox analyses. A two-tailed p\nvalue> 0.05 was considered statistically significant. Model\ndiscrimination was assessed by the overall C-index, receiver\noperating characteristic (ROC) curve and net reclassification\nimprovement (NRI) (29). Statistical analysis was performed\nusing R-software 3.6.3 (R Foundation, Vienna, Austria) and\nSPSS © 22.0 (IBM, Armonk, New York, USA).\n"
+        },
+        {
+            "idx": 15,
+            "thing": "title",
+            "score": 98.0,
+            "box": [
+                1290.1,
+                2491.9,
+                1471.9,
+                2561.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_15_title.png",
+            "text": "Results\n"
+        },
+        {
+            "idx": 16,
+            "thing": "title",
+            "score": 98.94,
+            "box": [
+                1288.7,
+                2599.1,
+                1895.3,
+                2714.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_16_title.png",
+            "text": "Patient demographics and\nclinical information\n"
+        },
+        {
+            "idx": 17,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                1288.1,
+                2768.5,
+                2254.2,
+                3129.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_04/region_17_text.png",
+            "text": "Supplementary Table S1 describes the demographic, clinical,\nand tumor characteristics of patients in the training and\nvalidation cohorts. The median ages in the training and\nvalidation cohorts were 53 years and 55 years, respectively.\nMost patients in both cohorts were male. More than 80% of\npatients were infected with hepatitis B virus (HBV) and\ndiagnosed with liver cirrhosis. Over half of the patients\n"
+        }
+    ]
+}

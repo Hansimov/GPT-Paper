@@ -1,0 +1,62 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 4,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 95.64,
+            "box": [
+                175.4,
+                286.5,
+                2301.7,
+                1176.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_06/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 38.87,
+            "box": [
+                225.7,
+                1186.1,
+                1608.4,
+                1255.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_06/region_2_text.png",
+            "text": "FIGURE 4\nCitation network visualization map of institutions. The thickness of the lines reflects the citation strength.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.1,
+            "box": [
+                179.3,
+                1461.4,
+                1774.0,
+                1497.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_06/region_3_text.png",
+            "text": "TABLE 3. The 10 most productive authors of publications researching the use of artificial intelligence in liver cancer.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "table",
+            "score": 61.07,
+            "box": [
+                173.8,
+                1530.7,
+                2300.8,
+                3198.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_06/region_4_table.png"
+        }
+    ]
+}

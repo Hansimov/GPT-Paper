@@ -1,0 +1,115 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 8,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.85,
+            "box": [
+                181.1,
+                237.1,
+                2296.5,
+                1039.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_08/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                176.5,
+                1088.7,
+                2303.8,
+                1651.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_08/region_2_text.png",
+            "text": "Fig. 8 | External validation. a, Predictive accuracy of WGD and TP53 mutations for the cross-validated predictions in TCGA discovery and METABRIC\n\nand BASIS breast cancer validation cohorts. Each bar corresponds to the predicted AUC and the error bars correspond to 95% Cls. The numbers stated\n\nin each bar refer to mutated/total cases. b, Distribution of validated (dark green), indeterminate (light green) and invalid (gray) associations in the\nMETABRIC (n= 454 tumor samples) and BASIS cohorts (n=149 tumor samples) across different alteration types. P values for each alteration can be\nfound in Supplementary Table 4b. c, Distribution of validated (dark green), indeterminate (light green) and invalid (gray) transcriptomic associations in the\nMETABRIC cohort (n=14,756 genes for n=456 tumor samples), based on a two-sided rank correlation test. d, Slide average-predicted TIL scores (y axis)\nas a factor of pathology assessment. P values were estimated from one-sided analysis of variance. All boxplots demarcate quartiles and median values,\nwhile whiskers extend to 1.5x the interquartile range (n= 36 slides for METABRIC; n=129 slides for BASIS with available TIL annotation). e, Prognostic\naccuracy for overall survival measured by the concordance index, C. The numbers given in each bar refer to deaths/total number of patients. All error bars\ndenote 95% Cls. f, Example slides from the BASIS and METABRIC cohorts with high and low levels of TILs. From left to right are the original hematoxylin\nand eosin-stained slides, predicted spatial TIL scores and example tiles with high and low TILs. g, Example slides from the BASIS and METABRIC cohorts\nwith high and low levels of prognostic risk. From left to right are the original hematoxylin and eosin-stained slides, predicted spatial risk and example tiles\nwith high and low risk. Representative slides and tiles were selected from the 100 best-predicted ones. Scale bars in f and g: 100 um.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                178.0,
+                1715.6,
+                1217.4,
+                2152.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_08/region_3_text.png",
+            "text": "of genomic and transcriptomic alteration. WGDs were character-\nized by (and likely caused) nuclear enlargement and increased\nnuclear intensities, reflecting abnormal chromatin content. Other\nalterations, such as EGFR amplifications or BRAF mutations, were\nassociated with a distinct histology and it is currently unknown\nwhether this is a consequence of the alteration or an indication\nthat these mutations preferentially occur in particular cell types.\nFurthermore, a broad range of transcriptomic correlations were\nfound reflecting stromal content, immune cell infiltration and cell\nproliferation.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                178.1,
+                2152.5,
+                1215.9,
+                2721.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_08/region_4_text.png",
+            "text": "In the majority of cancer types, computational histopathological\nfeatures showed a good level of prognostic relevance, substantially\nimproving prognostic accuracy compared with conventional grad-\ning and histopathological subtyping alone. While it is very remark-\nable that such predictive signals can be learned in a fully automated\nfashion, there was no measurable improvement over a full molecular\nand clinical workup. This might be a consequence of the far-ranging\nrelationships between histopathological and molecular phenotypes\ndescribed here, implying that histopathology is a reflection of the\nunderlying molecular alterations rather than an independent trait.\nYet, it probably also highlights the challenges of combining histo-\npathological signals from different areas of the same tumor, which\nrequires very large training datasets for each tumor entity.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                178.0,
+                2722.2,
+                1216.9,
+                3116.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_08/region_5_text.png",
+            "text": "One of the main current limitations of the study is that the\ntraining was performed on fresh-frozen tissue sections. These\nprovide a better preservation of molecular content compared\nwith formalin-fixed paraffin embedding, which is the diagnostic\nstandard due to a better preservation of tissue morphology. Also,\nwithout further algorithmic amendments, there was a consider-\nable dependence of the histopathological feature representation on\nimage compression algorithms and their parameters, which could\nin part be mitigated by transfer learning. Given the sensitivity of\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1265.3,
+                1714.7,
+                2304.6,
+                1891.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_08/region_6_text.png",
+            "text": "deep learning algorithms and the associated risk of overfitting, it\nappears mandatory to critically assess whether discoveries could be\nexplained by technical artefacts, and also whether algorithms are\napplicable to new datasets with different image properties.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1266.6,
+                1890.3,
+                2304.0,
+                2635.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_08/region_7_text.png",
+            "text": "While the pervasiveness of associations between histopathology\nand molecular traits is remarkable, at present, they are too weak\nto replace genetic or transcriptomic tests. However, we expect at\nleast some associations to become more accurate using improved\nalgorithms and larger, ideally spatially annotated training cohorts.\nYet histopathological annotation is possible only for patterns\nknown beforehand, and molecular spatial annotation currently has\nlow throughput, but may become possible with spatial transcrip-\ntomic**** and sequencing technologies*. Direct training on the\nmolecular trait of interest, or ideally multi-objective learning, may\nprovide superior results compared with transfer learning, which\nrisks missing patterns that are irrelevant for the initial classification\ntask. Alternatively, convolutional rather than linear transfer learn-\ning has been shown to yield promising results for transcriptomic\nassociations’'. Also, less complex CNN architectures may suffice for\nclassifying histopathology patterns”’*, because tumor sections have\na defined scale, unlike everyday images.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1265.9,
+                2633.2,
+                2304.4,
+                3115.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_08/region_8_text.png",
+            "text": "Looking forward, our analyses reveal the potential for using\ncomputer vision alongside molecular profiling. While the eye of a\ntrained human pathologist constitutes the gold standard for recog-\nnizing clinically relevant histopathological patterns and definitive\ndiagnosis, computers have the capacity to augment these tasks by\nsifting through millions of images to retrieve similar patterns and\nestablish associations with known and novel traits. Taking the over-\nlays presented in this study as examples, it is possible to imagine\ncomputationally augmented and molecularly informed histopathol-\nogy workflows enabling more precise and faster diagnosis and prog-\nnosis in the future.\n"
+        }
+    ]
+}

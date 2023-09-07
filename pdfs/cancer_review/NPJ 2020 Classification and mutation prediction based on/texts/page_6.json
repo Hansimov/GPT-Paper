@@ -1,0 +1,232 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages/page_6.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages_ordered/page_6.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 17,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.88,
+            "box": [
+                282.7,
+                252.3,
+                2235.4,
+                1014.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                189.3,
+                1038.1,
+                2330.7,
+                1191.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_02_text.png",
+            "text": "Fig. 5 Prognosis-related mutated genes selection using the least absolute shrinkage and selection operator (LASSO) Cox regression\nmodel. a Selection of the super parameter A in the LASSO model via 10-fold cross-validation based on the minimum standard. The optimal A\nvalue of 0.122. b Shown here is a coefficient section view plotted against the log(A) magnitude. The optimal A corresponding to ten non-zero\ncoefficients were obtained where the vertical line was drawn.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                189.6,
+                1236.7,
+                1225.0,
+                1313.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_03_text.png",
+            "text": "slide was scanned at a magnification of 20x by using digital pathology\nscanner VS120 (Olympus).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.68,
+            "box": [
+                188.0,
+                1368.6,
+                956.6,
+                1409.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_04_title.png",
+            "text": "Deep-learning with convolution neural networks\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                189.5,
+                1416.4,
+                1223.7,
+                1845.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_05_text.png",
+            "text": "Typical convolutional neural networks contain several levels of convolution\nfilters, pooling layers, and fully connected layers. In our study, we primarily\nused inception V3 architecture, which makes use of inception modules\nwhich are made from a spread of convolutions having different kernel sizes\nand a max-pooling layer. The initial five convolution nodes are combined\nwith two max-pooling operations and followed by 11 stacks of inception\nmodules. A fully connected layer to the end of the inception modules was\nthen added to permit us to utilize the pre-trained model and finetune the\nparameters for our own task. Finally, a softmax layer was added as a\nclassifier outputting a probability for every class, and the one with the\nhighest probability was chosen as the predicted class.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                189.4,
+                1845.5,
+                1223.8,
+                2117.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_06_text.png",
+            "text": "We used the pre-trained model offered by TensorFlow and finetuned it\nusing histopathological images. It was pre-trained on the ImageNet dataset\nand available at the TensorFlow-Slim image classification library (http://\ntensorflow.org). We initialized the parameters from the pre-trained model\nbecause pre-training can speed up the convergence of the network. Most\nimportantly, it was difficult to train a deep network with a small number of\nimages due to the massive number of network parameters.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 99.62,
+            "box": [
+                188.5,
+                2171.0,
+                663.2,
+                2213.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_07_title.png",
+            "text": "Comparison with pathologists\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                188.9,
+                2220.4,
+                1222.3,
+                2689.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_08_text.png",
+            "text": "One hundred and one WSls of liver tissues without a label from the external\nvalidation cohort were used to test pathologist's performance and compared\nwith our model performance. All pathologists should report whether there is\nHCC, and if there is HCC, they should report histopathological grade via\ndigital pathology images. The outcomes reported by six pathologists with 2-\nyears, 5-years, and 10-years experience (two pathologists in each category)\nand our model were collected and analyzed by the R 3.6.0 (https://www.r-\nproject.org). Cohen’s Kappa analysis was performed to assess inter-observer\nagreement. Good inter-operator agreements were observed in pathologists\nwith 2-year experience (Kappa = 0.894; 95% Cl, 0.837-0.944), pathologists\nwith 5-year experience (Kappa = 0.933; 95% Cl, 0.888-0.975), and patholo-\ngists with 5-year experience (Kappa = 0.967; 95% Cl, 0.930-0.992).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 99.65,
+            "box": [
+                189.0,
+                2741.5,
+                887.6,
+                2784.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_09_title.png",
+            "text": "Identification of significantly mutated genes\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.99,
+            "box": [
+                189.7,
+                2791.4,
+                1223.3,
+                3062.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_10_text.png",
+            "text": "The gene mutation data for the matched patient sample were downloaded\nfrom the cancer genome atlas (TCGA). The gene mutated at least 10% of the\navailable liver cancer samples were selected from the 283 cancer-related genes\n(Supplementary Fig. 2). The least absolute shrinkage and selection operator\n(LASSO) regression with a 10-fold cross-validation method was then performed\nto identify significant prognosis-related gene mutations by using R software\npackages (http://www.r-project.org). Finally, the ten most significant prognosis-\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.65,
+            "box": [
+                1298.2,
+                1236.4,
+                2330.8,
+                1314.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_11_text.png",
+            "text": "related gene mutations, including ARID1A, ASH1L, CSMD1, CTNNB1, EYS, FMN2,\nMDM4, RB1, TP53, and ZFX4 were identified (Fig. 5).\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 99.61,
+            "box": [
+                1298.3,
+                1375.7,
+                1797.5,
+                1418.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_12_title.png",
+            "text": "Training deep-learning network\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1298.3,
+                1424.2,
+                2333.3,
+                2180.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_13_text.png",
+            "text": "Pathological diagnosis was the primary endpoint of interest for the classifier\nthat recognizes tumors from normal liver tissue and the assessment of the\nhistopathological grade. The status of gene mutation (mutation or wild type),\nbased on the next-generation sequencing results, was the primary\nprerequisite in the classifier of mutation prediction. The model's training\nstrategy was based on an easy-to-use platform called EASY DL (https://ai.\nbaidu.com/easydl/) that uses PaddlePaddle deep learning framework V3.0\ncreated by Baidu Brain Al technology, inception V3 network developed by\nGoogle, and packaging code form Coudray”° and co-workers. The training set\nwas used for training, and the testing set was used to evaluate the\nperformances, finetune those parameters, and improve the models. A final\nmodel was selected according to the results of the testing set, where the F1-\nscores as a stopping rule. Notably, the subsets were grouped based on HCC\npatients rather than the WSls. This method could maximize the size of the\ntraining set and avoid training and testing on tiles originating from the same\nhuman subjects. Thereby preventing the classifier from relying on intra-\nsubject correlations between samples and resulting in inflated estimates of\naccuracy. In order to reduce selection bias, the performance of our model\nwas then validated in the internal and external validation sets.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "title",
+            "score": 99.38,
+            "box": [
+                1298.1,
+                2241.6,
+                1577.8,
+                2283.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_14_title.png",
+            "text": "Statistical analysis\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1298.4,
+                2291.7,
+                2331.9,
+                2646.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_15_text.png",
+            "text": "The ten most common and prognostic mutated genes were identified\nusing the LASSO Cox regression model, and any differences of overall\nsurvival were evaluated by the Kaplan-Meier method with a log-rank test.\nThe performance of those models was evaluated with F1-scores, MCC, and\nAUC. The F1-scores, ranging from 1 (perfect) to 0 (bad), is the harmonic\naverage of the precision and recall?'. MCC ranges from 1 (perfect) to —1\n(bad). In addition, the probability of gene mutation was estimated and\ncompared using the two-tailed Mann-Whitney U-tests. A P value of less\nthan 0.05, was considered as statistical significance.\n"
+        },
+        {
+            "idx": 16,
+            "thing": "title",
+            "score": 97.85,
+            "box": [
+                1297.3,
+                2737.3,
+                1634.1,
+                2779.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_16_title.png",
+            "text": "DATA AVAILABILITY\n"
+        },
+        {
+            "idx": 17,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1298.3,
+                2790.7,
+                2331.6,
+                3062.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_6/region_17_text.png",
+            "text": "The slide images and the corresponding cancer information were uploaded from the\nGenomic Data Commons portal (https://portal.gdc.cancer.gov/) and were in whole or in\npart based upon data generated by the TCGA Research Network (http://cancergenome.\nnih.gov/). These data were publicly available without restriction, authentication, or\nauthorization. The datasets for the independent cohorts generated and/or analyzed\nduring the current study are available from the corresponding author (XJ.C.) upon\nreasonable request and through collaborative investigations.\n"
+        }
+    ]
+}

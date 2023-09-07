@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 10,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.46,
+            "box": [
+                236.8,
+                376.9,
+                1201.9,
+                577.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_01_text.png",
+            "text": "tissue, normal liver tissue, stroma, and necrosis, and then\ndiscriminated the features with high AUC values (21). The\nstudy developed and validated an efficient survival prediction\nmodel based on a large number of WSIs.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.71,
+            "box": [
+                236.8,
+                582.5,
+                1202.7,
+                1254.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_02_text.png",
+            "text": "In these two previous studies, pathological signatures were\ndirectly generated and extracted by traditional CNNs. CNNs are\nusually regarded as a “black box”, in which the data are\nprocessed through complex computing layers; thus, it is\ndifficult to concretize and interpret the relevant features of\nsamples. In the present research, we manually input abundant\nsignatures of the most relevant tiles, automatically screened the\nsignatures with the recurrence time as the labels via LASSO Cox\nregression, and visually presented the weight of each signature.\nThis procedure bypassed the need for the manual recognition of\nnumerous postprocess tiles. In addition, the image signatures\nthat came from empirical utilization ensured the feasibility\n(36, 37).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.77,
+            "box": [
+                236.5,
+                1261.0,
+                1202.7,
+                2608.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_03_text.png",
+            "text": "Compared to reported studies, our study has advantages in\nterms of multicategory training, heatmap visualization, a more\naccurate prediction of recurrence and multifaceted analysis. HCC\nis highly heterogeneous with regard to not only genetics or\nepigenetics but also histology. Despite the classic histological\ncategories mentioned above, the portal area and lymphocyte area\nare also important structures. Recently, tertiary lymphoid structures\nwere proven to be a favorable factor for prognosis and recurrence\nstatus (38), and immune infiltration conditions are becoming more\ndeterminant in precision therapy (39). The portal area is a\nconnective tissue among hepatic lobules consisting of branches of\nthe hepatic artery, portal vein and hepatic ducts, in which lymphatic\nvessels and nerve fibers exist. It was reported that the number of\nportal areas and inflammation or iron deposition around the portal\narea were associated with the pathogenesis of HCC (40, 41). Herein,\nthese two structures were originally annotated and trained in the\nstudy. The AUC value for the portal area was 0.757, lower than that\nof the other five tissues, which could be caused by poor structural\npurity and inadequate amounts. Technically, modified image\nstandardization balanced the color differences among tiles, which\nraised the overall recognition accuracy for HCC structures up to\n94.17%. We also applied the CAM method to visualize the\nimportance of the local structure. As shown in Figure 2, cells\nattracted more attention for recurrence than cell-free areas such as\nfibrosis and necrosis areas, which made it easier for us to intuitively\nunderstand the microscopic information.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.75,
+            "box": [
+                236.8,
+                2614.4,
+                1203.0,
+                3129.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_04_text.png",
+            "text": "Subsequently, we established two recurrence prediction\nscores via LASSO Cox analysis and derived each score through\nthe overall WSIs to maximally preserve the pathological\nsignatures of all sections. Both scores showed great congruence\nwith the recurrence probability and survival. No significant\ndifference was found between HS and CS under NRI analysis,\nwhich consequently suggested the feasibility of the potential\nreplacement of important clinical characteristics with pure\nhistological features. In Gao et al’s research, the newly\nconstructed score aimed at OS and its median C-indexes\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.8,
+            "box": [
+                1287.7,
+                373.9,
+                2255.0,
+                681.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_05_text.png",
+            "text": "reached 0.731 and 0.713 in two cohorts. Therefore, we\nspecifically targeted recurrence conditions after resection and\ncomplemented the recurrence-related information in the TCGA\ndatabase, which was not included in Gao’s study. In our study,\nthe C-indexes of HS for TTR prediction reached 0.804, 0.739 and\n0.708 in the training, validation and TCGA cohorts, respectively.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.71,
+            "box": [
+                1287.6,
+                688.7,
+                2254.5,
+                1567.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_06_text.png",
+            "text": "We compared clinicopathological characteristics between\nthe two risk subgroups. Notably, a larger proportion of MTM-\nHCC was found in the HS high-risk group, indicating that\ninvisible information processed by deep learning could be\nexplained by the specific texture of tumor cells. In contrast to\nSaillard et al’s dissected tiles of MTM structures, we analyzed the\npathological subtype by a whole slide, which was closer to the\ndefinition of MTM-HCC (42). As a rare and highly malignant\ntumor subtype of HCC, MTM-HCC was proven to be correlated\nwith an increased recurrence risk and poor survival (42, 43). Our\nstudy supported this finding. Staining markers for pathological\nevaluation have gained increasing attention in postoperative\nmanagement. HSP70 is identified as an upregulated marker in\nHCC components and performs its role at several points of\napoptotic signaling (33). A significant difference was observed in\nthe expression of HSP70 between two risk subgroups, which was\nconsistent with the previous study (44).\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.65,
+            "box": [
+                1287.8,
+                1573.2,
+                2253.7,
+                2350.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_07_text.png",
+            "text": "The immune microenvironment plays a crucial role in\ntumor progression and recurrence. Using TMA data, we fully\nexplored the relationship between HS and immune infiltration.\nCD14-P and CD8-T were shown to be of significance. Our\nresults were supported by a previous study showing that high\ndensities of both CD3(+) and CD8(+) T cells in both the interior\nand margin were significantly associated with a low rate of\nrecurrence (p= 0.007) and prolonged RFS (p= 0.002) (45). A\nrecent study reported that a high density of marginal CCR1*\nCD14* monocytes positively correlated with CCL15 expression\nand was an independent index for dismal survival (46).\nMoreover, peritumoral monocytes were found to promote\nHCC progression by inducing cancer cell autophagy (47),\nwhich probably led to the dense expression of CD14-P in\npatients with high recurrence risk.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.43,
+            "box": [
+                1288.9,
+                2353.7,
+                2253.7,
+                2608.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_08_text.png",
+            "text": "From TCGA immune data, we observed that more M2\nmacrophages were aggregated in the tumor tissues of patients\nwith high HS. This finding was consistent with the prognostic\nvalue and tumor biochemical modulation of M2\nmacrophages (48).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.57,
+            "box": [
+                1288.6,
+                2614.7,
+                2254.6,
+                2973.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_09_text.png",
+            "text": "The correlation analysis in both the Zhongshan and TCGA\ncohorts implied different interaction patterns of immune\nmarkers. The stronger interactive effect of macrophages and\ndendritic cells in the HS high-risk subgroup highlighted the\nimportant status of antigen presentation during tumor\nprogression. The result may offer new prospects for further\nfundamental research.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.55,
+            "box": [
+                1288.7,
+                2979.6,
+                2254.7,
+                3129.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_11/region_10_text.png",
+            "text": "There are several limitations in our study. First, our training\ndata came from a single institution. There may be image\ninconsistency in model validation; thus, standardization is an\n"
+        }
+    ]
+}

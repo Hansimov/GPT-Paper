@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 4,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 75.66,
+            "box": [
+                302.3,
+                292.6,
+                2192.9,
+                441.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_08/region_1_text.png",
+            "text": "clinical annotations, such as molecular tests, for WSI of breast cancer, which is impossible to manually\ndelineate with annotations in the WSI [54].\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 85.78,
+            "box": [
+                300.9,
+                541.6,
+                2198.7,
+                1867.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_08/region_2_text.png",
+            "text": "Technically speaking, WSI classification would not be different from the image classification\nperformed in computer vision, in which CNN are trained end-to-end to predict the presence of\ncategories in natural images using image-level labels. However, end-to-end approaches cannot\nstraightforwardly be applied to WSI classification, mainly because gigapixel WSI are too large in size\nand do not fit into the memory of modern GPUs. Even switching to central processing unit\ncomputation would not resolve this problem, as a single WSI can easily require tens of gigabytes of\nmemory at full resolution. Researchers have tried to overcome this limitation through different\nmethodological innovations. A simple approach to tackle this problem is to assume that all patches in\nthe WSI contain morphological information that correlates with the WSl-level label; for example, all\npatches extracted from a WSI that contains tumor also contain tumor. Despite the simplicity of this\nassumption, it can be effective for some applications [87] [24], although it will not work when rare or\nsmall objects have to be found [88], such as small metastases in lymph nodes. The previous\nassumption can be refined by adopting a multiple instance learning (MIL) approach [89], in which at\nleast one small region in the image is considered to contain morphological information that is needed\nto classify the image; for example, the presence of a single small region containing cancer is sufficient\nto label the entire WSI as containing cancer [90] [72] [91].\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 85.21,
+            "box": [
+                300.3,
+                1971.9,
+                2194.3,
+                2703.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_08/region_3_text.png",
+            "text": "Another approach to make end-to-end training possible using WSI is to directly address the large WSI\nsize as the main limitation, with the aim being to make the input size smaller so that the WSI can be\nprocessed by modern hardware. Recent approaches based on this idea rely on WSI compression using\nneural networks [92] under the assumption that semantic information can be kept in the compressed\nversion of the entire WSI, which can then be used for downstream classification tasks while reducing\nthe data size. Other approaches decompose the end-to-end training procedure using WSI into parts\nand use advanced engineering techniques known as ‘gradient checkpointing’ to temporarily store\nintermediate results [93]. These approaches make use of modern GPUs to train with very large input\nsizes, with the aim of scaling up to the use of entire WSI as input.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 83.25,
+            "box": [
+                301.3,
+                2807.2,
+                2192.9,
+                3131.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_08/region_4_text.png",
+            "text": "In recent years, a number of CPATH methods have been presented (some of which use end-to-end\nlearning) to further enhance the pathologist by providing information currently impossible to capture\nby sole visual inspection of histopathology slides, such as prediction of response to chemotherapy or\nimmunotherapy, or even future events such as recurrence or survival [94], [95], [96], [97], [98], [99],\n"
+        }
+    ]
+}

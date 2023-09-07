@@ -1,0 +1,50 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages_ordered/page_09.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 3,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.79,
+            "box": [
+                211.8,
+                199.0,
+                2271.6,
+                2482.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_09/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                212.6,
+                2547.2,
+                1214.4,
+                2888.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_09/region_2_text.png",
+            "text": "Fig.4 Visualization and clustering of the risk heatmaps. a One exam-\nple of heatmaps of the WSIs predicted with MVI (+) and MVI (—) by\nthe MVI-DL model. Original WSIs (left); Heatmaps (right). b Unsu-\npervised cluster analysis of the top 4000 and the bottom 4000 patches\nbased on the attention score by t-SNE and DCCS algorithms. ¢ Pro-\nportion of the patches predicted as MVI (+) or MVI (—) in the eight\nclusters; Pink dotted line represents the proportion of the patches\npredicted as MVI (+) in this cluster exceeded 60%; Blue dotted line\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1276.6,
+                2546.8,
+                2278.0,
+                2845.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_09/region_3_text.png",
+            "text": "represents the proportion of the patches predicted as MVI (—) in this\ncluster exceeded 60%. d Visualization of represented patches and\ntheir corresponding grad-CAM in the predictive clusters. The colour\nscheme represents the calculated weight of probability at each region,\nwhich indicates the contribution of the corresponding area to the\nmodel prediction (red area indicates the region with most important\ncontribution, while blue area indicates less contribution)\n"
+        }
+    ]
+}

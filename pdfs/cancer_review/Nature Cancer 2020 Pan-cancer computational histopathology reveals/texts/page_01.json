@@ -1,0 +1,142 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 10,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.76,
+            "box": [
+                176.1,
+                412.3,
+                2269.4,
+                642.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_01/region_01_title.png",
+            "text": "Pan-cancer computational histopathology reveals\nmutations, tumor composition and prognosis\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 93.68,
+            "box": [
+                178.1,
+                703.6,
+                2102.6,
+                893.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_01/region_02_text.png",
+            "text": "Yu Fu’, Alexander W. Jung’, Ramon Vifias Torne'*®, Santiago Gonzalez®\"’, Harald Véhringer',\nArtem Shmatko\"2, Lucy R. Yates?, Mercedes Jimenez-Linan*, Luiza Moore ®?** and\nMoritz Gerstung®\"53™\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                176.7,
+                947.9,
+                2306.1,
+                1388.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_01/region_03_text.png",
+            "text": "We use deep transfer learning to quantify histopathological patterns across 17,355 hematoxylin and eosin-stained histopa-\nthology slide images from 28 cancer types and correlate these with matched genomic, transcriptomic and survival data. This\napproach accurately classifies cancer types and provides spatially resolved tumor and normal tissue distinction. Automatically\nlearned computational histopathological features correlate with a large range of recurrent genetic aberrations across cancer\ntypes. This includes whole-genome duplications, which display universal features across cancer types, individual chromosomal\naneuploidies, focal amplifications and deletions, as well as driver gene mutations. There are widespread associations between\nbulk gene expression levels and histopathology, which reflect tumor composition and enable the localization of transcriptomi-\ncally defined tumor-infiltrating lymphocytes. Computational histopathology augments prognosis based on histopathological\nsubtyping and grading, and highlights prognostically relevant areas such as necrosis or lymphocytic aggregates. These findings\nshow the remarkable potential of computer vision in characterizing the molecular basis of tumor histopathology.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                177.4,
+                1493.4,
+                1216.3,
+                2326.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_01/region_04_text.png",
+            "text": "he diagnosis of cancer is typically based on histopathological\n\nassessment of tissue sections, and supplemented by genetic\n\nand other molecular tests'°. Modern computer vision algo-\nrithms have high diagnostic accuracy and the potential to enhance\nhistopathology workflows’”°. Computational histopathology algo-\nrithms can process and cross-reference very large volumes of data,\nhelping pathologists to navigate and assess slides more quickly\nand aid in quantifying aberrant cells and tissues'®. Often based on\nconvolutional neural networks (CNNs), these algorithms build an\nimplicit quantification of histopathological image content, repre-\nsenting the patterns of the image as seen by the computer. These\ncomputational histopathological features are automatically learned\nfor the original task of classifying the entire image and/or subre-\ngions of images into cancer or non-cancerous tissues. However,\nonce learned, the feature representation may also be used to find\nsimilar images'’ and to quantify associations with traits beyond tis-\nsue types’”\"*. This approach, known as transfer learning, has been\nused to establish associations with genomic alterations'*\"’, tran-\nscriptomic changes*”' and survival’.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                177.6,
+                2327.8,
+                1215.4,
+                2810.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_01/region_05_text.png",
+            "text": "Here we performed a pan-cancer computational histopathol-\nogy (PC-CHiP) analysis to assess the utility of computer vision and\ntransfer learning across 28 cancer types, to study the associations\nof histopathology and genomic driver alterations, whole transcrip-\ntomes and survival. At its core, PC-CHiP is based on Inception-V4\n(ref. *°), an established CNN, which was used to extract a set of\n1,536 image features for tissue classification and transfer learning\n(Fig. 1a). The algorithm was fine-tuned on 17,355 hematoxylin and\neosin-stained fresh-frozen tissue image slides from The Cancer\nGenome Atlas (TCGA)”*, containing specimens from 10,452 indi-\nviduals from 28 tumor types and 14 normal tissues with matched\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 26.61,
+            "box": [
+                176.9,
+                3159.0,
+                736.5,
+                3192.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_01/region_06_text.png",
+            "text": "NATURE CANCER | www.nature.com/natcancer\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1265.1,
+                1496.3,
+                2303.8,
+                1934.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_01/region_07_text.png",
+            "text": "genomic, transcriptomic and clinical outcome data. Slides were tiled\ninto more than 14 million 256 um Xx 256 um-sized tiles with a digital\nresolution of 512 pixels x 512 pixels. Tiles from 9,754 slides with a\ntumor purity of >85% were split into 80% training and 20% valida-\ntion data for training based on 42 broadly defined tissue labels. The\nresulting quantitative histopathology representation accurately dis-\ncriminated against different tissues, and displayed pervasive associ-\nations with underlying genomic alterations, widespread correlations\nwith transcriptomic signatures and prognostic information across\nmost cancer types.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 97.97,
+            "box": [
+                1266.2,
+                1974.0,
+                1395.2,
+                2021.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_01/region_08_title.png",
+            "text": "Results\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1266.2,
+                2020.8,
+                2303.5,
+                2810.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_01/region_09_text.png",
+            "text": "Pan-cancer tissue classification and spatial deconvolution. For 14\ncancers with normal and tumor images, the average tumor/normal\ntissue classification area under the receiver operating character-\nistic curve (AUC) was 0.99 (all values are given for the held-back\nvalidation set; range: 0.96 to 0.99; Fig. 1b). The average pan-tissue\nAUC of discriminating all 42 different tissues was 0.98 (range: 0.91\nto 0.99), including the 14 cancer types without matched normal\nsamples (Supplementary Table 1; see Discussion for potential limi-\ntations). To achieve this classification, PC-CHiP builds an image\nrepresentation of each tile consisting of the output of the last 1,536\nneurons of the network (Fig. 1a). Hereafter we refer to this output\nas ‘computational histopathological features’ and demonstrate that\nthis representation enables us to derive quantitative associations\nwith a range of molecular traits. As the network was trained to dis-\ncriminate different tissues, a two-dimensional uniform manifold\napproximation and projection for dimension reduction (UMAP)\nrepresentation (see Methods) of the computational histopatho-\nlogical features showed clusters corresponding to each tissue class\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 78.43,
+            "box": [
+                175.6,
+                2908.9,
+                2289.6,
+                3110.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_01/region_10_text.png",
+            "text": "‘European Molecular Biology Laboratory, European Bioinformatics Institute (EMBL-EBI), Hinxton, UK. 7*Moscow State University, Moscow, Russia. Cancer,\nAgeing and Somatic Mutation, Wellcome Sanger Institute, Hinxton, UK. Department of Pathology, Addenbrooke's Hospital, Cambridge, UK. >Genome\nBiology Unit, European Molecular Biology Laboratory, Heidelberg, Germany. °Present address: Department of Computer Science and Technology,\nUniversity of Cambridge, Cambridge, UK. 7Present address: Institute for Research in Biomedicine (IRB Barcelona), Barcelona, Spain. ®These authors jointly\nsupervised this work: Luiza Moore, Moritz Gerstung. “e-mail: moritz.gerstung@ebi.ac.uk\n"
+        }
+    ]
+}

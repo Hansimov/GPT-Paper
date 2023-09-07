@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_03.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 3,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 45.17,
+            "box": [
+                382.8,
+                332.7,
+                2190.4,
+                2515.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_03/region_1_text.png",
+            "text": "Correspondence:\n\nJessica Zucman-Rossi; MD, PhD\n\nINSERM U 1162, Génomique fonctionnelle des tumeurs solides\n\n27 Rue Juliette Dodu\n\n75010 Paris, France\n\nTEL: +33 1 53 72 51 66\n\nFAX: +33 153 725192\n\nEmail: jessica.zucman-rossi@inserm.fr\n\nAbbreviations: AFP: alpha-foeto protein, ALB: albumin, ANGPT2: angiopoietin 2,\nAPOB: apolipoprotein B, ARID1A: AT-Rich Interaction Domain 1A, ARID2: AT-Rich\nInteraction Domain 2, ATM: ATM Serine/Threonine Kinase, BCLC: Barcelona clinic of\nliver cancer, CI: confidence interval, CK19: cytokeratin 19, CRP: c-reactive protein,\nCTNNB1 : cadherin-associated protein beta 1, EpCAM : epithelial cell adhesion molecule,\nGS : glutamine synthetase HBV: hepatitis B virus, HCC : hepatocellular carcinoma, HCV, :\nhepatitis C virus, IL6: interleukin-6, JAK: Janus Kinase, NFE2L2: nuclear factor,\nerythroid 2 Like 2, OR: odds ratio, PCR: polymerase chainyreaction, RPS6KA3: Ribosomal\nProtein S6 Kinase A3, STAT: signal transducer and activator of transcription, TERT:\ntelomerase reverse transcriptase, TP53 : tumour protein 53, TSC1 : tuberous sclerosis 1,\nTSC2: tuberous sclerosis 2, WHO : World Health Organization.\n\nAuthors contributions:\n\nStudy design: JC, JZR\n\nGeneration of experimental data: JC, GC, JCN\n\nAnalysis and interpretation ofdata:JC, GC, SI, YH, JCN, JZR\n\nCollection of samples and histological and clinical data: JC, GA, DA, CL, JFB, PBS, JZR\nDrafting of the manuscript: JC)JCN, JZR\n\nRevision of the manuscript and approval of its final version: JC, GC, SI, GA, JFB, CL, YH,\nDA, PBS, JCN, JZR\n\nObtained funding: JZR\n\nFinancialy supports: Institut National du Cancer (INCa) with the ICGC project, the\nMUTHEC project (PRTK14, INCa), the LABEX OncoImmunology funded by\nInvestissement d’Avenir ANR, the Ligue Nationale Contre le Cancer (équipe labellisée)\nand the Fondation Bettencourt Schuller (Coup d’Elan), Award Raymond Rosen 2016\n(FRM).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 93.57,
+            "box": [
+                385.0,
+                2617.0,
+                2172.2,
+                2740.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_03/region_2_text.png",
+            "text": "Conflict of interests: the authors have no conflicts of interests related to the\nmanuscript.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 86.07,
+            "box": [
+                386.4,
+                2809.3,
+                782.5,
+                2866.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_03/region_3_text.png",
+            "text": "Word count: 4263.\n"
+        }
+    ]
+}

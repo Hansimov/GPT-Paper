@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_22.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_22.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 22
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 55.27,
+            "box": [
+                498.3,
+                366.5,
+                1997.8,
+                1830.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_22/region_1_list.png",
+            "text": "7. Tan J, Hammond JH, Hogan DA, Greene CS. ADAGE-based integration of publicly available pseudomonas aer-\nuginosa gene expression data with denoising autoencoders illuminates microbe-host interactions. MSystems.\n2016;1(1):e00025-15.\n\n8. Katzman JL, Shaham U, Cloninger A, Bates J, Jiang T, Kluger Y. DeepSurv: personalized treatment recommender\nsystem using a Cox proportional hazards deep neural network. BMC Med Res Methodol. 2018;18(1):24. https://doi.\norg/10.1186/s12874-018-0482-1.\n\n9. Bello GA, Dawes TJW, Duan J, Biff C, De Marvao A, Howard LSGE, et al. Deep-learning cardiac motion analysis for\nhuman survival prediction. Nat Mach Intell. 2019;1 (2):95-104.\n\n10. Yang B, Fu X, Sidiropoulos ND, Hong M. Towards k-means-friendly spaces: Simultaneous deep learning and cluster-\ning. In: international conference on machine learning. PMLR; 2017. p. 3861-70.\n\n11. WeiL, Jin Z, Yang S, Xu Y, Zhu Y, Ji Y. TCGA-assembler 2: software pipeline for retrieval and processing of TCGA/CPTAC\ndata. Bioinformatics. 2018;34(9):1615-7.\n\n12. Hastie T, Tibshirani R, Narasimhan B, Chu G. impute: impute: Imputation for microarray data. 2018.\n\n13. Fujimoto A, Furuta M, Totoki Y, Tsunoda T, Kato M, Shiraishi Y, Tanaka H, Taniguchi H, Kawakami Y, Ueno M, Gotoh K.\nWhole-genome mutational landscape and characterization of noncoding and structural mutations in liver cancer.\nNat Genet. 2016;48(5):500-9.\n\n14. Chollet F. Keras. 2015. Available from: https://keras.io\n\n15. Abadi M, Agarwal A, Barham P, Brevdo E, Chen Z, Citro C, et al. TensorFlow: large-scale machine learning on hetero-\ngeneous systems. 2015.\n\n16. Pedregosa F, Varoquaux G, Gramfort A, Michel V, Thirion B, Grisel O, et al. Scikit-learn: Machine learning in Python. J\nMach Learn Res. 2011;12(Oct):2825-30.\n\n17. Rousseeuw PJ. Silhouettes: a graphical aid to the interpretation and validation of cluster analysis. J Comput Appl\nMath. 1987;20:53-65.\n\n18. Therneau TM. A package for survival analysis in R. 2020. Available from: https://cran.r-project.org/package=survival\n\n19. Davidson-Pilon C. Lifelines: survival analysis in Python. J Open Source Softw. 2019;4(40):1317.\n\n20. Virtanen P,Gommers R, Oliphant TE, Haberland M, Reddy T, Cournapeau D, et al. SciPy 1.0: fundamental algorithms\nfor scientific computing in python. Nat Methods. 2020;17:352.\n\n21. Sherman BT, Lempicki RA, et al. Systematic and integrative analysis of large gene lists using DAVID bioinformatics\nresources. Nat Protoc. 2009;4(1):44.\n\n22. Waskom M, Botvinnik O, O'Kane D, Hobson P, Lukauskas S, Gemperline DC, et al. mwaskom/seaborn: v0.8.1 (Septem-\nber 2017). Zenodo; 2017. https://doi.org/10.5281/zenodo.883859.\n\n23. Long J, Chen P Lin J, Bai Y, Yang X, Bian J, et al. DNA methylation-driven genes for constructing diagnostic, prognos-\ntic, and recurrence models for hepatocellular carcinoma. Theranostics. 2019;9(24):725 1-67.\n\n24. Zheng Y, Liu, Zhao S, Zheng Z, Shen C, An L, et al. Large-scale analysis reveals a novel risk score to predict overall\nsurvival in hepatocellular carcinoma. Cancer Manag Res. 2018;10:6079-96.\n\n25. Lan F,Wang H, Chen Y, Chan C, Ng SS, Li K, et al. Has-let-7g inhibits proliferation of hepatocellular carcinoma cells by\ndownregulation of c-Myc and upregulation of p16INK4A. Int J Cancer. 2011;128(2):319-31.\n\n26. Dong X, Feng M, Yang H, Liu H, Guo H, Gao X, et al. Rictor promotes cell migration and actin polymerization through\nregulating ABLIM1 phosphorylation in Hepatocellular Carcinoma. Int J Biol Sci. 2020;16(15):2835-52.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 97.93,
+            "box": [
+                490.3,
+                1878.2,
+                800.6,
+                1930.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_22/region_2_title.png",
+            "text": "Publisher’s Note\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 98.94,
+            "box": [
+                489.3,
+                1928.0,
+                1910.4,
+                1964.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_22/region_3_text.png",
+            "text": "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "figure",
+            "score": 28.59,
+            "box": [
+                1033.1,
+                2462.9,
+                1986.9,
+                2946.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_22/region_4_figure.png"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 26.27,
+            "box": [
+                1070.9,
+                2947.8,
+                1641.6,
+                2981.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_22/region_5_text.png",
+            "text": "Learn more biomedcentral.com/submissions\n"
+        }
+    ]
+}

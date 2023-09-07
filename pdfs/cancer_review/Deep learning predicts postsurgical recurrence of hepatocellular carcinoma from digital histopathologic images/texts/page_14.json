@@ -1,0 +1,168 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_14.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_14.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 12,
+        "page_idx": 14
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 97.48,
+            "box": [
+                648.2,
+                207.4,
+                2316.4,
+                292.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_01_text.png",
+            "text": "Stanford Research Computing Center. We would also like to thank Dr. Lu Tian for helpful initial conversations\nregarding analysis planning.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 96.44,
+            "box": [
+                651.4,
+                318.2,
+                1068.9,
+                377.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_02_title.png",
+            "text": "Author contributions\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.28,
+            "box": [
+                647.8,
+                370.3,
+                2316.6,
+                542.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_03_text.png",
+            "text": "R.Y., D.L.R., and J.S. conceived and designed the study; R.Y. and J.S. performed the literature search. R.Y., A.S.\nand J.S. performed the data collection; R.Y. performed the model development and performance evaluation; R.Y.\nand J.L. performed the statistical analyses; R.Y. drafted the manuscript; D.L.R. and J.S. supervised the study; all\nauthors participated in the critical revision and approval of the manuscript.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 84.91,
+            "box": [
+                649.5,
+                574.3,
+                1057.2,
+                631.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_04_title.png",
+            "text": "Competing interests\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 97.66,
+            "box": [
+                652.3,
+                626.6,
+                1309.4,
+                672.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_05_text.png",
+            "text": "The authors declare no competing interests.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 84.94,
+            "box": [
+                650.0,
+                696.3,
+                1107.0,
+                756.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_06_title.png",
+            "text": "Additional information\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 92.53,
+            "box": [
+                649.4,
+                752.6,
+                2314.9,
+                836.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_07_text.png",
+            "text": "Supplementary Information The online version contains supplementary material available at https://doi.\norg/10.1038/s41598-021-81506-y.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 95.61,
+            "box": [
+                648.9,
+                857.1,
+                1707.4,
+                900.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_08_text.png",
+            "text": "Correspondence and requests for materials should be addressed to J.S.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 93.88,
+            "box": [
+                650.2,
+                919.0,
+                1858.1,
+                962.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_09_text.png",
+            "text": "Reprints and permissions information is available at www.nature.com/reprints.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 95.49,
+            "box": [
+                650.2,
+                981.9,
+                2314.4,
+                1068.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_10_text.png",
+            "text": "Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and\ninstitutional affiliations.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 98.77,
+            "box": [
+                649.7,
+                1083.1,
+                2317.9,
+                1420.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_11_text.png",
+            "text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International\n\ni License, which permits use, sharing, adaptation, distribution and reproduction in any medium or\nformat, as long as you give appropriate credit to the original author(s) and the source, provide a link to the\nCreative Commons licence, and indicate if changes were made. The images or other third party material in this\narticle are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the\nmaterial. If material is not included in the article's Creative Commons licence and your intended use is not\npermitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from\nthe copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 19.29,
+            "box": [
+                651.5,
+                1462.2,
+                974.5,
+                1504.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_12_text.png",
+            "text": "© The Author(s) 2021\n"
+        }
+    ]
+}

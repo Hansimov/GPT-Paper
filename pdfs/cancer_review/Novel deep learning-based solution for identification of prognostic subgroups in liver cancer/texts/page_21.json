@@ -1,0 +1,350 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_21.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_21.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 26,
+        "page_idx": 21
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 94.03,
+            "box": [
+                490.5,
+                365.4,
+                680.1,
+                402.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_01_title.png",
+            "text": "Abbreviations\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.67,
+            "box": [
+                491.1,
+                403.6,
+                1987.4,
+                589.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_02_text.png",
+            "text": "HCC: Hepatocellular carcinoma; TCGA: The Cancer Genome Atlas; ICGC: International Cancer Genome Consortium; GEFA:\nGene-enrichment and Functional Annotation Analysis; LIRI-JP: The Liver Cancer, Riken Japan; BCE: Binary cross-entropy;\nMSE: Mean squared error; Lc: Clustering-based loss; L,: Survival based loss; Ly: Reconstruction based loss; Lp-: Clustering\nand reconstruction based combined loss; Lg: Survival and reconstruction. based combined loss; Lasc: Survival, clustering\nand reconstruction-based combined loss; hybrid model.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 98.8,
+            "box": [
+                490.0,
+                641.2,
+                1025.2,
+                691.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_03_title.png",
+            "text": "Supplementary Information\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 97.92,
+            "box": [
+                489.0,
+                703.3,
+                1845.3,
+                739.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_04_text.png",
+            "text": "The online version contains supplementary material available at https://doi.org/10.1186/s12859-021-04454-4.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 65.17,
+            "box": [
+                514.8,
+                806.4,
+                1889.3,
+                918.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_05_text.png",
+            "text": "Additional file 1: Supplementary Tables. Table $1. Results from the univariate cox models for each bottleneck\nfeature for best run of LRSC. Table $2. Methylation features consistently identified in ten runs of LRSC that are\nsignificant for prognosis.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 90.11,
+            "box": [
+                490.0,
+                977.7,
+                761.0,
+                1015.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_06_title.png",
+            "text": "Acknowledgements\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 87.92,
+            "box": [
+                489.4,
+                1017.4,
+                675.6,
+                1053.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_07_text.png",
+            "text": "Not applicable.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 88.17,
+            "box": [
+                490.1,
+                1077.6,
+                792.4,
+                1114.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_08_title.png",
+            "text": "Authors’ contributions\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 98.8,
+            "box": [
+                489.8,
+                1115.1,
+                1953.1,
+                1266.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_09_text.png",
+            "text": "ARO: Conceptualization, Methodology, Software, Validation, Investigation, Data Curation, Writing—Original Draft CEM:\nConceptualization, Methodology, Writing—Review and Editing KMP: Writing—Review and Editing DGM: Supervision,\nConceptualization, Writing—Review and Editing AJL: Supervision, Writing—Review and Editing, Conceptualization,\nMethodology. All authors have read and approved the manuscript.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 91.03,
+            "box": [
+                489.7,
+                1290.2,
+                603.6,
+                1327.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_10_title.png",
+            "text": "Funding\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.31,
+            "box": [
+                490.6,
+                1327.8,
+                1966.0,
+                1440.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_11_text.png",
+            "text": "This work was supported by funding from a Department for the Economy in Northern Ireland Studentship to ARO and\nthe Brainwaves Northern Ireland Charity (Registered Charity Number: NIC103464) to KMP. The funders played no role in\nthe collection, analysis, interpretation of data or in the writing of the manuscript.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 79.51,
+            "box": [
+                490.4,
+                1465.2,
+                933.8,
+                1503.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_12_title.png",
+            "text": "Availability of data and materials\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.58,
+            "box": [
+                491.2,
+                1503.7,
+                1983.9,
+                1653.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_13_text.png",
+            "text": "TCGA data was downloaded using TCGA-Assembler 2 which can be accessed on https://github.com/compgenome365/\nTCGA-Assembler-2. LIRI-JP data was accessed using HCCDB which can be found on http://lifeome.net/database/hccdb/\nhome.html. All source code developed by this study is publicly available at: https://github.com/aowens-code/DeepL\nearningSurvivalClustering.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "title",
+            "score": 97.56,
+            "box": [
+                489.2,
+                1725.4,
+                698.4,
+                1771.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_14_title.png",
+            "text": "Declarations\n"
+        },
+        {
+            "idx": 15,
+            "thing": "title",
+            "score": 85.4,
+            "box": [
+                489.4,
+                1795.0,
+                1059.3,
+                1833.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_15_title.png",
+            "text": "Ethics approval and consent to participate\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 93.56,
+            "box": [
+                488.2,
+                1833.7,
+                677.3,
+                1871.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_16_text.png",
+            "text": "Not applicable.\n"
+        },
+        {
+            "idx": 17,
+            "thing": "title",
+            "score": 63.04,
+            "box": [
+                489.4,
+                1894.8,
+                808.4,
+                1933.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_17_title.png",
+            "text": "Consent for publication\n"
+        },
+        {
+            "idx": 18,
+            "thing": "text",
+            "score": 93.5,
+            "box": [
+                488.6,
+                1934.1,
+                676.7,
+                1971.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_18_text.png",
+            "text": "Not applicable.\n"
+        },
+        {
+            "idx": 19,
+            "thing": "title",
+            "score": 67.45,
+            "box": [
+                489.1,
+                1995.8,
+                765.2,
+                2032.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_19_title.png",
+            "text": "Competing interests\n"
+        },
+        {
+            "idx": 20,
+            "thing": "text",
+            "score": 97.82,
+            "box": [
+                491.0,
+                2033.8,
+                1227.4,
+                2070.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_20_text.png",
+            "text": "The authors declare that they have no competing interests.\n"
+        },
+        {
+            "idx": 21,
+            "thing": "title",
+            "score": 67.59,
+            "box": [
+                490.1,
+                2095.8,
+                681.3,
+                2132.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_21_title.png",
+            "text": "Author details\n"
+        },
+        {
+            "idx": 22,
+            "thing": "text",
+            "score": 98.46,
+            "box": [
+                490.9,
+                2132.9,
+                1977.7,
+                2246.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_22_text.png",
+            "text": "'School of Electronics, Electrical Engineering and Computer Science, Queen’s University Belfast, 18 Malone Road,\nBelfast BT9 5BN, Northern Ireland, UK. ?Patrick G. Johnson Centre for Cancer Research, Queen's University Belfast, Belfast,\nNorthern Ireland, UK.\n"
+        },
+        {
+            "idx": 23,
+            "thing": "text",
+            "score": 41.12,
+            "box": [
+                489.6,
+                2283.4,
+                1186.0,
+                2320.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_23_text.png",
+            "text": "Received: 6 January 2021 Accepted: 20 October 2021\n"
+        },
+        {
+            "idx": 24,
+            "thing": "text",
+            "score": 76.32,
+            "box": [
+                490.5,
+                2328.1,
+                1019.4,
+                2369.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_24_text.png",
+            "text": "Published online: 24 November 2021\n"
+        },
+        {
+            "idx": 25,
+            "thing": "title",
+            "score": 80.57,
+            "box": [
+                490.0,
+                2483.8,
+                638.1,
+                2521.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_25_title.png",
+            "text": "References\n"
+        },
+        {
+            "idx": 26,
+            "thing": "list",
+            "score": 96.76,
+            "box": [
+                496.7,
+                2522.8,
+                1994.7,
+                2971.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_21/region_26_list.png",
+            "text": "1. European Association For The Study Of The Liver. EASL clinical practice guidelines: management of hepatocellular\ncarcinoma. J Hepatol. 2018;69(1):182-236.\n\n2. El-Serag HB. Epidemiology of viral hepatitis and hepatocellular carcinoma. Gastroenterology. 2012;142(6):1264-1273.\nel.\n\n3. Ghouri YA, Mian |, Rowe JH. Review of hepatocellular carcinoma: Epidemiology, etiology, and carcinogenesis. J\nCarcinog. 2017;16:1.\n\n4. Poirion OB, Chaudhary K, Garmire LX. Deep Learning data integration for better risk stratification models of bladder\ncancer. AMIA Jt Summits Trans! Sci. 2018;2017:197-206.\n\n5. ZhangL,LvC, Jin Y, Cheng G, Fu Y, Yuan D, et al. Deep learning-based multi-omics data integration reveals two prog-\nnostic subtypes in high-risk neuroblastoma. Front Genet. 2018;9:477. https://doi.org/10.3389/fgene.201 8.00477.\n\n6. Chaudhary K, Poirion OB, Lu L, Garmire LX. Deep learning-based multi-omics integration robustly predicts survival in\nliver cancer. Clin Cancer Res. 2018;24(6):1248-59.\n"
+        }
+    ]
+}

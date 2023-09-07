@@ -1,0 +1,38 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_17.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_17.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 2,
+        "page_idx": 17
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 41.58,
+            "box": [
+                300.8,
+                298.7,
+                522.5,
+                357.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_17/region_1_text.png",
+            "text": "References\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 94.44,
+            "box": [
+                298.8,
+                383.7,
+                2198.9,
+                3053.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_17/region_2_list.png",
+            "text": "[1] Yu, K.H., Beam, A. L. & Kohane, I. S. Artificial intelligence in healthcare. Nature biomedical\nengineering 2, 719-731 (2018).\n\n[2] Hamet, P. & Tremblay, J., Artificial intelligence in medicine. Metabolism: clinical and\nexperimental 69S, S36—S40 (2017).\n\n[3] Litjens, G. et al. A survey on deep learning in medical image analysis. Medical image analysis\n42, 60-88 (2017).\n\n[4] Fuchs, T. J. & Buhmann, J. M. Computational pathology: challenges and promises for tissue\nanalysis. Computerized medical imaging and graphics 35, 515-530 (2011).\n\n[5] Louis, D. N. et al. Computational pathology: an emerging definition. Archives of pathology &\nlaboratory medicine 138, 1133-1138 (2014).\n\n[6] Mendelsohn, M. L., Kolman, W. A., Perry, B. & Prewitt, J. M. Computer analysis of cell images.\nPostgraduate medicine 38, 567-573 (1965).\n\n[7] Zwanenburg, A. et al. The Image Biomarker Standardization Initiative: Standardized\nQuantitative Radiomics for High-Throughput Image-based Phenotyping. Radiology 295, 328-338\n(2020).\n\n[8] Madabhushi, A. & Lee, G. Image analysis and machine learning in digital pathology: Challenges\nand opportunities. Medical image analysis 33, 170-175 (2016).\n\n[9] Ciresan, D. C., Meier, U., Masci, J., Gambardella, L. M. & Schmidhuber, J. Flexible, high\nperformance convolutional neural networks for image classification. Proceedings of the Twenty-\nSecond International Joint Conference on Artificial Intelligence, 1237-1242 (2011).\n\n[10] Ciresan, D. C., Giusti, A., Gambardella, L. M. & Schmidhuber, J. Mitosis detection in breast\ncancer histology images with deep neural networks. Proceedings of Medical Image Computing and\nComputer-Assisted Intervention. Lecture Notes in Computer Science 8150, 411-418 (2013).\n\n[11] Cruz-Roa, A. et al. Automatic detection of invasive ductal carcinoma in whole slide images with\nconvolutional neural networks. Proceedings of SPIE Medical Imaging 9041, 904103 (2014)\n\n[12] Ertosun, M. G. & Rubin, D. L. Automated Grading of Gliomas using Deep Learning in Digital\nPathology Images: A modular approach with ensemble of convolutional neural networks. Proceedings\nof American Medical Informatics Association (AMIA) Annual Symposium, 1899-1908 (2015)\n\n[13] Litjens, G. et al. Deep learning as a tool for increased accuracy and efficiency of\nhistopathological diagnosis. Scientific Reports 6, 26286 (2016).\n\n[14] Srinidhi, C. L., Ciga, O. & Martel, A. L. Deep neural network models for computational\nhistopathology: A survey. Medical image analysis 67, 101813 (2021).\n"
+        }
+    ]
+}

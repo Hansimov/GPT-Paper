@@ -1,0 +1,128 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 9,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.84,
+            "box": [
+                235.0,
+                376.0,
+                2244.9,
+                1941.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_06/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 94.03,
+            "box": [
+                284.9,
+                1963.0,
+                385.6,
+                1997.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_06/region_2_title.png",
+            "text": "FIGURE 2\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.76,
+            "box": [
+                285.5,
+                1998.8,
+                2175.3,
+                2223.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_06/region_3_text.png",
+            "text": "Visualization of WSI classification for HCC tissue in the Zhongshan cohort. (A) Six classic categories of HCC tissue, including normal liver tissue\n(NLT), portal area (PA), fibrosis (Fl), lymphocyte area (LA), tumor region (TR) and hemorrhage/necrotic area (H/NA). (B) Two representative\noutputs of the classification network. Red represents TR, green represents NLT, light blue represents FI, dark blue represents PA, purple\nrepresents LCA, and yellow represents H/NA. (C) Precision-recall curve of category-based sampling. (D) Normalized confusion matrix for the\nclassification network. (E) t-SNE analysis for visualization of six tissue categories. (F) CAM results for visualization of HCC tissues. HCC,\nhepatocellular carcinoma; CAM, class activation mapping; t-SNE, t-distributed stochastic neighbor embedding.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                236.8,
+                2333.4,
+                1196.3,
+                2640.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_06/region_4_text.png",
+            "text": "high-risk group (HS> -0.1605954, CS> 3.417892) and a low-risk\ngroup (HSs -0.1605954, CS< 3.417892). Figure 4 and\nSupplementary Figure S7 depict the survival curves of HS and\nCS, respectively. Generally, patients in the high-risk group from the\nthree cohorts faced notable susceptibility to postoperative\nrecurrence and poorer survival.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.61,
+            "box": [
+                237.6,
+                2737.8,
+                1101.5,
+                2850.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_06/region_5_title.png",
+            "text": "Prognostic predictors of RFS in early-\nstage HCC\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                236.6,
+                2906.8,
+                1197.1,
+                3109.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_06/region_6_text.png",
+            "text": "We performed Cox proportional hazards regression analysis\nto explore the independent predictors for RFS in the training and\nvalidation cohorts (Table 2). Eleven candidates were proven to\nbe significant in the univariable analysis and were then evaluated\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.74,
+            "box": [
+                1289.0,
+                2333.7,
+                2247.1,
+                2483.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_06/region_7_text.png",
+            "text": "with multivariable Cox regression. The multivariable analysis\nrevealed that MVI (HR= 1.459, 95% CI: 1.094-1.948) and HS\n(HR= 4.054, 95% CI: 3.397-4.838) were significant indicators.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 99.78,
+            "box": [
+                1287.2,
+                2582.7,
+                2074.7,
+                2695.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_06/region_8_title.png",
+            "text": "The correlation between HS and\nclinicopathological characteristics\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1288.4,
+                2749.0,
+                2246.7,
+                3109.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_06/region_9_text.png",
+            "text": "As shown in Figure 5, the clinical characteristics and prognostic\nvalue of HS were compared in the different risk subgroups, namely,\nthe low-risk group (n= 332) and the high-risk group (n= 215).\nCompared to patients in the low-risk group, more patients in the\nhigh-risk group had elevated AFP levels (65.6% vs 51.2%).\nMoreover, HCCs in the high-risk group were characterized by\npoorer tumor differentiation, and a higher proportion of MVI.\n"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_20.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_20.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 2,
+        "page_idx": 20
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 97.66,
+            "box": [
+                800.5,
+                233.2,
+                1677.4,
+                1835.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_20/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.83,
+            "box": [
+                176.8,
+                1878.6,
+                2304.4,
+                2091.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_20/region_2_text.png",
+            "text": "Extended Data Fig. 9 | Histopathological feature representations before and after retraining of Inception-V4. UMAP representation of the\nhistopathological features from the original Inception model (n=200 tiles randomly selected for each tissue type/JPEG quality) (a, b) and the modified,\nretrained architecture (e, d). a, lung adenocarcinoma, squamous cell carcinoma and normal lung tissue highlighted. b, breast tumor and normal from TCGA\nand breast tumor from METABRIC highlighted. ¢, as ina, but for the modified architecture. d, as ¢ based on the modified architecture. In each figure, the\nplot on the right side is colored by tissue type and the plot on the left side is colored by jpeg quality.\n"
+        }
+    ]
+}

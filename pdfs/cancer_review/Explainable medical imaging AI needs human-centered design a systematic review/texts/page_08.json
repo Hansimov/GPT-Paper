@@ -1,0 +1,245 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 18,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                188.3,
+                241.6,
+                1224.6,
+                368.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_01_text.png",
+            "text": "that these design directives will catalyze forthcoming efforts to\nbuild transparent ML systems for healthcare that demonstrably\nachieve the desired human factors engineering goals.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 98.08,
+            "box": [
+                189.6,
+                443.5,
+                359.5,
+                485.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_02_title.png",
+            "text": "METHODS\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.01,
+            "box": [
+                189.3,
+                495.3,
+                817.6,
+                535.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_03_title.png",
+            "text": "Search strategy and selection criteria\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                189.3,
+                546.7,
+                1223.9,
+                845.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_04_text.png",
+            "text": "The aim of the systematic review is to survey the current state of\ntransparent ML methods for medical image analysis. Because ML\ntransparency as major research thrust has emerged following the\nomnipresence of highly complex ML models, such as deep CNNs,\nwe limited our analysis to records that appeared after January\n2012, which pre-dates the onset of the ongoing surge of interest\nin learning-based image processing?'.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                189.4,
+                848.3,
+                1223.9,
+                1234.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_05_text.png",
+            "text": "We conducted a systematic literature review in accordance with\nthe Preferred Reporting Items for Systematic reviews and Meta-\nAnalyses (PRISMA) method°?. We searched PubMed, EMBASE, and\nCompendex databases to find articles pertinent to transparent ML\n(including but not limited to explainable and interpretable ML) for\nmedical imaging by screening titles, abstracts, and keywords of all\navailable records from January 2012 through July 2021. Details of\nthe search terms and strategy can be found in Supplementary\ninformation B.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 98.78,
+            "box": [
+                189.1,
+                1290.4,
+                447.5,
+                1330.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_06_title.png",
+            "text": "Study selection\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                188.6,
+                1341.6,
+                1222.5,
+                1857.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_07_text.png",
+            "text": "Following the removal of duplicates (1731 remained), studies were\nfirst pre-screened using the title and abstract. Studies that did not\ndescribe transparent methods nor medical imaging problems\nwere immediately excluded (217 remained). We then proceeded\nto full-text review, where each study was examined to determine\nwhether the study presented and evaluated a transparent ML\ntechnique for medical image analysis. Failure to comply with the\ndescribed inclusion/exclusion criteria resulted in the study’s\nremoval from further consideration. Detailed statistics and a\ncomplete description of the pre-screening and full-text review can\nbe found in Supplementary information C and Fig. 4. 68 articles\nwere included for information extraction.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "figure",
+            "score": 99.86,
+            "box": [
+                230.2,
+                1906.8,
+                1181.2,
+                2888.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_08_figure.png"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                189.9,
+                2912.7,
+                1223.7,
+                3062.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_09_text.png",
+            "text": "Fig. 4 PRISMA diagram for transparent ML in medical imaging.\nThe flow diagram shows the number of records identified, of studies\nexcluded and the reasons for exclusion, and of studies included in\nour systematic review.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 98.23,
+            "box": [
+                1298.7,
+                241.7,
+                1708.6,
+                282.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_10_title.png",
+            "text": "Data extraction strategy\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1298.0,
+                292.6,
+                2333.3,
+                1132.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_11_text.png",
+            "text": "For the 68 selected articles that met the inclusion criteria, two\nauthors (H.C. and C.G.) performed detailed data extraction to\nsummarize important information related to the six themes\ndescribed in INTRPRT Guideline Section. A data extraction\ntemplate was developed by all authors and is summarized in\nSupplementary information D. Every one of the 68 articles was\nanalyzed and coded by both authors independently and one\nauthor (H.C.) merged the individual reports into a final consensus\ndocument. Despite our efforts to broadly cover all relevant search\nterms regarding transparent ML in medical imaging, we acknowl-\nedge that the list may not be exhaustive. There are vast numbers\nof articles that have imbued transparency in their methodology,\nbut transparency (or contemporary synonyms thereof, such as\nexplainability or interpretability) is not explicitly mentioned in the\ntitle, abstract, or keywords of these articles, and often not even in\nthe body of the text°?. This fact makes intractable to identify all\narticles about transparent ML methods. Finally, the review is\nlimited to published manuscripts, long articles and novel\napproaches. Publication bias may have resulted in the exclusion\nof works relevant to this review.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 98.86,
+            "box": [
+                1298.0,
+                1207.0,
+                2245.7,
+                1290.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_12_title.png",
+            "text": "DETAILED ANALYSIS OF FINDINGS DURING SYSTEMATIC\nREVIEW\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1298.3,
+                1300.3,
+                2332.1,
+                1552.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_13_text.png",
+            "text": "The data extraction template for studies included in the\nsystematic review was structured using the six themes of the\nINTRPRT guideline, the adequacy of which was confirmed during\ndata extraction. Therefore, we summarize our findings for each\ntheme and provide details of the extraction results for each article\nin Tables 2&3 in Supplementary information D.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "title",
+            "score": 98.6,
+            "box": [
+                1298.7,
+                1607.2,
+                1582.8,
+                1645.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_14_title.png",
+            "text": "IN: incorporation\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1298.1,
+                1655.8,
+                2333.3,
+                2539.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_15_text.png",
+            "text": "A common trend among included studies (n = 33) was that the\npresented methods were developed by multidisciplinary clinician-\nengineering teams, as was evidenced by the incorporation of\nclinical specialists, such as physicians, radiologists, or pathologists,\nin the study team and on the author lists. In light of the current\nbias towards clinicians as end users of transparent ML algorithms,\nthis observation suggests that designers may have communicated\nwith a limited subset of the intended end users. However, no\nformative user research is explicitly described or introduced in\nthese articles to systematically understand the end users before\nimplementing the model. Further, we found that incorporating\nclinical experts did not have a considerable impact on whether\nclinical priors or standard or care guidelines (i.e., Level 2 evidence)\nwere used to build the ML system (39%/44% articles with/without\nthe incorporation of end users use clinical priors). Regarding the\ntechnical approach to provide transparency, the incorporation of\nmedical experts motivated designers to incorporate prior knowl-\nedge directly into the model structure and/or inference for\nmedical imaging (73%/64% articles with/without the incorpora-\ntion of end users do not need a second model to generate\ntransparency).\n"
+        },
+        {
+            "idx": 16,
+            "thing": "title",
+            "score": 98.12,
+            "box": [
+                1299.0,
+                2595.6,
+                1608.6,
+                2634.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_16_title.png",
+            "text": "IN: interpretability\n"
+        },
+        {
+            "idx": 17,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1298.4,
+                2646.2,
+                2332.0,
+                2980.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_17_text.png",
+            "text": "Transparency of ML systems was achieved through various\ntechniques, including attention mechanisms (n=15), use of\nhuman-understandable features (n = 11), a combination of deep\nneural networks and transparent traditional ML methods (n = 7),\nvisualization approaches (n=5), clustering methods (n= 4),\nuncertainty estimation/confidence calibration (n= 3), relation\nanalysis between outputs and hand-crafted features (n = 3), and\nother custom techniques (n = 20).\n"
+        },
+        {
+            "idx": 18,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1299.2,
+                2982.0,
+                2331.9,
+                3063.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Explainable medical imaging AI needs human-centered design a systematic review/crops_ordered/page_08/region_18_text.png",
+            "text": "The use of an attention mechanism was the most common\ntechnique for adding transparency. Attention mechanisms\n"
+        }
+    ]
+}

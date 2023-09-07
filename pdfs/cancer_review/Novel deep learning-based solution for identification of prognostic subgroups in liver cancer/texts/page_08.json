@@ -1,0 +1,102 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 7,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.76,
+            "box": [
+                490.1,
+                362.4,
+                1999.1,
+                476.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_08/region_1_text.png",
+            "text": "to be the optimal combination that allowed for the largest portion of the loss to be\ndedicated to the losses custom purpose.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                489.7,
+                480.5,
+                1999.5,
+                1063.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_08/region_2_text.png",
+            "text": "Finally, it was investigated whether combining a cluster-based loss with a survival-\nbased loss could produce a latent space which, when clustered, produced prognos-\ntic groups that were both significantly different in survival and biologically insightful.\nA combination cluster and survival loss was proposed: Lesc=aLag+PLs+yLe¢ with the\noptimal parameters values set as a = 0.25, B = 0.50 and y = 0.25. Pseudocode of the\ntraining using Lpsc is shown in Fig. 2. For all losses the entire dataset was used during\nthe training and predicting phases. Loss stabilisation occurred at around 40 epochs for\nLec» Lys and Lesc so this was considered to be optimal for these losses. After autoen-\ncoder training, the entire matrix was passed through the trained autoencoder’s encoder\nfunction to produce a 352 x 100 matrix, a bottleneck vector for each sample.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                490.2,
+                1069.9,
+                1998.7,
+                1420.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_08/region_3_text.png",
+            "text": "It can be noted that Lp was included in each of the three loss functions. This is because\nLp is used as a reconstruction loss in autoencoder models, which ensures that key infor-\nmation from the original data representation is encoded in the compressed bottleneck\nrepresentation. Removing L, from the loss would allow the bottleneck to diverge into a\nrepresentation which is completely irrelevant to the original input data. That is why the\nfinal loss function needs to be balanced between Lp and L;/Ls.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.55,
+            "box": [
+                489.0,
+                1484.4,
+                1326.5,
+                1531.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_08/region_4_title.png",
+            "text": "Identifying prognostic subgroups and key features\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                490.5,
+                1540.8,
+                1998.5,
+                2066.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_08/region_5_text.png",
+            "text": "Latent spaces produced by each model were clustered to identify subpopulations of\npatients with the aim that they would differ in survival (i.e. prognostic subgroups). For\nthe baseline BCE and MSE losses, univariate Cox models were used, as before [6], to\nfilter features for significance before clustering (unlike the other losses where all features\nwere utilised during clustering). Thus, bottleneck feature selection was conducted after\ntraining. For the BCE and MSE models, the coxph function from the R survival library\n[18] was used to construct a univariate Cox model for each bottleneck feature as before\n[6]. Those features resulting in a significant model (log-rank test, P-value <0.05) were\nselected and brought forward to the clustering phase. For those loss functions which\n"
+        },
+        {
+            "idx": 6,
+            "thing": "figure",
+            "score": 99.49,
+            "box": [
+                492.6,
+                2173.3,
+                1987.7,
+                2819.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_08/region_6_figure.png"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.58,
+            "box": [
+                516.6,
+                2836.9,
+                1940.1,
+                3003.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_08/region_7_text.png",
+            "text": "Fig. 2 Pseudocode demonstrating the flow of training an autoencoder with Lpcc loss. The custom\nautoencoder is initially trained with an MSE loss in order to predict a bottleneck from which to identify seed\ncentroids and group assignments which can then be used in the Lgcc loss during training. After each epoch\ntraining with Lpgc the centroids and group assignments are updated\n"
+        }
+    ]
+}

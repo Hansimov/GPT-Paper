@@ -1,0 +1,167 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages/page_05.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/pages_ordered/page_05.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 12,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.49,
+            "box": [
+                493.0,
+                195.7,
+                1984.3,
+                912.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                174.2,
+                944.4,
+                2295.4,
+                1216.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_02_text.png",
+            "text": "Figure 3 Evaluation of the prognostic performance between patients in the validation set and the Zhongshan cohort. (A) C-indices via risk scores\naccording to different sampling methods under different magnification scales. (B) C-indices via risk scores according to different sampling counts\nunder different magnification scales. (C and D) HR value and p value for different cut-off values of TRS. (E and F) Kaplan-Meier curves of survival and\nrecurrence for high (Hi) TRS (>70% TRS) and low (Lo) TRS (<70% TRS). (G and H) Kaplan-Meier curves for survival and recurrence of TRS (70% as cut-\noff) at different TNM stages. n.s., p>0.05; *, 0.05>p >0.01; **, 0.01>p >0.001; ***, p<0.001. OS, overall survival; RFS, recurrence-free survival; TNM,\ntumour-node-metastasis; TRS, tumour risk score.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.8,
+            "box": [
+                174.0,
+                1290.1,
+                1206.8,
+                1381.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_03_text.png",
+            "text": "t-SNE algorithm and found an obvious separation of each tissue\ncomponent (figure 2E).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                174.8,
+                1382.2,
+                1207.7,
+                1655.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_04_text.png",
+            "text": "Next, we analysed the remaining 2191 WSIs using the classi-\nfication network and confirmed the output by two experienced\npathologists. Only approximately 2.51% (55/2191) of WSIs\nrequired manual re-annotation due to contamination, depigmen-\ntation and overlapping, indicating the comparable performance\nof our classification network to professional pathologists.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.65,
+            "box": [
+                174.5,
+                1706.0,
+                1083.6,
+                1753.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_05_title.png",
+            "text": "Prognostic network predicting patient outcome in HCC\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                175.5,
+                1756.5,
+                1208.9,
+                1982.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_06_text.png",
+            "text": "To extract prognostic information from WSIs, we constructed a\nprognostic network with ResNet-50\"” and linear Cox regression.\nThe patients in the Zhongshan cohort were randomly split into\nthe training set (501 patients with 1221 WSIs) and validation set\n(528 patients with 970 WSIs).\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                175.5,
+                1983.0,
+                1209.5,
+                2943.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_07_text.png",
+            "text": "We applied the sampled tiles as the inputs and the patient\nprognosis as the labels to train the prognostic network (online\nsupplementary table $4). The output of the network that we\ncalled ‘risk score’ was a relative value to assess the prognostic\nrisk of each patient. We first compared the performance of\nthe global random sampling method (whole slide and irrespec-\ntive of tissue category) with that of the tissue category-based\nlocal sampling method, in which 32 tiles were sampled for\neach patient as input. As shown in figure 3A, we computed\nthe C-index via risk scores with different sampling methods\nunder different magnification scales. The performance of local\ntumour sampling was significantly higher than that of global\nrandom sampling at every magnification scale (p<0.0001).\nThe performance of the combination of the three magnifica-\ntion scales was always better than that of a single magnifi-\ncation scale (online supplementary figure S2A-C) because of\nthe capture of various features at different magnifications. The\nmedian C-index of risk scores from multi-scale tumour tissues\neven reached 0.731. This result demonstrated our hypothesis\nthat local tumour sampling as prior knowledge can significantly\nreduce the complexity of prognostic network optimisation.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                175.2,
+                2945.0,
+                1210.8,
+                3128.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_08_text.png",
+            "text": "Next, we tested the effect of different sample counts taken\nas input on network performance (figure 3B). As the number\nof samples increased, the network performance of different\nmagnification scales gradually increased until a platform\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1278.3,
+                1290.2,
+                2310.1,
+                1656.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_09_text.png",
+            "text": "period appeared. As the magnification increased, more tiles\nwere required to saturate the network performance. Specifi-\ncally, at least 32 tiles are required for the 40x magnification\nscale, 16 tiles for the 10X magnification scale and 8 tiles for\nthe 4X magnification scale. Only with a sufficient number of\nsamples can the network extract the overall features of the\ntumour tissue possibly because of the well-known intratumour\nheterogeneity of HCC.”!\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1277.7,
+                1658.0,
+                2310.0,
+                2207.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_10_text.png",
+            "text": "Transcriptomic signatures of adjacent liver tissues and\nfeatures of tumour-associated stroma in HCC contain valu-\nable prognostic information.” *> Thus, we also sampled tiles\nfrom adjacent normal liver tissues and tumour-associated\nstroma regions at multi-scale as the network’s input using the\ncategory-based local sampling method. The performance of\ntumour tissue was better than that of the other two types of\ntissue at the multi-scale combination (online supplementary\nfigure S2D). The prognostic ability of the TRS alone was highly\ncomparable to the combination of the three tissue components\n(p=0.405), implying that the features captured from tumour\ntissue played a dominant role in risk scoring.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1277.6,
+                2210.5,
+                2311.2,
+                2850.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_11_text.png",
+            "text": "We further performed survival analysis using TRS obtained\nfrom the prognostic network in the validation set by separating\nthe patients into high-risk and low-risk groups. Strikingly,\nsignificant cut-offs showed a broad spectrum, ranging from\n10% to 90% in terms OS and RFS, and the corresponding\nHR values were all >1 (figure 3C). Because the performance\nwas the best at 70% (figure 3D), we used 70% as the cut-off\nfor subsequent patient dichotomisation. The survival curves\nshowed that patients with high TRS showed significantly worse\nsurvival (HR: 4.47, 95% CI: 3.34 to 5.99, p<0.0001 for OS\nin figure 3E; HR: 4.98, 95% CI: 3.66 to 6.77, p<0.0001 for\nCSS in online supplementary figure $3) and higher recurrence\n(HR: 2.55, 95% Cl: 1.98 to 3.30, p<0.0001) than those with\nlow TRS (figure 3F).\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1278.4,
+                2852.4,
+                2313.6,
+                3127.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/GUT 2020 Exploring prognostic indicators in the pathological images of hepatocellular carcinoma based on deep learning/crops_ordered/page_05/region_12_text.png",
+            "text": "Based on TRS, HCC patients can be equally divided into\nthree, four and even five groups with significantly different\nprognoses (online supplementary figure S4A-F), demon-\nstrating robust and quantitative stratification of our prognostic\nrisk network for predicting clinical outcome. Moreover, strat-\nified analyses based on postoperative treatments showed that\n"
+        }
+    ]
+}

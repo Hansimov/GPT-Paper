@@ -1,0 +1,101 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages/page_3.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages_ordered/page_3.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 7,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                150.0,
+                242.1,
+                1183.3,
+                502.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_3/region_1_text.png",
+            "text": "operating characteristic curves (AUCs) from 0.71 to 0.89 in the\nexternal validation set. In addition, similar differences were\nobserved on the slide-level, except for ARIDIA (Fig. 3b). The\nper-slide AUCs after aggregation by average predicted prob-\nability and percentage of tiles with positive classification were\nlisted in Table 4.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 97.95,
+            "box": [
+                1258.6,
+                239.3,
+                1463.9,
+                282.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_3/region_2_title.png",
+            "text": "DISCUSSION\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1257.7,
+                292.0,
+                2293.0,
+                509.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_3/region_3_text.png",
+            "text": "In this study, the deep-learning classifiers displayed a high-level\nperformance at recognizing cancer apart from normal liver tissue\nand assessing histopathological grade (well, moderate, or poor).\nThe performances nearly reached the ability of pathologists with\n5-year experience. Interestingly, the model found 9 out of 13 WSls\n"
+        },
+        {
+            "idx": 4,
+            "thing": "figure",
+            "score": 99.84,
+            "box": [
+                244.9,
+                583.5,
+                2197.6,
+                1767.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_3/region_4_figure.png"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                150.6,
+                1789.9,
+                2293.5,
+                1980.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_3/region_5_text.png",
+            "text": "Fig. 1 Deep-learning framework for training and evaluating the model to classify and predict mutation. Patients from TCGA were\nrandomly divided into training cohorts (training and test) and internal validation cohort. Some patients had multiple virtual slides, and each\nslide was sliced into smaller “tiles” The training, test, and internal and external validation sets were made up of multiple tiles from related\ncohorts. Model selection was done based on the performance in the test set. After learning and selection, the model was applied to tiles in the\ninternal and validation sets to assess their performances.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "figure",
+            "score": 99.81,
+            "box": [
+                242.7,
+                2071.4,
+                2198.2,
+                2957.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_3/region_6_figure.png"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                151.2,
+                2985.2,
+                2291.2,
+                3063.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_3/region_7_text.png",
+            "text": "Fig. 2. The performance of the model at automated recognizes tumors from normal liver tissue. a The receiver operating characteristic\ncurve. TPR represents true positive rate, and FPR represents false positive rate. b Precision-recall curve.\n"
+        }
+    ]
+}

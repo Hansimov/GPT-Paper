@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_07.png",
+        "image_width": 2480,
+        "image_height": 3509,
+        "regions_num": 2,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 93.98,
+            "box": [
+                245.5,
+                242.2,
+                1250.0,
+                291.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_07/region_1_text.png",
+            "text": "Table 1 Studies applying deep learning for hepatocellular carcinoma\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.77,
+            "box": [
+                230.2,
+                298.4,
+                2248.5,
+                3235.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_07/region_2_table.png"
+        }
+    ]
+}

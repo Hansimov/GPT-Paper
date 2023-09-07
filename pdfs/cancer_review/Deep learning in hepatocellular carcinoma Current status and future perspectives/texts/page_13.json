@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_13.png",
+        "image_width": 2480,
+        "image_height": 3509,
+        "regions_num": 1,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 52.9,
+            "box": [
+                806.3,
+                235.5,
+                2243.9,
+                682.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_13/region_1_text.png",
+            "text": "indicators in the pathological images of hepatocellular carcinoma based on deep learning. Gut 2021;\n70: 951-961 [PMID: 32998878 DOE: 10.1136/gutjnl-2020-320930]\n\n63 Yamashita R, Long J, Saleem A, Rubin DL, Shen J. Deep learning predicts postsurgical recurrence\nof hepatocellular carcinoma from digital histopathologic images. Sci Rep 2021; 11: 2047 [PMID:\n33479370 DOI: 10.1038/s41598-02 1-8 1506-y]\n\n64 Gumbs AA, Perretta S, d’ Allemagne B, Chouillard E. What is Artificial Intelligence Surgery? Art Int\nSurg 2021; 1: 1-10 [DOL 10.20517/ais.2021.01]\n\n65 Lee D, Yu HW, Kwon H, Kong HJ, Lee KE, Kim HC. Evaluation of Surgical Skills during Robotic\nSurgery by Deep Learning-Based Multiple Surgical Instrument Tracking in Training and Actual\nOperations. J Clin Med 2020; 9 [PMID: 32585953 DOI: 10.3390/jcm9061964]\n"
+        }
+    ]
+}

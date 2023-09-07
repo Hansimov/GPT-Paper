@@ -1,0 +1,102 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 7,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.86,
+            "box": [
+                180.3,
+                240.3,
+                2299.8,
+                1678.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_07/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                176.7,
+                1726.4,
+                2284.4,
+                2071.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_07/region_2_text.png",
+            "text": "Fig. 7 | PC-CHiP provides complementary prognostic information. a, Concordance index” of overall survival predictions using histopathological grades\nand subtypes (light blue) and PC-CHiP (dark blue) in 18 cancers. Shown is the distribution across 20 repetitions of fivefold cross-validation (n=100 for\neach boxplot). All boxplots demarcate quartiles and median values, while whiskers extend to 1.5x the interquartile range. The number of patients for\neach cancer type is provided in the x axis labels. b, Kaplan-Meier plots with high (above median) and low (below median) PC-CHIiP risk, shown for cancer\nstages I-Ill in four different cancer types. ¢, Example tiles with high and low estimated risk based on the histopathological features. Each row corresponds\nto a cancer type. The first three columns are tiles with low risk and the last three are tiles with high risk. d, Risk predictions across whole slide examples\nfrom breast invasive carcinoma and uterine endometrial carcinoma, with examples of high and low risk areas enlarged on the right. Scale bars in ¢ and d:\n100 um. HR, hazard ratio.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                178.3,
+                2152.4,
+                1216.0,
+                2941.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_07/region_3_text.png",
+            "text": "comprising fresh-frozen hematoxylin and eosin-stained slides from\nthe Molecular Taxonomy of Breast Cancer International Consortium\n(METABRIC; n=471)*! and the Breast Cancer Somatic Genetics\nStudy (BASIS) consortium (n= 151)’. The vast majority of genomic\nassociations could be replicated in both cohorts, including associa-\ntions with TP53 mutations and WGD, with only a moderate drop\nin accuracy (Fig. 8a,b, Extended Data Fig. 8a and Supplementary\nTable 4). Similarly, at least 59% (FDR<0.1) of transcriptomic pre-\ndictions were recovered in the METABRIC cohort with comparable\ncorrelation levels (Fig. 8c and Extended Data Fig. 8b). A subset of\nboth cohorts contained pathologist-evaluated TIL categories, which\nconfirmed the predicted trends, and the algorithms ability to local-\nize TILs on a given slide was evident in both cohorts (Fig. 8d,f).\nPrognostic associations were replicated in both cohorts, although\nat reduced accuracy, particularly in METABRIC (Fig. 8e). As in the\nTCGA training data, the algorithm identified necrotic areas and\nTILs on slides from both cohorts as unfavorable and favorable prog-\nnostic markers (Fig. 8g).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                178.4,
+                2941.0,
+                1216.7,
+                3115.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_07/region_4_text.png",
+            "text": "Of note, there was a considerable tissue misclassification of tiles\nfrom the validation cohorts, possibly due to different file formats\n(Supplementary Table 4). Indeed, JPEG quality had a strong con-\nfounding effect on histopathological feature representation and\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1266.3,
+                2152.8,
+                2303.5,
+                2766.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_07/region_5_text.png",
+            "text": "tissue classification in the TCGA cohort (Extended Data Fig. 9a,b).\nYet, these biases were mostly confined to the initial classification\ntask and were largely mitigated by PC-CHiP’s tissue-aware transfer\nlearning, as confirmed by the high validation rate of molecular asso-\nciations. Biases of the histopathological feature representation could\nbe further reduced using a file format-aware Inception-V4 architec-\nture and additional data augmentation, which led to a slight drop\nin the tissue classification accuracy (average AUC=0.95; Methods,\nSupplementary Table 4 and Extended Data Fig. 9c,d). Transfer\nlearning using histopathological features from the modified archi-\ntecture produced similar molecular and prognostic associations\nin TCGA and moderately improved the strength of associations\nin the METABRIC cohort, but not evidently in the BASIS cohort\n(Extended Data Fig. 10a-d).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.51,
+            "box": [
+                1265.6,
+                2804.8,
+                1457.8,
+                2853.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_07/region_6_title.png",
+            "text": "Discussion\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1264.3,
+                2854.2,
+                2303.5,
+                3116.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_07/region_7_text.png",
+            "text": "The results presented here provide a molecular basis for the his-\ntopathological observation that tumors are a diverse cellular eco-\nsystem, and offer new ways to histologically deconvolute and map\nits molecularly defined content. Our findings demonstrate that\nlinks between a tumor’s morphology and its molecular composi-\ntion can be found in every cancer type and for virtually every class\n"
+        }
+    ]
+}

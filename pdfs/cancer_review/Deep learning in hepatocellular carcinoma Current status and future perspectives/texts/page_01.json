@@ -1,0 +1,233 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_01.png",
+        "image_width": 2480,
+        "image_height": 3509,
+        "regions_num": 17,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.64,
+            "box": [
+                233.7,
+                867.1,
+                2256.4,
+                1067.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_01_title.png",
+            "text": "Deep learning in hepatocellular carcinoma: Current status and future\nperspectives\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 96.93,
+            "box": [
+                238.9,
+                1208.5,
+                1706.4,
+                1263.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_02_text.png",
+            "text": "Joseph C Ahn, Touseef Ahmad Qureshi, Amit G Singal, Debiao Li, Ju-Dong Yang\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 97.56,
+            "box": [
+                239.5,
+                1671.5,
+                755.8,
+                2411.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_03_text.png",
+            "text": "Author contributions: Yang JD\ndevised the project and the main\nconceptual ideas for the review;\nAhn JC conducted the literature\nsearch and identified relevant\nstudies to be included in the\nreview; Qureshi TA and Li D\nprovided the technical expertise on\nartificial intelligence and deep\nlearning; Ahn JC drafted the\nmanuscript; Yang JD and Singal\nAG revised the manuscript\ncritically for important intellectual\ncontent; and all authors approved\nthe final version to be published.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 97.27,
+            "box": [
+                239.1,
+                2452.2,
+                770.7,
+                2943.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_04_text.png",
+            "text": "Conflict-of-interest statement: Dr.\nYang provides a consulting service\nfor Exact Sciences and Gilead; Dr.\nSingal has been on advisory boards\nand served as a consultant for\nGenentech, Bayer, Eisai, BMS,\nExelixis, AstraZeneca, and\nTARGET RWE. No other potential\nconflicts of interest relevant to this\narticle exist.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 92.4,
+            "box": [
+                239.5,
+                2982.7,
+                751.4,
+                3081.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_05_text.png",
+            "text": "Country/Territory of origin: United\nStates\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 94.88,
+            "box": [
+                239.5,
+                3123.2,
+                724.8,
+                3216.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_06_text.png",
+            "text": "Specialty type: Gastroenterology\nand hepatology\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 17.39,
+            "box": [
+                1933.7,
+                771.8,
+                2244.2,
+                831.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_07_title.png",
+            "text": "MINIREVIEWS\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 97.82,
+            "box": [
+                811.7,
+                1350.4,
+                2258.6,
+                1448.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_08_text.png",
+            "text": "Joseph C Ahn, Gastroenterology and Hepatology, Mayo Clinic, Rochester, MN 55904, United\nStates\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 97.4,
+            "box": [
+                809.0,
+                1486.3,
+                2257.6,
+                1583.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_09_text.png",
+            "text": "Touseef Ahmad Qureshi, Debiao Li, Biomedical Imaging Research Institute, Cedars-Sinai\nMedical Center, Los Angeles, CA 90048, United States\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 96.84,
+            "box": [
+                809.1,
+                1620.5,
+                2257.9,
+                1716.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_10_text.png",
+            "text": "Amit G Singal, Internal Medicine, University of Texas Southwestern Medical Center, Dallas, TX\n75390, United States\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 98.67,
+            "box": [
+                808.5,
+                1755.6,
+                2257.0,
+                1852.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_11_text.png",
+            "text": "Ju-Dong Yang, Karsh Division of Gastroenterology and Hepatology, Cedars-Sinai Medical\nCenter, Los Angeles, CA 90048, United States\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 98.84,
+            "box": [
+                808.4,
+                1890.0,
+                2260.2,
+                2037.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_12_text.png",
+            "text": "Corresponding author: Ju-Dong Yang, MD, MS, Assistant Professor, Karsh Division of\nGastroenterology and Hepatology, Cedars-Sinai Medical Center, 8900 Beverly Blvd, Los\nAngeles, CA 90048, United States. judong.yang@cshs.org\n"
+        },
+        {
+            "idx": 13,
+            "thing": "title",
+            "score": 98.92,
+            "box": [
+                810.3,
+                2124.5,
+                1012.6,
+                2190.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_13_title.png",
+            "text": "Abstract\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                807.9,
+                2206.6,
+                2261.0,
+                2846.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_14_text.png",
+            "text": "Hepatocellular carcinoma (HCC) is among the leading causes of cancer incidence\nand death. Despite decades of research and development of new treatment\noptions, the overall outcomes of patients with HCC continue to remain poor.\nThere are areas of unmet need in risk prediction, early diagnosis, accurate pro-\ngnostication, and individualized treatments for patients with HCC. Recent years\nhave seen an explosive growth in the application of artificial intelligence (AI)\ntechnology in medical research, with the field of HCC being no exception. Among\nthe various AI-based machine learning algorithms, deep learning algorithms are\nconsidered state-of-the-art techniques for handling and processing complex\nmultimodal data ranging from routine clinical variables to high-resolution\nmedical images. This article will provide a comprehensive review of the recently\npublished studies that have applied deep learning for risk prediction, diagnosis,\nprognostication, and treatment planning for patients with HCC.\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.41,
+            "box": [
+                808.5,
+                2915.0,
+                2011.8,
+                2967.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_15_text.png",
+            "text": "Key Words: Hepatocellular carcinoma; Artificial intelligence; Deep learning\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 98.59,
+            "box": [
+                808.8,
+                3020.3,
+                2171.8,
+                3069.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_16_text.png",
+            "text": "©The Author(s) 2021. Published by Baishideng Publishing Group Inc. All rights reserved.\n"
+        },
+        {
+            "idx": 17,
+            "thing": "text",
+            "score": 94.31,
+            "box": [
+                835.5,
+                3160.2,
+                2228.7,
+                3213.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_01/region_17_text.png",
+            "text": "Core Tip: There are emerging roles for deep learning technology in the field of hepato-\n"
+        }
+    ]
+}

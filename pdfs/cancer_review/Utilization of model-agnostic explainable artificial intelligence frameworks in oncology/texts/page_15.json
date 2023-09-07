@@ -1,0 +1,38 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages/page_15.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/pages_ordered/page_15.png",
+        "image_width": 2481,
+        "image_height": 3249,
+        "regions_num": 2,
+        "page_idx": 15
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 99.32,
+            "box": [
+                194.0,
+                357.1,
+                1198.9,
+                2958.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_15/region_1_list.png",
+            "text": "31. Manikis GC, Ioannidis GS, Siakallis L, et al. Multicenter\nDSC-MRI-Based Radiomics Predict IDH Mutation in\nGliomas. Cancers (Basel) 2021;13:3965.\n\n32. Gaur L, Bhandari M, Razdan T, et al. Explanation-\nDriven Deep Learning Model for Prediction of Brain\n‘Tumour Status Using MRI Image Data. Front Genet\n2022;13:822666.\n\n33. Lee YW, Huang CS, Shih CC, et al. Axillary lymph node\nmetastasis status prediction of early-stage breast cancer\nusing convolutional neural networks. Comput Biol Med\n2021;130:104206.\n\n34. Kha QH, Le VH, Hung TNK, et al. Development and\nValidation of an Efficient MRI Radiomics Signature for\nImproving the Predictive Performance of 1p/19q Co-\nDeletion in Lower-Grade Gliomas. Cancers (Basel)\n2021;13:5398.\n\n35. Du R, Lee VH, Yuan H, et al. Radiomics Model to Predict\nEarly Progression of Nonmetastatic Nasopharyngeal\nCarcinoma after Intensity Modulation Radiation Therapy:\nA Multicenter Study. Radiol Artif Intell 2019; 1:e180075.\n\n36. Wang F, Wang D, Xu, et al. Potential of the Non-\nContrast-Enhanced Chest CT Radiomics to Distinguish\nMolecular Subtypes of Breast Cancer: A Retrospective\nStudy. Front Oncol 2022;12:848726.\n\n37. Palatnik de Sousa I, Maria Bernardes Rebuzzi Vellasco\nM, Costa da Silva E. Local Interpretable Model-Agnostic\nExplanations for Classification of Lymph Node Metastases.\nSensors (Basel) 2019;19:2969.\n\n38. Abir WH, Uddin MF, Khanam FR, et al. Explainable\nAl in Diagnosing and Anticipating Leukemia Using\n‘Transfer Learning Method. Comput Intell Neurosci\n2022;2022:5140148.\n\n39. Modhukur V, Sharma S, Mondal M, et al. Machine\nLearning Approaches to Classify Primary and Metastatic\nCancers Using Tissue of Origin-Based DNA Methylation\nProfiles. Cancers (Basel) 2021;13:3768.\n\n40. Chakraborty D, Ivan C, Amero P, et al. Explainable\nArtificial Intelligence Reveals Novel Insight into Tumor\nMicroenvironment Conditions Linked with Better\nPrognosis in Patients with Breast Cancer. Cancers (Basel)\n2021;13:3450.\n\n41. Janssen FM, Aben KK, Heesterman BL, et al. Using\nExplainable Machine Learning to Explore the Impact\nof Synoptic Reporting on Prostate Cancer. Algorithms\n2022515:49.\n\n42. Meena J, Hasija Y. Application of explainable artificial\nintelligence in the identification of Squamous\nCell Carcinoma biomarkers. Comput Biol Med\n"
+        },
+        {
+            "idx": 2,
+            "thing": "list",
+            "score": 99.12,
+            "box": [
+                1287.4,
+                358.2,
+                2296.8,
+                2961.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Utilization of model-agnostic explainable artificial intelligence frameworks in oncology/crops_ordered/page_15/region_2_list.png",
+            "text": "2022;146:105505.\n\n43. Park KH, Batbaatar E, Piao Y, et al. Deep Learning\nFeature Extraction Approach for Hematopoietic Cancer\nSubtype Classification. Int J Environ Res Public Health\n2021;18:2197.\n\n44. Ladbury C, Li R, Shiao J, et al. Characterizing impact of\npositive lymph node number in endometrial cancer using\nmachine-learning: A better prognostic indicator than\nFIGO staging? Gynecol Oncol 2022;164:39-45.\n\n45. Zarinshenas R, Ladbury C, McGee H, et al. Machine\nlearning to refine prognostic and predictive nodal burden\nthresholds for post-operative radiotherapy in completely\nresected stage ITI-N2 non-small cell lung cancer. Radiother\nOncol 2022;173:10-8.\n\n46. Matei D, Filiaci V, Randall ME, et al. Adjuvant\nChemotherapy plus Radiation for Locally Advanced\nEndometrial Cancer. N Engl J Med 2019;380:2317-26.\n\n47. de Boer SM, Powell ME, Mileshkin L, et al. Adjuvant\nchemoradiotherapy versus radiotherapy alone for women\nwith high-risk endometrial cancer (PORTEC-3): final\nresults of an international, open-label, multicentre,\nrandomised, phase 3 trial. Lancet Oncol 2018;19:295-309.\n\n48. Le Pechoux C, Pourel N, Barlesi F, et al. Postoperative\nradiotherapy versus no postoperative radiotherapy in\npatients with completely resected non-small-cell lung\ncancer and proven mediastinal N2 involvement (Lung\nART): an open-label, randomised, phase 3 trial. Lancet\nOncol 2022;23:104-14.\n\n49. Hui Z, Men Y, Hu C, et al. Effect of Postoperative\nRadiotherapy for Patients With pIIIA-N2 Non-Small Cell\nLung Cancer After Complete Resection and Adjuvant\nChemotherapy: The Phase 3 PORT-C Randomized\nClinical Trial. JAMA Oncol 2021;7:1178-85.\n\n50. Laios A, Kalampokis E, Johnson R, et al. Explainable\nArtificial Intelligence for Prediction of Complete Surgical\nCytoreduction in Advanced-Stage Epithelial Ovarian\nCancer. J Pers Med 2022;12:607.\n\n51. Bang CS, Ahn JY, Kim JH, et al. Establishing Machine\nLearning Models to Predict Curative Resection in\nEarly Gastric Cancer with Undifferentiated Histology:\nDevelopment and Usability Study. J Med Internet Res\n2021;23:e25053.\n\n52. Ahmed ZU, Sun K, Shelly M, et al. Explainable artificial\nintelligence (XAI) for exploring spatial variability of\nlung and bronchus cancer (LBC) mortality rates in the\ncontiguous USA. Sci Rep 2021;11:24090.\n\n53. Kobylinska K, Ortowski T, Adamek M, et al. Explainable\nMachine Learning for Lung Cancer Screening Models.\n"
+        }
+    ]
+}

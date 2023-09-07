@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages_ordered/page_10.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 5,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.83,
+            "box": [
+                235.8,
+                375.7,
+                2245.0,
+                2379.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_10/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 96.26,
+            "box": [
+                285.0,
+                2400.9,
+                386.1,
+                2434.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_10/region_2_title.png",
+            "text": "FIGURE 6\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.66,
+            "box": [
+                286.0,
+                2435.0,
+                2191.4,
+                2585.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_10/region_3_text.png",
+            "text": "The relationship between HS and immune infiltration condition. (A) Heatmap and cluster analysis of the Zhongshan TMA. (B) Typical\nimmunohistochemical pictures of CD8; AND CD14p. (C) The corrplots of immune markers in the HS low-risk group. (D) The interaction analysis\nof immune markers in the HS high-risk group. (E) Boxplot of immune cells in the TCGA cohort. Data are compared using Wilcoxon test. *p <\n0.05;. (F) Correlation analysis between HS and M2macrophages in the TCGA cohort. HS, histological score; TCGA, The Cancer Genome Atlas.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                236.1,
+                2697.6,
+                1197.2,
+                3107.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_10/region_4_text.png",
+            "text": "integrated a neural network with the massive WSIs of HCC\npatients in BCLC stage 0-A and successfully developed an\nefficient recurrence prediction index that was prognostic of\nOS, TTR, and RFS. The novel index was validated in three\nindependent cohorts, demonstrating the generalizability of our\napproach. By analyzing substantial TMA data, we found that\nimmune infiltration status could potentially provide\nprognostically valuable information on histological texture.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1288.1,
+                2698.2,
+                2248.0,
+                3107.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_10/region_5_text.png",
+            "text": "Recent studies on AI reported novel prognostic models for\nHCC patients based on pathological images. Saillard et al.\nestablished two independent scores using an unsupervised\nneural network algorithm and attention mechanism according\nto tumoral or nontumoral annotated tiles (20). Both models\nshowed high accuracy in survival prediction and strong\ncorrelations between clinical characteristics. Gao et al.\ninnovatively divided HCC slides into four categories,tumor\n"
+        }
+    ]
+}

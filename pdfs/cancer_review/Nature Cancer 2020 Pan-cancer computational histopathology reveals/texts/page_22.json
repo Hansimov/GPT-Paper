@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_22.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_22.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 5,
+        "page_idx": 22
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 42.57,
+            "box": [
+                105.5,
+                150.5,
+                1032.8,
+                301.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_22/region_1_title.png",
+            "text": "natureresearch\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 94.82,
+            "box": [
+                103.3,
+                374.5,
+                829.1,
+                473.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_22/region_2_title.png",
+            "text": "Reporting Summary\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 86.16,
+            "box": [
+                103.2,
+                496.8,
+                2311.7,
+                589.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_22/region_3_text.png",
+            "text": "Nature Research wishes to improve the reproducibility of the work that we publish. This form provides structure for consistency and transparency\nin reporting. For further information on Nature Research policies, see Authors & Referees and the Editorial Policy Checklist.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 96.74,
+            "box": [
+                102.4,
+                728.6,
+                312.2,
+                798.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_22/region_4_title.png",
+            "text": "Statistics\n"
+        },
+        {
+            "idx": 5,
+            "thing": "figure",
+            "score": 30.36,
+            "box": [
+                101.6,
+                812.5,
+                2330.1,
+                3114.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_22/region_5_figure.png"
+        }
+    ]
+}

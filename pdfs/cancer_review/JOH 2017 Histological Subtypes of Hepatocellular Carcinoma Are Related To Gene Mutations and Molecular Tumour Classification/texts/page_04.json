@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_04.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 6,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 80.08,
+            "box": [
+                386.7,
+                216.7,
+                575.0,
+                284.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_04/region_1_title.png",
+            "text": "Abstract\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 98.83,
+            "box": [
+                387.2,
+                414.1,
+                2172.7,
+                582.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_04/region_2_text.png",
+            "text": "Background and aims: Our increasing understanding of hepatocellular carcinoma\n(HCC) biology holds promise for personalized care, however its translation into clinical\npractice requires a precise knowledge of its relationship to tumour phenotype.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 98.85,
+            "box": [
+                385.4,
+                577.6,
+                2199.5,
+                747.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_04/region_3_text.png",
+            "text": "Methods: We aimed at investigating molecular-phenotypic correlations in a large series\nof HCC. To this purpose, 343 surgically resected HCC were investigated by pathological\nreview, immunohistochemistry, gene expression profiling and sequencing.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.43,
+            "box": [
+                384.7,
+                742.7,
+                2174.7,
+                1738.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_04/region_4_text.png",
+            "text": "Results: CTNNB1 (40%) and TP53 (21%) mutations were mutually exclusive and\ndefined two major groups of HCC characterized by distinct phenotypes., CTNNB1\nmutated-tumours were large (P=0.002), well-differentiated (P<0.001), cholestastic\n(P<0.001), with microtrabecular (P<0.001) and pseudoglandular (P<0.001) patterns and\nwithout inflammatory infiltrates (P<0.001). TP53 mutated-tumours were poorly-\ndifferentiated (P<0.001) with compact pattern (P=0.02), multinucleated (P=0.01) and\npleomorphic (P=0.02) cells and frequent vascular invasion (P=0.02). World Health\nOrganization (WHO) histological subtypes were also strongly.related to molecular\nfeatures. The scirrhous subtype was associated with TSC1/TSC2 mutations (P=0.005),\nepithelial-to-mesenchymal transition and a _ progenitor..expression profile. The\nsteatohepatitic subtype showed frequent IL-6/JAK/STAT, activation without CTNNB1,\nTERT and TP53 pathway alterations (P=0.01). Pathological review identified a novel\nsubtype, designated as \"macrotrabecular-massive\". associated with poor survival\n(P<0.001), high alphafoeto-protein serum level (P=0.02), vascular invasion (P<0.001),\nTP53 mutations (P<0.001) and FGF19 amplifications (P=0.02), features also validated in\nTCGA data. Finally, integration of HCC pathological characteristics with its\ntranscriptomic classification showed phenotypically distinct tumour subclasses closely\nrelated to G1-G6 subgroups.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 97.06,
+            "box": [
+                385.6,
+                1736.5,
+                2173.9,
+                1904.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_04/region_5_text.png",
+            "text": "Conclusion: HCC phenotypes are tightly associated with gene mutations and\ntranscriptomic classification. These findings may help in translating our knowledge of\nHCC biology into clinical practice.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 94.53,
+            "box": [
+                385.3,
+                2048.1,
+                2168.6,
+                2218.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_04/region_6_text.png",
+            "text": "LAY SUMMARY: HCC is a very heterogenous tumor, both at the pathological and\nmolecular levels. We show here that HCC phenotype is tightly associated to its molecular\nalterations and underlying oncogenic pathways.\n"
+        }
+    ]
+}

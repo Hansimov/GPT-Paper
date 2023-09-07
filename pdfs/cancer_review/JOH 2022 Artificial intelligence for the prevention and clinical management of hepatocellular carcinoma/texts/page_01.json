@@ -1,0 +1,220 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 16,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 98.33,
+            "box": [
+                223.1,
+                383.2,
+                2264.4,
+                535.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_01_title.png",
+            "text": "Artificial intelligence for the prevention and clinical management of\nhepatocellular carcinoma\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 93.95,
+            "box": [
+                441.5,
+                587.7,
+                2041.9,
+                647.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_02_text.png",
+            "text": "Julien Calderaro'”, Tobias Paul Seraphin®, Tom Luedde’, Tracey G. Simon*>*\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 73.27,
+            "box": [
+                178.0,
+                819.7,
+                560.1,
+                924.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_03_text.png",
+            "text": "Keywords: Artificial\nintelligence; Machine learning;\nDeep learning; Liver cancer.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 97.34,
+            "box": [
+                178.8,
+                1529.5,
+                592.2,
+                2234.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_04_text.png",
+            "text": "‘Assistance Publique-H6pitaux de\nParis, Henri Mondor University\nHospital, Department of Pathology,\nCréteil, France; 7Inserm U955 and\nUniv Paris Est Creteil, INSERM,\nIMRB, 94010, Creteil, France;\nDepartment of Gastroenterology,\nHepatology and Infectious\nDiseases, University Hospital\nDuesseldorf, Medical Faculty at\nHeinrich-Heine-University\nDuesseldorf, Duesseldorf, Germany;\n‘Liver Center, Division of\nGastroenterology, Massachusetts\nGeneral Hospital and Harvard\nMedical School, Boston, MA, USA;\nClinical and Translational\nEpidemiology Unit (CTEU),\nMassachusetts General Hospital,\nBoston, MA, USA\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 78.93,
+            "box": [
+                176.4,
+                2263.9,
+                592.4,
+                2508.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_05_text.png",
+            "text": "» Corresponding author. Address:\nLiver Center, Division of Gastro-\nenterology, Massachusetts Gen-\neral Hospital, 55 Fruit Street,\nWang 5th Floor Boston, MA\n02114, USA; Tel.: 617-724-2401,\nfax: 617-724-5997.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 56.63,
+            "box": [
+                177.2,
+                2535.9,
+                555.9,
+                2602.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_06_text.png",
+            "text": "E-mail address: tgsimon@mgh.\nharvard.edu (T.G. Simon).\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 94.43,
+            "box": [
+                625.8,
+                768.7,
+                810.3,
+                814.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_07_title.png",
+            "text": "Summary\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                627.1,
+                817.2,
+                2305.7,
+                1455.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_08_text.png",
+            "text": "Hepatocellular carcinoma (HCC) currently represents the fifth most common malignancy and the third-\nleading cause of cancer-related death worldwide, with incidence and mortality rates that are increasing.\nRecently, artificial intelligence (AI) has emerged as a unique opportunity to improve the full spectrum of\nHCC clinical care, by improving HCC risk prediction, diagnosis, and prognostication. Al approaches\ninclude computational search algorithms, machine learning (ML) and deep learning (DL) models. ML\nconsists of a computer running repeated iterations of models, in order to progressively improve per-\nformance of a specific task, such as classifying an outcome. DL models are a subtype of ML, based on\nneural network structures that are inspired by the neuroanatomy of the human brain. A growing body of\nrecent data now apply DL models to diverse data sources — including electronic health record data,\nimaging modalities, histopathology and molecular biomarkers - to improve the accuracy of HCC risk\nprediction, detection and prediction of treatment response. Despite the promise of these early results,\nfuture research is still needed to standardise AI data, and to improve both the generalisability and\ninterpretability of results. If such challenges can be overcome, Al has the potential to profoundly change\nthe way in which care is provided to patients with or at risk of HCC.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 66.09,
+            "box": [
+                627.6,
+                1456.5,
+                2180.6,
+                1496.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_09_text.png",
+            "text": "© 2022 European Association for the Study of the Liver. Published by Elsevier B.V. All rights reserved.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 95.42,
+            "box": [
+                627.1,
+                1531.6,
+                1170.7,
+                1580.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_10_title.png",
+            "text": "Introduction and definitions\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                625.3,
+                1583.3,
+                1449.9,
+                2584.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_11_text.png",
+            "text": "With a global incidence of approximately 500,000\ncases per year, hepatocellular carcinoma (HCC)\nrepresents the fifth most common malignancy and\nthe third-leading cause of cancer-related death\nworldwide.'? The vast majority of HCC tumours\narise on a background of cirrhosis, which in turn is\nmost commonly caused by non-alcoholic fatty liver\ndisease (NAFLD), alcohol-related liver disease, or\nHBV/HCV infection. Despite recent advances in\ntreatment, including the use of atezolizumab plus\nbevacizumab for unresectable HCC, prognosis re-\nmains poor, with a 5-year survival rate of just 15%,\ndue to delays in diagnosis and the limited efficacy\nof existing therapies.** While liver transplantation\ncan be curative for HCC in selected cases, this\nrepresents a limited and resource-intensive solu-\ntion, and the vast majority of patients are not\neligible for transplantation. Thus, identifying novel\napproaches to improve the early diagnosis of HCC\nand to predict therapeutic response and survival\namong patients with established HCC is of para-\nmount importance.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                627.0,
+                2587.4,
+                1449.8,
+                2949.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_12_text.png",
+            "text": "Owing to the broad heterogeneity in HCC risk\nfactors and pathogenesis, established strategies for\nprediction and prognostication are still limited.\nRecently, artificial intelligence (AI) has emerged as\na unique opportunity to improve the full spectrum\nof HCC clinical care, by: i) improving the prediction\nof future HCC risk in patients with established liver\ndisease; ii) improving the accuracy of HCC\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                1482.5,
+                1583.0,
+                2305.7,
+                1716.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_13_text.png",
+            "text": "diagnosis in patients undergoing surveillance im-\naging or liver biopsies; and iii) improving prog-\nnostication in patients with established HCC.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1483.6,
+                1719.2,
+                2307.1,
+                2676.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_14_text.png",
+            "text": "Al is a broad field that includes computational\nsearch algorithms, machine learning (ML) and deep\nlearning (DL) models (Fig. 1). ML consists of a\ncomputer running repeated iterations of models in\norder to progressively improve performance of a\nspecific task, such as classifying an outcome. ML\nmodels are designed to improve with time, by\nincorporating additional input training data and\nthereby optimising the parameters of an algorithm.\nWith time and training, the desired output be-\ncomes increasingly accurate. Based on how the\ntraining process is conducted, ML may be classified\nas supervised or unsupervised. Supervised ML al-\ngorithms perform training on a dataset that is\nlabelled in relation to the class of interest, and this\nlabel is available to the algorithm while the model\nis being created, trained, and optimised. In\ncontrast, unsupervised ML involves training on a\ndataset that lacks class labels, yielding clusters of\noutput data that subsequently require addi-\ntional interpretation.\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1483.4,
+                2679.0,
+                2306.8,
+                2949.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_15_text.png",
+            "text": "DL represents a subtype of ML models which are\nconstructed using neural networks (NNs) inspired\nby the neuroanatomy of the human brain. NNs\nconsist of a network of interconnected computing\nunits — termed “neurons” - that are organised in\nlayers, such that signals travel from the first layer\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 21.96,
+            "box": [
+                875.1,
+                3163.8,
+                1598.7,
+                3204.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_01/region_16_text.png",
+            "text": "Journal of Hepatology 2022 vol. 76 | 1348-1361\n"
+        }
+    ]
+}

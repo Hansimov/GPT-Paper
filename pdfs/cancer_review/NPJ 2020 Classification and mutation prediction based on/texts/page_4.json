@@ -1,0 +1,218 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages/page_4.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages_ordered/page_4.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 16,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.54,
+            "box": [
+                217.8,
+                248.6,
+                1217.1,
+                328.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_01_text.png",
+            "text": "Table 2. The performance of our models and pathologists’ ability for\nclassification.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.33,
+            "box": [
+                205.0,
+                347.0,
+                1223.9,
+                1071.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_02_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 96.5,
+            "box": [
+                218.7,
+                1088.5,
+                731.7,
+                1161.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_03_text.png",
+            "text": "MCC Matthews correlation coefficient.\n“Average value.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.37,
+            "box": [
+                203.1,
+                1298.4,
+                1089.8,
+                1378.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_04_text.png",
+            "text": "Table 3. The performances of our models for gene mutation\nprediction.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "table",
+            "score": 99.2,
+            "box": [
+                191.9,
+                1391.7,
+                1219.9,
+                1984.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_05_table.png"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 98.41,
+            "box": [
+                203.8,
+                1998.4,
+                719.1,
+                2033.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_06_text.png",
+            "text": "MCC Matthews correlation coefficient.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                189.5,
+                2109.8,
+                1224.4,
+                2400.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_07_text.png",
+            "text": "from our center with grading misclassified by at least a\npathologist. Although the sensitivity and accuracy still need to\nbe improved to be on par with a 10-year experience pathologist, it\ncould be used to assist young pathologists at diagnosing with\nshorter learning curve period, faster speed, and higher accuracy.\nMoreover, the prediction of the four genes mutation (CTNNB1,\nFMN2, TP53, and ZFX4) is beyond the ability of pathologists.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                188.3,
+                2399.3,
+                1222.7,
+                2897.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_08_text.png",
+            "text": "The prediction of mutation based on histopathological H&E\nimages using deep learning may have a positive influence on the\ndiagnosis and treatment of patients with cancer given the\nimportance of gene mutation?'”’. For example, the mutations in\nCTNNB1 occurred at a relatively high frequency in HCC, with a high\nexpression of the protein kinase human monopolar spindle 1\n(hMps1/TTK), and TTK inhibitors regarded as one of the potential\ntargeted drugs for CTNNB1 mutant HCC***°. Interestingly, our\nmodels showed a high-performance level of predicting CTNNB1\nmutation. The prediction of CTNNB1 mutation using deep learning\nmay make a great contribution to select patients who are most\nlikely to respond to TIK inhibitor targeted therapy.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                190.0,
+                2897.8,
+                1223.7,
+                3063.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_09_text.png",
+            "text": "Due to the unclear Al algorithmic data processing in a “black\nbox\", developers and users do not know how computers arrive at\nconclusion, thereby making it difficult to find out the detail of\nevidence resulting in a conclusion®'**. Therefore, as a novel tool\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1297.7,
+                241.6,
+                2333.5,
+                869.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_10_text.png",
+            "text": "for diagnosis and treatment, Al should be validated against\ncurrent quality standards to ensure clinical effectiveness and\nsafety in clinical practice***. In this study, an independent\ndatabase from our center was used to validate the performance of\nour models. It was demonstrated that convolutional neural\nnetworks could be used to assist in the classification and mutation\nprediction, based on histopathological H&E slides in liver cancer.\nHowever, the model still needs to be improved and validated by\nlarger studies in the future. Even though it is impossible for Al to\ncompletely replace humans in practice nowadays, it is still a useful\nand effective tool to assist clinicians in dealing with repetitive\nwork to provide important prognostic and therapeutic informa-\ntion. For example, mutation prediction could serve as_ pre-\nscreening to improve cost-efficiency before immunohistochem-\nistry or next-generation sequencing.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1298.7,
+                871.1,
+                2331.9,
+                1332.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_11_text.png",
+            "text": "Overall, the study demonstrates that convolutional neural net-\nworks can predict histopathological grade and mutation in liver\ncancer. Although Al is likely to be a useful tool to assist surgeons and\npathologists in classification of WSIs of HCC, the black box that how\nto get the conclusion is unclear and should be further studied.\nBesides, it is the first study to predict the gene mutation in HCC,\nmeanwhile, internal and external validation cohorts were utilized to\nimprove the accuracy of the model. In addition, the information on\npathology and gene mutations may potentially be significant in\napplying the appropriate targeted therapy to HCC patients, thereby\nimproving the performance of precision medicine.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1297.7,
+                1332.8,
+                2332.7,
+                1961.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_12_text.png",
+            "text": "The present study has several limitations to discuss. On the one\nhand, the size of the validation cohort is small. On the other hand,\nthe model is not a complete replacement for pathologists’\nexamination, which included the diversity and heterogeneity of\ntissues that pathologists typically inspect (e.g., inflammation,\nnecrosis, and blood vessels) and some clinical factors. Therefore,\nfurther validation of our model is necessary in a larger dataset\nwith multiple centers and clinical factors or characteristics should\nbe considered in further study. Moreover, EASY DL platform is\nexclusively available in Chinese which considerably limits the\nscope and audience targeted. To address the limitation, we\nprovided the step-by-step instruction (figures and detailed English\ndescriptions) for training deep-learning models via EASY DL, which\nwas available at GitHub (https://github.com/drmaxchen-gbc/HCC-\ndeep-learning/) named “How_to_use_EASY DL”.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1298.1,
+                1961.8,
+                2332.1,
+                2170.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_13_text.png",
+            "text": "In conclusion, our study demonstrated that the convolutional\nneural networks could assist pathologists in the classification of liver\ncancer and the detection of gene mutation. It also revealed that this\nmethod might be successfully adopted for other types of solid\ntumors.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "title",
+            "score": 97.3,
+            "box": [
+                1298.5,
+                2244.9,
+                1466.7,
+                2286.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_14_title.png",
+            "text": "METHODS\n"
+        },
+        {
+            "idx": 15,
+            "thing": "title",
+            "score": 99.14,
+            "box": [
+                1298.0,
+                2294.8,
+                2139.7,
+                2336.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_15_title.png",
+            "text": "Prepare histopathological tiles dataset of liver cancer\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1297.6,
+                2345.1,
+                2333.9,
+                3063.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_4/region_16_text.png",
+            "text": "The frozen slide images and the corresponding cancer information were\nobtained from the GDC-portal (https://portal.gdc.cancer.gov/). On slide-\nlevel, there were 491 WSls (HCC vs. normal liver tissue, 402 vs. 89), 383 WSlIs\nof HCC with available histopathological grade (well vs. moderate vs. poor,\n55 vs. 187 vs. 141) and 387 WSls of HCC with corresponded gene mutation\ninformation. Besides, 67 WSls of HCC with completed information and 34\nWSls of normal liver tissue were selected from Sir Run-Run Shaw Hospital.\nAll WSls should be cropped into multiple small “tiles” at a magnification of\n20x. The majority of slides could be cropped into more than 200 “tiles” on\nregion (tiles)-level (Supplementary Fig. 1). Each tile was saved as a JPG\nformat by nonoverlapping 256 x 256-pixel windows. In order to avoid\nheterogeneity, each tile, where less than 80% of the surface was covered\nby tissue, should be removed (Fig. 4). Finally, the liver cancer tiles dataset\nconsisted of four subsets, including the training, testing, internal validation,\nand external validation sets. The data in the training and internal validation\ncohorts from the Genomic Data Commons portal (https://portal.gdc.cancer.\ngov/) were publicly available without restriction, authentication or\nauthorization. The independent external validation cohort we used\nconsisted of slide images without identifiable information and _ all\n"
+        }
+    ]
+}

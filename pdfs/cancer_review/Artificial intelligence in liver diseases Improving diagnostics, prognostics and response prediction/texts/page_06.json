@@ -1,0 +1,220 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 16,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                177.8,
+                264.0,
+                1218.1,
+                490.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_01_text.png",
+            "text": "outperforming the AST-to-platelet ratio index and the fibrosis-4\nindex. Gadoxetic acid-enhanced hepatobiliary phase MR images\nhave also been inputted into a CNN for fibrosis staging, achieving\nAUCs of 0.84, 0.84, and 0.85 for classification of F4, F3, and F2\nfibrosis, respectively.”\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                177.6,
+                492.7,
+                1216.9,
+                1038.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_02_text.png",
+            "text": "CNNs also excel in classification of liver masses. Yasaka et al.’s\nDL CNN model used multi-phase contrast-enhanced CT to di-\nagnose 5 categories of malignant and benign liver masses with a\nmedian accuracy of 0.84. The AUC for differentiating HCCs and\nother malignant lesions vs. indeterminate and benign masses\nwas 0.92.’° Hamm et al. developed a CNN system based on\nmultiphasic MRI that identified 6 classes of hepatic lesions with\nan AUC of 0.99 for test cases and a sensitivity and specificity\n(90%/98%) that exceeded that of radiologists (82.5%/96.5%).’° For\nchallenging HCC diagnoses, Oestmann et al. trained a DL model\nwith multiphasic MRI to differentiate HCC with typical and\natypical appearances from non-HCC lesions.’”\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.33,
+            "box": [
+                177.2,
+                1083.0,
+                830.3,
+                1128.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_03_title.png",
+            "text": "Outcome prediction for malignant disease\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                178.0,
+                1128.8,
+                1216.3,
+                1812.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_04_text.png",
+            "text": "Given its association with high rates of recurrence after HCC\nresection, microvascular invasion (MVI) has been the focus of\npredictive radiomics nomograms. Nomograms using contrast-\nenhanced CT radiomics signatures yielded AUCs ranging from\n0.80 to 0.90 during validation.’* ®° Notably, Xu et al. showed that\nalthough radiomic features did not add additional benefit to\nradiologist scoring of HCC, the integrated nomogram of radio-\nmics, clinical factors, and radiographics achieved an AUC of 0.90\nin the test set for predicting MVI.°° Feng et al. used radiomics\nfeatures on preoperative Gd-EOB-DTPA (gadolinium\nethoxybenzyl-diethylenetriaminepentaacetic | acid)-enhanced\nMRI to predict MVI for curative hepatectomy with an AUC of 0.85\nin the validation cohort.*! Recent DL models on CT®? and\ncontrast-enhanced MRI°*°* can predict MVI with AUCs\nexceeding 0.90.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                177.7,
+                1815.0,
+                1216.6,
+                2498.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_05_text.png",
+            "text": "Finally, AI has found utility in predicting response to trans-\narterial chemoembolisation (TACE). Abaijian et al. used MRI im-\naging features and clinical variables to develop logistic\nregression and random forest models that predicted response to\nTACE.®° Morshid et al. trained 2 CNNs to segment the liver and\nHCC, extracted textures from segmented HCCs, and used a\nrandom forest to classify patients as being susceptible or re-\nfractory to TACE using the extracted textures and the BCLC\nscore.°° A residual CNN was utilised in transfer learning to pre-\ndict RECIST response to TACE based on pretreatment CT images\nof intermediate stage HCC, with AUCs above 0.90 in independent\nvalidation cohorts.®’” Jin et al. created a nomogram of clinical\nfeatures, radiological characteristics, and a pretreatment CT\nradiomics signature to predict extrahepatic spread and MVI in\npatients with HCC who underwent TACE.®®\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 98.44,
+            "box": [
+                177.2,
+                2547.9,
+                453.5,
+                2593.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_06_title.png",
+            "text": "What is missing\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 98.97,
+            "box": [
+                176.6,
+                2596.3,
+                703.9,
+                2642.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_07_title.png",
+            "text": "Standardisation of image analysis\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                177.5,
+                2644.7,
+                1218.2,
+                3097.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_08_text.png",
+            "text": "Despite Al’s promise for translation in liver imaging, discrep-\nancies in methodology prevent incorporation into clinical deci-\nsion making. Considerable variation exists within the radiomics\nworkflow starting from data acquisition to final selection of\nfeatures,?*:*? although similar considerations apply to DL. In liver\nimaging, CT, MRI, or ultrasound constitute imaging modalities\nwith distinct data acquisition parameters. As such, the use of\nspecific scanners, imaging protocols, and image reconstruction\nmethods could affect later extraction of features.°°°°*!°9 While\nmost imaging data is stored in a PACS (Picture Archiving and\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1263.6,
+                263.9,
+                2302.9,
+                445.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_09_text.png",
+            "text": "Communication System) as DICOM files, further variability is\nintroduced when files are converted to user-friendly versions\nsuch as PNG, TIFF, and NIFTI (Neuroimaging Informatics Tech-\nnology Initiative).°°\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1264.4,
+                446.4,
+                2303.2,
+                856.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_10_text.png",
+            "text": "Difficulties in standardisation also arise during image anal-\nysis. Little unity exists around segmentation methods from\nvarious vendors,-° while DL-based segmentation methods\ndiverge in their architectures. As for preparation of imaging data\nfor feature extraction, image processing steps such as interpo-\nlation, normalisation, and discretisation depend on imaging\nmodality, which may affect the reproducibility of radiomic fea-\ntures.°® Finally, heterogeneity exists amongst in-house software\nused for feature selection and dimensionality reduction.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 99.27,
+            "box": [
+                1264.6,
+                900.7,
+                1876.1,
+                945.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_11_title.png",
+            "text": "Diversity and bias in database curation\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1265.3,
+                945.6,
+                2303.5,
+                1585.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_12_text.png",
+            "text": "In order for AI algorithms to be widely applicable beyond their\ninitial training and validation phases, well-curated databases are\ncrucial for external validation. It is critical to generate an\nepidemiologically diverse dataset to ensure all imaging appear-\nances are included. For instance, an algorithm developed for\nfibrosis staging in an East Asian population, where patients\npredominantly have chronic hepatitis B, may not be general-\nisable to Western populations, where NAFLD and alcohol-related\nliver disease are common. In addition, class imbalance in non-\ndiverse datasets can compromise generalisability by negatively\naffecting the algorithm’s ability to classify test cases that were\nless represented during the training phase. This could explain\nwhy an algorithm may less effectively classify F2 fibrosis, as more\nadvanced F3 and F4 stages are over-represented.’”\"”?\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1265.1,
+                1586.3,
+                2303.3,
+                2086.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_13_text.png",
+            "text": "External validation may also be compromised when a dataset\nunintentionally perpetuates existing disparities in healthcare\nthrough the labels it chooses for prediction. This very issue was\nhighlighted in a commercial algorithm that used predicted cost\nas the algorithmic risk score. At a given algorithmic risk score,\nBlack patients had a higher number of active chronic conditions\nthan White patients, but similar actual, realised costs to White\npatients. This discrepancy suggested less health spending was\nallocated to Black patients for their true illness burden, possibly\ndue to barriers in care experienced by Black patients not\ncaptured by predicted cost.?!\n"
+        },
+        {
+            "idx": 14,
+            "thing": "title",
+            "score": 98.79,
+            "box": [
+                1263.8,
+                2140.2,
+                1509.4,
+                2185.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_14_title.png",
+            "text": "The next steps\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1264.9,
+                2187.6,
+                2303.9,
+                3007.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_15_text.png",
+            "text": "Concrete steps can be taken to standardise data collection and\nimage analysis. The Quantitative Imaging Biomarker Alliance\n(QIBA) has sought to standardise the measurement and analysis\nof Quantitative Imaging Biomarkers (QIBs) by drafting QIBA\nprofiles dedicated to certain QIBs, whereas the European Imaging\nBiomarker Alliance has tabulated organ systems-based in-\nventories detailing the evidence for biomarkers.°*-°* With\nrespect to radiomics, workflows can adhere to the Radiomics\nQuality Score and Transparent Reporting of a Multivariable Pre-\ndiction Model for Individual Prognosis or Diagnosis (TRIPOD)\nstatements to ensure technical rigor and verify features are\nconsistent with the Image Biomarker Standardisation Initiative\nReference Manual.??-°” In addition, publicly sharing details of\nalgorithm development would foster mutual agreement on im-\naging formats and annotations,°° establish benchmarks for\nmethodologies, and facilitate comparisons amongst studies.\nFinally, AI algorithms should be tested on prospectively collected\ndata to assess the robustness of features in the face of new data.\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1263.0,
+                3009.1,
+                2304.5,
+                3099.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_06/region_16_text.png",
+            "text": "To supply the diversity of images needed to represent all\npossible pathologies, multi-institutional databases should be\n"
+        }
+    ]
+}

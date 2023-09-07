@@ -1,0 +1,1282 @@
+{
+    "pdf_filename": "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf",
+    "pdf_fullpath": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf",
+    "pages_num": 14,
+    "pages": [
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_01.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_01.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 6,
+                "page_idx": 1
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "title",
+                    "score": 99.85,
+                    "box": [
+                        647.7,
+                        527.1,
+                        2288.4,
+                        1033.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_1_title.png",
+                    "text": "Deep learning predicts postsurgical\nrecurrence of hepatocellular\ncarcinoma from digital\nhistopathologic images\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 97.09,
+                    "box": [
+                        648.9,
+                        1059.4,
+                        2137.2,
+                        1109.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_2_text.png",
+                    "text": "Rikiya Yamashita?”, Jin Long2, Atif Saleem?, Daniel L. Rubin?“ & Jeanne Shen???“\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.9,
+                    "box": [
+                        650.6,
+                        1146.5,
+                        2308.0,
+                        1741.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_3_text.png",
+                    "text": "Recurrence risk stratification of patients undergoing primary surgical resection for hepatocellular\ncarcinoma (HCC) is an area of active investigation, and several staging systems have been proposed to\noptimize treatment strategies. However, as many as 70% of patients still experience tumor recurrence\nat 5 years post-surgery. We developed and validated a deep learning-based system (HCC-SurvNet)\nthat provides risk scores for disease recurrence after primary resection, directly from hematoxylin\n\nand eosin-stained digital whole-slide images of formalin-fixed, paraffin embedded liver resections.\nOur model achieved concordance indices of 0.724 and 0.683 on the internal and external test cohorts,\nrespectively, exceeding the performance of the standard Tumor-Node-Metastasis classification\nsystem. The model's risk score stratified patients into low- and high-risk subgroups with statistically\nsignificant differences in their survival distributions, and was an independent risk factor for post-\nsurgical recurrence in both test cohorts. Our results suggest that deep learning-based models can\nprovide recurrence risk scores which may augment current patient stratification methods and help\nrefine the clinical management of patients undergoing primary surgical resection for HCC.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        649.8,
+                        1822.0,
+                        2314.1,
+                        2284.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_4_text.png",
+                    "text": "Hepatocellular carcinoma (HCC) is the most prevalent primary liver malignancy and the fourth leading cause\nof cancer-related death worldwide’”. Despite advances in prevention, surveillance, early detection, and treat-\nment, its incidence and cancer-specific mortality continue to rise, with the majority of patients still presenting\nat advanced stages’”. To stratify patients according to their expected outcome in order to optimize treatment\nstrategies, several staging systems, such as the American Joint Committee on Cancer (AJCC)/International\nUnion against Cancer (UICC) Tumor-Node-Metastasis (TNM)? and the Barcelona Clinic Liver Cancer (BCLC)\nsystems‘, have been proposed and validated. However, as many as 70% of patients still have tumor recurrence\nwithin 5 years post-treatment**’’, including both true recurrence due to intrahepatic metastasis and de novo\nprimary cancers arising in the background liver, as the majority of HCCs occur in patients with underlying\nchronic liver disease that directly contributes to the development of HCC. Therefore, further refinement and\nimprovement of recurrence risk stratification is warranted.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        650.4,
+                        2281.0,
+                        2313.6,
+                        2785.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_5_text.png",
+                    "text": "Histopathologic assessment plays a key role in recurrence risk stratification, as it evaluates human-recog-\nnizable morphologic features associated with tumor recurrence, such as histopathologic grade and vascular\ninvasion*''. Prognostic nomograms for prediction of recurrence after curative liver resection for HCC have\nbeen proposed using clinicopathologic variables'”. However, histopathologic features are interpreted by patholo-\ngists, which is subject to reproducibility problems (an example being inter- and intra-observer variability in the\nassessment of microvascular invasion!*). On the other hand, recent advances in computer vision, deep learning,\nand other forms of machine learning have enabled the identification of histomorphologic patterns and features\ninformative of disease outcomes which are not readily recognizable by the human eye, and which are reproduc-\nible. Thus, there has been much interest in applying computer vision methods to histologic images for automated\noutcome prediction'**'. Mobadersany et al.'* and Zhu et al.'° applied convolutional neural networks, a type of\ndeep learning network, to predict patient survival directly from histopathologic images of brain and lung cancers,\nrespectively. In these two studies, to achieve direct survival prediction from histopathologic images, the negative\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 96.81,
+                    "box": [
+                        649.3,
+                        2874.1,
+                        2316.9,
+                        3081.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_01/region_6_text.png",
+                    "text": "1Department of Biomedical Data Science, Stanford University School of Medicine, 1265 Welch Road, Stanford,\nCA 94305, USA. *Center for Artificial Intelligence in Medicine and Imaging, Stanford University, 1701 Page Mill\nRoad, Palo Alto, CA 94304, USA. ?>Department of Pathology, Stanford University School of Medicine, 300 Pasteur\nDrive, Stanford, CA 94305, USA. “These authors contributed equally: Daniel L. Rubin and Jeanne Shen. “email:\njeannes@stanford.edu\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_02.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_02.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 10,
+                "page_idx": 2
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "figure",
+                    "score": 98.27,
+                    "box": [
+                        296.4,
+                        207.4,
+                        2309.5,
+                        795.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_02/region_01_figure.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.85,
+                    "box": [
+                        649.9,
+                        833.3,
+                        2286.0,
+                        1170.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_02/region_02_text.png",
+                    "text": "Figure 1. Overview of HCC-SurvNet. All WSI were preprocessed by discarding non tissue-containing\n\nwhite background using thresholding, then partitioned into non-overlapping tiles of size 299 x 299 pixels\n\nand color normalized. A tumor tile classification model was developed using the Stanford-HCCDET dataset,\nwhich contained WSI with all tumor regions manually annotated. The tumor tile classification model was\nsubsequently applied to each tissue-containing image tile in the TCGA-HCC (n= 360 WSI) and Stanford-HCC\n(n= 198 WSI) datasets for inference. The 100 tiles with the highest predicted probabilities of being tumor tiles\nwere input into the downstream risk prediction model to yield tile-based risk scores, which were averaged to\ngenerate a WS]-level risk score for recurrence. WSI, whole-slide image.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.91,
+                    "box": [
+                        649.7,
+                        1247.7,
+                        2316.6,
+                        1459.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_02/region_03_text.png",
+                    "text": "partial log-likelihood was used as the loss function, which enabled the models to output the risk values of the\nCox proportional hazard model’s exponential part. Saillard et al.“ recently developed a deep learning-based\nmodel for the prediction of overall survival after surgical resection in patients with HCC, using digital whole-\nslide images. However, no studies to date have sought to predict post-surgical recurrence of HCC directly from\nhistopathologic images using deep learning.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        648.7,
+                        1453.8,
+                        2316.6,
+                        1752.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_02/region_04_text.png",
+                    "text": "In this study, we developed and independently validated a deep convolutional neural network for predicting\nrisk scores for the recurrence-free interval (RFI) after curative-intent surgical resection for HCC, directly from\ndigital whole-slide images (WSI) of hematoxylin and eosin (H&E)-stained, formalin-fixed, paraffin embedded\n(FFPE) primary liver resections. We built on and extended the aforementioned prior work by applying the nega-\ntive partial log-likelihood as a loss function, so that the model outputs risk scores for post-surgical recurrence.\nIn doing so, we present a fully automated approach to HCC recurrence risk prognostication on histopathologic\nimages, which can be adopted for use in clinical settings to refine treatment and follow-up plans.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "title",
+                    "score": 99.64,
+                    "box": [
+                        650.5,
+                        1787.7,
+                        793.7,
+                        1841.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_02/region_05_title.png",
+                    "text": "Results\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.9,
+                    "box": [
+                        649.1,
+                        1838.7,
+                        2317.2,
+                        1967.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_02/region_06_text.png",
+                    "text": "An overall framework for the deep learning-based system for predicting the risk score for RFI, hereafter referred\nto as HCC-SurvNet, is shown in Fig. 1. The system consists of two stages, i.e. tumor tile classification and risk\nscore prediction.\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        648.1,
+                        2011.1,
+                        2316.0,
+                        2351.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_02/region_07_text.png",
+                    "text": "Tumor tile classification. To develop a deep convolutional neural network (CNN) to automatically detect\ntumor-containing tiles within WSL, we used the Stanford-HCCDET (n = 128,222 tiles from 36 WSI) dataset. All\ntumor regions in each WS] in the Stanford- HCCDET dataset were manually annotated by the reference patholo-\ngist (J.S.). Each WSI was preprocessed and tiled into image patches. Using these ground truth labels and image\ntiles, we trained and tested a CNN using 78% of WSI (100,976 tiles from 28 WSJ) in the Stanford-HCCDET for\ntraining, 11% (15,834 tiles from 4 WSI) for validation, and 11% (11,412 tiles from 4 WSI) for internal testing,\nwith no patient overlap between any of these three sets. The final optimized tumor versus non-tumor tile classi-\nfier was externally tested on 30 WSI (n= 82,532 tiles) randomly sampled from the TCGA-HCC dataset.\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        648.4,
+                        2346.7,
+                        2316.9,
+                        2644.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_02/region_08_text.png",
+                    "text": "Among the tiles in the internal test set, 25.7% (2932 of 11,412 tiles) were tumor positive, whereas 48.8%\n(40,288 out of 82,532 tiles) were tumor positive in the external test set. The accuracies of tumor tile classification\nwere 92.3% and 90.8% on the internal and external test sets, respectively. The areas under the receiver-operating-\ncharacteristic-curve (AUROCs) were 0.952 (95% CI 0.948, 0.957) and 0.956 (95% CI 0.955, 0.958) for the internal\nand external test sets, respectively. Model outputs showed a statistically significant difference between tiles with\na ground truth of tumor versus non-tumor, on both the internal and external test sets (p < 0.0001 and p< 0.0001,\nrespectively) (Figs. 2, 3).\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "text",
+                    "score": 99.87,
+                    "box": [
+                        649.2,
+                        2687.1,
+                        2316.8,
+                        2859.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_02/region_09_text.png",
+                    "text": "Risk score prediction. Datasets. To develop a risk score prediction model, we used two datasets: the\nTCGA-HCC and Stanford-HCC datasets, originating from two independent data sources, the Cancer Genome\nAtlas (TCGA)-LIHC diagnostic slide collection and the Stanford Department of Pathology slide archive, respec-\ntively. The TCGA-HCC was further split into TCGA-HCC development and test datasets.\n"
+                },
+                {
+                    "idx": 10,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        650.9,
+                        2854.6,
+                        2319.0,
+                        3067.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_02/region_10_text.png",
+                    "text": "The TCGA-HCC development dataset (containing the training and validation sets) consisted of 299 patients\n(median age of 60 years, with an interquartile range (IQR) of 51-68 years, 69% male and 31% female). The fre-\nquencies of risk factors for HCC were: 32% for hepatitis B virus infection, 15% for hepatitis C virus infection,\n34% for alcohol intake, and 4.9% for NAFLD. The AJCC (8th edition) stage grouping was IA in 2.7%, IB in 41%,\nII in 29%, IIIA in 20%, IIIB in 5.4%, IVA in 1.0%, and IVB in 0.3% of the patients, respectively. One hundred\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_03.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_03.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 4,
+                "page_idx": 3
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "figure",
+                    "score": 99.6,
+                    "box": [
+                        646.5,
+                        207.7,
+                        2304.0,
+                        1271.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_03/region_1_figure.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.84,
+                    "box": [
+                        649.2,
+                        1312.8,
+                        2307.8,
+                        1568.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_03/region_2_text.png",
+                    "text": "Figure 2. Performance of the tumor tile classification model on the internal test set. The AUROC for tumor tile\nclassification was 0.952 (95% CI 0.948, 0.957) on the internal test set (a). Model outputs differed significantly\nbetween tiles with a ground truth of tumor versus non-tumor (p value < 0.0001) (b). *The 95% CI for AUC\n\nis shown in parentheses in the ROC plot. **Error bars represent 95% CI in the bar chart. The p value was\ncomputed using the Wilcoxon rank sum test. AUC, area under the ROC curve; CI, confidence interval; ROC,\nreceiver operating characteristic.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "figure",
+                    "score": 99.44,
+                    "box": [
+                        648.0,
+                        1592.1,
+                        2302.0,
+                        2729.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_03/region_3_figure.png"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.86,
+                    "box": [
+                        649.9,
+                        2769.6,
+                        2313.6,
+                        3025.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_03/region_4_text.png",
+                    "text": "Figure 3. Performance of the tumor tile classification model on the external test set. The AUROC for tumor tile\nclassification was 0.956 (95% CI 0.955, 0.958) on the external test set (a). Model outputs differed significantly\nbetween tiles with a ground truth of tumor versus non-tumor (p value < 0.0001) (b). *95% CI for AUC is shown\nin parentheses in the ROC plot. **Error bars represent 95% CI in the bar chart. The p value was computed using\nthe Wilcoxon rank sum test. AUC, area under the ROC curve; CI, confidence interval; ROC, receiver operating\ncharacteristic.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_04.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_04.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 10,
+                "page_idx": 4
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.77,
+                    "box": [
+                        648.3,
+                        205.7,
+                        2313.9,
+                        293.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_01_text.png",
+                    "text": "and fifty-one patients experienced disease recurrence during follow-up (median follow-up time of 12.2 months)\n(Table 1).\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.98,
+                    "box": [
+                        648.4,
+                        287.1,
+                        2317.4,
+                        627.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_02_text.png",
+                    "text": "The TCGA-HCC test dataset consisted of 53 patients (median age of 61 years, with an IQR of 51-68 years,\n62% male and 38% female). The frequencies of risk factors for HCC were: 33% for hepatitis B virus infection,\n16% for hepatitis C virus infection, 39% for alcohol intake, and 10% for NAFLD. The AJCC stage grouping was\nIA in 1.9%, IB in 46%, II in 31%, IIIA in 17%, IIIB in 1.9%, and IVB in 1.9% of the patients. Twenty-five patients\nexperienced recurrence during follow-up (median follow-up time of 12.7 months) (Table 1). None of the clin-\nicopathologic features were significantly associated with shorter RFI upon univariable Cox regression analysis,\nwhile a Batts-Ludwig” fibrosis stage > 2 showed borderline significance (hazard ratio (HR) =2.7 (95% confidence\ninterval (CI) 0.98, 7.7), p=0.0543) (Table 2).\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        647.9,
+                        620.2,
+                        2317.7,
+                        1084.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_03_text.png",
+                    "text": "The Stanford-HCC dataset consisted of 198 patients (median age of 64 years, with an IQR of 57-69 years, 79%\nmale and 21% female). The frequencies of risk factors for HCC were: 26% for hepatitis B virus infection, 52% for\nhepatitis C virus infection, 8.6% for alcohol intake, and 7.1% for NAFLD. The overall AJCC stage grouping was IA\nin 22%, IB in 21%, I] in 34%, IIIA in 5.6%, IIIB in 3.5%, and IVA in 1.0% of the patients, respectively. Sixty-two\npatients experienced disease recurrence during follow-up (median follow-up time of 24.9 months) (Table 1). The\nclinical and pathologic features associated with shorter RFI were AJCC stage grouping > II [HR=4.4 (95% CI 2.3,\n8.3), p< 0.0001], greatest tumor diameter >5 cm [HR=3.5 (95% CI 2.1, 5.8), p< 0.0001], histologic grade > moder-\nately differentiated [HR =2.1 (95% CI 1.2, 3.9), p=0.0128], presence of microvascular invasion [HR=3.9 (95% CI\n2.4, 6.5), p< 0.0001], presence of macrovascular invasion [HR=5.3 (95% CI 2.1, 13), p< 0.0001], positive surgical\nmargin [HR=6.8 (95% CI 1.6, 28), p=0.009], and fibrosis stage > 2 [HR=0.33 (95% CI 0.2, 0.55), p< 0.0001]\nusing univariable Cox regression analysis (Table 2).\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        648.6,
+                        1126.9,
+                        2317.4,
+                        1636.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_04_text.png",
+                    "text": "HCC-SurvNet performance for RFI prediction. The tumor tile classification model was applied to each tissue-\ncontaining image tile in the TCGA-HCC development (n=299 WSI) and test (n=53 WSJ) datasets and the Stan-\nford-HCC dataset (n= 198 WSI). From each WSF, the 100 tiles with the highest probabilities for the tumor class\nwere selected for input into the subsequent risk score model. Figure 4 shows examples of tiles with probabilities\nin the top 100 for containing tumor, overlaid onto the original WSI. A MobileNetV2” pre-trained on ImageNet™*\nwas modified by replacing the fully-connected layers, and fine-tuned by transfer learning with on-the-fly data\naugmentation on the tiles from the TCGA-HCC development dataset (n=307 WSI from 299 patients), where\nthe model input was a 299 x 299 pixel image tile, and the output was a continuous tile-level risk score from the\nhazard function for RFI. The negative partial log-likelihood of the Cox proportional hazards model was used as a\nloss function’*'>. The model’s performance was evaluated internally on the TCGA-HCC test dataset (n =53 WSI\nfrom 53 patients), and externally on the Stanford-HCC dataset (n= 198 WSI from 198 patients). All tile-level risk\nscores from a patient were averaged to yield a patient-level risk score.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        649.7,
+                        1628.7,
+                        2319.3,
+                        1885.0
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_05_text.png",
+                    "text": "We assessed HCC-SurvNet’s performance using Harrell’s** and Uno’s** concordance indices (c-indices). On\nthe internal test set (TCGA-HCC test dataset, n=53 patients), Harrell’s and Uno’s c-indices were 0.724 and\n0.724, respectively. On the external test set (Stanford-HCC, n= 198 patients), the indices were 0.683 and 0.670,\nrespectively. We observed statistically significant differences in the survival distributions between the low- and\nhigh-risk subgroups, as stratified by the risk scores predicted by HCC-SurvNet, on both the internal and external\ntest sets (log-rank p value: 0.0013 and <0.0001, respectively) (Figs. 5, 6).\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        649.3,
+                        1877.5,
+                        2317.8,
+                        2177.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_06_text.png",
+                    "text": "Histograms of HCC-SurvNet’s risk scores, along with the threshold used for risk group stratification, are\nshown in Supplementary Fig. 1. On univariable Cox proportional hazards analysis, the HCC-SurvNet risk\nscore was a predictor of the RFI, for both the internal [HR=6.52 (95% CI 1.83, 23.2), p=0.0038] and external\n[HR = 3.72 (95% CI 2.17, 6.37), p< 0.0001] test sets (Table 2). A continuous linear association between HCC-\nSurvNet’s risk score and the log relative hazard for RFI was observed by analysis of the internal and external test\ncohorts by univariable Cox proportional hazards regression with restricted cubic splines (Supplementary Fig. 2),\nvalidating the use of HCC-SurvNet’s risk score as a linear factor in the Cox analyses.\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 99.92,
+                    "box": [
+                        650.0,
+                        2169.6,
+                        2316.9,
+                        2302.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_07_text.png",
+                    "text": "On multivariable Cox proportional hazards analysis, HCC-SurvNet’s risk score was an independent predic-\ntor of the RFI, for both the internal [HR =7.44 (95% CI 1.60, 34.6), p=0.0105] and external [HR =2.37 (95% CI\n1.27, 4.43), p=0.00685] test sets (Table 3).\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        648.5,
+                        2295.0,
+                        2317.2,
+                        2801.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_08_text.png",
+                    "text": "No other clinicopathologic variable was statistically significant on the internal test set. Microvascular invasion\n[HR =2.84 (95% CI 1.61, 5.00), p= 0.000294] and fibrosis stage [HR = 0.501 (95% CI: 0.278, 0.904), p = 0.0217]\nshowed statistical significance on the external test set, along with HCC-SurvNet’s risk score. Schoenfeld’s global\ntest showed p values greater than 0.05 on both the internal (p = 0.083) and external (p =0.0702) test sets. On\nmixed-effect Cox regression analysis with the TCGA institution as a random effect, HCC-SurvNet’s risk score\nwas an independent predictor (p=0.014), along with the histologic grade (p=0.014) and macrovascular inva-\nsion (p=0.013). In the external test (Stanford-HCC) cohort, HCC-SurvNet’s risk score was positively associated\nwith the AJCC stage grouping, greatest tumor diameter, and microvascular invasion, and negatively associated\nwith fibrosis stage (Table 4). HCC-SurvNet's risk score yielded a significantly higher Harrell’s c-index (0.72 for\nthe internal and 0.68 for the external test cohort) than that obtained using the AJCC Stage grouping (0.56 for\nthe internal and 0.60 for the external test cohort), on both the internal and external test cohorts (p= 0.018 and\n0.025, respectively).\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "title",
+                    "score": 99.76,
+                    "box": [
+                        649.9,
+                        2837.2,
+                        858.6,
+                        2892.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_09_title.png",
+                    "text": "Discussion\n"
+                },
+                {
+                    "idx": 10,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        650.0,
+                        2887.2,
+                        2318.5,
+                        3060.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_04/region_10_text.png",
+                    "text": "Building upon recent advances in deep learning, we have developed a system for predicting RFI after curative-\nintent surgical resection in patients with HCC, directly from H&E-stained FFPE WSI. The system outputs an\nRFI risk score by first applying a deep CNN to automatically detect tumor-containing tiles. Then, a second model\noutputs a continuous risk score based on analysis of the top 100 tumor-containing tiles from each WSI. In the\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_05.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_05.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 1,
+                "page_idx": 5
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "table",
+                    "score": 97.36,
+                    "box": [
+                        644.2,
+                        218.7,
+                        2308.1,
+                        3072.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_05/region_1_table.png"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_06.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_06.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 6,
+                "page_idx": 6
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "table",
+                    "score": 56.11,
+                    "box": [
+                        647.2,
+                        210.6,
+                        2309.2,
+                        780.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_06/region_1_table.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 97.15,
+                    "box": [
+                        648.4,
+                        820.9,
+                        2256.6,
+                        909.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_06/region_2_text.png",
+                    "text": "Table 1. Patient characteristics for the Stanford- HCC and TCGA-HCC datasets. Values presented: median\n(IQR); n (%).\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "table",
+                    "score": 65.35,
+                    "box": [
+                        639.5,
+                        950.4,
+                        2216.2,
+                        2605.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_06/region_3_table.png"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 97.07,
+                    "box": [
+                        651.6,
+                        2644.3,
+                        2224.3,
+                        2691.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_06/region_4_text.png",
+                    "text": "Table 2. Univariable Cox proportional hazards analysis of the risk of recurrence. CI, confidence interval.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.73,
+                    "box": [
+                        649.2,
+                        2808.4,
+                        2319.4,
+                        2981.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_06/region_5_text.png",
+                    "text": "internal and external test cohorts, we observed statistically significant differences in the survival distributions\nbetween the low- and high-risk subgroups, as stratified by the risk score predicted by the system. The results\nof multivariable analyses indicate that the HCC-SurvNet risk score could help supplement established clinico-\npathologic predictors of RFI, thereby improving recurrence risk stratification.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.65,
+                    "box": [
+                        650.4,
+                        2975.9,
+                        2320.3,
+                        3064.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_06/region_6_text.png",
+                    "text": "In the present study, HCC-SurvNet significantly outperformed the standard AJCC/UICC staging system\nin predicting the post-surgical HCC recurrence risk. Shim et al.'* reported the performance of a prognostic\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_07.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_07.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 4,
+                "page_idx": 7
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "figure",
+                    "score": 99.5,
+                    "box": [
+                        298.6,
+                        208.4,
+                        2306.2,
+                        1424.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_07/region_1_figure.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.36,
+                    "box": [
+                        651.6,
+                        1466.7,
+                        2301.6,
+                        1640.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_07/region_2_text.png",
+                    "text": "Figure 4. Top 100 tiles selected by the tumor tile classification model. Spatial distribution of the top 100 tiles\nclassified as being tumor tiles by the tumor tile classification model. The top row represents examples from the\nTCGA-HCC test dataset, and the bottom row represents examples from the Stanford-HCC dataset. The top 100\ntiles were subsequently used for development of the survival prediction model. WSI, whole-slide image.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "figure",
+                    "score": 99.11,
+                    "box": [
+                        649.2,
+                        1657.9,
+                        2302.5,
+                        2799.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_07/region_3_figure.png"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.62,
+                    "box": [
+                        650.4,
+                        2838.7,
+                        2305.8,
+                        2970.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_07/region_4_text.png",
+                    "text": "Figure 5. Kaplan-Meier plots for the high- and low-risk subgroups in the internal (TCGA-HCC) test set. The\nKaplan-Meier plot shows the difference in the survival distributions for the low- and high-risk subgroups,\nstratified based on the risk scores predicted by HCC-SurvNet on the internal test set (log-rank p value = 0.0013).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_08.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_08.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 6,
+                "page_idx": 8
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "figure",
+                    "score": 99.48,
+                    "box": [
+                        649.9,
+                        221.2,
+                        2304.0,
+                        1309.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_08/region_1_figure.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 97.19,
+                    "box": [
+                        651.2,
+                        1349.4,
+                        2308.1,
+                        1485.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_08/region_2_text.png",
+                    "text": "Figure 6. Kaplan-Meier plots for the high- and low-risk subgroups in the external (Stanford-HCC) test set.\nThe Kaplan-Meier plot shows the difference in the survival distributions for the low- and high-risk subgroups,\nstratified based on the risk scores predicted by HCC-SurvNet on the external test set (log-rank p value < 0.0001).\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "table",
+                    "score": 64.96,
+                    "box": [
+                        648.2,
+                        1587.3,
+                        1914.3,
+                        2498.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_08/region_3_table.png"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 97.15,
+                    "box": [
+                        650.9,
+                        2535.0,
+                        2252.7,
+                        2580.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_08/region_4_text.png",
+                    "text": "Table 3. Multivariable Cox proportional hazards analysis of the risk of recurrence. CI, confidence interval.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.51,
+                    "box": [
+                        649.3,
+                        2705.8,
+                        2318.2,
+                        2878.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_08/region_5_text.png",
+                    "text": "nomogram for recurrence prediction after curative liver resection in HCC patients, which yielded a c-index of\n0.66 for 2-year recurrence on an independent validation cohort. Although a direct comparison with the perfor-\nmance of their nomogram is not possible, as their patient cohort was different from ours, our risk score appears\nto have a performance that is on par with, or slightly better than, the prognostic nomogram.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.67,
+                    "box": [
+                        650.2,
+                        2871.9,
+                        2318.3,
+                        3086.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_08/region_6_text.png",
+                    "text": "Advances in deep learning, and other forms of machine learning, have led to the identification of histomor-\nphologic features informative of disease outcomes, and prior works have applied these methods to automated\noutcome prediction'*~*!. The automatic extraction of such features directly from WSI has the potential to add\nvalue to current treatment planning paradigms by increasing both the accuracy of prognostic risk stratification\nand the objectivity and reproducibility of biomarker assessment. Mobadersany et al.'4 and Zhu et al.’° previously\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_09.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_09.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 2,
+                "page_idx": 9
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "table",
+                    "score": 82.32,
+                    "box": [
+                        645.4,
+                        207.3,
+                        2219.0,
+                        2698.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_09/region_1_table.png"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 96.29,
+                    "box": [
+                        649.7,
+                        2735.7,
+                        2283.2,
+                        2824.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_09/region_2_text.png",
+                    "text": "Table 4. Association between the HCC-SurvNet risk score and various patient characteristics in the external\ntest (Stanford-HCC) cohort. Values presented: median (IQR); n (%).\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_10.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_10.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 9,
+                "page_idx": 10
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        648.4,
+                        204.2,
+                        2317.3,
+                        501.6
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_10/region_1_text.png",
+                    "text": "applied convolutional neural networks to survival prediction directly from histopathologic images, by integrat-\ning the negative partial log-likelihood into the model as a loss function, which enables the model to output a\nvalue that can be regarded as a prognostic risk score. However, in these prior studies, representative tiles were\nmanually identified for input into the deep learning models. This requirement for manual tile selection, even\nduring inference, makes such models less practical for widespread clinical deployment. In this work, we present\na system which automatically selects representative image tiles, which should increase the ease of deployment\nin clinical settings.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        648.6,
+                        494.8,
+                        2317.6,
+                        1001.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_10/region_2_text.png",
+                    "text": "Saillard et al.?! were the first to apply deep learning to digital H&E WSI to predict overall survival after\nresection in HCC patients. On their external test set (342 WSI from the TCGA), their models yielded c-indices\nof 0.68 and 0.70 for overall survival prediction. Although a formal comparison between our model and theirs\nis impractical, as the outcomes and datasets used were different, our c-index on the external test set of 0.68 is\ncomparable to that reported for their model. In their study, they applied a CNN pre-trained on ImageNet as a\nfixed feature extractor. The features extracted were optimized for natural images, rather than histopathologic\nimages, suggesting that there might be further potential for improving prediction performance by optimizing\nfeature extraction for histopathologic images”’. To leverage the full capacity of our HCC-SurvNet deep learning\nsystem, we fine-tuned all of the models’ parameters, including those for feature extraction (ie. the convolutional\nblocks), with histopathologic images. Whereas Saillard et al’s model focused on predicting overall survival, ours\nfocused on recurrence-free interval, as our intent was to aid refinement of treatment strategies by providing a risk\nscore that was specific for HCC recurrence and/or HCC-related mortality after curative-intent surgical resection.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.98,
+                    "box": [
+                        648.4,
+                        995.8,
+                        2318.3,
+                        1629.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_10/region_3_text.png",
+                    "text": "A specific strength of our study was the review and confirmation of all clinicopathologic variables in the\nTCGA-HCC cohort and re-coding of older edition AJCC classifications to the latest 8th edition classification\nby a reference pathologist experienced in hepatobiliary pathology. Previous other studies’’ have also developed\nmodels for the prediction of overall survival in post-surgical HCC patients, also by using clinicopathologic data\nfrom the TCGA. However, use of TCGA clinicopathologic data presents some significant limitations which are\noften overlooked. These include the fact that the AJCC TNM classifications used across cases in the TCGA-LIHC\ndataset range from the 4th through the 7th editions, resulting in inconsistency in the meaning of the pathologic\nT, N, and M categories across different patients resected during different time periods. In addition, the pathol-\nogy reports in TCGA-LIHC came from different institutions with wide variation in the reporting of pathologic\nfeatures. Therefore, prior to use of TCGA data, standardization, in particular, of all pathologic variables, as per-\nformed in this study, is necessary. As the TCGA data were collected from 35 different institutions, each with dif-\nferent H&E staining and digitization protocols, we constructed a mixed-effect Cox model to account for potential\nintraclass correlations present between WSI originating from the same institution. After taking the originating\ninstitution into account as a random effect, we found that HCC-SurvNet’s risk score remained an independent\npredictor of recurrence-free interval, along with the histologic grade and the presence of macrovascular invasion.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        648.9,
+                        1621.7,
+                        2317.6,
+                        1959.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_10/region_4_text.png",
+                    "text": "A limitation of our study was that the dataset used to externally evaluate HCC-SurvNet’s performance was\nrestricted to cases from a single institution. Due to limitations in the datasets that were available to us, we chose\nto reserve the more heterogeneous, multi-institutional TCGA-HCC dataset for HCC-SurvNet model develop-\nment, with the intention of capturing histomorphologic features informative of HCC recurrence which were\nrobust to inter-institutional variations in H&E staining and scanning protocols. With further development and\nvalidation on larger, more diverse datasets, we hope that risk scores produced by HCC-SurvNet, as well as other\nsimilar deep learning-based models, might one day offer clinical value as a supplement to currently-established\nclinicopathologic predictors of recurrence and survival.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        649.5,
+                        1953.8,
+                        2316.5,
+                        2419.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_10/region_5_text.png",
+                    "text": "Another limitation was the black-box nature of deep learning systems. To gain insights into model interpret-\nability, we assessed the associations between HCC-SurvNet’s risk score and different patient characteristics in\nthe external test (Stanford- HCC) cohort. The HCC-SurvNet risk score was significantly associated with several\nwell-recognized prognostic factors, including the AJCC stage grouping, largest tumor diameter, microvascular\ninvasion, and Batts-Ludwig fibrosis stage. In addition, the independent contribution of the HCC-SurvNet risk\nscore to recurrence-free interval prediction, when analyzed together with other known clinicopathologic vari-\nables in the multivariable Cox regression, suggests that HCC-SurvNet was able to extract some as-yet unrec-\nognized histomorphologic features informative of recurrence, which might have biological significance and\ncorrelate with other important outcomes, such as response to adjuvant treatment. It remains for future studies\nto explore the additional potential of deep learning for prognostication and treatment response prediction in\nHCC, and other malignancies.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        650.2,
+                        2413.1,
+                        2318.5,
+                        2626.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_10/region_6_text.png",
+                    "text": "In conclusion, we have shown that a deep learning-based cancer recurrence risk score extracted from routine\nH&E WSI of primary surgical resections for HCC independently predicts the RFI, and significantly outperforms\nthe most commonly-used standard AJCC/UICC stage grouping. With further validation on larger, more diverse\ndatasets, such a risk score could augment current methods for predicting the risk of HCC recurrence after pri-\nmary surgical resection, thereby assisting clinicians in tailoring post-surgical management.\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "title",
+                    "score": 99.72,
+                    "box": [
+                        650.3,
+                        2661.9,
+                        824.5,
+                        2717.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_10/region_7_title.png",
+                    "text": "Methods\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        652.0,
+                        2712.9,
+                        2316.7,
+                        2844.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_10/region_8_text.png",
+                    "text": "This study was approved by the Stanford University Institutional Review Board, with all methods carried out in\naccordance with relevant institutional guidelines and regulations regarding human-subjects research, including\ncompliance with the United States Health Insurance Portability and Accountability Act (HIPAA).\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "text",
+                    "score": 99.94,
+                    "box": [
+                        649.7,
+                        2886.0,
+                        2318.9,
+                        3060.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_10/region_9_text.png",
+                    "text": "Patient population. A total of 250 primary hepatic resection specimens (n=250 patients) from surgeries\nperformed at our institution between January 1, 2009 and December 31, 2017, with glass slides available for\nretrieval from the departmental slide archive, were included in the dataset. Prior to digitization, the time to\nrecurrence after surgical resection, as well as patient demographic information (age at surgical resection, gender,\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_11.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_11.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 3,
+                "page_idx": 11
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        647.7,
+                        205.0,
+                        2318.8,
+                        1878.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_11/region_1_text.png",
+                    "text": "and alcohol intake), and clinicopathologic variables [history of hepatitis B and C viral infection, non-alcoholic\nfatty liver disease (NAFLD), HCC multi-nodularity, macro- and micro- vascular invasion, largest tumor diam-\neter, histologic World Health Organization grade*’, Batts-Ludwig” fibrosis stage, surgical margin status, and\nAJCC (8th edition) stage*] were collected for each case by review of the electronic health records by trained phy-\nsicians at Stanford University Medical Center (J.S. and A. S.). Forty-seven patients were excluded because their\nresections were performed for recurrent HCC, two were excluded because of lack of follow-up data after surgi-\ncal resection, and three were excluded due to the presence of comorbidities known to have contributed to the\npatients’ deaths. This process narrowed the final number of study patients down to 198. From each of these 198\npatients, a representative tumor H&E slide (the one containing the highest grade of tumor in the specimen) was\ndigitized at high resolution (40 x objective magnification, 0.25 um per pixel) on an Aperio AT2 scanner (Leica\nBiosystems, Nussloch, Germany), to generate a WSI in the SVS file format. This dataset (n= 198 WSL, from 198\nunique patients), referred to as the Stanford-HCC dataset, was used for external evaluation of the risk score\nprediction model. From the excluded patient pool (not included in Stanford-HCC), 36 patients were randomly\nselected and a representative tumor H&E slide from each patient was digitized using the exact same method as\ndescribed above, yielding a dataset with 36 WSI from 36 patients, referred to as the Stanford- HCCDET dataset.\nThis dataset was used to develop a model for automatically detecting tumor-containing tiles in a WSI (““DET”\nstands for “detection”). Use of all patient material and data was approved by the Stanford University Institutional\nReview Board, with waived informed consent.\n\nIn addition to the Stanford-HCC and Stanford-HCCDET datasets, a publicly-available dataset of 379 FFPE\ndiagnostic WSI from 365 unique patients in the TCGA-LIHC diagnostic slide collection were downloaded via\nthe GDC Data Portal” and used to develop the risk score prediction model for this study. The same patient\ndemographics, clinicopathologic variables, and RFI as collected for Stanford-HCC were obtained through\nreview of the accompanying metadata and pathology reports downloaded from the GDC Data Portal and the\npreviously-published Integrated TCGA Pan-Cancer Clinical Data Resource by Liu et al.*? RFI was defined as\nthe period from the date of surgery until the date of the first occurrence of a new tumor event, which included\nprogression of HCC, locoregional recurrence, distant metastasis, new primary tumor, or death with tumor”.\nPatients who were alive without these events, or who died without tumor, were censored”!. The event time was\nthe shortest period from the date of surgery to the date of an event. The censored time was the period from the\ndate of surgery to the date of last contact with the patient or the date of death without HCC. Given multiple\nchanges to the AJCC classification over the time period during which these specimens were collected (resulting\nin differences in the pathologic staging criteria across different editions of the AJCC), a reference pathologist\ntrained in the interpretation of hepatobiliary pathology (J.S.) reviewed the WSI and the downloaded pathology\nreports, in order to re-stage all of the patients based on the most current AJCC (8th edition) classification®. WSI\nscanned at 20 x base magnification were excluded (n=10 WSI, from 4 patients). One patient (n=1 WSI) with\nmissing RFI was excluded. Seven patients (n= 7 WSI) with mixed HCC-cholangiocarcinomas and one patient\n(n=1 WSJ) with an angiomyolipoma were excluded from the dataset. The final dataset (n = 360 WSI, from 352\npatients), referred to as the TCGA-HCC dataset, contained patients from 35 institutions, each with potentially\ndifferent staining and scanning protocols. The TCGA-HCC dataset was randomly split into the development\ncohort (n= 299 patients: n = 247 patients for training and n=52 patients for validation) and internal test cohort\n(n=53 patients), with no patient overlap between the splits.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.96,
+                    "box": [
+                        649.2,
+                        1917.8,
+                        2319.5,
+                        2177.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_11/region_2_text.png",
+                    "text": "WSI image preprocessing. First, tissue segmentation (ie. tissue separation from white background) of\nthe WSI was performed by applying a combination of filters. Second, the WSI were tiled into image patches with\na size of 1024 x 1024 pixels, at a resolution of 40 x (0.25 um/pixel). Only the tiles containing an overall tissue\npercentage of > 80% of the total surface area within each tile were saved in PNG format. Lastly, the Vahadane\nmethod* was used for stain normalization, to convert all image tiles to a reference color space. All tiles were\nsubsequently resized to 299 x 299 pixels and used for the downstream analyses.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.97,
+                    "box": [
+                        648.8,
+                        2217.2,
+                        2318.1,
+                        3061.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_11/region_3_text.png",
+                    "text": "Tumor tile classification. All tumor regions in each WSI in the Stanford- HCCDET dataset were manually\nannotated by the reference pathologist (J.S.) at 10 x magnification, using Aperio ImageScope (Leica Biosystems,\nNussloch, Germany). Tiles containing both tumor and normal tissue were excluded from model development\nand evaluation. Using these ground-truth annotated WSI, we developed a CNN for automatically classifying an\nimage tile into either the tumor or non-tumor class, where the model input was a 299 x 299 pixel image tile in\nPNG format, and the output was a probability for each class. The particular CNN architecture, PathCNN, which\nwas originally proposed by Bilaloglu et al.*’ was trained and tested using the Stanford-HCCDET (n= 128,222\ntiles from 36 WSI) dataset, with 78% of WSI (100,976 tiles from 28 WSI) used for training, 11% (15,834 tiles\nfrom 4 WSI) used for validation, and 11% (11,412 tiles from 4 WSI) used as an internal test set, with no patient\noverlap between any of these three sets). We used leaky ReLU™ with negative slope 0.01 as the non-linearity. The\ndropout probability was set at 0.1. The trainable parameters were initialized using a Xavier weight initialization\nscheme*®, and updated using an Adam optimization method* with an initial learning rate of 0.001. We applied\nstepwise learning rate decay with a step size of 7 and gamma of 0.1. The number of epochs was set at 25, with\na mini-batch size of 32. A loss function of binary cross entropy was applied. Input images were normalized by\n[(image — 0.5)/0.5] before passing them to the model. We augmented the training data by randomly introducing\npositional transforms: a horizontal flip and a rotation of 0°, 90°, 180° or 270°. Additionally, we randomly adjusted\nthe hue, brightness, contrast, and saturation of the image. We used validation accuracy to select the final model.\nThe final optimized tumor versus non-tumor tile classifier was externally tested on 30 WSI (n=82,532 tiles)\nrandomly sampled from the TCGA-HCC dataset. Of note, there was no patient overlap between the Stanford-\nHCCDET and Stanford-HCC datasets, where the latter was used in the downstream development of the risk\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_12.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_12.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 9,
+                "page_idx": 12
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 99.92,
+                    "box": [
+                        649.3,
+                        206.1,
+                        2317.9,
+                        418.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_12/region_1_text.png",
+                    "text": "score prediction model. The tumor tile classification model was subsequently applied to each tissue-containing\nimage tile in the Stanford-HCC (n=198 WSI) and TCGA-HCC (n=360 WSI) datasets. From each WSI, the\n100 tiles with the highest probabilities for the tumor class were selected for input into the subsequent survival\nanalysis. The value of 100 was chosen arbitrarily in order to incorporate enough representative tiles, taking into\naccount morphologic tumor heterogeneity in the WSI (Fig. 4).\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        647.8,
+                        461.1,
+                        2318.8,
+                        1134.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_12/region_2_text.png",
+                    "text": "HCC-SurvNet development. The top 100 tiles selected by the tumor detector were used for the develop-\nment of the risk score model for RFI, which consisted of a MobileNetV2” pre-trained on ImageNet™, modified\nby replacing the fully-connected layers, and fine-tuned by transfer learning with on-the-fly data augmentation\non the tiles from the TCGA-HCC development dataset (n=307 WSI, n=299 patients), where the model input\nwas a 299 x 299 pixel image tile in PNG format, and the output was a continuous tile-level risk score from the\nhazard function for RFI. The dropout probability in the replaced fully-connected classification layers was set at\n0.7. The trainable parameters were fine-tuned using an AdamW optimization method’’ with an initial learning\nrate of 0.001. The number of epochs was set at 30, with a mini-batch size of 80. The negative partial log-likeli-\nhood of the Cox proportional hazards model was used as a loss function'*\"». Input images were normalized by\n[(image — mean)/standard deviation], where the mean and standard statistics were calculated for the ImageNet\ndataset before passing them to the model. We augmented the training data by randomly introducing positional\ntransforms: a horizontal flip and a rotation of 0°, 90°, 180° or 270°. Additionally, we randomly adjusted the hue,\nbrightness, contrast, and saturation of the image. We used validation loss to select the final model. The model's\nperformance was evaluated internally on the TCGA-HCC test dataset, and externally on the Stanford-HCC\ndataset. All tile-level risk scores from a patient were averaged to yield a patient-level risk score. An overall frame-\nwork for the system, referred to as HCC-SurvNet, is shown in Fig. 1.\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.93,
+                    "box": [
+                        648.5,
+                        1177.0,
+                        2318.1,
+                        1434.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_12/region_3_text.png",
+                    "text": "Hardware and software. The PyTorch Python package (version 1.1.0)** was used for model development.\nOpenSlide (version 3.4.1)*? was used to read WSI in the SVS format. Image preprocessing was performed on a\nHigh-Performance Computing (HPC) cluster operated by the Stanford Research Computing Center (Sherlock\ncluster: https://www.sherlock.stanford.edu/). Model development and evaluation were performed on a worksta-\ntion with two GeForce RTX 2080 Ti (NVIDIA, Santa Clara, CA) graphics processing units, a Core i9-9820X (10\ncores, 3.3 GHz) central processing unit (Intel, Santa Clara, CA), and 128 GB of random-access memory.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.95,
+                    "box": [
+                        648.3,
+                        1478.5,
+                        2317.9,
+                        2443.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_12/region_4_text.png",
+                    "text": "Statistical analysis. We summarized our study population with descriptive statistics, including the median\nand IQR for continuous variables, and the proportion for categorical variables. The performance of the tumor tile\nclassification model was assessed using the overall accuracy and AUROC. Model outputs for tiles with a ground\ntruth of tumor were compared with those for tiles with a ground truth of non-tumor, using the Wilcoxon rank\nsum test. We evaluated the performance of the risk score model using Harrell’s* and Unos*® c-indices, which\nindicate better prediction when their values approach one. Each patient was stratified into one of two subgroups\n(high-risk and low-risk), based on their patient-level risk score. The median risk score on the validation set from\nTCGA-HCC was used as the threshold for patient stratification (Supplementary Fig. 1). Kaplan-Meier analysis\nwas performed, and a log-rank test was used to compare the survival distributions between the subgroups.\nUnivariable and multivariable Cox proportional hazards models were used to assess the relationship between\nindependent variables and RFI. The independent variables included HCC-SurvNet's risk score, age at surgical\nresection, gender, AJCC stage grouping, largest tumor diameter, tumor multifocality, histologic tumor grade,\nmicrovascular invasion, macrovascular invasion, surgical margin status, fibrosis stage, and history of Hepatitis\nB, Hepatitis C, alcohol intake, and non-alcoholic fatty liver disease. Of these, variables with univariable p values\nof less than 0.1 on either the internal or external test sets were selected for inclusion in the multivariable analysis.\nThe proportional hazards assumption was checked using Schoenfeld’s global test. To demonstrate the non-linear\nrelationship between HCC-SurvNet’s risk score and the log relative hazard for RFI, univariable Cox proportional\nhazards regression analysis with restricted cubic splines (3 knots) was performed. To account for potential intra-\nclass correlation among WSI prepared and scanned at the same institution within the TCGA cohort, a mixed-\neffect Cox regression model was constructed using the institution as a random effect. Spearman's correlation\ncoefficients were computed to gain insight into associations between the HCC-SurvNet risk score and differ-\nent patient characteristics in the external test (Stanford-HCC) cohort. Harrell’s c-index was compared between\nHCC-SurvNet’s risk score and the standard AJCC staging system, using a paired t-test.\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 99.86,
+                    "box": [
+                        650.9,
+                        2439.0,
+                        2318.4,
+                        2610.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_12/region_5_text.png",
+                    "text": "A two-tailed alpha level of 0.05 was used for statistical significance. All statistical analyses were performed\nusing Python (v3.6.10, Python Software Foundation, https://www.python.org/) with the lifelines (v0.24.0) and\nscikit-survival (v0.11) packages, as well as R (v3.6.3, R Foundation for Statistical Computing, http://www.R-proje\nct.org/) with the survival (v3.1.12), coxme (v2.2.16), pROC (v1.16.2), and rms (v5.1.4) packages.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "title",
+                    "score": 98.56,
+                    "box": [
+                        649.6,
+                        2638.4,
+                        976.8,
+                        2693.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_12/region_6_title.png",
+                    "text": "Data availability\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 99.9,
+                    "box": [
+                        650.0,
+                        2689.0,
+                        2318.9,
+                        2860.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_12/region_7_text.png",
+                    "text": "All whole-slide-images for the TCGA cohort are publicly available at https://portal.gdc.cancer.gov/. The Stanford\nwhole-slide images are not publicly available, in accordance with institutional requirements governing human\nsubject privacy protection. However, all de-identified clinicopathologic source data used for the analyses in the\nstudy are provided with this paper.\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "title",
+                    "score": 97.38,
+                    "box": [
+                        649.8,
+                        2889.3,
+                        981.7,
+                        2943.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_12/region_8_title.png",
+                    "text": "Code availability\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "text",
+                    "score": 98.34,
+                    "box": [
+                        651.7,
+                        2940.0,
+                        2228.0,
+                        2984.7
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_12/region_9_text.png",
+                    "text": "All source code is available under an open-source license at: https://github.com/RubinLab/HCCSurvNet.\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_13.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_13.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 4,
+                "page_idx": 13
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "title",
+                    "score": 95.4,
+                    "box": [
+                        650.4,
+                        330.8,
+                        870.8,
+                        385.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_13/region_1_title.png",
+                    "text": "References\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "text",
+                    "score": 62.28,
+                    "box": [
+                        650.4,
+                        381.2,
+                        2318.3,
+                        2911.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_13/region_2_text.png",
+                    "text": "1. Yang, J. D. et al. A global view of hepatocellular carcinoma: trends, risk, prevention and management. Nat. Rev. Gastroenterol.\nHepatol. 16, 589-604 (2019).\n\n2. Forner, A., Reig, M. & Bruix, J. Hepatocellular carcinoma. Lancet 391, 1301-1314 (2018).\n\n3. Brierley, J. et al. (eds) Liver in TNM Classification of Malignant Tumours 80-84 (Wiley, New York, 2017).\n\n4. Forner, A., Reig, M. E., de Lope, C. R. & Bruix, J. Current strategy for staging and treatment: the BCLC update and future prospects.\nSemin. Liver Dis. 30, 61-74 (2010).\n\n5. Villanueva, A. Hepatocellular carcinoma. N. Engl. J. Med. 380, 1450-1462 (2019).\n\n6. Ishizawa, T. et al. Neither multiple tumors nor portal hypertension are surgical contraindications for hepatocellular carcinoma.\nGastroenterology 134, 1908-1916 (2008).\n\n7. Hasegawa, K. et al. Comparison of resection and ablation for hepatocellular carcinoma: a cohort study based on a Japanese nation-\nwide survey. J. Hepatol. 58, 724-729 (2013).\n\n8. Roayaie, S. et al. A system of classifying microvascular invasion to predict outcome after resection in patients with hepatocellular\ncarcinoma. Gastroenterology 137, 850-855 (2009).\n\n9. Kamiyama, T. et al. Analysis of the risk factors for early death due to disease recurrence or progression within 1 year after hepa-\ntectomy in patients with hepatocellular carcinoma. World J. Surg. Oncol. 10, 107 (2012).\n\n10. Cucchetti, A. et al. Comparison of recurrence of hepatocellular carcinoma after resection in patients with cirrhosis to its occur-\nrence in a surveilled cirrhotic population. Ann. Surg. Oncol. 16, 413-422 (2009).\n\n11. Colecchia, A. et al. Prognostic factors for hepatocellular carcinoma recurrence. World J. Gastroenterol. 20, 5935-5950 (2014).\n\n12. Shim, J. H. et al. Prognostic nomograms for prediction of recurrence and survival after curative liver resection for hepatocellular\ncarcinoma. Ann. Surg. 261, 939-946 (2015).\n\n13. Rodriguez-Peralvarez, M. et al. A systematic review of microvascular invasion in hepatocellular carcinoma: diagnostic and prog-\nnostic variability. Ann. Surg. Oncol. 20, 325-339 (2013).\n\n14. Mobadersany, P. et al. Predicting cancer outcomes from histology and genomics using convolutional networks. Proc. Natl. Acad.\nSci. USA 115, E2970-E2979 (2018).\n\n15. Zhu, X., Yao, J. & Huang, J. Deep convolutional neural network for survival analysis with pathological images. In 2016 IEEE Interna-\ntional Conference on Bioinformatics and Biomedicine (BIBM) 544-547 (IEEE, 2016). doi: https://doi.org/10.1109/BIBM.2016.78225\n79.\n\n16. Kather, J. N. et al. Predicting survival from colorectal cancer histology slides using deep learning: a retrospective multicenter study.\nPLoS Med. 16, e1002730 (2019).\n\n17. Kim, D. W. et al. Deep learning-based survival prediction of oral cancer patients. Sci. Rep. 9, 6994 (2019).\n\n18. Wulczyn, E. et al. Deep learning-based survival prediction for multiple cancer types using histopathology images. PLoS ONE 15,\n0233678 (2020).\n\n19. Liao, H. et al. Classification and prognosis prediction from histopathological images of hepatocellular carcinoma by a fully auto-\nmated pipeline based on machine learning. Ann. Surg. Oncol. 27, 2359-2369 (2020).\n\n20. Skrede, O.-J. et al. Deep learning for prediction of colorectal cancer outcome: a discovery and validation study. Lancet 395, 350-360\n(2020).\n\n21. Saillard, C. et al. Predicting survival after hepatocellular carcinoma resection using deep-learning on histological slides. Hepatology\nhttps://doi.org/10.1002/hep.31207 (2020).\n\n22. Batts, K. P. & Ludwig, J. Chronic hepatitis. An update on terminology and reporting. Am. J. Surg. Pathol. 19, 1409-1417 (1995).\n\n23. Sandler, M., Howard, A., Zhu, M., Zhmoginov, A. & Chen, L.-C. MobileNetV2: inverted residuals and linear bottlenecks. In\n2018 IEEE Conference on Computer Vision and Pattern Recognition 4510-4520 (IEEE, 2018). doi: https://doi.org/10.1109/\nCVPR.2018.00474.\n\n24. Russakovsky, O. et al. ImageNet large scale visual recognition challenge. Int. J. Comput. Vis. 115, 211-252 (2015).\n\n25. Harrell, F E. Evaluating the yield of medical tests. JAMA 247, 2543 (1982).\n\n26. Uno, H., Cai, T., Pencina, M. J., D'Agostino, R. B. & Wei, L. J. On the C-statistics for evaluating overall adequacy of risk prediction\nprocedures with censored survival data. Stat. Med. 30, 1105-1117 (2011).\n\n27. Mormont, R., Geurts, P. & Maree, R. Comparison of deep transfer learning strategies for digital pathology. In 2018 IEEE/CVF Con-\nference on Computer Vision and Pattern Recognition Workshops (CVPRW) 2343-234309 (IEEE, 2018). doi: https://doi.org/10.1109/\nCVPRW.2018.00303.\n\n28. WHO. Classification of Tumours Editorial Board. Digestive System Tumours 635 (International Agency for Research on Cancer\nPress, IARC, Lyon, 2019).\n\n29. Cancer Genome Atlas Research Network. Comprehensive and integrative genomic characterization of hepatocellular carcinoma.\nCell 169(7), 1327-1341 (2017).\n\n30. Liu, J. et al. An integrated TCGA pan-cancer clinical data resource to drive high-quality survival outcome analytics. Cell 173,\n400-416.e11 (2018).\n\n31. Hudis, C. A. et al. Proposal for standardized definitions for efficacy end points in adjuvant breast cancer trials: the STEEP system.\nJ. Clin. Oncol. 25, 2127-2132 (2007).\n\n32. Vahadane, A. et al. Structure-preserving color normalization and sparse stain separation for histological images. IEEE Trans. Med.\nImaging 35, 1962-1971 (2016).\n\n33. Bilaloglu, S. et al. Efficient pan-cancer whole-slide image classification and outlier detection using convolutional neural networks.\nPreprint at https://www.biorxiv.org/content/10.1101/633123v1 (2019).\n\n34. Maas, A. L., Hannun A. Y. & Ng A. Y. Rectifier nonlinearities improve neural network acoustic models. In Proceedings of the 30th\nInternational Conference on Machine Learning (2013).\n\n35. Glorot, X. & Bengio, Y. Understanding the difficulty of training deep feedforward neural networks. Proc. Thirteen. Int. Conf. Artif.\nIntell. Stat. JMLR 9, 249-256 (2010).\n\n36. Kingma, D. P. & Ba, J. Adam: A Method for Stochastic Optimization. Preprint at https://arxiv.org/abs/1412.6980 (2014).\n\n37. Loshchilov, I. & Hutter, F. Decoupled Weight Decay Regularization. Preprint at https://arxiv.org/abs/1711.05101 (2017).\n\n38. Paszke, A., et al. PyTorch: an imperative style, high-performance deep learning library. Preprint at https://arxiv.org/abs/1912.01703\n(2019).\n\n39. Goode, A., Gilbert, B., Harkes, J., Jukic, D. & Satyanarayanan, M. OpenSlide: a vendor-neutral software foundation for digital\npathology. J. Pathol. Inform. 4, 27 (2013).\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "title",
+                    "score": 98.47,
+                    "box": [
+                        650.3,
+                        2929.8,
+                        1046.5,
+                        2982.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_13/region_3_title.png",
+                    "text": "Acknowledgements\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "text",
+                    "score": 99.45,
+                    "box": [
+                        648.9,
+                        2979.3,
+                        2318.4,
+                        3068.1
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_13/region_4_text.png",
+                    "text": "This work was funded by the Stanford Departments of Pathology and Biomedical Data Science, through a\nStanford Clinical Data Science Fellowship to R.Y. Additional computational infrastructure was provided by the\n"
+                }
+            ]
+        },
+        {
+            "page": {
+                "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages/page_14.png",
+                "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/pages_ordered/page_14.png",
+                "image_width": 2481,
+                "image_height": 3260,
+                "regions_num": 12,
+                "page_idx": 14
+            },
+            "regions": [
+                {
+                    "idx": 1,
+                    "thing": "text",
+                    "score": 97.48,
+                    "box": [
+                        648.2,
+                        207.4,
+                        2316.4,
+                        292.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_01_text.png",
+                    "text": "Stanford Research Computing Center. We would also like to thank Dr. Lu Tian for helpful initial conversations\nregarding analysis planning.\n"
+                },
+                {
+                    "idx": 2,
+                    "thing": "title",
+                    "score": 96.44,
+                    "box": [
+                        651.4,
+                        318.2,
+                        1068.9,
+                        377.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_02_title.png",
+                    "text": "Author contributions\n"
+                },
+                {
+                    "idx": 3,
+                    "thing": "text",
+                    "score": 99.28,
+                    "box": [
+                        647.8,
+                        370.3,
+                        2316.6,
+                        542.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_03_text.png",
+                    "text": "R.Y., D.L.R., and J.S. conceived and designed the study; R.Y. and J.S. performed the literature search. R.Y., A.S.\nand J.S. performed the data collection; R.Y. performed the model development and performance evaluation; R.Y.\nand J.L. performed the statistical analyses; R.Y. drafted the manuscript; D.L.R. and J.S. supervised the study; all\nauthors participated in the critical revision and approval of the manuscript.\n"
+                },
+                {
+                    "idx": 4,
+                    "thing": "title",
+                    "score": 84.91,
+                    "box": [
+                        649.5,
+                        574.3,
+                        1057.2,
+                        631.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_04_title.png",
+                    "text": "Competing interests\n"
+                },
+                {
+                    "idx": 5,
+                    "thing": "text",
+                    "score": 97.66,
+                    "box": [
+                        652.3,
+                        626.6,
+                        1309.4,
+                        672.2
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_05_text.png",
+                    "text": "The authors declare no competing interests.\n"
+                },
+                {
+                    "idx": 6,
+                    "thing": "title",
+                    "score": 84.94,
+                    "box": [
+                        650.0,
+                        696.3,
+                        1107.0,
+                        756.5
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_06_title.png",
+                    "text": "Additional information\n"
+                },
+                {
+                    "idx": 7,
+                    "thing": "text",
+                    "score": 92.53,
+                    "box": [
+                        649.4,
+                        752.6,
+                        2314.9,
+                        836.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_07_text.png",
+                    "text": "Supplementary Information The online version contains supplementary material available at https://doi.\norg/10.1038/s41598-021-81506-y.\n"
+                },
+                {
+                    "idx": 8,
+                    "thing": "text",
+                    "score": 95.61,
+                    "box": [
+                        648.9,
+                        857.1,
+                        1707.4,
+                        900.9
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_08_text.png",
+                    "text": "Correspondence and requests for materials should be addressed to J.S.\n"
+                },
+                {
+                    "idx": 9,
+                    "thing": "text",
+                    "score": 93.88,
+                    "box": [
+                        650.2,
+                        919.0,
+                        1858.1,
+                        962.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_09_text.png",
+                    "text": "Reprints and permissions information is available at www.nature.com/reprints.\n"
+                },
+                {
+                    "idx": 10,
+                    "thing": "text",
+                    "score": 95.49,
+                    "box": [
+                        650.2,
+                        981.9,
+                        2314.4,
+                        1068.4
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_10_text.png",
+                    "text": "Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and\ninstitutional affiliations.\n"
+                },
+                {
+                    "idx": 11,
+                    "thing": "text",
+                    "score": 98.77,
+                    "box": [
+                        649.7,
+                        1083.1,
+                        2317.9,
+                        1420.3
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_11_text.png",
+                    "text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International\n\ni License, which permits use, sharing, adaptation, distribution and reproduction in any medium or\nformat, as long as you give appropriate credit to the original author(s) and the source, provide a link to the\nCreative Commons licence, and indicate if changes were made. The images or other third party material in this\narticle are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the\nmaterial. If material is not included in the article's Creative Commons licence and your intended use is not\npermitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from\nthe copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.\n"
+                },
+                {
+                    "idx": 12,
+                    "thing": "text",
+                    "score": 19.29,
+                    "box": [
+                        651.5,
+                        1462.2,
+                        974.5,
+                        1504.8
+                    ],
+                    "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images/crops_ordered/page_14/region_12_text.png",
+                    "text": "© The Author(s) 2021\n"
+                }
+            ]
+        }
+    ]
+}

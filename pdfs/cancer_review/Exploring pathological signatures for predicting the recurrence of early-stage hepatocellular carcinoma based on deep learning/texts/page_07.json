@@ -1,0 +1,166 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 12,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.58,
+            "box": [
+                234.9,
+                376.4,
+                2244.8,
+                1398.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 93.24,
+            "box": [
+                285.8,
+                1421.3,
+                384.5,
+                1455.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_02_title.png",
+            "text": "FIGURE 3\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.15,
+            "box": [
+                285.3,
+                1458.4,
+                2195.8,
+                1603.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_03_text.png",
+            "text": "Comparison of predictive performance between two novel models. Upper: The calibration curves for TTR of HS in the training (A), validation (B),\nand TCGA cohort (C). Down: The ROC curves for 1-year (D), 3-year (E) and 5-year (F) RFS based on different clinicopathological features and\nstages. TCGA, The Cancer Genome Atlas; RFS, recurrence-free survival; HS, histological score; CS, combined score; AFP, alpha-fetoprotein;\nMVI, microvascular invasion; BCLC, Barcelona Clinic Liver Cancer; CNLC, China Liver Cancer; AUC, area under the curve.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.82,
+            "box": [
+                236.6,
+                1717.3,
+                1198.6,
+                1971.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_04_text.png",
+            "text": "Seventy-eight (23.5%) patients in the low-risk group experienced\nrecurrence. Conversely, 76.7% of patients in the high-risk group\nsuffered recurrence during the follow-up. In particular, HS was\nproven to be a prognostic factor in all the subgroups in terms of\npatients’ clinicopathological characteristics.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                236.2,
+                1978.5,
+                1197.9,
+                2492.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_05_text.png",
+            "text": "The histological markers including proliferation indexes,\ntherapeutic targets, and specific diagnostic markers have been\nreported to be an efficient indicator for HCC diagnosis and\nprognosis after resection (32-34). The immunohistochemistry\n(IHC) and quantitative analysis for six markers was performed in\n160 patients (from October 2014 to December 2014). Compared to\nHS low-risk group, patients in the high-risk group had a higher\nexpression of heat shock protein 70 (HSP70, p= 0.01). A slightly\nhigher proportion of Ki-67* cells was observed in the high-risk group\nalthough significance was not reached (Supplementary Figure S8).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                236.9,
+                2498.2,
+                1200.3,
+                2649.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_06_text.png",
+            "text": "The correlation between pathological subtype and histologic\nfeatures was also assessed. The results revealed that more\npatients (12%) in the HS high-risk subgroup were diagnosed\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 98.76,
+            "box": [
+                237.5,
+                2749.9,
+                783.0,
+                2785.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_07_text.png",
+            "text": "TABLE 1 C-indexes of the novel scores.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.37,
+            "box": [
+                1288.9,
+                1717.6,
+                2249.5,
+                1814.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_08_text.png",
+            "text": "with macrotrabecular-massive HCC (MTM-HCC) compared to\n5% in the low-risk subgroup (Supplementary Figure S9).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 99.54,
+            "box": [
+                1287.2,
+                1915.4,
+                2129.9,
+                2025.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_09_title.png",
+            "text": "The correlation between HS and the\nimmune microenvironment\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                1287.9,
+                2082.9,
+                2250.6,
+                2649.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_10_text.png",
+            "text": "Using TMA data, we examined the expression patterns\nand distributions of 14 immune markers in 175 HCC patients\nwith early-stage HCC (35). To investigate the relationship\nbetween HS and local immune status, we carried out\nclustering and correlation analysis (Figure 6A). We found\nthat HS was positively correlated with the expression of\nperitumoral CD14 (p= 0.013, R= 0.187), but negatively\ncorrelated with the infiltration of intratumoral CD8 (p<\n0.001, R= 0.275). Typical immunohistochemical images of\nthe two markers are shown in Figure 6B. To investigate the\ninterrelation between immune markers, we performed\n"
+        },
+        {
+            "idx": 11,
+            "thing": "table",
+            "score": 96.48,
+            "box": [
+                235.7,
+                2823.1,
+                2246.9,
+                3085.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_11_table.png"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 98.1,
+            "box": [
+                236.3,
+                3100.4,
+                1785.2,
+                3132.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning/crops_ordered/page_07/region_12_text.png",
+            "text": "* Values are presented as C-index (95% confidential interval). HS, histological score; CS, combined score; TCGA, The Cancer Genome Atlas.\n"
+        }
+    ]
+}

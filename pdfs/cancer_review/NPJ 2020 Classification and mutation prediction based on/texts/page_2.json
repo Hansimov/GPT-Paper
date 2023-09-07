@@ -1,0 +1,193 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages/page_2.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages_ordered/page_2.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 14,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                188.8,
+                240.9,
+                1223.6,
+                495.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_01_text.png",
+            "text": "Herein, based on the inception V3 network developed by\nGoogle”® and some packaging code from Coudray et al.”° via EASY\nDL platform and whole-slide images (WSls) of H&E stained liver\ntissue, we have established a model to classify liver tissue and\npredict certain gene mutations. The model was externally\nvalidated by an independent cohort.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 97.75,
+            "box": [
+                188.7,
+                570.2,
+                334.7,
+                612.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_02_title.png",
+            "text": "RESULTS\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.29,
+            "box": [
+                188.3,
+                619.4,
+                715.6,
+                661.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_03_title.png",
+            "text": "The distribution of WSls and tiles\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                188.6,
+                669.9,
+                1222.6,
+                1395.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_04_text.png",
+            "text": "There were 491 WSls of H&E stained liver tissue from the Genomic\nData Commons portal (GDC-portal, https://portal.gdc.cancer.gov/),\nincluding 402 WSls of HCC and 89 WSls of normal liver tissue. The\ninformation on histopathological grade was not available in 19 of\n402 WSls of HCC. According to the histopathological grade, they\nwere then sorted into well (G1, n= 55), moderate (G2, n= 187),\nand poor group (G3/G4, n= 141) in the remaining 383 WSls of\nHcc. A total of 387 WSls of HCC with corresponding gene\nmutation information were available. Besides, 67 WSls of HCC with\nhistopathological grade and related gene mutation information\nand 34 WSls of normal liver tissue were selected from Sir Run-Run\nShaw Hospital (SRRSH). After each WSI was cropped into small\n“Tiles”, there are 119,596 “Tiles” (HCC vs. normal liver tissue, 87,422\nvs. 32,174), 84,149 “Tiles” with histopathological grade (well vs.\nmoderate vs. poor, 14,713 vs. 41,370 vs. 28,066) and 86,323 “Tiles”\nwith corresponding gene mutation information. The distribution\nof WSls and tiles was summarized in Table 1.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.39,
+            "box": [
+                188.7,
+                1446.1,
+                593.9,
+                1488.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_05_title.png",
+            "text": "Deep learning framework\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                189.6,
+                1496.5,
+                1224.1,
+                1708.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_06_text.png",
+            "text": "Patients from GDC-portal were selected and identified as the\nprimary cohort. Based on a random split-sample approach, a total\nof 377 patients were then randomly divided into a training cohort\n(consisting of testing cohort) and an internal validation cohort\nwith a ratio of 3:1. In addition, 67 patients from our medical center\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1297.5,
+                240.8,
+                2332.8,
+                534.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_07_text.png",
+            "text": "were identified as an external validation cohort. All WSlIs were\ncropped into multiple small “tiles” at a magnification of 20x.\nFinally, the training and testing set consisting of a large collection\nof tiles were used to train a neural network (inception V3) for the\nclassification of liver tissue via EASY DL. The internal and external\nvalidation was performed by the remaining tiles from internal and\nexternal validation sets, respectively (Fig. 1).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 99.44,
+            "box": [
+                1298.1,
+                587.9,
+                1749.5,
+                631.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_08_title.png",
+            "text": "Performance of classification\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1298.0,
+                638.1,
+                2331.6,
+                1101.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_09_text.png",
+            "text": "The high-performance level of our models at recognizing tumors\nfrom normal liver tissue (AUC = 0.961; 95% Cl 0.939-0.981) was\nobserved in the validation set (Fig. 2a). Based on the class-\nimbalanced problem, the precision-recall curves (PR-curves) and\nMatthews correlation coefficient (MCC) were also used to evaluate\nits performance (Fig. 2b). The MCC was up to 0.82 for benign or\nmalignant classification, and 0.738 for assessing histopathological\ngrade (well, moderate, or poor). Compared to three pathologists\nwith 2-year, 5-year, and 10-year experience in respective, the\nperformances of our classifiers nearly reached the ability of\npathologists with 5-year experience (Table 2).\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 99.48,
+            "box": [
+                1298.0,
+                1153.0,
+                1867.5,
+                1195.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_10_title.png",
+            "text": "Performance of mutation prediction\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1296.7,
+                1203.9,
+                2333.5,
+                1708.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_11_text.png",
+            "text": "Our models were trained and validated based on the ten most\nsignificantly mutated genes to estimate the possibility of\nmutation. The performances, including accuracy, precision, and\nrecall rate, F1-score, and MCC, were summarized in Table 3. In\norder to reduce heterogeneity, the performance was assessed\nboth the average predicted probability on region (tiles)-level\nand the probability of predicted tile (P>0.5) on slide-level in\nthe external validation set. On the region(tiles)-level, we found\nthat five of which, including ARIDIA (P = 0.036), CTNNB1 (P<\n0.0001), FMN2 (P=0.0003), TP53 (P=0.0011) and ZFX4 (P=\n0.0054), showed significant differences between mutation and\nwild type group (Fig. 3a), with the area under the receiver\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.63,
+            "box": [
+                201.6,
+                1823.1,
+                1560.8,
+                1861.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_12_text.png",
+            "text": "Table 1. The distribution of patients, histopathological images/WSls, and tiles in each subset.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "table",
+            "score": 99.75,
+            "box": [
+                193.2,
+                1875.3,
+                2328.5,
+                2978.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_13_table.png"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.46,
+            "box": [
+                205.7,
+                2994.0,
+                1455.4,
+                3029.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_2/region_14_text.png",
+            "text": "Tr training subset, Te test subset, /V internal validation subset, EV external validation subset.\n"
+        }
+    ]
+}

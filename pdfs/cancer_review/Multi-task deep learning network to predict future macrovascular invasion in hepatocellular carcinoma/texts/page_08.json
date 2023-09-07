@@ -1,0 +1,115 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 8,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.82,
+            "box": [
+                314.7,
+                225.2,
+                2120.5,
+                1810.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_08/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                136.4,
+                1841.3,
+                2304.1,
+                1986.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_08/region_2_text.png",
+            "text": "Fig. 5. Patient examples by applet for Model©®®, (A, B) A 56-year-old male had single HCC with a maximum diameter of 54e4 mm and was initially treated by TACE. He was identi-\nfied to be in the low-risk subgroup by our applet for Model©®®; no macrovascular invasion occurred for 1128 days and he remained alive at the end of the study. (C, D) A 68-year-\nold male had single HCC with a maximum diameter of 55e0 mm and was initially treated by TACE. He was identified to be in the high-risk subgroup by our applet for Model“;\nmacrovascular invasion occurred after 245 days and death after 301 days.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                135.6,
+                2022.0,
+                1181.1,
+                2152.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_08/region_3_text.png",
+            "text": "Based on the aforementioned results, an end-to-end deep learning\nalgorithm was more appropriate for predicting future macrovascular\ninvasion.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.32,
+            "box": [
+                135.8,
+                2197.9,
+                348.1,
+                2241.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_08/region_4_title.png",
+            "text": "4. Discussion\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                136.0,
+                2282.7,
+                1182.2,
+                2763.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_08/region_5_text.png",
+            "text": "Based on the multicenter database, this study used MTnet to con-\nstruct a precise model (Model®®°®) that could predict future macro-\nvascular invasion in HCC. By combining information from the\nclinical/radiological factors and radiomics, Model©®® achieved satis-\nfactory results in terms of discrimination, calibration, and decision\ncurve. Its performance was not influenced by the treatments or BCLC\nstage. Moreover, we used Model®®P® and H-score to subdivide the\npatients. Both high-risk subgroups had shorter times to macrovascu-\nlar invasion and OS as predicted by the model. Model“®® proved to\nbe a precise and robust model that could be used to assist early inter-\nvention for macrovascular invasion in HCC.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                136.7,
+                2764.2,
+                1183.2,
+                3113.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_08/region_6_text.png",
+            "text": "Although macrovascular invasion can greatly jeopardize the sur-\nvival of HCC patients, therapies can be used to treat it effectively\n[21,2526] Some of them may even be used to eliminate or control\nresidual or radiologically occult tumor cells before it is too late [9].\nNonetheless, the lack of models for identifying high-risk populations\nlimits the application of such early interventions. Considering this\nchallenge, we may refer to valuable experience in the early preven-\ntion of distant metastasis in nasopharyngeal carcinoma, where a\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1257.5,
+                2022.0,
+                2304.3,
+                2677.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_08/region_7_text.png",
+            "text": "model was constructed to predict the risk of future distant metastasis\n[10]. To construct such a model with high accuracy, we assumed that\nbesides the traditional clinical factors, data from medical images\ncould be used to assess the heterogeneous information from the HCC\nlesions. Theoretically, although radiomics provides a massive amount\nof quantitative data, it may overlook the macro-changes across the\ntumor area, as well as differences adjacent to the outer boundary of\ntumor. Thus, we designed a set of radiological factors as a comple-\nmentary assessment, either for morphological differences (such as\nfusion lesions or non-intact HCC capsule) or for changes outside the\ntumor boundary (such as corona and anti-corona enhancement). The\nbetter performance of Model©®-® compared to Model?® and Model\nproved that clinical/radiological factors and radiomic features were\nindispensable in achieving high accuracy in predicting the risks of\nfuture macrovascular invasion.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1257.7,
+                2676.7,
+                2303.5,
+                3113.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Multi-task deep learning network to predict future macrovascular invasion in hepatocellular carcinoma/crops_ordered/page_08/region_8_text.png",
+            "text": "Deep learning algorithms have proven to be advantageous in con-\nstructing models for diagnosis and prognosis of cancers, especially for\nliver diseases [16—18,27]. Meanwhile, among all the types of deep\nlearning algorithms, multi-task learning combines severally related\ntasks during the training process and these can benefit from each other.\nMulti-task learning has attracted considerable attention in the field of\nmedical image analysis [28—29]; however, its application in HCC has\nbeen limited to microvascular invasion rather than macrovascular inva-\nsion [30]. Considering the potential advantages of multi-task learning,\nwe constructed our MTnet to predict macrovascular invasion.\n"
+        }
+    ]
+}

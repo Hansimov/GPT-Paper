@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_30.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_30.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 5,
+        "page_idx": 30
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 98.74,
+            "box": [
+                329.9,
+                318.7,
+                1199.0,
+                2233.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_30/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 83.59,
+            "box": [
+                296.2,
+                2279.3,
+                1464.7,
+                2338.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_30/region_2_text.png",
+            "text": "Figure 2. Validation of computational pathology algorithms.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 80.83,
+            "box": [
+                300.4,
+                2352.6,
+                2193.9,
+                2845.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_30/region_3_text.png",
+            "text": "A schematic representation of the main steps involved in the development and validation of\ncomputational pathology algorithms using deep learning. Different levels of validation are shown in\ncolored boxes vertically (validation during training, internal and external validation, prospective\nvalidation/clinical trial). The consecutive activities in a typical deep learning workflow are shown in\ndarker colored boxes, with the corresponding products of these actions in shown in white boxes on\nthe left. Arrows indicate which products are inputs for the activities. WSI, whole slide image.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 83.4,
+            "box": [
+                298.9,
+                2950.5,
+                615.4,
+                3011.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_30/region_4_title.png",
+            "text": "Box: Definitions\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 77.15,
+            "box": [
+                300.5,
+                3035.9,
+                578.5,
+                3095.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_30/region_5_title.png",
+            "text": "Deep learning\n"
+        }
+    ]
+}

@@ -1,0 +1,206 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 15,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.19,
+            "box": [
+                177.0,
+                286.4,
+                1211.2,
+                1351.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_01_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 46.49,
+            "box": [
+                224.4,
+                1361.4,
+                817.1,
+                1439.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_02_text.png",
+            "text": "FIGURE 1\nFlowchart of the search process in the study.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                176.6,
+                1549.3,
+                1221.4,
+                2118.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_03_text.png",
+            "text": "English, (2) focused on the field of liver cancer, (3) involved Al\ntechnologies. After the preliminary search, 2111 papers were\nincluded, and then we conducted further manual screening. In the\nmanual screening process, all papers are divided into relevant,\nuncertain and excluded categories. Papers marked as unsure were\nscreened by three of the authors (XH, LL, and MX) and discussed to\ndetermine whether they should be included. Unlike a systematic\nreview, bibliometric analysis only requires screening of abstracts\nand full texts are only screened when necessary. According to the\nscreening criteria, 193 papers were excluded because did not focus on\nthe relevant field. Finally, 1724 papers were included in our study.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.19,
+            "box": [
+                178.9,
+                2247.3,
+                1042.7,
+                2312.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_04_title.png",
+            "text": "Bibliometric analysis and visualization\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                177.0,
+                2365.5,
+                1221.9,
+                3037.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_05_text.png",
+            "text": "The analysis of the global trend of publications and citations and\nproductive countries/regions is mainly to comprehensively\nunderstand the development trends of AI on liver cancer from\nbeginning to end. The analysis of institutions, authors, and co-cited\nauthors can quantitatively describe the strength of the cooperation\nbetween authors and institutions (30-32). Additionally, the analysis\nof top journals can analyze the level of cooperation and relationships\nin the concentrated fields of journals, which is beneficial to cross field\ncooperation in research (32). In particular, cluster co-occurrence\nanalysis of keywords from different perspectives such as disease,\ndata type, clinical goals, and clinical methods can help us\nunderstand the main topics and research trends in the current field\nof AI in liver cancer field.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                178.0,
+                3042.0,
+                1221.6,
+                3245.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_06_text.png",
+            "text": "We used VOSviewer (version 1.6.18) (33) and Citespace (version\n6.1.R1) (34, 35) to perform bibliometric visual analysis on the data.\nVOSviewer was used to analyze the degree of cooperation between\ncountries/regions and institutions, as well as the co-occurrence of\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1269.2,
+                283.3,
+                2313.4,
+                746.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_07_text.png",
+            "text": "cooperation between authors and cited authors. We used Citespace to\ngenerate a dual map, which showed the relationship between the main\ndistribution fields of citing journals and citied journals. At the same\ntime, we used Citespace to conduct a strong citation bursts ranking\nanalysis of references. Meanwhile, an online SRplot was used for in-\ndepth keyword analysis. In addition, we used Microsoft Excel 2019\n(Microsoft, Redmond, WA) to analyze the targeted files. The top ten\nof top-cited or productive authors, countries/regions, publications,\njournals, and institutions were analyzed and tabulated.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.64,
+            "box": [
+                1269.3,
+                751.7,
+                2312.5,
+                902.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_08_text.png",
+            "text": "In this study, five researchers (M.X., Y.X., Y.Z., S.H., and Q.Z.)\nwere invited to search, download and analyze the publications to\nassure accuracy of data and repeatability of research.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 98.75,
+            "box": [
+                1271.7,
+                992.0,
+                1453.6,
+                1065.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_09_title.png",
+            "text": "Results\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 98.88,
+            "box": [
+                1271.1,
+                1103.5,
+                2226.1,
+                1166.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_10_title.png",
+            "text": "Global trend of publications and citations\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1269.3,
+                1220.7,
+                2312.7,
+                1735.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_11_text.png",
+            "text": "A total of 1724 papers were collected from WoSCC database\ninception according to our data searching strategy, including 1547\noriginal articles and 177 reviews (Figure 1). Research on AI in liver\ncancer started in 2003 and has increased every year (Figure 2). Research\nhas advanced especially rapidly from 2017, accounting for almost 70% of\nall publications. As of the search date, all papers have been cited 27049\ntimes, and the H-index and average citations per item are 67 and 15.69,\nrespectively. The H-index (36) is a mixed index which could be used as a\nsignificant indicator of appraising both the number and level of academic\noutput of a scientific researcher, country, journal, or institution.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 99.12,
+            "box": [
+                1271.6,
+                1832.1,
+                2198.4,
+                1895.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_12_title.png",
+            "text": "Analysis of productive countries/regions\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                1269.1,
+                1948.4,
+                2313.6,
+                2777.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_13_text.png",
+            "text": "A total of 75 countries/regions had published related articles in\nthis field, of which the top 10 in terms of publication count are China\n(608), the USA (470), India (129), Germany (122), Japan (118), Italy\n(105), England (75), South Korea (75), Canada (74), and France (73),\naccounting for 35.33%, 27.31%, 7.49%, 7.09%, 6.86%, 6.10%, 4.36%,\n4.36%, 4.30%, and 4.24% of total publications, respectively (Table 1).\nThe USA ranked first in H-index and total citations, with 49 and\n10228 citations, respectively, which were both much higher than that\nof China in second place (38, 7298 citations, respectively). Moreover,\nthe USA was first in terms of average citations per paper, followed by\nFrance and Italy. Figure 3 shows the degree of cooperation between\ncountries when the minimum number of publications was set to at\nleast 5. The lines between nodes indicate co-authorships between\ncountries, where a thicker line indicates stronger cooperation (total\nlink strength [TLS]). The top 5 TLSs were associated with the USA,\nChina, India, Italy, and Canada.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "title",
+            "score": 99.04,
+            "box": [
+                1271.3,
+                2872.2,
+                2046.1,
+                2936.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_14_title.png",
+            "text": "Analysis of productive institutions\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1270.4,
+                2987.7,
+                2313.7,
+                3246.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_03/region_15_text.png",
+            "text": "More than 2000 institutions have participated in research on AI in\nliver cancer, and the top 10 institutions with the highest contribution\nare shown in Table 2. The top three institutions were the League Of\nEuropean Research Universities, Sun Yat Sen University, and\nZhejiang University with a total of 109, 62, and 58 articles. Figure 4\n"
+        }
+    ]
+}

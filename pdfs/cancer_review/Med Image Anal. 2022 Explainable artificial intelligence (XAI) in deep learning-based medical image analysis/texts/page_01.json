@@ -1,0 +1,233 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 17,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 99.65,
+            "box": [
+                157.8,
+                693.4,
+                2024.1,
+                833.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_01_title.png",
+            "text": "Explainable artificial intelligence (XAI) in deep learning-based medical\nimage analysis\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 96.02,
+            "box": [
+                155.0,
+                869.8,
+                1804.1,
+                923.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_02_text.png",
+            "text": "Bas H.M. van der Velden*, Hugo J. Kuijf, Kenneth G.A. Gilhuijs, Max A. Viergever\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 89.87,
+            "box": [
+                157.0,
+                950.8,
+                1610.0,
+                983.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_03_text.png",
+            "text": "Image Sciences Institute, University Medical Center Utrecht, Q.02.4.45, P.O. Box 85500, Utrecht, GA 3508, the Netherlands\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 98.87,
+            "box": [
+                157.1,
+                1376.1,
+                563.9,
+                1590.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_04_text.png",
+            "text": "Keywords:\n\nExplainable artificial intelligence\nInterpretable deep learning\nMedical image analysis\n\nDeep learning\n\nSurvey\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 98.51,
+            "box": [
+                157.7,
+                1690.2,
+                405.0,
+                1730.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_05_title.png",
+            "text": "1. Introduction\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 87.6,
+            "box": [
+                842.4,
+                1081.2,
+                1115.3,
+                1126.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_06_title.png",
+            "text": "ABSTRACT\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.85,
+            "box": [
+                840.4,
+                1170.6,
+                2325.9,
+                1447.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_07_text.png",
+            "text": "With an increase in deep learning-based methods, the call for explainability of such methods grows, es-\npecially in high-stakes decision making areas such as medical image analysis. This survey presents an\noverview of explainable artificial intelligence (XAI) used in deep learning-based medical image analysis.\nA framework of XAI criteria is introduced to classify deep learning-based medical image analysis meth-\nods. Papers on XAI techniques in medical image analysis are then surveyed and categorized according\nto the framework and according to anatomical location. The paper concludes with an outlook of future\nopportunities for XAI in medical image analysis.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 23.79,
+            "box": [
+                916.0,
+                1491.4,
+                2324.5,
+                1527.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_08_text.png",
+            "text": "This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/)\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                157.6,
+                1777.3,
+                1205.6,
+                2297.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_09_text.png",
+            "text": "Deep learning has invoked tremendous progress in automated\nimage analysis. Before that, image analysis was commonly per-\nformed using systems fully designed by human domain experts.\nFor example, such image analysis system could consist of a sta-\ntistical classifier that used handcrafted properties of an image (i.e.,\nfeatures) to perform a certain task. Features included low-level im-\nage properties such as edges or corners, but also higher-level im-\nage properties such as the spiculated border of a cancer. In deep\nlearning, these features are learned by a neural network (in con-\ntrast to being handcrafted) to optimally give a result (or output)\ngiven an input. An example of a deep learning system could be the\noutput ‘cancer’ given the input of an image showing a cancer.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                156.8,
+                2300.9,
+                1205.0,
+                2690.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_10_text.png",
+            "text": "Neural networks typically consist of many layers connected via\nmany nonlinear intertwined relations. Even if one is to inspect all\nthese layers and describe their relations, it is unfeasibly to fully\ncomprehend how the neural network came to its decision. There-\nfore, deep learning is often considered a ‘black box’. Concern is\nmounting in various fields of application that these black boxes\nmay be biased in some way, and that such bias goes unnoticed.\nEspecially in medical applications, this can have far-reaching con-\nsequences.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                153.8,
+                2692.9,
+                1204.7,
+                2776.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_11_text.png",
+            "text": "There has been a call for approaches to better understand the\nblack box. Such approaches are commonly referred to as inter-\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 46.66,
+            "box": [
+                185.0,
+                2889.6,
+                1031.3,
+                2962.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_12_text.png",
+            "text": "* Corresponding author.\nE-mail address: bvelden2@umcutrecht.nl (B.H.M. van der Velden).\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1277.5,
+                1689.8,
+                2325.9,
+                1992.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_13_text.png",
+            "text": "pretable deep learning or explainable artificial intelligence (XAI)\n(Adadi and Berrada, 2018; Murdoch et al., 2019). These terms are\ncommonly interchanged; we will use the term XAI. Some notable\nXAI initiatives include those from the United States Defense Ad-\nvanced Research Projects Agency (DARPA), and the conferences on\nFairness, Accountability, and Transparency by the Association for\nComputing Machinery (ACM FAccT).\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1277.4,
+                1994.6,
+                2326.0,
+                2341.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_14_text.png",
+            "text": "The stakes of medical decision making are often high. Not sur-\nprisingly, medical experts have voiced their concern about the\nblack box nature of deep learning (Jia et al., 2020), which is the\ncurrent state of the art in medical image analysis (Litjens et al.,\n2017; Meijering, 2020; Shen et al., 2017). Furthermore, regulations\nsuch as the European Union’s General Data Protection Regulation\n(GDPR, Article 15) require the right of patients to receive meaning-\nful information about how a decision was rendered.\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1277.6,
+                2343.6,
+                2325.6,
+                2690.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_15_text.png",
+            "text": "Researchers in medical imaging are increasingly using XAI to\nexplain the results of their algorithms. Something can be consid-\nered a good explanation if it gives insight into how a neural net-\nwork came to its decision and/or can make the decision under-\nstandable. In this survey, we aim to give a comprehensive overview\nof papers using XAI in medical image analysis. We chose to focus\nsolely on papers that used deep learning-based XAI in medical im-\nage analysis.\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1277.8,
+                2691.9,
+                2325.4,
+                2950.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_16_text.png",
+            "text": "The search strategy for inclusion of papers was as follows: We\nused the search query “(explainable deep learning OR interpretable\ndeep learning OR XAI OR interpretable machine learning OR ex-\nplainable machine learning) AND (medical imaging OR medical\nimage analysis)” in SCOPUS. We included papers from peer re-\nviewed journals and conferences. We analyzed the query results\n"
+        },
+        {
+            "idx": 17,
+            "thing": "text",
+            "score": 20.66,
+            "box": [
+                160.0,
+                3073.9,
+                2151.1,
+                3105.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Med Image Anal. 2022 Explainable artificial intelligence (XAI) in deep learning-based medical image analysis/crops_ordered/page_01/region_17_text.png",
+            "text": "1361-8415/© 2022 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/)\n"
+        }
+    ]
+}

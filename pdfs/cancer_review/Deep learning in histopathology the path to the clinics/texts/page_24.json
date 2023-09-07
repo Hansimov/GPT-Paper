@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_24.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_24.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 24
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 94.1,
+            "box": [
+                300.4,
+                290.1,
+                2197.7,
+                3055.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_24/region_1_list.png",
+            "text": "{[101] Kulkarni, P. M. et al. Deep Learning Based on Standard H&E Images of Primary Melanoma\nTumors Identifies Patients at Risk for Visceral Recurrence and Death. Clinical cancer research 26, 1126-\n1134 (2020).\n\n{[102] Cui, D., Liu, Y., Liu, G. & Liu, L. A Multiple-Instance Learning-Based Convolutional Neural\nNetwork Model to Detect the IDH1 Mutation in the Histopathology Images of Glioma Tissues. Journal\nof computational biology 27, 1264-1272 (2020).\n\n{103] Liu, S. et al. Isocitrate dehydrogenase (IDH) status prediction in histopathology images of\ngliomas using deep learning. Scientific reports 10, 7733 (2020).\n\n[104] Kather, J. N. et al. Deep learning can predict microsatellite instability directly from histology\nin gastrointestinal cancer. Nature medicine 25, 1054-1056 (2019).\n\n[105] Kather, J. N. et al. Pan-cancer image-based detection of clinically actionable genetic\nalterations. Nature Cancer 1, 789-799 (2020).\n\n[106] Fu, Y. et al. Pan-cancer computational histopathology reveals mutations, tumor composition\nand prognosis. Nature Cancer 1, 800-810 (2020).\n\n[107] Schmauch, B. et al. A deep learning model to predict RNA-Seq expression of tumours from\nwhole slide images. Nature communications 11, 1-15 (2020).\n\n[108] Couture, H. D. et al. Image analysis with deep learning to predict breast cancer grade, ER\nstatus, histologic subtype, and intrinsic subtype. NPJ breast cancer 4, 30 (2018).\n\n[109] Sirinukunwattana, K. et al. Image-based consensus molecular subtype (imCMS) classification\nof colorectal cancer using deep learning. Gut 70, 544-554 (2021).\n\n[110] McKinney, S. M. et al. International evaluation of an Al system for breast cancer screening.\nNature 577, 89-94 (2020).\n\n[111] de Bel, T., Hermsen, M., Kers, J., van der Laak, J. & Litjens, G. J. S. Stain-Transforming Cycle-\nConsistent Generative Adversarial Networks for Improved Segmentation of Renal Histopathology.\nInternational Conference on Medical Imaging with Deep Learning, Proceedings of Machine Learning\nResearch 102, 151-163 (2019).\n\n[112] Liu, Y. et al. Artificial Intelligence-Based Breast Cancer Nodal Metastasis Detection: Insights\nInto the Black Box for Pathologists. Archives of pathology & laboratory medicine 143, 859-868 (2019).\n[113] Tellez, D. et al. Quantifying the effects of data augmentation and stain color normalization in\nconvolutional neural networks for computational pathology. Medical image analysis 58, 101544\n(2019).\n\n[114] H. Cho, S. Lim, G. Choi and H. Min, Neural Stain-Style Transfer Learning using GAN for\nHistopathological Images, https://arxiv.org/abs/1710.08543 (2017).\n"
+        }
+    ]
+}

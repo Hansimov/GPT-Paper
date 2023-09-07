@@ -1,0 +1,181 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 13,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 98.89,
+            "box": [
+                179.0,
+                805.4,
+                500.5,
+                876.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_01_title.png",
+            "text": "Introduction\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 80.91,
+            "box": [
+                949.5,
+                283.3,
+                2311.3,
+                378.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_02_text.png",
+            "text": "development of multimodal treatment plans for liver cancer could become the\nmajor trend of future research in Al in liver cancer.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 59.51,
+            "box": [
+                947.2,
+                445.9,
+                2050.3,
+                541.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_03_text.png",
+            "text": "KEYWORDS\nbibliometrics, VOSviewer, Citespace, artificial intelligence, liver cancer\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                176.8,
+                913.7,
+                1219.7,
+                1533.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_04_text.png",
+            "text": "Liver cancer is an extremely aggressive malignant tumor, ranking\n7\" in incidence and 4\" in mortality worldwide. Studies have revealed\nthat liver cancer has a high recurrence rate and low recovery rate,\nespecially after the middle and late stages, and the 5-year survival rate\nof liver cancer is only 5-30% (1, 2). Therefore, it has become a global\nhealth problem. Despite advances in diagnosis and treatment of liver\ncancer, including improved diagnostic imaging accuracy and\nimproved survival after neoadjuvant or conversion therapy, but it is\nlimited. Accurate screening of early-stage liver cancer patients and\nhigh-risk patients, and rational treatment decisions for patients with\nadvanced stage liver cancer are of great significance for improving the\nquality of life of patients.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                177.6,
+                1539.3,
+                1217.5,
+                2678.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_05_text.png",
+            "text": "With the development of medical big data and computer\ntechnology, artificial intelligence (AI) based on machine learning\nand deep learning has been widely used in current medical research\n(3-6). Through self-learning, summary, and induction of data, it can\nproduce an intelligent reasoning system and choose the optimal\nsolution to guide clinical decision-making (7). Original AI was\nbased on traditional machine-learning methods, including support\nvector machine and random forest models, which all relied on\nhuman experience for learning and simple summary. As early as\n2003, Hussain constructed a predictive system consisting of 12\ngenes, with Fisher’s linear classifier, for predicting early\nrecurrence in patients with hepatocellular carcinoma (HCC) (8).\nDuring this period, most studies have focused on simple analyses of\ndata, such as genes and molecules (9-11). With the standardization\nof imaging diagnosis and its important role in the clinical diagnosis\nof liver cancer, AI research based on imaging has emerged by\nextracting high-throughput features that cannot be detected and\ndefined by human eyes from large-scale image data to establish an\nintelligent decision -making model to assist clinical decision-\nmaking (12, 13). In particular, deep learning based on\nconvolutional neural networks (CNNs) has promoted progress in\nliver cancer research (14-19).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                176.8,
+                2685.0,
+                1219.3,
+                3252.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_06_text.png",
+            "text": "As more and more researchers are interested in the use of AI in\nliver cancer, a large number of related studies have started being\npublished. For example, reviews describing an overview of deep\nlearning, convolutional neural networks and other AI technologies\napplications in liver cancer (20-22), reviews on the applications of AI\non assisted imaging in diagnosis, prognosis and detection of liver cancer\n(23-25), and explained the latest research, on limitations and future\ndevelopment trends of AI have all been recently published. However,\ncurrent reviews may be unable to explore grasp the latest research\ntrends and hotspots in this field because of lack of a large number of\npublications. Meanwhile, there is a lack of quantitative analysis of all\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                1268.9,
+                811.5,
+                2312.6,
+                1275.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_07_text.png",
+            "text": "literature in this field. Additionally, a summary and quantitative\nanalyses of the global development trend and research hotspots of AI\nin liver cancer is of great importance for future research. Bibliometrics\nis a method of information visualization which can achieve quantitative\nanalysis of literature in a specific research field in a worldwide context\nthrough statistical methods and visualizing the results with the help of\nsoftware (26-29). Bibliometrics plays an important role in sorting out\ndevelopment trends and research hotspots of a given field and has been\nwidely used in many fields (26-29).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1270.4,
+                1281.2,
+                2311.9,
+                1639.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_08_text.png",
+            "text": "Therefore, we aimed to quantitatively analyze existing studies\ninvolving AI in liver cancer using bibliometrics to provide the current\nresearch progress, hotspots, and emerging trends for AI in liver cancer\nwhich may help researchers better understand grasp future research\ninterest. Information was collated regarding countries/regions,\ninstitutions, authors, and journals with the highest citations and\npublications and keywords.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 98.82,
+            "box": [
+                1271.6,
+                1729.8,
+                1495.3,
+                1799.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_09_title.png",
+            "text": "Methods\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 99.05,
+            "box": [
+                1270.4,
+                1841.3,
+                2075.4,
+                1902.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_10_title.png",
+            "text": "Data sources and search strategies\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1269.9,
+                1957.7,
+                2309.2,
+                2889.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_11_text.png",
+            "text": "The Web of Science Core Collection (WoSCC), which is a\nstandardized and comprehensive dataset, was used to compile the\npublication dataset in this study. AI is a branch of computer science\nand a technology that uses machines to simulate human intelligence.\nAl in this paper mainly includes traditional machine learning and the\nmost popular deep learning algorithms. Therefore, the searching\nquery string was described as follows: TS = (((liver OR hepatic)\nNEAR/1 (cancer* OR tumor* OR tumor* OR disease OR lesion* OR\ncarcinoma”)) OR “hepatocellular carcinoma” OR “HCC”) AND TS =\n(((automated OR intelligent) NEAR/1 (classification OR diagnosis\nOR segment* OR detect*)) OR “artificial intelligence” OR “deep\nlearning” OR “convolutional neural network*” OR “machine\nlearning” OR “CNNs” OR “artificial neural network*” OR\n“computer-aided” OR “Bayes* network*” OR “supervised learning”\nOR “unsupervised clustering” OR “computer-assisted” OR (deep\nNEAR/1 network*) OR “ensemble learning”). The retrieval was\ncarried out on January 18, 2022. Figure 1 shows the workflow of\nthe retrieval strategy in this research.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 98.99,
+            "box": [
+                1270.1,
+                2982.7,
+                1945.2,
+                3046.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_12_title.png",
+            "text": "Strategy of manual screening\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                1269.3,
+                3100.6,
+                2310.5,
+                3251.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_02/region_13_text.png",
+            "text": "According to our research area, which focuses on the applications\nof AI in liver cancer, we designed the following search items: the\npapers for analysis were restricted to those that (1) were written in\n"
+        }
+    ]
+}

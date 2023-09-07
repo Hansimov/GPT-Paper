@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.65,
+            "box": [
+                438.8,
+                239.0,
+                2046.6,
+                2380.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_04/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                176.9,
+                2429.7,
+                2247.1,
+                2775.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_04/region_2_text.png",
+            "text": "Fig. 3 | WGDs are characterized by enlarged nuclei. a, Example tiles with (left) and without (right) WGD. From top to bottom, each row corresponds\nto one cancer type, as indicated on the left. For each row, hematoxylin and eosin-stained tumor sections are shown (colored; left) next to a cell nucleus\nmark-up (black and white; right). Scale bar: 100 um. b, Left: boxplots showing comparisons of hard-coded morphological features, including nuclear\nsize (left) and cell nucleus intensity (middle), and CNN-derived predictions of WGD probability (right), between WGD and near-diploid samples, for\nan average of n= 463 tiles from each cancer type. Far right: increases of predictive AUC from PC-CHiP compared with hard-coded features. Each line\nrepresents one cancer type, using the same colors as in Fig. 1. All boxplots demarcate quartiles and median values, while whiskers extend to 1.5x the\ninterquartile range. ¢, Comparison of AUC from leave-one-cancer-out and fivefold cross-validation (5-CV) using 100 tiles for each whole slide from\nn=6,541 patients with cancer. Each line represents one of 28 cancer types, using the same colors as in Fig. 1.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.39,
+            "box": [
+                177.7,
+                2854.3,
+                1216.2,
+                2941.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_04/region_3_text.png",
+            "text": "generally less differentiated and showed higher-grade cell changes\n(Fig. 4b and Extended Data Fig. 4c).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                178.3,
+                2940.8,
+                1218.0,
+                3116.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_04/region_4_text.png",
+            "text": "A highly accurately predicted cancer driver gene was BRAF in\nthyroid tumors, with an AUC as high as 0.92 (CI=0.87 to 0.96),\nwhich was seemingly associated with a papillary morphology\n(Fig. 4c). While it is known that the prevalence of BRAF mutations\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1265.3,
+                2853.1,
+                2303.4,
+                3116.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_04/region_5_text.png",
+            "text": "is only about 25% in follicular thyroid carcinomas (as opposed to\n75% in classical papillary and tall cell thyroid carcinomas’>’’), these\ndata indicate that the canonical histopathological classification may\nbe further improved (AUC=0.81; 95% CI=0.69 to 0.93). A simi-\nlar association was observed for PTEN in uterine cancers, with an\nAUC of 0.82 (95% CI=0.76 to 0.89; Extended Data Fig. 4d), in part\n"
+        }
+    ]
+}

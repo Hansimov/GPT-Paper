@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_19.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_19.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 19
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 96.68,
+            "box": [
+                299.6,
+                297.3,
+                2200.0,
+                3126.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_19/region_1_list.png",
+            "text": "[30] Awan, R., Koohbanani, N. A., Shaban, M., Lisowska, A. & Rajpoot, N. Context-Aware Learning\nusing Transferable Features for Classification of Breast Cancer Histology Images. Proceedings of\nInternational Conference on Image Analysis and Recognition, 788-795 (2018).\n\n[31] Feng, Y., Zhang, L. & Mo, J. Deep Manifold Preserving Autoencoder for Classifying Breast\nCancer Histopathological Images. /EEE transactions on computational biology and bioinformatics 17,\n91-101 (2020).\n\n[32] Galateau Salle, F. et al. Comprehensive Molecular and Pathologic Evaluation of Transitional\nMesothelioma Assisted by Deep Learning Approach: A Multi-Institutional Study of the International\nMesothelioma Panel from the MESOPATH Reference Center. Journal of thoracic oncology 15, 1037—\n1053 (2020).\n\n[33] lizuka, O. et al. Deep Learning Models for Histopathological Classification of Gastric and\nColonic Epithelial Tumours. Scientific reports 10 1504 (2020).\n\n[34] Kiani, A. et al. Impact of a deep learning assistant on the histopathologic classification of liver\ncancer. NPJ digital medicine 3, 23 (2020).\n\n[35] Kwok, S. Multiclass Classification of Breast Cancer in Whole-Slide Images. Proceedings of\nInternational Conference on Image Analysis and Recognition, 931-940 (2018)\n\n[36] Wei, J. W. et al. Pathologist-level classification of histologic patterns on resected lung\nadenocarcinoma slides with deep neural networks. Scientific reports 9, 3358 (2019).\n\n[37] Yang, H., Kim, J.Y., Kim, H. & Adhikari, S. P. Guided Soft Attention Network for Classification of\nBreast Cancer Histopathology Images. /EEE transactions on medical imaging 39, 1306-1315 (2020).\n[38] Pinckaers, H. & Litjens, G. Neural Ordinary Differential Equations for Semantic Segmentation\nof Individual Colon Glands. https://arxiv.org/abs/1910.10470 (2019).\n\n[39] Naylor, P., Lae, M., Reyal, F. & Walter, T. Segmentation of Nuclei in Histopathology Images by\nDeep Regression of the Distance Map. /EEE transactions on medical imaging 38, 448-459 (2019).\n\n[40] Long, F. Microscopy cell nuclei segmentation with enhanced U-Net. BMC bioinformatics 21, 8\n(2020).\n\n[41] Jia, Z., Huang, X., Chang, E. I.-C. & Xu, Y. Constrained Deep Weak Supervision for\nHistopathology Image Segmentation. /EEE Transactions on Medical Imaging 36, 2376 - 2388 (2017).\n[42] Graham, S. et al. MILD-Net: Minimal information loss dilated network for gland instance\nsegmentation in colon histology images. Medical Image Analysis 52, 199-211 (2019).\n\n[43] Graham, S. et al. Hover-Net: Simultaneous segmentation and classification of nuclei in multi-\ntissue histology images. Medical Image Analysis 58, 101563 (2019).\n\n[44] Agarwalla, A., Shaban, M. & Rajpoot, N. M. Representation-Aggregation Networks for\nSegmentation of Multi-Gigapixel Histology Images. https://arxiv.org/abs/1707.08814 (2017).\n"
+        }
+    ]
+}

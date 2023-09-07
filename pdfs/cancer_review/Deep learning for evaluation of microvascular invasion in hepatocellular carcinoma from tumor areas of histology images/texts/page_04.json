@@ -1,0 +1,115 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 8,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.84,
+            "box": [
+                214.1,
+                226.7,
+                2271.8,
+                1784.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_04/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                211.9,
+                1850.4,
+                1214.4,
+                2109.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_04/region_2_text.png",
+            "text": "Fig. 1 Data collection and study design. a Patients from three medi-\ncal centers and the TCGA dataset were enrolled in this study. b\nLabelling of the images. All patches on one WSI were considered as\na patch bag and shared a same label. If the patient is MVI (—), all its\nWSIs, namely, patch bags would be labelled as negative; If the patient\nis MVI (+), all the patch bags would be labelled as positive, regard-\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.5,
+            "box": [
+                213.5,
+                2207.7,
+                702.0,
+                2265.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_04/region_3_title.png",
+            "text": "Training of the MVI-DL model\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                212.9,
+                2312.4,
+                1216.2,
+                2996.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_04/region_4_text.png",
+            "text": "The MVI-DL model was constructed based on a weakly\nsupervised multiple-instance learning (MIL) framework\n[17]. The framework consists of a convolutional neural net-\nwork (CNN) feature extraction layer, a MIL pooling layer\nand a fully connected layer. Each WSI obtained a patch bag\nafter tiling, the label of which was the patient’s MVI status\n(Fig. 1b). We used patch bags and their corresponding labels\nas the input to train the prediction network. A pre-trained\nInception-v4 model was used as the backbone to extract the\nfeatures of patches. In the MIL pooling layer, we introduced\nthe attention mechanism, aggregated the patch features\nthrough the attention score, and finally output the predicted\nvalue of the WSI through the fully connected layer (Fig. Ic\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1276.0,
+                1850.4,
+                2277.6,
+                2108.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_04/region_5_text.png",
+            "text": "less of the existence of MVI. c The flowchart of the MVI-DL model.\nAll WSIs obtained from multipoint sampling were automatically\nsegmented first, and the tumor areas tiled at different magnification\nscales were then fed into the prediction network. The average of all\nWSI-level scores formed the MVI-DL score of the patient, and when\nit is above a certain threshold, the patient is predicted to be MVI (+)\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1275.6,
+                2207.6,
+                2279.0,
+                2527.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_04/region_6_text.png",
+            "text": "and Supplementary Methods). We used a fine-tuned set (a\npart of the training set) to select five optimal prediction mod-\nels before overfitting and took the average of the five models\nas the final prediction score (Fig. 2a and Fig. S1, $2). The\naverage of the prediction scores under different magnifica-\ntions formed the prediction scores of the MVI-DL model.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 99.44,
+            "box": [
+                1275.2,
+                2573.4,
+                1850.8,
+                2628.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_04/region_7_title.png",
+            "text": "Visualization of the MVI prediction\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1275.6,
+                2676.3,
+                2279.4,
+                2994.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_04/region_8_text.png",
+            "text": "To further understand the key histological features that\ncontribute the most to the model prediction of MVI, we\nextracted the top 4000 and the bottom 4000 patches based\non the MVI predictive attention score and then clustered\nand visualized them using t-SNE and DCCS algorithms [18,\n19]. Pathologists reviewed the pathological features in each\n"
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_10.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_10.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 6,
+        "page_idx": 10
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 88.55,
+            "box": [
+                247.8,
+                262.7,
+                2245.6,
+                1038.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_10/region_1_text.png",
+            "text": "CHOWDER and 0.70 for SCHMOWDER (Figure 5A). As for the discovery set, both models\noutperformed all the other available features and the CS integrating all relevant baseline\ncharacteristics. The CS indeed gave a mean c-index of 0.63, which represents a 26% increase\nwith respect to a random prediction, while CHOWDER and SCHMOWDER featured an increase\nof 36% (p=3.6e-5) and 40% (p=3.4e-9), respectively. (Figure 5A). SCHMOWDER significantly\noutperformed CHOWDER (p=4.5E-2) and was an independent prognostic factor (p=3.2E-7). We\nused the threshold established with the discovery set to classify patients into high and low-risk\nsubclasses. This classification stratified the population of the validation set more effectively than\nthe CS or any other variable (HR=2.6, p=3.2E-7 and HR=4.3, p=2.5E-12 and HR=3.4, p=5.3E-11\nfor the CS, CHOWDER and SCHMOWDER,, respectively) (Figure 5B).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 78.44,
+            "box": [
+                245.1,
+                1078.9,
+                2248.9,
+                1302.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_10/region_2_text.png",
+            "text": "SCHMOWDER also predicted survival even after stratification for other common prognostic\nfeatures (microvascular invasion, cirrhosis, serum AFP concentration and AJCC tumor stage).\nSurvival curves for the risk subgroups are provided in Figure 6.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 72.42,
+            "box": [
+                250.8,
+                1443.3,
+                608.9,
+                1513.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_10/region_3_title.png",
+            "text": "Analysis of tiles\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 87.69,
+            "box": [
+                248.1,
+                1553.2,
+                2247.0,
+                2410.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_10/region_4_text.png",
+            "text": "The architecture of CHOWDER enables it to retrieve the most predictive tiles from among the\nthousands processed. We investigated the main histological determinants of survival, by\nextracting the 400 most predictive tiles (high risk of death: 200, low risk of death: 200) from 245\nWSlIs with CHOWDER and having them reviewed by a pathologist with expertise in liver disease\nand tumors (JC). Nineteen histological features were recorded in tumoral areas, and the features\nmost predictive of a high risk of death were the presence of vascular spaces (p=1.3E-10), a\nmacrotrabecular architectural pattern (p=8.6E-5), a high degree of cytological atypia (p=1.4E-8)\nand nuclear hyperchomasia (p=1.4E-8). In both tumoral and non-tumoral areas, fibrosis and\nimmune cells were associated with a low risk score (p=1.1E-3 and 3.4E-8, respectively) (Figure\n7). Overall, these results demonstrate that our deep learning model can detect both known and\nnovel histological patterns associated with survival in HCC patients.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 86.14,
+            "box": [
+                251.4,
+                2466.0,
+                2246.3,
+                3009.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_10/region_5_text.png",
+            "text": "We further performed UMAP on the subsets of low and high risk tiles reviewed, augmented with a\nrandom selection of tiles that cover the whole distribution of predicted risks. Panel B of Figure 7\nshows the distribution of tiles from both datasets, using a 2D embedding of the 256-dimensional\nautoencoded features. Interestingly, the generated graphs show that tiles tend to cluster\naccording to their risk class. To further analyze the morphological variations caught by the model,\nwe also performed a clustering of the data into 8 clusters using K-means algorithm. Among those\nclusters, 3 were clearly associated with an increased or reduced risk (clusters 0, 1 and 3 on the\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 41.12,
+            "box": [
+                246.4,
+                3294.4,
+                1398.9,
+                3363.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_10/region_6_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

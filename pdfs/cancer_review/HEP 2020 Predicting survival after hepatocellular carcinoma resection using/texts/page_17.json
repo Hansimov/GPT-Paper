@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_17.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_17.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 5,
+        "page_idx": 17
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 35.12,
+            "box": [
+                251.3,
+                264.2,
+                589.9,
+                328.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_17/region_1_title.png",
+            "text": "Figure legends\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 81.45,
+            "box": [
+                249.6,
+                382.5,
+                2245.4,
+                607.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_17/region_2_text.png",
+            "text": "Figure 1. Flow-chart and global methodology of the study. The models were first developed\nand cross-validated in a series of patients with HCC treated by surgical resection at Henri Mondor\nUniversity Hospital. They were then validated with patients from The Cancer Genome Atlas.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 87.3,
+            "box": [
+                254.0,
+                795.8,
+                2244.6,
+                2128.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_17/region_3_text.png",
+            "text": "Figure 2. Schematic representation of the CHOWDER and SCHMOWDER models. A) Whole-\nslide images were first cut into small image patches of tissue (“tiles”), and features were extracted\nfrom these tiles by a pretrained convolutional neural network. This preprocessing step was\nidentical for CHOWDER and SCHMOWDER. B) CHOWDER is a neural network that predicts a\nrisk score from WSls, without the need for local annotations. Tile features are fed into the network\nalong with survival data, and a risk score is assigned to each tile through an iterative learning\nprocess. The network then selects the 25 tiles with the highest and lowest scores for the\nprediction of patient survival. One of the key features of CHOWDER is its interpretability, as the\nmost predictive tiles can be extracted and reviewed. C) SCHMOWDER is a two-branch neural\nnetwork combining an unsupervised branch (lower part) and a supervised attention mechanism\n(upper part). Using annotations provided by the pathologist (JC), the upper branch is trained to\ndetermine whether each tile is tumoral or non-tumoral. By assigning a tumoral score to each tile\nand applying an attention mechanism to these scores, the upper branch generates a\nrepresentation of tiles with a high probability of being tumoral. The lower branch, like CHOWDER,\nis weakly supervised and generates a representation of a small number of tiles that are the most\npredictive of survival. Representations from the two branches are merged and a Survival risk is\ncalculated.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 86.71,
+            "box": [
+                248.5,
+                2312.4,
+                2248.8,
+                3007.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_17/region_4_text.png",
+            "text": "Figure 3. The SCHOWDER and CHOWDER models can predict survival after hepatocellular\ncarcinoma resection more effectively than all other clinical, biological or pathological\nvariables. A) C-indices for the prediction of survival by the deep learning-based SCHOWDER\nand CHOWDER models, the composite score and the most relevant clinical, biological and\npathological features. The two models significantly outperformed the composite score and all\nbaseline variables. B) Hazard ratios and 95% confidence intervals for the prediction of survival by\nCHOWDER and SCHMOWDER, the composite score and baseline features. The SCHMOWDER\nmodel score was converted into a binary score (high or low risk), using the median as a threshold.\nHR: hazard ratio; Cl: confidence interval. HBV: hepatitis B virus, HCV: hepatitis C virus, NASH:\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 29.25,
+            "box": [
+                246.2,
+                3295.2,
+                1399.3,
+                3362.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_17/region_5_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

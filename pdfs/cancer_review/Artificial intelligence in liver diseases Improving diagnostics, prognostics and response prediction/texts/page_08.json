@@ -1,0 +1,259 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages/page_08.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages_ordered/page_08.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 19,
+        "page_idx": 8
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                177.7,
+                266.0,
+                1216.6,
+                1083.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_01_text.png",
+            "text": "Big Data, stakeholders must enforce and accelerate the digitisa-\ntion of healthcare units. In that respect, whereas most radiology\nunits in industrialised countries are fully digitised, most pa-\nthology departments are not. Nevertheless, we believe that\ndigitised workflows will soon be adopted by pathology, permit-\nting seamless integration and application of ML/DL tools\namongst departments heavily dependent on imaging. At present,\nmost AI tools are designed for a single specific task. In the future,\nwe envision a standardised software suite that will incorporate\nmany different plug-in options. Ideally, this software suite would\nbe publicly available through an open-source project funded by\ngovernment or independent healthcare institutions. This would\navoid dependency on private companies and nudge industry to\nstandardise its products, reducing the cost and the number of\nproprietary data formats and software solutions. Additionally, a\nsingle software platform would make it easier for medical staff to\nwork with several applications and algorithms, hence reducing\nthe investment in training.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 98.59,
+            "box": [
+                178.1,
+                1132.7,
+                1106.0,
+                1176.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_02_title.png",
+            "text": "Multimodal input models for clinical decision making\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                177.8,
+                1179.5,
+                1216.9,
+                1770.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_03_text.png",
+            "text": "Decision making in clinical routine is rarely based on a single\ndata modality. Usually, healthcare providers integrate a number\nof different data types into clinical decisions. This is especially\ntrue in hepatology - a field in which it is rare for diseases to be\ndirectly observed and the differential diagnosis can be uncertain.\nFor example, one of the most common hepatology consults is an\nincidental finding of elevated liver enzymes. Diagnosing the\naetiology of this abnormality requires a battery of tests, including\ndetailed clinical history, additional laboratory tests, ultrasound,\nand even histopathology. Supporting, and ultimately mimicking,\nhuman decision making in such complex tasks is currently out of\nreach for narrow and specialised AI systems. At present, different\nAI approaches are required to process various types of clinical\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 93.46,
+            "box": [
+                177.7,
+                1922.3,
+                414.6,
+                1963.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_04_title.png",
+            "text": "Abbreviations\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                177.4,
+                1964.3,
+                1218.8,
+                2240.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_05_text.png",
+            "text": "Al, artificial intelligence; CNN, convolutional neural network; DICOM,\nDigital Imaging and Communications in Medicine; HCC, hepatocellular\ncarcinoma; ML, machine learning; MVI, microvascular invasion; NAFLD,\nnon-alcoholic fatty liver disease; NASH, non-alcoholic steatohepatitis;\nTACE, transarterial chemoembolisation; TRIPOD, Transparent Reporting\nof a multivariable prediction model for Individual Prognosis or Diagnosis;\nWSls, whole slide images.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 94.3,
+            "box": [
+                177.3,
+                2305.4,
+                476.9,
+                2346.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_06_title.png",
+            "text": "Financial support\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                177.6,
+                2347.2,
+                1217.7,
+                2622.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_07_text.png",
+            "text": "JNK is supported by the German Federal Ministry of Health (DEEP LIVER,\nZMVI1-2520DAT111) and the Max-Eder-Programme of the German Can-\ncer Aid (grant #70113864). TPS is supported by the German Federal\nMinistry of Health (DEEP LIVER, ZMVI1-2520DAT111). JC reports grants\nfrom the National Institutes of Health (RO1CA206180), Society of Inter-\nventional Oncology, Radiological Society of North America, Philips,\nGuerbet, Boston Scientific and the Yale Center for Clinical Investigation.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 95.82,
+            "box": [
+                177.1,
+                2662.4,
+                513.2,
+                2703.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_08_title.png",
+            "text": "Conflicts of interest\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                178.2,
+                2703.7,
+                1218.4,
+                2899.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_09_text.png",
+            "text": "JNK declares consulting services for Owkin (France) and Panakeia (UK)\nand has received honoraria for scientific talks and participation in advi-\nsory boards by MSD, Eisai and Bayer. JC is a consultant for Guerbet, Bayer\nand Philips. VP is involved in a collaborative study with Owkin, France.\nDN and TPS declare no conflicts of interest.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 98.59,
+            "box": [
+                176.7,
+                2901.1,
+                1217.1,
+                2979.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_10_text.png",
+            "text": "Please refer to the accompanying ICMJE disclosure forms for further\ndetails.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.89,
+            "box": [
+                1263.7,
+                266.6,
+                2303.5,
+                489.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_11_text.png",
+            "text": "input data (Fig. 3). Recently, there have been increasingly suc-\ncessful attempts to integrate multimodal data in non-medical\nfields,!° but such endeavours have not been systematically\napplied in a medical context beyond highly simplified laboratory\nconditions.'\"\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 98.37,
+            "box": [
+                1264.1,
+                539.1,
+                1928.0,
+                583.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_12_title.png",
+            "text": "Interdisciplinary teaching and training\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1264.9,
+                586.4,
+                2303.4,
+                1769.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_13_text.png",
+            "text": "The medical profession will not be replaced by AI in the future, as\nthe need to adapt to incomplete data, engagement in shared\ndecision making with patients, and the ethical and legal obli-\ngation to assume responsibility will continue to remain in\nmedicine. However, doctors can include the predictions of Al\nmodels in their recommendations and decisions, and thus use\nexisting information more effectively. This incorporation of Al\nwill require communication platforms, namely, user interfaces,\ndashboards, and innovative visualisation methods, to optimise\nthe flow of information from AI to physicians. In order for AI to\nbe widely adopted by the medical community, “digital literacy”\nneeds to be a core medical competency. A necessary prerequisite\nfor such “digital literacy” is basic knowledge of programming,\nwhich, in principle, can be learned by everyone. In the medical\ncontext, structured training programmes should be employed to\nteach programming. To that end, doctors must learn the neces-\nsary skills to use Al methods in research; validate algorithms in\nclinical studies; and critically question the benefits, data security,\nand possible biases of algorithms, even after regulatory approval.\nIn our experience, it has been especially encouraging to witness\nmedical students and young doctors who are earnestly inter-\nested in gaining a deeper understanding of AI and applying this\ntechnology to clinical problems. In time, this new generation of\ndigital clinician scientists will acquire the rigorous training to\nadvance AI research and pave the way for AI implementation\ninto routine clinical workflows.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "title",
+            "score": 90.25,
+            "box": [
+                1264.9,
+                1921.8,
+                1652.1,
+                1963.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_14_title.png",
+            "text": "Authors’ contributions\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 98.99,
+            "box": [
+                1263.2,
+                1964.6,
+                2304.3,
+                2043.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_15_text.png",
+            "text": "All authors wrote and critically revised this article and collectively made\nthe decision to publish.\n"
+        },
+        {
+            "idx": 16,
+            "thing": "title",
+            "score": 83.3,
+            "box": [
+                1263.7,
+                2082.4,
+                1607.8,
+                2124.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_16_title.png",
+            "text": "Supplementary data\n"
+        },
+        {
+            "idx": 17,
+            "thing": "text",
+            "score": 95.63,
+            "box": [
+                1263.0,
+                2125.1,
+                2303.5,
+                2202.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_17_text.png",
+            "text": "Supplementary data to this article can be found online at https://doi.org/1\n0.1016/j,jhepr.2022.100443.\n"
+        },
+        {
+            "idx": 18,
+            "thing": "title",
+            "score": 90.48,
+            "box": [
+                1265.9,
+                2280.5,
+                1447.2,
+                2322.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_18_title.png",
+            "text": "References\n"
+        },
+        {
+            "idx": 19,
+            "thing": "text",
+            "score": 49.81,
+            "box": [
+                1298.0,
+                2331.7,
+                2302.8,
+                2960.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_08/region_19_text.png",
+            "text": "[1] Winkfield B, Aubé C, Burtin P, Calés P. Inter-observer and intra-observer\nvariability in hepatology. Eur J Gastroenterol Hepatol 2003;15:959-966.\n\n[2] Russell S, Norvig P. Artificial intelligence: a modern approach. 2002.\n\n[3] Pearce CB, Gunn SR, Ahmed A, Johnson CD. Machine learning can improve\nprediction of severity in acute pancreatitis using admission values of\nAPACHE II score and C-reactive protein. Pancreatology 2006;6:123-131.\n\n[4] Aerts HJWL, Velazquez ER, Leijenaar RTH, Parmar C, Grossmann P,\nCarvalho S, et al. Decoding tumour phenotype by noninvasive imaging\nusing a quantitative radiomics approach. Nat Commun 2014;5:4006.\n\n[5] Waljee AK, Joyce JC, Wang S, Saxena A, Hart M, Zhu J, et al. Algorithms\noutperform metabolite tests in predicting response of patients with\ninflammatory bowel disease to thiopurines. Clin Gastroenterol Hepatol\n2010;8:143-150.\n\n[6] Sabanayagam C, Xu D, Ting DSW, Nusinovici S, Banu R, Hamzah H, et al.\nA deep learning algorithm to detect chronic kidney disease from retinal\nphotographs in community-based populations. Lancet Digit Health\n2020;2:e295-e302.\n"
+        }
+    ]
+}

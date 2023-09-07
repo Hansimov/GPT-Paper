@@ -1,0 +1,37 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages/page_21.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/pages_ordered/page_21.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 2,
+        "page_idx": 21
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.88,
+            "box": [
+                230.7,
+                232.0,
+                2252.2,
+                2450.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_21/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                177.2,
+                2494.9,
+                2274.3,
+                3016.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Nature Cancer 2020 Pan-cancer computational histopathology reveals/crops_ordered/page_21/region_2_text.png",
+            "text": "Extended Data Fig. 10 | Molecular associations before and after retraining of Inception-V4. a, AUC for selected genetic alterations and survival for\n\nthe original and modified Inception architecture. Error bars denote 95% confidence intervals. Sample sizes are n=149 tumor samples for BASIS; for\nMETABRIC, n=454 tumor samples were used for WGD status and copy number alterations; n=434 tumor samples were used for driver gene mutations.\nAdditional details can be found in Supplementary Table 4. b, Whole-slide average histopathology predictions for TILs from the modified network (x-axis)\nrelative to expert pathologist categories (y-axis). Boxplots depict the quartiles and median, whiskers extend to 1.5x the inter quartile range. Shown\n\nare n=36 tumor samples for METABRIC and n=129 tumor samples for BASIS with available TIL annotation ¢, Distribution of validated (deep green),\nindeterminate (light green) and invalid (gray) associations in METABRIC and BASIS across different alteration types. Distribution of validated (deep\ngreen), indeterminate (light green) and invalid (gray) transcriptomic associations in METABRIC. Sample sizes for genomic associations as in a; n=456\ntumor samples were used for transcriptomics. Details can be found in Supplementary Table 4. d, Scatterplots of genomic and transcriptomic association\nstrengths based on the original (x-axis) and modified (y-axis) Inception model for the TCGA cohort. Predictions from the original model are five-fold\ncross-validated, while those of the modified architecture are evaluated on a single 70% training / 30% testing split. Sample sizes and the number of\nalterations tested can be found in Supplementary Table 5.\n"
+        }
+    ]
+}

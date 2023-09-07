@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_03.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 6,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 68.05,
+            "box": [
+                246.6,
+                263.3,
+                464.3,
+                332.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_03/region_1_title.png",
+            "text": "Abstract\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 82.69,
+            "box": [
+                252.2,
+                399.6,
+                2245.2,
+                1018.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_03/region_2_text.png",
+            "text": "Standardized and robust risk stratification systems for patients with hepatocellular carcinoma\n(HCC) are required to improve therapeutic strategies and investigate the benefits of adjuvant\nsystemic therapies after curative resection/ablation. In this study, we used two deep-learning\nalgorithms based on whole-slide digitized histological slides (WSI) to build models for predicting\nthe survival of patients with HCC treated by surgical resection. Two independent series were\ninvestigated: a discovery set (Henri Mondor Hospital, n=194) used to develop our algorithms and\nan independent validation set (TCGA, n=328). WSls were first divided into small squares (\"tiles\")\nand features were extracted with a pretrained convolutional neural network (preprocessing step).\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 84.16,
+            "box": [
+                251.1,
+                1028.0,
+                2246.6,
+                1807.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_03/region_3_text.png",
+            "text": "The first deep-learning based algorithm (“SCHMOWDER’) uses an attention mechanism on\ntumoral areas annotated by a pathologist while the second (“CHOWDER”) does not require\nhuman expertise. In the discovery set, c-indexes for survival prediction of SCHMOWDER and\nCHOWDER reached 0.78 and 0.75, respectively. Both models outperformed a composite score\nincorporating all baseline variables associated with survival. The prognostic value of the models\nwas further validated in the TCGA dataset, and, as observed in the discovery series, both models\nhad a higher discriminatory power than a score combining all baseline variables associated with\nsurvival. Pathological review showed that the tumoral areas most predictive of poor survival were\ncharacterized by vascular spaces, the macrotrabecular architectural pattern and a lack of immune\ninfiltration.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 78.66,
+            "box": [
+                241.2,
+                1899.2,
+                511.2,
+                1965.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_03/region_4_title.png",
+            "text": "Conclusion\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 82.0,
+            "box": [
+                254.7,
+                1974.8,
+                2246.5,
+                2283.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_03/region_5_text.png",
+            "text": "This study shows that artificial intelligence can help refine the prediction of HCC prognosis. It\nhighlights the importance of pathologist/machine interactions for the construction of deep-learning\nalgorithms that benefit from expert knowledge and allow a biological understanding of their\noutput.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 49.91,
+            "box": [
+                247.4,
+                3295.0,
+                1398.7,
+                3363.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_03/region_6_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

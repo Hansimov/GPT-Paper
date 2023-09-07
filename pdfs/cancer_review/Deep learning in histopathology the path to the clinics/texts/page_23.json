@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_23.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_23.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 23
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 95.02,
+            "box": [
+                298.3,
+                294.5,
+                2198.6,
+                2958.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_23/region_1_list.png",
+            "text": "[88] Pawlowski, N. Et al. Needles in Haystacks: On Classifying Tiny Objects in Large Images.\nhttps://arxiv.org/abs/1908.06037 (2019).\n\n[89] Ilse, M., Tomczak, J. M. & Welling, M. Attention-based Deep Multiple Instance Learning.\nInternational Conference on Machine Learning, Proceedings of Machine Learning Research 80, 2127-\n2136 (2018)\n\n[90] Hou, L. et al. Patch-Based Convolutional Neural Network for Whole Slide Tissue Image\nClassification. Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2424-2433\n(2016)\n\n[91] Lu, M. Y. et al. D. F. K. Williamson, T. Y. Chen, R. J. Chen, M. Barbieri and F. Mahmood, \"Data\nEfficient and Weakly Supervised Computational Pathology on Whole Slide Images,\" Nat Biomed Eng,\nhttps://doi.org/10.1038/s41551-020-00682-w (2021).\n\n[92] Tellez, D., Litjens, G., van der Laak, J. & Ciompi, F. Neural Image Compression for Gigapixel\nHistopathology Image Analysis. /EEE transactions on pattern analysis and machine intelligence, 43,\n567-578 (2021).\n\n[93] Pinckaers, J. H. F. M., van Ginneken, B. & Litjens, G. Streaming convolutional neural networks\nfor end-to-end learning with multi-megapixel images. /EEE transactions on pattern analysis and\nmachine intelligence, https:doi.org/10.1109/TPAMI.2020.3019563 (2020).\n\n[94] Wulczyn, E. et al. Deep learning-based survival prediction for multiple cancer types using\nhistopathology images. PloS one 15, p. e€0233678 (2020).\n\n[95] Skrede, O.J. Deep learning for prediction of colorectal cancer outcome: a discovery and\nvalidation study. Lancet 395, 350-360 (2020).\n\n[96] Saillard, C. et al. Predicting survival after hepatocellular carcinoma resection using deep-\nlearning on histological slides. Hepatology 72, 2000-2013 (2020).\n\n[97] Qaiser, T. et al. Digital Tumor-Collagen Proximity Signature Predicts Survival in Diffuse Large\nB-Cell Lymphoma. Proceedings of European Congress on Digital Pathology, Lecture Notes in Computer\nScience 11435, 163-171 (2019).\n\n[98] Mobadersany, P. et al. Predicting cancer outcomes from histology and genomics using\nconvolutional networks. PNAS 115, E2970-E2979 (2018).\n\n[99] Bychkov, D. et al. Deep learning based tissue analysis predicts outcome in colorectal cancer.\nScientific reports 8, 3395 (2018).\n\n[100] Courtiol, P. et al. Deep learning-based classification of mesothelioma improves prediction of\npatient outcome. Nature medicine 25, 1519-1525 (2019).\n"
+        }
+    ]
+}

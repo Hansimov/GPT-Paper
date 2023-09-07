@@ -1,0 +1,90 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/pages_ordered/page_13.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 6,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                490.1,
+                362.0,
+                2000.1,
+                828.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_13/region_1_text.png",
+            "text": "examined (Fig. 5). Separation between prognostic survival groups was greatest for Lrs\n(1.89E—96; Fig. 5C) followed by Legsc (Fig. 5E; 1.55E—77). Size split between clusters dif-\nfered between models. BCE, MSE and Lac all had a relatively even split in group sizes,\nwhich were 158 v 194, 181 v 171 and 169 v 183, respectively (Figs. 5A, B, D). The sur-\nvival-based loss produced a more uneven split (302 v 50) compared to that created by\nthe Lpsc loss (271 v 81). In general, those losses which included L, had a more uneven\nsplit in group sizes compared to the other losses. Cluster membership for all models did\nnot have any evidence that they related to HCC disease grade or risk factors (Table 3).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                490.2,
+                833.4,
+                2000.1,
+                1534.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_13/region_2_text.png",
+            "text": "Univariate Cox models created using bottleneck features from the best run of Lrsc\nby log-rank test P-value are presented in Table S1. A hazard ratio of one suggests that\nthere was no difference in survival between groups. Hazard ratios for all of the 100 bot-\ntleneck features produced by the combined loss Lesc differed greatly from one (range:\n2.29E—45 to 2.82E+45; Additional file 1: Table $1). This provided evidence that all the\nLrsc bottleneck features were highly explanatory for HCC survival and conveyed either\na massively increased risk, or a massively reduced risk. This indicated that by using the\ncombined loss we can learn a new joint representation of the multi-omics data that is\nhighly informative for the task of prognostic subgroups identification. Using the new\ndata representation (i.e. bottleneck features), we were able to identify new subgroups\nwith greater differences in survival (log-rank P-value) and more biologically meaningful\n(Silhouette score) in comparison to the baseline.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.64,
+            "box": [
+                490.1,
+                1625.0,
+                1211.8,
+                1671.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_13/region_3_title.png",
+            "text": "Top features identified by the loss functions\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                490.0,
+                1681.4,
+                2000.4,
+                2326.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_13/region_4_text.png",
+            "text": "Top features frequently identified in the three omics types for 6, 8 and 10 runs were\nexamined for each loss function (Table 4). The baseline BCE model achieved the great-\nest number of consistent mRNA features across 10 runs. For miRNA and methylation,\nthe clustering loss La. produced by far the greatest number of overlapping top features\nacross 10 runs. This demonstrates that Lac is robust to randomness when it comes to\nidentifying these types of omics features across runs. In total, 377 mRNA features were\nconsistently identified by the hybrid model Lasgo. Of these, 231 (61.27%) were novel i.e.\nthey were only consistently identified by Lp;- compared to the features consistently iden-\ntified by the other losses as well as the baseline paper’s top 100 RNA-seq features derived\nfrom ANOVA. The results of the GEFA with the 229 of the 231 genes that mapped in\nDAVID identified seven pathways including cell cycle and DNA replication (Table 5).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                490.0,
+                2330.3,
+                2000.1,
+                2914.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_13/region_5_text.png",
+            "text": "Fifteen miRNAs were identified as robust features. Two miRNAs, hsa-let-7g and\nhsa-mir-550a-1, were also novel, ie., they were consistently identified by Lesc but not\nconsistently identified by the other losses or by the baseline paper’s top 50 miRNA as\nidentified by ANOVA. These miRNAs were not prognostic, however, as their expres-\nsion did not show a significant difference in separation of patients in terms of survival.\nFor methylation, 328 features were consistently identified by Lpg;c compared to the other\nlosses or the paper’s top methylation features as identified by ANOVA. Of these 233\nwere prognostic as the log-rank test was significant using a median expression for sur-\nvival group separation (Additional file 1: Table S2). For these 233 features, a subtle differ-\nence in the expression patterns between clusters was observed (Fig. 6).\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.86,
+            "box": [
+                493.1,
+                2920.5,
+                2000.4,
+                3032.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Novel deep learning-based solution for identification of prognostic subgroups in liver cancer/crops_ordered/page_13/region_6_text.png",
+            "text": "Of the 231 mRNAs of interest, 75 significantly grouped patients in terms of survival\nin the TCGA HCC cohort when separated by median expression (Table 6). Expression\n"
+        }
+    ]
+}

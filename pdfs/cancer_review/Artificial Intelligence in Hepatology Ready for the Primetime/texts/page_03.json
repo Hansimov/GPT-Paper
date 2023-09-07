@@ -1,0 +1,88 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 6,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.81,
+            "box": [
+                376.5,
+                355.4,
+                2114.0,
+                1064.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.35,
+            "box": [
+                730.9,
+                1101.4,
+                1749.6,
+                1140.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_2_text.png",
+            "text": "Figure 1 Arrangement of the hierarchy of artificial intelligence domains.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                201.5,
+                1219.2,
+                1204.0,
+                1515.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_3_text.png",
+            "text": "tool in modern medicine. Radiomics is useful not only for\nliver malignant lesions like HCC and non-HCC malig-\nnancy but also for benign conditions like NASH, NAFLD\nand portal hypertension. Presently, the branch of radio-\nmics lacks the standard evaluation of multiple published\ninvestigations. Hence, detailed guidelines and criteria\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1278.3,
+                1219.4,
+                2280.9,
+                1514.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_4_text.png",
+            "text": "need to be set to apply radiomics in clinical medicine.”\nThe gene-expression profile of a tumour helps to predict\nthe biological behaviour and plan further management af-\nter tumour resection. For all practical purposes, the only\nway to assess gene expression is to use tissue obtained\nthrough biopsy or tumour resection, with the\n"
+        },
+        {
+            "idx": 5,
+            "thing": "figure",
+            "score": 99.86,
+            "box": [
+                305.5,
+                1651.8,
+                2173.7,
+                2959.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_5_figure.png"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.74,
+            "box": [
+                202.3,
+                2997.7,
+                2279.0,
+                3080.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_03/region_6_text.png",
+            "text": "Figure 2 Overview of a Deep Learning tool using data in Input layer then running Inter-neuron connections, finally showing Model predictions in the\nOutput layer.\n"
+        }
+    ]
+}

@@ -1,0 +1,220 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages/page_04.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/pages_ordered/page_04.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 16,
+        "page_idx": 4
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                177.8,
+                263.3,
+                1216.8,
+                1130.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_01_text.png",
+            "text": "accurately identified tumour tissue in hyperspectral data of un-\nstained HCC samples.** Sun et al. used the DL technique of\nmultiple instance learning to distinguish between HCC and\nnormal liver tissue in WSIs, reporting AUCs of nearly 1.00.°°\nUsing a convolutional autoencoder, Roy et al. detected tumour\ntissue and segmented WSIs.°*° Some of the challenges of adopting\na medical Al-assistance tool were highlighted by Kiani et al., who\ntrained a CNN on image patches from H@E slides of hepatic tu-\nmours to distinguish between HCC and cholangiocellular carci-\nnoma with a slide level accuracy of 0.88 (95% CI 0.71-0.96).\nSubsequently, the model’s performance as an assistive tool for 11\npathologists with different experience levels was evaluated. The\nresults showed that even though it did not significantly improve\nthe accuracy of diagnosis for the whole group of pathologists, the\ntool improved the accuracy for a subgroup. It also showed that a\nfalse prediction of the tool had a negative influence on the pa-\nthologist’s decision.*’ Further development and validation of the\nfindings of these proof-of-concept studies will be needed before\ntheir implementation into clinical workflows.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 99.23,
+            "box": [
+                177.1,
+                1174.5,
+                739.8,
+                1219.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_02_title.png",
+            "text": "Outcome prediction for liver disease\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                178.0,
+                1220.2,
+                1216.5,
+                2680.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_03_text.png",
+            "text": "While the previously described studies focused on models\nimitating human tasks in histopathology, some recent studies\nhave tried to infer clinical endpoints directly from histopathol-\nogy images. As such, Liao et al. developed an image segmentation\npipeline capable of distinguishing HCC from healthy liver tissue\nwith an AUC of 0.87 on an external dataset and calculated a risk\nscore associated with overall survival after resection in patients\nwith HCC, facilitating a significant separation of high- and low-\nrisk patients’ Kaplan Meier survival.°° A group from Japan used\nhandcrafted features from nuclei segmentation to predict early\nrecurrence after resection of HCC with an accuracy of nearly\n0.90.°° The capability of DL algorithms to predict survival of\npatients with HCC from H&E-stained WSIs was impressively\nshown by Saillard et al., in which a DL risk score outperformed\ncommon clinical, biological and pathological features; the\nAmerican Joint Committee on Cancer staging system; and a\ncomposite score of all these variables.*° Histopathology’s po-\ntential for predicting survival was further corroborated by Shi\net al.’s DL model, where a “tumor risk factor” was an indepen-\ndent predictor of overall and recurrence-free survival in multi-\nvariable analysis adjusted for known prognostic factors in\npatients with HCC.*! Yamashita et al. created a risk score\nshowing independent association with recurrence-free survival\nin patients with HCC who underwent cancer resection.’\nApplying new techniques of multimodal data input, He et al.\ncombined histopathology, MRI, and clinical data to train a model\nthat predicted the risk of HCC recurrence in patients after liver\ntransplantation (AUC of 0.87).'* These promising studies are just\nthe tip of the iceberg in an emerging field of research that seeks\nto find better prognostic markers for clinical endpoints and to\nharness the potential of digitised histopathology images to\nsupport physicians in their clinical decision making.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 98.25,
+            "box": [
+                177.1,
+                2729.4,
+                453.6,
+                2775.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_04_title.png",
+            "text": "What is missing\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 99.06,
+            "box": [
+                176.5,
+                2779.5,
+                702.9,
+                2824.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_05_title.png",
+            "text": "Standardisation of image analysis\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                178.2,
+                2825.8,
+                1217.6,
+                3098.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_06_text.png",
+            "text": "In histopathology, a wave of digitisation is expected to occur in\nthe next 5 to 10 years.*? However, most diagnostic pathology\ndepartments still rely on manual handling of glass slides. Once\nroutine workflows are digitised, DL-based biomarkers can be\ninexpensively added. However, universal standards for data\nformatting, image data compression, and storage of metadata do\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1263.5,
+                263.4,
+                2303.8,
+                582.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_07_text.png",
+            "text": "not exist for digital histopathology WSls. Currently, the field is\ndominated by vendor-specific data formats, which are similar to\nmultichannel TIFF images and store high-resolution image data\nin a pyramidal way. This is in stark contrast to radiology, where\nthe Digital Imaging and Communications in Medicine (DICOM)\nformat is the standard for storing image data and metadata,\nproviding a firm ground for the discovery of biomarkers.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 99.14,
+            "box": [
+                1265.3,
+                626.9,
+                1877.7,
+                671.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_08_title.png",
+            "text": "Diversity and bias in database curation\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1264.9,
+                673.2,
+                2303.2,
+                1219.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_09_text.png",
+            "text": "The performance of AI systems in histopathology generally in-\ncreases with the number of patients,***° while the general-\nisability of such systems increases with the diversity of patients\nin the training set.*° In the field of cancer research, including\nHCC, The Cancer Genome Atlas (TCGA) database provides\npublicly available histologic, genetic, and clinical data on\nthousands of patients and has served as a key resource for early\nstudies on DL-based biomarkers in HCC.'°*” However, recent\nstudies have uncovered potential biases in the TCGA database\nleading to overperformance of DL systems.*® Therefore,\nexternal validation of TCGA-derived classification systems is\ncrucial for generalisability.'°\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 98.19,
+            "box": [
+                1263.5,
+                1276.9,
+                1509.8,
+                1321.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_10_title.png",
+            "text": "The next steps\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1265.4,
+                1322.9,
+                2303.6,
+                2144.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_11_text.png",
+            "text": "Optimistically, ML/DL systems could help resolve the diagnostic,\nprognostic and predictive issues that limit liver histopathology\nimage analysis. This would improve and facilitate clinical trials in\nliver disease in which inclusion criteria, patient strata and his-\ntological endpoints are often manually defined by pathologists\nand therefore subject to intra- and inter-observer variability.*° As\nin other disease contexts, there is a place in clinical decision\nmaking for invasive tissue-based diagnostics. ML/DL approaches\ncould conceivably improve the consistency, quality and amount\nof information which researchers and healthcare providers can\nextract from this tissue. The benefits of these ML/DL approaches\nto histopathological analysis may incentivise patients to undergo\nan invasive procedure such as liver biopsy. However, for some\nproblems in the management of liver disease, non-invasive\nradiology images, instead of invasive diagnostics, can be ana-\nlysed to unveil biomarkers. In the following section, we will re-\nview the state of the art in ML/DL approaches applied to such\nradiology data.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "title",
+            "score": 98.76,
+            "box": [
+                1264.0,
+                2220.3,
+                1645.9,
+                2269.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_12_title.png",
+            "text": "Al in liver radiology\n"
+        },
+        {
+            "idx": 13,
+            "thing": "title",
+            "score": 96.99,
+            "box": [
+                1264.1,
+                2273.2,
+                1523.0,
+                2319.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_13_title.png",
+            "text": "State of the art\n"
+        },
+        {
+            "idx": 14,
+            "thing": "title",
+            "score": 98.5,
+            "box": [
+                1264.7,
+                2322.4,
+                1707.4,
+                2367.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_14_title.png",
+            "text": "Challenges in liver radiology\n"
+        },
+        {
+            "idx": 15,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1264.1,
+                2369.2,
+                2303.2,
+                2732.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_15_text.png",
+            "text": "Patients with liver disease, particularly those with liver cancer,\nundergo multiple imaging studies to establish a diagnosis, pre-\noperatively plan interventions, and monitor response to ther-\napy (Table S2). Each of these imaging studies contain numerous\ndata points that could be potentially analysed to improve pre-\ndictions. However, there is a formidable challenge in trans-\nforming this burden of clinical and imaging data into something\nof clinical value.\n"
+        },
+        {
+            "idx": 16,
+            "thing": "text",
+            "score": 99.98,
+            "box": [
+                1264.0,
+                2735.8,
+                2303.5,
+                3098.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction/crops_ordered/page_04/region_16_text.png",
+            "text": "This challenge in image interpretation is confounded by\nseveral considerations. There are at least 25 guidelines for HCC\ndiagnosis with varying, inconsistent definitions for imaging\nfeatures. Although LI-RADS is the most standardised°° of these\nguidelines, there is no unified imaging guideline that encom-\npasses a patient’s journey from diagnosis and treatment rec-\nommendations to therapeutic response assessment. Similarly,\ntreatment recommendations for patients can be inconsistent\n"
+        }
+    ]
+}

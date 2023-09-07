@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_06.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 3,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 86.98,
+            "box": [
+                301.6,
+                298.6,
+                2196.1,
+                1446.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_06/region_1_text.png",
+            "text": "identification of regions of tissue or the location of specific cells types) and clinical annotations (such\nas assessment of molecular subtypes, treatment response and survival). Acquiring manual annotations\nof images is a tedious task that requires domain expertise and is typically performed by (resident)\npathologists. By contrast, clinical annotations require access to pathology reports and electronic\npatient records, either from a hospital (to retrieve information about grade, molecular subtypes or\ntreatment responses) or from a regional or national registry (to retrieve information about survival),\nand can only be provided by authorized clinical researchers or data managers. Clinical annotation of\nWSI tends to be easier to achieve than manual annotation, and has resulted in large datasets in several\nstudies (e.g., for prostate cancer [72], lung cancer [24], and colorectal cancer [160]). Still, building\nCPATH models using only clinical annotations will not be possible or efficient for every application in\nhistopathology. For instance, if the feature that is critical for arriving at a certain diagnosis is present\nonly in very small regions of the WSI, it may require a very large number of cases before the CPATH\nmodel has learned to perform the task. Therefore, manual annotations will still be needed,\nnecessitating development of techniques to facilitate efficient production of these annotations.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 87.26,
+            "box": [
+                300.8,
+                1546.6,
+                2196.7,
+                2623.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_06/region_2_text.png",
+            "text": "Several approaches have been proposed to address the need for manual annotations in large scale\ndatasets. One straightforward approach is to simply scale the number of annotators with the data by\ninvolving a large number of experts. This approach has the advantage of guaranteeing high quality\nannotations, but it is very expensive as it involves a fairly large number of experienced physicians. This\nsolution was adopted by a study in 2020 [75], in which 12 senior pathologists were involved in\nexhaustively manually annotating >2,000 WSI of gastric cancer; the agreement among all experts\ninvolved was used as reference standard. A similar approach was used in the TUPAC challenge in 2016\nto define a reference standard for mitosis detection by combining the opinions of a panel of\npathologists [54]. An alternative approach to using pathologists is to assign manual annotations to a\nset of people with different amounts of expertise, ranging from medical students to junior and senior\npathologists [76] [77] [51]. In previous studies that used this approach, manual annotations were\ncrowdsourced using web-based platforms such as Mechanical Turk [76] [77]. However, in all cases,\nmanual annotations were finally reviewed and approved by (resident) pathologists.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 84.51,
+            "box": [
+                301.1,
+                2724.5,
+                2191.1,
+                3127.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_06/region_3_text.png",
+            "text": "Staining techniques such as IHC, in which antibodies can be used to target specific types of tissue or\ncells, may also provide valuable support to manual annotations. This strategy was used to make\nmanual annotations of breast cancer metastases to lymph nodes in the CAMELYON challenge, in which\ntwo serial sections were stained with cytokeratin (CK) and H&E, and CK was used to guide the manual\nannotation procedure [20]. This approach has the advantage of providing strong supervision to the\n"
+        }
+    ]
+}

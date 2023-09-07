@@ -1,0 +1,129 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_13.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 9,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.79,
+            "box": [
+                190.0,
+                192.7,
+                1207.8,
+                621.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_13/region_1_text.png",
+            "text": "data storage service SDS@hd supported by the Ministry\nof Science, Research and the Arts Baden-Wiirttemberg\n(MWK) and the German Research Foundation (DFG)\nthrough grant INST 35/1314-1 FUGG and INST 35/1503-\n1 FUGG and the support of the Biobank of the National\nCentre for Tumour Diseases. MGG was supported by the\nGerman Research Foundation (SFB1292 Project Number\n318346496, TPQ] and TP22; GA1818/2-3).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 97.64,
+            "box": [
+                189.3,
+                624.3,
+                1208.1,
+                729.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_13/region_2_text.png",
+            "text": "Open access funding enabled and organized by Projekt\nDEAL.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 88.78,
+            "box": [
+                188.7,
+                776.2,
+                1164.1,
+                830.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_13/region_3_title.png",
+            "text": "CONFLICT OF INTEREST STATEMENT\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 98.57,
+            "box": [
+                188.3,
+                831.2,
+                927.8,
+                884.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_13/region_4_text.png",
+            "text": "The authors declare no conflict of interest.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 88.05,
+            "box": [
+                189.5,
+                931.8,
+                355.5,
+                984.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_13/region_5_title.png",
+            "text": "ORCID\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 84.05,
+            "box": [
+                189.6,
+                986.6,
+                1159.1,
+                1088.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_13/region_6_text.png",
+            "text": "Matthias M. Gaida © https://orcid.org/0000-0003-1499-\n7772\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 90.9,
+            "box": [
+                190.0,
+                1132.0,
+                533.1,
+                1187.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_13/region_7_title.png",
+            "text": "REFERENCES\n"
+        },
+        {
+            "idx": 8,
+            "thing": "list",
+            "score": 99.31,
+            "box": [
+                201.6,
+                1202.5,
+                1206.0,
+                2961.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_13/region_8_list.png",
+            "text": "1. Hornick JL, Lauwers GY, Odze RD. Immunohistochemistry can\nhelp distinguish metastatic pancreatic adenocarcinomas from\nbile duct adenomas and hamartomas of the liver. Am J Surg\nPathol. 2005;29:381-389.\n\n2. Ozaki K, Higuchi S, Kimura H, Gabata T. Liver metastases:\ncorrelation between imaging features and pathomolecular envi-\nronments. Radiographics. 2022;42:1994-2013.\n\n3. Park JH, Kim JHo. Pathologic differential diagnosis of\nmetastatic carcinoma in the liver. Clin Mol Hepatol.\n2019;25:12-20.\n\n4. Horn SR, Stoltzfus KC, Lehrer EJ, et al. Epidemiology of liver\nmetastases. Cancer Epidemiol. 2020;67:101760.\n\n5. Mayer P, Dinkic C, Jesenofsky R, et al. Changes in the\nmicroarchitecture of the pancreatic cancer stroma are linked\nto neutrophil-dependent reprogramming of stellate cells and\nreflected by diffusion-weighted magnetic resonance imaging.\nTheranostics. 2018;8:13-30.\n\n6. Selves J, Long-Mira E, Mathieu MC, Rochaix P, Ilie M.\nImmunohistochemistry for diagnosis of metastatic carcinomas\nof unknown primary site. Cancers (Basel). 2018:10:108.\n\n7. Markl B, Fiizesi L, Huss R, Bauer S, Schaller T. Number of\npathologists in Germany: comparison with European countries,\nUSA, and Canada. Virchows Arch. 2021;478:335-341.\n\n8. Metter DM, Colgan TJ, Leung ST, Timmons CF, Park JY. Trends\nin the US and Canadian pathologist workforces from 2007 to\n2017. JAMA Netw Open. 2019;2:e194337.\n\n9. Jiang Y, Yang M, Wang S, Li X, Sun Y. Emerging role of\ndeep learning-based artificial intelligence in tumour pathology.\nCancer Commun (Lond). 2020;40:154-166.\n\n10. Coudray N, Ocampo PS, Sakellaropoulos T, et al. Classi-\nfication and mutation prediction from non-small cell lung\ncancer histopathology images using deep learning. Nat Med.\n2018;24:1559-1567.\n\nll. Echle A, Ghaffari Laleh N, Quirke P, et al. Artificial intel-\nligence for detection of microsatellite instability in colorectal\ncancer-a multicentric analysis of a pre-screening tool for clinical\napplication. ESMO Open. 2022;7:100400.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "list",
+            "score": 98.92,
+            "box": [
+                1287.3,
+                196.4,
+                2292.4,
+                2967.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_13/region_9_list.png",
+            "text": "12. Kriegsmann K, Lobers F, Zgorzelski C, et al. Deep learning\nfor the detection of anatomical tissue structures and neoplasms\nof the skin on scanned histopathological tissue sections. Front\nOncol. 2022;12:1022967.\n\n13. Kriegsmann M, , Haag C, Weis C-A, et al. Deep learning for\nthe classification of small-cell and non-small-cell lung cancer.\nCancers (Basel). 2020:12:1604.\n\n14. Kriegsmann M, Kriegsmann K, Steinbuss G, Zgorzelski C, Kraft\nA, Gaida MM. Deep learning in pancreatic tissue: identification\nof anatomical structures, pancreatic intraepithelial neoplasia,\nand ductal adenocarcinoma. Int J Mol Sci. 2021:22:5385.\n\n15. Steinbuss G, Kriegsmann M, Zgorzelski C, et al. Deep learning\nfor the classification of non-Hodgkin lymphoma on histopatho-\nlogical images. Cancers (Basel). 2021:13:2419.\n\n16. Wang S, Yang DM, Rong R, Zhan X, Xiao G. Pathology image\nanalysis using segmentation deep learning algorithms. Am J\nPathol. 2019;189:1686-1698.\n\n17. Alzubaidi L, Zhang J, Humaidi AJ, et al. Review of deep\nlearning: concepts, CNN architectures, challenges, applications,\nfuture directions. J Big Data. 2021;8:53.\n\n18. Kriegsmann M, Kriegsmann K, Steinbuss G, et al. Implemen-\ntation of deep learning in liver pathology optimizes diagnosis\nof benign lesions and adenocarcinoma metastasis [data], 2023.\nhttps://doi.org/10.11588/data/YAZWJW, heiDATA, V1\n\n19. Bankhead P, Loughrey MB, Fernandez JA, et al. QuPath: open\nsource software for digital pathology image analysis. Sci Rep.\n2017;7:16878.\n\n20. Bello I, Fedus W, Du X, et al. Revisiting ResNets: improved train-\ning and scaling strategies. Adv Neur In. 2021;34. https://arxiv.\norg/abs/2103.07579\n\n21. Tan M, Le Q. Efficientnet: rethinking model scaling for convo-\nlutional neural networks. International conference on machine\nlearning. 2019;6105-6114. https://arxiv.org/abs/1905.11946\n\n22. Kingma DP, Ba JA. A Method for Stochastic Optimization.\narXiv:1412.6980; 2014.\n\n23. Betmouni S. Diagnostic digital pathology implementation:\nlearning from the digital health experience. Digit Health.\n2021;7:20552076211020240.\n\n24. Hofman P, Ilié M, Chamorey E, et al. Clinical and molecular\npractice of European thoracic pathology laboratories during the\nCOVID-19 pandemic. The past and the near future. ESMO Open.\n2021;6:100024.\n\n25. Saldanha OL, Quirke P, West NP, et al. Swarm learning for\ndecentralized artificial intelligence in cancer histopathology.\nNat Med. 2022;28:1232-1239.\n\n26. Shmatko A, Ghaffari Laleh N, Gerstung M, Kather JN. Artificial\nintelligence in histopathology: enhancing cancer research and\nclinical oncology. Nat Cancer. 2022;3:1026-1038.\n\n27. Hauser K, Kurz A, Haggenmiiller S, et al. Explainable artificial\nintelligence in skin cancer recognition: a systematic review. Eur\nJ Cancer. 2022;167:54-69.\n\n28. Aresta G, Aratijo T, Kwok S, et al. BACH: grand challenge on\nbreast cancer histology images. Med Image Anal. 2019;56:122-\n139.\n\n29. Ehteshami Bejnordi B, Veta M, Johannes Van Diest P, et al. Diag-\nnostic assessment of deep learning algorithms for detection of\nlymph node metastases in women with breast cancer. JAMA.\n2017;318:2199-2210.\n"
+        }
+    ]
+}

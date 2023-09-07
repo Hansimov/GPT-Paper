@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 4,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 90.09,
+            "box": [
+                300.9,
+                380.0,
+                2191.5,
+                1029.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_03/region_1_text.png",
+            "text": "The history of CPATH prior to deep learning has been reviewed elsewhere [8], as has the application\nof deep learning for histopathology from a technical perspective [14]. Therefore, in this review we\nprovide an application-based approach to the use of deep learning in histopathology with an emphasis\non clinical value, future developments and challenges still to overcome before true patient value is\nachieved, as well as briefly retracing the main milestones in CPATH from the past decade. We have\nlimited the discussion to studies in which computational analysis is applied to digitized bright-field\nmicroscopic tissue sections in combination with selected meta-data, as these form the vast majority\nof current research.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 95.25,
+            "box": [
+                298.9,
+                1134.8,
+                1066.3,
+                1196.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_03/region_2_title.png",
+            "text": "[H1] Trends in computational pathology\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 90.39,
+            "box": [
+                297.7,
+                1217.2,
+                2195.3,
+                2538.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_03/region_3_text.png",
+            "text": "CPATH has moved forward significantly in the past ten years as a result of strong improvements in\nmicroscopic scanning devices, which enable the acquisition of whole-slide images (WSI), progress in\nthe development and decreases in the cost of computing hardware, and advances in Al. The field has\nfollowed a trend that was previously experienced by the computer vision community, which focusses\nits research on computational analysis of natural images, i.e. real-world photographs and videos. Initial\nreports in 2011 of efficiently training convolutional neural networks (CNN), a particular type of deep\nlearning algorithm, using graphics processing units (GPUs) [9], led to the design of much deeper CNNs\nthat outperformed the state of the art (mostly using machine learning based on handcrafted features)\nin the classification of natural images. Specifically, in the ImageNet challenge, which required\ncategorization of one million photographs in a thousand different classes ranging from specific breeds\nof dogs to airplanes and cars, these new deep neural networks reduced the error rate from 25% to 4%\nin only three years.. CPATH researchers took note of the successes of applying CNNs in computer\nvision, initially presenting methods that solely focused on the analysis of small cropped areas from\nWSI, such as mitosis counting [10]. Methods that used entire WSI followed for applications such as\nbreast cancer segmentation [11], glioma classification [12], non-alcoholic fatty liver disease [156],\nassessment of renal transplant biopsies [19] and prostate cancer detection [13].\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 88.82,
+            "box": [
+                300.1,
+                2644.6,
+                2192.0,
+                3126.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_03/region_4_text.png",
+            "text": "In parallel with the progression to more advanced Al models in histopathology, the complexity of the\ntasks to be solved and the size of publicly available datasets began to grow. In 2016, the CAMELYON\nchallenge was proposed with the aim of developing CPATH solutions for the detection of breast cancer\nmetastases in sentinel lymph nodes [20]. The introduction of the CAMELYON dataset was a game\nchanger in the field of CPATH, as it made available for the first time the largest collection (n=1,399) of\nfully manually annotated WSI of sentinel lymph nodes of patients with breast cancer. Participants in\n"
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages/page_5.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/pages_ordered/page_5.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 9,
+        "page_idx": 5
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.8,
+            "box": [
+                245.0,
+                255.0,
+                2191.1,
+                1100.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_5/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                151.2,
+                1123.6,
+                2293.4,
+                1313.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_5/region_2_text.png",
+            "text": "Fig. 3 Prediction of the ten most common mutated genes in liver cancer using our deep-learning model and histopathology images.\na comparison of the mutation and wild type in the distribution of the mutation probability in genes from tiles. b comparison of the mutation\nand wild type in the distribution of the mutation probability (Predicted P>0.5) in each slide. P values were estimated with the two-tailed\nMann-Whitney U-test (*P < 0.05; **P < 0.01; ***P < 0.001). For the two box plots, the middle line within the box represents the median; box\nlimits represent 95% upper and lower quartiles; and whiskers represent the minima and maxima.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.7,
+            "box": [
+                166.2,
+                1404.3,
+                1537.9,
+                1441.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_5/region_3_text.png",
+            "text": "Table 4. The performance of our models at mutation prediction in the external validation set.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "figure",
+            "score": 93.09,
+            "box": [
+                151.4,
+                1454.1,
+                2287.9,
+                2544.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_5/region_4_figure.png"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.7,
+            "box": [
+                150.0,
+                2588.3,
+                2293.4,
+                2665.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_5/region_5_text.png",
+            "text": "Fig. 4 Strategy of preparing tiles dataset. First, each WSI of liver tissue was selected from GDC-portal or SRRSH. Then, they were cropped\ninto lots of tiles. Finally, the tiles less than 80% area of surface with tissue were removed, and the remaining tiles were used for further analysis.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.8,
+            "box": [
+                150.4,
+                2768.5,
+                1183.9,
+                2885.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_5/region_6_text.png",
+            "text": "participants had provided written informed consent. Our study was\napproved by the SRRSH of Medicine Institutional Review Board\n(KY20181209-5).\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 99.14,
+            "box": [
+                149.3,
+                2939.1,
+                1182.1,
+                2979.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_5/region_7_title.png",
+            "text": "Technical detail on frozen slides in the external validation cohort\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.78,
+            "box": [
+                149.6,
+                2987.8,
+                1185.3,
+                3063.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_5/region_8_text.png",
+            "text": "The obtained specimens (e.g., liver tissues) were macroscopically examined,\nmeasured, sectioned through their longest axis, and then midsections were\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1258.2,
+                2770.0,
+                2292.3,
+                3045.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/NPJ 2020 Classification and mutation prediction based on/crops_ordered/page_5/region_9_text.png",
+            "text": "examined. The material was frozen at —28 °C, cut into 5-10 um thick sections,\nHematoxylin-Eosin (H&E) stained, and then analysed by pathologists with the\nlight microscope. There were 67 out of 70 patients diagnosed as HCC and the\nrelated frozen slide were collected. Notably, normal liver tissues cannot be\navailable in half of the obtained specimens, because normal liver tissues\nshould be at least 2cm away from tumors. Therefore, there were only 34\nWSls of normal liver tissues. In order to obtain digital pathology images, each\n"
+        }
+    ]
+}

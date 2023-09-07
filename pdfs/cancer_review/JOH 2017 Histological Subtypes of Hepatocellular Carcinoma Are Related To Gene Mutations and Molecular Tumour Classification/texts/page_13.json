@@ -1,0 +1,64 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_13.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_13.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 4,
+        "page_idx": 13
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 89.67,
+            "box": [
+                386.0,
+                217.8,
+                622.5,
+                282.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_13/region_1_title.png",
+            "text": "Discussion\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.06,
+            "box": [
+                386.5,
+                327.5,
+                2172.3,
+                603.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_13/region_2_text.png",
+            "text": "The present study revealed strong relationships linking molecular and pathological\nfeatures in HCC. Two distinct HCC phenotypes were delineated by the mutually exclusive\nCTNNB1 and TP53 mutations that define 57% of all tumours. Other more infrequent\nmolecular defects were also associated with rare pathological features such as\nTSC1/TSC2 mutations and the scirrhous subtype.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 95.85,
+            "box": [
+                389.3,
+                630.7,
+                2176.5,
+                1905.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_13/region_3_text.png",
+            "text": "CTNNB1 mutations activating {$-catenin are oncogenic driver mutations associated with\na specific HCC subtype consisting in well-differentiated tumours with cholestasis and\nmicrotrabecular and pseudoglandular patterns, as previously reported [31].\nInterestingly, our gene expression experiments provide additional insights, into the\nmolecular basis of the particular phenotype of CTNNB1 mutated tumours: their good\ndifferentiation is indeed associated with the maintenance of several markers of\nhepatocellular differentiation and function, while the dysregulation: of bile salt\ntransporters expression may account for their cholestatic appearance. Noticeably,\ndetection of malignant and benign CTNNB1 mutated hepatocellular tumours by the\nMagnetic Resonance Imaging contrast agent gadoxetic acid:has been demonstrated to\nrely on the overexpression of one of these transporters, SLCO1B3, which is responsible\nfor bile salt uptake from the blood flow [32, 33]. In the,present study, we identified an\ninverse correlation between intra-tumour inflammatory infiltrates and Wnt/f-catenin\npathway activation. In this line, CTNNB1 mutated HCC showed down-regulation of\nseveral components of the IL6/JAK/STAT pathway. In. contrast, activation of the Wnt/B-\ncatenin signaling pathway has been reported to induce, in the liver of modified mouse\nmodels, a specific inflammatory response with an increase of intra parenchymal\ninflammatory cells [34]. Discrepancies between human HCC and mouse models might\nindicate that {$-catenin activation could act as a pro- and anti-inflammatory signal in\nmice and human, respectively. Interestingly, anti-inflammatory effects were previously\nidentified in other human tumours such as melanoma in which Wnt/B-catenin pathway\nactivation is indeed responsible for T-cell exclusion from the _ intra-tumour\nmicroenvironment [35].\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 98.77,
+            "box": [
+                385.5,
+                1932.8,
+                2173.2,
+                2991.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_13/region_4_text.png",
+            "text": "TP53 mutations were mostly identified in poorly differentiated tumours with frequent\nvascular invasion and activation of cell proliferation, angiogenesis and epithelial-to-\nmesenchymal transition. TP53 inactivation was also noticeably linked to the novel\nmacrotrabecular massive HCC subtype (MTM-HCC), the relevance of which was further\nconfirmed by additional associations with clinical (HBV infection, early relapse and poor\nsurvival), pathological (satellite nodules and vascular invasion) and molecular (FGF19\namplifications) features. The histological appearance of this variant, consisting of thick\ntrabeculae surrounded by vascular spaces, was reminiscent to a particular architectural\npattern first described by Sugino and collaborators in a xenograft model of a mammary\ntumour cell line [36]. Consisting of endothelium-coated cell clusters, this pattern was\nfurther demonstrated to promote the in vivo metastatic potential of a mouse HCC cell\nline through the release of tumour clusters into the blood stream in an epithelial-to-\nmesenchymal transition independent manner.[37] Silencing the expression of ANGPT2\ngrowth factor by neoplastic cells was able to disrupt the formation of this particular\npattern and reduce both intrahepatic and pulmonary metastases [37]. ANGPT2 is known\nto promote neoangiogenesis and endothelial sprouting in cooperation with VEGFA [38],\nand consistently, we observed higher ANGPT2 mRNA levels in MTM-HCC, and an almost\nsignificant trend of increase for VEGFA. Our results may open novel therapeutic\nperspectives for this highly aggressive HCC subtype, as inhibitors of both ANGPT2 and\n"
+        }
+    ]
+}

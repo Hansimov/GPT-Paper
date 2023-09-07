@@ -1,0 +1,76 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 5,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.86,
+            "box": [
+                213.4,
+                229.7,
+                2268.3,
+                2046.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_07/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                212.8,
+                2112.4,
+                1215.9,
+                2458.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_07/region_2_text.png",
+            "text": "Fig.3 Model discrimination and survival prediction of DPS. Upper:\nthe calibrate curves for TTR (a) and RFS (b) prediction of DPS. ¢\nThe ROC curve for comparison between DPS and traditional predic-\ntive staging systems based on TTR. Middle: the time-dependent ROC\ncurve for RFS (d) and Kaplan—Meier survival curves for RFS (e)\nand TTR (f) in the training cohort. Down: the time-dependent ROC\ncurves for RFS (g) and Kaplan—Meier survival curves for RFS (h)\nand TTR (i) in the validation cohort. DPS deep pathomics score, TTR\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                213.2,
+                2523.8,
+                1216.9,
+                3003.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_07/region_3_text.png",
+            "text": "1.006-1.821) and DPS (HR 4.795, 95% CI 3.017-7.619)\nwere significant indicators.\n\nTo compare with the clinical features, significant predic-\ntors in the univariate analysis were incorporated into DPS\nusing Cox proportional hazards analysis (Fig. $4). The\nC-indices of clinical features, DPS, and DPS plus clinical\nfeatures were 0.732, 0.816 and 0.849, respectively. DPS\nshowed great compatibility with clinical risk factors in post-\nLT recurrence prediction.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1276.2,
+                2112.5,
+                2277.9,
+                2414.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_07/region_4_text.png",
+            "text": "time to recurrence, RFS recurrence-free survival, ROC receiver oper-\nating characteristic, AUC area under curve, RETREAT Risk Estima-\ntion of Tumor Recurrence After Transplant, BCLC Barcelona Clinic\nLiver Cancer, UCSF University of California San Francisco, ERASL\nEarly Recurrence After Surgery for Liver tumor, TNVM American\nJoint Committee on Cancer Tumor Node Metastasis, LT liver trans-\nplantation\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1276.4,
+                2524.6,
+                2280.1,
+                3003.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation/crops_ordered/page_07/region_5_text.png",
+            "text": "The forest plots depicted the prognostic risk in different\nsubgroups. Strikingly, DPS remained an effective predic-\ntor for both recurrence risk (Fig. 4) and RFS (Fig. S5), in\nline with the different clinicopathological characteristics.\nCompared to patients in the low-risk group, more patients\nin the high-risk subgroup had an AFP level over 400 ng/\nmL (28.17% vs. 15.97%). Moreover, HCCs in the high-\nrisk group were characterized by a larger tumor diameter\n(p =0.002) and a lower proportion of clear tumor border\n"
+        }
+    ]
+}

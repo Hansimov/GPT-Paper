@@ -1,0 +1,126 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages/page_09.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/pages_ordered/page_09.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 9,
+        "page_idx": 9
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 98.91,
+            "box": [
+                213.2,
+                232.9,
+                1074.8,
+                286.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_09/region_1_text.png",
+            "text": "Table 3 The time-dependent AUC values (95% CI) in LT set\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 98.51,
+            "box": [
+                214.3,
+                296.4,
+                2270.5,
+                692.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_09/region_2_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 97.8,
+            "box": [
+                214.1,
+                714.1,
+                2275.4,
+                803.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_09/region_3_text.png",
+            "text": "Stage AJCC the American Joint Committee on Cancer, AFP serum alpha-fetoprotein, Tumor_No tumor number, Total_diameter total diameter of\nthe tumor\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 98.77,
+            "box": [
+                213.2,
+                824.1,
+                2141.3,
+                875.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_09/region_4_text.png",
+            "text": "Table 4 The time-dependent NRI of patients according to different factors compared with the Stage_AJCC (NRI with 95% CI) in LT set\n"
+        },
+        {
+            "idx": 5,
+            "thing": "table",
+            "score": 98.99,
+            "box": [
+                214.0,
+                887.0,
+                2268.5,
+                1280.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_09/region_5_table.png"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 96.94,
+            "box": [
+                213.9,
+                1302.5,
+                2276.3,
+                1393.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_09/region_6_text.png",
+            "text": "Stage AJCC the American Joint Committee on Cancer, AFP serum alpha-fetoprotein, Tumor_No tumor number, Total_diameter total diameter of\nthe tumor\n"
+        },
+        {
+            "idx": 7,
+            "thing": "figure",
+            "score": 99.38,
+            "box": [
+                211.7,
+                1437.5,
+                2267.6,
+                2830.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_09/region_7_figure.png"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                212.8,
+                2905.8,
+                1216.6,
+                3039.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_09/region_8_text.png",
+            "text": "Fig.4 Prognosis of MobileNetV2_HCC_Class in TCGA set and the\nstratification of common baseline variables. MobileNetV2_HCC_\nClass predicts RFS while also following the stratification of other\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.64,
+            "box": [
+                1275.9,
+                2905.0,
+                2274.7,
+                3037.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for prediction of hepatocellular carcinoma recurrence after resection or liver transplanatation/crops_ordered/page_09/region_9_text.png",
+            "text": "common baseline variables. Stage AJCC: the American Joint Com-\nmittee on Cancer, AFP: serum alpha-fetoprotein, VI: vascular inva-\nsion\n"
+        }
+    ]
+}

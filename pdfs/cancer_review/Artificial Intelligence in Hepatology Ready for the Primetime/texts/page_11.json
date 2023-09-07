@@ -1,0 +1,220 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages/page_11.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/pages_ordered/page_11.png",
+        "image_width": 2481,
+        "image_height": 3308,
+        "regions_num": 16,
+        "page_idx": 11
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                200.4,
+                345.2,
+                1205.0,
+                1487.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_01_text.png",
+            "text": "knowledge gained from sequencing the human genome.\nThe field has evolved to recognize how the intersection of\nmulti-omic data combined with medical history, social/behav-\nioural determinants, and environmental knowledge pre-\ncisely characterizes health states, disease states, and\ntherapeutic options for affected individuals. The synergy\nof Al and precision medicine has augmented the yield of highly\npersonalized medical diagnostic and therapeutic informa-\ntion. The ultimate goal of this combination is the preven-\ntion and early detection of diseases affecting the\nindividual, which could ultimately decrease the disease\nburden for the public at large, and, therefore, the cost of pre-\nventable health care for all. Genotype-guided treatment of\nHCC is an example of precision medicine. The genetic charac-\nterization of HCC is not well established like other malig-\nnancies due to a lack of genomic studies. However, ‘big\ngenomic data’ and AI analysis will help identify patients\nwith CLD who are at high risk for fibrosis or HCC. Patients\nwith advanced HCC are presently treated with newer agents\nsuch as molecular targeted therapy or immunotherapy.\nHowever, the group of patients who will respond to the\ndrugs is not known. If AI can predict this treatment\nresponse, precision medicine can become a reality soon.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                200.8,
+                1492.0,
+                1204.6,
+                2633.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_02_text.png",
+            "text": "Healthcare systems in developing countries like India\nhave a lot of challenges, especially in the rural areas. AI\nhelps in addressing these issues by assisting the doctors\nin better and quick diagnosis, delivering personalized\nhealthcare, providing high-quality healthcare to rural\nareas, and helping doctors and nurses in training to handle\ncomplex medical conditions. AI can help monitor a pa-\ntient’s condition having chronic ailments with the help\nofa smartphone. ~ Using clinical, genetic, molecular infor-\nmation from large datasets, AI can be helpful to find new\ntherapeutic targets. Apart from the extensive number of\nAI applications being made, a lot of unmet needs are\nwork on alcohol related liver injury, metabolic and autoim-\nmune liver diseases. Hence there is a lot of scope for tech-\nnical growth in the AI sub-speciality, paving the way to\nimprove the accuracy of the AI tools. AI systems for liver\nsegmentation and diagnosis should be widely available\nwithin the next 5 years, which will help in liver lesion char-\nacterization and aid in liver transplantation. Working in\nisolation from AI and data scientists will be a hindrance\nto the growth of clinical medicine. Hence, the adoption\nof coordinated research opportunities will facilitate the\ndevelopment of many clinically useful tools.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 92.68,
+            "box": [
+                261.4,
+                2702.5,
+                539.6,
+                2758.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_03_title.png",
+            "text": "KEY POINTS\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.7,
+            "box": [
+                260.9,
+                2784.5,
+                1145.9,
+                3030.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_04_text.png",
+            "text": "The future of AI is promising with the introduction\nof precision and personalized medicine, mainly\ninvolving data from the human genome. Overall\nhealthcare services will improve especially in rural\nareas of developing and underdeveloped countries.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 98.26,
+            "box": [
+                1277.2,
+                341.3,
+                1518.4,
+                395.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_05_title.png",
+            "text": "SUMMARY\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1277.1,
+                413.7,
+                2282.2,
+                1808.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_06_text.png",
+            "text": "AI is an upcoming promising technology that is rapidly\nbecoming an essential part of patient management. Appli-\ncations of AI have expanded in all branches of medicines,\nespecially endoscopy and hepatology. The conglomeration\nof data which can be clinical/laboratory, multi-omics, natural\nlanguage processing (NLP) and Image recognition (both\nradiology-based and pathology-based) has contributed to the\nprediction of fibrosis, classification of liver masses and pre-\ndiction of treatment response and transplant outcomes. ’®\nIn this review the majority of studies mentioned focussed\non diagnosis part. There are very few studies that help to\npredict treatment response, post-liver transplant response,\nand prediction of hepatotoxicity in newer drug develop-\nment and more studies are needed. AI also helps for real-\ntime biomonitoring, by identification of patients at high\nrisk of clinical decompensation and hospital admission,\nso that timely intervention can be done for high-risk pa-\ntients. With the increasing advancement of image capture\nand storage, AI will bring striking changes to the diagnosis\nof various liver diseases with the ‘big data’ being available.\nHowever, there are many hurdles to overcome, which re-\nsearchers will do in the near future using validation studies\nand molecular research. It is expected that gastroenter-\nology and hepatology will be one of the first areas in med-\nicine to introduce AI tools on a wide-scale basis, due to its\ninherent reliance on endoscopic and radiological imaging.\nHence, GI and liver specialists should be proud that our\nfield sets the ground for AI development in medicine.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "title",
+            "score": 99.7,
+            "box": [
+                1277.5,
+                1862.6,
+                2134.5,
+                1972.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_07_title.png",
+            "text": "CREDIT AUTHORSHIP CONTRIBUTION\nSTATEMENT\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                1278.0,
+                1990.8,
+                2281.7,
+                2236.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_08_text.png",
+            "text": "Both the authors have drafted the manuscript and re-\nviewed the relevant databases for literature relevant to\nthis review. HR and RK conceptualized and prepared the\nmanuscript. HR designed the images. DNR critically re-\nviewed and edited the article.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "title",
+            "score": 98.01,
+            "box": [
+                1276.9,
+                2292.0,
+                1853.6,
+                2348.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_09_title.png",
+            "text": "CONFLICTS OF INTEREST\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 98.57,
+            "box": [
+                1276.8,
+                2366.7,
+                1850.1,
+                2413.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_10_text.png",
+            "text": "All authors have none to declare.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 87.06,
+            "box": [
+                1277.1,
+                2468.5,
+                1487.6,
+                2524.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_11_title.png",
+            "text": "FUNDING\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 96.09,
+            "box": [
+                1277.9,
+                2542.8,
+                1382.3,
+                2588.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_12_text.png",
+            "text": "None.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "title",
+            "score": 97.86,
+            "box": [
+                1277.9,
+                2627.5,
+                1827.7,
+                2683.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_13_title.png",
+            "text": "ETHICAL REQUIREMENT\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.36,
+            "box": [
+                1277.3,
+                2702.2,
+                2280.4,
+                2798.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_14_text.png",
+            "text": "This review article does not have any studies with human\nor animal subjects.\n"
+        },
+        {
+            "idx": 15,
+            "thing": "title",
+            "score": 80.36,
+            "box": [
+                1279.0,
+                2841.2,
+                1530.1,
+                2886.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_15_title.png",
+            "text": "REFERENCES\n"
+        },
+        {
+            "idx": 16,
+            "thing": "list",
+            "score": 44.76,
+            "box": [
+                1296.6,
+                2915.8,
+                2282.0,
+                3076.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Artificial Intelligence in Hepatology Ready for the Primetime/crops_ordered/page_11/region_16_list.png",
+            "text": "1. Chahal D, Byrne MF. A primer on artificial intelligence and its appli-\ncation to endoscopy. Gastrointest Endosc. 2020;92:813-820. e4.\n\n2. Topol EJ. High-performance medicine: the convergence of human\nand artificial intelligence. Nat Med. 2019;25:44—-56.\n"
+        }
+    ]
+}

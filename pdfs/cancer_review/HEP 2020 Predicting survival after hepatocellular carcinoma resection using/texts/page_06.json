@@ -1,0 +1,51 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_06.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 3,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 56.55,
+            "box": [
+                244.5,
+                263.5,
+                2248.0,
+                2694.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_06/region_1_text.png",
+            "text": "during a previous study that predicts overall survival from WSls without the need for local\nannotation.(12) It can automatically identify very localized survival-related patterns on slides, and\ncalculates a risk score for each WSI analyzed in three successive steps: a preprocessing step, a\ntile-scoring step, and a prediction step.\n\nThe WSI is first divided into small squares, 112 x 112 micrometers in size (224 pixels x 224\npixels), called \"tiles\", and features are extracted from these tiles with a pretrained convolutional\nneural network (preprocessing step) (Figure 2A).\n\nDuring model development, the tiles are then fed into the network architecture along with survival\ndata, and a risk score is assigned to each tile through an iterative learning process. Finally, the\nnetwork selects a small number of tiles with the highest and lowest survival scores for the\nprediction of patient survival (Figure 2B). The architecture of CHOWDER was designed to\nretrieve the most predictive tiles from the thousands processed for further analysis by\npathologists.\n\nSCHMOWDER is a two-branch neural network combining an unsupervised component and a\nsupervised attention mechanism (Figure 2C). The preprocessing step is identical to that of\nCHOWDER. Annotations provided by the pathologist are then used to train the upper branch to\nidentify tiles as tumoral or non-tumoral. By assigning a tumor score to each tile and applying an\nattention mechanism to these scores, the upper branch generates a representation of tiles with a\nhigh probability of being tumoral. The lower branch is weakly supervised and generates a\nrepresentation of only a small number of tiles, the most predictive of survival. Representations\nfrom the two branches are merged to generate a survival risk as output.\n\nThis “expert-driven” approach, using annotations during training, thus combines two views of the\nWSI to improve the prediction of survival: a supervised approach focusing on tumoral areas, and\na weakly supervised approach not dependent on prior knowledge. The lower branch focuses on\nvery localized areas of the WSI, whereas the upper branch gathers information from broader\nareas (all tiles located in tumoral regions). We believe that this approach enables the model to\ncapture survival-related information from both tumoral and non-tumoral tissues. Local annotations\nare needed during training, but not for inference; so, once trained, SCHMOWDER can be used\non slides for which no annotations are available (such as those of the TCGA dataset).\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 53.63,
+            "box": [
+                247.6,
+                2786.0,
+                1397.3,
+                2854.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_06/region_2_title.png",
+            "text": "Histological analysis of tiles of high predictive value\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 41.16,
+            "box": [
+                247.3,
+                3294.0,
+                1399.5,
+                3360.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_06/region_3_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

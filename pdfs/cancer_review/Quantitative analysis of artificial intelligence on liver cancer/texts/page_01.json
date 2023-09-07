@@ -1,0 +1,194 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/pages_ordered/page_01.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 14,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 67.83,
+            "box": [
+                177.3,
+                702.5,
+                375.4,
+                745.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_01_text.png",
+            "text": "OPEN ACCESS\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 90.06,
+            "box": [
+                177.9,
+                772.8,
+                601.1,
+                918.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_02_text.png",
+            "text": "EDITED BY\n\nStefania Rizzo,\n\nUniversity of Italian Switzerland,\nSwitzerland\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 93.07,
+            "box": [
+                177.7,
+                940.6,
+                670.2,
+                1204.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_03_text.png",
+            "text": "REVIEWED BY\n\nOsvaldo Gervasi,\n\nUniversity of Perugia, Italy\n\nXiao-Wan Bo,\n\nTongji University, China\n\nJing Gao,\n\nShanghai Jiao Tong University, China\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 86.99,
+            "box": [
+                177.7,
+                1228.1,
+                571.1,
+                1509.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_04_text.png",
+            "text": "*CORRESPONDENCE\nLi Liu\nlily_liu@tmmu.edu.cn\nXiaofei Hu\nharryzonetmmu@163.com\nYi Wu\nwuy1979@tmmu.edu.cn\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 97.4,
+            "box": [
+                177.7,
+                1543.4,
+                566.3,
+                1763.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_05_text.png",
+            "text": "SPECIALTY SECTION\n\nThis article was submitted to\nCancer Imaging and\nImage-directed Interventions,\na section of the journal\nFrontiers in Oncology\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 12.0,
+            "box": [
+                178.0,
+                1963.5,
+                744.4,
+                2189.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_06_text.png",
+            "text": "Xiong M, Xu Y, Zhao Y, He S, Zhu Q, Wu Y,\nHu X and Liu L (2023) Quantitative analysis\nof artificial intelligence on liver cancer:\n\nA bibliometric analysis.\n\nFront. Oncol. 13:990306.\n\ndoi: 10.3389/fonc.2023.990306\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 55.57,
+            "box": [
+                178.3,
+                2243.2,
+                751.0,
+                2698.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_07_text.png",
+            "text": "© 2023 Xiong, Xu, Zhao, He, Zhu, Wu, Hu\nand Liu. This is an open-access article\ndistributed under the terms of the Creative\nCommons Attribution License (CC BY). The\nuse, distribution or reproduction in other\nforums is permitted, provided the original\nauthor(s) and the copyright owner(s) are\ncredited and that the original publication in\nthis journal is cited, in accordance with\naccepted academic practice. No use,\ndistribution or reproduction is permitted\nwhich does not comply with these terms.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "title",
+            "score": 99.55,
+            "box": [
+                926.4,
+                542.2,
+                2216.2,
+                858.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_08_title.png",
+            "text": "Quantitative analysis of artificial\nintelligence on liver cancer: A\nbibliometric analysis\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 95.73,
+            "box": [
+                927.7,
+                930.0,
+                2306.4,
+                1045.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_09_text.png",
+            "text": "Ming Xiong’, Yaona Xu*, Yang Zhao’, Si He*, Gihan Zhu’, Yi Wu%,\nXiaofei Hu* and Li Liu*™\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 90.58,
+            "box": [
+                926.3,
+                1079.0,
+                2287.9,
+                1269.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_10_text.png",
+            "text": "‘Department of Digital Medicine, School of Biomedical Engineering and Medical Imaging, Third Military\nMedical University (Army Medical University), Chongqing, China, 7Department of Nuclear Medicine,\nSouthwest Hospital, Third Military Medical University (Army Medical University), Chongqing, China,\n5Department of Ultrasound, Southwest Hospital, Third Military Medical University (Army Medical\nUniversity), Chongqing, China\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                926.2,
+                1463.3,
+                2314.3,
+                1664.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_11_text.png",
+            "text": "Objective: To provide the current research progress, hotspots, and emerging\ntrends for Al in liver cancer, we have compiled a relative comprehensive and\nquantitative report on the research of liver disease using artificial intelligence by\nemploying bibliometrics in this study.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                925.0,
+                1716.0,
+                2314.8,
+                2178.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_12_text.png",
+            "text": "Methods: In this study, the Web of Science Core Collection (WoSCC) database was\nused to perform systematic searches using keywords and a manual screening\nstrategy, VOSviewer was used to analyze the degree of cooperation between\ncountries/regions and institutions, as well as the co-occurrence of cooperation\nbetween authors and cited authors. Citespace was applied to generate a dual map\nto analyze the relationship of citing journals and citied journals and conduct a\nstrong citation bursts ranking analysis of references. Online SRplot was used for in-\ndepth keyword analysis and Microsoft Excel 2019 was used to collect the targeted\nvariables from retrieved articles.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                925.7,
+                2227.7,
+                2313.0,
+                3005.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_13_text.png",
+            "text": "Results: 1724 papers were collected in this study, including 1547 original articles\nand 177 reviews. The study of Al in liver cancer mostly began from 2003 and has\ndeveloped rapidly from 2017. China has the largest number of publications, and the\nUnited States has the highest H-index and total citation counts. The top three most\nproductive institutions are the League of European Research Universities, Sun Yat\nSen University, and Zhejiang University. Jasjit S. Suri and Frontiers in Oncology are\nthe most published author and journal, respectively. Keyword analysis showed that\nin addition to the research on liver cancer, research on liver cirrhosis, fatty liver\ndisease, and liver fibrosis were also common. Computed tomography was the\nmost used diagnostic tool, followed by ultrasound and magnetic resonance\nimaging. The diagnosis and differential diagnosis of liver cancer are currently the\nmost widely adopted research goals, and comprehensive analyses of multi-type\ndata and postoperative analysis of patients with advanced liver cancer are rare. The\nuse of convolutional neural networks is the main technical method used in studies\nof Al on liver cancer.\n"
+        },
+        {
+            "idx": 14,
+            "thing": "text",
+            "score": 99.92,
+            "box": [
+                926.6,
+                3055.5,
+                2314.2,
+                3206.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Quantitative analysis of artificial intelligence on liver cancer/crops_ordered/page_01/region_14_text.png",
+            "text": "Conclusion: Al has undergone rapid development and has a wide application in the\ndiagnosis and treatment of liver diseases, especially in China. Imaging is an\nindispensable tool in this filed. Mmulti-type data fusion analysis and\n"
+        }
+    ]
+}

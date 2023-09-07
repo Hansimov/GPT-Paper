@@ -1,0 +1,25 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages/page_26.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/pages_ordered/page_26.png",
+        "image_width": 2481,
+        "image_height": 3507,
+        "regions_num": 1,
+        "page_idx": 26
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "list",
+            "score": 94.32,
+            "box": [
+                299.2,
+                296.8,
+                2198.4,
+                3060.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in histopathology the path to the clinics/crops_ordered/page_26/region_1_list.png",
+            "text": "[130] \"Ethics guidelines for trustworthy Al,\" https://ec.europa.eu/digital-single-\nmarket/en/news/ethics-guidelines-trustworthy-ai (2019).\n\n[131] Panch, T., Mattie, H. & Atun, R. Artificial intelligence and algorithmic bias: implications for\nhealth systems. Journal of global health 9, 010318 (2019).\n\n[132] Allen, T. C. Regulating Artificial Intelligence for a Successful Pathology Future. Archives of\npathology & laboratory medicine 143, 1175-1179 (2019).\n\n[133] Veta, M. et al. Assessment of algorithms for mitosis detection in breast cancer histopathology\nimages. Medical image analysis 20, 237-248 (2015).\n\n[134] Shelhamer, E., Long, J. & Darrell, T. Fully Convolutional Networks for Semantic Segmentation.\nIEEE Trans. Pattern Anal. Mach. Intell. 39, 640-651 (2017).\n\n[135] Krizhevsky, A., Sutskever, |. & Hinton, G. E. ImageNet classification with deep convolutional\nneural networks. Advances in Neural Information Processing Systems (2012).\n\n[136] Khosravi, P., Kazemi, E., Imielinski, M., Elemento, O. & Hajirasouliha, |. Deep Convolutional\nNeural Networks Enable Discrimination of Heterogeneous Digital Pathology Images. EBioMedicine 27,\n317-328 (2018).\n\n[137] Hu, B. et al. Unsupervised Learning for Cell-Level Visual Representation in Histopathology\nImages With Generative Adversarial Networks. /EEE J. Biomed. Health Informatics 23, 1316-1328,\n(2019).\n\n[138] Bejnordi, B. et al. Using deep convolutional neural networks to identify and classify tumor-\nassociated stroma in diagnostic breast biopsies. Modern pathology 31, 1502-1512 (2018).\n\n[139] Doyle, S., Feldman, M. D., Shih, N., Tomaszewski, J. & Madabhushi, A. Cascaded discrimination\nof normal, abnormal, and confounder classes in histopathology: Gleason grading of prostate cancer.\nBMC bioinformatics 13, 10 (2012).\n\n[140] Chuang, W. Y. et al. Successful Identification of Nasopharyngeal Carcinoma in Nasopharyngeal\nBiopsies Using Deep Learning. Cancers 12, 2 (2020).\n\n[141] Choi, G. et al. Automated detection algorithm for C4d immunostaining showed comparable\ndiagnostic performance to pathologists in renal allograft biopsy. Modern pathology 33, 1626-1634\n(2020).\n\n[142] Chen, C. M. et al. A computer-aided diagnosis system for differentiation and delineation of\nmalignant regions on whole-slide prostate histopathology image using spatial statistics and\nmultidimensional DenseNet. Medical physics 47, 1021-1033 (2020).\n\n[143] Bejnordi, B. E. et al. Context-aware stacked convolutional neural networks for classification of\nbreast carcinomas in whole-slide histopathology images. Journal of medical imaging 4, 044504 (2017).\n"
+        }
+    ]
+}

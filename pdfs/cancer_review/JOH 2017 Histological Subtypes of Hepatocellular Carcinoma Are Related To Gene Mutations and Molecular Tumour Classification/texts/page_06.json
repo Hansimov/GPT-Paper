@@ -1,0 +1,129 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages/page_06.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/pages_ordered/page_06.png",
+        "image_width": 2550,
+        "image_height": 3300,
+        "regions_num": 9,
+        "page_idx": 6
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 63.74,
+            "box": [
+                386.0,
+                220.1,
+                863.7,
+                282.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_06/region_1_title.png",
+            "text": "Material and methods\n"
+        },
+        {
+            "idx": 2,
+            "thing": "title",
+            "score": 85.82,
+            "box": [
+                385.6,
+                383.6,
+                841.5,
+                446.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_06/region_2_title.png",
+            "text": "Patients and samples\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 94.95,
+            "box": [
+                385.4,
+                472.4,
+                2189.7,
+                969.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_06/region_3_text.png",
+            "text": "A total of 343 unselected HCC developed in 339 patients treated by surgical resection in\n2 French university hospitals (Henri Mondor, Créteil and Pellegrin, Bordeaux) were\nincluded in the study (\"InsermU1162 Cohort\") (the overall study design and flow chart\nis provided in the supplemental material and methods). Tumour and non-tumour liver\nsamples were frozen immediately after surgery and stored at -80°C. All patients were\ntreatment naive before surgery and informed consent was obtained in all cases. The\nstudy was approved by institutional review board committees (CCPRB Paris Saint Louis,\n1997, 2004, 2010 and 2016, approval number 2016/57NICB; Bordeaux 2010-A00498-\n31).\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 92.8,
+            "box": [
+                384.6,
+                965.0,
+                2174.9,
+                1299.6
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_06/region_4_text.png",
+            "text": "The following clinical and biological features were systematically recorded: age\n(recoded as >60 or <60 years), gender, liver disease etiology (infection,by HBV or HCV,\nalcohol intake, metabolic syndrome, hereditary hemochromatosis or undetermined),\nBarcelona Clinic of Liver Cancer (BCLC) stage, pre-operative alpha-foeto protein (AFP)\nserum levels (recoded as >100ng/ml or <100ng/ml) and follow-up (early relapse and\ndisease-specific survival).\n"
+        },
+        {
+            "idx": 5,
+            "thing": "title",
+            "score": 81.92,
+            "box": [
+                386.1,
+                1370.2,
+                934.0,
+                1434.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_06/region_5_title.png",
+            "text": "Pathological examination\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 89.85,
+            "box": [
+                384.6,
+                1462.2,
+                2174.1,
+                1797.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_06/region_6_text.png",
+            "text": "For each case, all available histological slides.were reviewed by 2 expert pathologists (JC\nand PBS) specialized in liver disease and blinded to the clinical and molecular\ncharacteristics. A training set of 60 tumours was first used to determine the reviewing\nand quotation method (Supplemental Table 1), then all features were recorded by the\ntwo pathologists during common review sessions. Cases with disagreement were\ndiscussed and a consensus was reached.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 94.66,
+            "box": [
+                387.6,
+                1825.1,
+                2174.9,
+                2380.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_06/region_7_text.png",
+            "text": "The following histological features were systematically assessed: tumour differentiation\n(according to Edmondson-Steiner grade), satellite nodules, macrovascular or\nmicrovascular invasion), tumour capsule, microtrabecular, macrotrabecular,\npseudoglandular or compact pattern, pleomorphic cells, cholestasis, multinucleated\ncells, clear cells, sarcomatous changes, hyaline bodies, inflammatory infiltrates,\nsteatohepatitic, scirrhous, lymphoepithelioma-like, and sarcomatoid subtypes\n(Supplemental Table 1) [5, 7, 21, 22]. To reflect the co-existence of several histological\nfeatures within the same tumour, architectural patterns and cytological variants\nidentified in at least 20% of the tumour were considered present (Supplemental Table\n1).\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 93.18,
+            "box": [
+                379.2,
+                2375.8,
+                2173.7,
+                2875.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_06/region_8_text.png",
+            "text": "During the review of the training set of tumors, we observed cases with a striking\npredominant macrotrabecular architecture involving more than 50% of the tumor. Their\nmicroscopic appearance indeed mainly consisted of neoplastic cells arranged in thick\ntrabeculae coated by endothelial cells and surrounded by dilated vascular spaces.\nTrabeculae observed in cross sections also appeared as endothelium-coated tumor\nclusters. A link between the macrotrabecular architecture and poor clinical outcome has\nbeen previously suggested [23], and we further aimed to assess if those cases may\nconstitute a novel HCC subtype. This novel candidate subtype was further designated as\n“macrotrabecular-massive HCC” (MTM-HCC).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 98.13,
+            "box": [
+                388.4,
+                2873.4,
+                2173.1,
+                2985.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2017 Histological Subtypes of Hepatocellular Carcinoma Are Related To Gene Mutations and Molecular Tumour Classification/crops_ordered/page_06/region_9_text.png",
+            "text": "Validation of the relevance of this subtype was further performed using the public\ndatabase from The Cancer Genome Atlas (TCGA) Research Network, which consists in a\n"
+        }
+    ]
+}

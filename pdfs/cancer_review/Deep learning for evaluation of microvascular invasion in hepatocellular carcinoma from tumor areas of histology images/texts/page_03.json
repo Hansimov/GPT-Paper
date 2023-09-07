@@ -1,0 +1,181 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages_ordered/page_03.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 13,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                213.3,
+                229.6,
+                1216.4,
+                1015.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_01_text.png",
+            "text": "analysis of this information in tumor tissue has the potential\nto help diagnose MVI without sampling from the peri-tumor\nregion. However, quantitative evaluation of this information\nis challenging with the naked eyes of pathologists. Deep\nlearning could automatically extract imaging features which\nare invisible to human observers and potentially provide\nimportant clinical, biological and molecular-morphologic\ninformation [14]. Previous studies on deep-learning models\nin other tumors also indicated the possibility of predicting\nfeatures outside the tumor (such as lymph node metastasis)\nby evaluating information from tumor areas only [15, 16].\nTherefore, constructing a deep-learning model based on the\nimaging information of tumor areas might have the potential\nto evaluate MVI status effectively and assist with the clinical\nmanagement of HCC patients.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                212.7,
+                1011.5,
+                1216.0,
+                1276.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_02_text.png",
+            "text": "In this study, we developed MVI deep-learning (MVI-\nDL) prediction model in multicenter HCC cohorts, by learn-\ning the characteristic information from the tumor areas of\nhistological WSIs, to automatically and accurately evaluate\nthe MVI status.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 99.38,
+            "box": [
+                213.7,
+                1368.0,
+                724.1,
+                1429.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_03_title.png",
+            "text": "Materials and methods\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.36,
+            "box": [
+                212.3,
+                1476.7,
+                917.5,
+                1532.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_04_title.png",
+            "text": "Patient cohorts and data preparation\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                212.4,
+                1585.3,
+                1217.2,
+                1848.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_05_text.png",
+            "text": "This study protocol conforms to the ethical guidelines of the\n1975 Declaration of Helsinki as reflected in a priori approval\nby the institution's Human Research Committee. Informed\nconsent was waived since this was a retrospective cohort\nstudy.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                213.2,
+                1845.8,
+                1216.1,
+                2993.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_06_text.png",
+            "text": "We retrospectively collected 368 patients from the First\nAffiliated Hospital of Sun Yat-sen University (FAHSYSU)\nand 120 patients from the Dongguan People’s Hospital\nand Shunde Hospital of Southern Medical University (DG-\nSD) who underwent curative hepatectomy from January\n2016 to December 2018. All these patients were patho-\nlogically diagnosed with HCC, and all hematoxylin and\neosin histological slides were collected to train and vali-\ndate the MVI prediction model. Slides with poor stain-\ning quality or images with artifacts after scanning were\nexcluded. Finally, a total of 2917 WSIs of 350 patients\nfrom FAHSYSU were included and were randomly divided\ninto a training set and an independent test set. A total of\n504 WSIs of 120 HCC patients from DG-SD formed an\nexternal test set (Fig. 1a). In order to ensure the high-qual-\nity ground truth labels of the data used for model develop-\nment and validation, all the resected HCC specimens from\nthe FAHSYSU and DG-SD cohorts had surgical margins\nover 2 cm, and sufficient postoperative sampling tissues\nwere obtained for MVI evaluation. According to our pre-\nvious large retrospective study, a threshold of four, six,\neight and eight sampling tissues within peri-tumor liver\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                1276.2,
+                230.0,
+                2279.4,
+                546.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_07_text.png",
+            "text": "parenchyma were required for evaluating MVI in solitary\ntumors measuring 1.0-3.0 cm, 3.1-4.9 cm and>5.0 cm\nand multiple tumors [8]. Additionally, the histological\ndiagnosis of MVI for each slide was prospectively evalu-\nated based on the consensus of three pathologists with over\n5 years of experience in liver pathology.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.94,
+            "box": [
+                1276.2,
+                543.3,
+                2279.4,
+                1015.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_08_text.png",
+            "text": "Additionally, a total of 376 WSIs from 376 HCC patients\nwere obtained from the TCGA database via the Genomic\nData Commons (https://gdc.cancer.gov/). Information on\nrecurrence-free survival (RES) and overall survival (OS) was\ncollected from these patients. Patients without survival data\nor slides with poor image quality were excluded and finally\n304 WSIs of 304 HCC patients were included to evaluate the\ncorrelation of predicted MVI results by the MVI-DL model\nwith patients’ survival outcomes (Fig. 1a).\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1275.2,
+                1012.1,
+                2279.8,
+                1693.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_09_text.png",
+            "text": "All WSIs were scanned at 40 x magnification by a KF-\nPRO-020 type of scanning machine (KFBIO, Ningbo,\nChina) and were stored in SVS file format. A pathologist\nwith over | year of working experience in liver pathology\nperformed the image quality control to screen out poorly\nstained slides or had obvious artifacts. To prevent overlaps\nbetween datasets, the WSIs from a given patient were kept\ntogether in the same set. To extract the information under\ndifferent magnifications, we divided the WSIs into nono-\nverlapping 512 x 512 pixel patches at magnifications of 5x,\n10x, 20xXand 40x, respectively. Patches with over 50%\nof background coverage were excluded (Supplementary\nMethods).\n"
+        },
+        {
+            "idx": 10,
+            "thing": "title",
+            "score": 99.21,
+            "box": [
+                1274.9,
+                1790.2,
+                1935.5,
+                1845.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_10_title.png",
+            "text": "Development of the MVI-DL model\n"
+        },
+        {
+            "idx": 11,
+            "thing": "title",
+            "score": 98.78,
+            "box": [
+                1274.6,
+                1898.6,
+                2018.7,
+                1949.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_11_title.png",
+            "text": "Image sampling and magnification selection\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1275.8,
+                2002.2,
+                2279.2,
+                2577.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_12_text.png",
+            "text": "To clarify the contribution of different tissue areas in the\nWSI to the prediction of MVI, and to further confirm the\nsampling strategy for model training, we compared the per-\nformances of models developed based on different tissue\nareas. We first trained a segmentation network, details in\nSupplementary Methods. We then applied the segmenta-\ntion model to all other WSIs in the FAHSYSU and DG-SD\ncohorts for automatic segmentation. Prediction models were\nconstructed based on tumor area, peri-tumor area and the\nwhole WSI, respectively, to compare models’ performance\nwith different sampling strategies.\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1276.3,
+                2574.1,
+                2279.0,
+                2994.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_03/region_13_text.png",
+            "text": "To further determine the optimal number of sampling\npatches under different magnifications for the prediction\nmodel, we performed sensitivity analyses of the number of\nsampling patches under different magnifications. We also\ncompared the performances of the models under different\nmagnifications with the ensemble model integrating differ-\nent magnifications to determine the network structure of the\nfinal prediction model (MVI-DL model).\n"
+        }
+    ]
+}

@@ -1,0 +1,181 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/pages_ordered/page_07.png",
+        "image_width": 2481,
+        "image_height": 3260,
+        "regions_num": 13,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.08,
+            "box": [
+                189.1,
+                193.2,
+                1210.7,
+                353.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_01_text.png",
+            "text": "layer (after the last average pooling layer) for tiles and for\ncases. For cases, the median of tile based coordinates were\nused.!8\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 97.58,
+            "box": [
+                189.7,
+                356.1,
+                1208.1,
+                460.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_02_text.png",
+            "text": "All our codes are available at https://doi.org/10.11588/\ndata/YAZWJW.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "title",
+            "score": 96.07,
+            "box": [
+                189.2,
+                565.5,
+                542.5,
+                624.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_03_title.png",
+            "text": "3 | RESULTS\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.66,
+            "box": [
+                189.8,
+                670.0,
+                986.4,
+                787.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_04_title.png",
+            "text": "3.1 | Training, optimization and\nvalidation of different models\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                188.9,
+                842.4,
+                1210.8,
+                1594.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_05_text.png",
+            "text": "The tissue sections were lege artis separated into a train-\ning cohort (60%), a validation cohort (20%), and a final test\ncohort (20%). This resulted in a total of 116.728 image tiles\nfor training, 44.372 for validation and 43.059 for testing, out\nof in total 204.159 image patches (cf. Table 1 for detailed\nnumbers). During training, the CNNs are optimized for the\nclassification of the images in the training set. The valida-\ntion set is used for comparing model performance, since\nthe performance on the training set is not always reliable\nin terms of generalization to other images. A model that\nmemorizes training images and respective classes will give\na high training performance. However, with images differ-\nent to the training images such models will fail to predict\nthe correct class.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                188.9,
+                1597.8,
+                1211.2,
+                2078.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_06_text.png",
+            "text": "The learning rate is a crucial parameter for the opti-\nmization of models to the training data. Thus, we trained\nour models using different learning rates and compared\nthe trained models using the validation data. Initial\ntraining of models with the EfficientNetV2BO architecture\nindicated a learning rate of .1 being too large: respective\nmodels diverged (AUC ~.5). Hence, this learning rate was\nnot further used. Models trained with a learning rate .01\nand .001 seem to perform best (AUC > .99), cf. Figure 3A.\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                188.5,
+                2082.3,
+                1211.0,
+                2781.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_07_text.png",
+            "text": "In addition to the learning rate, the model architecture\ncan affect the prediction quality. Hence, we also tested\na larger model using the EfficientNetV2 architecture\n(EfficientNetV2S) and a model of a different architecture\n(ResNetRS50). Using the larger model (EfficientNetV2S),\nwe could again observe that learning rates of .01 and .001\nperformed best (Figure 3B), but the larger models did\nnot outperform the smaller models: both result in similar\nAUC and MCC on the validation data (Figure 3A and\nFigure 3B). With the ResNetRS5O architecture, a learning\nrate of .001 resulted in best performance (Figure 3C) and\nresulted in a similar AUC and MCC on the validation data\nas well.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.93,
+            "box": [
+                190.1,
+                2785.4,
+                1210.8,
+                3050.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_08_text.png",
+            "text": "Figure 4A displays a comparison of all trained models.\nFor each architecture and learning rate, we compared the\nvalidation AUC and MCC of the five best epochs (in terms\nof validation MCC) of respective models. Within each met-\nric the values are scaled to facilitate a simpler comparison.\n"
+        },
+        {
+            "idx": 9,
+            "thing": "text",
+            "score": 99.87,
+            "box": [
+                1278.7,
+                194.1,
+                2299.0,
+                622.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_09_text.png",
+            "text": "Figure 3A shows that with the EfficientNetV2 architec-\nture, a learning rate of either .01 or .001 performed well\n(Figure 3A and B), with ResNetRS50 models a learning rate\nof .001 is better (Figure 4A). Considering the MCC of the\nvalidation data, the ResNetRS50 outperformed the other\nmodels slightly, since the respective box is slightly higher.\nHowever, according to the AUC the EfficientNetV2 models\nperform slightly better.\n"
+        },
+        {
+            "idx": 10,
+            "thing": "text",
+            "score": 99.9,
+            "box": [
+                1277.7,
+                627.0,
+                2299.9,
+                1648.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_10_text.png",
+            "text": "The computational time needed for training and infer-\nence is an important aspect for the usefulness of our\nmodels: specifically, a higher inference time does impose\nsignificant costs associated with using the models rou-\ntine diagnostic. In this regard, Figure 4B compares the\nrecorded training times for each model. The ResNetRS50\nmodels training speed is similarly to the training speed\nof the EfficientNetV2BO models. Both models train about\ntwo times faster than the larger EfficientNetV2S archi-\ntecture. This was expected, since both EfficientNetV2BO\nand ResNetRS50 are very small models in terms of the\nnumber of weights (compared to EfficientNetV2S or other\ncommon ResNetRS models) and the ResNetRS models are\ncompetitive to EfficientNet in terms of speed and accuracy.\nNotably, we assume that the inference time will behave\nsimilar to the training times and as a result, we excluded\nthe EfficientNetV2S models from further comparisons due\nto their much slower training speed but similar prediction\nquality.\n"
+        },
+        {
+            "idx": 11,
+            "thing": "text",
+            "score": 99.45,
+            "box": [
+                1277.5,
+                1651.8,
+                2297.1,
+                1809.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_11_text.png",
+            "text": "The two best performing models for the two remain-\ning architectures EfficientNetV2BO and ResNetRS50 are\nsummarized in Table 2.\n"
+        },
+        {
+            "idx": 12,
+            "thing": "text",
+            "score": 99.88,
+            "box": [
+                1278.9,
+                1813.3,
+                2298.3,
+                2187.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_12_text.png",
+            "text": "To select the final model, we investigated the validation\ndata based on tiles and patients in more depth. Confu-\nsion matrices show good performance of both models,\nreflected as high values on the diagonal. Problems were\nnoted mainly in the discrimination between liver metas-\ntases of colorectal adenocarcinoma and liver metastases of\npancreatic adenocarcinoma (Figure S1A,B).\n"
+        },
+        {
+            "idx": 13,
+            "thing": "text",
+            "score": 99.91,
+            "box": [
+                1278.2,
+                2192.1,
+                2299.1,
+                3050.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Implementation of deep learning in liver pathology optimizes diagnosis of benign lesions and adenocarcinoma metastasis/crops_ordered/page_07/region_13_text.png",
+            "text": "A UMAP of the activation layer just before the top dense\nlayer is a visual tool to check the representation of tiles,\nwhich the network has learned and thus is another tool\nto compare model performance. The representations dis-\nplayed in the UMAP are used by the network for the\nclassifications. Ideally, all classes should be well separated\nin the UMAP. This indicates that the internal representa-\ntion of images for the different classes is also very different\nwithin the network; and, hence, the network can distin-\nguish them well. Respective UMAPs of the models from\ngiven in Table 2 show slightly less sprinkled class clus-\nters with the EfficientNetV2BO model (Figure S2A,B).\nHowever, the overall separation between classes for both\nmodels seems similar. The UMAP summarized to patient\nlevel show not much difference to the tile level (cf. Figure\nS2A vs. S2B).\n"
+        }
+    ]
+}

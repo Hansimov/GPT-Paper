@@ -1,0 +1,77 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages/page_01.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/pages_ordered/page_01.png",
+        "image_width": 2482,
+        "image_height": 3508,
+        "regions_num": 5,
+        "page_idx": 1
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 94.83,
+            "box": [
+                246.4,
+                889.3,
+                2248.0,
+                1077.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_01/region_1_title.png",
+            "text": "Predicting survival after hepatocellular carcinoma resection using\ndeep-learning on histological slides\n"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 86.24,
+            "box": [
+                247.6,
+                1173.8,
+                2248.8,
+                1592.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_01/region_2_text.png",
+            "text": "Charlie Saillard', Benoit Schmauch', Oumeima Laifa’, Matahi Moarii', Sylvain Toldo’,\nMikhail Zaslavskiy’, Elodie Pronier’, Alexis Laurent??, Giuliana Amaddeo***, Héléne\nRegnault®, Daniele Sommacale?*4, Marianne Ziol®’, Jean-Michel Pawlotsky>+%,\nSébastien Mulé?49, Alain Luciani*49, Gilles Wainrib', Thomas Clozel’, Pierre Courtiol',\nJulien Calderaro?41°.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 73.68,
+            "box": [
+                252.1,
+                1694.9,
+                2227.6,
+                2944.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_01/region_3_text.png",
+            "text": "1. Owkin Lab, Owkin.\n\n2. Assistance Publique-H6épitaux de Paris, Department of Hepatobiliary and Digestive Surgery,\nHépital Henri Mondor, Créteil, France.\n\n3. Paris Est Créteil University, UPEC, Créteil, France.\n\n4. INSERM U955, Team \"Pathophysiology and Therapy of Chronic Viral Hepatitis and Related\nCancers\", Créteil, France.\n\n5. Assistance Publique-Hépitaux de Paris, Department of Hepatology, H6épital Henri Mondor,\nCréteil, France.\n\n6. Assistance Publique-Hépitaux de Paris, Department of Pathology, Hépital Jean Verdier,\nBondy, France.\n\n7. Paris 13 University, INSERM-1162, Functional Genomics of Solid Tumors, 75010, Paris,\nFrance.\n\n8. National Reference Center for Viral Hepatitis B, C and Delta, Department of Virology, Hdpital\nHenri Mondor, Créteil, France.\n\n9. Assistance Publique-H6pitaux de Paris, Department of Medical Imaging, Hopital Henri Mondor,\nCréteil, France.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 76.8,
+            "box": [
+                245.1,
+                3047.2,
+                2147.6,
+                3283.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_01/region_4_text.png",
+            "text": "This article has been accepted for publication and undergone full peer review but has not been\nthrough the copyediting, typesetting, pagination and proofreading process, which may lead to\ndifferences between this version and the Version of Record. Please cite this article as doi:\n10.1002/HEP.31207\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 93.51,
+            "box": [
+                260.0,
+                3296.4,
+                1408.7,
+                3362.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/HEP 2020 Predicting survival after hepatocellular carcinoma resection using/crops_ordered/page_01/region_5_text.png",
+            "text": "This article is protected by copyright. All rights reserved\n"
+        }
+    ]
+}

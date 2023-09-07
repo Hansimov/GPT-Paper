@@ -1,0 +1,115 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages/page_02.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/pages_ordered/page_02.png",
+        "image_width": 2481,
+        "image_height": 3296,
+        "regions_num": 8,
+        "page_idx": 2
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "title",
+            "score": 94.54,
+            "box": [
+                213.0,
+                228.3,
+                520.8,
+                289.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_02/region_1_title.png",
+            "text": "Graphical abstract\n"
+        },
+        {
+            "idx": 2,
+            "thing": "figure",
+            "score": 99.34,
+            "box": [
+                212.4,
+                334.0,
+                2264.0,
+                1639.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_02/region_2_figure.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.16,
+            "box": [
+                212.9,
+                1741.0,
+                2113.5,
+                1853.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_02/region_3_text.png",
+            "text": "Keywords Deep learning - HCC - Histological - MVI - Multicenter - Multiple instance learning - Neural network -\nPrediction - Surgical margin - Weakly supervised learning - Whole slide image\n"
+        },
+        {
+            "idx": 4,
+            "thing": "title",
+            "score": 99.62,
+            "box": [
+                213.7,
+                1927.9,
+                495.3,
+                1991.3
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_02/region_4_title.png",
+            "text": "Introduction\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                212.9,
+                2039.7,
+                1216.3,
+                2671.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_02/region_5_text.png",
+            "text": "Microvascular invasion (MVI) is one of the most important\nhistological features of the prognosis and treatment man-\nagement of hepatocellular carcinoma (HCC) [1, 2]. Postop-\nerative adjuvant transarterial chemoembolization for HCC\npatients with MVI significantly reduced tumor recurrence\nand improved survival [3, 4]. MVI is also the only histo-\nlogical feature that has been proven to be predictive of the\nefficacy of adjuvant therapy by a clinical trial [5]. Addi-\ntionally, MVI status can also be an indicator for therapeutic\ndecision-making in recurrent HCC [6]. Therefore, an accu-\nrate histological diagnosis of MVI is highly critical to the\nprecise management of HCC.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                212.7,
+                2665.0,
+                1217.1,
+                2984.1
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_02/region_6_text.png",
+            "text": "Postoperative histological assessment is the gold stand-\nard for the diagnosis of MVI. However, MVI is commonly\nscattered in the adjacent peri-tumor liver tissues, leading to\ndifficulties in its evaluation. Accordingly, 83.3% of the MVIs\nwere located within 1 cm from the tumor boundary, but\nalso approximately 8.4% were located beyond 2 cm or even\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                1276.0,
+                1929.2,
+                2280.8,
+                2664.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_02/region_7_text.png",
+            "text": "further [7]. Therefore, multipoint sampling at the peri-tumor\nregion is necessary to ensure the detection rate of MVI [8,\n9]. Nevertheless, in clinical practice, not all patients could\nobtain sufficient sampling tissues for MVI evaluation. More\nthan 60% of HCC patients received nonsurgical treatment\nwith only biopsy specimens [10]. For patients who receive\nsurgical treatment, the background cirrhosis leads to a con-\nsiderable portion of them having narrow surgical margins\nto maintain sufficient remnant liver volume [11]. According\nto the previous studies, the proportion of HCC patients with\nmargins < 0.5 cm ranged from 43.6 to 44.2% [7]. The MVI\nstatus could hardly be evaluated in these patients with lim-\nited information on the peri-tumor region, ultimately affect-\ning the treatment decisions and clinical outcomes.\n"
+        },
+        {
+            "idx": 8,
+            "thing": "text",
+            "score": 99.97,
+            "box": [
+                1276.3,
+                2659.0,
+                2280.1,
+                2977.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning for evaluation of microvascular invasion in hepatocellular carcinoma from tumor areas of histology images/crops_ordered/page_02/region_8_text.png",
+            "text": "Histological whole slide images (WSIs) of HCC contain\na massive amount of biological information. Recent stud-\nies demonstrated that some histological features such as\nmacrotrabecular-massive type, cholangiocarcinoma-like and\nstem cell-like traits were positively correlated with the inci-\ndence of vascular invasion [12, 13]. Therefore, quantitative\n"
+        }
+    ]
+}

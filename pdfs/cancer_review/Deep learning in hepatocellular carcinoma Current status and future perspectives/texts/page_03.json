@@ -1,0 +1,102 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages/page_03.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/pages_ordered/page_03.png",
+        "image_width": 2480,
+        "image_height": 3509,
+        "regions_num": 7,
+        "page_idx": 3
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "figure",
+            "score": 99.7,
+            "box": [
+                261.5,
+                260.6,
+                2157.8,
+                1076.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_1_figure.png"
+        },
+        {
+            "idx": 2,
+            "thing": "text",
+            "score": 99.33,
+            "box": [
+                237.4,
+                1149.2,
+                2254.9,
+                1248.2
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_2_text.png",
+            "text": "Figure 1 Schematic representation of the relationships between the terms artificial intelligence, machine learning, and deep learning, and\nhow deep learning can utilize multimodal data to improve care for patients with hepatocellular carcinoma.\n"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                808.7,
+                1338.9,
+                2260.0,
+                1716.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_3_text.png",
+            "text": "accurate predictions about the outcome when provided with a new set of input data\n[9]. Examples of supervised learning algorithms include traditional techniques such as\nlinear regression and logistic regression, as well as more sophisticated techniques\nincluding support vector machines, random forest and gradient boosting. On the other\nhand, unsupervised learning algorithms train on unlabeled sample data and analyze\nthe underlying structure or distribution within the data to discover new clusters or\npatterns[10]. Examples of unsupervised learning algorithms include K-means and\nprinciple component analysis among many others.\n"
+        },
+        {
+            "idx": 4,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                807.9,
+                1713.9,
+                2260.5,
+                2228.9
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_4_text.png",
+            "text": "Among the various Al-based machine learning algorithms, artificial neural\nnetworks (ANNs) consist of layers of interconnected mathematical formulas that\nenable them to analyze complex non-linear relationships[11]. “Deep learning (DL)”\nrefers to highly complex AI models utilizing multiple layers of ANNs and has recently\nemerged as a state-of-the-art AI technique for analyzing complex, high-dimensional\nhealthcare data. Some of the commonly used DL techniques include convolutional\nneural networks (CNNs) and recurrent neural networks (RNNs)[12]. CNNs have\nconnective patterns resembling those of an animal visual cortex and can detect\ninherent spatial features of high dimensional images. RNNs have connections forming\na directed graph along a temporal sequence, and therefore can be highly useful in time\nseries prediction.\n"
+        },
+        {
+            "idx": 5,
+            "thing": "text",
+            "score": 99.96,
+            "box": [
+                808.1,
+                2225.2,
+                2259.7,
+                2461.5
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_5_text.png",
+            "text": "It is crucial to recognize that any Al-based machine learning algorithms require\nexternal validation in an independent dataset as models could be overfitted and end\nup overestimating the performance. In this review article, the performance character-\nistics of the various DL models are from the validation cohorts, and not the original\nderivation cohorts used to train the algorithms.\n"
+        },
+        {
+            "idx": 6,
+            "thing": "title",
+            "score": 99.2,
+            "box": [
+                807.5,
+                2587.1,
+                1224.8,
+                2651.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_6_title.png",
+            "text": "HCC CLINICAL DATA\n"
+        },
+        {
+            "idx": 7,
+            "thing": "text",
+            "score": 99.95,
+            "box": [
+                808.3,
+                2670.9,
+                2260.0,
+                3281.8
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/Deep learning in hepatocellular carcinoma Current status and future perspectives/crops_ordered/page_03/region_7_text.png",
+            "text": "Despite multiple available risk prediction tools for HCC, none have been rigorously\nvalidated or endorsed by major liver societies. Currently, HCC surveillance is recom-\nmended for patients with cirrhosis and high risk patients with chronic HBV infection\n[13]. Accurate prediction models utilizing more specific risk factors for HCC\ndevelopment at individual levels would allow health systems to implement targeted\nscreening strategies. loannou et al[14] trained a RNN to predict HCC development\nwithin 3 years using 4 baseline variables and 27 longitudinal variables from 48151\npatients with HCV-related cirrhosis in the national Veterans Health Administration.\nThe RNN model significantly outperformed logistic regression and exhibited an area\nunder the curve (AUC) of 0.759 among all samples and an AUC of 0.806 among\npatients with sustained virologic response. Phan et al[15] surveyed 1 million random\nsamples from Taiwan's National Health Insurance Research Database between 2002 to\n2010 to predict liver cancer among patients with viral hepatitis. The disease history of\n"
+        }
+    ]
+}

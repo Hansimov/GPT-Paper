@@ -1,0 +1,50 @@
+{
+    "page": {
+        "original_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages/page_07.png",
+        "current_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/pages_ordered/page_07.png",
+        "image_width": 3308,
+        "image_height": 2481,
+        "regions_num": 3,
+        "page_idx": 7
+    },
+    "regions": [
+        {
+            "idx": 1,
+            "thing": "text",
+            "score": 99.55,
+            "box": [
+                283.9,
+                618.5,
+                1228.2,
+                656.7
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_07/region_1_text.png",
+            "text": "Table 2. Selected prior studies utilising AI for HCC prognostication.\n"
+        },
+        {
+            "idx": 2,
+            "thing": "table",
+            "score": 99.52,
+            "box": [
+                281.1,
+                664.8,
+                3048.4,
+                1483.0
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_07/region_2_table.png"
+        },
+        {
+            "idx": 3,
+            "thing": "text",
+            "score": 98.65,
+            "box": [
+                282.8,
+                1491.0,
+                3051.8,
+                1561.4
+            ],
+            "crop_image_path": "/mnt/sh_flex_storage/home/zehanyu/repos/GPT-Paper/pdfs/cancer_review/JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma/crops_ordered/page_07/region_3_text.png",
+            "text": "Al, artificial intelligence; AUC, area under the curve; HCC, hepatocellular carcinoma; LT, liver transplantation; MRMR, maximum relevance minimum redundancy; RSF, random survival forest; TACE, trans-\narterial chemoembolisation.\n"
+        }
+    ]
+}
