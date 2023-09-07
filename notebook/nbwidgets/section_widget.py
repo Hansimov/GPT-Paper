@@ -5,8 +5,8 @@ from agents.paper_reviewer import SectionSummarizer, documents_retriever
 
 
 class SectionViewer:
-    def __init__(self, topic, intro):
-        self.topic = topic
+    def __init__(self, title, intro):
+        self.title = title
         self.intro = intro
         self.section_summarizer = SectionSummarizer()
         self.create_widgets()
@@ -29,6 +29,7 @@ class SectionViewer:
         self.summarize_button.on_click(self.summarize_chat)
 
     def summarize_chat(self, button):
+        self.summarize_button.style.button_color = "orange"
         self.output_widget.clear_output()
         queries = documents_retriever.query([self.intro])
         with self.output_widget:
@@ -44,29 +45,40 @@ class SectionViewer:
         for agent in self.section_summarizer.agents:
             agent.output_widget = self.output_widget
 
-    def create_topic_and_intro_text(self):
-        self.title_text = widgets.Text(
-            description="Topic",
-            value=self.topic,
+    def create_title_and_intro_text_widget(self):
+        self.title_text_widget = widgets.Text(
+            description="Title",
+            value=self.title,
             layout=widgets.Layout(width="100%"),
         )
-        self.intro_text = widgets.Text(
+
+        def update_title_text_value(title_text_widget):
+            self.title = title_text_widget.value
+
+        self.title_text_widget.on_submit(update_title_text_value)
+
+        self.intro_text_widget = widgets.Text(
             description="Intro",
             value=self.intro,
             layout=widgets.Layout(width="100%"),
         )
 
+        def update_intro_text_value(intro_text_widget):
+            self.intro = intro_text_widget.value
+
+        self.intro_text_widget.on_submit(update_intro_text_value)
+
     def create_widgets(self):
         self.create_output_widget()
-        self.create_topic_and_intro_text()
+        self.create_title_and_intro_text_widget()
         self.create_button()
         self.container = widgets.VBox()
         self.widgets = []
         self.widgets.extend(
             [
                 self.summarize_button,
-                self.title_text,
-                self.intro_text,
+                self.title_text_widget,
+                self.intro_text_widget,
                 self.output_widget,
             ]
         )
