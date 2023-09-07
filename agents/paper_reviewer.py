@@ -88,14 +88,15 @@ class SectionSummarizer:
         self.sum_agent = OpenAIAgent(
             name="section_summarizer",
             # model="gpt-3.5-turbo",
-            # model="poe-gpt-3.5-turbo-16k",
-            model="poe-claude-2-100k",
+            model="poe-gpt-3.5-turbo-16k",
+            # model="poe-claude-2-100k",
             # model="gpt-4",
-            system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
+            # system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
+            system_message="Your task is to provide statements that are completely referred to the provided texts. You should focus only on the given topic.",
         )
         self.translate_agent = OpenAIAgent(
             name="translator",
-            model="poe-claude-2-100k",
+            model="poe-gpt-3.5-turbo-16k",
             system_message="你是一个专业的英译中专家。对于提供的英文，你需要如实翻译成中文。你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本：",
         )
 
@@ -132,28 +133,30 @@ class SectionSummarizer:
             ```
             # Topic: {topic}
             
-            # Statement:
+            # Statements:
             
-            <文本段落1> [<pdf_num>-<page_num>.<region_num>, ...].
-            <文本段落2> [<pdf_num>-<page_num>.<region_num>, ...].
-            <文本段落3> [<pdf_num>-<page_num>.<region_num>, ...].
+            <statement 1> [<pdf_order>-<page_num>.<region_num>, ...]. <statement 2> [<pdf_order>-<page_num>.<region_num>, ...].
+            <statement 3> [<pdf_order>-<page_num>.<region_num>, ...].
             ...
             
             # References:
-            [1] <Refer pdf name 1>
-            [2] <Refer pdf name 2>
-            [3] <Refer pdf name 3>
-            [4] ...
+            [1] <Referred pdf name 1>
+            [2] <Referred pdf name 2>
+            [3] <Referred pdf name 3>
+            [<pdf_order>] ...
             ...
             
             ```
 
-            参考文献格式要求：
+            Here is the requirements of reference formats:
             
-            1. 参考文献的顺序依据你的输出顺序，即先输出的参考文献排在前面。
-            2. 根据你输出的陈述文本参考的PDF引用顺序排列，即先引用的参考文献排在前面。
-            `<ref_pdf_order>`表示该段文本所参考的PDF在"References"里的顺序，为整数，从1开始。
-            `<page_num>`表示PDF中对应的页码，`<region_num>`表示对应的文本块的序号。
+            1. The order of references should follow the order of your output statements referred,
+            meaning references used earlier should appear earlier.
+            2. References with same `pdf_name` should be combined to a single one.
+            3. `<pdf_num>` represents the order of the PDF referenced, starting from 1;
+            `<page_idx>` indicates the corresponding page number in the PDF;
+            and `<region_idx>` represents the sequence number of the text block.
+            4. The values of `<page_idx>` and `<region_idx>` are the same with them in provided texts.
             """
         elif output_type == "json":
             output_formats = f"""
@@ -163,11 +166,11 @@ class SectionSummarizer:
                 "statements": [
                     {{
                         "text": <文本段落1>,
-                        "refs": ["<pdf_num>-<page_num>.<region_num>", ...]
+                        "refs": ["<pdf_num>-<page_idx>.<region_idx>", ...]
                     }},
                     {{
                         "text": <文本段落2>,
-                        "refs": ["<pdf_num>-<page_num>.<region_num>", ...]
+                        "refs": ["<pdf_num>-<page_idx>.<region_idx>", ...]
                     }},
                     ...
                 ],
@@ -189,27 +192,50 @@ class SectionSummarizer:
             2. "references"中，关键字中的数字表示参考文献的顺序，为整数，从1开始。`"pdf_name"`表示参考文献所在的PDF文件名。
             """
 
+        provided_texts_formats = f"""
+        ```
+        {{
+            'pdf_name': '...',
+            'regions': [
+                {{  
+                    'text': "...",
+                    'page_idx': ...,
+                    'region_idx': ...,
+                    'score': ...
+                }},
+        }}
+        ```
+        """
+
         combined_prompt = f"""
-        请你根据以下主题，给出{word_count}词的{lang_str}陈述：：
+        You should provide statements with {word_count} words based on the following topic.
         
         ```
         {topic}
         ```
         
-        下面是你参考的文本，你的结论必须从该文本中提取：
+        Here are the texts you should refer to,
+        and your statements should be extracted and summarized from these texts only:
         
         ```
         {queries_str}
         ```
 
-        你的输出格式：
+        Here is the structure of provided references text:
+        
+        {provided_texts_formats}
+
+        Your output format:
         
         {output_formats}
         
         
-        请你根据上述要求，针对提供的主题，给出{word_count}词的{lang_str}陈述。
+        You should follow above requirements,
+        to provide statements with {word_count} words based on the following topic.
         
         {extra_prompt}
+        
+        The language of your output should be {lang_str}.
         """
         return combined_prompt
 
