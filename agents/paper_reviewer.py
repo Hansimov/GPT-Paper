@@ -146,28 +146,25 @@ class SectionSummarizer(OpenAIAgent):
                 "statements": [
                     {{
                         "text": <文本段落1>,
-                        "refs": ["1.1", "2.1"]
+                        "refs": ["<ref_pdf_order>.<page_region_order>", ...]
                     }},
                     {{
                         "text": <文本段落2>,
-                        "refs": ["1.1"]
+                        "refs": ["<ref_pdf_order>.<page_region_order>", ...]
                     }},
-                    {{
-                        "text": <文本段落3>,
-                        "refs": ["1.2","3.1"]
-                    }},
+                    ...
                 ],
                 "references": {{
                     1: {{
-                        "pdf_name": <Referred pdf 1>,
+                        "pdf_name": <PDF 1 name>,
                         "page_region_idxs": [
-                            (<page_idx>,<region_idx>), (<page_idx>,<region_idx>), ...
+                            "<page_idx>-<region_idx>", "<page_idx>-<region_idx>", ...
                         ]
                     }},
                     2: {{
-                        "pdf_name": <Referred pdf 2>,
+                        "pdf_name": <PDF 2 name>,
                         "page_region_idxs": [
-                            (<page_idx>,<region_idx>), (<page_idx>,<region_idx>), ...
+                            "<page_idx>-<region_idx>", "<page_idx>-<region_idx>", ...
                         ]
                     }},
                     3: ...
@@ -178,16 +175,17 @@ class SectionSummarizer(OpenAIAgent):
             
             格式说明：
             
-            1. "statements"中，`text`表示段落文本内容，`refs`表示该段文本参考文献的编号，以及对应的区域编号。
+            1. "statements"中：`text`表示段落文本内容；`refs`中包含该段文本参考文献的顺序`<ref_pdf_order>`，和对应的页码区域顺序`<page_region_order>`。
+            `ref_pdf_order`和`page_region_order`都为整数，且均从1开始。
             
             2. "refereces"中，key中的数字表示参考文献的顺序，为整数，从1开始。根据你输出的陈述文本引用的顺序排列，即先输出的参考文献排在前面。
-            在 "<page_region_idxs" 中，`(<page_idx>,<region_idx>)` 表示参考片段的在参考PDF所在的页码和区域序号。该tuple的顺序取决于在该文本区域被引用的顺序，从1开始计数。
+            在 "<page_region_idxs>" 中，`"<page_idx>-<region_idx>"` 表示参考片段的在参考PDF所在的页码和区域序号。其顺序取决于在该文本区域被引用的顺序，从1开始计数。
             `<page_idx>`为参考片段所在的页码，`<region_idx>`为参考片段所在的段落序号。
            
             让我举例说明：
             假设 `"text":<文本段落1>` 参考了 PDF_1 的第1个区域，那么`"refs":["1.1"]`。
-            再假设PDF_1被引用的第1个区域的页码和区域序号为 (3,4)，也即第3页第4个文本块。
-            此时：`"references:{{1: {{ "pdf_name":<PDF_1>, "page_region_idxs":[(3,4)]}} }}"。
+            再假设PDF_1被引用的第1个区域的页码和区域序号为 `"3-4"`，也即第3页第4个文本块。
+            此时：`"references:{{1: {{ "pdf_name":<PDF_1>, "page_region_idxs":["3-4"]}} }}"。
             关键字 `1` 即对应<文本段落1>引用的<PDF_1>。
             """
 
