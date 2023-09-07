@@ -1,8 +1,8 @@
 from utils.file import rmtree_and_mkdir
 from documents.pdf_visual_extractor import PDFVisualExtractor
 from functools import reduce
-from pathlib import Path
 from tqdm import tqdm
+from typing import Union
 from utils.logger import logger, Runtimer
 from utils.calculator import get_int_digits
 from utils.layout_analyzer import DITLayoutAnalyzer
@@ -10,7 +10,13 @@ from utils.tokenizer import BiEncoderX, CrossEncoderX, SentenceTokenizer
 from utils.query_embeddings import query_embeddings_df
 import pandas as pd
 import operator
+import pathlib
+from pathlib import Path
 import pickle
+import platform
+
+if platform.system() == "Windows":
+    pathlib.PosixPath = pathlib.WindowsPath
 
 
 class MultiPDFExtractor:
@@ -203,7 +209,7 @@ class MultiPDFExtractor:
         )
         queries_cache_df.to_pickle(self.queries_cache_path)
 
-    def load_query_results_by_indexes(self, indexes: list | dict):
+    def load_query_results_by_indexes(self, indexes: Union[list, dict]):
         if type(indexes) == dict:
             indexes = [indexes]
 

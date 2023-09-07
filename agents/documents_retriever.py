@@ -2,6 +2,7 @@ import json
 from documents.multi_pdf_extractor import MultiPDFExtractor
 from collections import defaultdict
 from operator import itemgetter
+from typing import Union
 
 
 class DocumentsRetriever:
@@ -9,7 +10,7 @@ class DocumentsRetriever:
         self.project_dir = project_dir
         self.multi_pdf_extractor = MultiPDFExtractor(project_dir)
 
-    def query(self, queries: list | str, rerank_n=20) -> list:
+    def query(self, queries: Union[list, str], rerank_n=20) -> list:
         if type(queries) == str:
             queries = [queries]
 
