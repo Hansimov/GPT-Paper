@@ -38,18 +38,25 @@ class DocumentsRetriever:
         grouped_queries = defaultdict(list)
         for item in query_results:
             pdf_name = item["pdf_name"]
-            page_idx = item["page_idx"]
-            region_idx = item["region_idx"]
-            text = item["text"]
             grouped_queries[pdf_name].append(
                 {
-                    "text": text,
-                    "page_idx": page_idx,
-                    "region_idx": region_idx,
+                    "text": item["text"],
+                    "page_idx": item["page_idx"],
+                    "region_idx": item["region_idx"],
+                    "score": item["score"],
                 }
             )
         # Sort grouped query results by pdf_name
-        grouped_queries = dict(sorted(grouped_queries.items(), key=itemgetter(0)))
+        # grouped_queries = dict(sorted(grouped_queries.items(), key=itemgetter(0)))
+
+        # Sort grouped query results by average score
+        grouped_queries = dict(
+            sorted(
+                grouped_queries.items(),
+                key=lambda x: sum(item["score"] for item in x[1]) / len(x[1]),
+                reverse=True,
+            )
+        )
 
         sorted_grouped_queries = []
         # ref_idx = 1
