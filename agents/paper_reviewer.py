@@ -87,7 +87,7 @@ class SectionSummarizer(OpenAIAgent):
     def __init__(self):
         super().__init__(
             name="section_summarizer",
-            model="gpt-3.5-turbo",
+            model="poe-gpt-3.5-turbo-16k",
             system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
         )
 
@@ -110,10 +110,86 @@ class SectionSummarizer(OpenAIAgent):
         extra_prompt="",
         word_count=500,
         lang="en",
+        output_type="json",
     ):
         queries_str = str(queries[:query_count])
         lang_map = {"en": "英文", "zh": "中文"}
         lang_str = lang_map[lang]
+
+        if output_type == "text":
+            output_formats = f"""
+            ```
+            # Topic: {topic}
+            
+            # Statement:
+            <文本段落1> [1.1, 2.1]. <文本段落2> [1.1]. <文本段落3> [3.1].
+            ...
+            
+            # References:
+            [1] <Referred pdf 1>: (1) P(<page_idx>,<region_idx>); (2) P(<page_idx>,<region_idx>)
+            [2] <Referred pdf 2>: P(<page_idx>,<region_idx>)
+            [3] ...
+            ...
+            ```
+
+            参考文献格式要求：
+            
+            1. 参考文献的顺序依据你的输出顺序，即先输出的参考文献排在前面。
+            2. 参考文献的格式为：`[<ref_idx>] '<pdf_name>': (<sub_ref_idx>) P(<page_idx>,<region_idx>)`。
+            其中，`<ref_idx>`为参考PDF的顺序序号，从1开始递增。`<pdf_name>`为参考文献所在的PDF文件名，`<sub_ref_idx>`为参考片段的顺序，从1开始递增编号。`<page_idx>`为参考片段所在的页码，`<region_idx>`为参考片段所在的段落序号。
+            """
+        elif output_type == "json":
+            output_formats = f"""
+            ```json
+            {{
+                "topic": {topic},
+                "statements": [
+                    {{
+                        "text": <文本段落1>,
+                        "refs": ["1.1", "2.1"]
+                    }},
+                    {{
+                        "text": <文本段落2>,
+                        "refs": ["1.1"]
+                    }},
+                    {{
+                        "text": <文本段落3>,
+                        "refs": ["1.2","3.1"]
+                    }},
+                ],
+                "references": {{
+                    1: {{
+                        "pdf_name": <Referred pdf 1>,
+                        "page_region_idxs": [
+                            (<page_idx>,<region_idx>), (<page_idx>,<region_idx>), ...
+                        ]
+                    }},
+                    2: {{
+                        "pdf_name": <Referred pdf 2>,
+                        "page_region_idxs": [
+                            (<page_idx>,<region_idx>), (<page_idx>,<region_idx>), ...
+                        ]
+                    }},
+                    3: ...
+                }}
+
+            }}
+            ```
+            
+            格式说明：
+            
+            1. "statements"中，`text`表示段落文本内容，`refs`表示该段文本参考文献的编号，以及对应的区域编号。
+            
+            2. "refereces"中，key中的数字表示参考文献的顺序，为整数，从1开始。根据你输出的陈述文本引用的顺序排列，即先输出的参考文献排在前面。
+            在 "<page_region_idxs" 中，`(<page_idx>,<region_idx>)` 表示参考片段的在参考PDF所在的页码和区域序号。该tuple的顺序取决于在该文本区域被引用的顺序，从1开始计数。
+            `<page_idx>`为参考片段所在的页码，`<region_idx>`为参考片段所在的段落序号。
+           
+            让我举例说明：
+            假设 `"text":<文本段落1>` 参考了 PDF_1 的第1个区域，那么`"refs":["1.1"]`。
+            再假设PDF_1被引用的第1个区域的页码和区域序号为 (3,4)，也即第3页第4个文本块。
+            此时：`"references:{{1: {{ "pdf_name":<PDF_1>, "page_region_idxs":[(3,4)]}} }}"。
+            关键字 `1` 即对应<文本段落1>引用的<PDF_1>。
+            """
 
         combined_prompt = f"""
         请你根据以下主题，给出{word_count}词的{lang_str}陈述：：
@@ -130,25 +206,7 @@ class SectionSummarizer(OpenAIAgent):
 
         你的输出格式：
         
-        ```
-        # Topic: {topic}
-        
-        # Statement:
-        <文本段落1> [1.1, 2.1]. <文本段落2> [1.1]. <文本段落3> [3.1].
-        ...
-        
-        # References:
-        [1] <Referred pdf 1>: (1) P(<page_idx>,<region_idx>); (2) P(<page_idx>,<region_idx>)
-        [2] <Referred pdf 2>: P(<page_idx>,<region_idx>)
-        [3] ...
-        ...
-        
-        ```
-        
-        参考文献格式要求：
-        1. 参考文献的顺序依据你的输出顺序，即先输出的参考文献排在前面。
-        2. 参考文献的格式为：`[<ref_idx>] '<pdf_name>': (<sub_ref_idx>) P(<page_idx>,<region_idx>)`。
-        其中，`<ref_idx>`为参考PDF的顺序序号，从1开始递增。`<pdf_name>`为参考文献所在的PDF文件名，`<sub_ref_idx>`为参考片段的顺序，从1开始递增编号。`<page_idx>`为参考片段所在的页码，`<region_idx>`为参考片段所在的段落序号。
+        {output_formats}
         
         请你根据上述要求，针对提供的主题，给出{word_count}词的{lang_str}陈述：：
         
