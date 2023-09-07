@@ -99,8 +99,9 @@ class SectionSummarizer:
             model="poe-gpt-3.5-turbo-16k",
             system_message="你是一个专业的英译中专家。对于提供的英文，你需要如实翻译成中文。你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本：",
         )
+        self.agents = [self.sum_agent, self.translate_agent]
 
-    def chat(self, topic, queries, extra_prompt="", word_count=600, translate=True):
+    def chat(self, topic, queries, extra_prompt="", word_count=600, translate=False):
         sum_prompt = self.create_sum_prompt(
             topic=topic,
             queries=queries,
