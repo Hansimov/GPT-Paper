@@ -241,4 +241,4 @@ class SectionSummarizer:
         return combined_prompt
 
 
-retriever = DocumentsRetriever("cancer_review")
+documents_retriever = DocumentsRetriever("cancer_review")
