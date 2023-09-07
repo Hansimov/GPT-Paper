@@ -1,5 +1,6 @@
 from utils.file import rmtree_and_mkdir
 from documents.pdf_visual_extractor import PDFVisualExtractor
+from functools import reduce
 from pathlib import Path
 from tqdm import tqdm
 from utils.logger import logger, Runtimer
@@ -8,6 +9,7 @@ from utils.layout_analyzer import DITLayoutAnalyzer
 from utils.tokenizer import BiEncoderX, CrossEncoderX, SentenceTokenizer
 from utils.query_embeddings import query_embeddings_df
 import pandas as pd
+import operator
 import pickle
 
 
@@ -21,6 +23,7 @@ class MultiPDFExtractor:
         self.pdfs_count = len(self.pdf_paths)
         self.pdfs_count_digits = get_int_digits(len(self.pdf_paths))
         self.docs_embeddings_path = self.result_root / "docs_embeddings.pkl"
+        self.queries_cache_path = self.result_root / "queries_cache.pkl"
 
     def list_pdfs(self):
         logger.mesg(f"[{self.project_path}] has {self.pdfs_count} PDFs:")
@@ -82,9 +85,44 @@ class MultiPDFExtractor:
         query,
         rerank_n=20,
         exclude_things=["list"],
+        cache=True,
         quiet=False,
     ):
+        """
+        Keys of queries item in returned list:
+          * rank, score
+          * pdf_name, page_idx, region_idx
+          * region_thing, previous_title
+          * text
+
+        Columns of `quereis_cache.pkl`:
+          * query (str)
+          * results (list of dicts)
+        """
         logger.enter_quiet(quiet)
+
+        if cache:
+            if self.queries_cache_path.exists():
+                queries_cache_df = pd.read_pickle(self.queries_cache_path)
+
+                cached_query_rows = queries_cache_df.loc[
+                    queries_cache_df["query"] == query
+                ]
+                cached_query_rows_num = cached_query_rows.shape[0]
+                # print(f"Cached query rows: {cached_query_rows_num}")
+                if cached_query_rows_num >= 1:
+                    cached_query_results_indexes = cached_query_rows["results"].iloc[0]
+
+                    if len(cached_query_results_indexes) >= rerank_n:
+                        query_results_indexes = cached_query_results_indexes[:rerank_n]
+
+                        query_results = self.load_query_results_by_indexes(
+                            query_results_indexes
+                        )
+                        return query_results
+            else:
+                queries_cache_df = pd.DataFrame()
+
         self.docs_embeddings_df = pd.read_pickle(self.docs_embeddings_path)
         df = self.docs_embeddings_df.copy()
 
@@ -136,6 +174,54 @@ class MultiPDFExtractor:
             logger.success(sentences_str)
             logger.restore_indent()
         logger.exit_quiet(quiet)
+
+        if cache:
+            self.dump_query_results_indexes(query, query_results)
+
+        print(query_results[0].keys())
+
+        return query_results
+
+    def dump_query_results_indexes(self, query, query_results):
+        if self.queries_cache_path.exists():
+            queries_cache_df = pd.read_pickle(self.queries_cache_path)
+        else:
+            queries_cache_df = pd.DataFrame()
+
+        query_results_indexes = []
+        for query_result in query_results:
+            query_result_without_text = {
+                k: v for k, v in query_result.items() if k not in ["text"]
+            }
+            query_results_indexes.append(query_result_without_text)
+
+        query_reults_indexes_df = pd.DataFrame(
+            [{"query": query, "results": query_results_indexes}]
+        )
+        queries_cache_df = pd.concat(
+            [queries_cache_df, query_reults_indexes_df], ignore_index=True
+        )
+        queries_cache_df.to_pickle(self.queries_cache_path)
+
+    def load_query_results_by_indexes(self, indexes: list | dict):
+        if type(indexes) == dict:
+            indexes = [indexes]
+
+        docs_embeddings_df = pd.read_pickle(self.docs_embeddings_path)
+
+        query_results = []
+        for index in indexes:
+            df_mask = reduce(
+                operator.and_,
+                [
+                    docs_embeddings_df[key] == index[key]
+                    for key in ["pdf_name", "page_idx", "region_idx"]
+                ],
+            )
+            row = docs_embeddings_df.loc[df_mask]
+            text = row["text"].iloc[0]
+            index["text"] = text
+            query_results.append(index)
 
         return query_results
 
