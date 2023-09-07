@@ -25,32 +25,38 @@ class SectionViewer:
     def summarize_chat(self, button):
         self.output_widget.clear_output()
         with self.output_widget:
-            print(f"Button clicked at {datetime.now()}")
+            # print(f"Button clicked at {datetime.now()}")
+            self.section_summarizer.chat(self.topic, self.queries)
 
     def create_output_widget(self):
         self.output_widget = widgets.Output()
         for agent in self.section_summarizer.agents:
             agent.output_widget = self.output_widget
 
-    def create_tab(self):
-        self.tab = widgets.Tab()
-        self.tab.titles = [title for title in [self.topic]]
-        tab_children = [
-            widgets.Text(
-                value=content,
-                layout=widgets.Layout(width="100%"),
-            )
-            for content in [self.intro]
-        ]
-        self.tab.children = tab_children
+    def create_topic_and_intro_text(self):
+        self.title_text = widgets.Text(
+            value=self.topic,
+            layout=widgets.Layout(width="100%"),
+        )
+        self.intro_text = widgets.Text(
+            value=self.intro,
+            layout=widgets.Layout(width="100%"),
+        )
 
     def create_widgets(self):
         self.create_output_widget()
+        self.create_topic_and_intro_text()
         self.create_button()
-        self.create_tab()
         self.container = widgets.VBox()
         self.widgets = []
-        self.widgets.extend([self.summarize_button, self.tab, self.output_widget])
+        self.widgets.extend(
+            [
+                self.summarize_button,
+                self.title_text,
+                self.intro_text,
+                self.output_widget,
+            ]
+        )
         self.container.children = self.widgets
 
     def display(self):
