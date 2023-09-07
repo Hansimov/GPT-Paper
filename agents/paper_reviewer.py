@@ -83,26 +83,35 @@ outline_filler = OpenAIAgent(
 )
 
 
-class SectionSummarizer(OpenAIAgent):
+class SectionSummarizer:
     def __init__(self):
-        super().__init__(
+        self.sum_agent = OpenAIAgent(
             name="section_summarizer",
+            # model="gpt-3.5-turbo",
             # model="poe-gpt-3.5-turbo-16k",
-            # model="gpt-4",
             model="poe-claude-2-100k",
+            # model="gpt-4",
             system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
         )
+        self.translate_agent = OpenAIAgent(
+            name="translator",
+            model="poe-claude-2-100k",
+            system_message="你是一个专业的英译中专家。对于提供的英文，你需要如实翻译成中文。你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本：",
+        )
 
-    def run(self, topic, queries, extra_prompt="", word_count=600):
-        prompt = self.create_prompt(
+    def chat(self, topic, queries, extra_prompt="", word_count=600, translate=True):
+        sum_prompt = self.create_sum_prompt(
             topic=topic,
             queries=queries,
             extra_prompt=extra_prompt,
             word_count=word_count,
         )
-        super_instance = super()
-        response_content = super_instance.chat(prompt, continous=True)
-        return response_content
+        sum_content = self.sum_agent.chat(sum_prompt, continuous=True)
+        if translate:
+            translate_content = self.translate_agent.chat(sum_content, continuous=True)
+        else:
+            translate_content = ""
+        return sum_content, translate_content
 
     def create_prompt(
         self,
