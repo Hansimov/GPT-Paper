@@ -133,7 +133,7 @@ class OpenAIAgent:
 
     def get_available_models(self):
         """
-        gpt-3.5-turbo,
+        gpt-3.5-turbo, gpt-4,
         poe-gpt-3.5-turbo, poe-gpt-3.5-turbo-16k, poe-gpt-4
         poe-saga, poe-claude-instant, poe-google-palm,
         poe-llama-2-7b, poe-llama-2-13b, poe-llama-2-70b,

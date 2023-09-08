@@ -92,7 +92,7 @@ class SectionSummarizer:
             # model="poe-claude-2-100k",
             # model="gpt-4",
             # system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
-            system_message="Your task is to provide statements that are completely referred to the provided texts. You should focus only on the given topic.",
+            system_message="Your task is to provide output that are completely referred to the provided reference texts. You should focus only on the texts related to the given topic.",
         )
         self.translate_agent = OpenAIAgent(
             name="translator",
@@ -124,6 +124,7 @@ class SectionSummarizer:
         word_count=500,
         lang="en",
         output_type="text",
+        content_type="summary",
     ):
         queries_str = str(queries[:query_count])
         lang_map = {"en": "英文", "zh": "中文"}
@@ -134,30 +135,48 @@ class SectionSummarizer:
             ```
             # Topic: {topic}
             
-            # Statements:
+            # {content_type.capitalize()}:
             
-            <statement 1> [<pdf_order>-<page_num>.<region_num>, ...]. <statement 2> [<pdf_order>-<page_num>.<region_num>, ...].
-            <statement 3> [<pdf_order>-<page_num>.<region_num>, ...].
+            Paragraph. [<pdf_num>.<page_idx>, ...]
+            Paragraph. [<pdf_num>.<page_idx>, ...]
+            Paragraph. [<pdf_num>.<page_idx>, ...]
             ...
             
             # References:
-            [1] <Referred pdf name 1>
-            [2] <Referred pdf name 2>
-            [3] <Referred pdf name 3>
-            [<pdf_order>] ...
+            [<pdf_num>] <Referred pdf name 1>
+            [<pdf_num>] <Referred pdf name 2>
+            [<pdf_num>] <Referred pdf name 3>
             ...
             
             ```
 
             Here is the requirements of reference formats:
             
-            1. The order of references should follow the order of your output statements referred,
+            1. The order of references should follow the order of your output {content_type} referred,
             meaning references used earlier should appear earlier.
-            2. References with same `pdf_name` should be combined to a single one.
-            3. `<pdf_num>` represents the order of the PDF referenced, starting from 1;
+            2. The `[<pdf_num>.<page_idx>]` in brackets at the end of each paragpraph indicates the referred PDF number and related page number.
+            2. In "References", lines with same `pdf_name` should be combined to a single one.
+            3. `<pdf_num>` represents the pdf order in references, which is a number, starting from 1;
             `<page_idx>` indicates the corresponding page number in the PDF;
-            and `<region_idx>` represents the sequence number of the text block.
-            4. The values of `<page_idx>` and `<region_idx>` are the same with them in provided texts.
+            4. The values of `<page_idx>` are the same with them in provided texts.
+            5. The Page numbers in References must be in the provided refered text. DO NOT CREATE BY YOURSELF.
+            
+            An Example of {content_type.capitalize()} and References:
+            
+            ```
+            # {content_type.capitalize()}:
+            
+            Here is a Paragraph. [Ref:1.3]
+            
+            Here is another paragraph with multiple sentences. And each sentence is related to the above provided referred texts [Ref:1.6]
+            
+            Here is the third pagraph, whose content are extracted and understood with multiple references. [Ref:2.8, 3.5]
+            
+            # Refrerences:
+            [1] Here is the name of first referred PDF: Page 3, Page 6.
+            [2] Here is the name of second referred PDF: Page 8.
+            [3] Here is the name of third referred PDF: Page 5.
+            
             """
         elif output_type == "json":
             output_formats = f"""
@@ -209,14 +228,14 @@ class SectionSummarizer:
         """
 
         combined_prompt = f"""
-        You should provide statements with {word_count} words based on the following topic.
+        You should provide {content_type} with {word_count} words based on the following topic.
         
         ```
         {topic}
         ```
         
         Here are the texts you should refer to,
-        and your statements should be extracted and summarized from these texts only:
+        and your {content_type} should be extracted and understood from these texts only:
         
         ```
         {queries_str}
@@ -232,7 +251,7 @@ class SectionSummarizer:
         
         
         You should follow above requirements,
-        to provide statements with {word_count} words based on the following topic.
+        to provide {content_type} with {word_count} words based on the following topic.
         
         {extra_prompt}
         

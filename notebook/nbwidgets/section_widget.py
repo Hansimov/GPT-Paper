@@ -48,7 +48,7 @@ class SectionViewer:
             agent.output_widget = self.output_widget
 
     def create_title_and_intro_text_widget(self):
-        text_style = {"description_width": "80px"}
+        text_style = {"description_width": "50px"}
         self.title_text_widget = widgets.Text(
             description="Title",
             value=self.title,
