@@ -8,6 +8,7 @@ class SectionViewer:
     def __init__(self, title, intro):
         self.title = title
         self.intro = intro
+        self.extra_prompt = ""
         self.section_summarizer = SectionSummarizer()
         self.create_widgets()
 
@@ -37,6 +38,7 @@ class SectionViewer:
             self.section_summarizer.chat(
                 topic=self.intro,
                 queries=queries,
+                extra_prompt=self.extra_prompt,
             )
             self.summarize_button.style.button_color = "darkgreen"
 
@@ -46,10 +48,12 @@ class SectionViewer:
             agent.output_widget = self.output_widget
 
     def create_title_and_intro_text_widget(self):
+        text_style = {"description_width": "80px"}
         self.title_text_widget = widgets.Text(
             description="Title",
             value=self.title,
-            layout=widgets.Layout(width="100%"),
+            layout=widgets.Layout(width="90%", justify_content="flex-start"),
+            style=text_style,
         )
 
         def update_title_text_value(title_text_widget):
@@ -60,13 +64,27 @@ class SectionViewer:
         self.intro_text_widget = widgets.Text(
             description="Intro",
             value=self.intro,
-            layout=widgets.Layout(width="100%"),
+            layout=widgets.Layout(width="90%", justify_content="flex-start"),
+            style=text_style,
         )
 
         def update_intro_text_value(intro_text_widget):
             self.intro = intro_text_widget.value
 
         self.intro_text_widget.on_submit(update_intro_text_value)
+
+        self.extra_prompt_widget = widgets.Text(
+            description="Prompt",
+            value=self.extra_prompt,
+            placeholder="",
+            layout=widgets.Layout(width="90%", justify_content="flex-start"),
+            style=text_style,
+        )
+
+        def update_extra_promt_value(extra_prompt_widget):
+            self.extra_prompt = extra_prompt_widget.value
+
+        self.extra_prompt_widget.on_submit(update_extra_promt_value)
 
     def create_widgets(self):
         self.create_output_widget()
@@ -79,6 +97,7 @@ class SectionViewer:
                 self.summarize_button,
                 self.title_text_widget,
                 self.intro_text_widget,
+                self.extra_prompt_widget,
                 self.output_widget,
             ]
         )
