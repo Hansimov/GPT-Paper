@@ -9,8 +9,22 @@ class ReviewParser:
         self.project_path = self.pdf_root / project_dir
         self.result_root = self.project_path / "_results"
         self.review_outline_json_path = self.result_root / "review_outline.json"
+        self.review_sections_json_path = self.result_root / "review_sections.json"
+        self.outline = []
+        self.sections = []
 
-    def parse_outline(self):
+    def load_outline(self):
+        with open(self.review_outline_json_path, "r", encoding="utf-8") as rf:
+            self.outline = json.load(rf)
+        print(self.outline)
+        return self.outline
+
+    def dump_outline(self):
+        with open(self.review_outline_json_path, "w", encoding="utf-8") as rf:
+            json.dump(self.outline, rf, indent=2, ensure_ascii=False)
+        return self.review_outline_json_path
+
+    def load_sections(self):
         """
         * Required keys: `[idx, level, title, intro]`
         * Optional Keys: `[summary, statements, translation]`
@@ -24,12 +38,12 @@ class ReviewParser:
         ]
         ```
         """
-        with open(self.review_outline_json_path, "r", encoding="utf-8") as f:
-            self.review_outline = json.load(f)
-        print(self.review_outline)
-        return self.review_outline
+        with open(self.review_sections_json_path, "r", encoding="utf-8") as rf:
+            self.sections = json.load(rf)
+        print(self.sections)
+        return self.sections
 
 
 if __name__ == "__main__":
     parser = ReviewParser("cancer_review")
-    parser.parse_outline()
+    parser.load_sections()
