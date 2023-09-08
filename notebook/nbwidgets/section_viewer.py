@@ -5,12 +5,14 @@ from agents.paper_reviewer import SectionSummarizer, documents_retriever
 
 
 class SectionViewer:
-    def __init__(self, title, intro):
+    def __init__(self, title, intro, children_section_viewers=[]):
         self.title = title
         self.intro = intro
         self.extra_prompt = ""
         self.section_summarizer = SectionSummarizer()
         self.create_widgets()
+        self.response_content = ""
+        self.children_section_viewers = children_section_viewers
 
     def summarize_chat(self, button):
         self.summarize_button.style.button_color = "orange"
@@ -18,7 +20,7 @@ class SectionViewer:
         queries = documents_retriever.query([self.intro])
         with self.output_widget:
             # print(f"Button clicked at {datetime.now()}")
-            self.section_summarizer.chat(
+            self.response_content = self.section_summarizer.chat(
                 topic=self.intro,
                 queries=queries,
                 extra_prompt=self.extra_prompt,
@@ -101,6 +103,13 @@ class SectionViewer:
                 self.output_widget,
             ]
         )
+        if len(self.children_section_viewers) > 0:
+            self.widgets.extend(
+                [
+                    child_section_viewer.container
+                    for child_section_viewer in self.children_section_viewers
+                ]
+            )
         self.container.children = self.widgets
 
     def display(self):
