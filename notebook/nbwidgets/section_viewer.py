@@ -12,23 +12,6 @@ class SectionViewer:
         self.section_summarizer = SectionSummarizer()
         self.create_widgets()
 
-    def create_button(self):
-        self.summarize_button = widgets.Button(
-            description="Summarize",
-            disabled=False,
-            button_style="",
-            tooltip="Summarize this section based on the topic and intro",
-            icon="radiation",
-        )
-        self.translate_button = widgets.Button(
-            description="Translate",
-            disabled=False,
-            button_style="",  # 'success', 'info', 'warning', 'danger' or ''
-            tooltip="Click and translate the details for this section",
-            icon="language",
-        )
-        self.summarize_button.on_click(self.summarize_chat)
-
     def summarize_chat(self, button):
         self.summarize_button.style.button_color = "orange"
         self.output_widget.clear_output()
@@ -85,6 +68,23 @@ class SectionViewer:
             self.extra_prompt = extra_prompt_widget.value
 
         self.extra_prompt_widget.on_submit(update_extra_promt_value)
+
+    def create_button(self):
+        self.summarize_button = widgets.Button(
+            description="Summarize",
+            disabled=False,
+            button_style="",
+            tooltip="Summarize this section based on the topic and intro",
+            icon="radiation",
+        )
+        self.translate_button = widgets.Button(
+            description="Translate",
+            disabled=False,
+            button_style="",  # 'success', 'info', 'warning', 'danger' or ''
+            tooltip="Click and translate the details for this section",
+            icon="language",
+        )
+        self.summarize_button.on_click(self.summarize_chat)
 
     def create_widgets(self):
         self.create_output_widget()
