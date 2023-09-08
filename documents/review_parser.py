@@ -152,35 +152,38 @@ class ReviewParser:
         for section in self.sections:
             section["children"] = []
 
-        section_root = SectionNode()
+        section_root = SectionNode(section=self.sections[0])
         prev_section_node = section_root
-        for section in self.sections:
-            section_node = SectionNode(section=section, parent=prev_section_node)
+        for section in self.sections[1:]:
+            section_node = SectionNode(section=section)
             if section_node.depth == prev_section_node.depth:
-                prev_section_node.parent.children.append(section_node)
+                parent = prev_section_node.parent
             elif section_node.depth > prev_section_node.depth:
-                prev_section_node.children.append(section_node)
-            else:
+                parent = prev_section_node
+            else:  # section_node.depth < prev_section_node.depth
                 parent = prev_section_node.get_latest_node_with_depth(
-                    section_node.depth
-                ).parent
-                parent.children.append(section_node)
+                    section_node.depth - 1
+                )
+            section_node.parent = parent
+            parent.children.append(section_node)
             prev_section_node = section_node
+        self.hierarchical_sections = section_root.dump_to_hierarchical_sections_dict()
+        pprint.pprint(self.hierarchical_sections)
+        return self.hierarchical_sections
 
 
 class SectionNode:
-    def __init__(self, section=None, parent=None, children=[]):
+    def __init__(self, section=None, parent=None):
         self.section = section
         self.parent = parent
-        self.children = children
+        self.children = []
 
-        if self.section is None:
-            self.depth = 0
-        else:
-            self.title = section["title"]
-            self.intro = section["intro"]
-            self.level = section["level"]
-            self.depth = calc_level_depth(section["level"])
+        self.idx = section["idx"]
+        self.level = section["level"]
+        self.title = section["title"]
+        self.intro = section["intro"]
+
+        self.depth = calc_level_depth(section["level"])
 
     def get_latest_node_with_depth(self, depth):
         latest_node = self
@@ -188,9 +191,32 @@ class SectionNode:
             latest_node = latest_node.parent
         return latest_node
 
+    def get_common_parent(self, another_node):
+        max_depth = max(self.depth, another_node.depth)
+        common_parent = self.get_latest_node_with_depth(max_depth).parent
+        return common_parent
+
+    def dump_to_hierarchical_sections_dict(self):
+        hierarchical_sections = {
+            "idx": self.idx,
+            "level": self.level,
+            "depth": self.depth,
+            "title": self.title,
+            "intro": self.intro,
+            "children": [],
+        }
+        if self.children == []:
+            return hierarchical_sections
+        else:
+            hierarchical_sections["children"] = [
+                child.dump_to_hierarchical_sections_dict() for child in self.children
+            ]
+            return hierarchical_sections
+
 
 if __name__ == "__main__":
     parser = ReviewParser("cancer_review")
     parser.load_sections()
     # parser.get_sections_at_depth(1)
-    parser.get_sections_below_depth(3, contain_current_depth=False)
+    # parser.get_sections_below_depth(3, contain_current_depth=False)
+    parser.construct_hierarchical_sections()
