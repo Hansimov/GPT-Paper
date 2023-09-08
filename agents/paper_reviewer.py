@@ -84,7 +84,7 @@ outline_filler = OpenAIAgent(
 
 
 class SectionSummarizer:
-    def __init__(self):
+    def __init__(self, content_type="summary"):
         self.sum_agent = OpenAIAgent(
             name="section_summarizer",
             # model="gpt-3.5-turbo",
@@ -100,6 +100,7 @@ class SectionSummarizer:
             system_message="你是一个专业的英译中专家。对于提供的英文，你需要如实翻译成中文。你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本：",
         )
         self.agents = [self.sum_agent, self.translate_agent]
+        self.content_type = content_type
 
     def chat(self, topic, queries, extra_prompt="", word_count=600, translate=False):
         sum_prompt = self.create_sum_prompt(
@@ -124,11 +125,13 @@ class SectionSummarizer:
         word_count=500,
         lang="en",
         output_type="text",
-        content_type="summary",
+        content_type=None,
     ):
         queries_str = str(queries[:query_count])
         lang_map = {"en": "英文", "zh": "中文"}
         lang_str = lang_map[lang]
+
+        content_type = content_type if content_type is not None else self.content_type
 
         if output_type == "text":
             output_formats = f"""
