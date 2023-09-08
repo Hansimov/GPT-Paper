@@ -1,0 +1,72 @@
+{
+    "topic": "An overview of the latest developments in AI technologies and their applications in the clinical management of liver cancer.",
+    "statements": [
+        {
+            "text": "AI has shown promise in hepatology to improve treatment outcomes, through techniques like machine learning and deep learning to analyze data and guide clinical decisions. AI applications are being studied for diagnosis and management of liver diseases and lesions using clinical, lab, imaging and other data. AI has helped reduce errors and improve treatment protocols, though more research is still needed. ",
+            "refs": [
+                "1-1.4",
+                "1-1.5"
+            ]
+        },
+        {
+            "text": "AI is applied in gastroenterology for evaluating Barrett's esophagus, GI cancers, polyps, IBD, and obscure GI bleeding. With growth in gastroenterology AI, hepatology research has accelerated applying AI for detecting liver fibrosis, NAFLD diagnosis, characterizing liver lesions, diagnosing hepatocellular carcinoma, and prognosticating chronic liver disease.",
+            "refs": [
+                "1-1.5"
+            ]
+        },
+        {
+            "text": "AI can aid rural healthcare by assisting diagnosis, delivering personalized care, providing quality care, and training doctors/nurses. AI can monitor chronic patients via smartphones. Large datasets and AI can find therapeutic targets. More work is needed on AI for alcohol, metabolic, and autoimmune liver diseases. AI systems for segmentation/diagnosis and improved characterization of liver lesions may arrive in 5 years.",
+            "refs": [
+                "1-11.2"
+            ]
+        },
+        {
+            "text": "AI shows promise for diagnosis, prognostics, treatment response prediction, transplant outcomes, and real-time monitoring, by analyzing clinical, genetic, molecular, imaging, and pathology data. More studies are needed on treatment response prediction, post-transplant response, and predicting drug hepatotoxicity.",
+            "refs": [
+                "1-11.6"
+            ]
+        },
+        {
+            "text": "Radiomics uses machine learning on expert-extracted imaging features. Deep learning uses neural networks for automatic feature extraction and self-optimization. Both aim to predict pre-defined outcomes. AI applications in liver imaging include segmentation, classification of disease severity/lesions, and outcome prediction.",
+            "refs": [
+                "2-5.2"
+            ]
+        },
+        {
+            "text": "Deep learning pathology methods enable prognosis prediction and therapy targeting beyond human limits. AI survival prediction models after HCC resection have shown high accuracy. Exploring AI and histology correlations for transplant patient recurrence deserves further study.",
+            "refs": [
+                "3-3.7"
+            ]
+        },
+        {
+            "text": "AI can improve HCC risk prediction, diagnosis, and prognostication. Machine/deep learning models analyze diverse data like EHRs, imaging, molecular biomarkers. AI may enable personalized surveillance strategies by risk stratification. Studies apply AI to characterize indeterminate liver lesions and enable earlier HCC detection.",
+            "refs": [
+                "4-1.8",
+                "4-1.12",
+                "4-3.5",
+                "4-4.4"
+            ]
+        },
+        {
+            "text": "Future AI research needs: standardizing data, improving generalizability and interpretability, prospective studies showing real-world impact, incorporating AI in clinical guidelines. AI promises to profoundly change HCC care if challenges are overcome.",
+            "refs": [
+                "4-6.13",
+                "4-11.6"
+            ]
+        }
+    ],
+    "references": {
+        "1": {
+            "pdf_name": "Artificial Intelligence in Hepatology Ready for the Primetime"
+        },
+        "2": {
+            "pdf_name": "Artificial intelligence in liver diseases Improving diagnostics, prognostics and response prediction"
+        },
+        "3": {
+            "pdf_name": "Development of a deep pathomics score for predicting hepatocellular carcinoma recurrence after liver transplantation"
+        },
+        "4": {
+            "pdf_name": "JOH 2022 Artificial intelligence for the prevention and clinical management of hepatocellular carcinoma"
+        }
+    }
+}
