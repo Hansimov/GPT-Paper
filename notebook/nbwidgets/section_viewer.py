@@ -2,17 +2,19 @@ from datetime import datetime
 import ipywidgets as widgets
 from IPython.display import display
 from agents.paper_reviewer import SectionSummarizer, documents_retriever
+from documents.section_parser import SectionNode, SectionTree
 
 
 class SectionViewer:
-    def __init__(self, title, intro, children_section_viewers=[]):
-        self.title = title
-        self.intro = intro
+    def __init__(self, section_node, parent=None):
+        self.section_node = section_node
+        self.section_node.section_viewer = self
+        self.parent = parent
+        self.children = []
         self.extra_prompt = ""
-        self.section_summarizer = SectionSummarizer()
-        self.create_widgets()
         self.response_content = ""
-        self.children_section_viewers = children_section_viewers
+        self.section_summarizer = SectionSummarizer()
+        # self.create_widgets()
 
     def summarize_chat(self, button):
         self.summarize_button.style.button_color = "orange"
@@ -36,25 +38,25 @@ class SectionViewer:
         text_style = {"description_width": "50px"}
         self.title_text_widget = widgets.Text(
             description="Title",
-            value=self.title,
+            value=self.section_node.title,
             layout=widgets.Layout(width="90%", justify_content="flex-start"),
             style=text_style,
         )
 
         def update_title_text_value(title_text_widget):
-            self.title = title_text_widget.value
+            self.section_node.title = title_text_widget.value
 
         self.title_text_widget.on_submit(update_title_text_value)
 
         self.intro_text_widget = widgets.Text(
             description="Intro",
-            value=self.intro,
+            value=self.section_node.intro,
             layout=widgets.Layout(width="90%", justify_content="flex-start"),
             style=text_style,
         )
 
         def update_intro_text_value(intro_text_widget):
-            self.intro = intro_text_widget.value
+            self.section_node.intro = intro_text_widget.value
 
         self.intro_text_widget.on_submit(update_intro_text_value)
 
@@ -93,24 +95,56 @@ class SectionViewer:
         self.create_title_and_intro_text_widget()
         self.create_button()
         self.container = widgets.VBox()
-        self.widgets = []
-        self.widgets.extend(
-            [
-                self.summarize_button,
-                self.title_text_widget,
-                self.intro_text_widget,
-                self.extra_prompt_widget,
-                self.output_widget,
-            ]
-        )
-        if len(self.children_section_viewers) > 0:
-            self.widgets.extend(
-                [
-                    child_section_viewer.container
-                    for child_section_viewer in self.children_section_viewers
-                ]
-            )
+        self.children = []
+        self.widgets = [
+            self.summarize_button,
+            self.title_text_widget,
+            self.intro_text_widget,
+            self.extra_prompt_widget,
+            self.output_widget,
+        ]
+
+        if len(self.children) == 0:
+            pass
+        else:
+            pass
+            # self.section_viewer_children = [
+            #     child.container for child in self.section_node.
+            # ]
+
         self.container.children = self.widgets
 
     def display(self):
         display(self.container)
+
+
+class SectionViewerTree:
+    def __init__(self, project_dir):
+        self.section_tree = SectionTree(project_dir)
+        self.construct_section_viewers_tree()
+
+    def construct_section_viewers_tree(self):
+        self.section_tree.construct_hierarchical_sections()
+
+        section_root = self.section_tree.section_root
+        section_viewer_root = SectionViewer(section_root)
+        self.section_viewer = section_viewer_root
+
+        section_viewer_stack = [section_viewer_root]
+        while len(section_viewer_stack) > 0:
+            section_viewer = section_viewer_stack.pop()
+            section_node = section_viewer.section_node
+            print(section_node.level)
+            for child in section_node.children[::-1]:
+                child_section_viewer = SectionViewer(child)
+                child_section_viewer.parent = section_viewer
+                section_viewer_stack.append(child_section_viewer)
+                section_viewer.children.append(child_section_viewer)
+
+        self.section_viewer_root = section_viewer_root
+
+
+if __name__ == "__main__":
+    section_viewer_tree = SectionViewerTree("cancer_review")
+    # print(section_viewer_tree.section_viewer_root.level)
+    # print(section_tree.section_root.children)
