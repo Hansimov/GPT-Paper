@@ -155,6 +155,7 @@ class SectionTree:
     def __init__(self, project_dir):
         self.project_dir = project_dir
         self.sections_json_parser = SectionsJsonParser(project_dir)
+        self.construct_hierarchical_sections()
 
     def construct_hierarchical_sections(self):
         """
@@ -223,10 +224,8 @@ class SectionTree:
 
         self.hierarchical_sections = hierarchical_sections
         self.section_root = section_root
-        return self.hierarchical_sections
 
 
 if __name__ == "__main__":
     section_tree = SectionTree("cancer_review")
-    hierarchical_sections = section_tree.construct_hierarchical_sections()
-    pprint.pprint(hierarchical_sections)
+    pprint.pprint(section_tree.hierarchical_sections)
