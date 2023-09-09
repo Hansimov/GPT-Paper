@@ -19,11 +19,11 @@ class SectionViewer:
     def summarize_chat(self, button):
         self.summarize_button.style.button_color = "orange"
         self.output_widget.clear_output()
-        queries = documents_retriever.query([self.intro])
+        queries = documents_retriever.query([self.section_node.intro])
         with self.output_widget:
             # print(f"Button clicked at {datetime.now()}")
             self.response_content = self.section_summarizer.chat(
-                topic=self.intro,
+                topic=self.section_node.intro,
                 queries=queries,
                 extra_prompt=self.extra_prompt,
             )
@@ -38,7 +38,7 @@ class SectionViewer:
         text_style = {"description_width": "50px"}
         self.title_text_widget = widgets.Text(
             description="Title",
-            value=self.section_node.title,
+            value=f"{self.section_node.level}: {self.section_node.title}",
             layout=widgets.Layout(width="90%", justify_content="flex-start"),
             style=text_style,
         )
@@ -90,61 +90,72 @@ class SectionViewer:
         )
         self.summarize_button.on_click(self.summarize_chat)
 
-    def create_widgets(self):
+    def create_widgets(self, create_children=True):
         self.create_output_widget()
         self.create_title_and_intro_text_widget()
         self.create_button()
         self.container = widgets.VBox()
-        self.children = []
         self.widgets = [
             self.summarize_button,
             self.title_text_widget,
             self.intro_text_widget,
-            self.extra_prompt_widget,
+            # self.extra_prompt_widget,
             self.output_widget,
         ]
 
         if len(self.children) == 0:
             pass
         else:
-            pass
-            # self.section_viewer_children = [
-            #     child.container for child in self.section_node.
-            # ]
+            if create_children:
+                for child in self.children:
+                    child.create_widgets()
 
         self.container.children = self.widgets
 
-    def display(self):
-        display(self.container)
+    def display(self, display_children=True):
+        if display_children:
+            section_viewer_stack = [self]
+            while len(section_viewer_stack) > 0:
+                section_viewer = section_viewer_stack.pop()
+                display(section_viewer.container)
+                for child_section_viewer in section_viewer.children:
+                    section_viewer_stack.append(child_section_viewer)
+        else:
+            display(self.container)
 
 
 class SectionViewerTree:
     def __init__(self, project_dir):
         self.section_tree = SectionTree(project_dir)
         self.construct_section_viewers_tree()
+        self.create_widgets()
+        self.display()
 
     def construct_section_viewers_tree(self):
         self.section_tree.construct_hierarchical_sections()
 
         section_root = self.section_tree.section_root
         section_viewer_root = SectionViewer(section_root)
-        self.section_viewer = section_viewer_root
 
         section_viewer_stack = [section_viewer_root]
         while len(section_viewer_stack) > 0:
             section_viewer = section_viewer_stack.pop()
             section_node = section_viewer.section_node
-            print(section_node.level)
-            for child in section_node.children[::-1]:
-                child_section_viewer = SectionViewer(child)
+            # print(section_node.level)
+            for child_section_node in section_node.children[::-1]:
+                child_section_viewer = SectionViewer(child_section_node)
                 child_section_viewer.parent = section_viewer
-                section_viewer_stack.append(child_section_viewer)
                 section_viewer.children.append(child_section_viewer)
+                section_viewer_stack.append(child_section_viewer)
 
         self.section_viewer_root = section_viewer_root
+
+    def create_widgets(self):
+        self.section_viewer_root.create_widgets()
+
+    def display(self):
+        self.section_viewer_root.display()
 
 
 if __name__ == "__main__":
     section_viewer_tree = SectionViewerTree("cancer_review")
-    # print(section_viewer_tree.section_viewer_root.level)
-    # print(section_tree.section_root.children)

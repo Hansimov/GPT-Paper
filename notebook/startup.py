@@ -29,8 +29,7 @@ from IPython.display import display, HTML
 from utils.logger import logger
 from termcolor import colored
 from cells import get_above_cell_content, get_notebook_cells
-from nbwidgets.section_viewer import SectionViewer
-from nbwidgets.article_viewer import ArticleViewer
+from nbwidgets.section_viewer import SectionViewer, SectionViewerTree
 from time import sleep
 from agents.openai import OpenAIAgent
 from agents.paper_reviewer import (
