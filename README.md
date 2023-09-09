@@ -53,10 +53,10 @@ pip install sentence-transformers
 pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipynbname
 ```
 
-**aiohttp:**
+**httpx:**
 
 ```sh
-pip install aiohttp[speedups] nest_asyncio
+pip install httpx
 ```
 
 
