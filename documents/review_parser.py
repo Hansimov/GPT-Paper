@@ -13,7 +13,7 @@ def calc_level_depth(level, level_0_depth=0):
     return level_depth
 
 
-class ReviewParser:
+class SectionsJsonParser:
     pdf_root = Path(__file__).parents[1] / "pdfs"
 
     def __init__(self, project_dir):
@@ -21,6 +21,9 @@ class ReviewParser:
         self.result_root = self.project_path / "_results"
         self.review_outline_json_path = self.result_root / "review_outline.json"
         self.review_sections_json_path = self.result_root / "review_sections.json"
+        self.review_sections_hierarchical_json_path = (
+            self.result_root / "review_sections_hierarchical.json"
+        )
         self.outline = []
         self.sections = []
 
@@ -105,72 +108,6 @@ class ReviewParser:
             section["idx"] = section_idx
             section_idx += 1
 
-    def get_last_section_in_hierarchy(self, hierarchical_sections):
-        last_section = hierarchical_sections[-1]
-        while last_section["children"]:
-            last_section = last_section["children"][-1]
-        return last_section
-
-    def construct_hierarchical_sections(self):
-        """
-        Return:
-        ```json
-        [
-            {
-                "idx": 0, "level": "0", "title": "...", "intro": "...", "children": []
-            },
-            {
-                "idx": 1, "level": "1",   "title": "...", "intro": "...",
-                "children": [
-                    { "idx": 2, "level": "1.1", "title": "...", "intro": "..."
-                        "children": [
-                            {"idx": 3, "level": "1.1.1", "title": "...", "intro": "...",
-                                "children": [],
-                            },
-                            {"idx": 4, "level": "1.1.2", "title": "...", "intro": "...",
-                                "children": [],
-                            },
-                        ],
-                    },
-                    { "idx": 5, "level": "1.2", "title": "...", "intro": "...",
-                        "children": [...],
-                    },
-                    ...
-                ]
-            },
-            {
-                "idx": 6, "level": "2",   "title": "...", "intro": "...",
-                "children": [...]
-            },
-            ...
-        ]
-        ```
-        """
-
-        self.hierarchical_sections = []
-
-        for section in self.sections:
-            section["children"] = []
-
-        section_root = SectionNode(section=self.sections[0])
-        prev_section_node = section_root
-        for section in self.sections[1:]:
-            section_node = SectionNode(section=section)
-            if section_node.depth == prev_section_node.depth:
-                parent = prev_section_node.parent
-            elif section_node.depth > prev_section_node.depth:
-                parent = prev_section_node
-            else:  # section_node.depth < prev_section_node.depth
-                parent = prev_section_node.get_latest_node_with_depth(
-                    section_node.depth - 1
-                )
-            section_node.parent = parent
-            parent.children.append(section_node)
-            prev_section_node = section_node
-        self.hierarchical_sections = section_root.dump_to_hierarchical_sections_dict()
-        pprint.pprint(self.hierarchical_sections)
-        return self.hierarchical_sections
-
 
 class SectionNode:
     def __init__(self, section=None, parent=None):
@@ -214,9 +151,82 @@ class SectionNode:
             return hierarchical_sections
 
 
+class SectionTree:
+    def __init__(self, project_dir):
+        self.project_dir = project_dir
+        self.sections_json_parser = SectionsJsonParser(project_dir)
+
+    def construct_hierarchical_sections(self):
+        """
+        Return:
+        ```json
+        [
+            {
+                "idx": 0, "level": "0", "title": "...", "intro": "...", "children": []
+            },
+            {
+                "idx": 1, "level": "1",   "title": "...", "intro": "...",
+                "children": [
+                    { "idx": 2, "level": "1.1", "title": "...", "intro": "..."
+                        "children": [
+                            {"idx": 3, "level": "1.1.1", "title": "...", "intro": "...",
+                                "children": [],
+                            },
+                            {"idx": 4, "level": "1.1.2", "title": "...", "intro": "...",
+                                "children": [],
+                            },
+                        ],
+                    },
+                    { "idx": 5, "level": "1.2", "title": "...", "intro": "...",
+                        "children": [...],
+                    },
+                    ...
+                ]
+            },
+            {
+                "idx": 6, "level": "2",   "title": "...", "intro": "...",
+                "children": [...]
+            },
+            ...
+        ]
+        ```
+        """
+        self.sections = self.sections_json_parser.load_sections()
+        hierarchical_sections = []
+
+        for section in self.sections:
+            section["children"] = []
+
+        section_root = SectionNode(section=self.sections[0])
+        prev_section_node = section_root
+        for section in self.sections[1:]:
+            section_node = SectionNode(section=section)
+            if section_node.depth == prev_section_node.depth:
+                parent = prev_section_node.parent
+            elif section_node.depth > prev_section_node.depth:
+                parent = prev_section_node
+            else:  # section_node.depth < prev_section_node.depth
+                parent = prev_section_node.get_latest_node_with_depth(
+                    section_node.depth - 1
+                )
+            section_node.parent = parent
+            parent.children.append(section_node)
+            prev_section_node = section_node
+        hierarchical_sections = section_root.dump_to_hierarchical_sections_dict()
+
+        with open(
+            self.sections_json_parser.review_sections_hierarchical_json_path,
+            "w",
+            encoding="utf-8",
+        ) as wf:
+            json.dump(hierarchical_sections, wf, indent=4, ensure_ascii=False)
+
+        self.hierarchical_sections = hierarchical_sections
+        self.section_root = section_root
+        return self.hierarchical_sections
+
+
 if __name__ == "__main__":
-    parser = ReviewParser("cancer_review")
-    parser.load_sections()
-    # parser.get_sections_at_depth(1)
-    # parser.get_sections_below_depth(3, contain_current_depth=False)
-    parser.construct_hierarchical_sections()
+    section_tree = SectionTree("cancer_review")
+    hierarchical_sections = section_tree.construct_hierarchical_sections()
+    pprint.pprint(hierarchical_sections)
