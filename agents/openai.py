@@ -218,7 +218,7 @@ class OpenAIAgent:
         os.environ = enver.envs
         # print(os.environ.get("http_proxy"))
         self.requests_headers = {
-            # "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
             "Content-Type": "application/json",
             "Authorization": f"Bearer {enver.envs['OPENAI_API_KEY']}",
         }
@@ -275,7 +275,7 @@ class OpenAIAgent:
                         try:
                             line_data = ast.literal_eval(line)
                         except:
-                            self.print_output(line_data)
+                            self.print_output(line)
                             raise e
                     # print(line_data)
                     delta_data = line_data["choices"][0]["delta"]
@@ -329,7 +329,8 @@ if __name__ == "__main__":
     agent = OpenAIAgent(
         name="ninomae",
         endpoint_name="ninomae",
-        model="gpt-4",
+        # model="gpt-4",
+        model="poe-gpt-3.5-turbo-16k",
         temperature=0.0,
         system_message="Explain the following text in Chinese:",
     )

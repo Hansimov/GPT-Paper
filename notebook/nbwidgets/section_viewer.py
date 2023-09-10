@@ -20,14 +20,13 @@ class SectionViewer:
         self.summarize_button.style.button_color = "orange"
         self.output_widget.clear_output()
         queries = documents_retriever.query([self.section_node.intro])
-        with self.output_widget:
-            # print(f"Button clicked at {datetime.now()}")
-            self.response_content = self.section_summarizer.chat(
-                topic=self.section_node.intro,
-                queries=queries,
-                extra_prompt=self.extra_prompt,
-            )
-            self.summarize_button.style.button_color = "darkgreen"
+        # print(f"Button clicked at {datetime.now()}")
+        self.response_content = self.section_summarizer.chat(
+            topic=self.section_node.intro,
+            queries=queries,
+            extra_prompt=self.extra_prompt,
+        )
+        self.summarize_button.style.button_color = "darkgreen"
 
     def create_output_widget(self):
         self.output_widget = widgets.Output()

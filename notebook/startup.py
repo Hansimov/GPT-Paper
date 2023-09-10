@@ -32,18 +32,7 @@ from cells import get_above_cell_content, get_notebook_cells
 from nbwidgets.section_viewer import SectionViewer, SectionViewerTree
 from time import sleep
 from agents.openai import OpenAIAgent
-from agents.paper_reviewer import (
-    prompter,
-    translator,
-    summarizer,
-    synonymer,
-    outliner,
-    polisher,
-    criticizer,
-    backtracker,
-    tasker,
-    outline_filler,
-)
+from agents.paper_reviewer import outline_filler
 from documents.json_checker import JsonChecker
 
 jupyter_black.load(lab=True)

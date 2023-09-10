@@ -1,47 +1,47 @@
 from agents.openai import OpenAIAgent
 from agents.documents_retriever import DocumentsRetriever
 
-prompter = OpenAIAgent(
-    name="prompter",
-    model="gpt-4",
-    system_message="你是一个擅长为大语言模型（LLM）撰写提示词（prompts）的专家。对于提供的文本，你总是能给出更易于LLM生成优质回复的prompts。下面是给出的文本：",
-)
-translator = OpenAIAgent(
-    name="translator",
-    model="gpt-3.5-turbo",
-    system_message="你是一个专业的英译中专家。对于提供的英文，你需要如实翻译成中文。你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本：",
-)
-summarizer = OpenAIAgent(
-    name="summarizer",
-    model="gpt-4",
-    system_message="你是一个擅长总结文章的学术专家。对于提供的文本，你总是能给出易于理解和总结。下面是提供的文本：",
-)
-synonymer = OpenAIAgent(
-    name="synonymer",
-    system_message="你的任务是生成与提供的文本内容相近的文本。对于提供的文本，你总是给出三条长度和意思相近的文本。下面是提供的文本：",
-)
-outliner = OpenAIAgent(
-    name="outliner",
-    system_message="你的任务是针对给定的文本和话题，生成大纲。下面是提供的文本：",
-)
-polisher = OpenAIAgent(
-    name="polisher",
-    model="gpt-4",
-    system_message="你的任务是针对提供的文本，进行逻辑和表达上的润色。润色后的内容应当更加严谨和丰富。下面是提供的文本：",
-)
-criticizer = OpenAIAgent(
-    name="criticizer",
-    system_message="你的任务是针对提供的文本，分别给出三类批评：对观点的批评，对逻辑的批评，对表达的批评。下面是提供的文本：",
-)
-backtracker = OpenAIAgent(
-    name="backtracker",
-    system_message="你的任务是根据提供的文本，猜测该段文本可能源于什么场景或问题。请给出三个可能的选项。下面是提供的文本：",
-)
-tasker = OpenAIAgent(
-    name="tasker",
-    model="gpt-4",
-    system_message="你擅长将一个大任务分解成多个连续的子任务。下面是任务内容：",
-)
+# prompter = OpenAIAgent(
+#     name="prompter",
+#     model="gpt-4",
+#     system_message="你是一个擅长为大语言模型（LLM）撰写提示词（prompts）的专家。对于提供的文本，你总是能给出更易于LLM生成优质回复的prompts。下面是给出的文本：",
+# )
+# translator = OpenAIAgent(
+#     name="translator",
+#     model="gpt-3.5-turbo",
+#     system_message="你是一个专业的英译中专家。对于提供的英文，你需要如实翻译成中文。你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本：",
+# )
+# summarizer = OpenAIAgent(
+#     name="summarizer",
+#     model="gpt-4",
+#     system_message="你是一个擅长总结文章的学术专家。对于提供的文本，你总是能给出易于理解和总结。下面是提供的文本：",
+# )
+# synonymer = OpenAIAgent(
+#     name="synonymer",
+#     system_message="你的任务是生成与提供的文本内容相近的文本。对于提供的文本，你总是给出三条长度和意思相近的文本。下面是提供的文本：",
+# )
+# outliner = OpenAIAgent(
+#     name="outliner",
+#     system_message="你的任务是针对给定的文本和话题，生成大纲。下面是提供的文本：",
+# )
+# polisher = OpenAIAgent(
+#     name="polisher",
+#     model="gpt-4",
+#     system_message="你的任务是针对提供的文本，进行逻辑和表达上的润色。润色后的内容应当更加严谨和丰富。下面是提供的文本：",
+# )
+# criticizer = OpenAIAgent(
+#     name="criticizer",
+#     system_message="你的任务是针对提供的文本，分别给出三类批评：对观点的批评，对逻辑的批评，对表达的批评。下面是提供的文本：",
+# )
+# backtracker = OpenAIAgent(
+#     name="backtracker",
+#     system_message="你的任务是根据提供的文本，猜测该段文本可能源于什么场景或问题。请给出三个可能的选项。下面是提供的文本：",
+# )
+# tasker = OpenAIAgent(
+#     name="tasker",
+#     model="gpt-4",
+#     system_message="你擅长将一个大任务分解成多个连续的子任务。下面是任务内容：",
+# )
 
 outline_filler = OpenAIAgent(
     name="outline_filler",
@@ -85,12 +85,12 @@ outline_filler = OpenAIAgent(
 
 class SectionSummarizer:
     def __init__(self, content_type="summary"):
-        self.sum_agent = OpenAIAgent(
+        self.summarize_agent = OpenAIAgent(
             name="section_summarizer",
             # model="gpt-3.5-turbo",
-            model="poe-gpt-3.5-turbo-16k",
+            # model="poe-gpt-3.5-turbo-16k",
             # model="poe-claude-2-100k",
-            # model="gpt-4",
+            model="gpt-4",
             # system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
             system_message="Your task is to provide output that are completely referred to the provided reference texts. You should focus only on the texts related to the given topic.",
         )
@@ -99,24 +99,24 @@ class SectionSummarizer:
             model="poe-gpt-3.5-turbo-16k",
             system_message="你是一个专业的英译中专家。对于提供的英文，你需要如实翻译成中文。你的翻译应当是严谨的和自然的，不要删改原文。请按照要求翻译如下文本：",
         )
-        self.agents = [self.sum_agent, self.translate_agent]
+        self.agents = [self.summarize_agent, self.translate_agent]
         self.content_type = content_type
 
     def chat(self, topic, queries, extra_prompt="", word_count=600, translate=False):
-        sum_prompt = self.create_sum_prompt(
+        summarize = self.create_summarize_prompt(
             topic=topic,
             queries=queries,
             extra_prompt=extra_prompt,
             word_count=word_count,
         )
-        sum_content = self.sum_agent.chat(sum_prompt, continuous=True)
+        sum_content = self.summarize_agent.chat(summarize, continuous=True)
         if translate:
             translate_content = self.translate_agent.chat(sum_content, continuous=True)
         else:
             translate_content = ""
         return sum_content, translate_content
 
-    def create_sum_prompt(
+    def create_summarize_prompt(
         self,
         topic,
         queries,
@@ -157,7 +157,7 @@ class SectionSummarizer:
             
             1. The order of references should follow the order of your output {content_type} referred,
             meaning references used earlier should appear earlier.
-            2. The `[<pdf_num>.<page_idx>]` in brackets at the end of each paragpraph indicates the referred PDF number and related page number.
+            2. At the end of each paragraph, you should add a `[<pdf_num>.<page_idx>]` in brackets, which indicates PDF number and related page number the of paragraph's referred texts.
             2. In "References", lines with same `pdf_name` should be combined to a single one.
             3. `<pdf_num>` represents the pdf order in references, which is a number, starting from 1;
             `<page_idx>` indicates the corresponding page number in the PDF;
