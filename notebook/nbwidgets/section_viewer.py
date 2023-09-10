@@ -12,6 +12,7 @@ class SectionViewer:
         self.parent = parent
         self.children = []
         self.extra_prompt = ""
+        self.word_count = 500
         self.response_content = ""
         self.section_summarizer = SectionSummarizer(content_type="refinement")
         # self.create_widgets()
@@ -25,6 +26,7 @@ class SectionViewer:
             topic=self.section_node.intro,
             queries=queries,
             extra_prompt=self.extra_prompt,
+            word_count=self.word_count,
         )
         self.summarize_button.style.button_color = "darkgreen"
 
@@ -72,6 +74,19 @@ class SectionViewer:
 
         self.extra_prompt_widget.on_submit(update_extra_promt_value)
 
+        self.word_count_widget = widgets.Text(
+            description="Words",
+            value=str(self.word_count),
+            placeholder="",
+            layout=widgets.Layout(width="90%", justify_content="flex-start"),
+            style=text_style,
+        )
+
+        def update_word_count_value(word_count_widget):
+            self.word_count = int(word_count_widget.value)
+
+        self.word_count_widget.on_submit(update_word_count_value)
+
     def create_button(self):
         self.summarize_button = widgets.Button(
             description="Summarize",
@@ -93,12 +108,17 @@ class SectionViewer:
         self.create_output_widget()
         self.create_title_and_intro_text_widget()
         self.create_button()
-        self.container = widgets.VBox()
+        self.container = widgets.HBox()
+        self.left_container = widgets.VBox(layout=widgets.Layout(width="50%"))
+        self.right_container = widgets.VBox(
+            layout=widgets.Layout(width="50%", height="50%", overflow_y="auto"),
+        )
         self.widgets = [
             self.summarize_button,
             self.title_text_widget,
             self.intro_text_widget,
             # self.extra_prompt_widget,
+            self.word_count_widget,
             self.output_widget,
         ]
 
@@ -109,7 +129,11 @@ class SectionViewer:
                 for child in self.children:
                     child.create_widgets()
 
-        self.container.children = self.widgets
+        self.left_container.children = self.widgets
+        self.right_container.children = [
+            widgets.HTML(value=str(self.section_node.intro))
+        ]
+        self.container.children = [self.left_container, self.right_container]
 
     def display(self, display_children=True):
         if display_children:
