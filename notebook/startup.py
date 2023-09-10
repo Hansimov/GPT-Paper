@@ -30,10 +30,10 @@ from utils.logger import logger
 from termcolor import colored
 from cells import get_above_cell_content, get_notebook_cells
 from nbwidgets.section_viewer import SectionViewer, SectionViewerTree
-from time import sleep
 from agents.openai import OpenAIAgent
 from agents.paper_reviewer import outline_filler
 from documents.json_checker import JsonChecker
+from time import sleep
 
 jupyter_black.load(lab=True)
 

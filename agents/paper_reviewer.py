@@ -88,9 +88,9 @@ class SectionSummarizer:
         self.summarize_agent = OpenAIAgent(
             name="section_summarizer",
             # model="gpt-3.5-turbo",
-            # model="poe-gpt-3.5-turbo-16k",
+            model="poe-gpt-3.5-turbo-16k",
             # model="poe-claude-2-100k",
-            model="gpt-4",
+            # model="gpt-4",
             # system_message="你的任务是：对于提供的文本，只关注提供的主题，给出完全符合原文内容和主题的陈述。",
             system_message="Your task is to provide output that are completely referred to the provided reference texts. You should focus only on the texts related to the given topic.",
         )
@@ -103,18 +103,19 @@ class SectionSummarizer:
         self.content_type = content_type
 
     def chat(self, topic, queries, extra_prompt="", word_count=600, translate=False):
-        summarize = self.create_summarize_prompt(
+        summarize_prompt_list = self.create_summarize_prompt(
             topic=topic,
             queries=queries,
             extra_prompt=extra_prompt,
             word_count=word_count,
         )
-        sum_content = self.summarize_agent.chat(summarize, continuous=True)
+
+        summarize_content = self.summarize_agent.chat(summarize_prompt_list)
         if translate:
-            translate_content = self.translate_agent.chat(sum_content, continuous=True)
+            translate_content = self.translate_agent.chat(summarize_content)
         else:
             translate_content = ""
-        return sum_content, translate_content
+        return summarize_content, translate_content
 
     def create_summarize_prompt(
         self,
@@ -128,7 +129,7 @@ class SectionSummarizer:
         content_type=None,
     ):
         queries_str = str(queries[:query_count])
-        lang_map = {"en": "英文", "zh": "中文"}
+        lang_map = {"en": "English", "zh": "中文"}
         lang_str = lang_map[lang]
 
         content_type = content_type if content_type is not None else self.content_type
@@ -146,40 +147,40 @@ class SectionSummarizer:
             ...
             
             # References:
-            [<pdf_num>] <Referred pdf name 1>
-            [<pdf_num>] <Referred pdf name 2>
-            [<pdf_num>] <Referred pdf name 3>
+            [<pdf_num>] <Referred pdf name 1>. Page <page_idx>, ...
+            [<pdf_num>] <Referred pdf name 2>. Page <page_idx>, ...
+            [<pdf_num>] <Referred pdf name 3>. Page <page_idx>, ...
             ...
             
             ```
-
+            
             Here is the requirements of reference formats:
             
-            1. The order of references should follow the order of your output {content_type} referred,
+            1. For each paragraph, you should add a `[<pdf_num>.<page_idx>]` in brackets to its end, which indicates PDF number and related page number of this paragraph's referred texts.
+            2. The order of references should follow the order of your output {content_type} referred,
             meaning references used earlier should appear earlier.
-            2. At the end of each paragraph, you should add a `[<pdf_num>.<page_idx>]` in brackets, which indicates PDF number and related page number the of paragraph's referred texts.
-            2. In "References", lines with same `pdf_name` should be combined to a single one.
-            3. `<pdf_num>` represents the pdf order in references, which is a number, starting from 1;
+            3. In "References", lines with same `pdf_name` should be combined to a single one.
+            4. `<pdf_num>` represents the pdf order in references, which is a number, starting from 1;
             `<page_idx>` indicates the corresponding page number in the PDF;
-            4. The values of `<page_idx>` are the same with them in provided texts.
-            5. The Page numbers in References must be in the provided refered text. DO NOT CREATE BY YOURSELF.
+            5. The values of `<page_idx>` are the same with them in provided texts.
+            6. The Page numbers in References must exist in the provided referred text. DO NOT CREATE BY YOURSELF!
             
             An Example of {content_type.capitalize()} and References:
             
             ```
             # {content_type.capitalize()}:
             
-            Here is a Paragraph. [Ref:1.3]
-            
-            Here is another paragraph with multiple sentences. And each sentence is related to the above provided referred texts [Ref:1.6]
-            
-            Here is the third pagraph, whose content are extracted and understood with multiple references. [Ref:2.8, 3.5]
+            Here is a Paragraph. [Ref: 1.3]
+            Here is another paragraph with multiple sentences. And each sentence is related to the above provided referred texts [Ref: 1.6]
+            Here is the third pagraph, whose content are extracted and understood with multiple references. [Ref: 2.8, 3.5]
+            ...
             
             # Refrerences:
             [1] Here is the name of first referred PDF: Page 3, Page 6.
             [2] Here is the name of second referred PDF: Page 8.
             [3] Here is the name of third referred PDF: Page 5.
-            
+            ...
+            ```
             """
         elif output_type == "json":
             output_formats = f"""
@@ -230,7 +231,8 @@ class SectionSummarizer:
         ```
         """
 
-        combined_prompt = f"""
+        combined_prompt_list = [
+            f"""
         You should provide {content_type} with {word_count} words based on the following topic.
         
         ```
@@ -252,15 +254,20 @@ class SectionSummarizer:
         
         {output_formats}
         
-        
-        You should follow above requirements,
+        You should follow above requirements and formats,
         to provide {content_type} with {word_count} words based on the following topic.
         
         {extra_prompt}
         
         The language of your output should be {lang_str}.
-        """
-        return combined_prompt
+        """,
+        ]
+        return combined_prompt_list
 
 
 documents_retriever = DocumentsRetriever("cancer_review")
+
+if __name__ == "__main__":
+    section_summarizer = SectionSummarizer(content_type="refinement")
+    intro = "An in-depth look into model-based explanations for AI's decision-making process in liver cancer analysis."
+    section_summarizer.chat(topic=intro, queries=documents_retriever.query([intro]))

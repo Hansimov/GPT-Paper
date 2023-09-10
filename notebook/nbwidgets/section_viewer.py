@@ -13,7 +13,7 @@ class SectionViewer:
         self.children = []
         self.extra_prompt = ""
         self.response_content = ""
-        self.section_summarizer = SectionSummarizer()
+        self.section_summarizer = SectionSummarizer(content_type="refinement")
         # self.create_widgets()
 
     def summarize_chat(self, button):

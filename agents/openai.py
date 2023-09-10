@@ -5,6 +5,7 @@ import json
 import os
 import re
 from pathlib import Path
+from pprint import pprint
 from utils.envs import enver
 from utils.tokenizer import WordTokenizer
 
@@ -218,19 +219,25 @@ class OpenAIAgent:
         os.environ = enver.envs
         # print(os.environ.get("http_proxy"))
         self.requests_headers = {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
+            # "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
             "Content-Type": "application/json",
             "Authorization": f"Bearer {enver.envs['OPENAI_API_KEY']}",
         }
 
+        if type(prompt) == str:
+            prompt = [prompt]
+
+        user_prompt_messages = [self.content_to_message("user", p) for p in prompt]
+
         if record:
-            self.update_history_messages("user", prompt)
+            for p in prompt:
+                self.update_history_messages("user", p)
 
         if memory:
             request_messages = self.history_messages
         else:
             request_messages = self.get_messages_without_memory()
-            request_messages.append(self.content_to_message("user", prompt))
+            request_messages.extend(user_prompt_messages)
 
         # pprint.pprint(request_messages)
         if show_prompt:
@@ -244,6 +251,7 @@ class OpenAIAgent:
 
         if show_tokens_count:
             self.print_output(f"Prompt Tokens count: [{self.prompt_tokens_count}]")
+        # pprint(request_messages)
 
         self.requests_payload = {
             "model": self.model,
@@ -329,8 +337,8 @@ if __name__ == "__main__":
     agent = OpenAIAgent(
         name="ninomae",
         endpoint_name="ninomae",
-        # model="gpt-4",
-        model="poe-gpt-3.5-turbo-16k",
+        model="gpt-4",
+        # model="poe-gpt-3.5-turbo-16k",
         temperature=0.0,
         system_message="Explain the following text in Chinese:",
     )
