@@ -40,9 +40,9 @@ class QueryResultsViewer:
                 color: {region_text_color}
                 """
                 region_text_html = f"""
-                <li style='{region_text_style}'>
+                <li>
                     <details>
-                        <summary>
+                        <summary style='{region_text_style}' title='{region_text}'>
                             Page {page_idx}, Region {region_idx},
                             Score {round(float(normalized_region_score),2)}
                         </summary>
@@ -55,7 +55,19 @@ class QueryResultsViewer:
             region_texts_html = f"<ol>\n{region_texts_html}\n</ol>"
             html_str += f"<li>{pdf_name_html}\n{region_texts_html}</li>"
 
-        html_str = f"<div class='query_results'><ol>{html_str}</ol></div>"
+        html_str = f"""
+        <details open>
+            <summary>
+                Related References
+            </summary>
+            <div class='query_results'>
+                <ol>
+                    {html_str}
+                </ol>
+            </div>
+        </details>
+        """
+
         style_str = f"""
         <style>
             .query_results {{

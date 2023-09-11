@@ -25,6 +25,7 @@ class SectionViewer:
         # print(f"Button clicked at {datetime.now()}")
         query_results_viewer = QueryResultsViewer(queries)
         self.right_container.children = [query_results_viewer.container]
+        return
         self.response_content = self.section_summarizer.chat(
             topic=self.section_node.intro,
             queries=queries,
