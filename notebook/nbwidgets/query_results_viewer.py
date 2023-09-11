@@ -1,4 +1,5 @@
 import ipywidgets as widgets
+from nbwidgets.colors import calc_font_color_by_backround
 
 
 class QueryResultsViewer:
@@ -27,12 +28,28 @@ class QueryResultsViewer:
             region_texts_html = ""
             for region in query_result["regions"]:
                 normalized_region_score = normalize_score(region["score"])
-                region_text_style = (
-                    f"background-color: rgba(0, 200, 0, {normalized_region_score});"
+                page_idx = region["page_idx"]
+                region_idx = region["region_idx"]
+                region_text = region["text"]
+                region_background_color = (0, 150, 0, normalized_region_score)
+                region_text_color = calc_font_color_by_backround(
+                    region_background_color
                 )
-                region_text_html = (
-                    f"<li style='{region_text_style}'>{region['text']}</li>\n"
-                )
+                region_text_style = f"""
+                background-color: rgba{region_background_color};
+                color: {region_text_color}
+                """
+                region_text_html = f"""
+                <li style='{region_text_style}'>
+                    <details>
+                        <summary>
+                            Page {page_idx}, Region {region_idx},
+                            Score {round(float(normalized_region_score),2)}
+                        </summary>
+                        {region_text}
+                    </details>
+                </li>\n
+                """
                 region_texts_html += region_text_html
 
             region_texts_html = f"<ol>\n{region_texts_html}\n</ol>"
