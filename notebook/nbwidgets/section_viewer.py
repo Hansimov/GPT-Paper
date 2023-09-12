@@ -56,16 +56,27 @@ class SectionViewer:
 
     def create_title_and_intro_text_widgets(self):
         text_style = {"description_width": "50px"}
+        self.title_level_widget = widgets.HTML(
+            value=f"{self.section_node.level}",
+            layout=widgets.Layout(
+                width="auto",
+                justify_content="flex-start",
+                border="1px solid purple",
+            ),
+        )
         self.title_text_widget = widgets.Text(
             # description="Title",
             description="",
-            value=f"{self.section_node.level}: {self.section_node.title}",
+            value=f"{self.section_node.title}",
             layout=widgets.Layout(
                 width="99%",
                 justify_content="flex-start",
                 border="1px solid purple",
             ),
             style={**text_style, "background": "#000000"},
+        )
+        self.title_widget = widgets.HBox(
+            children=[self.title_level_widget, self.title_text_widget],
         )
 
         def update_title_text_value(title_text_widget):
@@ -220,7 +231,7 @@ class SectionViewer:
             for widget in hidden_widgets:
                 widget.layout.display = "none"
 
-        self.left_widgets = [self.title_text_widget, self.editable_widgets]
+        self.left_widgets = [self.title_widget, self.editable_widgets]
         self.right_widgets = [self.intro_text_widget, self.query_results_widget]
 
         if len(self.children) == 0:
@@ -233,6 +244,7 @@ class SectionViewer:
         self.left_container.children = self.left_widgets
         self.right_container.children = self.right_widgets
         self.container.children = [self.left_container, self.right_container]
+        return self.container
 
     def display(self, display_children=True):
         if display_children:
@@ -278,6 +290,9 @@ class SectionViewerTree:
                 section_viewer_stack.append(child_section_viewer)
         self.retrieve_all_button.style.button_color = "darkgreen"
 
+    def save_sections(self):
+        pass
+
     def create_buttons(self):
         button_layout = widgets.Layout(width="auto")
         self.summarize_all_button = widgets.Button(
@@ -321,12 +336,12 @@ class SectionViewerTree:
 
     def create_widgets(self):
         self.create_buttons()
-        self.container = widgets.VBox()
+        self.container = widgets.VBox(layout=widgets.Layout(border="solid 1px gray"))
         self.button_widgets = widgets.HBox(
             children=[self.retrieve_all_button, self.summarize_all_button]
         )
-        self.container.children = [self.button_widgets]
         self.section_viewer_root.create_widgets()
+        self.container.children = [self.button_widgets]
 
     def display(self):
         display(self.container)

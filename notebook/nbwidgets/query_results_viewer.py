@@ -56,7 +56,7 @@ class QueryResultsViewer:
             html_str += f"<li>{pdf_name_html}\n{region_texts_html}</li>"
 
         html_str = f"""
-        <details open>
+        <details>
             <summary>
                 Related References
             </summary>
