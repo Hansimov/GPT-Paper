@@ -17,6 +17,11 @@ class SectionViewer:
         self.query_count = 20
         self.response_content = ""
         self.section_summarizer = SectionSummarizer(content_type="refinement")
+
+        self.editable_widgets_visibility = True
+        if len(self.section_node.children) > 0:
+            self.editable_widgets_visibility = False
+
         # self.create_widgets()
 
     def retrieve_queries(self, button):
@@ -26,7 +31,10 @@ class SectionViewer:
         )
         self.retrieve_button.style.button_color = "darkgreen"
         query_results_viewer = QueryResultsViewer(queries)
-        self.right_container.children = [query_results_viewer.container]
+        self.right_container.children = [
+            self.intro_text_widget,
+            query_results_viewer.container,
+        ]
         return queries
 
     def summarize_chat(self, button):
@@ -49,10 +57,15 @@ class SectionViewer:
     def create_title_and_intro_text_widgets(self):
         text_style = {"description_width": "50px"}
         self.title_text_widget = widgets.Text(
-            description="Title",
+            # description="Title",
+            description="",
             value=f"{self.section_node.level}: {self.section_node.title}",
-            layout=widgets.Layout(width="99%", justify_content="flex-start"),
-            style=text_style,
+            layout=widgets.Layout(
+                width="99%",
+                justify_content="flex-start",
+                border="1px solid purple",
+            ),
+            style={**text_style, "background": "#000000"},
         )
 
         def update_title_text_value(title_text_widget):
@@ -61,14 +74,21 @@ class SectionViewer:
         self.title_text_widget.on_submit(update_title_text_value)
 
         self.intro_text_widget = widgets.Text(
-            description="Intro",
+            # description="Intro",
+            description="",
             value=self.section_node.intro,
-            layout=widgets.Layout(width="99%", justify_content="flex-start"),
-            style=text_style,
+            layout=widgets.Layout(
+                width="99%",
+                justify_content="flex-start",
+                border="1px solid transparent",
+            ),
+            style={**text_style, "background": "transparent"},
         )
 
         def update_intro_text_value(intro_text_widget):
             self.section_node.intro = intro_text_widget.value
+            print(self.retrieve_button.style.button_color)
+            self.retrieve_button.style.button_color = None
 
         self.intro_text_widget.on_submit(update_intro_text_value)
 
@@ -85,31 +105,44 @@ class SectionViewer:
 
         self.extra_prompt_widget.on_submit(update_extra_promt_value)
 
-        self.word_count_widget = widgets.Text(
-            description="Words",
+        self.query_count_text_widget = widgets.Text(
+            description="",
+            value=str(self.query_count),
+            placeholder=str(self.query_count),
+            layout=widgets.Layout(width="40px", justify_content="flex-start"),
+        )
+        self.query_count_widget = widgets.HBox(
+            children=[
+                self.query_count_text_widget,
+                widgets.HTML("queries,"),
+            ]
+        )
+
+        def update_query_count_value(query_count_widget):
+            self.query_count = int(query_count_widget.value)
+
+        self.query_count_text_widget.on_submit(update_query_count_value)
+
+        self.word_count_text_widget = widgets.Text(
+            description="",
             value=str(self.word_count),
             placeholder="",
-            layout=widgets.Layout(width="120px", justify_content="flex-start"),
-            style=text_style,
+            layout=widgets.Layout(width="60px", justify_content="flex-start"),
+        )
+        self.word_count_widget = widgets.HBox(
+            children=[
+                widgets.HTML(" to "),
+                self.word_count_text_widget,
+                widgets.HTML("words:"),
+            ]
         )
 
         def update_word_count_value(word_count_widget):
             self.word_count = int(word_count_widget.value)
 
-        self.word_count_widget.on_submit(update_word_count_value)
+        self.word_count_text_widget.on_submit(update_word_count_value)
 
-        self.query_count_widget = widgets.Text(
-            description="Queries",
-            value=str(self.query_count),
-            placeholder="",
-            layout=widgets.Layout(width="100px", justify_content="flex-start"),
-            style=text_style,
-        )
-
-        def update_query_count_value(qury_count_widget):
-            self.query_count = int(qury_count_widget.value)
-
-        self.query_count_widget.on_submit(update_query_count_value)
+        self.query_results_widget = widgets.HTML("")
 
     def create_buttons(self):
         button_layout = widgets.Layout(width="auto")
@@ -147,30 +180,48 @@ class SectionViewer:
         self.create_output_widget()
         self.create_title_and_intro_text_widgets()
         self.create_buttons()
+
         self.container = widgets.HBox(layout=widgets.Layout(border="solid 1px gray"))
         self.left_container = widgets.VBox(layout=widgets.Layout(width="50%"))
         self.right_container = widgets.VBox(
             layout=widgets.Layout(width="50%", height="50%", overflow_y="auto"),
         )
-        self.widgets = [
-            self.title_text_widget,
-            self.intro_text_widget,
-            # self.extra_prompt_widget,
-            widgets.HBox(
-                children=[
-                    widgets.HBox(
-                        children=[self.query_count_widget, self.retrieve_button],
-                        layout=widgets.Layout(justify_content="flex-start"),
-                    ),
-                    widgets.HBox(
-                        children=[self.word_count_widget, self.summarize_button],
-                        layout=widgets.Layout(justify_content="flex-start"),
-                    ),
-                ],
-                layout=widgets.Layout(justify_content="flex-start"),
-            ),
-            self.output_widget,
-        ]
+
+        self.editable_widgets = widgets.VBox(
+            children=[
+                # self.extra_prompt_widget,
+                widgets.HBox(
+                    children=[
+                        widgets.HBox(
+                            children=[
+                                self.retrieve_button,
+                                self.query_count_widget,
+                            ],
+                            layout=widgets.Layout(justify_content="flex-start"),
+                        ),
+                        widgets.HBox(
+                            children=[
+                                self.summarize_button,
+                                self.word_count_widget,
+                            ],
+                            layout=widgets.Layout(
+                                justify_content="flex-start",
+                            ),
+                        ),
+                    ],
+                    layout=widgets.Layout(justify_content="flex-start"),
+                ),
+                self.output_widget,
+            ],
+        )
+
+        hidden_widgets = [self.intro_text_widget, self.editable_widgets]
+        if not self.editable_widgets_visibility:
+            for widget in hidden_widgets:
+                widget.layout.display = "none"
+
+        self.left_widgets = [self.title_text_widget, self.editable_widgets]
+        self.right_widgets = [self.intro_text_widget, self.query_results_widget]
 
         if len(self.children) == 0:
             pass
@@ -179,10 +230,8 @@ class SectionViewer:
                 for child in self.children:
                     child.create_widgets()
 
-        self.left_container.children = self.widgets
-        self.right_container.children = [
-            widgets.HTML(value=str(self.section_node.intro))
-        ]
+        self.left_container.children = self.left_widgets
+        self.right_container.children = self.right_widgets
         self.container.children = [self.left_container, self.right_container]
 
     def display(self, display_children=True):
