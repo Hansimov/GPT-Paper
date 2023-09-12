@@ -14,18 +14,25 @@ class SectionViewer:
         self.children = []
         self.extra_prompt = ""
         self.word_count = 500
+        self.query_count = 20
         self.response_content = ""
         self.section_summarizer = SectionSummarizer(content_type="refinement")
         # self.create_widgets()
 
+    def retrieve_queries(self, button):
+        self.retrieve_button.style.button_color = "orange"
+        queries = documents_retriever.query(
+            [self.section_node.intro], rerank_n=self.query_count
+        )
+        self.retrieve_button.style.button_color = "darkgreen"
+        query_results_viewer = QueryResultsViewer(queries)
+        self.right_container.children = [query_results_viewer.container]
+        return queries
+
     def summarize_chat(self, button):
         self.summarize_button.style.button_color = "orange"
         self.output_widget.clear_output()
-        queries = documents_retriever.query([self.section_node.intro])
-        # print(f"Button clicked at {datetime.now()}")
-        query_results_viewer = QueryResultsViewer(queries)
-        self.right_container.children = [query_results_viewer.container]
-        return
+        queries = self.retrieve_queries(self.summarize_button)
         self.response_content = self.section_summarizer.chat(
             topic=self.section_node.intro,
             queries=queries,
@@ -39,7 +46,7 @@ class SectionViewer:
         for agent in self.section_summarizer.agents:
             agent.output_widget = self.output_widget
 
-    def create_title_and_intro_text_widget(self):
+    def create_title_and_intro_text_widgets(self):
         text_style = {"description_width": "50px"}
         self.title_text_widget = widgets.Text(
             description="Title",
@@ -82,7 +89,7 @@ class SectionViewer:
             description="Words",
             value=str(self.word_count),
             placeholder="",
-            layout=widgets.Layout(width="90%", justify_content="flex-start"),
+            layout=widgets.Layout(justify_content="flex-start"),
             style=text_style,
         )
 
@@ -91,14 +98,39 @@ class SectionViewer:
 
         self.word_count_widget.on_submit(update_word_count_value)
 
-    def create_button(self):
+        self.query_count_widget = widgets.Text(
+            description="Queries",
+            value=str(self.query_count),
+            placeholder="",
+            layout=widgets.Layout(justify_content="flex-start"),
+            style=text_style,
+        )
+
+        def update_query_count_value(qury_count_widget):
+            self.query_count = int(qury_count_widget.value)
+
+        self.query_count_widget.on_submit(update_query_count_value)
+
+    def create_buttons(self):
+        self.retrieve_button = widgets.Button(
+            description="Retrieve",
+            disabled=False,
+            button_style="",
+            tooltip="Retrieve related references",
+            icon="list",
+        )
+
+        self.retrieve_button.on_click(self.retrieve_queries)
+
         self.summarize_button = widgets.Button(
             description="Summarize",
             disabled=False,
             button_style="",
             tooltip="Summarize this section based on the topic and intro",
-            icon="radiation",
+            icon="rocket",
         )
+        self.summarize_button.on_click(self.summarize_chat)
+
         self.translate_button = widgets.Button(
             description="Translate",
             disabled=False,
@@ -106,23 +138,22 @@ class SectionViewer:
             tooltip="Click and translate the details for this section",
             icon="language",
         )
-        self.summarize_button.on_click(self.summarize_chat)
 
     def create_widgets(self, create_children=True):
         self.create_output_widget()
-        self.create_title_and_intro_text_widget()
-        self.create_button()
+        self.create_title_and_intro_text_widgets()
+        self.create_buttons()
         self.container = widgets.HBox()
         self.left_container = widgets.VBox(layout=widgets.Layout(width="50%"))
         self.right_container = widgets.VBox(
             layout=widgets.Layout(width="50%", height="50%", overflow_y="auto"),
         )
         self.widgets = [
-            self.summarize_button,
             self.title_text_widget,
             self.intro_text_widget,
             # self.extra_prompt_widget,
-            self.word_count_widget,
+            widgets.HBox(children=[self.word_count_widget, self.query_count_widget]),
+            widgets.HBox(children=[self.retrieve_button, self.summarize_button]),
             self.output_widget,
         ]
 
