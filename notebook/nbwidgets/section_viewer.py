@@ -51,7 +51,7 @@ class SectionViewer:
         self.title_text_widget = widgets.Text(
             description="Title",
             value=f"{self.section_node.level}: {self.section_node.title}",
-            layout=widgets.Layout(width="90%", justify_content="flex-start"),
+            layout=widgets.Layout(width="99%", justify_content="flex-start"),
             style=text_style,
         )
 
@@ -63,7 +63,7 @@ class SectionViewer:
         self.intro_text_widget = widgets.Text(
             description="Intro",
             value=self.section_node.intro,
-            layout=widgets.Layout(width="90%", justify_content="flex-start"),
+            layout=widgets.Layout(width="99%", justify_content="flex-start"),
             style=text_style,
         )
 
@@ -89,7 +89,7 @@ class SectionViewer:
             description="Words",
             value=str(self.word_count),
             placeholder="",
-            layout=widgets.Layout(justify_content="flex-start"),
+            layout=widgets.Layout(width="120px", justify_content="flex-start"),
             style=text_style,
         )
 
@@ -102,7 +102,7 @@ class SectionViewer:
             description="Queries",
             value=str(self.query_count),
             placeholder="",
-            layout=widgets.Layout(justify_content="flex-start"),
+            layout=widgets.Layout(width="100px", justify_content="flex-start"),
             style=text_style,
         )
 
@@ -112,12 +112,14 @@ class SectionViewer:
         self.query_count_widget.on_submit(update_query_count_value)
 
     def create_buttons(self):
+        button_layout = widgets.Layout(width="auto")
         self.retrieve_button = widgets.Button(
             description="Retrieve",
             disabled=False,
             button_style="",
             tooltip="Retrieve related references",
             icon="list",
+            layout=button_layout,
         )
 
         self.retrieve_button.on_click(self.retrieve_queries)
@@ -128,22 +130,24 @@ class SectionViewer:
             button_style="",
             tooltip="Summarize this section based on the topic and intro",
             icon="rocket",
+            layout=button_layout,
         )
         self.summarize_button.on_click(self.summarize_chat)
 
         self.translate_button = widgets.Button(
             description="Translate",
             disabled=False,
-            button_style="",  # 'success', 'info', 'warning', 'danger' or ''
+            button_style="",
             tooltip="Click and translate the details for this section",
             icon="language",
+            layout=button_layout,
         )
 
     def create_widgets(self, create_children=True):
         self.create_output_widget()
         self.create_title_and_intro_text_widgets()
         self.create_buttons()
-        self.container = widgets.HBox()
+        self.container = widgets.HBox(layout=widgets.Layout(border="solid 1px gray"))
         self.left_container = widgets.VBox(layout=widgets.Layout(width="50%"))
         self.right_container = widgets.VBox(
             layout=widgets.Layout(width="50%", height="50%", overflow_y="auto"),
@@ -152,8 +156,19 @@ class SectionViewer:
             self.title_text_widget,
             self.intro_text_widget,
             # self.extra_prompt_widget,
-            widgets.HBox(children=[self.word_count_widget, self.query_count_widget]),
-            widgets.HBox(children=[self.retrieve_button, self.summarize_button]),
+            widgets.HBox(
+                children=[
+                    widgets.HBox(
+                        children=[self.query_count_widget, self.retrieve_button],
+                        layout=widgets.Layout(justify_content="flex-start"),
+                    ),
+                    widgets.HBox(
+                        children=[self.word_count_widget, self.summarize_button],
+                        layout=widgets.Layout(justify_content="flex-start"),
+                    ),
+                ],
+                layout=widgets.Layout(justify_content="flex-start"),
+            ),
             self.output_widget,
         ]
 

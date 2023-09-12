@@ -71,7 +71,7 @@ class QueryResultsViewer:
         style_str = f"""
         <style>
             .query_results {{
-                max-height: 900px;
+                max-height: 800px;
                 overflow-y: auto;
                 border: 1px solid gray;
             }}
