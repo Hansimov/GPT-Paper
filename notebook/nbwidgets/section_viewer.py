@@ -24,7 +24,7 @@ class SectionViewer:
 
         # self.create_widgets()
 
-    def retrieve_queries(self, button):
+    def retrieve_queries(self, button=None):
         self.retrieve_button.style.button_color = "orange"
         queries = documents_retriever.query(
             [self.section_node.intro], rerank_n=self.query_count
@@ -37,10 +37,10 @@ class SectionViewer:
         ]
         return queries
 
-    def summarize_chat(self, button):
+    def summarize_chat(self, button=None):
         self.summarize_button.style.button_color = "orange"
         self.output_widget.clear_output()
-        queries = self.retrieve_queries(self.summarize_button)
+        queries = self.retrieve_queries()
         self.response_content = self.section_summarizer.chat(
             topic=self.section_node.intro,
             queries=queries,
@@ -253,6 +253,53 @@ class SectionViewerTree:
         self.create_widgets()
         self.display()
 
+    def summarize_all_sections(self, button=None):
+        self.summarize_all_button.style.button_color = "orange"
+        section_viewer_stack = [self.section_viewer_root]
+        while len(section_viewer_stack) > 0:
+            section_viewer = section_viewer_stack.pop()
+            if section_viewer.editable_widgets_visibility:
+                section_viewer.summarize_chat(None)
+                # section_viewer.retrieve_queries()
+            for child_section_viewer in section_viewer.children:
+                section_viewer_stack.append(child_section_viewer)
+        self.summarize_all_button.style.button_color = "darkgreen"
+
+    def retrieve_all_sections(self, button=None):
+        self.retrieve_all_button.style.button_color = "orange"
+        section_viewer_stack = [self.section_viewer_root]
+        while len(section_viewer_stack) > 0:
+            section_viewer = section_viewer_stack.pop()
+            if section_viewer.editable_widgets_visibility:
+                # section_viewer.summarize_chat(None)
+                section_viewer.retrieve_queries()
+                # print(section_viewer.section_node.title)
+            for child_section_viewer in section_viewer.children:
+                section_viewer_stack.append(child_section_viewer)
+        self.retrieve_all_button.style.button_color = "darkgreen"
+
+    def create_buttons(self):
+        button_layout = widgets.Layout(width="auto")
+        self.summarize_all_button = widgets.Button(
+            description="Summarize All",
+            disabled=False,
+            button_style="",
+            tooltip="Summarize all sections with one click",
+            icon="radiation",
+            layout=button_layout,
+        )
+        self.summarize_all_button.on_click(self.summarize_all_sections)
+
+        self.retrieve_all_button = widgets.Button(
+            description="Retrieve All",
+            disabled=False,
+            button_style="",
+            tooltip="Retrieve references for all sections with one click",
+            icon="wikipedia-w",
+            layout=button_layout,
+        )
+        self.retrieve_all_button.on_click(self.retrieve_all_sections)
+
     def construct_section_viewers_tree(self):
         self.section_tree.construct_hierarchical_sections()
 
@@ -273,9 +320,16 @@ class SectionViewerTree:
         self.section_viewer_root = section_viewer_root
 
     def create_widgets(self):
+        self.create_buttons()
+        self.container = widgets.VBox()
+        self.button_widgets = widgets.HBox(
+            children=[self.retrieve_all_button, self.summarize_all_button]
+        )
+        self.container.children = [self.button_widgets]
         self.section_viewer_root.create_widgets()
 
     def display(self):
+        display(self.container)
         self.section_viewer_root.display()
 
 
