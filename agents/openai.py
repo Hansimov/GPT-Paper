@@ -46,6 +46,9 @@ class OpenAIAgent:
         record=True,
         output_widget=None,
     ):
+        """
+        # ANCHOR[id=agent-init]
+        """
         self.name = name
         self.endpoint_name = endpoint_name
         self.endpoint = self.endpoint_apis[self.endpoint_name]
@@ -134,6 +137,7 @@ class OpenAIAgent:
 
     def get_available_models(self):
         """
+        # ANCHOR[id=agent-available-models]
         gpt-3.5-turbo, gpt-4,
         poe-gpt-3.5-turbo, poe-gpt-3.5-turbo-16k, poe-gpt-4
         poe-saga, poe-claude-instant, poe-google-palm,
@@ -167,6 +171,7 @@ class OpenAIAgent:
                     self.max_input_message_chars = max_chars
                     break
 
+    # ANCHOR[id=agent-chat]
     def chat(
         self,
         prompt="",
@@ -233,13 +238,16 @@ class OpenAIAgent:
             for p in prompt:
                 self.update_history_messages("user", p)
 
+        # ANCHOR[id=agent-request-messages]
         if memory:
             request_messages = self.history_messages
         else:
             request_messages = self.get_messages_without_memory()
             request_messages.extend(user_prompt_messages)
 
+        self.request_messages = request_messages
         # pprint.pprint(request_messages)
+
         if show_prompt:
             self.print_output(f"[Human]: {prompt}")
         if show_role:
@@ -253,9 +261,10 @@ class OpenAIAgent:
             self.print_output(f"Prompt Tokens count: [{self.prompt_tokens_count}]")
         # pprint(request_messages)
 
+        # ANCHOR[id=agent-request-payload]
         self.requests_payload = {
             "model": self.model,
-            "messages": request_messages,
+            "messages": self.request_messages,
             "temperature": self.temperature,
             "max_tokens": max_tokens,
             "stream": stream,
@@ -317,6 +326,7 @@ class OpenAIAgent:
                 **input_args,
             )
 
+        # ANCHOR[id=agent-response-content]
         self.response_content = response_content
 
         enver.restore_envs()
