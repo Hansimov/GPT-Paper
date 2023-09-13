@@ -26,7 +26,7 @@ class OutputWidget:
         self.html_widget.value = self.output
 
     def write(self, text):
-        self.output += text
+        self.output += text.replace("\n", "<br/>")
 
     def flush(self):
         pass

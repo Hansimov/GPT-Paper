@@ -10,6 +10,21 @@ from utils.envs import enver
 from utils.tokenizer import WordTokenizer
 
 
+def print_output(*args, **kwargs):
+    output_widget = kwargs.pop("output_widget", None)
+    level = kwargs.pop("level", None)
+
+    if output_widget:
+        with output_widget:
+            if level == "info":
+                s = f"<span style='color:cyan'>{args[0]}</span>"
+                print(s, *args[1:], **kwargs)
+            else:
+                print(*args, **kwargs)
+    else:
+        print(*args, **kwargs)
+
+
 class OpenAIAgent:
     """
     OpenAI API doc:
@@ -77,11 +92,7 @@ class OpenAIAgent:
         self.init_history_messages()
 
     def print_output(self, *args, **kwargs):
-        if self.output_widget:
-            with self.output_widget:
-                print(*args, **kwargs)
-        else:
-            print(*args, **kwargs)
+        print_output(*args, **kwargs, output_widget=self.output_widget)
 
     def init_history_messages(self):
         if self.system_message:
@@ -258,7 +269,9 @@ class OpenAIAgent:
         )
 
         if show_tokens_count:
-            self.print_output(f"Prompt Tokens count: [{self.prompt_tokens_count}]")
+            self.print_output(
+                f"Prompt Tokens count: [{self.prompt_tokens_count}]", level="info"
+            )
         # pprint(request_messages)
 
         # ANCHOR[id=agent-request-payload]
@@ -312,14 +325,15 @@ class OpenAIAgent:
         response_tokens_count = self.word_tokenizer.count_tokens(response_content)
         if show_tokens_count:
             self.print_output(
-                f"Response Tokens count: [{response_tokens_count}] [{finish_reason}]"
+                f"Response Tokens count: [{response_tokens_count}] [{finish_reason}]",
+                level="info",
             )
 
         continuous_token_threshold = self.continuous_token_thresholds.get(
             self.model, 4000
         )
         if continuous and response_tokens_count > continuous_token_threshold:
-            self.print_output("Continue ...")
+            self.print_output("Continue ...", level="info")
             response_content += self.chat(
                 prompt="Complete last chat from the truncated part.",
                 memory=True,

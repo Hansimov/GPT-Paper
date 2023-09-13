@@ -59,17 +59,14 @@ class SectionViewer:
     def summarize_chat(self, button=None):
         self.summarize_button.style.button_color = "orange"
         self.output_widget.clear_output()
-        # queries = self.retrieve_queries()
-        # self.response_content = self.section_summarizer.chat(
-        #     topic=self.section_node.intro,
-        #     queries=queries,
-        #     extra_prompt=self.extra_prompt,
-        #     word_count=self.word_count,
-        # )
-        with self.output_widget:
-            print(f"Output Hello Text {datetime.now()}")
-        # print(self.output_widget.output)
-        self.response_content = "hello"
+        queries = self.retrieve_queries()
+        self.response_content = self.section_summarizer.chat(
+            topic=self.section_node.intro,
+            queries=queries,
+            extra_prompt=self.extra_prompt,
+            word_count=self.word_count,
+        )
+
         output_node = BasicOutputNode(
             output=self.output_widget.output,
             content=self.response_content,
@@ -216,20 +213,20 @@ class SectionViewer:
         )
 
         self.prev_output_button = widgets.Button(
-            description="Prev",
+            description="",
             disabled=False,
             button_style="",
-            tooltip="Previous Ouput",
+            tooltip="Previous Output",
             icon="arrow-left",
             layout=button_layout,
         )
         self.prev_output_button.on_click(partial(self.switch_output, direction="prev"))
 
         self.next_output_button = widgets.Button(
-            description="Next",
+            description="",
             disabled=False,
             button_style="",
-            tooltip="Next Ouput",
+            tooltip="Next Output",
             icon="arrow-right",
             layout=button_layout,
         )
