@@ -155,9 +155,9 @@ class SectionTree:
     def __init__(self, project_dir):
         self.project_dir = project_dir
         self.sections_json_parser = SectionsJsonParser(project_dir)
-        self.construct_hierarchical_sections()
+        self.construct_section_tree()
 
-    def construct_hierarchical_sections(self):
+    def construct_section_tree(self):
         """
         Return:
         ```json

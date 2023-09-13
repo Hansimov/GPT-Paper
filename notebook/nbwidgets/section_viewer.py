@@ -1,9 +1,11 @@
 from datetime import datetime
+from functools import partial
 import ipywidgets as widgets
 from IPython.display import display
 from agents.paper_reviewer import SectionSummarizer, documents_retriever
 from documents.section_parser import SectionNode, SectionTree
 from nbwidgets.query_results_viewer import QueryResultsViewer
+from nbwidgets.output_manager import BasicOutputNode, BasicOutputNodeList
 
 
 class SectionViewer:
@@ -22,7 +24,28 @@ class SectionViewer:
         if len(self.section_node.children) > 0:
             self.editable_widgets_visibility = False
 
+        self.output_list = BasicOutputNodeList()
+
         # self.create_widgets()
+
+    def switch_output(self, button=None, direction=None, idx=None):
+        if direction:
+            if direction == "prev":
+                self.output_list.decrement_active_idx()
+            elif direction == "next":
+                self.output_list.increment_active_idx()
+            else:
+                pass
+        elif idx:
+            self.output_list.set_active_idx(idx)
+        else:
+            raise ValueError("Either direction or idx should be specified")
+        self.output_widget.outputs = (
+            {
+                "output_type": "stream",
+                "text": self.output_list.active_output(),
+            },
+        )
 
     def retrieve_queries(self, button=None):
         self.retrieve_button.style.button_color = "orange"
@@ -40,13 +63,22 @@ class SectionViewer:
     def summarize_chat(self, button=None):
         self.summarize_button.style.button_color = "orange"
         self.output_widget.clear_output()
-        queries = self.retrieve_queries()
-        self.response_content = self.section_summarizer.chat(
-            topic=self.section_node.intro,
-            queries=queries,
-            extra_prompt=self.extra_prompt,
-            word_count=self.word_count,
+        # queries = self.retrieve_queries()
+        # self.response_content = self.section_summarizer.chat(
+        #     topic=self.section_node.intro,
+        #     queries=queries,
+        #     extra_prompt=self.extra_prompt,
+        #     word_count=self.word_count,
+        # )
+        with self.output_widget:
+            print("Output Hello Text")
+        print(self.output_widget.outputs)
+        self.response_content = "hello"
+        output_node = BasicOutputNode(
+            output=self.output_widget.outputs[0]["text"],
+            content=self.response_content,
         )
+        self.output_list.append(output_node)
         self.summarize_button.style.button_color = "darkgreen"
 
     def create_output_widget(self):
@@ -187,6 +219,26 @@ class SectionViewer:
             layout=button_layout,
         )
 
+        self.prev_output_button = widgets.Button(
+            description="Prev",
+            disabled=False,
+            button_style="",
+            tooltip="Previous Ouput",
+            icon="arrow-left",
+            layout=button_layout,
+        )
+        self.prev_output_button.on_click(partial(self.switch_output, direction="prev"))
+
+        self.next_output_button = widgets.Button(
+            description="Next",
+            disabled=False,
+            button_style="",
+            tooltip="Next Ouput",
+            icon="arrow-right",
+            layout=button_layout,
+        )
+        self.next_output_button.on_click(partial(self.switch_output, direction="next"))
+
     def create_widgets(self, create_children=True):
         self.create_output_widget()
         self.create_title_and_intro_text_widgets()
@@ -215,9 +267,14 @@ class SectionViewer:
                                 self.summarize_button,
                                 self.word_count_widget,
                             ],
-                            layout=widgets.Layout(
-                                justify_content="flex-start",
-                            ),
+                            layout=widgets.Layout(justify_content="flex-start"),
+                        ),
+                        widgets.HBox(
+                            children=[
+                                self.prev_output_button,
+                                self.next_output_button,
+                            ],
+                            layout=widgets.Layout(justify_content="flex-start"),
                         ),
                     ],
                     layout=widgets.Layout(justify_content="flex-start"),
@@ -316,7 +373,7 @@ class SectionViewerTree:
         self.retrieve_all_button.on_click(self.retrieve_all_sections)
 
     def construct_section_viewers_tree(self):
-        self.section_tree.construct_hierarchical_sections()
+        self.section_tree.construct_section_tree()
 
         section_root = self.section_tree.section_root
         section_viewer_root = SectionViewer(section_root)
