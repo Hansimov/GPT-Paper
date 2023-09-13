@@ -6,6 +6,7 @@ from agents.paper_reviewer import SectionSummarizer, documents_retriever
 from documents.section_parser import SectionNode, SectionTree
 from nbwidgets.query_results_viewer import QueryResultsViewer
 from nbwidgets.output_manager import BasicOutputNode, BasicOutputNodeList
+from nbwidgets.output import OutputWidget
 
 
 class SectionViewer:
@@ -40,12 +41,7 @@ class SectionViewer:
             self.output_list.set_active_idx(idx)
         else:
             raise ValueError("Either direction or idx should be specified")
-        self.output_widget.outputs = (
-            {
-                "output_type": "stream",
-                "text": self.output_list.active_output(),
-            },
-        )
+        self.output_widget.update(self.output_list.active_output())
 
     def retrieve_queries(self, button=None):
         self.retrieve_button.style.button_color = "orange"
@@ -71,18 +67,18 @@ class SectionViewer:
         #     word_count=self.word_count,
         # )
         with self.output_widget:
-            print("Output Hello Text")
-        print(self.output_widget.outputs)
+            print(f"Output Hello Text {datetime.now()}")
+        # print(self.output_widget.output)
         self.response_content = "hello"
         output_node = BasicOutputNode(
-            output=self.output_widget.outputs[0]["text"],
+            output=self.output_widget.output,
             content=self.response_content,
         )
         self.output_list.append(output_node)
         self.summarize_button.style.button_color = "darkgreen"
 
     def create_output_widget(self):
-        self.output_widget = widgets.Output()
+        self.output_widget = OutputWidget()
         for agent in self.section_summarizer.agents:
             agent.output_widget = self.output_widget
 
@@ -279,7 +275,7 @@ class SectionViewer:
                     ],
                     layout=widgets.Layout(justify_content="flex-start"),
                 ),
-                self.output_widget,
+                self.output_widget.html_widget,
             ],
         )
 
