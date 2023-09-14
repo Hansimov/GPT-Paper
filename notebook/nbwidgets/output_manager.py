@@ -12,9 +12,9 @@ class BasicOutputNode:
 
 
 class BasicOutputNodeList:
-    def __init__(self, outputs=[]):
-        self.outputs = outputs
-        self.active_idx = len(outputs) - 1
+    def __init__(self):
+        self.outputs = []
+        self.active_idx = -1
 
     def append(self, output_node):
         self.outputs.append(output_node)
