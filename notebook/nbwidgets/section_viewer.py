@@ -5,7 +5,11 @@ from IPython.display import display
 from agents.paper_reviewer import SectionSummarizer, documents_retriever
 from documents.section_parser import SectionNode, SectionTree
 from nbwidgets.query_results_viewer import QueryResultsViewer
-from nbwidgets.output_manager import BasicOutputNode, BasicOutputNodeList
+from nbwidgets.output_manager import (
+    BasicOutputNode,
+    BasicOutputNodeList,
+    OutputCountWidget,
+)
 from nbwidgets.output import OutputWidget
 
 
@@ -42,6 +46,7 @@ class SectionViewer:
         else:
             raise ValueError("Either direction or idx should be specified")
         self.output_widget.update(self.output_list.active_output())
+        self.output_count_widget.update()
 
     def retrieve_queries(self, button=None):
         self.retrieve_button.style.button_color = "orange"
@@ -66,12 +71,19 @@ class SectionViewer:
             extra_prompt=self.extra_prompt,
             word_count=self.word_count,
         )
-
+        # with self.output_widget:
+        #     print(
+        #         f"### Hello World! \n\n"
+        #         f"This is a new paragraph[^1] ! \n\n"
+        #         f"[^1]: {datetime.now()}"
+        #     )
+        # self.response_content = "Hello World"
         output_node = BasicOutputNode(
             output=self.output_widget.output,
             content=self.response_content,
         )
         self.output_list.append(output_node)
+        self.output_count_widget.update()
         self.summarize_button.style.button_color = "darkgreen"
 
     def create_output_widget(self):
@@ -222,6 +234,8 @@ class SectionViewer:
         )
         self.prev_output_button.on_click(partial(self.switch_output, direction="prev"))
 
+        self.output_count_widget = OutputCountWidget(self.output_list)
+
         self.next_output_button = widgets.Button(
             description="",
             disabled=False,
@@ -265,6 +279,7 @@ class SectionViewer:
                         widgets.HBox(
                             children=[
                                 self.prev_output_button,
+                                self.output_count_widget.html_widget,
                                 self.next_output_button,
                             ],
                             layout=widgets.Layout(justify_content="flex-start"),

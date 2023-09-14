@@ -17,7 +17,7 @@ def print_output(*args, **kwargs):
     if output_widget:
         with output_widget:
             if level == "info":
-                s = f"<span style='color:cyan'>{args[0]}</span>"
+                s = f"<p style='color:cyan'>{args[0]}</p>"
                 print(s, *args[1:], **kwargs)
             else:
                 print(*args, **kwargs)
@@ -325,7 +325,7 @@ class OpenAIAgent:
         response_tokens_count = self.word_tokenizer.count_tokens(response_content)
         if show_tokens_count:
             self.print_output(
-                f"\nResponse Tokens count: [{response_tokens_count}] [{finish_reason}]",
+                f"Response Tokens count: [{response_tokens_count}] [{finish_reason}]",
                 level="info",
             )
 

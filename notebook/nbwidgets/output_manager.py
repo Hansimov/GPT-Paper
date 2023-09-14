@@ -1,6 +1,4 @@
-class PaperReviewOutputParser:
-    def __init__(self, outputs):
-        pass
+import ipywidgets as widgets
 
 
 class BasicOutputNode:
@@ -74,6 +72,13 @@ class OutputNode:
         self.children = []
 
 
-class ResponseTree:
-    def __init__(self):
-        pass
+class OutputCountWidget:
+    def __init__(self, output_list: BasicOutputNodeList):
+        self.html_widget = widgets.HTML()
+        self.output_list = output_list
+        self.update()
+
+    def update(self):
+        self.html_widget.value = (
+            f"{self.output_list.active_idx + 1}/{len(self.output_list.outputs)}"
+        )
