@@ -137,49 +137,53 @@ class SectionSummarizer:
         if output_type == "text":
             output_formats = f"""
             ```
-            # Topic: {topic}
+            ### Topic: {topic}
             
-            # {content_type.capitalize()}:
+            ### {content_type.capitalize()}:
             
-            Paragraph. [<pdf_num>.<page_idx>, ...]
-            Paragraph. [<pdf_num>.<page_idx>, ...]
-            Paragraph. [<pdf_num>.<page_idx>, ...]
+            Paragraph. [1]
+            Paragraph. [2]
+            Paragraph. [1,3]
             ...
             
-            # References:
-            [<pdf_num>] <Referred pdf name 1>. Page <page_idx>, ...
-            [<pdf_num>] <Referred pdf name 2>. Page <page_idx>, ...
-            [<pdf_num>] <Referred pdf name 3>. Page <page_idx>, ...
+            ### References:
+            
+            [1] <Referred pdf name 1>. Page 2, Page 6
+            [2] <Referred pdf name 2>. Page 5
+            [3] <Referred pdf name 3>. Page 4
             ...
             
             ```
             
             Here is the requirements of reference formats:
             
-            1. For each paragraph, you should add a `[<pdf_num>.<page_idx>]` in brackets to its end, which indicates PDF number and related page number of this paragraph's referred texts.
-            2. The order of references should follow the order of your output {content_type} referred,
-            meaning references used earlier should appear earlier.
+            1. For each paragraph, you should add `[<pdf_num>]` (such as [1] or [1,3]) to its end, which indicates idxs of PDFs that this paragraph refers to.
+            2. The order of references should follow the order of your output {content_type} referred, meaning references used earlier should appear earlier.
             3. In "References", lines with same `pdf_name` should be combined to a single one.
-            4. `<pdf_num>` represents the pdf order in references, which is a number, starting from 1;
+            4. `<pdf_num>`(1, 2, 3, ...) represents the pdf order in references, which is a number, starting from 1;
             `<page_idx>` indicates the corresponding page number in the PDF;
-            5. The values of `<page_idx>` are the same with them in provided texts.
-            6. The Page numbers in References must exist in the provided referred text. DO NOT CREATE BY YOURSELF!
+            5. The values of `<page_idx>` are the same with them in provided refered texts.
+            6. In References section, You SHOULD ONLY use the page idxs existed in the provided referred texts block. DO NOT CREATE them BY YOURSELF!
             
-            An Example of {content_type.capitalize()} and References:
+            An Example of Topic, {content_type.capitalize()} and References:
             
             ```
-            # {content_type.capitalize()}:
+            ### Topic: Here is the topic
             
-            Here is a Paragraph. [Ref: 1.3]
-            Here is another paragraph with multiple sentences. And each sentence is related to the above provided referred texts [Ref: 1.6]
-            Here is the third pagraph, whose content are extracted and understood with multiple references. [Ref: 2.8, 3.5]
+            ### {content_type.capitalize()}:
+            
+            Here is a Paragraph. [1]
+            Here is another paragraph with multiple sentences. And each sentence is related to the above provided referred texts [2]
+            Here is the third pagraph, whose content are extracted and understood with multiple references. [1,3]
             ...
             
-            # Refrerences:
+            ### Refrerences:
+            
             [1] Here is the name of first referred PDF: Page 3, Page 6.
             [2] Here is the name of second referred PDF: Page 8.
             [3] Here is the name of third referred PDF: Page 5.
             ...
+                        
             ```
             """
         elif output_type == "json":
