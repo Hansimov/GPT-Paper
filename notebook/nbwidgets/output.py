@@ -2,12 +2,17 @@ from contextlib import contextmanager
 import ipywidgets as widgets
 import sys
 from IPython.display import display
+import markdown2
 
 
 class OutputWidget:
     def __init__(self):
         self.output = ""
+        self.html = ""
         self.html_widget = widgets.HTML()
+
+    def md2html(self, markdown_text):
+        return markdown2.markdown(markdown_text)
 
     def display(self):
         display(self.html_widget)
@@ -23,13 +28,14 @@ class OutputWidget:
 
     def __exit__(self, exc_type, exc_value, exc_traceback):
         sys.stdout = self.original_stdout
-        self.html_widget.value = self.output
+        self.html_widget.value = self.md2html(self.output)
+        # self.html_widget.value = self.output
 
     def write(self, text):
-        self.output += text.replace("\n", "<br/>")
+        self.output += text
 
     def flush(self):
         pass
 
     def update(self, text):
-        self.html_widget.value = text
+        self.html_widget.value = self.md2html(text)

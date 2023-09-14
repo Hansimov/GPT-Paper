@@ -325,7 +325,7 @@ class OpenAIAgent:
         response_tokens_count = self.word_tokenizer.count_tokens(response_content)
         if show_tokens_count:
             self.print_output(
-                f"Response Tokens count: [{response_tokens_count}] [{finish_reason}]",
+                f"\nResponse Tokens count: [{response_tokens_count}] [{finish_reason}]",
                 level="info",
             )
 
