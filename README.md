@@ -10,6 +10,12 @@ Enhance paper search, reading, writing and review with the assistance of GPT.
 pip install --upgrade pymupdf
 ```
 
+## Setup detectron2 and unilm
+
+```sh
+python -m utils.envs
+```
+
 **detectron2:**
 * detectron2/blob/main/setup.py#L162-L215
   * https://github.com/facebookresearch/detectron2/blob/main/setup.py#L162-L215
@@ -31,6 +37,7 @@ sudo apt install libtesseract-dev
 
 Windows:
 
+* https://github.com/UB-Mannheim/tesseract/wiki#tesseract-installer-for-windows
 * https://tesseract-ocr.github.io/tessdoc/Installation.html#windows
 * https://tesseract-ocr.github.io/tessdoc/Downloads.html
 
@@ -57,6 +64,12 @@ pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipyn
 
 ```sh
 pip install httpx
+```
+
+**markdown2:**
+
+```sh
+pip install markdown2
 ```
 
 

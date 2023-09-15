@@ -8,6 +8,7 @@ from utils.logger import logger, Runtimer
 from sentence_transformers import SentenceTransformer, CrossEncoder
 from sentence_transformers import util as st_util
 from termcolor import colored
+from utils.envs import enver
 
 
 def df_column_to_torch_tensor(df_column):
@@ -52,11 +53,15 @@ class WordTokenizer:
             "p50k_base": ["Codex models", "text-davinci-002", "text-davinci-003"],
         }
 
+        enver.set_envs(set_proxy=True)
+        os.environ = enver.envs
         for encoding, models in self.encoding_model_map.items():
             if self.model in models:
                 self.encoding_name = encoding
                 self.encoder = tiktoken.get_encoding(self.encoding_name)
                 break
+        enver.restore_envs()
+        os.environ = enver.envs
 
         if not self.encoding_name:
             raise ValueError(f"No valid encoding for model: {self.model}")

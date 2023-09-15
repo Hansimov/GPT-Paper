@@ -278,8 +278,8 @@ def download_publaynet_dit_cascade_pth(size="base"):
 
 
 def setup_envs_of_dit():
-    # setup_envs_of_detectron2()
-    # setup_envs_of_unilm()
+    setup_envs_of_detectron2()
+    setup_envs_of_unilm()
     download_publaynet_dit_cascade_pth(size="large")
 
 
@@ -314,8 +314,7 @@ def download_nltk_data():
 if __name__ == "__main__":
     enver.set_envs(set_proxy=True)
     os.environ = enver.envs
-    # check_camelot_dependencies()
-    # setup_envs_of_dit()
+    setup_envs_of_dit()
     # download_reading_bank_dataset()
     download_nltk_data()
     enver.restore_envs()
