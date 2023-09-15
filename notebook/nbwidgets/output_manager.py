@@ -9,7 +9,7 @@ class BasicOutputNode:
         self.next = None
 
 
-class BasicOutputNodeList:
+class BasicOutputNodeChain:
     def __init__(self):
         self.outputs = []
         self.active_idx = -1
@@ -73,12 +73,12 @@ class OutputNode:
 
 
 class OutputCountWidget:
-    def __init__(self, output_list: BasicOutputNodeList):
+    def __init__(self, output_chain: BasicOutputNodeChain):
         self.html_widget = widgets.HTML()
-        self.output_list = output_list
+        self.output_chain = output_chain
         self.update()
 
     def update(self):
         self.html_widget.value = (
-            f"{self.output_list.active_idx + 1}/{len(self.output_list.outputs)}"
+            f"{self.output_chain.active_idx + 1}/{len(self.output_chain.outputs)}"
         )

@@ -9,16 +9,18 @@ from documents.section_parser import SectionNode, SectionTree
 from nbwidgets.query_results_viewer import QueryResultsViewer
 from nbwidgets.output_manager import (
     BasicOutputNode,
-    BasicOutputNodeList,
+    BasicOutputNodeChain,
     OutputCountWidget,
 )
 from nbwidgets.output import OutputWidget
+from nbwidgets.stater import SectionViewerRunStater
 
 
 class SectionViewer:
     def __init__(self, section_node, parent=None):
         self.section_node = section_node
         self.section_node.section_viewer = self
+        self.id = self.section_node.level
         self.parent = parent
         self.children = []
         self.extra_prompt = ""
@@ -31,23 +33,24 @@ class SectionViewer:
         if len(self.section_node.children) > 0:
             self.editable_widgets_visibility = False
 
-        self.output_list = BasicOutputNodeList()
+        self.output_chain = BasicOutputNodeChain()
+        self.stater = SectionViewerRunStater(self, viewer_type="summarize")
 
         # self.create_widgets()
 
     def switch_output(self, button=None, direction=None, idx=None):
         if direction:
             if direction == "prev":
-                self.output_list.decrement_active_idx()
+                self.output_chain.decrement_active_idx()
             elif direction == "next":
-                self.output_list.increment_active_idx()
+                self.output_chain.increment_active_idx()
             else:
                 pass
         elif idx:
-            self.output_list.set_active_idx(idx)
+            self.output_chain.set_active_idx(idx)
         else:
             raise ValueError("Either direction or idx should be specified")
-        self.output_widget.update(self.output_list.active_output())
+        self.output_widget.update(self.output_chain.active_output())
         self.output_count_widget.update()
 
     def retrieve_queries(self, button=None):
@@ -84,8 +87,9 @@ class SectionViewer:
             output=self.output_widget.output,
             content=self.response_content,
         )
-        self.output_list.append(output_node)
+        self.output_chain.append(output_node)
         self.output_count_widget.update()
+        self.stater.update()
         self.summarize_button.style.button_color = "darkgreen"
 
     def create_output_widget(self):
@@ -236,7 +240,7 @@ class SectionViewer:
         )
         self.prev_output_button.on_click(partial(self.switch_output, direction="prev"))
 
-        self.output_count_widget = OutputCountWidget(self.output_list)
+        self.output_count_widget = OutputCountWidget(self.output_chain)
 
         self.next_output_button = widgets.Button(
             description="",
@@ -365,7 +369,7 @@ class SectionViewerTree:
             section_node = section_viewer.section_node
             section_dict = section_node.dump_to_section_dict()
             section_dict["outputs"] = [
-                output.content for output in section_viewer.output_list.outputs
+                output.content for output in section_viewer.output_chain.outputs
             ]
             sections_draft.append(section_dict)
 
