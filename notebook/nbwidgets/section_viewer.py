@@ -1,6 +1,8 @@
+import json
+import ipywidgets as widgets
 from datetime import datetime
 from functools import partial
-import ipywidgets as widgets
+from pathlib import Path
 from IPython.display import display
 from agents.paper_reviewer import SectionSummarizer, documents_retriever
 from documents.section_parser import SectionNode, SectionTree
@@ -326,6 +328,9 @@ class SectionViewer:
 class SectionViewerTree:
     def __init__(self, project_dir):
         self.section_tree = SectionTree(project_dir)
+        self.sections_draft_path = (
+            self.section_tree.sections_json_parser.result_root / "review_draft.json"
+        )
         self.construct_section_viewers_tree()
         self.construct_section_viewers_chain()
         self.create_widgets()
@@ -353,8 +358,22 @@ class SectionViewerTree:
                 section_viewer_stack.append(child_section_viewer)
         self.retrieve_all_button.style.button_color = "darkgreen"
 
-    def save_sections(self):
-        pass
+    def dump_sections_draft(self, button=None):
+        self.dump_sections_draft_button.button_color = "orange"
+        sections_draft = []
+        for section_viewer in self.section_viewer_chain:
+            section_node = section_viewer.section_node
+            section_dict = section_node.dump_to_section_dict()
+            section_dict["outputs"] = [
+                output.content for output in section_viewer.output_list.outputs
+            ]
+            sections_draft.append(section_dict)
+
+        with open(self.sections_draft_path, "w", encoding="utf-8") as wf:
+            json.dump(sections_draft, wf, indent=4, ensure_ascii=False)
+        print(f"Sections draft dumped to {self.sections_draft_path}")
+
+        self.dump_sections_draft_button.button_color = "darkgreen"
 
     def create_buttons(self):
         button_layout = widgets.Layout(width="auto")
@@ -378,6 +397,16 @@ class SectionViewerTree:
         )
         self.retrieve_all_button.on_click(self.retrieve_all_sections)
 
+        self.dump_sections_draft_button = widgets.Button(
+            description="Dump Draft",
+            disabled=False,
+            button_style="",
+            tooltip="Dump sections draft",
+            icon="file-arrow-down",
+            layout=button_layout,
+        )
+        self.dump_sections_draft_button.on_click(self.dump_sections_draft)
+
     def construct_section_viewers_tree(self):
         section_root = self.section_tree.section_root
         section_viewer_root = SectionViewer(section_root)
@@ -398,7 +427,6 @@ class SectionViewerTree:
         while len(section_viewer_stack) > 0:
             section_viewer = section_viewer_stack.pop(-1)
             self.section_viewer_chain.append(section_viewer)
-            print(section_viewer.section_node.level)
             for child_section_viewer in section_viewer.children[::-1]:
                 section_viewer_stack.append(child_section_viewer)
 
@@ -406,7 +434,11 @@ class SectionViewerTree:
         self.create_buttons()
         self.container = widgets.VBox(layout=widgets.Layout(border="solid 1px gray"))
         self.button_widgets = widgets.HBox(
-            children=[self.retrieve_all_button, self.summarize_all_button]
+            children=[
+                self.retrieve_all_button,
+                self.summarize_all_button,
+                self.dump_sections_draft_button,
+            ]
         )
         self.section_viewer_root.create_widgets()
         self.container.children = [self.button_widgets]

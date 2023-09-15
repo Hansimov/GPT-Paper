@@ -14,7 +14,7 @@ class BasicOutputNodeList:
         self.outputs = []
         self.active_idx = -1
 
-    def append(self, output_node):
+    def append(self, output_node: BasicOutputNode):
         self.outputs.append(output_node)
         self.active_idx = len(self.outputs) - 1
 

@@ -133,6 +133,16 @@ class SectionNode:
         common_parent = self.get_latest_node_with_depth(max_depth).parent
         return common_parent
 
+    def dump_to_section_dict(self):
+        section_dict = {
+            "idx": self.idx,
+            "level": self.level,
+            "depth": self.depth,
+            "title": self.title,
+            "intro": self.intro,
+        }
+        return section_dict
+
     def dump_to_hierarchical_sections_dict(self):
         hierarchical_sections = {
             "idx": self.idx,

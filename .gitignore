@@ -14,3 +14,4 @@ data/
 !pdfs/**/_results/*.pkl
 
 **/.ipynb_checkpoints
+**/.virtual_documents
