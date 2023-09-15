@@ -224,6 +224,7 @@ class SectionTree:
 
         self.hierarchical_sections = hierarchical_sections
         self.section_root = section_root
+        self.section_tree = section_root
 
 
 if __name__ == "__main__":

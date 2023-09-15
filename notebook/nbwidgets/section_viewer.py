@@ -311,7 +311,7 @@ class SectionViewer:
         self.container.children = [self.left_container, self.right_container]
         return self.container
 
-    def display(self, display_children=True):
+    def display(self, display_children=False):
         if display_children:
             section_viewer_stack = [self]
             while len(section_viewer_stack) > 0:
@@ -327,6 +327,7 @@ class SectionViewerTree:
     def __init__(self, project_dir):
         self.section_tree = SectionTree(project_dir)
         self.construct_section_viewers_tree()
+        self.construct_section_viewers_chain()
         self.create_widgets()
         self.display()
 
@@ -337,7 +338,6 @@ class SectionViewerTree:
             section_viewer = section_viewer_stack.pop()
             if section_viewer.editable_widgets_visibility:
                 section_viewer.summarize_chat(None)
-                # section_viewer.retrieve_queries()
             for child_section_viewer in section_viewer.children:
                 section_viewer_stack.append(child_section_viewer)
         self.summarize_all_button.style.button_color = "darkgreen"
@@ -348,9 +348,7 @@ class SectionViewerTree:
         while len(section_viewer_stack) > 0:
             section_viewer = section_viewer_stack.pop()
             if section_viewer.editable_widgets_visibility:
-                # section_viewer.summarize_chat(None)
                 section_viewer.retrieve_queries()
-                # print(section_viewer.section_node.title)
             for child_section_viewer in section_viewer.children:
                 section_viewer_stack.append(child_section_viewer)
         self.retrieve_all_button.style.button_color = "darkgreen"
@@ -381,23 +379,28 @@ class SectionViewerTree:
         self.retrieve_all_button.on_click(self.retrieve_all_sections)
 
     def construct_section_viewers_tree(self):
-        self.section_tree.construct_section_tree()
-
         section_root = self.section_tree.section_root
         section_viewer_root = SectionViewer(section_root)
-
-        section_viewer_stack = [section_viewer_root]
-        while len(section_viewer_stack) > 0:
-            section_viewer = section_viewer_stack.pop()
-            section_node = section_viewer.section_node
-            # print(section_node.level)
-            for child_section_node in section_node.children[::-1]:
+        queue = [section_viewer_root]
+        while queue:
+            section_viewer = queue.pop(0)
+            for child_section_node in section_viewer.section_node.children:
                 child_section_viewer = SectionViewer(child_section_node)
                 child_section_viewer.parent = section_viewer
                 section_viewer.children.append(child_section_viewer)
-                section_viewer_stack.append(child_section_viewer)
-
+                queue.append(child_section_viewer)
         self.section_viewer_root = section_viewer_root
+        self.section_viewer_tree = section_viewer_root
+
+    def construct_section_viewers_chain(self):
+        self.section_viewer_chain = []
+        section_viewer_stack = [self.section_viewer_root]
+        while len(section_viewer_stack) > 0:
+            section_viewer = section_viewer_stack.pop(-1)
+            self.section_viewer_chain.append(section_viewer)
+            print(section_viewer.section_node.level)
+            for child_section_viewer in section_viewer.children[::-1]:
+                section_viewer_stack.append(child_section_viewer)
 
     def create_widgets(self):
         self.create_buttons()
@@ -410,7 +413,8 @@ class SectionViewerTree:
 
     def display(self):
         display(self.container)
-        self.section_viewer_root.display()
+        for section_viewer in self.section_viewer_chain:
+            section_viewer.display(display_children=False)
 
 
 if __name__ == "__main__":
