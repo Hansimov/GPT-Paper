@@ -4,6 +4,51 @@ import sys
 from IPython.display import display
 import markdown2
 from bs4 import BeautifulSoup
+from cssutils import parseStyle
+
+
+class UserInputViewer:
+    def __init__(self):
+        self.create_widgets()
+
+    def create_widgets(self):
+        self.text_widget = widgets.Textarea(
+            value="",
+            placeholder="Type something",
+            layout=widgets.Layout(width="100%"),
+        )
+        self.html_widget = widgets.HTML(value="<div></div>")
+        self.output_widget = widgets.Output()
+        self.widget = widgets.VBox([self.text_widget])
+
+    def sync_text_to_html(self):
+        soup = BeautifulSoup(self.html_widget.value, "html.parser")
+        div = soup.find("div")
+        print(self.text_widget.value)
+        div.string = self.text_widget.value
+        print(div)
+        self.html_widget.value = str(soup)
+
+    def sync_html_to_text(self):
+        soup = BeautifulSoup(self.html_widget.value, "html.parser")
+        div = soup.find("div")
+        self.text_widget.value = div.text
+
+    def on_submit(self, callback=None):
+        self.sync_text_to_html()
+        self.widget = widgets.VBox([self.html_widget])
+        self.output_widget.clear_output()
+        self.display()
+
+    def on_edit(self, callback=None):
+        self.sync_html_to_text()
+        self.widget = widgets.VBox([self.text_widget])
+        self.output_widget.clear_output()
+        self.display()
+
+    def display(self):
+        with self.output_widget:
+            display(self.widget)
 
 
 class OutputViewer:
