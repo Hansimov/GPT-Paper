@@ -1,5 +1,5 @@
 class MessageNode:
-    def __init__(self, role="", content="", hidden=False, editable=False, parent=None):
+    def __init__(self, role="", content="", editable=False, hidden=False, parent=None):
         self.role = role
         self.content = content
         self.editable = editable

@@ -2,6 +2,8 @@ import ipywidgets as widgets
 from nbwidgets.output_viewer import MessageViewer
 from IPython.display import display
 from nbwidgets.message_node import MessageNode, MessageChain, MessageTree
+from time import sleep
+from datetime import datetime
 
 
 class ConversationViewer:
@@ -100,4 +102,14 @@ class ConversationViewer:
         return messages
 
     def post_chat(self):
-        print(self.get_messages())
+        new_message = {
+            "role": "assistant",
+            "content": "Thinking...",
+            "editable": False,
+            "hidden": False,
+        }
+        self.append_messages(new_message)
+        self.display()
+        for i in range(3):
+            sleep(0.5)
+            self.message_viewers[-1].update_text(f"{datetime.now()}")

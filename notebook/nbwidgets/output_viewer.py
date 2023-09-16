@@ -46,9 +46,9 @@ class MessageViewer:
         )
         self.init_style()
         if message["role"] == "input":
-            self.widget = widgets.VBox([self.text_widget])
+            self.widget = self.text_widget
         else:
-            self.widget = widgets.VBox([self.html_widget])
+            self.widget = self.html_widget
 
     def sync_text_to_html(self):
         soup = BeautifulSoup(self.html_widget.value, "html.parser")
@@ -60,6 +60,13 @@ class MessageViewer:
         soup = BeautifulSoup(self.html_widget.value, "html.parser")
         div = soup.find("div")
         self.text_widget.value = div.text
+
+    def update_text(self, text):
+        self.text_widget.value = text
+        self.sync_text_to_html()
+
+    def get_text(self):
+        return self.text_widget.value
 
     # def on_submit(self, callback=None):
     #     self.sync_text_to_html()
