@@ -14,55 +14,11 @@ class ConversationViewer:
         self.message_viewers = []
         self.create_widgets()
         self.append_messages(messages)
-        self.display()
-
-    def pop_message(self, button=None, display=False, pop_count=1):
-        popped_messages = []
-        for _ in range(pop_count):
-            if len(self.message_viewers) == 0:
-                break
-            popped_message = self.message_viewers.pop()
-            pprint(popped_message.message_node.to_dict())
-            popped_messages.append(popped_message)
-        if display:
-            self.display()
-        return popped_messages
-
-    def append_messages(self, messages):
-        if messages is None:
-            self.message_viewers = []
-            return
-
-        if type(messages) != list:
-            messages = [messages]
-
-        for message in messages:
-            message_node = MessageNode(
-                role=message.get("role", "user"),
-                content=message.get("content", ""),
-                editable=message.get("editable", False),
-                hidden=message.get("hidden", False),
-            )
-            message_viewer = MessageViewer(message_node)
-            self.message_viewers.append(message_viewer)
-
-    def create_widgets(self):
-        self.create_output_widget()
-        self.create_user_input_widget()
-        self.create_buttons()
-
-    def display(self):
-        self.output_widget.clear_output()
-        with self.output_widget:
-            for message_viewer in self.message_viewers:
-                display(message_viewer.output_widget)
-                message_viewer.display()
-            display(self.user_input_viewer.widget)
-            display(self.buttons_box)
+        # self.display()
 
     def create_output_widget(self):
         self.output_widget = widgets.Output()
-        display(self.output_widget)
+        # display(self.output_widget)
 
     def create_user_input_widget(self):
         message_node = MessageNode(role="input")
@@ -112,6 +68,20 @@ class ConversationViewer:
             self.model_dropdown,
         ]
 
+    def create_widgets(self):
+        self.create_output_widget()
+        self.create_user_input_widget()
+        self.create_buttons()
+
+    def display(self):
+        self.output_widget.clear_output()
+        with self.output_widget:
+            for message_viewer in self.message_viewers:
+                display(message_viewer.output_widget)
+                message_viewer.display()
+            display(self.user_input_viewer.widget)
+            display(self.buttons_box)
+
     def submit_user_input(self, button=None):
         self.submit_button.style.button_color = "orange"
         user_input_content = self.user_input_viewer.text_widget.value
@@ -129,6 +99,36 @@ class ConversationViewer:
             self.submit_button.style.button_color = "darkgreen"
         else:
             self.submit_button.style.button_color = None
+
+    def pop_message(self, button=None, display=False, pop_count=1):
+        popped_messages = []
+        for _ in range(pop_count):
+            if len(self.message_viewers) == 0:
+                break
+            popped_message = self.message_viewers.pop()
+            pprint(popped_message.message_node.to_dict())
+            popped_messages.append(popped_message)
+        if display:
+            self.display()
+        return popped_messages
+
+    def append_messages(self, messages):
+        if messages is None:
+            self.message_viewers = []
+            return
+
+        if type(messages) != list:
+            messages = [messages]
+
+        for message in messages:
+            message_node = MessageNode(
+                role=message.get("role", "user"),
+                content=message.get("content", ""),
+                editable=message.get("editable", False),
+                hidden=message.get("hidden", False),
+            )
+            message_viewer = MessageViewer(message_node)
+            self.message_viewers.append(message_viewer)
 
     def regenerate_message(self, button=None):
         self.regenerate_button.style.button_color = "orange"

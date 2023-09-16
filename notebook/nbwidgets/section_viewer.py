@@ -12,8 +12,9 @@ from nbwidgets.output_manager import (
     BasicOutputNodeChain,
     OutputCountWidget,
 )
-from nbwidgets.output import OutputWidget
+from nbwidgets.output_viewer import OutputViewer
 from nbwidgets.stater import SectionViewerRunStater
+from nbwidgets.conversation_viewer import ConversationViewer
 
 
 class SectionViewer:
@@ -93,9 +94,12 @@ class SectionViewer:
         self.summarize_button.style.button_color = "darkgreen"
 
     def create_output_widget(self):
-        self.output_widget = OutputWidget()
+        self.output_widget = OutputViewer()
         for agent in self.section_summarizer.agents:
             agent.output_widget = self.output_widget
+
+    def create_conversation_viewer(self):
+        self.conversation_viewer = ConversationViewer()
 
     def create_title_and_intro_text_widgets(self):
         text_style = {"description_width": "50px"}
@@ -256,6 +260,7 @@ class SectionViewer:
         self.create_output_widget()
         self.create_title_and_intro_text_widgets()
         self.create_buttons()
+        self.create_conversation_viewer()
 
         self.container = widgets.HBox(layout=widgets.Layout(border="solid 1px gray"))
         self.left_container = widgets.VBox(layout=widgets.Layout(width="50%"))
@@ -293,7 +298,8 @@ class SectionViewer:
                     ],
                     layout=widgets.Layout(justify_content="flex-start"),
                 ),
-                self.output_widget.html_widget,
+                # self.output_widget.html_widget,
+                self.conversation_viewer.output_widget,
             ],
         )
 
@@ -302,7 +308,11 @@ class SectionViewer:
             for widget in hidden_widgets:
                 widget.layout.display = "none"
 
-        self.left_widgets = [self.title_widget, self.editable_widgets]
+        self.left_widgets = [
+            self.title_widget,
+            self.editable_widgets,
+        ]
+
         self.right_widgets = [self.intro_text_widget, self.query_results_widget]
 
         if len(self.children) == 0:
@@ -327,6 +337,7 @@ class SectionViewer:
                     section_viewer_stack.append(child_section_viewer)
         else:
             display(self.container)
+            self.conversation_viewer.display()
 
 
 class SectionViewerTree:
