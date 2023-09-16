@@ -7,6 +7,22 @@ from bs4 import BeautifulSoup
 from cssutils import parseStyle
 
 
+def apply_style(html_text, style, tag="div"):
+    soup = BeautifulSoup(html_text, "html.parser")
+    element = soup.find(tag)
+    if "style" in element.attrs:
+        style_dict = dict(parseStyle(element["style"]))
+    else:
+        style_dict = {}
+
+    style_dict.update(parseStyle(style))
+    element["style"] = "; ".join(
+        [f"{key}: {value}" for key, value in style_dict.items()]
+    )
+
+    return str(soup)
+
+
 class UserInputViewer:
     def __init__(self):
         self.create_widgets()
@@ -15,18 +31,18 @@ class UserInputViewer:
         self.text_widget = widgets.Textarea(
             value="",
             placeholder="Type something",
-            layout=widgets.Layout(width="100%"),
+            layout=widgets.Layout(width="auto"),
         )
-        self.html_widget = widgets.HTML(value="<div></div>")
         self.output_widget = widgets.Output()
+        self.html_widget = widgets.HTML(
+            value="<div></div>", layout=widgets.Layout(width="auto")
+        )
         self.widget = widgets.VBox([self.text_widget])
 
     def sync_text_to_html(self):
         soup = BeautifulSoup(self.html_widget.value, "html.parser")
         div = soup.find("div")
-        print(self.text_widget.value)
         div.string = self.text_widget.value
-        print(div)
         self.html_widget.value = str(soup)
 
     def sync_html_to_text(self):
@@ -36,9 +52,19 @@ class UserInputViewer:
 
     def on_submit(self, callback=None):
         self.sync_text_to_html()
-        self.widget = widgets.VBox([self.html_widget])
+        if self.text_widget.value == "":
+            return ""
+
+        self.html_widget.value = apply_style(
+            self.html_widget.value,
+            "background: rgba(0, 100, 0, 0.5); padding: 8px; margin: 0px;",
+        )
+        self.widget = widgets.VBox(
+            [self.html_widget], layout=widgets.Layout(width="auto")
+        )
         self.output_widget.clear_output()
         self.display()
+        return self.text_widget.value
 
     def on_edit(self, callback=None):
         self.sync_html_to_text()
