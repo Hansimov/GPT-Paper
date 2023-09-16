@@ -31,7 +31,6 @@ def print_output(*args, **kwargs):
                 text = args[0] + end
             else:
                 text = end
-
         update_widget.update_text(text)
     else:
         print(*args, **kwargs)
@@ -251,6 +250,13 @@ class OpenAIAgent:
 
         memory = memory if memory is not None else self.memory
         record = record if record is not None else self.record
+
+        if output_widget:
+            self.output_widget = output_widget
+        if update_widget:
+            self.update_widget = update_widget
+            print(self.update_widget)
+
         continuous = continuous if continuous is not None else self.continuous
 
         env_params = {
@@ -283,7 +289,7 @@ class OpenAIAgent:
             request_messages.extend(user_prompt_messages)
 
         self.request_messages = request_messages
-        pprint(request_messages)
+        # pprint(request_messages)
 
         if show_prompt:
             self.print_output(f"[Human]: {prompt}")

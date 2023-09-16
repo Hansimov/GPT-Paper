@@ -3,6 +3,7 @@ import ipywidgets as widgets
 from datetime import datetime
 from functools import partial
 from pathlib import Path
+from pprint import pprint
 from IPython.display import display
 from agents.paper_reviewer import SectionSummarizer, documents_retriever
 from documents.section_parser import SectionNode, SectionTree
@@ -69,14 +70,29 @@ class SectionViewer:
 
     def summarize_chat(self, button=None):
         self.summarize_button.style.button_color = "orange"
-        self.output_widget.clear_output()
+        # self.output_widget.clear_output()
         queries = self.retrieve_queries()
+
+        new_message = {
+            "role": "assistant",
+            "content": "",
+            "editable": False,
+            "hidden": False,
+        }
+        self.conversation_viewer.append_messages(new_message)
+        self.conversation_viewer.display()
+        last_message_viewer = self.conversation_viewer.get_last_message_viewer()
+
         self.response_content = self.section_summarizer.chat(
             topic=self.section_node.intro,
             queries=queries,
             extra_prompt=self.extra_prompt,
             word_count=self.word_count,
+            update_widget=last_message_viewer,
         )
+
+        # pprint(self.section_summarizer.summarize_agent.history_messages)
+
         # with self.output_widget:
         #     print(
         #         f"### Hello World! \n\n"
@@ -84,13 +100,14 @@ class SectionViewer:
         #         f"[^1]: {datetime.now()}"
         #     )
         # self.response_content = "Hello World"
-        output_node = BasicOutputNode(
-            output=self.output_widget.output,
-            content=self.response_content,
-        )
-        self.output_chain.append(output_node)
+
+        # output_node = BasicOutputNode(
+        #     output=self.output_widget.output,
+        #     content=self.response_content,
+        # )
+        # self.output_chain.append(output_node)
         self.output_count_widget.update()
-        self.stater.update()
+        # self.stater.update()
         self.summarize_button.style.button_color = "darkgreen"
 
     def create_output_widget(self):
@@ -257,7 +274,7 @@ class SectionViewer:
         self.next_output_button.on_click(partial(self.switch_output, direction="next"))
 
     def create_widgets(self, create_children=True):
-        self.create_output_widget()
+        # self.create_output_widget()
         self.create_title_and_intro_text_widgets()
         self.create_buttons()
         self.create_conversation_viewer()

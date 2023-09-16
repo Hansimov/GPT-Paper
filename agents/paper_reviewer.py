@@ -102,7 +102,15 @@ class SectionSummarizer:
         self.agents = [self.summarize_agent, self.translate_agent]
         self.content_type = content_type
 
-    def chat(self, topic, queries, extra_prompt="", word_count=600, translate=False):
+    def chat(
+        self,
+        topic,
+        queries,
+        extra_prompt="",
+        word_count=600,
+        translate=False,
+        update_widget=None,
+    ):
         summarize_prompt_list = self.create_summarize_prompt(
             topic=topic,
             queries=queries,
@@ -110,7 +118,9 @@ class SectionSummarizer:
             word_count=word_count,
         )
 
-        summarize_content = self.summarize_agent.chat(summarize_prompt_list)
+        summarize_content = self.summarize_agent.chat(
+            summarize_prompt_list, update_widget=update_widget
+        )
         if translate:
             translate_content = self.translate_agent.chat(summarize_content)
         else:
