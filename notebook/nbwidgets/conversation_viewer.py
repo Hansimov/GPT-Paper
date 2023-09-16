@@ -126,7 +126,6 @@ class ConversationViewer:
                 role=message.get("role", "user"),
                 content=message.get("content", ""),
                 verbose_content=message.get("verbose_content", ""),
-                compact_content=message.get("compact_content", ""),
                 editable=message.get("editable", False),
                 hidden=message.get("hidden", False),
             )
