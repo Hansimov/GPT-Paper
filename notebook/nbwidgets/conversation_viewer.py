@@ -119,8 +119,6 @@ class ConversationViewer:
         self.append_messages(new_message)
         self.display()
 
-        # self.get_last_message_viewer().output_widget.clear_output()
-
         agent = OpenAIAgent(
             model=self.model_dropdown.value,
             memory=True,
@@ -129,5 +127,9 @@ class ConversationViewer:
         )
 
         response_content = agent.chat(prompt="")
-        self.update_content_of_message(-1, response_content)
-        print(self.get_last_message_viewer().html_widget.value)
+        # self.update_content_of_message(-1, response_content)
+        last_message_viewer = self.get_last_message_viewer()
+        last_message_viewer.message_node.verbose_content = (
+            last_message_viewer.text_widget.value
+        )
+        last_message_viewer.message_node.content = response_content

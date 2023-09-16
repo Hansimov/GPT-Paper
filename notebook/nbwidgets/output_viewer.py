@@ -33,13 +33,13 @@ class MessageViewer:
         message = self.message_node.to_dict()
 
         self.text_widget = widgets.Textarea(
-            value=f"{message['content']}",
+            value=f"{message['verbose_content']}",
             placeholder="Type something",
             layout=widgets.Layout(width="auto"),
         )
         self.output_widget = widgets.Output()
         self.html_widget = widgets.HTML(
-            value=f"<div>{message['content']}</div>",
+            value=f"<div>{message['verbose_content']}</div>",
             layout=widgets.Layout(width="auto"),
         )
         self.init_style()

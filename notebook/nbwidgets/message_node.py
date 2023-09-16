@@ -1,14 +1,26 @@
 class MessageNode:
-    def __init__(self, role="", content="", editable=False, hidden=False, parent=None):
+    def __init__(
+        self,
+        role="",
+        content="",
+        verbose_content="",
+        editable=False,
+        hidden=False,
+        parent=None,
+    ):
         self.role = role
         self.content = content
+        if not verbose_content:
+            self.verbose_content = content
+        else:
+            self.verbose_content = verbose_content
         self.editable = editable
         self.hidden = hidden
         self.parent = parent
         self.children = []
         self.message = self.to_dict()
 
-    def content_shown(self, limit_width=40, shown_width=40):
+    def content_compact(self, limit_width=40, shown_width=40):
         if self.hidden and len(self.content) > limit_width:
             return self.content[:shown_width] + " ..."
         else:
@@ -20,7 +32,8 @@ class MessageNode:
             "content": self.content,
             "editable": self.editable,
             "hidden": self.hidden,
-            "content_shown": self.content_shown(),
+            "compact_content": self.content_compact(),
+            "verbose_content": self.verbose_content,
         }
         return message_dict
 
