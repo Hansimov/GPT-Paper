@@ -25,7 +25,7 @@ def print_output(*args, **kwargs):
                 print(*args, **kwargs)
     elif update_widget:
         if level == "info":
-            text = f"<p style='color:cyan'>{args[0]}</p>"
+            text = f"<p style='color:cyan'>{args[0]}</p>" + end
         else:
             if len(args) > 0:
                 text = args[0] + end
@@ -255,7 +255,6 @@ class OpenAIAgent:
             self.output_widget = output_widget
         if update_widget:
             self.update_widget = update_widget
-            print(self.update_widget)
 
         continuous = continuous if continuous is not None else self.continuous
 

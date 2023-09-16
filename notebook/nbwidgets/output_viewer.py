@@ -54,7 +54,10 @@ class MessageViewer:
 
         div.clear()
         if render:
-            div_content = BeautifulSoup(markdown2.markdown(self.text_widget.value))
+            div_content = BeautifulSoup(
+                markdown2.markdown(self.text_widget.value), "html.parser"
+            )
+
         else:
             div_content = self.text_widget.value
         div.append(div_content)
@@ -71,7 +74,7 @@ class MessageViewer:
             self.text_widget.value += text
         else:
             self.text_widget.value = text
-        self.message_node.content = self.text_widget.value
+        self.message_node.verbose_content = self.text_widget.value
         self.sync_text_to_html()
 
     def get_text(self):
