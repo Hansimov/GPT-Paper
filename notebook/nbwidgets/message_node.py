@@ -1,16 +1,25 @@
 class MessageNode:
-    def __init__(self, role="", content="", editable=False, parent=None):
+    def __init__(self, role="", content="", hidden=False, editable=False, parent=None):
         self.role = role
         self.content = content
         self.editable = editable
+        self.hidden = hidden
         self.parent = parent
         self.children = []
+
+    def content_shown(self, limit_width=40, shown_width=40):
+        if self.hidden and len(self.content) > limit_width:
+            return self.content[:shown_width] + " ..."
+        else:
+            return self.content
 
     def to_dict(self):
         message_dict = {
             "role": self.role,
             "content": self.content,
-            "editable": False,
+            "editable": self.editable,
+            "hidden": self.hidden,
+            "content_shown": self.content_shown(),
         }
         return message_dict
 

@@ -5,6 +5,7 @@ from IPython.display import display
 import markdown2
 from bs4 import BeautifulSoup
 from cssutils import parseStyle
+from nbwidgets.message_node import MessageNode
 
 
 def apply_style(html_text, style, tag="div"):
@@ -23,21 +24,31 @@ def apply_style(html_text, style, tag="div"):
     return str(soup)
 
 
-class UserInputViewer:
-    def __init__(self):
+class MessageViewer:
+    def __init__(self, message_node: MessageNode = None):
+        self.message_node = message_node
         self.create_widgets()
 
     def create_widgets(self):
+        message = self.message_node.to_dict()
+
         self.text_widget = widgets.Textarea(
-            value="",
+            value=f"{message['content']}",
             placeholder="Type something",
             layout=widgets.Layout(width="auto"),
         )
         self.output_widget = widgets.Output()
         self.html_widget = widgets.HTML(
-            value="<div></div>", layout=widgets.Layout(width="auto")
+            value=f"<div>{message['content']}</div>",
+            layout=widgets.Layout(
+                width="auto",
+            ),
         )
-        self.widget = widgets.VBox([self.text_widget])
+        self.init_style()
+        if message["role"] == "input":
+            self.widget = widgets.VBox([self.text_widget])
+        else:
+            self.widget = widgets.VBox([self.html_widget])
 
     def sync_text_to_html(self):
         soup = BeautifulSoup(self.html_widget.value, "html.parser")
@@ -71,6 +82,20 @@ class UserInputViewer:
         self.widget = widgets.VBox([self.text_widget])
         self.output_widget.clear_output()
         self.display()
+
+    def init_style(self, style=None):
+        ROLE_BACKGROUND_COLORS = {
+            "system": (100, 100, 0, 0.5),
+            "user": (0, 100, 0, 0.5),
+            "assistant": (0, 100, 100, 0.5),
+            "input": (100, 100, 100, 0.5),
+        }
+        bg_color = ROLE_BACKGROUND_COLORS[self.message_node.role]
+
+        self.html_widget.value = apply_style(
+            self.html_widget.value,
+            f"background-color: rgba{bg_color}; padding: 8px;",
+        )
 
     def display(self):
         with self.output_widget:

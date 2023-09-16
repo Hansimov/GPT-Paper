@@ -1,5 +1,5 @@
 import ipywidgets as widgets
-from nbwidgets.output_viewer import OutputViewer, UserInputViewer
+from nbwidgets.output_viewer import OutputViewer, MessageViewer
 from IPython.display import display
 from nbwidgets.message_node import MessageNode, MessageChain, MessageTree
 
@@ -9,7 +9,15 @@ class ConversationViewer:
         if messages is None:
             messages = []
         self.messages = messages
-        self.message_chain = MessageChain(messages)
+        self.message_nodes = [
+            MessageNode(
+                role=message.get("role", "user"),
+                content=message.get("content", ""),
+                editable=message.get("editable", False),
+                hidden=message.get("hidden", False),
+            )
+            for message in self.messages
+        ]
         self.output_viewers = []
         self.create_output_widget()
 
@@ -18,7 +26,8 @@ class ConversationViewer:
         display(self.output_widget)
 
     def create_user_input_widget(self):
-        self.user_input_viewer = UserInputViewer()
+        message_node = MessageNode(role="input")
+        self.user_input_viewer = MessageViewer(message_node)
 
     def create_buttons(self):
         self.buttons_box = widgets.HBox()
@@ -27,9 +36,14 @@ class ConversationViewer:
         )
         self.submit_button.on_click(self.submit_user_input)
         self.model_html_widget = widgets.HTML(value="<div>model: </div>")
+        self.available_models = [
+            "poe-gpt-3.5-turbo-16k",
+            "poe-gpt-3.5-turbo",
+            "poe-gpt-4",
+        ]
         self.model_dropdown = widgets.Dropdown(
-            options=["poe-gpt-3.5-turbo", "poe-gpt-3.5-turbo-16k", "poe-gpt-4"],
-            value="poe-gpt-3.5-turbo-16k",
+            options=self.available_models,
+            value=self.available_models[0],
             layout=widgets.Layout(width="auto"),
         )
         self.buttons_box.children = [
@@ -43,15 +57,16 @@ class ConversationViewer:
         user_input_content = self.user_input_viewer.on_submit()
         if user_input_content.strip():
             self.submit_button.style.button_color = "darkgreen"
-            self.messages.append(
-                MessageNode(
-                    role="user",
-                    content=user_input_content + " [Submitted]",
-                    editable=False,
-                ).to_dict()
+            new_message_node = MessageNode(
+                role="user",
+                content=user_input_content + " [Submitted]",
+                editable=False,
+                hidden=True,
             )
+            self.message_nodes.append(new_message_node)
             self.update_display()
-            print(self.messages)
+            # print(self.message_nodes)
+            self.messages.append(new_message_node.to_dict())
         else:
             self.submit_button.style.button_color = None
 
@@ -62,18 +77,9 @@ class ConversationViewer:
 
     def construct_widgets_from_messages(self):
         self.output_viewers = []
-        for message in self.messages:
-            role = message["role"]
-            content = message["content"]
-            output_viewer = OutputViewer(content)
-            if role == "system":
-                bg_color = "rgba(100, 100, 0, 0.5)"
-            elif role == "user":
-                bg_color = "rgba(0, 100, 0, 0.5)"
-            else:  # role == "assistant"
-                bg_color = "rgba(0, 100, 100, 0.5)"
+        for message_node in self.message_nodes:
+            output_viewer = MessageViewer(message_node)
 
-            output_viewer.apply_style(f"background-color: {bg_color}; padding: 8px;")
             self.output_viewers.append(output_viewer)
 
         self.create_user_input_widget()
