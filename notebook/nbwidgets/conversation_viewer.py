@@ -78,6 +78,7 @@ class ConversationViewer:
         with self.output_widget:
             for message_viewer in self.message_viewers:
                 display(message_viewer.output_widget)
+                message_viewer.sync_text_to_html()
                 message_viewer.display()
             display(self.user_input_viewer.widget)
             display(self.buttons_box)
@@ -124,6 +125,8 @@ class ConversationViewer:
             message_node = MessageNode(
                 role=message.get("role", "user"),
                 content=message.get("content", ""),
+                verbose_content=message.get("verbose_content", ""),
+                compact_content=message.get("compact_content", ""),
                 editable=message.get("editable", False),
                 hidden=message.get("hidden", False),
             )

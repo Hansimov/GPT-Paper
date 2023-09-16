@@ -91,7 +91,17 @@ class SectionViewer:
             update_widget=last_message_viewer,
         )
 
-        # pprint(self.section_summarizer.summarize_agent.history_messages)
+        request_messages = self.section_summarizer.summarize_agent.request_messages
+        popped_messages = self.conversation_viewer.pop_message()
+        self.conversation_viewer.append_messages(
+            request_messages
+            + [
+                popped_message.message_node.to_dict()
+                for popped_message in popped_messages
+            ]
+        )
+        self.conversation_viewer.message_viewers[1].compact_display = True
+        self.conversation_viewer.display()
 
         # with self.output_widget:
         #     print(

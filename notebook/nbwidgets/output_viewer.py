@@ -25,8 +25,9 @@ def apply_style(html_text, style, tag="div"):
 
 
 class MessageViewer:
-    def __init__(self, message_node: MessageNode = None):
+    def __init__(self, message_node: MessageNode = None, compact_display=False):
         self.message_node = message_node
+        self.compact_display = compact_display
         self.create_widgets()
 
     def create_widgets(self):
@@ -102,7 +103,12 @@ class MessageViewer:
 
     def display(self):
         with self.output_widget:
-            display(self.widget)
+            if self.compact_display:
+                self.text_widget.value = self.message_node.get_compact_content()
+                self.sync_text_to_html()
+                display(self.widget)
+            else:
+                display(self.widget)
 
 
 class OutputViewer:

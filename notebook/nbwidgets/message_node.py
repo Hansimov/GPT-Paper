@@ -20,9 +20,12 @@ class MessageNode:
         self.children = []
         self.message = self.to_dict()
 
-    def content_compact(self, limit_width=40, shown_width=40):
-        if self.hidden and len(self.content) > limit_width:
-            return self.content[:shown_width] + " ..."
+    def get_compact_content(self, limit_width=200, shown_width=80):
+        if len(self.content) > limit_width:
+            return (
+                self.content[:shown_width]
+                + f" ... [{len(self.content)} chars in total]"
+            )
         else:
             return self.content
 
@@ -32,7 +35,7 @@ class MessageNode:
             "content": self.content,
             "editable": self.editable,
             "hidden": self.hidden,
-            "compact_content": self.content_compact(),
+            "compact_content": self.get_compact_content(),
             "verbose_content": self.verbose_content,
         }
         return message_dict
