@@ -1,12 +1,21 @@
 import ipywidgets as widgets
 from nbwidgets.output_viewer import OutputViewer, UserInputViewer
 from IPython.display import display
+from nbwidgets.message_node import MessageNode, MessageChain, MessageTree
 
 
 class ConversationViewer:
     def __init__(self, messages=None):
+        if messages is None:
+            messages = []
         self.messages = messages
+        self.message_chain = MessageChain(messages)
         self.output_viewers = []
+        self.create_output_widget()
+
+    def create_output_widget(self):
+        self.output_widget = widgets.Output()
+        display(self.output_widget)
 
     def create_user_input_widget(self):
         self.user_input_viewer = UserInputViewer()
@@ -32,29 +41,39 @@ class ConversationViewer:
     def submit_user_input(self, button=None):
         self.submit_button.style.button_color = "orange"
         user_input_content = self.user_input_viewer.on_submit()
-        if user_input_content:
+        if user_input_content.strip():
             self.submit_button.style.button_color = "darkgreen"
+            self.messages.append(
+                MessageNode(
+                    role="user",
+                    content=user_input_content + " [Submitted]",
+                    editable=False,
+                ).to_dict()
+            )
+            self.update_display()
+            print(self.messages)
         else:
             self.submit_button.style.button_color = None
 
+    def update_display(self):
+        self.construct_widgets_from_messages()
+        self.output_widget.clear_output()
+        self.display()
+
     def construct_widgets_from_messages(self):
+        self.output_viewers = []
         for message in self.messages:
             role = message["role"]
             content = message["content"]
             output_viewer = OutputViewer(content)
             if role == "system":
-                output_viewer_background_color = "rgba(100, 100, 0, 0.5)"
+                bg_color = "rgba(100, 100, 0, 0.5)"
             elif role == "user":
-                output_viewer_background_color = "rgba(0, 100, 0, 0.5)"
+                bg_color = "rgba(0, 100, 0, 0.5)"
             else:  # role == "assistant"
-                output_viewer_background_color = "rgba(0, 100, 100, 0.5)"
+                bg_color = "rgba(0, 100, 100, 0.5)"
 
-            output_viewer.apply_style(
-                f"""
-                    background-color: {output_viewer_background_color};
-                    padding: 8px;
-                """
-            )
+            output_viewer.apply_style(f"background-color: {bg_color}; padding: 8px;")
             self.output_viewers.append(output_viewer)
 
         self.create_user_input_widget()
@@ -65,5 +84,6 @@ class ConversationViewer:
         self.container = widgets.VBox(self.widgets)
 
     def display(self):
-        display(self.container)
-        self.user_input_viewer.display()
+        with self.output_widget:
+            display(self.container)
+            self.user_input_viewer.display()

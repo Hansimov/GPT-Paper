@@ -52,7 +52,7 @@ class UserInputViewer:
 
     def on_submit(self, callback=None):
         self.sync_text_to_html()
-        if self.text_widget.value == "":
+        if self.text_widget.value.strip() == "":
             return ""
 
         self.html_widget.value = apply_style(
