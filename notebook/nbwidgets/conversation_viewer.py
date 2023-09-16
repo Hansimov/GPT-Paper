@@ -1,25 +1,46 @@
 import ipywidgets as widgets
-from nbwidgets.output_viewer import OutputViewer, MessageViewer
+from nbwidgets.output_viewer import MessageViewer
 from IPython.display import display
 from nbwidgets.message_node import MessageNode, MessageChain, MessageTree
 
 
 class ConversationViewer:
     def __init__(self, messages=None):
+        self.message_viewers = []
+        self.create_widgets()
+        self.append_messages(messages)
+        self.display()
+
+    def append_messages(self, messages):
         if messages is None:
-            messages = []
-        self.messages = messages
-        self.message_nodes = [
-            MessageNode(
+            self.message_viewers = []
+            return
+
+        if type(messages) != list:
+            messages = [messages]
+
+        for message in messages:
+            message_node = MessageNode(
                 role=message.get("role", "user"),
                 content=message.get("content", ""),
                 editable=message.get("editable", False),
                 hidden=message.get("hidden", False),
             )
-            for message in self.messages
-        ]
-        self.output_viewers = []
+            message_viewer = MessageViewer(message_node)
+            self.message_viewers.append(message_viewer)
+
+    def create_widgets(self):
         self.create_output_widget()
+        self.create_user_input_widget()
+        self.create_buttons()
+
+    def display(self):
+        self.output_widget.clear_output()
+        with self.output_widget:
+            for message_viewer in self.message_viewers:
+                display(message_viewer.widget)
+            display(self.user_input_viewer.widget)
+            display(self.buttons_box)
 
     def create_output_widget(self):
         self.output_widget = widgets.Output()
@@ -54,42 +75,29 @@ class ConversationViewer:
 
     def submit_user_input(self, button=None):
         self.submit_button.style.button_color = "orange"
-        user_input_content = self.user_input_viewer.on_submit()
+        # user_input_content = self.user_input_viewer.on_submit()
+        user_input_content = self.user_input_viewer.text_widget.value
         if user_input_content.strip():
             self.submit_button.style.button_color = "darkgreen"
-            new_message_node = MessageNode(
-                role="user",
-                content=user_input_content + " [Submitted]",
-                editable=False,
-                hidden=True,
-            )
-            self.message_nodes.append(new_message_node)
-            self.update_display()
-            # print(self.message_nodes)
-            self.messages.append(new_message_node.to_dict())
+            new_message = {
+                "role": "user",
+                "content": user_input_content,
+                "editable": False,
+                "hidden": False,
+            }
+            self.append_messages(new_message)
+            self.user_input_viewer.text_widget.value = ""
+            self.display()
+            self.post_chat()
         else:
             self.submit_button.style.button_color = None
 
-    def update_display(self):
-        self.construct_widgets_from_messages()
-        self.output_widget.clear_output()
-        self.display()
+    def get_messages(self):
+        messages = [
+            message_viewer.message_node.to_dict()
+            for message_viewer in self.message_viewers
+        ]
+        return messages
 
-    def construct_widgets_from_messages(self):
-        self.output_viewers = []
-        for message_node in self.message_nodes:
-            output_viewer = MessageViewer(message_node)
-
-            self.output_viewers.append(output_viewer)
-
-        self.create_user_input_widget()
-        self.create_buttons()
-        self.widgets = [
-            output_viewer.widget for output_viewer in self.output_viewers
-        ] + [self.user_input_viewer.output_widget, self.buttons_box]
-        self.container = widgets.VBox(self.widgets)
-
-    def display(self):
-        with self.output_widget:
-            display(self.container)
-            self.user_input_viewer.display()
+    def post_chat(self):
+        print(self.get_messages())

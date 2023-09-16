@@ -6,6 +6,7 @@ class MessageNode:
         self.hidden = hidden
         self.parent = parent
         self.children = []
+        self.message = self.to_dict()
 
     def content_shown(self, limit_width=40, shown_width=40):
         if self.hidden and len(self.content) > limit_width:

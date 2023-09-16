@@ -61,21 +61,22 @@ class MessageViewer:
         div = soup.find("div")
         self.text_widget.value = div.text
 
-    def on_submit(self, callback=None):
-        self.sync_text_to_html()
-        if self.text_widget.value.strip() == "":
-            return ""
+    # def on_submit(self, callback=None):
+    #     self.sync_text_to_html()
+    #     if self.text_widget.value.strip() == "":
+    #         return ""
 
-        self.html_widget.value = apply_style(
-            self.html_widget.value,
-            "background: rgba(0, 100, 0, 0.5); padding: 8px; margin: 0px;",
-        )
-        self.widget = widgets.VBox(
-            [self.html_widget], layout=widgets.Layout(width="auto")
-        )
-        self.output_widget.clear_output()
-        self.display()
-        return self.text_widget.value
+    #     self.html_widget.value = apply_style(
+    #         self.html_widget.value,
+    #         "background: rgba(0, 100, 0, 0.5); padding: 8px; margin: 0px;",
+    #     )
+    #     self.widget = widgets.VBox(
+    #         [self.html_widget],
+    #         layout=widgets.Layout(width="auto"),
+    #     )
+    #     self.output_widget.clear_output()
+    #     self.display()
+    #     return self.text_widget.value
 
     def on_edit(self, callback=None):
         self.sync_html_to_text()
