@@ -14,6 +14,11 @@ class ConversationViewer:
         self.append_messages(messages)
         self.display()
 
+    def pop_message(self):
+        if len(self.message_viewers) == 0:
+            return None
+        return self.message_viewers.pop()
+
     def append_messages(self, messages):
         if messages is None:
             self.message_viewers = []
@@ -31,9 +36,6 @@ class ConversationViewer:
             )
             message_viewer = MessageViewer(message_node)
             self.message_viewers.append(message_viewer)
-
-    def update_content_of_message(self, index, content):
-        self.message_viewers[index].update_text(content, update_type="replace")
 
     def create_widgets(self):
         self.create_output_widget()
@@ -63,6 +65,12 @@ class ConversationViewer:
             description="Submit", layout=widgets.Layout(width="auto")
         )
         self.submit_button.on_click(self.submit_user_input)
+
+        self.regenerate_button = widgets.Button(
+            description="Regenerate", layout=widgets.Layout(width="auto")
+        )
+        self.regenerate_button.on_click(self.regenerate_message)
+
         self.model_html_widget = widgets.HTML(value="<div>model: </div>")
         self.available_models = [
             "poe-gpt-3.5-turbo-16k",
@@ -76,13 +84,13 @@ class ConversationViewer:
         )
         self.buttons_box.children = [
             self.submit_button,
+            self.regenerate_button,
             self.model_html_widget,
             self.model_dropdown,
         ]
 
     def submit_user_input(self, button=None):
         self.submit_button.style.button_color = "orange"
-        # user_input_content = self.user_input_viewer.on_submit()
         user_input_content = self.user_input_viewer.text_widget.value
         if user_input_content.strip():
             new_message = {
@@ -98,6 +106,12 @@ class ConversationViewer:
             self.submit_button.style.button_color = "darkgreen"
         else:
             self.submit_button.style.button_color = None
+
+    def regenerate_message(self, button=None):
+        self.regenerate_button.style.button_color = "orange"
+        self.pop_message()
+        self.post_chat()
+        self.regenerate_button.style.button_color = "darkgreen"
 
     def get_messages(self):
         messages = [
@@ -127,7 +141,6 @@ class ConversationViewer:
         )
 
         response_content = agent.chat(prompt="")
-        # self.update_content_of_message(-1, response_content)
         last_message_viewer = self.get_last_message_viewer()
         last_message_viewer.message_node.verbose_content = (
             last_message_viewer.text_widget.value
