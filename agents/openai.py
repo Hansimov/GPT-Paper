@@ -12,7 +12,9 @@ from utils.tokenizer import WordTokenizer
 
 def print_output(*args, **kwargs):
     output_widget = kwargs.pop("output_widget", None)
+    update_widget = kwargs.pop("update_widget", None)
     level = kwargs.pop("level", None)
+    end = kwargs.pop("end", "\n")
 
     if output_widget:
         with output_widget:
@@ -21,6 +23,16 @@ def print_output(*args, **kwargs):
                 print(s, *args[1:], **kwargs)
             else:
                 print(*args, **kwargs)
+    elif update_widget:
+        if level == "info":
+            text = f"<p style='color:cyan'>{args[0]}</p>"
+        else:
+            if len(args) > 0:
+                text = args[0] + end
+            else:
+                text = end
+
+        update_widget.update_text(text)
     else:
         print(*args, **kwargs)
 
@@ -55,11 +67,13 @@ class OpenAIAgent:
         model="gpt-3.5-turbo",
         temperature=0,
         system_message=None,
+        history_messages=None,
         max_input_message_chars=None,
         continuous=False,
         memory=False,
         record=True,
         output_widget=None,
+        update_widget=None,
     ):
         """
         # ANCHOR[id=agent-init]
@@ -78,8 +92,13 @@ class OpenAIAgent:
         self.memory = memory
         self.record = record
         self.output_widget = output_widget
+        self.update_widget = update_widget
 
-        self.history_messages = []
+        if history_messages:
+            self.history_messages = history_messages
+        else:
+            self.history_messages = []
+
         self.response_content = ""
 
         self.model = model
@@ -92,12 +111,17 @@ class OpenAIAgent:
         self.init_history_messages()
 
     def print_output(self, *args, **kwargs):
-        print_output(*args, **kwargs, output_widget=self.output_widget)
+        print_output(
+            *args,
+            **kwargs,
+            output_widget=self.output_widget,
+            update_widget=self.update_widget,
+        )
 
     def init_history_messages(self):
         if self.system_message:
-            self.history_messages.append(
-                self.content_to_message("system", self.system_message)
+            self.history_messages.insert(
+                0, self.content_to_message("system", self.system_message)
             )
 
     def content_to_message(self, role, content):
@@ -187,13 +211,14 @@ class OpenAIAgent:
         self,
         prompt="",
         stream=True,
-        record=True,
         continuous=None,
-        memory=False,
+        memory=None,
+        record=None,
         show_role=False,
         show_prompt=False,
         show_tokens_count=True,
         output_widget=None,
+        update_widget=None,
         top_p=1,
         n=1,
         stop=None,
@@ -247,7 +272,8 @@ class OpenAIAgent:
 
         if record:
             for p in prompt:
-                self.update_history_messages("user", p)
+                if p.strip():
+                    self.update_history_messages("user", p)
 
         # ANCHOR[id=agent-request-messages]
         if memory:
@@ -257,7 +283,7 @@ class OpenAIAgent:
             request_messages.extend(user_prompt_messages)
 
         self.request_messages = request_messages
-        # pprint.pprint(request_messages)
+        pprint(request_messages)
 
         if show_prompt:
             self.print_output(f"[Human]: {prompt}")
@@ -361,8 +387,8 @@ if __name__ == "__main__":
     agent = OpenAIAgent(
         name="ninomae",
         endpoint_name="ninomae",
-        model="gpt-4",
-        # model="poe-gpt-3.5-turbo-16k",
+        # model="gpt-4",
+        model="poe-gpt-3.5-turbo-16k",
         temperature=0.0,
         system_message="Explain the following text in Chinese:",
     )
