@@ -40,9 +40,7 @@ class MessageViewer:
         self.output_widget = widgets.Output()
         self.html_widget = widgets.HTML(
             value=f"<div>{message['content']}</div>",
-            layout=widgets.Layout(
-                width="auto",
-            ),
+            layout=widgets.Layout(width="auto"),
         )
         self.init_style()
         if message["role"] == "input":
@@ -50,10 +48,17 @@ class MessageViewer:
         else:
             self.widget = self.html_widget
 
-    def sync_text_to_html(self):
+    def sync_text_to_html(self, render=True):
         soup = BeautifulSoup(self.html_widget.value, "html.parser")
         div = soup.find("div")
-        div.string = self.text_widget.value
+
+        div.clear()
+        if render:
+            div_content = BeautifulSoup(markdown2.markdown(self.text_widget.value))
+        else:
+            div_content = self.text_widget.value
+        div.append(div_content)
+
         self.html_widget.value = str(soup)
 
     def sync_html_to_text(self):
@@ -61,29 +66,16 @@ class MessageViewer:
         div = soup.find("div")
         self.text_widget.value = div.text
 
-    def update_text(self, text):
-        self.text_widget.value = text
+    def update_text(self, text, update_type="append"):
+        if update_type == "append":
+            self.text_widget.value += text
+        else:
+            self.text_widget.value = text
+        self.message_node.content = self.text_widget.value
         self.sync_text_to_html()
 
     def get_text(self):
         return self.text_widget.value
-
-    # def on_submit(self, callback=None):
-    #     self.sync_text_to_html()
-    #     if self.text_widget.value.strip() == "":
-    #         return ""
-
-    #     self.html_widget.value = apply_style(
-    #         self.html_widget.value,
-    #         "background: rgba(0, 100, 0, 0.5); padding: 8px; margin: 0px;",
-    #     )
-    #     self.widget = widgets.VBox(
-    #         [self.html_widget],
-    #         layout=widgets.Layout(width="auto"),
-    #     )
-    #     self.output_widget.clear_output()
-    #     self.display()
-    #     return self.text_widget.value
 
     def on_edit(self, callback=None):
         self.sync_html_to_text()

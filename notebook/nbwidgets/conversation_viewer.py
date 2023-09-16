@@ -4,6 +4,7 @@ from IPython.display import display
 from nbwidgets.message_node import MessageNode, MessageChain, MessageTree
 from time import sleep
 from datetime import datetime
+from agents.openai import OpenAIAgent
 
 
 class ConversationViewer:
@@ -31,6 +32,9 @@ class ConversationViewer:
             message_viewer = MessageViewer(message_node)
             self.message_viewers.append(message_viewer)
 
+    def update_content_of_message(self, index, content):
+        self.message_viewers[index].update_text(content, update_type="replace")
+
     def create_widgets(self):
         self.create_output_widget()
         self.create_user_input_widget()
@@ -40,7 +44,8 @@ class ConversationViewer:
         self.output_widget.clear_output()
         with self.output_widget:
             for message_viewer in self.message_viewers:
-                display(message_viewer.widget)
+                display(message_viewer.output_widget)
+                message_viewer.display()
             display(self.user_input_viewer.widget)
             display(self.buttons_box)
 
@@ -80,7 +85,6 @@ class ConversationViewer:
         # user_input_content = self.user_input_viewer.on_submit()
         user_input_content = self.user_input_viewer.text_widget.value
         if user_input_content.strip():
-            self.submit_button.style.button_color = "darkgreen"
             new_message = {
                 "role": "user",
                 "content": user_input_content,
@@ -91,6 +95,7 @@ class ConversationViewer:
             self.user_input_viewer.text_widget.value = ""
             self.display()
             self.post_chat()
+            self.submit_button.style.button_color = "darkgreen"
         else:
             self.submit_button.style.button_color = None
 
@@ -101,15 +106,28 @@ class ConversationViewer:
         ]
         return messages
 
+    def get_last_message_viewer(self):
+        return self.message_viewers[-1]
+
     def post_chat(self):
         new_message = {
             "role": "assistant",
-            "content": "Thinking...",
+            "content": "",
             "editable": False,
             "hidden": False,
         }
         self.append_messages(new_message)
         self.display()
-        for i in range(3):
-            sleep(0.5)
-            self.message_viewers[-1].update_text(f"{datetime.now()}")
+
+        # self.get_last_message_viewer().output_widget.clear_output()
+
+        agent = OpenAIAgent(
+            model=self.model_dropdown.value,
+            memory=True,
+            history_messages=self.get_messages()[:-1],
+            update_widget=self.get_last_message_viewer(),
+        )
+
+        response_content = agent.chat(prompt="")
+        self.update_content_of_message(-1, response_content)
+        print(self.get_last_message_viewer().html_widget.value)
