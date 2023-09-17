@@ -137,11 +137,33 @@ class OutputViewer:
     def md2html(self, markdown_text):
         return markdown2.markdown(markdown_text)
 
-    def use_style(self, style):
+    def get_div_text(self):
+        soup = BeautifulSoup(self.widget.value, "html.parser")
+        div = soup.find("div")
+        return div.text
+
+    def switch_widget_mode(self, widget_mode="textarea"):
+        if widget_mode == "html":
+            self.widget = widgets.HTML(value=self.widget.value)
+        elif widget_mode == "textarea":
+            self.widget = widgets.Textarea(value=self.get_div_text())
+        else:
+            pass
+        self.display()
+
+    def apply_style(self, style):
         if self.display_mode == "markdown":
             soup = BeautifulSoup(self.widget.value, "html.parser")
-            for tag in soup.find_all("div"):
-                tag["style"] = style
+            div = soup.find("div")
+            if "style" in div.attrs:
+                style_dict = dict(parseStyle(div["style"]))
+            else:
+                style_dict = {}
+
+            style_dict.update(parseStyle(style))
+            div["style"] = "; ".join(
+                [f"{key}: {value}" for key, value in style_dict.items()]
+            )
 
             self.widget.value = str(soup)
 

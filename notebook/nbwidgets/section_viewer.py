@@ -290,7 +290,9 @@ class SectionViewer:
         self.create_conversation_viewer()
 
         self.container = widgets.HBox(layout=widgets.Layout(border="solid 1px gray"))
-        self.left_container = widgets.VBox(layout=widgets.Layout(width="50%"))
+        self.left_container = widgets.VBox(
+            layout=widgets.Layout(width="50%", height="50%", overflow_y="auto"),
+        )
         self.right_container = widgets.VBox(
             layout=widgets.Layout(width="50%", height="50%", overflow_y="auto"),
         )
