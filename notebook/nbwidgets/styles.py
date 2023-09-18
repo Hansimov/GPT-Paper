@@ -40,9 +40,9 @@ def calc_font_color_by_background(bg_rgba, mode="greyscale"):
 
 
 def enable_textarea_auto_expand():
-    js_codes = f"""
-    elements = document.getElementsByTagName('textarea');
-    for (const element of elements) {{
+    js_codes = """
+    let elements = document.getElementsByTagName('textarea');
+    for (const element of elements) {
         element.style.resize = 'none';
         element.style.fontSize = '15px';
         element.style.lineHeight = '18px';
@@ -53,18 +53,47 @@ def enable_textarea_auto_expand():
             'oninput',
             "this.style.height = ''; this.style.height = this.scrollHeight + 3 + 'px';"
         )
-    }}
+    }
     """
     display(Javascript(js_codes))
 
 
-def scroll_chat_to_bottom():
-    js_codes = f"""
-    console.log('ahhh')
-    elements = document.getElementsByClassName("lm-Widget lm-Panel jupyter-widgets widget-container widget-box widget-vbox");
-    chat_container = elements[0];
-    console.log(chat_container)
-    chat_container.scrollTop = chat_container.scrollHeight;
+def enable_scroll_to_chat_bottom():
+    js_codes = """
+    let chatAnchorElements = document.querySelectorAll('chat-anchor');
+
+    function throttle(func, interval) {
+        let lastCall = 0;
+        return function() {
+            let now = Date.now();
+            if (now - lastCall >= interval) {
+                lastCall = now;
+                return func.apply(this, arguments);
+            }
+        };
+    }
+
+    chatAnchorElements.forEach(function(chatAnchorElement) {
+        let parentElement = chatAnchorElement.closest('.lm-Widget.lm-Panel.jupyter-widgets.widget-container.widget-box.widget-vbox');
+
+        if (parentElement) {
+            console.log("Found parent:", parentElement);
+            let lastScrollHeight = parentElement.scrollHeight;
+            let observer = new MutationObserver(throttle(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (lastScrollHeight !== parentElement.scrollHeight) {
+                        lastScrollHeight = parentElement.scrollHeight;
+                        parentElement.scrollTop = parentElement.scrollHeight;
+                    }
+                });
+            }, 500));
+
+            let config = { attributes: true, childList: true, subtree: true };
+            observer.observe(parentElement, config);
+        } else {
+            console.log('No parent element with the class `lm-Widget jp-OutputArea` found.');
+        }
+    });
     """
     display(Javascript(js_codes))
 

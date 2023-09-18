@@ -2,7 +2,7 @@ import ipywidgets as widgets
 from nbwidgets.message_viewer import MessageViewer
 from IPython.display import display
 from nbwidgets.message_node import MessageNode, MessageChain, MessageTree
-from nbwidgets.styles import enable_textarea_auto_expand, scroll_chat_to_bottom
+from nbwidgets.styles import enable_textarea_auto_expand, enable_scroll_to_chat_bottom
 from time import sleep
 from datetime import datetime
 from agents.openai import OpenAIAgent
@@ -20,6 +20,9 @@ class ConversationViewer:
     def create_output_widget(self):
         self.output_widget = widgets.Output(layout=widgets.Layout(max_height="700px"))
         # display(self.output_widget)
+
+    def create_anchor_widget(self):
+        self.anchor_widget = widgets.HTML(value="<chat-anchor></chat-anchor>")
 
     def create_user_input_widget(self):
         message_node = MessageNode(role="input")
@@ -71,19 +74,23 @@ class ConversationViewer:
 
     def create_widgets(self):
         self.create_output_widget()
+        self.create_anchor_widget()
         self.create_user_input_widget()
         self.create_buttons()
 
     def display(self):
         self.output_widget.clear_output()
         with self.output_widget:
+            display(self.anchor_widget)
             for message_viewer in self.message_viewers:
                 display(message_viewer.output_widget)
                 message_viewer.sync_text_to_html()
                 message_viewer.display()
         display(self.user_input_viewer.widget)
         display(self.buttons_box)
+
         enable_textarea_auto_expand()
+        enable_scroll_to_chat_bottom()
 
     def submit_user_input(self, button=None):
         self.submit_button.style.button_color = "orange"
