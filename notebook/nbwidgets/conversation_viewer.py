@@ -1,5 +1,5 @@
 import ipywidgets as widgets
-from nbwidgets.output_viewer import MessageViewer
+from nbwidgets.message_viewer import MessageViewer
 from IPython.display import display
 from nbwidgets.message_node import MessageNode, MessageChain, MessageTree
 from time import sleep

@@ -1,4 +1,24 @@
-def calc_font_color_by_backround(bg_rgba, mode="greyscale"):
+from bs4 import BeautifulSoup
+from cssutils import parseStyle
+
+
+def apply_style(html_text, style, tag="div"):
+    soup = BeautifulSoup(html_text, "html.parser")
+    element = soup.find(tag)
+    if "style" in element.attrs:
+        style_dict = dict(parseStyle(element["style"]))
+    else:
+        style_dict = {}
+
+    style_dict.update(parseStyle(style))
+    element["style"] = "; ".join(
+        [f"{key}: {value}" for key, value in style_dict.items()]
+    )
+
+    return str(soup)
+
+
+def calc_font_color_by_background(bg_rgba, mode="greyscale"):
     # Formula to determine perceived brightness of RGB color - Stack Overflow
     #   https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color
     luma = (
