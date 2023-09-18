@@ -3,12 +3,22 @@ from nbwidgets.colors import calc_font_color_by_backround
 
 
 class QueryResultsViewer:
-    def __init__(self, queries):
+    def __init__(self, queries=None):
         self.queries = queries
+        self.display()
+
+    def display(self):
         self.queries_to_html()
         self.create_widgets()
 
+    def create_widgets(self):
+        self.container = widgets.VBox([widgets.HTML(self.html_str)])
+
     def queries_to_html(self):
+        if not self.queries:
+            self.html_str = ""
+            return
+
         region_scores = [
             region["score"]
             for query_result in self.queries
@@ -79,8 +89,3 @@ class QueryResultsViewer:
         """
         html_str += style_str
         self.html_str = html_str
-
-    def create_widgets(self):
-        self.container = widgets.VBox()
-        self.widgets = [widgets.HTML(self.html_str)]
-        self.container.children = self.widgets
