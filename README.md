@@ -4,10 +4,10 @@ Enhance paper search, reading, writing and review with the assistance of GPT.
 
 ## Installation of dependencies
 
-**PyMuPDF:**
+**PyMuPDF**, **httpx**, **markdown2**, **PyDeepLX**, **deep-translator**, **Pygments**
 
 ```sh
-pip install --upgrade pymupdf
+pip install pymupdf httpx markdown2[all] PyDeepLX deep-translator Pygments
 ```
 
 ## Setup detectron2 and unilm
@@ -60,17 +60,7 @@ pip install sentence-transformers
 pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipynbname
 ```
 
-**httpx**, **markdown2**, **pydeeplx**, **deep-translator**
 
-```sh
-pip install httpx markdown2 PyDeepLX deep-translator
-```
-
-**markdown2:**
-
-```sh
-pip install 
-```
 
 
 

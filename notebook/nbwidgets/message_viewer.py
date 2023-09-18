@@ -2,7 +2,7 @@ import ipywidgets as widgets
 import markdown2
 from bs4 import BeautifulSoup
 from IPython.display import display
-from nbwidgets.styles import apply_style
+from nbwidgets.styles import apply_style, get_code_highlight_css
 from nbwidgets.message_node import MessageNode
 
 
@@ -32,18 +32,32 @@ class MessageViewer:
             self.widget = self.html_widget
 
     def sync_text_to_html(self, render=True):
+        """
+        Support code highlighting with colors:
+        * https://github.com/trentm/python-markdown2/wiki/fenced-code-blocks
+        * https://github.com/richleland/pygments-css
+        * https://pygments.org/
+        # LINK notebook/nbwidgets/styles.py#code-highlight-css
+        """
         soup = BeautifulSoup(self.html_widget.value, "html.parser")
         div = soup.find("div")
 
         div.clear()
         if render:
             div_content = BeautifulSoup(
-                markdown2.markdown(self.text_widget.value), "html.parser"
+                markdown2.markdown(
+                    self.text_widget.value, extras=["fenced-code-blocks"]
+                ),
+                "html.parser",
             )
-
+            code_highlight_css = get_code_highlight_css(class_name="codehilite")
+            code_style_tag = soup.new_tag("style", type="text/css")
+            code_style_tag.string = code_highlight_css
+            div.append(div_content)
+            div.insert_after(code_style_tag)
         else:
             div_content = self.text_widget.value
-        div.append(div_content)
+            div.append(div_content)
 
         self.html_widget.value = str(soup)
 

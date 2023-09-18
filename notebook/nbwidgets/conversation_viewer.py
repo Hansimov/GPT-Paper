@@ -17,7 +17,9 @@ class ConversationViewer:
         # self.display()
 
     def create_output_widget(self):
-        self.output_widget = widgets.Output()
+        self.output_widget = widgets.Output(
+            layout=widgets.Layout(overflow="auto", max_height="800px")
+        )
         # display(self.output_widget)
 
     def create_user_input_widget(self):
@@ -80,8 +82,8 @@ class ConversationViewer:
                 display(message_viewer.output_widget)
                 message_viewer.sync_text_to_html()
                 message_viewer.display()
-            display(self.user_input_viewer.widget)
-            display(self.buttons_box)
+        display(self.user_input_viewer.widget)
+        display(self.buttons_box)
 
     def submit_user_input(self, button=None):
         self.submit_button.style.button_color = "orange"
