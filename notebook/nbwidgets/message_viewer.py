@@ -109,12 +109,6 @@ class MessageViewer:
             """,
             tag=self.tag,
         )
-        if self.message_node.editable:
-            soup = BeautifulSoup(self.html_widget.value, "html.parser")
-            element = soup.find(self.tag)
-            element["contenteditable"] = "true"
-            element["oninput"] = "console.log(this.innerText);"
-            self.html_widget.value = str(soup)
 
     def display(self):
         with self.output_widget:

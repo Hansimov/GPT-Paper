@@ -20,8 +20,7 @@ class ReferenceViewer:
 
     def create_paragraph_viewer(self):
         self.paragraph_viewer = MessageViewer(
-            MessageNode(role="user", content="Hello", editable=True),
-            placeholder="Paragraph",
+            MessageNode(role="input"), placeholder="Paragraph"
         )
 
     def create_split_sentence_button(self):

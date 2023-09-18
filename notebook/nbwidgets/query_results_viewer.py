@@ -1,5 +1,5 @@
 import ipywidgets as widgets
-from nbwidgets.colors import calc_font_color_by_backround
+from nbwidgets.styles import calc_font_color_by_background
 
 
 class QueryResultsViewer:
@@ -42,7 +42,7 @@ class QueryResultsViewer:
                 region_idx = region["region_idx"]
                 region_text = region["text"]
                 region_background_color = (0, 150, 0, normalized_region_score)
-                region_text_color = calc_font_color_by_backround(
+                region_text_color = calc_font_color_by_background(
                     region_background_color
                 )
                 region_text_style = f"""
@@ -81,7 +81,7 @@ class QueryResultsViewer:
         style_str = f"""
         <style>
             .query_results {{
-                max-height: 800px;
+                max-height: 600px;
                 overflow-y: auto;
                 border: 1px solid gray;
             }}
