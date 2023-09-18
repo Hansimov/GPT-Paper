@@ -7,22 +7,28 @@ from nbwidgets.message_node import MessageNode
 
 
 class MessageViewer:
-    def __init__(self, message_node: MessageNode = None, compact_display=False):
+    def __init__(
+        self,
+        message_node: MessageNode = None,
+        compact_display=False,
+        placeholder="Type something",
+    ):
         self.message_node = message_node
         self.compact_display = compact_display
+        self.placeholder = placeholder
         self.create_widgets()
 
     def create_widgets(self):
         message = self.message_node.to_dict()
-
+        self.output_widget = widgets.Output()
         self.text_widget = widgets.Textarea(
             value=f"{message['verbose_content']}",
-            placeholder="Type something",
+            placeholder=self.placeholder,
             layout=widgets.Layout(width="auto"),
         )
-        self.output_widget = widgets.Output()
+        self.tag = "div"
         self.html_widget = widgets.HTML(
-            value=f"<div>{message['verbose_content']}</div>",
+            value=f"<{self.tag}>{message['verbose_content']}</{self.tag}>",
             layout=widgets.Layout(width="auto"),
         )
         self.init_style()
@@ -40,7 +46,7 @@ class MessageViewer:
         # LINK notebook/nbwidgets/styles.py#code-highlight-css
         """
         soup = BeautifulSoup(self.html_widget.value, "html.parser")
-        div = soup.find("div")
+        div = soup.find(self.tag)
 
         div.clear()
         if render:
@@ -63,7 +69,7 @@ class MessageViewer:
 
     def sync_html_to_text(self):
         soup = BeautifulSoup(self.html_widget.value, "html.parser")
-        div = soup.find("div")
+        div = soup.find(self.tag)
         self.text_widget.value = div.text
 
     def update_text(self, text, update_type="append"):
@@ -94,8 +100,21 @@ class MessageViewer:
 
         self.html_widget.value = apply_style(
             self.html_widget.value,
-            f"background-color: rgba{bg_color}; padding: 8px;",
+            f"""
+            background-color: rgba{bg_color};
+            padding: 8px;
+            max-height: 500px;
+            overflow-y: auto;
+            display: block;
+            """,
+            tag=self.tag,
         )
+        if self.message_node.editable:
+            soup = BeautifulSoup(self.html_widget.value, "html.parser")
+            element = soup.find(self.tag)
+            element["contenteditable"] = "true"
+            element["oninput"] = "console.log(this.innerText);"
+            self.html_widget.value = str(soup)
 
     def display(self):
         with self.output_widget:
