@@ -41,15 +41,30 @@ def calc_font_color_by_background(bg_rgba, mode="greyscale"):
 
 def enable_textarea_auto_expand():
     js_codes = f"""
-    var elements = document.getElementsByTagName('textarea');
+    elements = document.getElementsByTagName('textarea');
     for (const element of elements) {{
+        element.style.resize = 'none';
+        element.style.fontSize = '15px';
+        element.style.lineHeight = '18px';
+        element.style.padding = '8px';
+        element.style.fontFamily = 'Arial';
+        element.setAttribute('rows', "1");
         element.setAttribute(
             'oninput',
-            "this.style.height = ''; this.style.height = this.scrollHeight + 3 +'px'"
+            "this.style.height = ''; this.style.height = this.scrollHeight + 3 + 'px';"
         )
-        console.log(element);
-        element.style.resize = 'none';
     }}
+    """
+    display(Javascript(js_codes))
+
+
+def scroll_chat_to_bottom():
+    js_codes = f"""
+    console.log('ahhh')
+    elements = document.getElementsByClassName("lm-Widget lm-Panel jupyter-widgets widget-container widget-box widget-vbox");
+    chat_container = elements[0];
+    console.log(chat_container)
+    chat_container.scrollTop = chat_container.scrollHeight;
     """
     display(Javascript(js_codes))
 

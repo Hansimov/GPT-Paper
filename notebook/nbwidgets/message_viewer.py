@@ -29,9 +29,7 @@ class MessageViewer:
         self.text_widget = widgets.Textarea(
             value=f"{message['verbose_content']}",
             placeholder=self.placeholder,
-            layout=widgets.Layout(
-                width="auto", max_height="400px", padding="4px"
-            ),
+            layout=widgets.Layout(width="auto", max_height="400px"),
         )
 
         self.tag = "div"
@@ -110,8 +108,7 @@ class MessageViewer:
             self.html_widget.value,
             f"""
             background-color: rgba{bg_color};
-            padding: 8px;
-            max-height: 500px;
+            padding: 0px 8px 0px 8px;
             overflow-y: auto;
             display: block;
             """,
@@ -122,7 +119,7 @@ class MessageViewer:
         with self.output_widget:
             if self.compact_display:
                 self.text_widget.value = self.message_node.get_compact_content()
-                self.sync_text_to_html()
+                # self.sync_text_to_html()
                 display(self.widget)
             else:
                 display(self.widget)

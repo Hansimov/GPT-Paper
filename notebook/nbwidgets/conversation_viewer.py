@@ -2,6 +2,7 @@ import ipywidgets as widgets
 from nbwidgets.message_viewer import MessageViewer
 from IPython.display import display
 from nbwidgets.message_node import MessageNode, MessageChain, MessageTree
+from nbwidgets.styles import enable_textarea_auto_expand, scroll_chat_to_bottom
 from time import sleep
 from datetime import datetime
 from agents.openai import OpenAIAgent
@@ -17,9 +18,7 @@ class ConversationViewer:
         # self.display()
 
     def create_output_widget(self):
-        self.output_widget = widgets.Output(
-            layout=widgets.Layout(overflow="auto", max_height="800px")
-        )
+        self.output_widget = widgets.Output(layout=widgets.Layout(max_height="700px"))
         # display(self.output_widget)
 
     def create_user_input_widget(self):
@@ -42,7 +41,7 @@ class ConversationViewer:
             description="Pop", layout=widgets.Layout(width="auto")
         )
         self.pop_message_button.on_click(
-            partial(self.pop_message, display=True, pop_count=2)
+            partial(self.pop_message, is_display=True, pop_count=2)
         )
 
         self.stop_button = widgets.Button(
@@ -82,9 +81,9 @@ class ConversationViewer:
                 display(message_viewer.output_widget)
                 message_viewer.sync_text_to_html()
                 message_viewer.display()
-        display(self.user_input_viewer.output_widget)
-        self.user_input_viewer.display()
+        display(self.user_input_viewer.widget)
         display(self.buttons_box)
+        enable_textarea_auto_expand()
 
     def submit_user_input(self, button=None):
         self.submit_button.style.button_color = "orange"
@@ -104,7 +103,7 @@ class ConversationViewer:
         else:
             self.submit_button.style.button_color = None
 
-    def pop_message(self, button=None, display=False, pop_count=1):
+    def pop_message(self, button=None, is_display=False, pop_count=1):
         popped_messages = []
         for _ in range(pop_count):
             if len(self.message_viewers) == 0:
@@ -112,7 +111,7 @@ class ConversationViewer:
             popped_message = self.message_viewers.pop()
             pprint(popped_message.message_node.to_dict())
             popped_messages.append(popped_message)
-        if display:
+        if is_display:
             self.display()
         return popped_messages
 
