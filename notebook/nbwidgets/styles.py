@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from cssutils import parseStyle
+from IPython.display import display, Javascript
 
 
 def apply_style(html_text, style, tag="div"):
@@ -36,6 +37,21 @@ def calc_font_color_by_background(bg_rgba, mode="greyscale"):
             f"rgba{tuple(list(map(lambda x: 255 - x, list(bg_rgba)[:3])) + [1])}"
         )
     return font_color
+
+
+def enable_textarea_auto_expand():
+    js_codes = f"""
+    var elements = document.getElementsByTagName('textarea');
+    for (const element of elements) {{
+        element.setAttribute(
+            'oninput',
+            "this.style.height = ''; this.style.height = this.scrollHeight + 3 +'px'"
+        )
+        console.log(element);
+        element.style.resize = 'none';
+    }}
+    """
+    display(Javascript(js_codes))
 
 
 def get_code_highlight_css(class_name="highlight", theme="monokai"):

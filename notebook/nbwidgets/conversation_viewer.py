@@ -82,7 +82,8 @@ class ConversationViewer:
                 display(message_viewer.output_widget)
                 message_viewer.sync_text_to_html()
                 message_viewer.display()
-        display(self.user_input_viewer.widget)
+        display(self.user_input_viewer.output_widget)
+        self.user_input_viewer.display()
         display(self.buttons_box)
 
     def submit_user_input(self, button=None):

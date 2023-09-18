@@ -2,7 +2,11 @@ import ipywidgets as widgets
 import markdown2
 from bs4 import BeautifulSoup
 from IPython.display import display
-from nbwidgets.styles import apply_style, get_code_highlight_css
+from nbwidgets.styles import (
+    apply_style,
+    get_code_highlight_css,
+    enable_textarea_auto_expand,
+)
 from nbwidgets.message_node import MessageNode
 
 
@@ -21,11 +25,15 @@ class MessageViewer:
     def create_widgets(self):
         message = self.message_node.to_dict()
         self.output_widget = widgets.Output()
+
         self.text_widget = widgets.Textarea(
             value=f"{message['verbose_content']}",
             placeholder=self.placeholder,
-            layout=widgets.Layout(width="auto"),
+            layout=widgets.Layout(
+                width="auto", max_height="400px", padding="4px"
+            ),
         )
+
         self.tag = "div"
         self.html_widget = widgets.HTML(
             value=f"<{self.tag}>{message['verbose_content']}</{self.tag}>",
@@ -118,3 +126,4 @@ class MessageViewer:
                 display(self.widget)
             else:
                 display(self.widget)
+        enable_textarea_auto_expand()
