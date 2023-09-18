@@ -60,17 +60,18 @@ pip install sentence-transformers
 pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipynbname
 ```
 
-**httpx:**
+**httpx**, **markdown2**, **pydeeplx**, **deep-translator**
 
 ```sh
-pip install httpx
+pip install httpx markdown2 PyDeepLX deep-translator
 ```
 
 **markdown2:**
 
 ```sh
-pip install markdown2
+pip install 
 ```
+
 
 
 ## Data pre-processing
