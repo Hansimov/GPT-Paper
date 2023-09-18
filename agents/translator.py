@@ -23,7 +23,7 @@ class Translator:
         "pons": PonsTranslator,
     }
 
-    def __init__(self, source="auto", target="zh-CN", engine="google"):
+    def __init__(self, source="auto", target="zh-CN", engine="deeplx"):
         self.source = source
         self.target = target
         self.engine = engine.lower()
