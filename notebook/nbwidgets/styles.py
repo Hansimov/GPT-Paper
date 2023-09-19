@@ -44,14 +44,14 @@ def enable_textarea_auto_expand():
     let elements = document.getElementsByTagName('textarea');
     for (const element of elements) {
         element.style.resize = 'none';
-        element.style.fontSize = '15px';
-        element.style.lineHeight = '18px';
+        element.style.fontSize = '16px';
+        element.style.lineHeight = '1.2';
         element.style.padding = '8px';
         element.style.fontFamily = 'Arial';
-        element.setAttribute('rows', "1");
+        element.setAttribute('rows', '2');
         element.setAttribute(
             'oninput',
-            "this.style.height = ''; this.style.height = this.scrollHeight + 3 + 'px';"
+            "this.style.height = ''; this.style.height = this.scrollHeight + 3 + 'px'; console.log(this.scrollHeight);"
         )
     }
     """
@@ -88,7 +88,7 @@ def enable_scroll_to_chat_bottom():
                         }
                     }
                 });
-            }, 1500));
+            }, 800));
 
             let config = { attributes: true, childList: true, subtree: true };
             observer.observe(parentElement, config);

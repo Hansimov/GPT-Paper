@@ -113,6 +113,7 @@ class MessageViewer:
             padding: 0px 8px 0px 8px;
             overflow-y: auto;
             display: block;
+            line-height: 1;
             """,
             tag=self.tag,
         )

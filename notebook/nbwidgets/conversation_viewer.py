@@ -24,6 +24,12 @@ class ConversationViewer:
     def create_anchor_widget(self):
         self.anchor_widget = widgets.HTML(value="<chat-anchor></chat-anchor>")
 
+    def create_style_widget(self):
+        css_styles = """
+            .jp-RenderedJavaScript { padding: 0px; }
+        """
+        self.style_widget = widgets.HTML(value=f"<style>{css_styles}</style>")
+
     def create_user_input_widget(self):
         message_node = MessageNode(role="input")
         self.user_input_viewer = MessageViewer(message_node)
@@ -43,9 +49,7 @@ class ConversationViewer:
         self.pop_message_button = widgets.Button(
             description="Pop", layout=widgets.Layout(width="auto")
         )
-        self.pop_message_button.on_click(
-            partial(self.pop_message, is_display=True, pop_count=2)
-        )
+        self.pop_message_button.on_click(partial(self.pop_message, pop_count=2))
 
         self.stop_button = widgets.Button(
             description="Stop", layout=widgets.Layout(width="auto")
@@ -75,6 +79,7 @@ class ConversationViewer:
     def create_widgets(self):
         self.create_output_widget()
         self.create_anchor_widget()
+        self.create_style_widget()
         self.create_user_input_widget()
         self.create_buttons()
 
@@ -84,6 +89,7 @@ class ConversationViewer:
         self.output_widget.clear_output()
         with self.output_widget:
             display(self.anchor_widget)
+            display(self.style_widget)
             for message_viewer in self.message_viewers:
                 display(message_viewer.output_widget)
                 message_viewer.sync_text_to_html()
@@ -121,17 +127,17 @@ class ConversationViewer:
         else:
             self.submit_button.style.button_color = None
 
-    def pop_message(self, button=None, is_display=False, pop_count=1):
-        popped_messages = []
+    def pop_message(self, button=None, pop_count=1):
+        popped_message_viewers = []
         for _ in range(pop_count):
             if len(self.message_viewers) == 0:
                 break
-            popped_message = self.message_viewers.pop()
-            pprint(popped_message.message_node.to_dict())
-            popped_messages.append(popped_message)
-        if is_display:
-            self.display()
-        return popped_messages
+            popped_message_viewer = self.message_viewers.pop()
+            popped_message_viewer.output_widget.clear_output()
+            popped_message_viewer.output_widget.layout.display = "none"
+            pprint(popped_message_viewer.message_node.to_dict())
+            popped_message_viewers.append(popped_message_viewer)
+        return popped_message_viewers
 
     def append_messages(self, messages):
         if messages is None:
