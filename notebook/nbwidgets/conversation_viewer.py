@@ -79,6 +79,8 @@ class ConversationViewer:
         self.create_buttons()
 
     def display(self):
+        self.display_times = getattr(self, "display_times", 0) + 1
+
         self.output_widget.clear_output()
         with self.output_widget:
             display(self.anchor_widget)
@@ -89,22 +91,31 @@ class ConversationViewer:
         display(self.user_input_viewer.widget)
         display(self.buttons_box)
 
-        enable_textarea_auto_expand()
-        enable_scroll_to_chat_bottom()
+        if self.display_times <= 1:
+            enable_textarea_auto_expand()
+            enable_scroll_to_chat_bottom()
+
+    def display_new_message(self, message_count=1):
+        with self.output_widget:
+            for message_viewer in self.message_viewers[-message_count:]:
+                display(message_viewer.output_widget)
+                message_viewer.sync_text_to_html()
+                message_viewer.display()
 
     def submit_user_input(self, button=None):
         self.submit_button.style.button_color = "orange"
         user_input_content = self.user_input_viewer.text_widget.value
         if user_input_content.strip():
-            new_message = {
+            new_user_input_message = {
                 "role": "user",
                 "content": user_input_content,
                 "editable": False,
                 "hidden": False,
             }
-            self.append_messages(new_message)
+            self.append_messages(new_user_input_message)
             self.user_input_viewer.text_widget.value = ""
-            self.display()
+            self.display_new_message(1)
+            # self.display()
             self.post_chat()
             self.submit_button.style.button_color = "darkgreen"
         else:
@@ -158,14 +169,14 @@ class ConversationViewer:
         return self.message_viewers[-1]
 
     def post_chat(self):
-        new_message = {
+        new_assistant_message = {
             "role": "assistant",
             "content": "",
             "editable": False,
             "hidden": False,
         }
-        self.append_messages(new_message)
-        self.display()
+        self.append_messages(new_assistant_message)
+        self.display_new_message(1)
 
         agent = OpenAIAgent(
             model=self.model_dropdown.value,

@@ -83,10 +83,12 @@ def enable_scroll_to_chat_bottom():
                 mutations.forEach(function(mutation) {
                     if (lastScrollHeight !== parentElement.scrollHeight) {
                         lastScrollHeight = parentElement.scrollHeight;
-                        parentElement.scrollTop = parentElement.scrollHeight;
+                        if (parentElement.scrollTop !== parentElement.scrollHeight) {
+                            parentElement.scrollTop = parentElement.scrollHeight;
+                        }
                     }
                 });
-            }, 500));
+            }, 1500));
 
             let config = { attributes: true, childList: true, subtree: true };
             observer.observe(parentElement, config);

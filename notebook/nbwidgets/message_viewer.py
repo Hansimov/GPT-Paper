@@ -53,20 +53,22 @@ class MessageViewer:
         """
         soup = BeautifulSoup(self.html_widget.value, "html.parser")
         div = soup.find(self.tag)
-
         div.clear()
+
         if render:
+            self.render_times = getattr(self, "render_times", 0) + 1
             div_content = BeautifulSoup(
                 markdown2.markdown(
                     self.text_widget.value, extras=["fenced-code-blocks"]
                 ),
                 "html.parser",
             )
-            code_highlight_css = get_code_highlight_css(class_name="codehilite")
-            code_style_tag = soup.new_tag("style", type="text/css")
-            code_style_tag.string = code_highlight_css
             div.append(div_content)
-            div.insert_after(code_style_tag)
+            if self.render_times <= 1:
+                code_highlight_css = get_code_highlight_css(class_name="codehilite")
+                code_style_tag = soup.new_tag("style", type="text/css")
+                code_style_tag.string = code_highlight_css
+                div.insert_after(code_style_tag)
         else:
             div_content = self.text_widget.value
             div.append(div_content)
