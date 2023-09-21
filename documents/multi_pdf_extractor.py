@@ -94,6 +94,7 @@ class MultiPDFExtractor:
         cache=True,
         quiet=False,
     ):
+        # ANCHOR[id=query-docs]
         """
         Keys of queries item in returned list:
           * rank, score
@@ -189,6 +190,7 @@ class MultiPDFExtractor:
         return query_results
 
     def dump_query_results_indexes(self, query, query_results):
+        # ANCHOR[id=dump-query-results-indexes]
         if self.queries_cache_path.exists():
             queries_cache_df = pd.read_pickle(self.queries_cache_path)
         else:
