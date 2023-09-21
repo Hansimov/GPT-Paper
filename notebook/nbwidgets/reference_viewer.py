@@ -3,6 +3,7 @@ from agents.documents_retriever import DocumentsRetriever
 from nbwidgets.message_viewer import MessageViewer, MessageNode
 from nbwidgets.query_results_viewer import QueryResultsViewer
 from nbwidgets.conversation_viewer import ConversationViewer
+from nbwidgets.paragraph_viewer import ParagraphViewer
 from utils.tokenizer import SentenceTokenizer
 import ipywidgets as widgets
 
@@ -29,6 +30,19 @@ class ReferenceViewer:
             "left": "Chat",
             "right": "References",
         }
+
+        self.layout_widths = {
+            "both": ("50%", "50%"),
+            "left": ("100%", "0%"),
+            "right": ("0%", "100%"),
+        }
+
+        for container, width in zip(
+            [self.left_container, self.right_container],
+            self.layout_widths[self.layout_mode],
+        ):
+            container.layout.width = width
+
         self.toggle_layout_button.description = (
             f"Toggle Layout ({self.layout_descriptions[self.layout_mode]})"
         )
@@ -43,20 +57,11 @@ class ReferenceViewer:
         self.update_toggle_button_description()
 
     def toggle_layout(self, button=None):
-        if self.layout_mode == "both":
-            self.left_container.layout.width = "100%"
-            self.right_container.layout.width = "0%"
-            self.layout_mode = "left"
-        elif self.layout_mode == "left":
-            self.left_container.layout.width = "0%"
-            self.right_container.layout.width = "100%"
-            self.layout_mode = "right"
-        elif self.layout_mode == "right":
-            self.left_container.layout.width = "50%"
-            self.right_container.layout.width = "50%"
-            self.layout_mode = "both"
-        else:
-            pass
+        self.layout_modes = ["both", "left", "right"]
+        next_layout_mode_index = self.layout_modes.index(self.layout_mode) + 1
+        self.layout_mode = self.layout_modes[
+            next_layout_mode_index % len(self.layout_modes)
+        ]
         self.update_toggle_button_description()
 
     def create_buttons(self):
@@ -93,13 +98,9 @@ class ReferenceViewer:
             self.conversation_viewer.output_widget,
         ]
         self.right_container.children = [self.query_results_viewer.container]
+        self.container_hbox = widgets.HBox([self.left_container, self.right_container])
         self.create_buttons()
-        self.container = widgets.VBox(
-            [
-                self.toggle_layout_button,
-                widgets.HBox([self.left_container, self.right_container]),
-            ]
-        )
+        self.container = widgets.VBox([self.toggle_layout_button, self.container_hbox])
 
     def display(self):
         display(self.container)
