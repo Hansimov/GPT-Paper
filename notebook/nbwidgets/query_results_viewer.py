@@ -3,6 +3,7 @@ import ipywidgets as widgets
 from nbwidgets.styles import calc_font_color_by_background
 from utils.tokenizer import WordTokenizer
 from IPython.display import display
+from documents.text_translator import TextTranslator
 
 
 class QueryResultsViewer:
@@ -20,6 +21,7 @@ class QueryResultsViewer:
 
     def query_results_to_html(self):
         word_tokenizer = WordTokenizer()
+        text_translator = TextTranslator(project_dir="cancer_review", engine="google")
         if not self.query_results:
             self.html_str = ""
             return
@@ -46,6 +48,7 @@ class QueryResultsViewer:
                 page_idx = region["page_idx"]
                 region_idx = region["region_idx"]
                 region_text = region["text"]
+                translated_region_text = text_translator.translate(region_text)
                 token_count = word_tokenizer.count_tokens(
                     region_text.replace("\n", " ")
                 )
@@ -60,7 +63,7 @@ class QueryResultsViewer:
                 region_text_html = f"""
                 <li>
                     <details>
-                        <summary style='{region_text_style}' title='{html.escape(region_text)}'>
+                        <summary style='{region_text_style}' title='{html.escape(translated_region_text)}'>
                             Page {page_idx}, Region {region_idx},
                             Tokens {token_count}, Score {round(float(normalized_region_score),2)}
                         </summary>

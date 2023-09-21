@@ -86,8 +86,12 @@ class ReferenceViewer:
 
     def create_query_results_viewer(self):
         queries = [
-            "The AI-based diagnosis was the first implementation of computer vision in pathology.",
-            "Visual explanation (saliency mapping, pathologist-in-the-loop)",
+            "Textual explanation",
+            "Image captioning",
+            "Image captioning with visual explanation",
+            "Example-based explanation ",
+            "Triplet network",
+            "Prototypes",
         ]
         query_results = self.documents_retriever.query(queries)
         self.query_results_viewer = QueryResultsViewer(
