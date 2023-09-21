@@ -1,3 +1,4 @@
+import html
 import ipywidgets as widgets
 from nbwidgets.styles import calc_font_color_by_background
 
@@ -52,7 +53,7 @@ class QueryResultsViewer:
                 region_text_html = f"""
                 <li>
                     <details>
-                        <summary style='{region_text_style}' title='{region_text}'>
+                        <summary style='{region_text_style}' title='{html.escape(region_text)}'>
                             Page {page_idx}, Region {region_idx},
                             Score {round(float(normalized_region_score),2)}
                         </summary>
