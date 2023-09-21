@@ -57,16 +57,19 @@ class SectionViewer:
 
     def retrieve_queries(self, button=None):
         self.retrieve_button.style.button_color = "orange"
-        queries = documents_retriever.query(
-            [self.section_node.intro], rerank_n=self.query_count
+        queries = [self.section_node.intro]
+        query_results = documents_retriever.query(
+            queries=queries, rerank_n=self.query_count
         )
         self.retrieve_button.style.button_color = "darkgreen"
-        query_results_viewer = QueryResultsViewer(queries)
+        query_results_viewer = QueryResultsViewer(
+            queries=queries, query_results=query_results
+        )
         self.right_container.children = [
             self.intro_text_widget,
             query_results_viewer.container,
         ]
-        return queries
+        return query_results
 
     def summarize_chat(self, button=None):
         self.summarize_button.style.button_color = "orange"

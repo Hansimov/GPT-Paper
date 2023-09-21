@@ -1,28 +1,31 @@
 import html
 import ipywidgets as widgets
 from nbwidgets.styles import calc_font_color_by_background
+from utils.tokenizer import WordTokenizer
 
 
 class QueryResultsViewer:
-    def __init__(self, queries=None):
+    def __init__(self, queries=None, query_results=None):
         self.queries = queries
+        self.query_results = query_results
         self.display()
 
     def display(self):
-        self.queries_to_html()
+        self.query_results_to_html()
         self.create_widgets()
 
     def create_widgets(self):
         self.container = widgets.VBox([widgets.HTML(self.html_str)])
 
-    def queries_to_html(self):
-        if not self.queries:
+    def query_results_to_html(self):
+        word_tokenizer = WordTokenizer()
+        if not self.query_results:
             self.html_str = ""
             return
 
         region_scores = [
             region["score"]
-            for query_result in self.queries
+            for query_result in self.query_results
             for region in query_result["regions"]
         ]
 
@@ -32,7 +35,7 @@ class QueryResultsViewer:
             )
 
         html_str = ""
-        for query_result in self.queries:
+        for query_result in self.query_results:
             pdf_name = query_result["pdf_name"]
             pdf_name_html = f"<h3>{pdf_name}</h3>\n"
 
@@ -42,6 +45,9 @@ class QueryResultsViewer:
                 page_idx = region["page_idx"]
                 region_idx = region["region_idx"]
                 region_text = region["text"]
+                token_count = word_tokenizer.count_tokens(
+                    region_text.replace("\n", " ")
+                )
                 region_background_color = (0, 150, 0, normalized_region_score)
                 region_text_color = calc_font_color_by_background(
                     region_background_color
@@ -55,7 +61,7 @@ class QueryResultsViewer:
                     <details>
                         <summary style='{region_text_style}' title='{html.escape(region_text)}'>
                             Page {page_idx}, Region {region_idx},
-                            Score {round(float(normalized_region_score),2)}
+                            Tokens {token_count}, Score {round(float(normalized_region_score),2)}
                         </summary>
                         {region_text}
                     </details>
@@ -66,10 +72,17 @@ class QueryResultsViewer:
             region_texts_html = f"<ol>\n{region_texts_html}\n</ol>"
             html_str += f"<li>{pdf_name_html}\n{region_texts_html}</li>"
 
+        region_text_count = sum(
+            [len(query_result["regions"]) for query_result in self.query_results]
+        )
+        queries_str = "<br>".join(
+            [f"{idx+1}. {query}" for idx, query in enumerate(self.queries)]
+        )
         html_str = f"""
         <details>
             <summary>
-                Related References
+            Related {region_text_count} Paragraphs in {len(self.query_results)} References of Queries:<br>
+            {queries_str}
             </summary>
             <div class='query_results'>
                 <ol>

@@ -73,12 +73,14 @@ class ReferenceViewer:
         self.conversation_viewer = ConversationViewer()
 
     def create_query_results_viewer(self):
-        queries = self.documents_retriever.query(
-            [
-                "The AI-based diagnosis was the first implementation of computer vision in pathology."
-            ],
+        queries = [
+            "The AI-based diagnosis was the first implementation of computer vision in pathology.",
+            "Visual explanation (saliency mapping, pathologist-in-the-loop)",
+        ]
+        query_results = self.documents_retriever.query(queries)
+        self.query_results_viewer = QueryResultsViewer(
+            queries=queries, query_results=query_results
         )
-        self.query_results_viewer = QueryResultsViewer(queries)
 
     def create_widgets(self):
         self.create_paragraph_viewer()
