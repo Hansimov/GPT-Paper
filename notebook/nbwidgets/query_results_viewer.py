@@ -60,9 +60,14 @@ class QueryResultsViewer:
                 background-color: rgba{region_background_color};
                 color: {region_text_color}
                 """
+                if normalized_region_score >= 0.3:
+                    details_open_str = "open"
+                else:
+                    details_open_str = ""
+
                 region_text_html = f"""
                 <li>
-                    <details>
+                    <details {details_open_str}>
                         <summary style='{region_text_style}' title='{html.escape(translated_region_text)}'>
                             Page {page_idx}, Region {region_idx},
                             Tokens {token_count}, Score {round(float(normalized_region_score),2)}
@@ -85,8 +90,7 @@ class QueryResultsViewer:
         html_str = f"""
         <details>
             <summary>
-            Related {region_text_count} Paragraphs in {len(self.query_results)} References of Queries:<br>
-            {queries_str}
+            Related {region_text_count} Paragraphs in {len(self.query_results)} References of {len(self.queries)} Queries:
             </summary>
             <div class='query_results'>
                 <ol>
