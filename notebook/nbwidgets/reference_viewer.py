@@ -20,9 +20,7 @@ class ReferenceViewer:
         print(sentences)
 
     def create_paragraph_viewer(self):
-        self.paragraph_viewer = MessageViewer(
-            MessageNode(role="input"), placeholder="Paragraph"
-        )
+        self.paragraph_viewer = ParagraphViewer()
 
     def update_toggle_button_description(self):
         self.layout_descriptions = {
@@ -94,7 +92,7 @@ class ReferenceViewer:
         self.left_container = widgets.VBox(layout=widgets.Layout(width="50%"))
         self.right_container = widgets.VBox(layout=widgets.Layout(width="50%"))
         self.left_container.children = [
-            # self.paragraph_viewer.output_widget,
+            self.paragraph_viewer.output_widget,
             self.conversation_viewer.output_widget,
         ]
         self.right_container.children = [self.query_results_viewer.container]
