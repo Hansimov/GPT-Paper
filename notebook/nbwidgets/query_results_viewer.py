@@ -2,20 +2,21 @@ import html
 import ipywidgets as widgets
 from nbwidgets.styles import calc_font_color_by_background
 from utils.tokenizer import WordTokenizer
+from IPython.display import display
 
 
 class QueryResultsViewer:
     def __init__(self, queries=None, query_results=None):
         self.queries = queries
         self.query_results = query_results
-        self.display()
+        self.create_widgets()
+        self.query_results_to_html()
 
     def display(self):
-        self.query_results_to_html()
-        self.create_widgets()
+        display(self.html_widget)
 
     def create_widgets(self):
-        self.container = widgets.VBox([widgets.HTML(self.html_str)])
+        self.html_widget = widgets.HTML(value="")
 
     def query_results_to_html(self):
         word_tokenizer = WordTokenizer()
@@ -103,3 +104,9 @@ class QueryResultsViewer:
         """
         html_str += style_str
         self.html_str = html_str
+        self.html_widget.value = html_str
+
+    def update_query_results(self, queries, query_results):
+        self.queries = queries
+        self.query_results = query_results
+        self.query_results_to_html()
