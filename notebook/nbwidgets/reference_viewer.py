@@ -6,6 +6,7 @@ from nbwidgets.conversation_viewer import ConversationViewer
 from nbwidgets.paragraph_viewer import ParagraphViewer
 from utils.tokenizer import SentenceTokenizer
 import ipywidgets as widgets
+import re
 
 
 class ReferenceViewer:
@@ -14,10 +15,6 @@ class ReferenceViewer:
         self.documents_retriever = DocumentsRetriever(self.project_dir)
         self.sentence_tokenizer = SentenceTokenizer()
         self.create_widgets()
-
-    def tokenize_sentences(self, button=None):
-        sentences = self.sentence_tokenizer.text_to_sentences(text)
-        print(sentences)
 
     def create_paragraph_viewer(self):
         self.paragraph_viewer = ParagraphViewer()
@@ -54,6 +51,21 @@ class ReferenceViewer:
         self.toggle_layout_button.on_click(self.toggle_layout)
         self.update_toggle_button_description()
 
+    def create_sent_query_button(self):
+        self.send_query_button = widgets.Button(
+            description="Send Query",
+            layout=widgets.Layout(width="auto"),
+        )
+        self.send_query_button.on_click(self.send_query)
+
+    def send_query(self, button=None):
+        self.send_query_button.style.button_color = "orange"
+        queries_str = self.paragraph_viewer.result_viewer.text_widget.value
+        queries = re.sub(r"^\d+\.\s*", "", queries_str, flags=re.MULTILINE).split("\n")
+        query_results = self.documents_retriever.query(queries)
+        self.query_results_viewer.update_query_results(queries, query_results)
+        self.send_query_button.style.button_color = "green"
+
     def toggle_layout(self, button=None):
         self.layout_modes = ["both", "left", "right"]
         next_layout_mode_index = self.layout_modes.index(self.layout_mode) + 1
@@ -64,13 +76,10 @@ class ReferenceViewer:
 
     def create_buttons(self):
         self.create_toggle_layout_button()
-
-    def create_split_sentence_button(self):
-        self.split_sentences_button = widgets.Button(
-            description="Split to sentences",
-            layout=widgets.Layout(width="auto"),
+        self.create_sent_query_button()
+        self.buttons_box = widgets.HBox(
+            [self.toggle_layout_button, self.send_query_button]
         )
-        self.split_sentences_button.on_click(self.tokenize_sentences)
 
     def create_conversation_viewer(self):
         self.conversation_viewer = ConversationViewer()
@@ -95,10 +104,10 @@ class ReferenceViewer:
             self.paragraph_viewer.output_widget,
             self.conversation_viewer.output_widget,
         ]
-        self.right_container.children = [self.query_results_viewer.container]
+        self.right_container.children = [self.query_results_viewer.html_widget]
         self.container_hbox = widgets.HBox([self.left_container, self.right_container])
         self.create_buttons()
-        self.container = widgets.VBox([self.toggle_layout_button, self.container_hbox])
+        self.container = widgets.VBox([self.buttons_box, self.container_hbox])
 
     def display(self):
         display(self.container)
