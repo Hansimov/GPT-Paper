@@ -41,19 +41,20 @@ def calc_font_color_by_background(bg_rgba, mode="greyscale"):
 
 def enable_textarea_auto_expand():
     js_codes = """
-    let elements = document.getElementsByTagName('textarea');
-    for (const element of elements) {
-        element.style.resize = 'none';
-        element.style.fontSize = '16px';
-        element.style.lineHeight = '1.2';
-        element.style.padding = '8px';
-        element.style.fontFamily = 'Arial';
-        element.setAttribute('rows', '2');
-        element.setAttribute(
+    let textareas = document.getElementsByTagName('textarea');
+    for (const textarea of textareas) {
+        textarea.style.resize = 'none';
+        textarea.style.fontSize = '16px';
+        textarea.style.lineHeight = '1.2';
+        textarea.style.padding = '8px';
+        textarea.style.fontFamily = 'Arial';
+        textarea.setAttribute('rows', 2);
+        textarea.setAttribute(
             'oninput',
             "this.style.height = ''; this.style.height = this.scrollHeight + 3 + 'px'; console.log(this.scrollHeight);"
         )
     }
+    
     """
     display(Javascript(js_codes))
 

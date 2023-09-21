@@ -67,7 +67,7 @@ class SectionViewer:
         )
         self.right_container.children = [
             self.intro_text_widget,
-            query_results_viewer.container,
+            query_results_viewer.html_widget,
         ]
         return query_results
 

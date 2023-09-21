@@ -103,6 +103,7 @@ class MessageViewer:
             "user": (0, 100, 0, 0.5),
             "assistant": (0, 100, 100, 0.5),
             "input": (100, 100, 100, 0.5),
+            "other": (100, 100, 100, 0.7),
         }
         bg_color = ROLE_BACKGROUND_COLORS[self.message_node.role]
 
@@ -113,7 +114,7 @@ class MessageViewer:
             padding: 0px 8px 0px 8px;
             overflow-y: auto;
             display: block;
-            line-height: 1;
+            line-height: 1.25;
             """,
             tag=self.tag,
         )
