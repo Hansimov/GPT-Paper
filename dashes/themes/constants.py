@@ -1,0 +1,18 @@
+COLORS = {
+    "deep-grey": "#222222",
+    "mid-grey": "#444444",
+    "light-grey": "#666666",
+    "white-grey": "#888888",
+    "light-white": "#aaaaaa",
+    "mid-white": "#c0c0c0c0",
+    "deep-white": "#dddddd",
+    "deep-green": "#040",
+    "mid-green": "#080",
+    "light-green": "#0B0",
+    "deep-red": "#400",
+    "mid-red": "#800",
+    "light-red": "#D00",
+    "deep-cyan": "#044",
+    "mid-cyan": "#088",
+    "light-cyan": "#0BB",
+}
