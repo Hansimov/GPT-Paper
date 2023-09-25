@@ -1,18 +1,13 @@
-import json
 import os
 import pandas as pd
 import pathlib
 import platform
-from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 from sentence_transformers.util import semantic_search
 from termcolor import colored
-from utils.calculator import get_int_digits
 from utils.envs import enver
-from utils.file import rmtree_and_mkdir
-from utils.layout_analyzer import draw_regions_on_page
-from utils.logger import logger, add_fillers, Runtimer
+from utils.logger import logger, Runtimer
 from utils.tokenizer import (
     SentenceTokenizer,
     BiEncoderX,
@@ -92,9 +87,7 @@ class EmbeddingsQuerier:
             [self.query, self.df_texts[retrieve_result["corpus_id"]]]
             for retrieve_result in self.retrieve_results
         ]
-        cross_scores = self.cross_encoder_model.predict(
-            cross_inp, show_progress_bar=True
-        )
+        cross_scores = self.cross_encoder_model.predict(cross_inp)
         for idx in range(len(cross_scores)):
             self.retrieve_results[idx]["cross_score"] = cross_scores[idx]
         rerank_results = sorted(
@@ -154,6 +147,6 @@ if __name__ == "__main__":
         embeddings_querier = EmbeddingsQuerier(embeddings_df)
 
         query = "Textual explanation"
-        embeddings_querier.search(query, retrieve_n=32, rerank_n=10)
+        embeddings_querier.search(query, retrieve_n=64, rerank_n=20)
         query = "Example-based explanation"
-        embeddings_querier.search(query, retrieve_n=32, rerank_n=10)
+        embeddings_querier.search(query, retrieve_n=64, rerank_n=20)
