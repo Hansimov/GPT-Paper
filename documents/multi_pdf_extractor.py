@@ -7,7 +7,8 @@ from utils.logger import logger, Runtimer
 from utils.calculator import get_int_digits
 from utils.layout_analyzer import DITLayoutAnalyzer
 from utils.tokenizer import BiEncoderX, CrossEncoderX, SentenceTokenizer
-from utils.query_embeddings import query_embeddings_df
+
+from documents.embeddings_querier import EmbeddingsQuerier
 import pandas as pd
 import operator
 import pathlib
@@ -141,8 +142,10 @@ class MultiPDFExtractor:
         # print(df)
         df.reset_index(drop=True, inplace=True)
         # print(df)
-        query_results_scores_and_indexes = query_embeddings_df(
-            query=query, df=df, rerank_n=20
+
+        self.embeddings_querier = EmbeddingsQuerier(df=df)
+        query_results_scores_and_indexes = self.embeddings_querier.search(
+            query=query, rerank_n=20
         )
         query_results = []
         sentence_tokenizer = SentenceTokenizer()
