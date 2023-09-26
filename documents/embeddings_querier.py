@@ -37,7 +37,6 @@ class EmbeddingsQuerier:
 
         self.cross_encoder = CrossEncoderX()
         self.cross_encoder.load_model()
-        self.cross_encoder_model = self.cross_encoder.model
 
         enver.restore_envs()
         os.environ = enver.envs
@@ -87,7 +86,7 @@ class EmbeddingsQuerier:
             [self.query, self.df_texts[retrieve_result["corpus_id"]]]
             for retrieve_result in self.retrieve_results
         ]
-        cross_scores = self.cross_encoder_model.predict(cross_inp)
+        cross_scores = self.cross_encoder.predict(cross_inp)
         for idx in range(len(cross_scores)):
             self.retrieve_results[idx]["cross_score"] = cross_scores[idx]
         rerank_results = sorted(

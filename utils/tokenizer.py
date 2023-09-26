@@ -214,12 +214,20 @@ class BiEncoderX:
 
 
 class CrossEncoderX:
+    """
+    MS MARCO Cross-Encoders — Sentence-Transformers documentation
+    * https://www.sbert.net/docs/pretrained-models/ce-msmarco.html
+    """
+
     def __init__(self, model_name=None):
         if model_name:
             self.model_name = model_name
         else:
+            # self.model_name = "cross-encoder/ms-marco-TinyBERT-L-2-v2"
+            # self.model_name = "cross-encoder/ms-marco-MiniLM-L-2-v2"
+            self.model_name = "cross-encoder/ms-marco-MiniLM-L-4-v2"
             # self.model_name = "cross-encoder/ms-marco-MiniLM-L-6-v2"
-            self.model_name = "cross-encoder/ms-marco-MiniLM-L-12-v2"
+            # self.model_name = "cross-encoder/ms-marco-MiniLM-L-12-v2"
         self.is_load_model = False
 
     def load_model(self, quiet=True):
@@ -232,6 +240,10 @@ class CrossEncoderX:
         os.environ = enver.envs
         self.is_load_model = True
         logger.exit_quiet(quiet)
+
+    def predict(self, cross_inp):
+        cross_scores = self.model.predict(cross_inp)
+        return cross_scores
 
 
 if __name__ == "__main__":

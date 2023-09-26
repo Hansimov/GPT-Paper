@@ -418,7 +418,10 @@ if __name__ == "__main__":
     #     "Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer applications"
     # )
     # agent.get_available_models()
-    agent.chat("List most popular twitter posts today.")
+    # agent.chat("List most popular twitter posts today.")
+    agent.chat(
+        "Please search this news: 'ChatGPT can now see, hear, and speak'. Then summarize it with Chinese."
+    )
 
     # prompt1 = "To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information."
     # agent = OpenAIAgent(
