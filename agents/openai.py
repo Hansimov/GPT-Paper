@@ -33,7 +33,7 @@ def print_output(*args, **kwargs):
                 text = end
         update_widget.update_text(text)
     else:
-        print(*args, **kwargs)
+        print(*args, end=end, **kwargs)
 
 
 class OpenAIAgent:
@@ -179,12 +179,27 @@ class OpenAIAgent:
         """
         self.models_api = self.endpoint_url + self.endpoint["models"]
         self.available_models = []
-        response = httpx.get(self.models_api)
+        env_params = {
+            f"{self.endpoint_name}": True,
+        }
+        enver.set_envs(secrets=True, set_proxy=False, **env_params)
+        os.environ = enver.envs
+        # print(os.environ.get("http_proxy"))
+        requests_headers = {
+            # "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {enver.envs['OPENAI_API_KEY']}",
+        }
+        response = httpx.get(self.models_api, headers=requests_headers)
         data = response.json()["data"]
+
+        enver.restore_envs()
+        os.environ = enver.envs
 
         for item in data:
             self.available_models.append(item["id"])
-        self.print_output(self.available_models)
+        # self.print_output(self.available_models)
+        pprint(self.available_models)
 
         return self.available_models
 
@@ -393,14 +408,18 @@ if __name__ == "__main__":
         name="ninomae",
         endpoint_name="ninomae",
         # model="gpt-4",
-        model="poe-gpt-3.5-turbo-16k",
+        # model="poe-gpt-3.5-turbo-16k",
+        model="gpt-4-internet",
         temperature=0.0,
-        system_message="Explain the following text in Chinese:",
+        # system_message="Explain the following text in Chinese:",
     )
     # agent.test_prompt()
-    agent.chat(
-        "Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer applications"
-    )
+    # agent.chat(
+    #     "Unraveling the “black-box” of artificial intelligence-based pathological analysis of liver cancer applications"
+    # )
+    # agent.get_available_models()
+    agent.chat("List most popular twitter posts today.")
+
     # prompt1 = "To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information."
     # agent = OpenAIAgent(
     #     name="ninomae",
