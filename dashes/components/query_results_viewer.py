@@ -104,7 +104,7 @@ class QueryResultsViewer:
             <summary>
             Related {region_text_count} Paragraphs in {len(self.query_results)} References of {len(self.queries)} Queries:
             </summary>
-            <div class='query_results'>
+            <div class='query_result_item'>
                 <ol>
                     {html_str}
                 </ol>
@@ -114,10 +114,11 @@ class QueryResultsViewer:
 
         style_str = f"""
         <style>
-            .query_results {{
-                max-height: 90vh;
+            .query_result_item {{
+                max-height: 85vh;
                 overflow-y: auto;
                 border: 1px solid gray;
+                font-size: 18px;
             }}
         </style>
         """
