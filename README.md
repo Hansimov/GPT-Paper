@@ -60,7 +60,11 @@ pip install sentence-transformers
 pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipynbname
 ```
 
+**Dash:**
 
+```sh
+pip install dash-mantine-components
+```
 
 
 
