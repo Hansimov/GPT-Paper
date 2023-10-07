@@ -79,6 +79,7 @@ class ReferenceSearchApp:
         self.app_configs = {
             "title": "Reference Search",
             "update_title": None,
+            "assets_ignore": ".*\.(md|pkl|docx)$",
         }
         self.app_attrs = {
             "_favicon": str(self.app_root / "assets" / "paper.png"),
