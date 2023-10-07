@@ -9,7 +9,7 @@ class DarkTheme:
     def create_layout_styles(self):
         self.layout_styles = {
             "backgroundColor": COLORS["deep-grey"],
-            "color": COLORS["mid-white"],
+            "color": COLORS["deep-white"],
         }
 
     def create_text_styles(self):

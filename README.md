@@ -63,7 +63,7 @@ pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipyn
 **Dash:**
 
 ```sh
-pip install dash-mantine-components
+pip install dash-mantine-components dash-dangerously-set-inner-html
 ```
 
 

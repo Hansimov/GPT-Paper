@@ -51,14 +51,22 @@ class ReferenceLayout:
 
     def add_callbacks(self):
         @self.app.callback(
-            Output("query-input-textarea", "value"),
+            [
+                Output("query-input-textarea", "value"),
+                Output("query-results", "children"),
+            ],
             [Input("query-search-button", "n_clicks")],
             [State("query-input-textarea", "value")],
         )
-        def update_query(n_clicks, query):
+        def send_query(n_clicks, query):
             if n_clicks is None:
-                return ""
-            return query + " found"
+                return "Here is the query results."
+            print(f"Query: {query}")
+            query_results = self.documents_retriever.query(query)
+            self.query_results_viewer.update_query_results(
+                queries=[query], query_results=query_results
+            )
+            return query, self.query_results_viewer.danger_html_str
 
 
 class ReferenceSearchApp:
