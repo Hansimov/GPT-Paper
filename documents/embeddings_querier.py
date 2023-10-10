@@ -123,7 +123,7 @@ class EmbeddingsQuerier:
             logger.success(sentences_str)
             logger.restore_indent()
 
-        logger.exit_quiet()
+        logger.exit_quiet(quiet)
 
         return rerank_results_df_scores_and_idxs
 

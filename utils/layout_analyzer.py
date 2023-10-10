@@ -73,7 +73,7 @@ class DITLayoutAnalyzer:
         logger.exit_quiet(quiet)
 
     def test_run(self):
-        self.setup_model()
+        self.setup_model(quiet=False)
         # self.annotate_image(
         #     input_image_path=repo_path / "examples" / "example_pdf_4.png",
         #     output_image_path=repo_path / "examples" / "example_pdf_4_output.png",
