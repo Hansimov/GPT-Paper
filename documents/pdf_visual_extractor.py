@@ -655,22 +655,35 @@ class PDFVisualExtractor:
             )
             logger.restore_indent()
 
+    def run_verbose(self):
+        self.dump_pdf_to_page_images(dpi=300, overwrite=True, quiet=False)
+        self.annotate_page_images(overwrite=True, quiet=False)
+        self.remove_overlapped_layout_regions_from_pages(overwrite=True, quiet=False)
+        self.order_pages_regions(overwrite=True, quiet=False)
+        self.crop_page_images(page_type="ordered", overwrite=True, quiet=False)
+        # self.extract_texts_from_pages()
+        # self.combine_page_texts_to_doc()
+        # self.doc_texts_to_embeddings()
+        # self.query_region_texts()
+
     def run(self):
-        # self.dump_pdf_to_page_images()
+        self.dump_pdf_to_page_images()
         # self.annotate_page_images()
         # self.remove_overlapped_layout_regions_from_pages()
         # self.order_pages_regions()
         # self.crop_page_images("ordered")
         # self.extract_texts_from_pages()
         # self.combine_page_texts_to_doc()
-        self.doc_texts_to_embeddings()
+        # self.doc_texts_to_embeddings()
         # self.query_region_texts()
 
 
 if __name__ == "__main__":
     with Runtimer():
-        pdf_parent = Path(__file__).parents[1] / "pdfs" / "cancer_review"
-        pdf_filename = "Exploring pathological signatures for predicting the recurrence of early-stage hepatocellular carcinoma based on deep learning.pdf"
+        pdf_parent = Path(__file__).parents[1] / "pdfs" / "llm_agents"
+        pdf_filename = (
+            "2308.11432 - A Survey on Large Language Model based Autonomous Agents.pdf"
+        )
         # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
         # pdf_filename = "Nature Cancer 2020 Pan-cancer computational histopathology reveals.pdf"
@@ -678,4 +691,4 @@ if __name__ == "__main__":
         # pdf_filename = "2308.09687 - Graph of Thoughts.pdf"
         pdf_path = pdf_parent / pdf_filename
         pdf_visual_extractor = PDFVisualExtractor(pdf_path)
-        pdf_visual_extractor.run()
+        pdf_visual_extractor.run_verbose()
