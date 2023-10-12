@@ -172,15 +172,15 @@ class Logger:
 logger = Logger().logger
 
 
-def shell_cmd(cmd, getoutput=False, showcmd=True):
+def shell_cmd(cmd, getoutput=False, showcmd=True, env=None):
     if showcmd:
         logger.info(colored(f"\n$ [{os.getcwd()}]", "light_blue"))
         logger.info(colored(f"  $ {cmd}\n", "light_cyan"))
     if getoutput:
-        output = subprocess.getoutput(cmd)
+        output = subprocess.getoutput(cmd, env=env)
         return output
     else:
-        subprocess.run(cmd, shell=True)
+        subprocess.run(cmd, shell=True, env=env)
 
 
 class Runtimer:

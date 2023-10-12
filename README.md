@@ -66,6 +66,13 @@ pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipyn
 pip install dash-mantine-components dash-dangerously-set-inner-html
 ```
 
+**Nougat:**
+
+* https://github.com/facebookresearch/nougat
+
+```sh
+pip install --upgrade nougat-ocr[api]
+```
 
 
 ## Data pre-processing

@@ -89,6 +89,10 @@ class OSEnver:
                 self.envs["CUDA_VISIBLE_DEVICES"] = "0"
             else:
                 self.envs["CUDA_VISIBLE_DEVICES"] = "3"
+        elif isinstance(cuda_device, int) or isinstance(cuda_device, str):
+            self.envs["CUDA_VISIBLE_DEVICES"] = str(cuda_device)
+        else:
+            pass
 
         if cuda_alloc:
             self.envs["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
