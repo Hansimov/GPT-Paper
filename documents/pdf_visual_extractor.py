@@ -682,7 +682,8 @@ if __name__ == "__main__":
     with Runtimer():
         pdf_parent = Path(__file__).parents[1] / "pdfs" / "llm_agents"
         pdf_filename = (
-            "2308.11432 - A Survey on Large Language Model based Autonomous Agents.pdf"
+            # "2308.11432 - A Survey on Large Language Model based Autonomous Agents.pdf"
+            "2308.08155 - AutoGen - Enabling Next-Gen LLM Applications via Multi-Agent Conversation.pdf"
         )
         # pdf_filename = "Deep learning predicts postsurgical recurrence of hepatocellular carcinoma from digital histopathologic images.pdf"
         # pdf_filename = "HEP 2020 Predicting survival after hepatocellular carcinoma resection using.pdf"
