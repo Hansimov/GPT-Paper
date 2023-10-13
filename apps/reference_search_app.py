@@ -1,7 +1,7 @@
 from agents.documents_retriever import DocumentsRetriever
 from dash import Dash, html, dcc, Input, Output, State, callback
-from dashes.themes.dark_theme import DarkTheme
-from dashes.components.query_results_viewer import QueryResultsViewer
+from apps.themes.dark_theme import DarkTheme
+from apps.components.query_results_viewer import QueryResultsViewer
 from pathlib import Path
 import dash_mantine_components as dmc
 

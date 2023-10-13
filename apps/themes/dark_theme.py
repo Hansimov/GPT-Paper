@@ -1,4 +1,4 @@
-from dashes.themes.constants import COLORS
+from apps.themes.constants import COLORS
 
 
 class DarkTheme:
