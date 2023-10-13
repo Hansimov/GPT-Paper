@@ -11,8 +11,8 @@ class PDFNougatExtractor:
         self.init_paths()
 
     def init_paths(self):
+        # ANCHOR[id=pdf-nougat-extractor-paths]
         self.assets_path = self.pdf_parent / Path(self.pdf_filename).stem
-
         self.mmd_path = self.assets_path / "pages"
 
     def run_nougat(self):

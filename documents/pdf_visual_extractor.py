@@ -39,6 +39,7 @@ class PDFVisualExtractor:
         self.init_paths()
 
     def init_paths(self):
+        # ANCHOR[id=pdf-visual-extractor-paths]
         self.assets_path = self.pdf_parent / Path(self.pdf_filename).stem
 
         self.page_images_path = self.assets_path / "pages"
