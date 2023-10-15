@@ -89,6 +89,7 @@ class ReferenceSearchApp:
             "dev_tools_ui": False,
             "dev_tools_hot_reload_interval": 0.5,
             "dev_tools_hot_reload_watch_interval": 0.5,
+            "port": 12345,
         }
 
     def init_layout_configs(self):
