@@ -38,7 +38,7 @@ class TextNode:
 class MarkdownNodelizer:
     def __init__(self, markdown_path):
         self.markdown_path = markdown_path
-        self.headers = []
+        self.titles = []
         self.nodes = []
         self.node_id_set = set()
 
@@ -59,6 +59,14 @@ class MarkdownNodelizer:
                 if tmp_node.level == node.level - 1:
                     return tmp_node
         return None
+
+    def get_titles(self):
+        for node in self.nodes:
+            if node.level != -1:
+                self.titles.append(node)
+                title = re.sub(r"^#+", "", node.text)
+                title_str = (node.level - 1) * 2 * " " + "-" + title
+                print(title_str)
 
     def structurize(self):
         with open(markdown_path, "r", encoding="utf-8") as rf:
@@ -92,10 +100,11 @@ class MarkdownNodelizer:
         #     + f"{node.text}\n"
         #     + (f"  <{node.parent.text}>" if node.parent else "None")
         # )
-        print(f"Total {len(self.nodes)} nodes")
 
     def run(self):
         self.structurize()
+        self.get_titles()
+        print(f"{len(self.nodes)} nodes, and {len(self.titles)} titles.")
 
 
 if __name__ == "__main__":
