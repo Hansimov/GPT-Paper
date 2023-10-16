@@ -9,6 +9,9 @@ class TextNode:
         self.text = text
         self.idx = idx
         self.level = -1
+        self.prev = None
+        self.next = None
+        self.parent = None
         self.children = []
 
     def calc_level(self, mark="#"):
@@ -16,15 +19,23 @@ class TextNode:
         if header:
             self.level = len(list(itertools.takewhile(lambda x: x == mark, self.text)))
 
+        return self.level
+
     def generate_uuid(self, salt="", id_set=None):
-        self.uuid = hashlib.md5((self.text + salt).encode()).hexdigest()
+        self.uuid = hashlib.md5((self.text).encode()).hexdigest()
+
+        while self.uuid in id_set:
+            self.uuid = hashlib.md5((self.text + salt).encode()).hexdigest()
+            # print("Re-generate UUID")
+
+        return self.uuid
 
     def get_json(self):
         self.json = {"uuid": self.uuid, "text": self.text, "idx": self.idx}
         return self.json
 
 
-class MarkdownParser:
+class MarkdownNodelizer:
     def __init__(self, markdown_path):
         self.markdown_path = markdown_path
         self.headers = []
@@ -61,28 +72,27 @@ class MarkdownParser:
                 continue
             node_idx += 1
 
-            text_node = TextNode(text=text, idx=node_idx)
-            text_node.calc_level()
-            text_node.generate_uuid(salt=str(node_idx), id_set=self.node_id_set)
-            text_node.prev = self.nodes[-1] if self.nodes else None
-            if text_node.prev:
-                text_node.prev.next = text_node
-            else:
-                text_node.prev = None
+            node = TextNode(text=text, idx=node_idx)
+            node.calc_level()
+            node.generate_uuid(salt=str(node_idx), id_set=self.node_id_set)
+            self.node_id_set.add(node.uuid)
 
-            parent_text_node = self.get_direct_parent_node(text_node)
-            text_node.parent = parent_text_node
-            if parent_text_node:
-                parent_text_node.children.append(text_node)
+            node.prev = self.nodes[-1] if self.nodes else None
+            if node.prev:
+                node.prev.next = node
 
-            self.node_id_set.add(text_node.uuid)
-            self.nodes.append(text_node)
+            node.parent = self.get_direct_parent_node(node)
+            if node.parent:
+                node.parent.children.append(node)
 
-            print(
-                f"{node_idx}, {text_node.level}: "
-                + f"{text_node.text}\n"
-                + (f"  <{text_node.parent.text}>" if text_node.parent else "None")
-            )
+            self.nodes.append(node)
+
+        # print(
+        #     f"{node_idx}, {node.level}: "
+        #     + f"{node.text}\n"
+        #     + (f"  <{node.parent.text}>" if node.parent else "None")
+        # )
+        print(f"Total {len(self.nodes)} nodes")
 
     def run(self):
         self.structurize()
@@ -93,5 +103,5 @@ if __name__ == "__main__":
     markdown_path = (
         Path(__file__).parents[1] / "pdfs" / "llm_agents" / pdf_name / f"{pdf_name}.mmd"
     )
-    markdown_parser = MarkdownParser(markdown_path)
-    markdown_parser.run()
+    markdown_nodelizer = MarkdownNodelizer(markdown_path)
+    markdown_nodelizer.run()
