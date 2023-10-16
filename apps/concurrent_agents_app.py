@@ -48,6 +48,7 @@ class ConcurrentAgentsApp:
             "dev_tools_ui": False,
             "dev_tools_hot_reload_interval": 2,
             "dev_tools_hot_reload_watch_interval": 2,
+            "host": "0.0.0.0",
             "port": 12345,
         }
 
@@ -63,8 +64,17 @@ class ConcurrentAgentsApp:
 
     def create_layout(self):
         user_input = UserInput(self.app)
-        self.app.layout = dmc.Stack(children=user_input.components, id="app")
-        self.app.layout.style = self.layout_styles
+        self.app.layout = html.Div(
+            children=user_input.components,
+            id="app",
+            style={
+                **self.layout_styles,
+                "display": "flex",
+                "flex-direction": "column",
+                "justify-content": "space-between",
+                "height": "100vh",
+            },
+        )
 
     def run_server(self):
         self.app.run_server(**self.server_configs)
