@@ -21,16 +21,16 @@ class QueryResultsViewer:
         )
 
     def query_results_to_html(self, translate=False):
+        if not self.query_results:
+            self.html_str = ""
+            return
+
         word_tokenizer = WordTokenizer()
 
         if translate:
             text_translator = TextTranslator(
                 project_dir="cancer_review", engine="google"
             )
-
-        if not self.query_results:
-            self.html_str = ""
-            return
 
         region_scores = [
             region["score"]

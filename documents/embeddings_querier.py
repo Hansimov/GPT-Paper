@@ -81,7 +81,6 @@ class EmbeddingsQuerier:
 
     def rerank(self, rerank_n=20):
         logger.note(f"rerank: {datetime.now()}")
-        logger.enter_quiet(False)
         cross_inp = [
             [self.query, self.df_texts[retrieve_result["corpus_id"]]]
             for retrieve_result in self.retrieve_results
@@ -122,8 +121,6 @@ class EmbeddingsQuerier:
             logger.indent(2)
             logger.success(sentences_str)
             logger.restore_indent()
-
-        logger.exit_quiet(quiet)
 
         return rerank_results_df_scores_and_idxs
 
