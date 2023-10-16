@@ -36,6 +36,7 @@ class OSEnver:
         huggingface=True,
         openai=False,
         ninomae=False,
+        tiktoken_cache=False,
         store_envs=True,
     ):
         # caller_info = inspect.stack()[1]
@@ -88,7 +89,7 @@ class OSEnver:
             if platform.system() == "Windows":
                 self.envs["CUDA_VISIBLE_DEVICES"] = "0"
             else:
-                self.envs["CUDA_VISIBLE_DEVICES"] = "3"
+                self.envs["CUDA_VISIBLE_DEVICES"] = "0"
         elif isinstance(cuda_device, int) or isinstance(cuda_device, str):
             self.envs["CUDA_VISIBLE_DEVICES"] = str(cuda_device)
         else:
@@ -96,6 +97,11 @@ class OSEnver:
 
         if cuda_alloc:
             self.envs["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
+
+        # Permission denied · Issue #75 · openai/tiktoken
+        #   https://github.com/openai/tiktoken/issues/75#issuecomment-1480374604
+        if tiktoken_cache is False:
+            self.envs["TIKTOKEN_CACHE_DIR"] = ""
 
         if self.global_scope:
             os.environ = self.envs
