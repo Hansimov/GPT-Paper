@@ -8,7 +8,7 @@ from pathlib import Path
 class Node:
     def __init__(self, ele, description=None):
         self.ele = ele
-        self.note = note
+        self.description = description
 
         self.prev = None
         self.next = None
