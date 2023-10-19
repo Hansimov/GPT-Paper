@@ -8,9 +8,10 @@ from bs4 import BeautifulSoup
 
 
 class Node:
-    def __init__(self, element):
+    def __init__(self, element, idx=-1):
         self.element = element
         self.id = element.get("id", None)
+        self.idx = idx
         self.classes = element.get("class", [])
         self.class_str = " ".join(self.classes)
         self.tag = element.name
@@ -22,32 +23,27 @@ class Node:
 
     def parse_element(self):
         """Implemented in subclasses."""
-        pass
+        self.get_text()
 
     def get_parent_element(self):
         self.parent_element = self.element.parent
         return self.parent_element
 
-
-class SectionNode(Node):
-    def parse_element(self):
-        self.type = "section"
-
-    def get_header_node(self):
-        for child in self.children:
-            if child.type == "header":
-                return child
-
-    def get_section_level(self):
-        pass
-
-    def get_children(self):
-        pass
+    def get_text(self):
+        self.text = self.element.text.strip()
+        return self.text
 
 
 class JavascriptNode(Node):
     def parse_element(self):
         self.type = "javascript"
+        self.get_text()
+
+
+class TableNode(Node):
+    def parse_element(self):
+        self.type = "table"
+        self.get_text()
 
 
 class TextNode(Node):
@@ -55,10 +51,6 @@ class TextNode(Node):
         self.type = "text"
         self.get_text()
         self.get_full_text()
-
-    def get_text(self):
-        self.text = self.element.text.strip()
-        return self.text
 
     def get_full_text(self):
         if self.class_str:
@@ -94,10 +86,6 @@ class HeaderNode(Node):
 
         return self.header_number
 
-    def get_text(self):
-        self.text = self.element.text.strip()
-        return self.text
-
     def get_full_text(self):
         self.full_text = f"{self.header_number} {self.text}"
         return self.full_text
@@ -110,26 +98,16 @@ class HeaderNode(Node):
         return self.indented_full_text
 
 
-class TableNode(Node):
-    def parse_element(self):
-        self.type = "table"
-        caption_tag = self.element.find("p", class_="table_caption")
-        if caption_tag:
-            self.caption = caption_tag.text.strip()
-            caption_tag.extract()
-        else:
-            self.caption = ""
-
-
 class FigureNode(Node):
     def parse_element(self):
         self.type = "figure"
-        img_tag = self.element.find("img")
-        if img_tag:
-            self.image_source = img_tag["src"]
-            img_tag.extract()
-        else:
-            self.image_source = ""
+        self.get_text()
+        # img_tag = self.element.find("img")
+        # if img_tag:
+        #     self.image_source = img_tag["src"]
+        #     img_tag.extract()
+        # else:
+        #     self.image_source = ""
 
 
 class ListNode(Node):
@@ -147,6 +125,32 @@ class SepNode(Node):
         self.type = "sep"
 
 
+class SectionGroupNode(Node):
+    def parse_element(self):
+        self.type = "section_group"
+
+    def get_header_node(self):
+        for child in self.children:
+            if child.type == "header":
+                return child
+
+    def get_section_level(self):
+        pass
+
+    def get_children(self):
+        pass
+
+
+class TableGroupNode(Node):
+    def parse_element(self):
+        self.type = "table_group"
+
+    def get_caption_node(self):
+        for child in self.children:
+            if child.class_str == "table_caption":
+                return child
+
+
 class ElementNodelizer:
     def __init__(self, element):
         node = None
@@ -157,8 +161,6 @@ class ElementNodelizer:
             node = JavascriptNode(element)
         if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
             node = HeaderNode(element)
-        if class_str == "table" or tag == "table":
-            node = TableNode(element)
         if class_str == "figure":
             node = FigureNode(element)
         if class_str == "sourceCode" or tag == "pre":
@@ -169,8 +171,12 @@ class ElementNodelizer:
             node = ListNode(element)
         if tag in ["hr"]:
             node = SepNode(element)
+        if tag == "table":
+            node = TableNode(element)
         if class_str and class_str.startswith("section"):
-            node = SectionNode(element)
+            node = SectionGroupNode(element)
+        if class_str == "table":
+            node = TableGroupNode(element)
 
         self.node = node
 
@@ -184,7 +190,7 @@ class SpecHTMLNodelizer:
         self.nodes = []
         self.section_node = None
 
-    def traverse_element(self, element, parent_section_node=None):
+    def traverse_element(self, element, parent_node=None):
         children_l1 = element.find_all(recursive=False)
         for child in children_l1:
             tag = child.name
@@ -195,11 +201,11 @@ class SpecHTMLNodelizer:
 
             if node:
                 self.nodes.append(node)
-                if parent_section_node:
-                    node.parent = parent_section_node
-                    parent_section_node.children.append(node)
-                if node.type == "section":
-                    self.traverse_element(child, parent_section_node=node)
+                if parent_node:
+                    node.parent = parent_node
+                    parent_node.children.append(node)
+                if node.type in ["section_group", "table_group"]:
+                    self.traverse_element(child, parent_node=node)
             else:
                 if tag in ["div", "blockquote"]:
                     self.traverse_element(child)
@@ -208,8 +214,8 @@ class SpecHTMLNodelizer:
 
     def parse_html_to_nodes(self):
         main_element = self.soup.find(id="MAIN")
-        main_node = SectionNode(main_element)
-        self.traverse_element(element=main_element, parent_section_node=main_node)
+        main_node = SectionGroupNode(main_element)
+        self.traverse_element(element=main_element, parent_node=main_node)
         print(f"{len(self.nodes)} nodes parsed.")
         for idx, node in enumerate(self.nodes):
             node.idx = idx
@@ -218,8 +224,8 @@ class SpecHTMLNodelizer:
             if idx < len(self.nodes) - 1:
                 self.next = self.nodes[idx + 1]
 
-        #     if node.type == "section":
-        #         print(node.get_header_node().full_text)
+            if node.type == "table_group":
+                print(node.get_caption_node().full_text)
 
     def test_text_search(self):
         search_text = "purpose"
@@ -230,7 +236,7 @@ class SpecHTMLNodelizer:
 
     def run(self):
         self.parse_html_to_nodes()
-        self.test_text_search()
+        # self.test_text_search()
 
 
 if __name__ == "__main__":
