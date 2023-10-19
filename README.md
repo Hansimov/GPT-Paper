@@ -4,10 +4,10 @@ Enhance paper search, reading, writing and review with the assistance of GPT.
 
 ## Installation of dependencies
 
-**PyMuPDF**, **httpx**, **markdown2**, **PyDeepLX**, **deep-translator**, **Pygments**
+**PyMuPDF**, **httpx**, **markdown2**, **PyDeepLX**, **deep-translator**, **Pygments**, **lxml**
 
 ```sh
-pip install pymupdf httpx markdown2[all] PyDeepLX deep-translator Pygments
+pip install pymupdf httpx markdown2[all] PyDeepLX deep-translator Pygments lxml
 ```
 
 ## Setup detectron2 and unilm

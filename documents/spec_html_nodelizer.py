@@ -1,10 +1,10 @@
-import re
-import itertools
 import hashlib
-from bs4 import BeautifulSoup
-from pathlib import Path
+import itertools
+import pandas as pd
+import re
 
 from bs4 import BeautifulSoup
+from pathlib import Path
 
 
 class Node:
@@ -44,6 +44,16 @@ class TableNode(Node):
     def parse_element(self):
         self.type = "table"
         self.get_text()
+        self.get_markdown()
+        self.get_columns()
+
+    def get_markdown(self):
+        self.markdown = pd.read_html(str(self.element))[0]
+        return self.markdown
+
+    def get_columns(self):
+        self.columns = self.markdown.columns.tolist()
+        return self.columns
 
 
 class TextNode(Node):
@@ -157,7 +167,7 @@ class ElementNodelizer:
         tag = element.name
         class_str = " ".join(element.get("class", []))
 
-        if tag == "script":
+        if tag in ["script"]:
             node = JavascriptNode(element)
         if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
             node = HeaderNode(element)
@@ -171,7 +181,7 @@ class ElementNodelizer:
             node = ListNode(element)
         if tag in ["hr"]:
             node = SepNode(element)
-        if tag == "table":
+        if tag in ["table"]:
             node = TableNode(element)
         if class_str and class_str.startswith("section"):
             node = SectionGroupNode(element)
@@ -193,7 +203,7 @@ class SpecHTMLNodelizer:
     def traverse_element(self, element, parent_node=None):
         children_l1 = element.find_all(recursive=False)
         for child in children_l1:
-            tag = child.name
+            # tag = child.name
             # class_str = " ".join(child.get("class", []))
             # print(f"{tag}, class={class_str}, id={element_id}")
 
@@ -207,7 +217,7 @@ class SpecHTMLNodelizer:
                 if node.type in ["section_group", "table_group"]:
                     self.traverse_element(child, parent_node=node)
             else:
-                if tag in ["div", "blockquote"]:
+                if child.name in ["div", "blockquote"]:
                     self.traverse_element(child)
                 else:
                     raise NotImplementedError
@@ -224,19 +234,25 @@ class SpecHTMLNodelizer:
             if idx < len(self.nodes) - 1:
                 self.next = self.nodes[idx + 1]
 
-            if node.type == "table_group":
-                print(node.get_caption_node().full_text)
+            # if node.type == "table_group":
+            #     print(node.get_caption_node().full_text)
 
     def test_text_search(self):
-        search_text = "purpose"
+        search_text = "Ddrio Training Features by Training Steps"
         for node in self.nodes:
-            if hasattr(node, "text") and search_text in node.text.lower():
+            if hasattr(node, "text") and search_text.lower() in node.text.lower():
                 # print(node.parent.get_header_node().full_text)
-                print(node.text)
+                # print(node.element)
+                for child in node.parent.children:
+                    if child.type == "table":
+                        print(child.markdown)
+                        print(child.columns)
+                    else:
+                        print(child.text)
 
     def run(self):
         self.parse_html_to_nodes()
-        # self.test_text_search()
+        self.test_text_search()
 
 
 if __name__ == "__main__":
