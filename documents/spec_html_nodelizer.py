@@ -211,12 +211,26 @@ class SpecHTMLNodelizer:
         main_node = SectionNode(main_element)
         self.traverse_element(element=main_element, parent_section_node=main_node)
         print(f"{len(self.nodes)} nodes parsed.")
+        for idx, node in enumerate(self.nodes):
+            node.idx = idx
+            if idx > 0:
+                self.prev = self.nodes[idx - 1]
+            if idx < len(self.nodes) - 1:
+                self.next = self.nodes[idx + 1]
+
+        #     if node.type == "section":
+        #         print(node.get_header_node().full_text)
+
+    def test_text_search(self):
+        search_text = "purpose"
         for node in self.nodes:
-            if node.type == "section":
-                print(node.get_header_node().full_text)
+            if hasattr(node, "text") and search_text in node.text.lower():
+                # print(node.parent.get_header_node().full_text)
+                print(node.text)
 
     def run(self):
         self.parse_html_to_nodes()
+        self.test_text_search()
 
 
 if __name__ == "__main__":
