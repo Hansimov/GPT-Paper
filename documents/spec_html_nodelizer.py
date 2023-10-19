@@ -4,136 +4,126 @@ import hashlib
 from bs4 import BeautifulSoup
 from pathlib import Path
 
+from bs4 import BeautifulSoup
+
 
 class Node:
-    def __init__(self, ele, description=None):
-        self.ele = ele
-        self.description = description
-
+    def __init__(self, element):
+        self.element = element
+        self.id = element.get("id", None)
         self.prev = None
         self.next = None
         self.parent = None
         self.children = []
 
-        self.parse_element()
 
+class TextNode(Node):
     def parse_element(self):
-        self.text = ele.text.strip()
+        self.type = "text"
+        self.text = self.element.text.strip()
 
 
-class HeaderNode:
-    def __init__(self, ele):
-        self.prev = None
-        self.next = None
-        self.parent = None
-        self.children = []
-        self.ele = ele
-
-    def parse(self):
-        span = self.ele.find("span")
-        if span:
-            self.section = span.text.strip()
-            span.extract()
+class HeaderNode(Node):
+    def parse_element(self):
+        self.type = "header"
+        span_element = self.element.find("span")
+        if span_element:
+            self.header_number = span_element.text.strip()
+            span_element.extract()
         else:
-            self.section = ""
-        self.tag = self.ele.name
-        self.text = self.ele.text.strip()
-        self.level = int(self.tag[-1])
-        print(f"{self.tag}: <{self.section}> {self.text}")
+            self.header_number = ""
+        self.tag_name = self.element.name
+        self.header_text = self.element.text.strip()
+        self.header_level = int(self.tag_name[-1])
+
+
+class TableNode(Node):
+    def parse_element(self):
+        self.type = "table"
+        caption_tag = self.element.find("p", class_="table_caption")
+        if caption_tag:
+            self.caption = caption_tag.text.strip()
+            caption_tag.extract()
+        else:
+            self.caption = ""
+
+
+class FigureNode(Node):
+    def parse_element(self):
+        self.type = "figure"
+        img_tag = self.element.find("img")
+        if img_tag:
+            self.image_source = img_tag["src"]
+            img_tag.extract()
+        else:
+            self.image_source = ""
+
+
+class ListNode(Node):
+    def parse_element(self):
+        self.type = "list"
+
+
+class CodeNode(Node):
+    def parse_element(self):
+        self.type = "code"
+
+
+class SepNode(Node):
+    def parse_element(self):
+        self.type = "sep"
 
 
 class SpecHTMLNodelizer:
     def __init__(self, html_path):
         self.html_path = html_path
-        self.headers = []
+        with open(self.html_path, "r") as rf:
+            html_string = rf.read()
+        self.soup = BeautifulSoup(html_string, "html.parser")
         self.nodes = []
-        self.node_id_set = set()
 
-    def get_most_recent_same_level_node(self, node):
-        node_idx = node.idx
-        for tmp_node in reversed(self.nodes[:node_idx]):
-            if tmp_node.level == node.level:
-                return tmp_node
-        return None
+    def traverse_element(self, element):
+        children_l1 = element.find_all(recursive=False)
+        for child in children_l1:
+            tag = child.name
+            class_str = " ".join(child.get("class", []))
+            element_id = child.get("id", None)
+            print(f"{tag}, class={class_str}, id={element_id}")
 
-    def get_direct_parent_node(self, node):
-        node_idx = node.idx
-        for tmp_node in reversed(self.nodes[:node_idx]):
-            if node.level == -1:
-                if tmp_node.level != -1:
-                    return tmp_node
+            node = None
+            if tag == "script":
+                continue
+            if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
+                node = HeaderNode(child)
+            if class_str == "table" or tag == "table":
+                node = TableNode(child)
+            if class_str == "figure":
+                node = FigureNode(child)
+            if class_str == "sourceCode" or tag == "pre":
+                node = CodeNode(child)
+            if tag in ["p"]:
+                node = TextNode(child)
+            if tag in ["ul", "ol"]:
+                node = ListNode(child)
+            if tag in ["hr"]:
+                node = SepNode(child)
+
+            if node:
+                self.nodes.append(node)
             else:
-                if tmp_node.level == node.level - 1:
-                    return tmp_node
-        return None
+                if tag in ["div", "blockquote"]:
+                    self.traverse_element(child)
+                elif class_str and class_str.startswith("section"):
+                    self.traverse_element(child)
+                else:
+                    raise NotImplementedError
 
-    def structurize(self):
-        with open(self.html_path, "r", encoding="utf-8") as rf:
-            html_str = rf.read()
-        soup = BeautifulSoup(html_str, "html.parser")
-
-        # headers = soup.find_all(re.compile(r"^h[1-6]$"))
-        # for header in headers:
-        #     header_node = HeaderNode(header)
-        #     header_node.parse()
-
-        root = soup.find(id="MAIN")
-
-        level1_children = root.find_all(recursive=False)
-        for child in level1_children:
-            if "class" in child.attrs:
-                class_name = child["class"]
-            else:
-                class_name = None
-            print(child.name, class_name)
-
-        # # Element [id="header"]: title, author, date
-        # head_ele = root.find(id="header")
-
-        # title_ele = head_ele.find("p", {"class": "title"})
-        # title_node = Node(ele=title_ele, description="title")
-        # self.nodes.append(title_node)
-
-        # author_ele = head_ele.find("p", {"class": "author"})
-        # author_node = Node(ele=author_ele, description="author")
-        # self.nodes.append(author_node)
-
-        # date_ele = head_ele.find("p", {"class": "date"})
-        # date_node = Node(ele=date_ele, description="date")
-        # self.nodes.append(date_node)
-
-        # node_idx = -1
-        # for line_idx, line in enumerate(lines):
-        #     text = line.strip()
-        #     if not text:
-        #         continue
-        #     node_idx += 1
-
-        #     node = ElementNode(text=text, idx=node_idx, tag=tag)
-        #     node.calc_level()
-        #     node.generate_uuid(salt=str(node_idx), id_set=self.node_id_set)
-        #     self.node_id_set.add(node.uuid)
-
-        #     node.prev = self.nodes[-1] if self.nodes else None
-        #     if node.prev:
-        #         node.prev.next = node
-
-        #     node.parent = self.get_direct_parent_node(node)
-        #     if node.parent:
-        #         node.parent.children.append(node)
-
-        #     self.nodes.append(node)
-
-        # print(
-        #     f"{node_idx}, {node.level}: "
-        #     + f"{node.text}\n"
-        #     + (f"  <{node.parent.text}>" if node.parent else "None")
-        # )
+    def parse_html_to_nodes(self):
+        root_element = self.soup.find(id="MAIN")
+        self.traverse_element(root_element)
 
     def run(self):
-        self.structurize()
-        # self.get_headers()
-        # print(f"{len(self.nodes)} nodes, and {len(self.headers)} headers.")
+        self.parse_html_to_nodes()
 
 
 if __name__ == "__main__":
