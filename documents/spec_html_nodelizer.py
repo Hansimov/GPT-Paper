@@ -26,15 +26,44 @@ class TextNode(Node):
 class HeaderNode(Node):
     def parse_element(self):
         self.type = "header"
+
+        self.get_header_level()
+        self.get_header_number()
+        self.get_header_text()
+        self.get_full_text()
+        self.get_indented_full_text()
+
+        # print(self.indented_full_text)
+
+    def get_header_level(self):
+        self.header_level = int(self.tag[-1])
+        return self.header_level
+
+    def get_header_number(self):
         span_element = self.element.find("span")
+
         if span_element:
             self.header_number = span_element.text.strip()
             span_element.extract()
         else:
             self.header_number = ""
-        self.tag_name = self.element.name
+
+        return self.header_number
+
+    def get_header_text(self):
         self.header_text = self.element.text.strip()
-        self.header_level = int(self.tag_name[-1])
+        return self.header_text
+
+    def get_full_text(self):
+        self.full_text = f"{self.header_number} {self.header_text}"
+        return self.full_text
+
+    def get_indented_full_text(self, indent=2, indent_char=" ", begin_char="-"):
+        indent_str = indent_char * indent * (self.header_level - 1)
+        self.indented_full_text = (
+            f"{indent_str}{begin_char} {self.header_number} {self.header_text}"
+        )
+        return self.indented_full_text
 
 
 class TableNode(Node):
