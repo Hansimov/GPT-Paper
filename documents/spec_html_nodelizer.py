@@ -33,6 +33,10 @@ class Node:
         self.text = self.element.text.strip()
         return self.text
 
+    def get_full_text(self):
+        self.full_text = self.text
+        return self.full_text
+
 
 class JavascriptNode(Node):
     def parse_element(self):
@@ -43,13 +47,17 @@ class JavascriptNode(Node):
 class TableNode(Node):
     def parse_element(self):
         self.type = "table"
-        self.get_text()
         self.get_markdown()
         self.get_columns()
+        self.get_text()
 
     def get_markdown(self):
         self.markdown = pd.read_html(str(self.element))[0]
         return self.markdown
+
+    def get_text(self):
+        self.text = str(self.markdown)
+        return self.text
 
     def get_columns(self):
         self.columns = self.markdown.columns.tolist()
@@ -135,7 +143,23 @@ class SepNode(Node):
         self.type = "sep"
 
 
-class SectionGroupNode(Node):
+class GroupNode(Node):
+    def get_text(self):
+        texts = []
+        for child in self.children:
+            texts.append(child.get_text())
+        self.text = "\n".join(texts)
+        return self.text
+
+    def get_full_text(self):
+        full_texts = []
+        for child in self.children:
+            full_texts.append(child.get_full_text())
+        self.full_text = "\n".join(full_texts)
+        return self.full_text
+
+
+class SectionGroupNode(GroupNode):
     def parse_element(self):
         self.type = "section_group"
 
@@ -151,7 +175,7 @@ class SectionGroupNode(Node):
         pass
 
 
-class TableGroupNode(Node):
+class TableGroupNode(GroupNode):
     def parse_element(self):
         self.type = "table_group"
 
@@ -203,10 +227,6 @@ class SpecHTMLNodelizer:
     def traverse_element(self, element, parent_node=None):
         children_l1 = element.find_all(recursive=False)
         for child in children_l1:
-            # tag = child.name
-            # class_str = " ".join(child.get("class", []))
-            # print(f"{tag}, class={class_str}, id={element_id}")
-
             node = ElementNodelizer(child).node
 
             if node:
@@ -237,22 +257,21 @@ class SpecHTMLNodelizer:
             # if node.type == "table_group":
             #     print(node.get_caption_node().full_text)
 
-    def test_text_search(self):
-        search_text = "Ddrio Training Features by Training Steps"
+    def search_by_text(self, text):
+        search_text = text
         for node in self.nodes:
-            if hasattr(node, "text") and search_text.lower() in node.text.lower():
-                # print(node.parent.get_header_node().full_text)
-                # print(node.element)
-                for child in node.parent.children:
-                    if child.type == "table":
-                        print(child.markdown)
-                        print(child.columns)
-                    else:
-                        print(child.text)
+            if not node.type.endswith("group"):
+                if search_text.strip().lower() in node.get_text().lower():
+                    print(node.type)
+                    print(node.parent.type)
+                    print(node.parent.get_full_text())
+
+    def get_node_parent(self):
+        pass
 
     def run(self):
         self.parse_html_to_nodes()
-        self.test_text_search()
+        self.search_by_text("Traffic Generator Training Use Cases")
 
 
 if __name__ == "__main__":
