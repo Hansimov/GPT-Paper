@@ -11,16 +11,65 @@ class Node:
     def __init__(self, element):
         self.element = element
         self.id = element.get("id", None)
+        self.classes = element.get("class", [])
+        self.class_str = " ".join(self.classes)
+        self.tag = element.name
         self.prev = None
         self.next = None
         self.parent = None
         self.children = []
+        self.parse_element()
+
+    def parse_element(self):
+        """Implemented in subclasses."""
+        pass
+
+    def get_parent_element(self):
+        self.parent_element = self.element.parent
+        return self.parent_element
+
+
+class ElementNodelizer:
+    def __init__(self, element):
+        node = None
+        tag = element.name
+        class_str = " ".join(element.get("class", []))
+
+        if tag == "script":
+            node = JavascriptNode(element)
+        if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
+            node = HeaderNode(element)
+        if class_str == "table" or tag == "table":
+            node = TableNode(element)
+        if class_str == "figure":
+            node = FigureNode(element)
+        if class_str == "sourceCode" or tag == "pre":
+            node = CodeNode(element)
+        if tag in ["p"]:
+            node = TextNode(element)
+        if tag in ["ul", "ol"]:
+            node = ListNode(element)
+        if tag in ["hr"]:
+            node = SepNode(element)
+
+        self.node = node
+
+
+class JavascriptNode(Node):
+    def parse_element(self):
+        self.type = "javascript"
 
 
 class TextNode(Node):
     def parse_element(self):
         self.type = "text"
+        self.get_text()
+
+    def get_text(self):
         self.text = self.element.text.strip()
+        if self.class_str == "author":
+            print(f"{self.class_str}: {self.text}")
+        return self.text
 
 
 class HeaderNode(Node):
@@ -117,25 +166,9 @@ class SpecHTMLNodelizer:
             tag = child.name
             class_str = " ".join(child.get("class", []))
             element_id = child.get("id", None)
-            print(f"{tag}, class={class_str}, id={element_id}")
+            # print(f"{tag}, class={class_str}, id={element_id}")
 
-            node = None
-            if tag == "script":
-                continue
-            if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
-                node = HeaderNode(child)
-            if class_str == "table" or tag == "table":
-                node = TableNode(child)
-            if class_str == "figure":
-                node = FigureNode(child)
-            if class_str == "sourceCode" or tag == "pre":
-                node = CodeNode(child)
-            if tag in ["p"]:
-                node = TextNode(child)
-            if tag in ["ul", "ol"]:
-                node = ListNode(child)
-            if tag in ["hr"]:
-                node = SepNode(child)
+            node = ElementNodelizer(child).node
 
             if node:
                 self.nodes.append(node)
