@@ -29,6 +29,15 @@ class Node:
         self.parent_element = self.element.parent
         return self.parent_element
 
+    def get_parent(self):
+        return self.parent
+
+    def get_parents(self, depth=0):
+        parent = self.get_parent()
+        for i in range(depth):
+            parent = parent.get_parent()
+        return parent
+
     def get_text(self):
         self.text = self.element.text.strip()
         return self.text
@@ -47,12 +56,17 @@ class JavascriptNode(Node):
 class TableNode(Node):
     def parse_element(self):
         self.type = "table"
+        self.get_df()
         self.get_markdown()
-        self.get_columns()
         self.get_text()
+        self.get_columns()
+
+    def get_df(self):
+        self.df = pd.read_html(str(self.element))[0]
+        return self.df
 
     def get_markdown(self):
-        self.markdown = pd.read_html(str(self.element))[0]
+        self.markdown = self.df.to_markdown(index=False)
         return self.markdown
 
     def get_text(self):
@@ -60,7 +74,7 @@ class TableNode(Node):
         return self.text
 
     def get_columns(self):
-        self.columns = self.markdown.columns.tolist()
+        self.columns = self.df.columns.tolist()
         return self.columns
 
 
@@ -263,15 +277,18 @@ class SpecHTMLNodelizer:
             if not node.type.endswith("group"):
                 if search_text.strip().lower() in node.get_text().lower():
                     print(node.type)
-                    print(node.parent.type)
-                    print(node.parent.get_full_text())
+                    print(node.get_parents(1).type)
+                    print(node.get_parents(1).get_full_text())
 
     def get_node_parent(self):
         pass
 
     def run(self):
         self.parse_html_to_nodes()
-        self.search_by_text("Traffic Generator Training Use Cases")
+        # self.search_by_text("Traffic Generator Training Use Cases")
+        # self.search_by_text("Training Step Order")
+        # self.search_by_text("EnableDqDqsTrainEn")
+        self.search_by_text("auto-sweep hardware")
 
 
 if __name__ == "__main__":
