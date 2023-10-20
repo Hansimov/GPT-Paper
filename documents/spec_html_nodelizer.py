@@ -165,12 +165,6 @@ class HeaderNode(Node):
         return self.indented_full_text
 
 
-class FigureNode(Node):
-    def parse_element(self):
-        self.type = "figure"
-        self.get_text()
-
-
 class CodeNode(Node):
     def parse_element(self):
         self.type = "code"
@@ -229,6 +223,16 @@ class SectionGroupNode(GroupNode):
         pass
 
 
+class FigureGroupNode(GroupNode):
+    def parse_element(self):
+        self.type = "figure_group"
+
+    def get_caption_node(self):
+        for child in self.children:
+            if child.class_str == "caption":
+                return child
+
+
 class TableGroupNode(GroupNode):
     def parse_element(self):
         self.type = "table_group"
@@ -252,30 +256,32 @@ class ElementNodelizer:
             node = None
             tag = element.name
             class_str = " ".join(element.get("class", []))
-            if tag in ["script"]:
-                node = JavascriptNode(element)
-            if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
-                node = HeaderNode(element)
-            if class_str == "figure":
-                node = FigureNode(element)
-            if tag in ["img"]:
-                node = ImageNode(element)
-            if tag in ["a"]:
-                node = HyperlinkNode(element)
-            if class_str == "sourceCode" or tag == "pre":
-                node = CodeNode(element)
-            if tag in ["p", "em", "strong", "sub", "sup", "mark"]:
-                node = TextNode(element)
-            if tag in ["hr", "br"]:
-                node = SeparatorNode(element)
-            if tag in ["table"]:
-                node = TableNode(element)
+
             if class_str and class_str.startswith("section"):
                 node = SectionGroupNode(element)
+            if class_str == "figure":
+                node = FigureGroupNode(element)
             if class_str == "table":
                 node = TableGroupNode(element)
             if tag in ["ul", "ol", "li"]:
                 node = ListGroupNode(element)
+
+            if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
+                node = HeaderNode(element)
+            if tag in ["img"]:
+                node = ImageNode(element)
+            if tag in ["table"]:
+                node = TableNode(element)
+            if tag in ["a"]:
+                node = HyperlinkNode(element)
+            if class_str == "sourceCode" or tag == "pre":
+                node = CodeNode(element)
+            if tag in ["script"]:
+                node = JavascriptNode(element)
+            if tag in ["p", "em", "strong", "sub", "sup", "mark"]:
+                node = TextNode(element)
+            if tag in ["hr", "br"]:
+                node = SeparatorNode(element)
 
         self.node = node
 
@@ -298,7 +304,7 @@ class SpecHTMLNodelizer:
                 if parent_node:
                     node.parent = parent_node
                     parent_node.children.append(node)
-                if node.type in ["section_group", "table_group", "list_group"]:
+                if node.type.endswith("group"):
                     self.traverse_element(child, parent_node=node)
             else:
                 if child.name in ["div", "blockquote"]:
