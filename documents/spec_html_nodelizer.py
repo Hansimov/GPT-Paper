@@ -90,10 +90,15 @@ class TextNode(Node):
         self.get_full_text()
 
     def get_full_text(self):
-        if self.class_str:
-            self.full_text = f"{self.class_str}: {self.text}"
+        if self.tag not in ["p", "span"]:
+            self.tagged_text = f"<{self.tag}>{self.text}</{self.tag}>"
         else:
-            self.full_text = self.text
+            self.tagged_text = self.text
+
+        if self.class_str:
+            self.full_text = f"{self.class_str}: {self.tagged_text}"
+        else:
+            self.full_text = self.tagged_text
         return self.full_text
 
 
@@ -105,6 +110,21 @@ class StringNode(Node):
     def get_text(self):
         self.text = str(self.element)
         return self.text
+
+
+class HyperlinkNode(Node):
+    def parse_element(self):
+        self.type = "hyperlink"
+        self.get_text()
+        self.get_href()
+
+    def get_text(self):
+        self.text = self.element.text.strip()
+        return self.text
+
+    def get_href(self):
+        self.href = self.element.get("href", None)
+        return self.href
 
 
 class HeaderNode(Node):
@@ -149,12 +169,6 @@ class FigureNode(Node):
     def parse_element(self):
         self.type = "figure"
         self.get_text()
-        # img_tag = self.element.find("img")
-        # if img_tag:
-        #     self.image_source = img_tag["src"]
-        #     img_tag.extract()
-        # else:
-        #     self.image_source = ""
 
 
 class CodeNode(Node):
@@ -163,9 +177,27 @@ class CodeNode(Node):
         self.get_text()
 
 
-class SepNode(Node):
+class SeparatorNode(Node):
     def parse_element(self):
         self.type = "sep"
+        self.get_text()
+
+
+class ImageNode(Node):
+    def parse_element(self):
+        self.type = "img"
+        self.get_text()
+
+    def get_text(self):
+        self.text = self.element.get("alt", "")
+        return self.text
+
+    def get_src(self):
+        self.src = self.element.get("src", "")
+        return self.src
+
+    def get_full_text(self):
+        self.full_text = f"![{self.text}]({self.src})"
 
 
 class GroupNode(Node):
@@ -226,12 +258,16 @@ class ElementNodelizer:
                 node = HeaderNode(element)
             if class_str == "figure":
                 node = FigureNode(element)
+            if tag in ["img"]:
+                node = ImageNode(element)
+            if tag in ["a"]:
+                node = HyperlinkNode(element)
             if class_str == "sourceCode" or tag == "pre":
                 node = CodeNode(element)
-            if tag in ["p", "em"]:
+            if tag in ["p", "em", "strong", "sub", "sup", "mark"]:
                 node = TextNode(element)
             if tag in ["hr", "br"]:
-                node = SepNode(element)
+                node = SeparatorNode(element)
             if tag in ["table"]:
                 node = TableNode(element)
             if class_str and class_str.startswith("section"):
@@ -269,6 +305,7 @@ class SpecHTMLNodelizer:
                     self.traverse_element(child)
                 else:
                     print(child.name, child.id)
+                    print(child)
                     raise NotImplementedError
 
     def parse_html_to_nodes(self):
@@ -295,6 +332,8 @@ class SpecHTMLNodelizer:
         searched_nodes = []
         for node in self.nodes:
             if not node.type.endswith("group"):
+                # if node.get_text() is None:
+                #     print(node.element)
                 if keyword.strip().lower() in node.get_text().lower():
                     # print(node.type)
                     # print(node.get_parent().type)
@@ -304,8 +343,8 @@ class SpecHTMLNodelizer:
 
         searched_nodes = self.remove_duplated_nodes(searched_nodes)
 
-        for node in searched_nodes:
-            print(f"{node.type}\n{node.get_full_text()}")
+        for idx, node in enumerate(searched_nodes):
+            print(f"{idx}: {node.type}\n{node.get_full_text()}")
         return searched_nodes
 
     def run(self):
@@ -315,32 +354,6 @@ class SpecHTMLNodelizer:
         # self.search_by_text("EnableDqDqsTrainEn")
         # self.search_by_keyword("Results Aggregation Feature")
         self.search_by_keyword("Ddrio Feature")
-
-    def test_parse_li_element(self):
-        html_str = """
-        <li id="dfbc6b80">Since there is no Margin Monitor implemented in DDRIO, and because DDRIO features an even sampler and an odd sampler with separate offset control, the figure of merit for evaluating coefficient settings is the even sampler offset Eye Height, the odd sampler offset Eye Height. Note that in comparison to the Margin Monitor, this is a more intrusive way of collecting the figure of merit, as it directly changes the behavior of the feedback slicers to the DFE summer stage. (This will be a change in how the phases are measured - should be abstracted from the algorithm - HDC/DMR will have 4 samplers?
-        <ol style="list-style-type: lower-alpha">
-        <li id="597b1c3b">Eye Height is obtained by margining the slicers in the Receiver. (Should replace this figure or delete) <br> <img src="assets/ReadDfe_image2.png"> <br></li>
-        <li id="db15c2af">Passing/Failing offsets used to calculate the Eye Height are a result of the MTE comparison between the patterns sent by the DRAM (programmed in the Read Training Pattern registers) vs. MTE programmed pattern.</li>
-        </ol></li>
-        """
-        soup = BeautifulSoup(html_str, "html.parser")
-        li_element = soup.find("li")
-        # for child in li_element.find_all(recursive=False):
-        for child in li_element.children:
-            print(type(child))
-            node = ElementNodelizer(child).node
-            print(node.get_text())
-            # print(node.get_text())
-        # if isinstance(content, bs4.NavigableString):
-        #     print(content)
-        # print(len(li_element.children))
-
-        # print(li_element)
-        # node = ElementNodelizer(li_element).node
-        # children = node.element.find_all(recursive=False)
-        # for child in children:
-        #     print(child.get_text())
 
 
 if __name__ == "__main__":
