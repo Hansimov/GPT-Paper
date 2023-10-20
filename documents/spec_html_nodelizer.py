@@ -8,10 +8,9 @@ from pathlib import Path
 
 
 class Node:
-    def __init__(self, element, idx=-1):
+    def __init__(self, element):
         self.element = element
         self.id = element.get("id", None)
-        self.idx = idx
         self.classes = element.get("class", [])
         self.class_str = " ".join(self.classes)
         self.tag = element.name
@@ -145,11 +144,13 @@ class FigureNode(Node):
 class ListNode(Node):
     def parse_element(self):
         self.type = "list"
+        self.get_text()
 
 
 class CodeNode(Node):
     def parse_element(self):
         self.type = "code"
+        self.get_text()
 
 
 class SepNode(Node):
@@ -271,24 +272,35 @@ class SpecHTMLNodelizer:
             # if node.type == "table_group":
             #     print(node.get_caption_node().full_text)
 
-    def search_by_text(self, text):
-        search_text = text
+    def remove_duplated_nodes(self, nodes):
+        return sorted(
+            list({node.idx: node for node in nodes}.values()), key=lambda x: x.idx
+        )
+
+    def search_by_keyword(self, keyword):
+        searched_nodes = []
         for node in self.nodes:
             if not node.type.endswith("group"):
-                if search_text.strip().lower() in node.get_text().lower():
-                    print(node.type)
-                    print(node.get_parents(1).type)
-                    print(node.get_parents(1).get_full_text())
+                if keyword.strip().lower() in node.get_text().lower():
+                    # print(node.type)
+                    # print(node.get_parent().type)
+                    # parent_node = node.get_parent()
+                    # searched_nodes.append(parent_node)
+                    searched_nodes.append(node)
 
-    def get_node_parent(self):
-        pass
+        searched_nodes = self.remove_duplated_nodes(searched_nodes)
+
+        for node in searched_nodes:
+            print(f"{node.type}\n{node.get_full_text()}")
+        return searched_nodes
 
     def run(self):
         self.parse_html_to_nodes()
         # self.search_by_text("Traffic Generator Training Use Cases")
         # self.search_by_text("Training Step Order")
         # self.search_by_text("EnableDqDqsTrainEn")
-        self.search_by_text("auto-sweep hardware")
+        # self.search_by_keyword("Results Aggregation Feature")
+        self.search_by_keyword("Ddrio Feature")
 
 
 if __name__ == "__main__":
