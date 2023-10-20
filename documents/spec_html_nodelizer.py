@@ -2,6 +2,7 @@ import hashlib
 import itertools
 import pandas as pd
 import re
+from copy import deepcopy
 
 import bs4
 from bs4 import BeautifulSoup
@@ -290,6 +291,24 @@ class ElementNodelizer:
         self.node = node
 
 
+class ElementKeywordHighlighter:
+    def __init__(self, element, keyword):
+        keyword = keyword.strip()
+        new_element_str = re.sub(
+            self.keyword_pattern_ignore_html_tags(keyword),
+            self.highlight_keyword,
+            str(element),
+            flags=re.IGNORECASE,
+        )
+        self.marked_element = BeautifulSoup(new_element_str, "html.parser")
+
+    def highlight_keyword(self, match):
+        return f"<searched>{match.group()}</searched>"
+
+    def keyword_pattern_ignore_html_tags(self, keyword):
+        return "".join(f"{char}(<.+>)*" for char in keyword)
+
+
 class SpecHTMLNodelizer:
     def __init__(self, html_path):
         self.html_path = html_path
@@ -360,17 +379,21 @@ class SpecHTMLNodelizer:
         searched_nodes = self.remove_duplated_nodes(searched_nodes)
 
         for idx, node in enumerate(searched_nodes):
-            print(f"{idx}: {node.type}\n{node.get_full_text()}")
+            print(f"{idx}: {node.type} ({node.idx})\n{node.get_full_text()}")
+            node.marked_element = ElementKeywordHighlighter(
+                node.element, keyword
+            ).marked_element
         return searched_nodes
 
     def run(self):
         self.parse_html_to_nodes()
-        self.extract_styles()
+        # self.extract_styles()
         # self.search_by_text("Traffic Generator Training Use Cases")
         # self.search_by_text("Training Step Order")
         # self.search_by_text("EnableDqDqsTrainEn")
         # self.search_by_keyword("Results Aggregation Feature")
         # self.search_by_keyword("Ddrio Feature")
+        self.search_by_keyword("CA CRC mode which works in conjuction")
 
 
 if __name__ == "__main__":

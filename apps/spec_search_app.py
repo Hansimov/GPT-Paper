@@ -89,8 +89,16 @@ class SpecHTMLViewer:
         self.app = app
         self.create_layout()
 
-    def create_style_element(self):
+    def extract_styles(self):
         self.styles = self.app.spec_html_nodelizer.extract_styles()
+        self.search_highlight_styles = """
+        <style>
+            searched {
+                background-color: PaleGreen;
+            }
+        </style>
+        """
+        self.styles += self.search_highlight_styles
 
     def create_accordion(self):
         self.accordion = dmc.AccordionMultiple(
@@ -99,7 +107,7 @@ class SpecHTMLViewer:
         )
 
     def create_layout(self):
-        self.create_style_element()
+        self.extract_styles()
         self.create_accordion()
         self.layout = html.Div([danger_html(self.styles), self.accordion])
 
@@ -161,7 +169,7 @@ class SpecSearchApp:
         accordion_items = []
         for idx, node in enumerate(searched_nodes):
             accordion_item = HTMLAccordionItemer(
-                element=node.element, title=str(idx + 1)
+                element=node.marked_element, title=str(idx + 1)
             ).accordion_item
             accordion_items.append(accordion_item)
         return accordion_items
