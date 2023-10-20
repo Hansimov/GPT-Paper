@@ -3,6 +3,7 @@ import itertools
 import pandas as pd
 import re
 
+import bs4
 from bs4 import BeautifulSoup
 from pathlib import Path
 
@@ -10,14 +11,19 @@ from pathlib import Path
 class Node:
     def __init__(self, element):
         self.element = element
-        self.id = element.get("id", None)
-        self.classes = element.get("class", [])
-        self.class_str = " ".join(self.classes)
         self.tag = element.name
         self.prev = None
         self.next = None
         self.parent = None
         self.children = []
+
+        if isinstance(element, bs4.element.NavigableString):
+            pass
+        else:
+            self.id = element.get("id", None)
+            self.classes = element.get("class", [])
+            self.class_str = " ".join(self.classes)
+
         self.parse_element()
 
     def parse_element(self):
@@ -91,6 +97,16 @@ class TextNode(Node):
         return self.full_text
 
 
+class StringNode(Node):
+    def parse_element(self):
+        self.type = "string"
+        self.get_text()
+
+    def get_text(self):
+        self.text = str(self.element)
+        return self.text
+
+
 class HeaderNode(Node):
     def parse_element(self):
         self.type = "header"
@@ -141,12 +157,6 @@ class FigureNode(Node):
         #     self.image_source = ""
 
 
-class ListNode(Node):
-    def parse_element(self):
-        self.type = "list"
-        self.get_text()
-
-
 class CodeNode(Node):
     def parse_element(self):
         self.type = "code"
@@ -186,9 +196,6 @@ class SectionGroupNode(GroupNode):
     def get_section_level(self):
         pass
 
-    def get_children(self):
-        pass
-
 
 class TableGroupNode(GroupNode):
     def parse_element(self):
@@ -200,32 +207,39 @@ class TableGroupNode(GroupNode):
                 return child
 
 
+class ListGroupNode(GroupNode):
+    def parse_element(self):
+        self.type = "list_group"
+
+
 class ElementNodelizer:
     def __init__(self, element):
-        node = None
-        tag = element.name
-        class_str = " ".join(element.get("class", []))
-
-        if tag in ["script"]:
-            node = JavascriptNode(element)
-        if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
-            node = HeaderNode(element)
-        if class_str == "figure":
-            node = FigureNode(element)
-        if class_str == "sourceCode" or tag == "pre":
-            node = CodeNode(element)
-        if tag in ["p"]:
-            node = TextNode(element)
-        if tag in ["ul", "ol"]:
-            node = ListNode(element)
-        if tag in ["hr"]:
-            node = SepNode(element)
-        if tag in ["table"]:
-            node = TableNode(element)
-        if class_str and class_str.startswith("section"):
-            node = SectionGroupNode(element)
-        if class_str == "table":
-            node = TableGroupNode(element)
+        if isinstance(element, bs4.element.NavigableString):
+            node = StringNode(element)
+        else:
+            node = None
+            tag = element.name
+            class_str = " ".join(element.get("class", []))
+            if tag in ["script"]:
+                node = JavascriptNode(element)
+            if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
+                node = HeaderNode(element)
+            if class_str == "figure":
+                node = FigureNode(element)
+            if class_str == "sourceCode" or tag == "pre":
+                node = CodeNode(element)
+            if tag in ["p", "em"]:
+                node = TextNode(element)
+            if tag in ["hr", "br"]:
+                node = SepNode(element)
+            if tag in ["table"]:
+                node = TableNode(element)
+            if class_str and class_str.startswith("section"):
+                node = SectionGroupNode(element)
+            if class_str == "table":
+                node = TableGroupNode(element)
+            if tag in ["ul", "ol", "li"]:
+                node = ListGroupNode(element)
 
         self.node = node
 
@@ -240,8 +254,7 @@ class SpecHTMLNodelizer:
         self.section_node = None
 
     def traverse_element(self, element, parent_node=None):
-        children_l1 = element.find_all(recursive=False)
-        for child in children_l1:
+        for child in element.children:
             node = ElementNodelizer(child).node
 
             if node:
@@ -249,12 +262,13 @@ class SpecHTMLNodelizer:
                 if parent_node:
                     node.parent = parent_node
                     parent_node.children.append(node)
-                if node.type in ["section_group", "table_group"]:
+                if node.type in ["section_group", "table_group", "list_group"]:
                     self.traverse_element(child, parent_node=node)
             else:
                 if child.name in ["div", "blockquote"]:
                     self.traverse_element(child)
                 else:
+                    print(child.name, child.id)
                     raise NotImplementedError
 
     def parse_html_to_nodes(self):
@@ -302,6 +316,32 @@ class SpecHTMLNodelizer:
         # self.search_by_keyword("Results Aggregation Feature")
         self.search_by_keyword("Ddrio Feature")
 
+    def test_parse_li_element(self):
+        html_str = """
+        <li id="dfbc6b80">Since there is no Margin Monitor implemented in DDRIO, and because DDRIO features an even sampler and an odd sampler with separate offset control, the figure of merit for evaluating coefficient settings is the even sampler offset Eye Height, the odd sampler offset Eye Height. Note that in comparison to the Margin Monitor, this is a more intrusive way of collecting the figure of merit, as it directly changes the behavior of the feedback slicers to the DFE summer stage. (This will be a change in how the phases are measured - should be abstracted from the algorithm - HDC/DMR will have 4 samplers?
+        <ol style="list-style-type: lower-alpha">
+        <li id="597b1c3b">Eye Height is obtained by margining the slicers in the Receiver. (Should replace this figure or delete) <br> <img src="assets/ReadDfe_image2.png"> <br></li>
+        <li id="db15c2af">Passing/Failing offsets used to calculate the Eye Height are a result of the MTE comparison between the patterns sent by the DRAM (programmed in the Read Training Pattern registers) vs. MTE programmed pattern.</li>
+        </ol></li>
+        """
+        soup = BeautifulSoup(html_str, "html.parser")
+        li_element = soup.find("li")
+        # for child in li_element.find_all(recursive=False):
+        for child in li_element.children:
+            print(type(child))
+            node = ElementNodelizer(child).node
+            print(node.get_text())
+            # print(node.get_text())
+        # if isinstance(content, bs4.NavigableString):
+        #     print(content)
+        # print(len(li_element.children))
+
+        # print(li_element)
+        # node = ElementNodelizer(li_element).node
+        # children = node.element.find_all(recursive=False)
+        # for child in children:
+        #     print(child.get_text())
+
 
 if __name__ == "__main__":
     html_name = "Server DDR5 DMR MRC Training"
@@ -310,3 +350,4 @@ if __name__ == "__main__":
     )
     spec_html_nodelizer = SpecHTMLNodelizer(html_path)
     spec_html_nodelizer.run()
+    # spec_html_nodelizer.test_parse_li_element()
