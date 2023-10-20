@@ -314,10 +314,19 @@ class SpecHTMLNodelizer:
                     print(child)
                     raise NotImplementedError
 
+    def extract_styles(self):
+        # <head> stores styles, which are useful for better rendering
+        style_str = ""
+        head_element = self.soup.find("head")
+        for child in head_element.children:
+            if child.name in ["style", "script"]:
+                style_str += str(child)
+        return style_str
+
     def parse_html_to_nodes(self):
-        main_element = self.soup.find(id="MAIN")
-        main_node = SectionGroupNode(main_element)
-        self.traverse_element(element=main_element, parent_node=main_node)
+        self.main_element = self.soup.find(id="MAIN")
+        self.main_node = SectionGroupNode(self.main_element)
+        self.traverse_element(element=self.main_element, parent_node=self.main_node)
         print(f"{len(self.nodes)} nodes parsed.")
         for idx, node in enumerate(self.nodes):
             node.idx = idx
@@ -325,9 +334,6 @@ class SpecHTMLNodelizer:
                 self.prev = self.nodes[idx - 1]
             if idx < len(self.nodes) - 1:
                 self.next = self.nodes[idx + 1]
-
-            # if node.type == "table_group":
-            #     print(node.get_caption_node().full_text)
 
     def remove_duplated_nodes(self, nodes):
         return sorted(
@@ -355,11 +361,12 @@ class SpecHTMLNodelizer:
 
     def run(self):
         self.parse_html_to_nodes()
+        self.extract_styles()
         # self.search_by_text("Traffic Generator Training Use Cases")
         # self.search_by_text("Training Step Order")
         # self.search_by_text("EnableDqDqsTrainEn")
         # self.search_by_keyword("Results Aggregation Feature")
-        self.search_by_keyword("Ddrio Feature")
+        # self.search_by_keyword("Ddrio Feature")
 
 
 if __name__ == "__main__":
@@ -369,4 +376,3 @@ if __name__ == "__main__":
     )
     spec_html_nodelizer = SpecHTMLNodelizer(html_path)
     spec_html_nodelizer.run()
-    # spec_html_nodelizer.test_parse_li_element()

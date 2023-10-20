@@ -89,15 +89,19 @@ class SpecHTMLViewer:
         self.app = app
         self.create_layout()
 
-    def create_accordions(self):
-        self.accordions = dmc.AccordionMultiple(
+    def create_style_element(self):
+        self.styles = self.app.spec_html_nodelizer.extract_styles()
+
+    def create_accordion(self):
+        self.accordion = dmc.AccordionMultiple(
             id="keyword-search-accordion",
             children=[],
         )
 
     def create_layout(self):
-        self.create_accordions()
-        self.layout = html.Div([self.accordions])
+        self.create_style_element()
+        self.create_accordion()
+        self.layout = html.Div([danger_html(self.styles), self.accordion])
 
 
 class SpecSearchApp:
