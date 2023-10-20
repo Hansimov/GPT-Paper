@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from dash import Dash, html, dcc, Input, Output, State, callback
 from dash_dangerously_set_inner_html import DangerouslySetInnerHTML as danger_html
 from pathlib import Path
+from documents.spec_html_nodelizer import SpecHTMLNodelizer
 import dash_mantine_components as dmc
 
 
@@ -48,35 +49,38 @@ class KeywordInputer:
             [self.title, self.input, self.search_button],
         )
 
-    # def add_callbacks(self):
-    #     @self.app.callback(
-    #         Output("query-results", "children"),
-    #         Input("query-search-button", "n_clicks"),
-    #         State("query-input-textarea", "value"),
-    #     )
-    #     def send_query(n_clicks, query):
-    #         if n_clicks is None:
-    #             return ["Here is the query results."]
-    #         print(f"Query: {query}")
-    #         # query_results = self.documents_retriever.query(query)
-    #         # self.query_results_viewer.update_query_results(
-    #         #     queries=[query], query_results=query_results
-    #         # )
-    #         # return [self.query_results_viewer.danger_html_str]
-    #         return [f"Query: {query}"]
+    def add_callbacks(self):
+        @self.app.app.callback(
+            Output("keyword-search-accordion", "children"),
+            Input("spec-keyword-search-button", "n_clicks"),
+            State("spec-keyword-input-textarea", "value"),
+        )
+        def send_query(n_clicks, query):
+            if n_clicks is None:
+                return ["(Here will display the searched results.)"]
+
+            print(f"Keyword: {query}")
+
+            accordion_items = self.app.search_by_keyword(query)
+
+            if len(accordion_items) == 0:
+                return ["No results found."]
+            else:
+                return accordion_items
 
 
 class HTMLAccordionItemer:
-    def __init__(self, element):
+    def __init__(self, element, title="accordion"):
         self.element = element
+        self.title = title
         self.html_to_accordion()
 
     def html_to_accordion(self):
         element = self.element
-        self.accordion_control = dmc.AccordionControl(element.name)
+        self.accordion_control = dmc.AccordionControl(self.title)
         self.accordion_panel = dmc.AccordionPanel(danger_html(str(element)))
         self.accordion_item = dmc.AccordionItem(
-            [self.accordion_control, self.accordion_panel], value=element.name
+            children=[self.accordion_control, self.accordion_panel], value=self.title
         )
 
 
@@ -86,14 +90,9 @@ class SpecHTMLViewer:
         self.create_layout()
 
     def create_accordions(self):
-        element_html = """<ul>
-        </ul>
-        """
-        soup = BeautifulSoup(element_html, "html.parser")
-        element = soup.find("ul")
-        self.accordion_item = HTMLAccordionItemer(element).accordion_item
-        self.accordions = dmc.Accordion(
-            children=[self.accordion_item],
+        self.accordions = dmc.AccordionMultiple(
+            id="keyword-search-accordion",
+            children=[],
         )
 
     def create_layout(self):
@@ -134,18 +133,40 @@ class SpecSearchApp:
             setattr(self.app, attr_key, attr_val)
 
     def create_layout(self):
-        keyword_inputer = KeywordInputer(self.app)
-        spec_html_viewer = SpecHTMLViewer(self.app)
-        self.app.layout = html.Div([keyword_inputer.layout, spec_html_viewer.layout])
+        self.keyword_inputer = KeywordInputer(self)
+        self.keyword_inputer.add_callbacks()
+        self.spec_html_viewer = SpecHTMLViewer(self)
+        self.app.layout = html.Div(
+            [self.keyword_inputer.layout, self.spec_html_viewer.layout]
+        )
         self.app.layout.style = self.layout_styles
 
     def run_server(self):
         self.app.run_server(**self.server_configs)
 
+    def create_spec_html_nodelizer(self):
+        html_name = "Server DDR5 DMR MRC Training"
+        html_path = (
+            Path(__file__).parents[1] / "files" / "htmls" / "mrc" / f"{html_name}.html"
+        )
+        self.spec_html_nodelizer = SpecHTMLNodelizer(html_path)
+        self.spec_html_nodelizer.parse_html_to_nodes()
+
+    def search_by_keyword(self, keyword):
+        searched_nodes = self.spec_html_nodelizer.search_by_keyword(keyword)
+        accordion_items = []
+        for idx, node in enumerate(searched_nodes):
+            accordion_item = HTMLAccordionItemer(
+                element=node.element, title=str(idx + 1)
+            ).accordion_item
+            accordion_items.append(accordion_item)
+        return accordion_items
+
     def run(self):
         self.init_app_configs()
         self.init_layout_configs()
         self.create_app()
+        self.create_spec_html_nodelizer()
         self.create_layout()
         self.run_server()
 
