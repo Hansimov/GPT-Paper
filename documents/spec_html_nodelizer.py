@@ -136,18 +136,22 @@ class HeaderNode(Node):
         self.get_full_text()
         self.get_indented_full_text()
 
-        # print(self.indented_full_text)
-
     def get_level(self):
         self.level = int(self.tag[-1])
         return self.level
+
+    def get_text(self):
+        for content in self.element.contents:
+            if isinstance(content, bs4.element.NavigableString):
+                self.text = content.strip()
+                break
+        return self.text
 
     def get_number(self):
         span_element = self.element.find("span")
 
         if span_element:
             self.header_number = span_element.text.strip()
-            span_element.extract()
         else:
             self.header_number = ""
 
