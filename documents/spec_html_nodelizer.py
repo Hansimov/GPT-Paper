@@ -355,6 +355,7 @@ class ElementNodelizer:
 
 class ElementKeywordHighlighter:
     def __init__(self, element, keyword):
+        self.element = element
         keyword = keyword.strip()
         new_element_str = re.sub(
             self.keyword_pattern_ignore_html_tags(keyword),
@@ -365,7 +366,12 @@ class ElementKeywordHighlighter:
         self.marked_element = BeautifulSoup(new_element_str, "lxml")
 
     def highlight_keyword(self, match):
-        return f"<searched>{match.group()}</searched>"
+        matched_text = match.group()
+        if self.element.name in ["img"]:
+            highlighted_text = matched_text
+        else:
+            highlighted_text = f"<searched>{matched_text}</searched>"
+        return highlighted_text
 
     def keyword_pattern_ignore_html_tags(self, keyword):
         return "".join(f"{char}(<.+>)*" for char in keyword)

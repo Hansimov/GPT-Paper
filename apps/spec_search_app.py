@@ -171,7 +171,7 @@ class SpecSearchApp:
             header_node = node.get_section_group_node().get_header_node()
             accordion_item = HTMLAccordionItemer(
                 element=node.marked_element,
-                title=f"[{idx}] {header_node.get_full_text()}",
+                title=f"[{idx+1}] {header_node.get_full_text()}",
             ).accordion_item
             accordion_items.append(accordion_item)
         return accordion_items
