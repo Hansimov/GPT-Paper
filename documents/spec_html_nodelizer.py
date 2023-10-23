@@ -49,7 +49,7 @@ class Node:
         return self.text
 
     def get_full_text(self):
-        self.full_text = self.text
+        self.full_text = self.get_text()
         return self.full_text
 
 
@@ -186,6 +186,7 @@ class ImageNode(Node):
     def parse_element(self):
         self.type = "img"
         self.get_text()
+        self.get_src()
 
     def get_text(self):
         self.text = self.element.get("alt", "")
@@ -197,6 +198,7 @@ class ImageNode(Node):
 
     def get_full_text(self):
         self.full_text = f"![{self.text}]({self.src})"
+        return self.full_text
 
 
 class GroupNode(Node):
@@ -300,7 +302,7 @@ class ElementKeywordHighlighter:
             str(element),
             flags=re.IGNORECASE,
         )
-        self.marked_element = BeautifulSoup(new_element_str, "html.parser")
+        self.marked_element = BeautifulSoup(new_element_str, "lxml")
 
     def highlight_keyword(self, match):
         return f"<searched>{match.group()}</searched>"
@@ -314,7 +316,7 @@ class SpecHTMLNodelizer:
         self.html_path = html_path
         with open(self.html_path, "r") as rf:
             html_string = rf.read()
-        self.soup = BeautifulSoup(html_string, "html.parser")
+        self.soup = BeautifulSoup(html_string, "lxml")
         self.nodes = []
         self.section_node = None
 
@@ -363,13 +365,20 @@ class SpecHTMLNodelizer:
             list({node.idx: node for node in nodes}.values()), key=lambda x: x.idx
         )
 
-    def search_by_keyword(self, keyword):
+    def search_by_keyword(self, keyword, fulltext=True):
         searched_nodes = []
         for node in self.nodes:
             if not node.type.endswith("group"):
                 # if node.get_text() is None:
                 #     print(node.element)
-                if keyword.strip().lower() in node.get_text().lower():
+                if fulltext:
+                    searched_text = node.get_full_text()
+                else:
+                    searched_text = node.get_text()
+                if searched_text is None:
+                    print(node.element)
+
+                if keyword.strip().lower() in searched_text.lower():
                     # print(node.type)
                     # print(node.get_parent().type)
                     # parent_node = node.get_parent()
@@ -393,7 +402,8 @@ class SpecHTMLNodelizer:
         # self.search_by_text("EnableDqDqsTrainEn")
         # self.search_by_keyword("Results Aggregation Feature")
         # self.search_by_keyword("Ddrio Feature")
-        self.search_by_keyword("CA CRC mode which works in conjuction")
+        # self.search_by_keyword("CA CRC mode which works in conjuction")
+        self.search_by_keyword("author")
 
 
 if __name__ == "__main__":
