@@ -17,16 +17,16 @@ class KeywordInputer:
         self.app = app
         self.create_layout()
 
-    def create_title(self, title="Search Spec"):
-        self.title = html.Div(title)
+    def create_title(self, spec=""):
+        self.title = html.Div(f"Search Spec: {spec}")
 
     def create_input(self):
-        self.input = dmc.Textarea(
+        self.input = dmc.TextInput(
             id="spec-keyword-input-textarea",
             placeholder="Type Keywords here",
             value="",
-            minRows=1,
-            autosize=True,
+            # minRows=1,
+            # autosize=True,
         )
 
     def create_button(self):
@@ -41,7 +41,7 @@ class KeywordInputer:
             component.style = component_style
 
     def create_layout(self):
-        self.create_title()
+        self.create_title(self.app.html_name)
         self.create_input()
         self.create_button()
         self.apply_style_to_components()
@@ -52,11 +52,14 @@ class KeywordInputer:
     def add_callbacks(self):
         @self.app.app.callback(
             Output("keyword-search-accordion", "children"),
-            Input("spec-keyword-search-button", "n_clicks"),
+            [
+                Input("spec-keyword-search-button", "n_clicks"),
+                Input("spec-keyword-input-textarea", "n_submit"),
+            ],
             State("spec-keyword-input-textarea", "value"),
         )
-        def send_query(n_clicks, query):
-            if n_clicks is None:
+        def send_query(n_clicks, n_submit, query):
+            if n_clicks is None and n_submit is None:
                 return ["(Here will display the searched results.)"]
 
             print(f"Keyword: {query}")
@@ -104,6 +107,9 @@ class SpecHTMLViewer:
         self.accordion = dmc.AccordionMultiple(
             id="keyword-search-accordion",
             children=[],
+            variant="contained",
+            transitionDuration="200",
+            chevronPosition="left",
         )
 
     def create_layout(self):
@@ -157,9 +163,13 @@ class SpecSearchApp:
         self.app.run_server(**self.server_configs)
 
     def create_spec_html_nodelizer(self):
-        html_name = "Server DDR5 DMR MRC Training"
+        self.html_name = "Server DDR5 DMR MRC Training"
         html_path = (
-            Path(__file__).parents[1] / "files" / "htmls" / "mrc" / f"{html_name}.html"
+            Path(__file__).parents[1]
+            / "files"
+            / "htmls"
+            / "mrc"
+            / f"{self.html_name}.html"
         )
         self.spec_html_nodelizer = SpecHTMLNodelizer(html_path)
         self.spec_html_nodelizer.parse_html_to_nodes()
