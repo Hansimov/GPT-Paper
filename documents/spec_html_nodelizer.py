@@ -69,7 +69,7 @@ class Node:
         else:
             return node
 
-    def get_full_node(self):
+    def get_full_node(self, keyword=""):
         return self
 
 
@@ -103,7 +103,7 @@ class TableNode(Node):
         self.columns = self.df.columns.tolist()
         return self.columns
 
-    def get_full_node(self):
+    def get_full_node(self, keyword=""):
         if self.parent.type == "table_group":
             self.full_node = self.parent
         else:
@@ -129,7 +129,7 @@ class TextNode(Node):
             self.full_text = self.tagged_text
         return self.full_text
 
-    def get_full_node(self):
+    def get_full_node(self, keyword=""):
         if self.class_str.endswith("caption") and self.parent.type.endswith("group"):
             self.full_node = self.parent
         else:
@@ -202,6 +202,15 @@ class HeaderNode(Node):
             f"{indent_str}{begin_char} {self.header_number} {self.text}"
         )
         return self.indented_full_text
+
+    def get_full_node(self, keyword=""):
+        if self.parent.type == "section_group" and (
+            keyword == "" or self.text.lower() == keyword.lower()
+        ):
+            self.full_node = self.parent
+        else:
+            self.full_node = self
+        return self.full_node
 
 
 class CodeNode(Node):
@@ -423,7 +432,7 @@ class SpecHTMLNodelizer:
             if idx < len(self.nodes) - 1:
                 self.next = self.nodes[idx + 1]
 
-    def remove_duplated_nodes(self, nodes):
+    def remove_duplicated_nodes(self, nodes):
         return sorted(
             list({node.idx: node for node in nodes}.values()), key=lambda x: x.idx
         )
@@ -452,11 +461,11 @@ class SpecHTMLNodelizer:
                     # searched_nodes.append(parent_node)
 
                     if full_node:
-                        searched_nodes.append(node.get_full_node())
+                        searched_nodes.append(node.get_full_node(keyword=keyword))
                     else:
                         searched_nodes.append(node)
 
-        searched_nodes = self.remove_duplated_nodes(searched_nodes)
+        searched_nodes = self.remove_duplicated_nodes(searched_nodes)
 
         for idx, node in enumerate(searched_nodes):
             print(f"{idx}: {node.type} ({node.idx})\n{node.get_full_text()}")
