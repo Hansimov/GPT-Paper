@@ -73,15 +73,17 @@ class KeywordInputer:
 
 
 class HTMLAccordionItemer:
-    def __init__(self, element, title="accordion"):
-        self.element = element
+    def __init__(self, elements, title="accordion"):
+        self.elements = elements
         self.title = title
         self.html_to_accordion()
 
     def html_to_accordion(self):
-        element = self.element
+        elements = self.elements
         self.accordion_control = dmc.AccordionControl(self.title)
-        self.accordion_panel = dmc.AccordionPanel(danger_html(str(element)))
+        self.accordion_panel = dmc.AccordionPanel(
+            danger_html("<hr>".join([str(element) for element in elements]))
+        )
         self.accordion_item = dmc.AccordionItem(
             children=[self.accordion_control, self.accordion_panel], value=self.title
         )
@@ -174,14 +176,34 @@ class SpecSearchApp:
         self.spec_html_nodelizer = SpecHTMLNodelizer(html_path)
         self.spec_html_nodelizer.parse_html_to_nodes()
 
+    def group_searched_node_elements_by_header_title(self, searched_nodes):
+        grouped_elements = []
+
+        def get_header_title(node):
+            return node.get_section_group_node().get_header_node().get_full_text()
+
+        for node in searched_nodes:
+            header_title = get_header_title(node)
+            if len(grouped_elements) > 0 and header_title == grouped_elements[-1][0]:
+                grouped_elements[-1][1].append(node.marked_element)
+            else:
+                grouped_elements.append([header_title, [node.marked_element]])
+
+        return grouped_elements
+
     def search_by_keyword(self, keyword):
         searched_nodes = self.spec_html_nodelizer.search_by_keyword(keyword)
+        grouped_searched_node_elements = (
+            self.group_searched_node_elements_by_header_title(searched_nodes)
+        )
         accordion_items = []
-        for idx, node in enumerate(searched_nodes):
-            header_node = node.get_section_group_node().get_header_node()
+        for idx, grouped_title_and_elements in enumerate(
+            grouped_searched_node_elements
+        ):
+            grouped_title, grouped_elements = grouped_title_and_elements
             accordion_item = HTMLAccordionItemer(
-                element=node.marked_element,
-                title=f"[{idx+1}] {header_node.get_full_text()}",
+                elements=grouped_elements,
+                title=f"[{idx+1}] {grouped_title}",
             ).accordion_item
             accordion_items.append(accordion_item)
         return accordion_items

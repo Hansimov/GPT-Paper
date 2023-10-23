@@ -391,7 +391,7 @@ class ElementKeywordHighlighter:
         new_element_str = re.sub(
             self.keyword_pattern_ignore_html_tags(keyword),
             self.highlight_keyword,
-            rf"{str(element)}",
+            str(element),
             flags=re.IGNORECASE,
         )
         self.marked_element = BeautifulSoup(new_element_str, "lxml")
