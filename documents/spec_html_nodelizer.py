@@ -53,6 +53,24 @@ class Node:
         return self.full_text
 
 
+    def get_section_group_node(self):
+        node = self
+        while node and node.type != "section_group":
+            node = node.parent
+
+        if node is None:
+            print("get_section_group_node(): None!")
+            print(self.element)
+            raise NotImplementedError
+        elif node.type != "section_group":
+            print("get_section_group_node(): No section group!")
+            print(node.element)
+            print(self.element)
+            raise NotImplementedError
+        else:
+            return node
+
+
 class JavascriptNode(Node):
     def parse_element(self):
         self.type = "javascript"
@@ -222,9 +240,16 @@ class SectionGroupNode(GroupNode):
         self.type = "section_group"
 
     def get_header_node(self):
+        self.header_node = None
         for child in self.children:
             if child.type == "header":
-                return child
+                self.header_node = child
+        if self.header_node is None:
+            print(self.element)
+            print("get_header_node(): No header node for SectionGroupNode")
+            raise NotImplementedError
+        else:
+            return self.header_node
 
     def get_section_level(self):
         pass

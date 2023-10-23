@@ -168,8 +168,10 @@ class SpecSearchApp:
         searched_nodes = self.spec_html_nodelizer.search_by_keyword(keyword)
         accordion_items = []
         for idx, node in enumerate(searched_nodes):
+            header_node = node.get_section_group_node().get_header_node()
             accordion_item = HTMLAccordionItemer(
-                element=node.marked_element, title=str(idx + 1)
+                element=node.marked_element,
+                title=f"[{idx}] {header_node.get_full_text()}",
             ).accordion_item
             accordion_items.append(accordion_item)
         return accordion_items
