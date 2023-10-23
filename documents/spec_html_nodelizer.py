@@ -52,7 +52,6 @@ class Node:
         self.full_text = self.get_text()
         return self.full_text
 
-
     def get_section_group_node(self):
         node = self
         while node and node.type != "section_group":
@@ -69,6 +68,9 @@ class Node:
             raise NotImplementedError
         else:
             return node
+
+    def get_full_node(self):
+        return self
 
 
 class JavascriptNode(Node):
@@ -101,6 +103,13 @@ class TableNode(Node):
         self.columns = self.df.columns.tolist()
         return self.columns
 
+    def get_full_node(self):
+        if self.parent.type == "table_group":
+            self.full_node = self.parent
+        else:
+            self.full_node = self
+        return self.full_node
+
 
 class TextNode(Node):
     def parse_element(self):
@@ -119,6 +128,13 @@ class TextNode(Node):
         else:
             self.full_text = self.tagged_text
         return self.full_text
+
+    def get_full_node(self):
+        if self.class_str.endswith("caption") and self.parent.type.endswith("group"):
+            self.full_node = self.parent
+        else:
+            self.full_node = self
+        return self.full_node
 
 
 class StringNode(Node):
@@ -406,25 +422,33 @@ class SpecHTMLNodelizer:
             list({node.idx: node for node in nodes}.values()), key=lambda x: x.idx
         )
 
-    def search_by_keyword(self, keyword, fulltext=True):
+    def search_by_keyword(self, keyword, full_text=True, full_node=True):
         searched_nodes = []
         for node in self.nodes:
             if not node.type.endswith("group"):
                 # if node.get_text() is None:
                 #     print(node.element)
-                if fulltext:
+
+                if full_text:
                     searched_text = node.get_full_text()
                 else:
                     searched_text = node.get_text()
+
                 if searched_text is None:
                     print(node.element)
+                    print("search_by_keyword(): node.get_text() is None!")
+                    raise NotImplementedError
 
                 if keyword.strip().lower() in searched_text.lower():
                     # print(node.type)
                     # print(node.get_parent().type)
                     # parent_node = node.get_parent()
                     # searched_nodes.append(parent_node)
-                    searched_nodes.append(node)
+
+                    if full_node:
+                        searched_nodes.append(node.get_full_node())
+                    else:
+                        searched_nodes.append(node)
 
         searched_nodes = self.remove_duplated_nodes(searched_nodes)
 
