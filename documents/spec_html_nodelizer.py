@@ -255,6 +255,16 @@ class ListGroupNode(GroupNode):
         self.type = "list_group"
 
 
+class BlockquoteGroupNode(GroupNode):
+    def parse_element(self):
+        self.type = "blockquote_group"
+
+
+class DivGroupNode(GroupNode):
+    def parse_element(self):
+        self.type = "div_group"
+
+
 class ElementNodelizer:
     def __init__(self, element):
         if isinstance(element, bs4.element.NavigableString):
@@ -272,6 +282,8 @@ class ElementNodelizer:
                 node = TableGroupNode(element)
             if tag in ["ul", "ol", "li"]:
                 node = ListGroupNode(element)
+            if tag in ["blockquote"]:
+                node = BlockquoteGroupNode(element)
 
             if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
                 node = HeaderNode(element)
@@ -285,10 +297,17 @@ class ElementNodelizer:
                 node = CodeNode(element)
             if tag in ["script"]:
                 node = JavascriptNode(element)
-            if tag in ["p", "em", "strong", "sub", "sup", "mark"]:
+            if tag in ["p", "em", "strong", "sub", "sup", "mark", "span"]:
                 node = TextNode(element)
             if tag in ["hr", "br"]:
                 node = SeparatorNode(element)
+
+        if node is None:
+            if tag in ["div"]:
+                node = DivGroupNode(element)
+            else:
+                print(element)
+                raise NotImplementedError
 
         self.node = node
 
@@ -332,12 +351,9 @@ class SpecHTMLNodelizer:
                 if node.type.endswith("group"):
                     self.traverse_element(child, parent_node=node)
             else:
-                if child.name in ["div", "blockquote"]:
-                    self.traverse_element(child)
-                else:
-                    print(child.name, child.id)
-                    print(child)
-                    raise NotImplementedError
+                print(child.name, child.id)
+                print(child)
+                raise NotImplementedError
 
     def extract_styles(self):
         # <head> stores styles, which are useful for better rendering
