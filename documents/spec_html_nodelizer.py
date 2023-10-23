@@ -69,8 +69,35 @@ class Node:
         else:
             return node
 
+    def get_most_recent_group_node(self):
+        node = self
+        while node and not node.type.endswith("group"):
+            node = node.parent
+
+        if node is None:
+            print("get_most_recent_group_node(): None!")
+            print(self.element)
+            raise NotImplementedError
+        elif not node.type.endswith("group"):
+            print("get_most_recent_group_node(): No most recent group!")
+            print(node.element)
+            print(self.element)
+            raise NotImplementedError
+        else:
+            return node
+
     def get_full_node(self, keyword=""):
-        return self
+        if (
+            hasattr(self, "class_str")
+            and self.class_str.endswith("caption")
+            and self.parent.type.endswith("group")
+        ):
+            self.full_node = self.parent
+        elif self.get_most_recent_group_node().type == "list_group":
+            self.full_node = self.get_most_recent_group_node()
+        else:
+            self.full_node = self
+        return self.full_node
 
 
 class JavascriptNode(Node):
@@ -128,13 +155,6 @@ class TextNode(Node):
         else:
             self.full_text = self.tagged_text
         return self.full_text
-
-    def get_full_node(self, keyword=""):
-        if self.class_str.endswith("caption") and self.parent.type.endswith("group"):
-            self.full_node = self.parent
-        else:
-            self.full_node = self
-        return self.full_node
 
 
 class StringNode(Node):
@@ -269,12 +289,14 @@ class SectionGroupNode(GroupNode):
         for child in self.children:
             if child.type == "header":
                 self.header_node = child
+
         if self.header_node is None:
-            print(self.element)
+            # print(self.element)
             print("get_header_node(): No header node for SectionGroupNode")
-            raise NotImplementedError
-        else:
-            return self.header_node
+            # raise NotImplementedError
+            self.header_node = self.children[0]
+
+        return self.header_node
 
     def get_section_level(self):
         pass
@@ -369,7 +391,7 @@ class ElementKeywordHighlighter:
         new_element_str = re.sub(
             self.keyword_pattern_ignore_html_tags(keyword),
             self.highlight_keyword,
-            str(element),
+            rf"{str(element)}",
             flags=re.IGNORECASE,
         )
         self.marked_element = BeautifulSoup(new_element_str, "lxml")
