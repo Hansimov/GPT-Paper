@@ -87,16 +87,38 @@ class Node:
             return node
 
     def get_full_node(self, keyword=""):
+        most_recent_group_node = self.get_most_recent_group_node()
         if (
             hasattr(self, "class_str")
             and self.class_str.endswith("caption")
             and self.parent.type.endswith("group")
         ):
             self.full_node = self.parent
-        elif self.get_most_recent_group_node().type == "list_group":
-            self.full_node = self.get_most_recent_group_node()
+        elif most_recent_group_node.type == "list_group":
+            self.full_node = most_recent_group_node
+        # elif most_recent_group_node.type == "figure_group":
+        #     self.full_node = [
+        #         node
+        #         for node in [
+        #             most_recent_group_node.prev,
+        #             most_recent_group_node,
+        #             most_recent_group_node.next,
+        #         ]
+        #         if node is not None
+        #     ]
+        # elif self.type == "image":
+        #     self.full_node = [
+        #         node
+        #         for node in [
+        #             self.prev,
+        #             self,
+        #             self.next,
+        #         ]
+        #         if node is not None
+        #     ]
         else:
             self.full_node = self
+
         return self.full_node
 
 
@@ -267,6 +289,7 @@ class ImageNode(Node):
         if self.src and old_assets and new_assets:
             self.src = re.sub(old_assets, new_assets, self.src)
             self.element["src"] = self.src
+            self.element["title"] = self.src
         return self.src
 
     def get_full_text(self):
@@ -551,9 +574,14 @@ class SpecHTMLNodelizer:
                     # searched_nodes.append(parent_node)
 
                     if full_node:
-                        searched_nodes.append(node.get_full_node(keyword=keyword))
+                        node_full_node = node.get_full_node(keyword=keyword)
                     else:
-                        searched_nodes.append(node)
+                        node_full_node = node
+
+                    if type(node_full_node) == list:
+                        searched_nodes.extend(node_full_node)
+                    else:
+                        searched_nodes.append(node_full_node)
 
         searched_nodes = self.remove_duplicated_nodes(searched_nodes)
 
