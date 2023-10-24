@@ -1,12 +1,13 @@
+import bs4
 import hashlib
 import itertools
 import pandas as pd
 import re
-from copy import deepcopy
 
-import bs4
 from bs4 import BeautifulSoup
+from copy import deepcopy
 from pathlib import Path
+from thefuzz import fuzz
 
 
 class Node:
@@ -488,12 +489,21 @@ class KeywordSearcher:
     def __init__(self, keyword, text_to_search):
         self.keyword = keyword
         self.text_to_search = text_to_search
-        self.searched_texts = []
         self.search()
 
-    def search(self):
-        if self.keyword.strip().lower() in self.text_to_search.strip().lower():
+    def search(self, fuzzy=True, fuzzy_score=90):
+        self.searched_texts = []
+        keyword_is_found = False
+        if fuzzy:
+            if fuzz.token_set_ratio(self.keyword, self.text_to_search) >= fuzzy_score:
+                keyword_is_found = True
+        else:
+            if self.keyword.strip().lower() in self.text_to_search.strip().lower():
+                keyword_is_found = True
+
+        if keyword_is_found:
             self.searched_texts.append(self.keyword)
+
         return self.searched_texts
 
 
