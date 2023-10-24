@@ -462,11 +462,20 @@ class ElementKeywordHighlighter:
 
         html_tag_mapper = HTMLTagMapper()
         hashed_element_str = html_tag_mapper.hash_tags(str(element))
+        new_element_str = hashed_element_str
 
+        for sub_keyword in keyword.split():
+            new_element_str = re.sub(
+                pattern=self.keyword_pattern_ignore_html_tags(sub_keyword),
+                repl=self.highlight_keyword,
+                string=new_element_str,
+                flags=re.IGNORECASE,
+            )
+        # new_element_str = re.sub("(</searched>)(\s*?)(<searched>)", "", new_element_str)
         new_element_str = re.sub(
-            pattern=self.keyword_pattern_ignore_html_tags(self.keyword),
-            repl=self.highlight_keyword,
-            string=hashed_element_str,
+            pattern=r"(</searched>)([\s\n]*?)(<searched>)",
+            repl=r"\2",
+            string=new_element_str,
             flags=re.IGNORECASE,
         )
 
