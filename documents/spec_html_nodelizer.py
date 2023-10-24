@@ -428,7 +428,7 @@ class HTMLTagMapper:
     def hash_tags(self, html_string):
         # `/?`: Match closed tag starting with `/`, like `</div>`
         # `[^>]*`: Match any character except `>`, like `<p class='abc'>` or `<br/>`
-        pattern = re.compile(r"<(/?\w+[^>]*)>")
+        pattern = re.compile(r"<(/?\w+[^>]*?)>")
 
         def replacer(match):
             tag = match.group(1)
@@ -463,9 +463,9 @@ class ElementKeywordHighlighter:
         hashed_element_str = html_tag_mapper.hash_tags(str(element))
 
         new_element_str = re.sub(
-            self.keyword_pattern_ignore_html_tags(keyword),
-            self.highlight_keyword,
-            hashed_element_str,
+            pattern=self.keyword_pattern_ignore_html_tags(self.keyword),
+            repl=self.highlight_keyword,
+            string=hashed_element_str,
             flags=re.IGNORECASE,
         )
 
@@ -548,15 +548,14 @@ class SpecHTMLNodelizer:
             list({node.idx: node for node in nodes}.values()), key=lambda x: x.idx
         )
 
-    def search_by_keyword(self, keyword, full_text=True, full_node=True):
+    def search_by_keyword(self, keyword, search_full_text=True, return_full_node=True):
         searched_nodes = []
-
         for node in self.nodes:
             if not node.type.endswith("group"):
                 # if node.get_text() is None:
                 #     print(node.element)
 
-                if full_text:
+                if search_full_text:
                     text_to_search = node.get_full_text()
                 else:
                     text_to_search = node.get_text()
@@ -573,15 +572,15 @@ class SpecHTMLNodelizer:
                     # parent_node = node.get_parent()
                     # searched_nodes.append(parent_node)
 
-                    if full_node:
-                        node_full_node = node.get_full_node(keyword=keyword)
+                    if return_full_node:
+                        searched_node = node.get_full_node(keyword=keyword)
                     else:
-                        node_full_node = node
+                        searched_node = node
 
-                    if type(node_full_node) == list:
-                        searched_nodes.extend(node_full_node)
+                    if type(searched_node) == list:
+                        searched_nodes.extend(searched_node)
                     else:
-                        searched_nodes.append(node_full_node)
+                        searched_nodes.append(searched_node)
 
         searched_nodes = self.remove_duplicated_nodes(searched_nodes)
 
