@@ -384,20 +384,62 @@ class ElementNodelizer:
         self.node = node
 
 
+class HTMLTagMapper:
+    def __init__(self):
+        self.tag_dict = {}
+        self.hashed_html_string = ""
+        self.restored_html_string = ""
+
+    def hash_tags(self, html_string):
+        # `/?`: Match closed tag, starts with `/`, like `</div>`
+        # `[^>]*`: Match any character except `>`, like `<p class='abc'>`
+        pattern = re.compile(r"<(/?)(\w+)([^>]*)>")
+
+        def replacer(match):
+            tag = match.group(2)
+            hashed_tag = hashlib.md5(tag.encode()).hexdigest()
+            self.tag_dict[hashed_tag] = tag
+            return "<" + match.group(1) + hashed_tag + match.group(3) + ">"
+
+        self.hashed_html_string = pattern.sub(replacer, html_string)
+        return self.hashed_html_string
+
+    def restore_tags(self, html_str=""):
+        pattern = re.compile(r"<(/?)([0-9a-f]{32})([^>]*)>")
+
+        def replacer(match):
+            hashed_tag = match.group(2)
+            original_tag = self.tag_dict[hashed_tag]
+            return "<" + match.group(1) + original_tag + match.group(3) + ">"
+
+        if not html_str:
+            html_str = self.hashed_html_string
+        self.restored_html_string = pattern.sub(replacer, html_str)
+
+        return self.restored_html_string
+
+
 class ElementKeywordHighlighter:
     def __init__(self, element, keyword):
         self.element = element
-        keyword = keyword.strip()
+        self.keyword = keyword.strip()
+
+        html_tag_mapper = HTMLTagMapper()
+        hashed_element_str = html_tag_mapper.hash_tags(str(element))
+
         new_element_str = re.sub(
             self.keyword_pattern_ignore_html_tags(keyword),
             self.highlight_keyword,
-            str(element),
+            hashed_element_str,
             flags=re.IGNORECASE,
         )
+
+        new_element_str = html_tag_mapper.restore_tags(new_element_str)
         self.marked_element = BeautifulSoup(new_element_str, "lxml")
 
     def highlight_keyword(self, match):
         matched_text = match.group()
+
         if self.element.name in ["img"]:
             highlighted_text = matched_text
         else:
