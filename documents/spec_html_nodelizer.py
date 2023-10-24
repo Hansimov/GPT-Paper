@@ -461,6 +461,19 @@ class ElementKeywordHighlighter:
         return "".join(f"{char}(<.+>)*" for char in keyword)
 
 
+class KeywordSearcher:
+    def __init__(self, keyword, text_to_search):
+        self.keyword = keyword
+        self.text_to_search = text_to_search
+        self.searched_texts = []
+        self.search()
+
+    def search(self):
+        if self.keyword.strip().lower() in self.text_to_search.strip().lower():
+            self.searched_texts.append(self.keyword)
+        return self.searched_texts
+
+
 class SpecHTMLNodelizer:
     def __init__(self, html_path):
         self.html_path = html_path
@@ -514,22 +527,24 @@ class SpecHTMLNodelizer:
 
     def search_by_keyword(self, keyword, full_text=True, full_node=True):
         searched_nodes = []
+
         for node in self.nodes:
             if not node.type.endswith("group"):
                 # if node.get_text() is None:
                 #     print(node.element)
 
                 if full_text:
-                    searched_text = node.get_full_text()
+                    text_to_search = node.get_full_text()
                 else:
-                    searched_text = node.get_text()
+                    text_to_search = node.get_text()
 
-                if searched_text is None:
+                if text_to_search is None:
                     print(node.element)
                     print("search_by_keyword(): node.get_text() is None!")
                     raise NotImplementedError
 
-                if keyword.strip().lower() in searched_text.lower():
+                keyword_searcher = KeywordSearcher(keyword, text_to_search)
+                if keyword_searcher.searched_texts:
                     # print(node.type)
                     # print(node.get_parent().type)
                     # parent_node = node.get_parent()
