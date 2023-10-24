@@ -247,20 +247,30 @@ class SeparatorNode(Node):
 
 class ImageNode(Node):
     def parse_element(self):
-        self.type = "img"
-        self.get_text()
-        self.get_src()
+        self.type = "image"
+        # self.set_src()
+        # self.get_src()
+        # self.get_text()
 
     def get_text(self):
         self.text = self.element.get("alt", "")
+        if not self.text:
+            self.text = self.element.get("src", "")
         return self.text
 
     def get_src(self):
         self.src = self.element.get("src", "")
         return self.src
 
+    def set_src(self, old_assets="", new_assets=""):
+        self.src = self.element.get("src", "")
+        if self.src and old_assets and new_assets:
+            self.src = re.sub(old_assets, new_assets, self.src)
+            self.element["src"] = self.src
+        return self.src
+
     def get_full_text(self):
-        self.full_text = f"![{self.text}]({self.src})"
+        self.full_text = f"{self.type}: ![{self.get_text()}]({self.get_src()})"
         return self.full_text
 
 
@@ -361,6 +371,8 @@ class ElementNodelizer:
                 node = HeaderNode(element)
             if tag in ["img"]:
                 node = ImageNode(element)
+                node.set_src(
+                )
             if tag in ["table"]:
                 node = TableNode(element)
             if tag in ["a"]:
@@ -391,8 +403,8 @@ class HTMLTagMapper:
         self.restored_html_string = ""
 
     def hash_tags(self, html_string):
-        # `/?`: Match closed tag, starts with `/`, like `</div>`
-        # `[^>]*`: Match any character except `>`, like `<p class='abc'>`
+        # `/?`: Match closed tag starting with `/`, like `</div>`
+        # `[^>]*`: Match any character except `>`, like `<p class='abc'>` or `<br/>`
         pattern = re.compile(r"<(/?)(\w+)([^>]*)>")
 
         def replacer(match):
@@ -532,7 +544,8 @@ class SpecHTMLNodelizer:
         searched_nodes = self.remove_duplicated_nodes(searched_nodes)
 
         for idx, node in enumerate(searched_nodes):
-            print(f"{idx}: {node.type} ({node.idx})\n{node.get_full_text()}")
+            print(f"{idx}: {node.type} ({node.idx})")
+            # print(f"{node.get_full_text()}")
             node.marked_element = ElementKeywordHighlighter(
                 node.element, keyword
             ).marked_element
