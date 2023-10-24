@@ -500,20 +500,25 @@ class KeywordSearcher:
         self.text_to_search = text_to_search
         self.search()
 
-    def search(self, fuzzy=True, fuzzy_score=90):
+    def search(self, fuzzy=True, fuzzy_threshold=90):
         self.searched_texts = []
         keyword_is_found = False
+        search_score = 0
+
+        if self.keyword.strip().lower() in self.text_to_search.strip().lower():
+            keyword_is_found = True
+            search_score = 100
+
         if fuzzy:
-            if fuzz.token_set_ratio(self.keyword, self.text_to_search) >= fuzzy_score:
-                keyword_is_found = True
-        else:
-            if self.keyword.strip().lower() in self.text_to_search.strip().lower():
+            fuzzy_score = fuzz.token_set_ratio(self.keyword, self.text_to_search)
+            if fuzzy_score >= fuzzy_threshold:
                 keyword_is_found = True
 
         if keyword_is_found:
             self.searched_texts.append(self.keyword)
 
-        return self.searched_texts
+        self.search_score = max(search_score, fuzzy_score)
+        return self.searched_texts, self.search_score
 
 
 class SpecHTMLNodelizer:
@@ -586,6 +591,7 @@ class SpecHTMLNodelizer:
 
                 keyword_searcher = KeywordSearcher(keyword, text_to_search)
                 if keyword_searcher.searched_texts:
+                    print(keyword_searcher.search_score)
                     # print(node.type)
                     # print(node.get_parent().type)
                     # parent_node = node.get_parent()
@@ -604,7 +610,7 @@ class SpecHTMLNodelizer:
         searched_nodes = self.remove_duplicated_nodes(searched_nodes)
 
         for idx, node in enumerate(searched_nodes):
-            print(f"{idx}: {node.type} ({node.idx})")
+            print(f"{idx+1}: {node.type} ({node.idx})")
             # print(f"{node.get_full_text()}")
             node.marked_element = ElementKeywordHighlighter(
                 node.element, keyword
