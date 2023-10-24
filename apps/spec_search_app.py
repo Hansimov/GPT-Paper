@@ -59,7 +59,7 @@ class KeywordInputer:
             State("spec-keyword-input-textarea", "value"),
         )
         def send_query(n_clicks, n_submit, query):
-            if n_clicks is None and n_submit is None:
+            if not query or (n_clicks is None and n_submit is None):
                 return ["(Here will display the searched results.)"]
 
             print(f"Keyword: {query}")
@@ -80,7 +80,7 @@ class HTMLAccordionItemer:
 
     def html_to_accordion(self):
         elements = self.elements
-        self.accordion_control = dmc.AccordionControl(self.title)
+        self.accordion_control = dmc.AccordionControl(danger_html(self.title))
         self.accordion_panel = dmc.AccordionPanel(
             danger_html("<hr>".join([str(element) for element in elements]))
         )
@@ -100,6 +100,13 @@ class SpecHTMLViewer:
         <style>
             searched {
                 background-color: PaleGreen;
+            }
+            ref-index {
+                font-weight: bold;
+                color: magenta;
+            }
+            ref-title {
+                color: blue;
             }
         </style>
         """
@@ -203,7 +210,7 @@ class SpecSearchApp:
             grouped_title, grouped_elements = grouped_title_and_elements
             accordion_item = HTMLAccordionItemer(
                 elements=grouped_elements,
-                title=f"[{idx+1}] {grouped_title}",
+                title=f"<ref-index>[{idx+1}]</ref-index> <ref-title>{grouped_title}</ref-title>",
             ).accordion_item
             accordion_items.append(accordion_item)
         return accordion_items
