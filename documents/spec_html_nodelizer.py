@@ -405,24 +405,24 @@ class HTMLTagMapper:
     def hash_tags(self, html_string):
         # `/?`: Match closed tag starting with `/`, like `</div>`
         # `[^>]*`: Match any character except `>`, like `<p class='abc'>` or `<br/>`
-        pattern = re.compile(r"<(/?)(\w+)([^>]*)>")
+        pattern = re.compile(r"<(/?\w+[^>]*)>")
 
         def replacer(match):
-            tag = match.group(2)
-            hashed_tag = hashlib.md5(tag.encode()).hexdigest()
+            tag = match.group(1)
+            hashed_tag = hashlib.md5(tag.encode("utf-8")).hexdigest()
             self.tag_dict[hashed_tag] = tag
-            return "<" + match.group(1) + hashed_tag + match.group(3) + ">"
+            return "<" + hashed_tag + ">"
 
         self.hashed_html_string = pattern.sub(replacer, html_string)
         return self.hashed_html_string
 
     def restore_tags(self, html_str=""):
-        pattern = re.compile(r"<(/?)([0-9a-f]{32})([^>]*)>")
+        pattern = re.compile(r"<([0-9a-f]{32})>")
 
         def replacer(match):
-            hashed_tag = match.group(2)
+            hashed_tag = match.group(1)
             original_tag = self.tag_dict[hashed_tag]
-            return "<" + match.group(1) + original_tag + match.group(3) + ">"
+            return "<" + original_tag + ">"
 
         if not html_str:
             html_str = self.hashed_html_string
@@ -451,7 +451,6 @@ class ElementKeywordHighlighter:
 
     def highlight_keyword(self, match):
         matched_text = match.group()
-
         if self.element.name in ["img"]:
             highlighted_text = matched_text
         else:
