@@ -3,7 +3,6 @@ import pandas as pd
 import re
 
 from bs4 import BeautifulSoup
-from copy import deepcopy
 from pathlib import Path
 from documents.keyword_searcher import KeywordSearcher
 from documents.html_keyword_highlighter import HTMLKeywordHighlighter
@@ -49,8 +48,34 @@ class Node:
         return self.text
 
     def get_full_text(self):
-        self.full_text = self.get_text()
+        if self.get_description():
+            self.full_text = f"{self.get_description()}: {self.get_text()}"
+        else:
+            self.full_text = self.get_text()
         return self.full_text
+
+    def get_description(self):
+        self.description = ""
+        class_description_map = {
+            "ltx_title_document": "article_title",
+            "ltx_authors": "authors",
+            "ltx_personname": "authors",
+            "ltx_abstract": "abstract",
+            "ltx_title_abstract": "abstract_title",
+            "ltx_title_section": "section_title",
+            "ltx_title_subsection": "subsection_title",
+            "ltx_section": "section",
+            "ltx_subsection": "subsection",
+            "ltx_item": "list_item",
+            "ltx_itemize": "list_items",
+            "ltx_tag_section": "section_number",
+            "ltx_tag_subsection": "subsection_number",
+            "ltx_para": "paragraph",
+        }
+        for class_key, description_val in class_description_map.items():
+            if class_key in self.class_str:
+                self.description = description_val
+        return self.description
 
     def get_section_group_node(self):
         node = self
@@ -174,10 +199,9 @@ class TextNode(Node):
 
         if self.class_str:
             self.filtered_class_str = self.class_str.replace("ltx_", "")
-            self.full_text = f"{self.filtered_class_str}: {self.tagged_text}"
+            self.full_text = f"{self.get_description()}: {self.tagged_text}"
         else:
             self.full_text = self.tagged_text
-        print(self.full_text)
         return self.full_text
 
 
@@ -226,13 +250,12 @@ class HeaderNode(Node):
                 self.text += child
             else:
                 self.text += child.text
-        print(self.text)
         return self.text
 
     def get_number(self):
         span_element = self.element.find("span")
 
-        if span_element:
+        if span_element and "ltx_tag" in span_element.get("class", []):
             self.header_number = span_element.text.strip()
         else:
             self.header_number = ""
@@ -240,7 +263,7 @@ class HeaderNode(Node):
         return self.header_number
 
     def get_full_text(self):
-        self.full_text = f"{self.header_number} {self.text}"
+        self.full_text = f"{self.get_description()}: {self.header_number} {self.text}"
         return self.full_text
 
     def get_indented_full_text(self, indent=2, indent_char=" ", begin_char="-"):
@@ -398,6 +421,7 @@ class ElementNodelizer:
             node = None
             tag = element.name
             class_str = " ".join(element.get("class", []))
+            children_cnt = len(list(element.children))
 
             if tag in ["section"]:
                 node = SectionGroupNode(element)
@@ -410,9 +434,15 @@ class ElementNodelizer:
             if tag in ["blockquote"]:
                 node = BlockquoteGroupNode(element)
             if tag in ["div"]:
-                node = DivGroupNode(element)
+                if children_cnt > 1:
+                    node = DivGroupNode(element)
+                else:
+                    node = TextNode(element)
             if tag in ["span"]:
-                node = SpanGroupNode(element)
+                if children_cnt > 1:
+                    node = SpanGroupNode(element)
+                else:
+                    node = TextNode(element)
 
             if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
                 node = HeaderNode(element)
@@ -435,12 +465,12 @@ class ElementNodelizer:
             if tag in ["hr", "br"]:
                 node = SeparatorNode(element)
 
+            if not node.type.endswith("group"):
+                print(node.get_full_text())
+
         if node is None:
-            if tag in ["div"]:
-                node = DivGroupNode(element)
-            else:
-                print(element)
-                raise NotImplementedError
+            print(element)
+            raise NotImplementedError
 
         self.node = node
 
@@ -459,7 +489,7 @@ class ElementNodelizer:
 class Ar5ivHTMLNodelizer:
     def __init__(self, html_path):
         self.html_path = html_path
-        with open(self.html_path, "r") as rf:
+        with open(self.html_path, "r", encoding="utf-8") as rf:
             html_string = rf.read()
         self.soup = BeautifulSoup(html_string, "lxml")
         self.nodes = []
@@ -494,13 +524,13 @@ class Ar5ivHTMLNodelizer:
         self.main_element = self.soup.find("article")
         self.main_node = SectionGroupNode(self.main_element)
         self.traverse_element(element=self.main_element, parent_node=self.main_node)
-        # print(f"{len(self.nodes)} nodes parsed.")
-        # for idx, node in enumerate(self.nodes):
-        #     node.idx = idx
-        #     if idx > 0:
-        #         self.prev = self.nodes[idx - 1]
-        #     if idx < len(self.nodes) - 1:
-        #         self.next = self.nodes[idx + 1]
+        print(f"{len(self.nodes)} nodes parsed.")
+        for idx, node in enumerate(self.nodes):
+            node.idx = idx
+            if idx > 0:
+                self.prev = self.nodes[idx - 1]
+            if idx < len(self.nodes) - 1:
+                self.next = self.nodes[idx + 1]
 
     def remove_duplicated_nodes(self, nodes):
         return sorted(
