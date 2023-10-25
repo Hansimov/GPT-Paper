@@ -18,4 +18,6 @@ data/
 
 notebook/lab/workspaces/auto-*
 
-files/
+
+files/htmls/*
+!files/htmls/ar5iv
