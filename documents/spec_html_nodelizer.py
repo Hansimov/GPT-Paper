@@ -9,6 +9,9 @@ from copy import deepcopy
 from pathlib import Path
 from thefuzz import fuzz
 
+from documents.keyword_searcher import KeywordSearcher
+from documents.html_keyword_highlighter import HTMLKeywordHighlighter
+
 
 class Node:
     def __init__(self, element):
@@ -420,107 +423,6 @@ class ElementNodelizer:
         self.node = node
 
 
-class HTMLTagMapper:
-    def __init__(self):
-        self.tag_dict = {}
-        self.hashed_html_string = ""
-        self.restored_html_string = ""
-
-    def hash_tags(self, html_string):
-        # `/?`: Match closed tag starting with `/`, like `</div>`
-        # `[^>]*`: Match any character except `>`, like `<p class='abc'>` or `<br/>`
-        pattern = re.compile(r"<(/?\w+[^>]*?)>")
-
-        def replacer(match):
-            tag = match.group(1)
-            hashed_tag = hashlib.md5(tag.encode("utf-8")).hexdigest()
-            self.tag_dict[hashed_tag] = tag
-            return "<" + hashed_tag + ">"
-
-        self.hashed_html_string = pattern.sub(replacer, html_string)
-        return self.hashed_html_string
-
-    def restore_tags(self, html_str=""):
-        pattern = re.compile(r"<([0-9a-f]{32})>")
-
-        def replacer(match):
-            hashed_tag = match.group(1)
-            original_tag = self.tag_dict[hashed_tag]
-            return "<" + original_tag + ">"
-
-        if not html_str:
-            html_str = self.hashed_html_string
-        self.restored_html_string = pattern.sub(replacer, html_str)
-
-        return self.restored_html_string
-
-
-class ElementKeywordHighlighter:
-    def __init__(self, element, keyword):
-        self.element = element
-        self.keyword = keyword.strip()
-
-        html_tag_mapper = HTMLTagMapper()
-        hashed_element_str = html_tag_mapper.hash_tags(str(element))
-        new_element_str = hashed_element_str
-
-        for sub_keyword in keyword.split():
-            new_element_str = re.sub(
-                pattern=self.keyword_pattern_ignore_html_tags(sub_keyword),
-                repl=self.highlight_keyword,
-                string=new_element_str,
-                flags=re.IGNORECASE,
-            )
-        # new_element_str = re.sub("(</searched>)(\s*?)(<searched>)", "", new_element_str)
-        new_element_str = re.sub(
-            pattern=r"(</searched>)([\s\n]*?)(<searched>)",
-            repl=r"\2",
-            string=new_element_str,
-            flags=re.IGNORECASE,
-        )
-
-        new_element_str = html_tag_mapper.restore_tags(new_element_str)
-        self.marked_element = BeautifulSoup(new_element_str, "lxml")
-
-    def highlight_keyword(self, match):
-        matched_text = match.group()
-        if self.element.name in ["img"]:
-            highlighted_text = matched_text
-        else:
-            highlighted_text = f"<searched>{matched_text}</searched>"
-        return highlighted_text
-
-    def keyword_pattern_ignore_html_tags(self, keyword):
-        return "".join(f"{char}(<.+>)*" for char in keyword)
-
-
-class KeywordSearcher:
-    def __init__(self, keyword, text_to_search):
-        self.keyword = keyword
-        self.text_to_search = text_to_search
-        self.search()
-
-    def search(self, fuzzy=True, fuzzy_threshold=90):
-        self.searched_texts = []
-        keyword_is_found = False
-        search_score = 0
-
-        if self.keyword.strip().lower() in self.text_to_search.strip().lower():
-            keyword_is_found = True
-            search_score = 100
-
-        if fuzzy:
-            fuzzy_score = fuzz.token_set_ratio(self.keyword, self.text_to_search)
-            if fuzzy_score >= fuzzy_threshold:
-                keyword_is_found = True
-
-        if keyword_is_found:
-            self.searched_texts.append(self.keyword)
-
-        self.search_score = max(search_score, fuzzy_score)
-        return self.searched_texts, self.search_score
-
-
 class SpecHTMLNodelizer:
     def __init__(self, html_path):
         self.html_path = html_path
@@ -612,7 +514,7 @@ class SpecHTMLNodelizer:
         for idx, node in enumerate(searched_nodes):
             print(f"{idx+1}: {node.type} ({node.idx})")
             # print(f"{node.get_full_text()}")
-            node.marked_element = ElementKeywordHighlighter(
+            node.marked_element = HTMLKeywordHighlighter(
                 node.element, keyword
             ).marked_element
         return searched_nodes
