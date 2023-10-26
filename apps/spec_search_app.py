@@ -18,15 +18,16 @@ class ComponentStyler:
 
 
 class URLInputer:
-    def __init__(self, app):
+    def __init__(self, app, value=""):
         self.app = app
+        self.value = value
         self.create_layout()
 
     def create_input(self):
         self.input = dmc.TextInput(
             id="spec-url-input-textarea",
             placeholder="Type url here",
-            value="",
+            value=self.value,
         )
 
     def create_button(self):
@@ -48,12 +49,17 @@ class URLInputer:
 
 
 class KeywordInputer:
-    def __init__(self, app):
+    def __init__(self, app, spec_url=""):
         self.app = app
+        self.spec_url = spec_url
         self.create_layout()
 
-    def create_title(self, spec=""):
-        self.title = html.Div(f"Search Spec: {spec}")
+    def create_title(self):
+        self.title = html.Div(
+            danger_html(
+                f'Search in Spec: <a href="{self.spec_url}">{self.spec_url}</a>'
+            )
+        )
 
     def create_input(self):
         self.input = dmc.TextInput(
@@ -200,7 +206,8 @@ class SpecSearchApp:
         self.app.layout.style = self.layout_styles
 
     def update_layout(self):
-        self.keyword_inputer = KeywordInputer(self)
+        self.url_inputer = URLInputer(self, value=self.url)
+        self.keyword_inputer = KeywordInputer(self, spec_url=self.url)
         self.keyword_inputer.add_callbacks()
         self.spec_html_viewer = SpecHTMLViewer(self)
         self.layout_children = [
