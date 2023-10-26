@@ -1,8 +1,11 @@
 import json
 import re
 from pathlib import Path
-from requests_html import HTMLSession
+
+# from requests_html import HTMLSession
+import requests
 from documents.ar5iv_html_nodelizer import Ar5ivHTMLNodelizer
+from requests_ntlm import HttpNtlmAuth
 
 
 class UrlToPathConverter:
@@ -42,15 +45,31 @@ class HTMLFetcher:
         self.url = url
         url_to_path_converter = UrlToPathConverter(self.url)
         self.output_path = url_to_path_converter.output_path
+        self.requests_auth = url_to_path_converter.requests_auth
 
     def get(self, overwrite=True):
         print(f"Fetching {self.url}")
         if self.output_path.exists() and not overwrite:
             # print(f"HTML exists: {self.output_path}")
             return
-        s = HTMLSession()
-        r = s.get(self.url)
-        self.html_str = r.html.html
+
+        if self.requests_auth is None:
+            res = requests.get(self.url)
+        elif self.requests_auth == "ntlm":
+            print("(Using NTLM auth)")
+            with open(Path(__file__).parents[1] / "secrets.json") as rf:
+                secrets = json.load(rf)
+            user = secrets["user"]
+            password = secrets["password"]
+            cert = secrets["cert"]
+            cert_path = Path(__file__).parents[1] / cert
+            res = requests.get(
+                self.url, auth=HttpNtlmAuth(user, password), verify=cert_path
+            )
+        else:
+            raise NotImplementedError(f"Not supported requests_auth: {requests_auth}")
+
+        self.html_str = res.text
 
     def save(self, overwrite=True):
         print(f"Dump HTML: {self.output_path}")
