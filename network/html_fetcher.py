@@ -5,6 +5,7 @@ from pathlib import Path
 # from requests_html import HTMLSession
 import requests
 from documents.ar5iv_html_nodelizer import Ar5ivHTMLNodelizer
+from documents.spec_html_nodelizer import SpecHTMLNodelizer
 from requests_ntlm import HttpNtlmAuth
 
 
@@ -59,9 +60,7 @@ class HTMLFetcher:
             print("(Using NTLM auth)")
             with open(Path(__file__).parents[1] / "secrets.json") as rf:
                 secrets = json.load(rf)
-            user = secrets["user"]
-            password = secrets["password"]
-            cert = secrets["cert"]
+            user, password, cert = secrets["user"], secrets["password"], secrets["cert"]
             cert_path = Path(__file__).parents[1] / cert
             res = requests.get(
                 self.url, auth=HttpNtlmAuth(user, password), verify=cert_path
@@ -82,7 +81,7 @@ class HTMLFetcher:
             wf.write(self.html_str)
 
     def run(self):
-        overwrite = True
+        overwrite = False
         if self.output_path.exists() and not overwrite:
             print(f"URL cached: {self.url}")
             print(f"HTML exists: {self.output_path}")
