@@ -4,6 +4,7 @@ from dash import Dash, html, dcc, Input, Output, State, callback
 from dash_dangerously_set_inner_html import DangerouslySetInnerHTML as danger_html
 from pathlib import Path
 from documents.spec_html_nodelizer import SpecHTMLNodelizer
+from network.html_fetcher import HTMLFetcher
 import dash_mantine_components as dmc
 
 
@@ -59,8 +60,6 @@ class KeywordInputer:
             id="spec-keyword-input-textarea",
             placeholder="Type Keywords here",
             value="",
-            # minRows=1,
-            # autosize=True,
         )
 
     def create_button(self):
@@ -70,12 +69,10 @@ class KeywordInputer:
         )
 
     def apply_style_to_components(self):
-        component_style = ComponentStyler().style
-        for component in [self.title, self.input, self.search_button]:
-            component.style = component_style
+        ComponentStyler().stylize([self.title, self.input, self.search_button])
 
     def create_layout(self):
-        self.create_title(self.app.html_name)
+        self.create_title()
         self.create_input()
         self.create_button()
         self.apply_style_to_components()
@@ -194,28 +191,51 @@ class SpecSearchApp:
             setattr(self.app, attr_key, attr_val)
 
     def create_layout(self):
+        self.url_inputer = URLInputer(self)
+        self.layout_children = [self.url_inputer.layout]
+        self.app.layout = html.Div(
+            id="spec-search-app",
+            children=self.layout_children,
+        )
+        self.app.layout.style = self.layout_styles
+
+    def update_layout(self):
         self.keyword_inputer = KeywordInputer(self)
         self.keyword_inputer.add_callbacks()
         self.spec_html_viewer = SpecHTMLViewer(self)
-        self.app.layout = html.Div(
-            [self.keyword_inputer.layout, self.spec_html_viewer.layout]
-        )
-        self.app.layout.style = self.layout_styles
+        self.layout_children = [
+            self.url_inputer.layout,
+            self.keyword_inputer.layout,
+            self.spec_html_viewer.layout,
+        ]
+        return self.layout_children
 
     def run_server(self):
         self.app.run_server(**self.server_configs)
 
-    def create_spec_html_nodelizer(self):
-        self.html_name = "Server DDR5 DMR MRC Training"
-        html_path = (
-            Path(__file__).parents[1]
-            / "files"
-            / "htmls"
-            / "mrc"
-            / f"{self.html_name}.html"
-        )
-        self.spec_html_nodelizer = SpecHTMLNodelizer(html_path)
+    def nodelize_html_with_url(self, url):
+        self.url = url
+        html_fetcher = HTMLFetcher(url)
+        html_fetcher.run()
+        self.spec_html_nodelizer = SpecHTMLNodelizer(html_fetcher.output_path)
         self.spec_html_nodelizer.parse_html_to_nodes()
+
+    def add_callbacks(self):
+        @self.app.callback(
+            [
+                Output("spec-url-input-textarea", "value"),
+                Output("spec-search-app", "children"),
+            ],
+            Input("spec-url-submit-button", "n_clicks"),
+            State("spec-url-input-textarea", "value"),
+        )
+        def submit_url(n_clicks, url=""):
+            if not url or n_clicks is None:
+                pass
+            else:
+                self.nodelize_html_with_url(url)
+                self.update_layout()
+            return url, self.layout_children
 
     def group_searched_node_elements_by_header_title(self, searched_nodes):
         grouped_elements = []
@@ -253,8 +273,8 @@ class SpecSearchApp:
         self.init_app_configs()
         self.init_layout_configs()
         self.create_app()
-        self.create_spec_html_nodelizer()
         self.create_layout()
+        self.add_callbacks()
         self.run_server()
 
 
