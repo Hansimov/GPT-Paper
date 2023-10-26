@@ -11,6 +11,40 @@ class ComponentStyler:
     def __init__(self):
         self.style = {"width": "100%", "padding": "10px 0 10px 0"}
 
+    def stylize(self, components):
+        for component in components:
+            component.style = self.style
+
+
+class URLInputer:
+    def __init__(self, app):
+        self.app = app
+        self.create_layout()
+
+    def create_input(self):
+        self.input = dmc.TextInput(
+            id="spec-url-input-textarea",
+            placeholder="Type url here",
+            value="",
+        )
+
+    def create_button(self):
+        self.submit_button = dmc.Button(
+            id="spec-url-submit-button",
+            children="Submit",
+        )
+
+    def apply_style_to_components(self):
+        ComponentStyler().stylize([self.input, self.submit_button])
+
+    def create_layout(self):
+        self.create_input()
+        self.create_button()
+        self.apply_style_to_components()
+        self.layout = html.Div(
+            [self.input, self.submit_button],
+        )
+
 
 class KeywordInputer:
     def __init__(self, app):
