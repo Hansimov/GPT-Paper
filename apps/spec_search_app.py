@@ -224,7 +224,9 @@ class SpecSearchApp:
         self.url = url
         html_fetcher = HTMLFetcher(url)
         html_fetcher.run()
-        self.spec_html_nodelizer = SpecHTMLNodelizer(html_fetcher.output_path)
+        self.spec_html_nodelizer = SpecHTMLNodelizer(
+            html_path=html_fetcher.output_path, html_url=html_fetcher.url
+        )
         self.spec_html_nodelizer.parse_html_to_nodes()
 
     def add_callbacks(self):

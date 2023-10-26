@@ -272,6 +272,20 @@ class SeparatorNode(Node):
         self.get_text()
 
 
+class ImageNodeSourceReplacer:
+    def __init__(self, html_url=""):
+        self.html_url = html_url
+        self.src_prefix = html_url[: html_url.rfind("/") + 1]
+
+    def replace(self, node):
+        node.src = node.element.get("src", "")
+        if node.src:
+            node.src = self.src_prefix + node.src
+            node.element["src"] = node.src
+            node.element["title"] = node.src
+        return node
+
+
 class ImageNode(Node):
     def parse_element(self):
         self.type = "image"
@@ -284,14 +298,6 @@ class ImageNode(Node):
 
     def get_src(self):
         self.src = self.element.get("src", "")
-        return self.src
-
-    def set_src(self, old_assets="", new_assets=""):
-        self.src = self.element.get("src", "")
-        if self.src and old_assets and new_assets:
-            self.src = re.sub(old_assets, new_assets, self.src)
-            self.element["src"] = self.src
-            self.element["title"] = self.src
         return self.src
 
     def get_full_text(self):
@@ -427,6 +433,7 @@ class ElementNodelizer:
             if tag in ["script"]:
                 node = JavascriptNode(element)
             if tag in [
+                "del",
                 "em",
                 "i",
                 "mark",
@@ -448,14 +455,16 @@ class ElementNodelizer:
                 node = DivGroupNode(element)
             else:
                 print(element)
-                raise NotImplementedError
+                node = TextNode(element)
+                # raise NotImplementedError
 
         self.node = node
 
 
 class SpecHTMLNodelizer:
-    def __init__(self, html_path):
+    def __init__(self, html_path, html_url=""):
         self.html_path = html_path
+        self.html_url = html_url
         with open(self.html_path, "r") as rf:
             html_string = rf.read()
         self.soup = BeautifulSoup(html_string, "lxml")
@@ -473,6 +482,8 @@ class SpecHTMLNodelizer:
                 elif node.type in ["ignorable"]:
                     continue
                 else:
+                    if node.type in ["image"]:
+                        node = ImageNodeSourceReplacer(self.html_url).replace(node)
                     self.nodes.append(node)
 
                 if parent_node:
