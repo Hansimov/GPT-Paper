@@ -303,6 +303,11 @@ class StyleNode(Node):
         self.type = "style"
 
 
+class IgnorableNode(Node):
+    def parse_element(self):
+        self.type = "ignorable"
+
+
 class GroupNode(Node):
     def get_text(self):
         texts = []
@@ -405,6 +410,8 @@ class ElementNodelizer:
 
             if tag in ["style"]:
                 node = StyleNode(element)
+            if tag in ["noscript"]:
+                node = IgnorableNode(element)
 
             if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
                 node = HeaderNode(element)
@@ -419,16 +426,17 @@ class ElementNodelizer:
             if tag in ["script"]:
                 node = JavascriptNode(element)
             if tag in [
-                "p",
                 "em",
+                "i",
+                "mark",
+                "p",
+                "span",
                 "strong",
                 "sub",
                 "sup",
-                "mark",
-                "span",
                 "strike",
                 "summary",
-                "i",
+                "u",
             ]:
                 node = TextNode(element)
             if tag in ["hr", "br"]:
@@ -459,8 +467,10 @@ class SpecHTMLNodelizer:
             node = ElementNodelizer(child).node
 
             if node:
-                if node.type == "style":
+                if node.type in ["style", "script"]:
                     self.style_nodes.append(node)
+                elif node.type in ["ignorable"]:
+                    continue
                 else:
                     self.nodes.append(node)
 
@@ -552,13 +562,6 @@ class SpecHTMLNodelizer:
     def run(self):
         self.parse_html_to_nodes()
         # self.extract_styles()
-        # self.search_by_text("Traffic Generator Training Use Cases")
-        # self.search_by_text("Training Step Order")
-        # self.search_by_text("EnableDqDqsTrainEn")
-        # self.search_by_keyword("Results Aggregation Feature")
-        # self.search_by_keyword("Ddrio Feature")
-        # self.search_by_keyword("CA CRC mode which works in conjuction")
-        self.search_by_keyword("author")
 
 
 if __name__ == "__main__":
