@@ -1,6 +1,6 @@
 import re
 from bs4 import BeautifulSoup
-from documents.html_tag_masker import HTMLTagMasker
+from documents.htmls.html_tag_masker import HTMLTagMasker
 
 
 class HTMLKeywordHighlighter:

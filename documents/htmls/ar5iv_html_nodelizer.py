@@ -1,16 +1,11 @@
 import bs4
-import hashlib
-import itertools
 import pandas as pd
 import re
 
 from bs4 import BeautifulSoup
-from copy import deepcopy
 from pathlib import Path
-from thefuzz import fuzz
-
 from documents.keyword_searcher import KeywordSearcher
-from documents.html_keyword_highlighter import HTMLKeywordHighlighter
+from documents.htmls.html_keyword_highlighter import HTMLKeywordHighlighter
 from networks.html_fetcher import HTMLFetcher
 
 
@@ -54,8 +49,34 @@ class Node:
         return self.text
 
     def get_full_text(self):
-        self.full_text = self.get_text()
+        if self.get_description():
+            self.full_text = f"{self.get_description()}: {self.get_text()}"
+        else:
+            self.full_text = self.get_text()
         return self.full_text
+
+    def get_description(self):
+        self.description = ""
+        class_description_map = {
+            "ltx_title_document": "article_title",
+            "ltx_authors": "authors",
+            "ltx_personname": "authors",
+            "ltx_abstract": "abstract",
+            "ltx_title_abstract": "abstract_title",
+            "ltx_title_section": "section_title",
+            "ltx_title_subsection": "subsection_title",
+            "ltx_section": "section",
+            "ltx_subsection": "subsection",
+            "ltx_item": "list_item",
+            "ltx_itemize": "list_items",
+            "ltx_tag_section": "section_number",
+            "ltx_tag_subsection": "subsection_number",
+            "ltx_para": "paragraph",
+        }
+        for class_key, description_val in class_description_map.items():
+            if class_key in self.class_str:
+                self.description = description_val
+        return self.description
 
     def get_section_group_node(self):
         node = self
@@ -178,7 +199,8 @@ class TextNode(Node):
             self.tagged_text = self.text
 
         if self.class_str:
-            self.full_text = f"{self.class_str}: {self.tagged_text}"
+            self.filtered_class_str = self.class_str.replace("ltx_", "")
+            self.full_text = f"{self.get_description()}: {self.tagged_text}"
         else:
             self.full_text = self.tagged_text
         return self.full_text
@@ -223,16 +245,18 @@ class HeaderNode(Node):
         return self.level
 
     def get_text(self):
-        for content in self.element.contents:
-            if isinstance(content, bs4.element.NavigableString):
-                self.text = content.strip()
-                break
+        self.text = ""
+        for child in self.element.children:
+            if isinstance(child, bs4.element.NavigableString):
+                self.text += child
+            else:
+                self.text += child.text
         return self.text
 
     def get_number(self):
         span_element = self.element.find("span")
 
-        if span_element:
+        if span_element and "ltx_tag" in span_element.get("class", []):
             self.header_number = span_element.text.strip()
         else:
             self.header_number = ""
@@ -240,7 +264,7 @@ class HeaderNode(Node):
         return self.header_number
 
     def get_full_text(self):
-        self.full_text = f"{self.header_number} {self.text}"
+        self.full_text = f"{self.get_description()}: {self.header_number} {self.text}"
         return self.full_text
 
     def get_indented_full_text(self, indent=2, indent_char=" ", begin_char="-"):
@@ -272,23 +296,12 @@ class SeparatorNode(Node):
         self.get_text()
 
 
-class ImageNodeSourceReplacer:
-    def __init__(self, html_url=""):
-        self.html_url = html_url
-        self.src_prefix = html_url[: html_url.rfind("/") + 1]
-
-    def replace(self, node):
-        node.src = node.element.get("src", "")
-        if node.src:
-            node.src = self.src_prefix + node.src
-            node.element["src"] = node.src
-            node.element["title"] = node.src
-        return node
-
-
 class ImageNode(Node):
     def parse_element(self):
         self.type = "image"
+        # self.set_src()
+        # self.get_src()
+        # self.get_text()
 
     def get_text(self):
         self.text = self.element.get("alt", "")
@@ -300,19 +313,27 @@ class ImageNode(Node):
         self.src = self.element.get("src", "")
         return self.src
 
+    def set_src(self, old_assets="", new_assets=""):
+        self.src = self.element.get("src", "")
+        if self.src and old_assets and new_assets:
+            self.src = re.sub(old_assets, new_assets, self.src)
+            self.element["src"] = self.src
+            self.element["title"] = self.src
+        return self.src
+
     def get_full_text(self):
         self.full_text = f"{self.type}: ![{self.get_text()}]({self.get_src()})"
         return self.full_text
 
 
-class StyleNode(Node):
+class SVGNode(Node):
     def parse_element(self):
-        self.type = "style"
+        self.type = "svg"
 
 
-class IgnorableNode(Node):
+class CaptionNode(Node):
     def parse_element(self):
-        self.type = "ignorable"
+        self.type = "caption"
 
 
 class GroupNode(Node):
@@ -369,7 +390,7 @@ class TableGroupNode(GroupNode):
 
     def get_caption_node(self):
         for child in self.children:
-            if child.class_str == "table_caption":
+            if child.class_str == "caption":
                 return child
 
 
@@ -388,9 +409,9 @@ class DivGroupNode(GroupNode):
         self.type = "div_group"
 
 
-class DetailsGroupNode(GroupNode):
+class SpanGroupNode(GroupNode):
     def parse_element(self):
-        self.type = "details_group"
+        self.type = "span_group"
 
 
 class ElementNodelizer:
@@ -401,24 +422,28 @@ class ElementNodelizer:
             node = None
             tag = element.name
             class_str = " ".join(element.get("class", []))
+            children_cnt = len(list(element.children))
 
-            if class_str and class_str.startswith("section"):
+            if tag in ["section"]:
                 node = SectionGroupNode(element)
-            if class_str == "figure":
+            if tag in ["figure"]:
                 node = FigureGroupNode(element)
-            if class_str == "table":
+            if tag in ["table"]:
                 node = TableGroupNode(element)
             if tag in ["ul", "ol", "li"]:
                 node = ListGroupNode(element)
             if tag in ["blockquote"]:
                 node = BlockquoteGroupNode(element)
-            if tag in ["details"]:
-                node = DetailsGroupNode(element)
-
-            if tag in ["style"]:
-                node = StyleNode(element)
-            if tag in ["noscript"]:
-                node = IgnorableNode(element)
+            if tag in ["div"]:
+                if children_cnt > 1:
+                    node = DivGroupNode(element)
+                else:
+                    node = TextNode(element)
+            if tag in ["span"]:
+                if children_cnt > 1:
+                    node = SpanGroupNode(element)
+                else:
+                    node = TextNode(element)
 
             if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
                 node = HeaderNode(element)
@@ -426,50 +451,50 @@ class ElementNodelizer:
                 node = ImageNode(element)
             if tag in ["table"]:
                 node = TableNode(element)
+            if tag in ["svg"]:
+                node = SVGNode(element)
+            if tag in ["figcaption"]:
+                node = CaptionNode(element)
             if tag in ["a"]:
                 node = HyperlinkNode(element)
             if class_str == "sourceCode" or tag == "pre":
                 node = CodeNode(element)
             if tag in ["script"]:
                 node = JavascriptNode(element)
-            if tag in [
-                "del",
-                "em",
-                "i",
-                "mark",
-                "p",
-                "span",
-                "strong",
-                "sub",
-                "sup",
-                "strike",
-                "summary",
-                "u",
-            ]:
+            if tag in ["p", "em", "strong", "sub", "sup", "mark"]:
                 node = TextNode(element)
             if tag in ["hr", "br"]:
                 node = SeparatorNode(element)
 
+            if not node.type.endswith("group"):
+                print(node.get_full_text())
+
         if node is None:
-            if tag in ["div"]:
-                node = DivGroupNode(element)
-            else:
-                print(element)
-                node = TextNode(element)
-                # raise NotImplementedError
+            print(element)
+            raise NotImplementedError
 
         self.node = node
 
+    def highlight_keyword(self, match):
+        matched_text = match.group()
+        if self.element.name in ["img"]:
+            highlighted_text = matched_text
+        else:
+            highlighted_text = f"<searched>{matched_text}</searched>"
+        return highlighted_text
 
-class SpecHTMLNodelizer:
+    def keyword_pattern_ignore_html_tags(self, keyword):
+        return "".join(f"{char}(<.+>)*" for char in keyword)
+
+
+class Ar5ivHTMLNodelizer:
     def __init__(self, html_path, html_url=""):
         self.html_path = html_path
         self.html_url = html_url
-        with open(self.html_path, "r") as rf:
+        with open(self.html_path, "r", encoding="utf-8") as rf:
             html_string = rf.read()
         self.soup = BeautifulSoup(html_string, "lxml")
         self.nodes = []
-        self.style_nodes = []
         self.section_node = None
 
     def traverse_element(self, element, parent_node=None):
@@ -477,22 +502,12 @@ class SpecHTMLNodelizer:
             node = ElementNodelizer(child).node
 
             if node:
-                if node.type in ["style", "script"]:
-                    self.style_nodes.append(node)
-                elif node.type in ["ignorable"]:
-                    continue
-                else:
-                    if node.type in ["image"]:
-                        node = ImageNodeSourceReplacer(self.html_url).replace(node)
-                    self.nodes.append(node)
-
+                self.nodes.append(node)
                 if parent_node:
                     node.parent = parent_node
                     parent_node.children.append(node)
-
                 if node.type.endswith("group"):
                     self.traverse_element(child, parent_node=node)
-
             else:
                 print(child.name, child.id)
                 print(child)
@@ -505,12 +520,10 @@ class SpecHTMLNodelizer:
         for child in head_element.children:
             if child.name in ["style", "script"]:
                 style_str += str(child)
-        for style_node in self.style_nodes:
-            style_str += str(style_node.element)
         return style_str
 
     def parse_html_to_nodes(self):
-        self.main_element = self.soup.find(id="MAIN")
+        self.main_element = self.soup.find("article")
         self.main_node = SectionGroupNode(self.main_element)
         self.traverse_element(element=self.main_element, parent_node=self.main_node)
         print(f"{len(self.nodes)} nodes parsed.")
@@ -573,14 +586,10 @@ class SpecHTMLNodelizer:
 
     def run(self):
         self.parse_html_to_nodes()
-        # self.extract_styles()
 
 
 if __name__ == "__main__":
-    html_fetcher = HTMLFetcher(
-    )
+    html_fetcher = HTMLFetcher("https://ar5iv.labs.arxiv.org/html/1810.04805")
     html_fetcher.run()
-    spec_html_nodelizer = SpecHTMLNodelizer(
-        html_path=html_fetcher.output_path, html_url=html_fetcher.url
-    )
+    spec_html_nodelizer = Ar5ivHTMLNodelizer(html_fetcher.output_path)
     spec_html_nodelizer.run()
