@@ -580,5 +580,7 @@ if __name__ == "__main__":
     html_fetcher = HTMLFetcher(
     )
     html_fetcher.run()
-    spec_html_nodelizer = SpecHTMLNodelizer(html_fetcher.output_path)
+    spec_html_nodelizer = SpecHTMLNodelizer(
+        html_path=html_fetcher.output_path, html_url=html_fetcher.url
+    )
     spec_html_nodelizer.run()

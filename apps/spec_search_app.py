@@ -94,6 +94,7 @@ class KeywordInputer:
                 Input("spec-keyword-input-textarea", "n_submit"),
             ],
             State("spec-keyword-input-textarea", "value"),
+            allow_duplicate=True,
         )
         def send_query(n_clicks, n_submit, query):
             if not query or (n_clicks is None and n_submit is None):
@@ -175,6 +176,7 @@ class SpecSearchApp:
             "title": "Spec Search",
             "update_title": None,
             "assets_ignore": ".*\.(md|pkl|docx)$",
+            "suppress_callback_exceptions": True,
         }
         self.app_attrs = {}
         self.server_configs = {
