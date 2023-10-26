@@ -274,9 +274,6 @@ class SeparatorNode(Node):
 class ImageNode(Node):
     def parse_element(self):
         self.type = "image"
-        # self.set_src()
-        # self.get_src()
-        # self.get_text()
 
     def get_text(self):
         self.text = self.element.get("alt", "")
@@ -299,6 +296,11 @@ class ImageNode(Node):
     def get_full_text(self):
         self.full_text = f"{self.type}: ![{self.get_text()}]({self.get_src()})"
         return self.full_text
+
+
+class StyleNode(Node):
+    def parse_element(self):
+        self.type = "style"
 
 
 class GroupNode(Node):
@@ -374,6 +376,11 @@ class DivGroupNode(GroupNode):
         self.type = "div_group"
 
 
+class DetailsGroupNode(GroupNode):
+    def parse_element(self):
+        self.type = "details_group"
+
+
 class ElementNodelizer:
     def __init__(self, element):
         if isinstance(element, bs4.element.NavigableString):
@@ -393,13 +400,16 @@ class ElementNodelizer:
                 node = ListGroupNode(element)
             if tag in ["blockquote"]:
                 node = BlockquoteGroupNode(element)
+            if tag in ["details"]:
+                node = DetailsGroupNode(element)
+
+            if tag in ["style"]:
+                node = StyleNode(element)
 
             if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
                 node = HeaderNode(element)
             if tag in ["img"]:
                 node = ImageNode(element)
-                node.set_src(
-                )
             if tag in ["table"]:
                 node = TableNode(element)
             if tag in ["a"]:
@@ -408,7 +418,18 @@ class ElementNodelizer:
                 node = CodeNode(element)
             if tag in ["script"]:
                 node = JavascriptNode(element)
-            if tag in ["p", "em", "strong", "sub", "sup", "mark", "span"]:
+            if tag in [
+                "p",
+                "em",
+                "strong",
+                "sub",
+                "sup",
+                "mark",
+                "span",
+                "strike",
+                "summary",
+                "i",
+            ]:
                 node = TextNode(element)
             if tag in ["hr", "br"]:
                 node = SeparatorNode(element)
@@ -430,6 +451,7 @@ class SpecHTMLNodelizer:
             html_string = rf.read()
         self.soup = BeautifulSoup(html_string, "lxml")
         self.nodes = []
+        self.style_nodes = []
         self.section_node = None
 
     def traverse_element(self, element, parent_node=None):
@@ -437,12 +459,18 @@ class SpecHTMLNodelizer:
             node = ElementNodelizer(child).node
 
             if node:
-                self.nodes.append(node)
+                if node.type == "style":
+                    self.style_nodes.append(node)
+                else:
+                    self.nodes.append(node)
+
                 if parent_node:
                     node.parent = parent_node
                     parent_node.children.append(node)
+
                 if node.type.endswith("group"):
                     self.traverse_element(child, parent_node=node)
+
             else:
                 print(child.name, child.id)
                 print(child)
@@ -455,6 +483,8 @@ class SpecHTMLNodelizer:
         for child in head_element.children:
             if child.name in ["style", "script"]:
                 style_str += str(child)
+        for style_node in self.style_nodes:
+            style_str += str(style_node.element)
         return style_str
 
     def parse_html_to_nodes(self):
