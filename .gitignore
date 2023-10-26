@@ -1,23 +1,23 @@
-*.pyc
+data/
 secrets.json
+*.crt
+
+__pycache__
+*.pyc
 .vscode/
-*.pth
+
+**/.ipynb_checkpoints
+**/.virtual_documents
+notebook/lab/workspaces/auto-*
 
 pdfs/**/*.png
 pdfs/**/*.json
-
-data/
-
 !pdfs/**/texts/*.json
 !pdfs/**/crops_ordered/**/*.png
 !pdfs/**/_results/*.json
 !pdfs/**/_results/*.pkl
 
-**/.ipynb_checkpoints
-**/.virtual_documents
-
-notebook/lab/workspaces/auto-*
-
-
 files/htmls/*
 !files/htmls/ar5iv
+
+*.pth

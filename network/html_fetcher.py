@@ -19,33 +19,33 @@ class HTMLFetcher:
             self.output_filename = self.url.split("/")[-1] + ".html"
             self.output_dir = self.html_dir / "ar5iv"
             self.output_path = self.output_dir / self.output_filename
-
-    def get(self):
+    def get(self, overwrite=True):
         print(f"Fetching {self.url}")
-        if self.is_local_html_exists():
+        if self.output_path.exists() and not overwrite:
             # print(f"HTML exists: {self.output_path}")
             return
         s = HTMLSession()
         r = s.get(self.url)
         self.html_str = r.html.html
 
-    def save(self, overwrite=False):
+    def save(self, overwrite=True):
         print(f"Dump HTML: {self.output_path}")
-        if self.is_local_html_exists() and not overwrite:
+        if self.output_path.exists() and not overwrite:
             # print(f"HTML exists: {self.output_path}")
             return
-        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.output_path.parent.mkdir(parents=True, exist_ok=True)
 
         with open(self.output_path, "w") as wf:
             wf.write(self.html_str)
 
     def run(self):
-        if self.is_local_html_exists():
+        overwrite = True
+        if self.output_path.exists() and not overwrite:
             print(f"URL cached: {self.url}")
             print(f"HTML exists: {self.output_path}")
         else:
-            self.get()
-            self.save()
+            self.get(overwrite=overwrite)
+            self.save(overwrite=overwrite)
 
 
 if __name__ == "__main__":
