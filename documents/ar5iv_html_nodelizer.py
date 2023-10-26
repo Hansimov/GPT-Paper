@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from pathlib import Path
 from documents.keyword_searcher import KeywordSearcher
 from documents.html_keyword_highlighter import HTMLKeywordHighlighter
+from networks.html_fetcher import HTMLFetcher
 
 
 class Node:
@@ -587,9 +588,7 @@ class Ar5ivHTMLNodelizer:
 
 
 if __name__ == "__main__":
-    html_name = "BERT_ Pre-training of Deep Bidirectional Transformers for Language Understanding _ HTML5"
-    html_path = (
-        Path(__file__).parents[1] / "files" / "htmls" / "ar5iv" / f"{html_name}.html"
-    )
-    spec_html_nodelizer = Ar5ivHTMLNodelizer(html_path)
+    html_fetcher = HTMLFetcher("https://ar5iv.labs.arxiv.org/html/1810.04805")
+    html_fetcher.run()
+    spec_html_nodelizer = Ar5ivHTMLNodelizer(html_fetcher.output_path)
     spec_html_nodelizer.run()

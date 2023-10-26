@@ -4,7 +4,7 @@ from dash import Dash, html, dcc, Input, Output, State, callback
 from dash_dangerously_set_inner_html import DangerouslySetInnerHTML as danger_html
 from pathlib import Path
 from documents.spec_html_nodelizer import SpecHTMLNodelizer
-from network.html_fetcher import HTMLFetcher
+from networks.html_fetcher import HTMLFetcher
 import dash_mantine_components as dmc
 
 

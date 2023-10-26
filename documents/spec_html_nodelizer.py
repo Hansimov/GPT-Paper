@@ -11,6 +11,7 @@ from thefuzz import fuzz
 
 from documents.keyword_searcher import KeywordSearcher
 from documents.html_keyword_highlighter import HTMLKeywordHighlighter
+from networks.html_fetcher import HTMLFetcher
 
 
 class Node:
@@ -565,9 +566,8 @@ class SpecHTMLNodelizer:
 
 
 if __name__ == "__main__":
-    html_name = "Server DDR5 DMR MRC Training"
-    html_path = (
-        Path(__file__).parents[1] / "files" / "htmls" / "mrc" / f"{html_name}.html"
+    html_fetcher = HTMLFetcher(
     )
-    spec_html_nodelizer = SpecHTMLNodelizer(html_path)
+    html_fetcher.run()
+    spec_html_nodelizer = SpecHTMLNodelizer(html_fetcher.output_path)
     spec_html_nodelizer.run()

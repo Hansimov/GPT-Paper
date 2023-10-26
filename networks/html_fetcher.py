@@ -1,11 +1,8 @@
 import json
 import re
-from pathlib import Path
-
-# from requests_html import HTMLSession
 import requests
-from documents.ar5iv_html_nodelizer import Ar5ivHTMLNodelizer
-from documents.spec_html_nodelizer import SpecHTMLNodelizer
+
+from pathlib import Path
 from requests_ntlm import HttpNtlmAuth
 
 
@@ -94,5 +91,3 @@ if __name__ == "__main__":
     url = "https://ar5iv.labs.arxiv.org/html/1810.04805"
     html_fetcher = HTMLFetcher(url)
     html_fetcher.run()
-    ar5iv_html_nodelizer = Ar5ivHTMLNodelizer(html_fetcher.output_path)
-    ar5iv_html_nodelizer.run()
