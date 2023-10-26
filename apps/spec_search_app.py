@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 from dash import Dash, html, dcc, Input, Output, State, callback
 from dash_dangerously_set_inner_html import DangerouslySetInnerHTML as danger_html
 from pathlib import Path
-from documents.spec_html_nodelizer import SpecHTMLNodelizer
+from documents.htmls.spec_html_nodelizer import SpecHTMLNodelizer
+from documents.htmls.ar5iv_html_nodelizer import Ar5ivHTMLNodelizer
 from networks.html_fetcher import HTMLFetcher
 import dash_mantine_components as dmc
 
@@ -133,7 +134,7 @@ class SpecHTMLViewer:
         self.create_layout()
 
     def extract_styles(self):
-        self.styles = self.app.spec_html_nodelizer.extract_styles()
+        self.styles = self.app.html_nodelizer.extract_styles()
         self.search_highlight_styles = """
         <style>
             searched {
@@ -225,11 +226,16 @@ class SpecSearchApp:
     def nodelize_html_with_url(self, url):
         self.url = url
         html_fetcher = HTMLFetcher(url)
-        html_fetcher.run()
-        self.spec_html_nodelizer = SpecHTMLNodelizer(
+        html_fetcher.run(overwrite=True)
+        self.domain = html_fetcher.domain
+        domain_nodelizer = {
+            "ar5iv": Ar5ivHTMLNodelizer,
+            "docs.com": SpecHTMLNodelizer,
+        }
+        self.html_nodelizer = domain_nodelizer[self.domain](
             html_path=html_fetcher.output_path, html_url=html_fetcher.url
         )
-        self.spec_html_nodelizer.parse_html_to_nodes()
+        self.html_nodelizer.parse_html_to_nodes()
 
     def add_callbacks(self):
         @self.app.callback(
@@ -239,6 +245,7 @@ class SpecSearchApp:
             ],
             Input("spec-url-submit-button", "n_clicks"),
             State("spec-url-input-textarea", "value"),
+            allow_duplicate=True,
         )
         def submit_url(n_clicks, url=""):
             if not url or n_clicks is None:
@@ -264,7 +271,7 @@ class SpecSearchApp:
         return grouped_elements
 
     def search_by_keyword(self, keyword):
-        searched_nodes = self.spec_html_nodelizer.search_by_keyword(keyword)
+        searched_nodes = self.html_nodelizer.search_by_keyword(keyword)
         grouped_searched_node_elements = (
             self.group_searched_node_elements_by_header_title(searched_nodes)
         )

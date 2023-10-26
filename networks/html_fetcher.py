@@ -15,6 +15,7 @@ class UrlToPathConverter:
     def url_to_path(self):
         if self.match_pattern("ar5iv"):
             # https://ar5iv.labs.arxiv.org/html/1810.04805
+            self.domain = "ar5iv"
             match_res = self.match_pattern("ar5iv")
             self.output_dir = self.html_dir / "ar5iv"
             self.output_filename = match_res.group(1) + ".html"
@@ -22,6 +23,7 @@ class UrlToPathConverter:
             self.requests_auth = None
         elif self.match_pattern("docs.com"):
             # https://docs.***.com/documents/**.html
+            self.domain = "docs.com"
             match_res = self.match_pattern("docs.com")
             self.output_dir = self.html_dir / match_res.group(1)
             self.output_filename = match_res.group(2)
@@ -44,6 +46,7 @@ class HTMLFetcher:
         url_to_path_converter = UrlToPathConverter(self.url)
         self.output_path = url_to_path_converter.output_path
         self.requests_auth = url_to_path_converter.requests_auth
+        self.domain = url_to_path_converter.domain
 
     def get(self, overwrite=True):
         print(f"Fetching {self.url}")
@@ -74,11 +77,10 @@ class HTMLFetcher:
             return
         self.output_path.parent.mkdir(parents=True, exist_ok=True)
 
-        with open(self.output_path, "w") as wf:
+        with open(self.output_path, "w", encoding="utf-8") as wf:
             wf.write(self.html_str)
 
-    def run(self):
-        overwrite = False
+    def run(self, overwrite=False):
         if self.output_path.exists() and not overwrite:
             print(f"URL cached: {self.url}")
             print(f"HTML exists: {self.output_path}")
