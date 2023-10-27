@@ -562,9 +562,18 @@ class HTMLNodelizer:
             raise NotImplementedError(f"Not supported domain: {self.domain}")
         return element_nodelizer_class
 
-    @abstractmethod
     def get_main_element(self):
-        pass
+        domain_main_element_patterns = {
+            "ar5iv": {"name": "article"},
+            "docs.com": {"id": "MAIN"},
+        }
+        if self.domain in domain_main_element_patterns.keys():
+            self.main_element = self.soup.find(
+                **domain_main_element_patterns[self.domain]
+            )
+        else:
+            raise NotImplementedError(f"Not supported domain: {self.domain}")
+        return self.main_element
 
     def extract_styles(self):
         # <head> stores <styles> and <script>, which are useful for rendering HTML as it is
@@ -588,7 +597,7 @@ class HTMLNodelizer:
                     continue
                 else:
                     if node.type in ["image"]:
-                        node = ImageNodeSourceReplacer(self.html_url).replace(node)
+                        node = ImageNodeSourceReplacer(self.url).replace(node)
                     self.nodes.append(node)
 
                 if parent_node:
@@ -619,23 +628,11 @@ class HTMLNodelizer:
         self.parse_html_to_nodes()
 
 
-class SpecHTMLNodelizer(HTMLNodelizer):
-    def get_main_element(self):
-        self.main_element = self.soup.find(id="MAIN")
-        return self.main_element
-
-
-class Ar5ivHTMLNodelizer(HTMLNodelizer):
-    def get_main_element(self):
-        self.main_element = self.soup.find("article")
-        return self.main_element
-
-
 if __name__ == "__main__":
     url = "https://ar5iv.labs.arxiv.org/html/1810.04805"
     html_fetcher = HTMLFetcher(url)
     html_fetcher.run()
-    html_nodelizer = Ar5ivHTMLNodelizer(
+    html_nodelizer = HTMLNodelizer(
         html_path=html_fetcher.output_path,
         url=html_fetcher.url,
         domain=html_fetcher.domain,
