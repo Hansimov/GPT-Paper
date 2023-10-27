@@ -34,11 +34,10 @@ class Node:
 
     @abstractmethod
     def parse_element(self):
-        pass
+        self.type = "node"
 
     def get_parent_element(self):
-        self.parent_element = self.element.parent
-        return self.parent_element
+        return self.element.parent
 
     def get_parent(self):
         return self.parent
@@ -56,9 +55,9 @@ class Node:
             self.full_text = self.get_text()
         return self.full_text
 
-    @abstractmethod
     def get_description(self):
-        pass
+        self.description = self.type
+        return self.description()
 
     def get_section_group_node(self):
         node = self
@@ -66,14 +65,12 @@ class Node:
             node = node.parent
 
         if node is None:
-            print("get_section_group_node(): None!")
             print(self.element)
-            raise NotImplementedError
+            raise NotImplementedError("get_section_group_node(): None!")
         elif node.type != "section_group":
-            print("get_section_group_node(): No section group!")
             print(node.element)
             print(self.element)
-            raise NotImplementedError
+            raise NotImplementedError("get_section_group_node(): No section group!")
         else:
             return node
 
@@ -83,14 +80,14 @@ class Node:
             node = node.parent
 
         if node is None:
-            print("get_most_recent_group_node(): None!")
             print(self.element)
-            raise NotImplementedError
+            raise NotImplementedError("get_most_recent_group_node(): None!")
         elif not node.type.endswith("group"):
-            print("get_most_recent_group_node(): No most recent group!")
             print(node.element)
             print(self.element)
-            raise NotImplementedError
+            raise NotImplementedError(
+                "get_most_recent_group_node(): No most recent group!"
+            )
         else:
             return node
 
@@ -133,31 +130,26 @@ class Node:
 class JavascriptNode(Node):
     def parse_element(self):
         self.type = "javascript"
-        self.get_text()
 
 
 class TableNode(Node):
     def parse_element(self):
         self.type = "table"
-        self.get_df()
-        self.get_markdown()
-        self.get_text()
-        self.get_columns()
 
     def get_df(self):
         self.df = pd.read_html(str(self.element))[0]
         return self.df
 
     def get_markdown(self):
-        self.markdown = self.df.to_markdown(index=False)
+        self.markdown = self.get_df().to_markdown(index=False)
         return self.markdown
 
     def get_text(self):
-        self.text = str(self.markdown)
+        self.text = str(self.get_markdown())
         return self.text
 
     def get_columns(self):
-        self.columns = self.df.columns.tolist()
+        self.columns = self.get_df().columns.tolist()
         return self.columns
 
     def get_full_node(self, keyword=""):
@@ -171,14 +163,12 @@ class TableNode(Node):
 class TextNode(Node):
     def parse_element(self):
         self.type = "text"
-        self.get_text()
-        self.get_full_text()
 
     def get_full_text(self):
         if self.tag not in ["p", "span"]:
-            self.tagged_text = f"<{self.tag}>{self.text}</{self.tag}>"
+            self.tagged_text = f"<{self.tag}>{self.get_text()}</{self.tag}>"
         else:
-            self.tagged_text = self.text
+            self.tagged_text = self.get_text()
 
         if self.class_str:
             self.full_text = f"{self.get_description()}: {self.tagged_text}"
@@ -190,7 +180,6 @@ class TextNode(Node):
 class StringNode(Node):
     def parse_element(self):
         self.type = "string"
-        self.get_text()
 
     def get_text(self):
         self.text = str(self.element)
@@ -200,8 +189,6 @@ class StringNode(Node):
 class HyperlinkNode(Node):
     def parse_element(self):
         self.type = "hyperlink"
-        self.get_text()
-        self.get_href()
 
     def get_text(self):
         self.text = self.element.text.strip()
@@ -215,11 +202,6 @@ class HyperlinkNode(Node):
 class HeaderNode(Node):
     def parse_element(self):
         self.type = "header"
-        self.get_level()
-        self.get_number()
-        self.get_text()
-        self.get_full_text()
-        self.get_indented_full_text()
 
     def get_level(self):
         self.level = int(self.tag[-1])
@@ -237,19 +219,21 @@ class HeaderNode(Node):
         pass
 
     def get_full_text(self):
-        self.full_text = f"{self.get_description()}: {self.get_number()} {self.text}"
+        self.full_text = (
+            f"{self.get_description()}: {self.get_number()} {self.get_text()}"
+        )
         return self.full_text
 
     def get_indented_full_text(self, indent=2, indent_char=" ", begin_char="-"):
         indent_str = indent_char * indent * (self.level - 1)
         self.indented_full_text = (
-            f"{indent_str}{begin_char} {self.get_number()} {self.text}"
+            f"{indent_str}{begin_char} {self.get_number()} {self.get_text()}"
         )
         return self.indented_full_text
 
     def get_full_node(self, keyword=""):
         if self.parent.type == "section_group" and (
-            keyword == "" or self.text.lower() == keyword.lower()
+            keyword == "" or self.get_text().lower() == keyword.lower()
         ):
             self.full_node = self.parent
         else:
@@ -260,13 +244,11 @@ class HeaderNode(Node):
 class CodeNode(Node):
     def parse_element(self):
         self.type = "code"
-        self.get_text()
 
 
 class SeparatorNode(Node):
     def parse_element(self):
         self.type = "sep"
-        self.get_text()
 
 
 class ImageNodeSourceReplacer:
@@ -323,6 +305,9 @@ class CaptionNode(Node):
 
 
 class GroupNode(Node):
+    def parse_element(self):
+        self.type = "group"
+
     def get_text(self):
         texts = []
         for child in self.children:
