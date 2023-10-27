@@ -25,8 +25,8 @@ class UrlToPathConverter:
             # https://docs.***.com/documents/**.html
             self.domain = "docs.com"
             match_res = self.match_pattern("docs.com")
-            self.output_dir = self.html_dir / match_res.group(1)
-            self.output_filename = match_res.group(2)
+            self.output_dir = self.html_dir / match_res.group(1).replace("%20", " ")
+            self.output_filename = match_res.group(2).replace("%20", " ")
             self.output_path = self.output_dir / self.output_filename
             self.requests_auth = "ntlm"
         else:
