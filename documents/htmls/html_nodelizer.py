@@ -403,44 +403,47 @@ class SpanGroupNode(GroupNode):
 
 class SpecElementNodelizer:
     def __init__(self, element):
+        node = None
         if isinstance(element, bs4.element.NavigableString):
             node = StringNode(element)
         else:
-            node = None
             tag = element.name
             class_str = " ".join(element.get("class", []))
+            children_cnt = len(list(element.children))
 
-            if class_str and class_str.startswith("section"):
+            if children_cnt == 1 and isinstance(
+                list(element.children)[0], bs4.element.NavigableString
+            ):
+                node = TextNode(element)
+            elif class_str and class_str.startswith("section"):
                 node = SectionGroupNode(element)
-            if class_str == "figure":
+            elif class_str == "figure":
                 node = FigureGroupNode(element)
-            if class_str == "table":
+            elif class_str == "table":
                 node = TableGroupNode(element)
-            if tag in ["ul", "ol", "li"]:
+            elif tag in ["ul", "ol", "li"]:
                 node = ListGroupNode(element)
-            if tag in ["blockquote"]:
+            elif tag in ["blockquote"]:
                 node = BlockquoteGroupNode(element)
-            if tag in ["details"]:
+            elif tag in ["details"]:
                 node = DetailsGroupNode(element)
-
-            if tag in ["style"]:
+            elif tag in ["style"]:
                 node = StyleNode(element)
-            if tag in ["noscript"]:
+            elif tag in ["noscript"]:
                 node = IgnorableNode(element)
-
-            if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
+            elif tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
                 node = HeaderNode(element)
-            if tag in ["img"]:
+            elif tag in ["img"]:
                 node = ImageNode(element)
-            if tag in ["table"]:
+            elif tag in ["table"]:
                 node = TableNode(element)
-            if tag in ["a"]:
+            elif tag in ["a"]:
                 node = HyperlinkNode(element)
-            if class_str == "sourceCode" or tag == "pre":
+            elif class_str == "sourceCode" or tag == "pre":
                 node = CodeNode(element)
-            if tag in ["script"]:
+            elif tag in ["script"]:
                 node = JavascriptNode(element)
-            if tag in [
+            elif tag in [
                 "del",
                 "em",
                 "i",
@@ -455,16 +458,16 @@ class SpecElementNodelizer:
                 "u",
             ]:
                 node = TextNode(element)
-            if tag in ["hr", "br"]:
+            elif tag in ["hr", "br"]:
                 node = SeparatorNode(element)
-
-        if node is None:
-            if tag in ["div"]:
-                node = DivGroupNode(element)
             else:
-                print(element)
-                node = TextNode(element)
-                # raise NotImplementedError
+                if node is None:
+                    if tag in ["div"]:
+                        node = DivGroupNode(element)
+                    else:
+                        print(element)
+                        node = TextNode(element)
+                        # raise NotImplementedError
 
         self.node = node
 
@@ -477,7 +480,6 @@ class Ar5ivElementNodelizer:
             node = None
             tag = element.name
             class_str = " ".join(element.get("class", []))
-
             if class_str and class_str.startswith("section"):
                 node = SectionGroupNode(element)
             if class_str == "figure":
@@ -553,7 +555,7 @@ class HTMLNodelizer:
         pass
 
     def extract_styles(self):
-        # <head> stores styles, which are useful for better rendering
+        # <head> stores <styles> and <script>, which are useful for rendering HTML as it is
         style_str = ""
         head_element = self.soup.find("head")
         for child in head_element.children:
