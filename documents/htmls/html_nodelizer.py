@@ -13,6 +13,18 @@ from documents.keyword_searcher import KeywordSearcher
 from documents.htmls.html_keyword_highlighter import HTMLKeywordHighlighter
 from networks.html_fetcher import HTMLFetcher
 
+"""
+The key problem of structurazing HTML is not only how to represent the tree,
+but also how to make it human-readable and understandable.
+
+The idea in this script is to use Node and GroupNode,
+which are organized in two data structures:
+1. Tree: Represents the hierarchical structure, useful to get relationships among nodes.
+2. List: Stores the sequential info, suitable for human reading and understanding,
+    also more convinient to loop and process.
+
+"""
+
 
 class Node:
     def __init__(self, element):
@@ -556,7 +568,6 @@ class HTMLNodelizer:
         pass
 
     def parse_html_to_nodes(self):
-        # self.main_element = self.soup.find(id="MAIN")
         self.main_element = self.get_main_element()
         self.main_node = SectionGroupNode(self.main_element)
         self.traverse_element(element=self.main_element, parent_node=self.main_node)
@@ -617,7 +628,35 @@ class HTMLNodelizer:
 
 
 class SpecHTMLNodelizer(HTMLNodelizer):
-    pass
+    def get_main_element(self):
+        self.main_element = self.soup.find(id="MAIN")
+        return self.main_element
+
+    def traverse_element(self, element, parent_node=None):
+        for child in element.children:
+            node = SpecElementNodelizer(child).node
+
+            if node:
+                if node.type in ["style", "script"]:
+                    self.style_nodes.append(node)
+                elif node.type in ["ignorable"]:
+                    continue
+                else:
+                    if node.type in ["image"]:
+                        node = ImageNodeSourceReplacer(self.html_url).replace(node)
+                    self.nodes.append(node)
+
+                if parent_node:
+                    node.parent = parent_node
+                    parent_node.children.append(node)
+
+                if node.type.endswith("group"):
+                    self.traverse_element(child, parent_node=node)
+
+            else:
+                print(child.name, child.id)
+                print(child)
+                raise NotImplementedError
 
 
 class Ar5ivHTMLNodelizer(HTMLNodelizer):
