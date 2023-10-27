@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 from dash import Dash, html, dcc, Input, Output, State, callback
 from dash_dangerously_set_inner_html import DangerouslySetInnerHTML as danger_html
 from pathlib import Path
-from documents.htmls.spec_html_nodelizer import SpecHTMLNodelizer
-from documents.htmls.ar5iv_html_nodelizer import Ar5ivHTMLNodelizer
+from documents.htmls.html_nodelizer import SpecHTMLNodelizer, Ar5ivHTMLNodelizer
+from documents.htmls.node_searcher import NodeSearcher
 from networks.html_fetcher import HTMLFetcher
 import dash_mantine_components as dmc
 
@@ -271,7 +271,7 @@ class SpecSearchApp:
         return grouped_elements
 
     def search_by_keyword(self, keyword):
-        searched_nodes = self.html_nodelizer.search_by_keyword(keyword)
+        searched_nodes = NodeSearcher(self.html_nodelizer.nodes, keyword).search()
         grouped_searched_node_elements = (
             self.group_searched_node_elements_by_header_title(searched_nodes)
         )
