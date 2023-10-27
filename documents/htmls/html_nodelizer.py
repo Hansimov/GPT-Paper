@@ -270,7 +270,7 @@ class ImageNodeSourceReplacer:
 
     def replace(self, node):
         node.src = node.element.get("src", "")
-        if node.src:
+        if node.src and not node.src.startswith(("http", "https", "data", "file")):
             node.src = self.src_prefix + node.src
             node.element["src"] = node.src
             node.element["title"] = node.src
@@ -540,18 +540,30 @@ class Ar5ivElementNodelizer:
 
 
 class HTMLNodelizer:
-    def __init__(self, html_path, html_url=""):
+    def __init__(self, html_path=None, url=None, domain=None):
         self.html_path = html_path
-        self.html_url = html_url
+        self.url = url
         with open(self.html_path, "r", encoding="utf-8") as rf:
             html_string = rf.read()
         self.soup = BeautifulSoup(html_string, "lxml")
         self.nodes = []
         self.style_nodes = []
         self.section_node = None
+        self.domain = domain
+
+    def get_element_nodelizer_class(self):
+        domain_nodelizers = {
+            "ar5iv": Ar5ivElementNodelizer,
+            "docs.com": SpecElementNodelizer,
+        }
+        if self.domain in domain_nodelizers.keys():
+            element_nodelizer_class = domain_nodelizers[self.domain]
+        else:
+            raise NotImplementedError(f"Not supported domain: {self.domain}")
+        return element_nodelizer_class
 
     @abstractmethod
-    def traverse_element(self, element, parent_node=None):
+    def get_main_element(self):
         pass
 
     def extract_styles(self):
@@ -565,34 +577,9 @@ class HTMLNodelizer:
             style_str += str(style_node.element)
         return style_str
 
-    @abstractmethod
-    def get_main_element(self):
-        pass
-
-    def parse_html_to_nodes(self):
-        self.main_element = self.get_main_element()
-        self.main_node = SectionGroupNode(self.main_element)
-        self.traverse_element(element=self.main_element, parent_node=self.main_node)
-        print(f"{len(self.nodes)} nodes parsed.")
-        for idx, node in enumerate(self.nodes):
-            node.idx = idx
-            if idx > 0:
-                self.prev = self.nodes[idx - 1]
-            if idx < len(self.nodes) - 1:
-                self.next = self.nodes[idx + 1]
-
-    def run(self):
-        self.parse_html_to_nodes()
-
-
-class SpecHTMLNodelizer(HTMLNodelizer):
-    def get_main_element(self):
-        self.main_element = self.soup.find(id="MAIN")
-        return self.main_element
-
-    def traverse_element(self, element, parent_node=None):
+    def traverse_element(self, element, parent_node):
         for child in element.children:
-            node = SpecElementNodelizer(child).node
+            node = self.get_element_nodelizer_class()(child).node
 
             if node:
                 if node.type in ["style", "script"]:
@@ -616,15 +603,41 @@ class SpecHTMLNodelizer(HTMLNodelizer):
                 print(child)
                 raise NotImplementedError
 
+    def parse_html_to_nodes(self):
+        self.main_element = self.get_main_element()
+        self.main_node = SectionGroupNode(self.main_element)
+        self.traverse_element(element=self.main_element, parent_node=self.main_node)
+        print(f"{len(self.nodes)} nodes parsed.")
+        for idx, node in enumerate(self.nodes):
+            node.idx = idx
+            if idx > 0:
+                self.prev = self.nodes[idx - 1]
+            if idx < len(self.nodes) - 1:
+                self.next = self.nodes[idx + 1]
+
+    def run(self):
+        self.parse_html_to_nodes()
+
+
+class SpecHTMLNodelizer(HTMLNodelizer):
+    def get_main_element(self):
+        self.main_element = self.soup.find(id="MAIN")
+        return self.main_element
+
 
 class Ar5ivHTMLNodelizer(HTMLNodelizer):
-    pass
+    def get_main_element(self):
+        self.main_element = self.soup.find("article")
+        return self.main_element
 
 
 if __name__ == "__main__":
-    html_fetcher = HTMLFetcher()
+    url = "https://ar5iv.labs.arxiv.org/html/1810.04805"
+    html_fetcher = HTMLFetcher(url)
     html_fetcher.run()
-    spec_html_nodelizer = SpecHTMLNodelizer(
-        html_path=html_fetcher.output_path, html_url=html_fetcher.url
+    html_nodelizer = Ar5ivHTMLNodelizer(
+        html_path=html_fetcher.output_path,
+        url=html_fetcher.url,
+        domain=html_fetcher.domain,
     )
-    spec_html_nodelizer.run()
+    html_nodelizer.run()
