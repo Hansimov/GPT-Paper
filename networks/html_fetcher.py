@@ -66,7 +66,7 @@ class HTMLFetcher:
             return
 
         if self.requests_auth is None:
-            res = requests.get(self.url)
+            res = requests.get(self.html_url)
         elif self.requests_auth == "ntlm":
             print("(Using NTLM auth)")
             with open(Path(__file__).parents[1] / "secrets.json") as rf:

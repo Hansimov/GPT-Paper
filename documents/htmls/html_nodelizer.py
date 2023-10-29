@@ -14,14 +14,23 @@ from documents.htmls.html_keyword_highlighter import HTMLKeywordHighlighter
 from networks.html_fetcher import HTMLFetcher
 
 """
-The key problem of structurazing HTML is not only how to represent the tree,
+The key problem of structuring HTML is not only how to represent the tree,
 but also how to make it human-readable and understandable.
 
 The idea in this script is to use Node and GroupNode,
 which are organized in two data structures:
 1. Tree: Represents the hierarchical structure, useful to get relationships among nodes.
 2. List: Stores the sequential info, suitable for human reading and understanding,
-    also more convinient to loop and process.
+    also more convenient to loop and process.
+
+    
+Then another problem appears:
+how to determine whether the element should be grouped,
+or treated as a complete single node.
+
+Of course we could use specific rules for each domain,
+but a better idea is to categorize the elements into several main types.
+Then which types could be treated as "main types"?
 
 """
 
@@ -253,6 +262,19 @@ class HeaderNode(Node):
         return self.full_node
 
 
+class ArxivHeaderNode(HeaderNode):
+    def get_number(self):
+        # <span class="ltx_tag ltx_tag_section">2 </span>
+        # <span class="ltx_tag ltx_tag_subsection">2.1 </span>
+        span_element = self.element.find("span")
+        span_element_class_str = " ".join(span_element.get("class", []))
+        if re.search("ltx_tag_(sub)?section", span_element_class_str):
+            self.number = span_element.text.strip()
+        else:
+            self.number = ""
+        return self.number
+
+
 class CodeNode(Node):
     def parse_element(self):
         self.type = "code"
@@ -472,7 +494,7 @@ class SpecElementNodelizer:
         self.node = node
 
 
-class Ar5ivElementNodelizer:
+class ArxivElementNodelizer:
     def __init__(self, element):
         if isinstance(element, bs4.element.NavigableString):
             node = StringNode(element)
@@ -480,12 +502,16 @@ class Ar5ivElementNodelizer:
             node = None
             tag = element.name
             class_str = " ".join(element.get("class", []))
-            if class_str and class_str.startswith("section"):
+            if tag in ["section"]:
                 node = SectionGroupNode(element)
-            if class_str == "figure":
-                node = FigureGroupNode(element)
-            if class_str == "table":
-                node = TableGroupNode(element)
+            if tag in ["figure"]:
+                if re.search("ltx_table", class_str):
+                    node = TableGroupNode(element)
+                elif re.search("ltx_figure", class_str):
+                    node = FigureGroupNode(element)
+                else:
+                    pass
+
             if tag in ["ul", "ol", "li"]:
                 node = ListGroupNode(element)
             if tag in ["blockquote"]:
@@ -495,21 +521,24 @@ class Ar5ivElementNodelizer:
 
             if tag in ["style"]:
                 node = StyleNode(element)
-            if tag in ["noscript"]:
-                node = IgnorableNode(element)
+            if tag in ["script"]:
+                node = JavascriptNode(element)
 
             if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
-                node = HeaderNode(element)
+                node = ArxivHeaderNode(element)
             if tag in ["img"]:
                 node = ImageNode(element)
+            if tag in ["svg"]:
+                node = SVGNode(element)
+            if tag in ["figcaption"]:
+                node = CaptionNode(element)
             if tag in ["table"]:
                 node = TableNode(element)
             if tag in ["a"]:
                 node = HyperlinkNode(element)
-            if class_str == "sourceCode" or tag == "pre":
+            if tag == "pre":
                 node = CodeNode(element)
-            if tag in ["script"]:
-                node = JavascriptNode(element)
+
             if tag in [
                 "del",
                 "em",
@@ -534,7 +563,7 @@ class Ar5ivElementNodelizer:
             else:
                 print(element)
                 node = TextNode(element)
-                # raise NotImplementedError
+                raise NotImplementedError
 
         self.node = node
 
@@ -553,18 +582,18 @@ class HTMLNodelizer:
 
     def get_element_nodelizer_class(self):
         domain_nodelizers = {
-            "ar5iv": Ar5ivElementNodelizer,
+            "arxiv": ArxivElementNodelizer,
             "docs.com": SpecElementNodelizer,
         }
         if self.domain in domain_nodelizers.keys():
-            element_nodelizer_class = domain_nodelizers[self.domain]
+            self.element_nodelizer_class = domain_nodelizers[self.domain]
         else:
             raise NotImplementedError(f"Not supported domain: {self.domain}")
-        return element_nodelizer_class
+        return self.element_nodelizer_class
 
     def get_main_element(self):
         domain_main_element_patterns = {
-            "ar5iv": {"name": "article"},
+            "arxiv": {"name": "article"},
             "docs.com": {"id": "MAIN"},
         }
         if self.domain in domain_main_element_patterns.keys():
@@ -629,12 +658,13 @@ class HTMLNodelizer:
 
 
 if __name__ == "__main__":
-    url = "https://ar5iv.labs.arxiv.org/html/1810.04805"
+    # url = "https://ar5iv.labs.arxiv.org/html/1810.04805"
+    url = "https://arxiv.org/abs/1810.04805"
     html_fetcher = HTMLFetcher(url)
     html_fetcher.run()
     html_nodelizer = HTMLNodelizer(
         html_path=html_fetcher.output_path,
-        url=html_fetcher.url,
+        url=html_fetcher.html_url,
         domain=html_fetcher.domain,
     )
     html_nodelizer.run()

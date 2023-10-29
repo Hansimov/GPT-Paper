@@ -8,7 +8,7 @@ md_path = (
     / "cancer_review"
     / "_results"
     # / "facts" / "facts.md"
-    / "review_v2.md"
+    / "review_v5.md"
 )
 
 docx_path = md_path.with_suffix("").with_suffix(".docx")
