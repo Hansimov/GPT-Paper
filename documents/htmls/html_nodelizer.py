@@ -229,10 +229,7 @@ class HeaderNode(Node):
         return self.level
 
     def get_text(self):
-        for child in self.element.children:
-            if isinstance(child, bs4.element.NavigableString):
-                self.text = child.strip()
-                break
+        self.text = self.element.text.strip()
         return self.text
 
     @abstractmethod
@@ -338,6 +335,28 @@ class CaptionNode(Node):
         self.type = "caption"
 
 
+class ParagraphNode(Node):
+    def parse_element(self):
+        self.type = "paragraph"
+
+
+class AuthorNode(Node):
+    def parse_element(self):
+        self.type = "author"
+
+    def get_person_name(self):
+        self.person_name = self.element.find(
+            "span", class_="ltx_person_name"
+        ).text.strip()
+        return self.person_name
+
+    def get_author_notes(self):
+        self.author_notes = self.element.find(
+            "span", class_="ltx_author_notes"
+        ).text.strip()
+        return self.author_notes
+
+
 class GroupNode(Node):
     def parse_element(self):
         self.type = "group"
@@ -428,6 +447,8 @@ class SpecElementNodelizer:
         node = None
         if isinstance(element, bs4.element.NavigableString):
             node = StringNode(element)
+            if not node.get_text().strip():
+                node = None
         else:
             tag = element.name
             class_str = " ".join(element.get("class", []))
@@ -496,74 +517,64 @@ class SpecElementNodelizer:
 
 class ArxivElementNodelizer:
     def __init__(self, element):
+        node = None
         if isinstance(element, bs4.element.NavigableString):
             node = StringNode(element)
+            if not node.get_text().strip():
+                node = IgnorableNode(element)
         else:
-            node = None
             tag = element.name
             class_str = " ".join(element.get("class", []))
-            if tag in ["section"]:
+
+            if tag in ["section"] or (
+                tag in ["div"] and re.search("ltx_abstract", class_str)
+            ):
                 node = SectionGroupNode(element)
-            if tag in ["figure"]:
+            elif tag in ["figure"]:
                 if re.search("ltx_table", class_str):
                     node = TableGroupNode(element)
                 elif re.search("ltx_figure", class_str):
                     node = FigureGroupNode(element)
                 else:
                     pass
-
-            if tag in ["ul", "ol", "li"]:
+            elif tag in ["ul", "ol", "li"]:
                 node = ListGroupNode(element)
-            if tag in ["blockquote"]:
-                node = BlockquoteGroupNode(element)
-            if tag in ["details"]:
-                node = DetailsGroupNode(element)
-
-            if tag in ["style"]:
+            elif tag in ["style"]:
                 node = StyleNode(element)
-            if tag in ["script"]:
+            elif tag in ["script"]:
                 node = JavascriptNode(element)
-
-            if tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
+            elif tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
                 node = ArxivHeaderNode(element)
-            if tag in ["img"]:
+            elif tag in ["img"]:
                 node = ImageNode(element)
-            if tag in ["svg"]:
+            elif tag in ["svg"]:
                 node = SVGNode(element)
-            if tag in ["figcaption"]:
-                node = CaptionNode(element)
-            if tag in ["table"]:
+            elif tag in ["table"]:
                 node = TableNode(element)
-            if tag in ["a"]:
-                node = HyperlinkNode(element)
-            if tag == "pre":
-                node = CodeNode(element)
-
-            if tag in [
-                "del",
-                "em",
-                "i",
-                "mark",
-                "p",
-                "span",
-                "strong",
-                "sub",
-                "sup",
-                "strike",
-                "summary",
-                "u",
-            ]:
-                node = TextNode(element)
-            if tag in ["hr", "br"]:
-                node = SeparatorNode(element)
+            elif tag in ["figcaption"]:
+                node = CaptionNode(element)
+            elif tag in ["div", "p"]:
+                if re.search("ltx_p(ara)?", class_str):
+                    node = ParagraphNode(element)
+                elif re.search("ltx_authors", class_str):
+                    node = AuthorNode(element)
+                else:
+                    pass
+            elif tag in ["span"]:
+                if re.search("ltx_role_footnotetext", class_str):
+                    node = TextNode(element)
+                elif re.search("ltx_(tag_bibitem|bibblock)", class_str):
+                    node = TextNode(element)
+                elif re.search("ltx_ERROR", class_str):
+                    node = IgnorableNode(element)
+                else:
+                    pass
+            else:
+                pass
 
         if node is None:
-            if tag in ["div"]:
-                node = DivGroupNode(element)
-            else:
-                print(element)
-                node = TextNode(element)
-                raise NotImplementedError
+            print(element)
+            raise NotImplementedError("Can not categorize element!")
 
         self.node = node
 
@@ -635,7 +646,6 @@ class HTMLNodelizer:
 
                 if node.type.endswith("group"):
                     self.traverse_element(child, parent_node=node)
-
             else:
                 print(child.name, child.id)
                 print(child)
@@ -647,6 +657,9 @@ class HTMLNodelizer:
         self.traverse_element(element=self.main_element, parent_node=self.main_node)
         print(f"{len(self.nodes)} nodes parsed.")
         for idx, node in enumerate(self.nodes):
+            print(f"{idx+1}: {node.type}")
+            if node.type == "header":
+                print(node.get_text())
             node.idx = idx
             if idx > 0:
                 self.prev = self.nodes[idx - 1]
@@ -659,7 +672,8 @@ class HTMLNodelizer:
 
 if __name__ == "__main__":
     # url = "https://ar5iv.labs.arxiv.org/html/1810.04805"
-    url = "https://arxiv.org/abs/1810.04805"
+    # url = "https://arxiv.org/abs/1810.04805"
+    url = "https://arxiv.org/abs/2303.08774"
     html_fetcher = HTMLFetcher(url)
     html_fetcher.run()
     html_nodelizer = HTMLNodelizer(
