@@ -755,11 +755,11 @@ class HTMLNodelizer:
             f"=== {len(self.groups)} groups, {len(self.nodes)-len(self.groups)} nodes. ==="
         )
 
-        for idx, node in enumerate(self.nodes[120:]):
-            if node.type.endswith("group"):
-                print(node.type)
-            else:
-                print(node.get_full_text())
+        # for idx, node in enumerate(self.nodes):
+        #     if node.type.endswith("group"):
+        #         print(node.type)
+        #     else:
+        #         print(node.get_full_text())
 
     def run(self):
         self.parse_html_to_nodes()
