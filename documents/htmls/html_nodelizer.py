@@ -152,9 +152,9 @@ class Node:
         return self.full_node
 
 
-class JavascriptNode(Node):
+class ScriptNode(Node):
     def parse_element(self):
-        self.type = "javascript"
+        self.type = "script"
 
 
 class TableNode(Node):
@@ -484,6 +484,25 @@ class SpanGroupNode(GroupNode):
         self.type = "span_group"
 
 
+class HyperlinkGroupNode(GroupNode):
+    def parse_element(self):
+        self.type = "hyperlink_group"
+
+
+class SingleTextNodeChecker:
+    def __init__(self, element):
+        self.element = element
+
+    def check(self):
+        element_children = list(self.element.children)
+        if len(element_children) == 1 and isinstance(
+            element_children[0], bs4.element.NavigableString
+        ):
+            return True
+        else:
+            return False
+
+
 class SpecElementNodelizer:
     def __init__(self, element):
         node = None
@@ -498,7 +517,7 @@ class SpecElementNodelizer:
             if tag in ["style"]:
                 node = StyleNode(element)
             elif tag in ["script"]:
-                node = JavascriptNode(element)
+                node = ScriptNode(element)
             elif tag in ["noscript"]:
                 node = IgnorableNode(element)
             elif tag in ["div"]:
@@ -513,29 +532,33 @@ class SpecElementNodelizer:
                 else:
                     node = DivGroupNode(element)
             elif tag in ["ul", "ol", "li"]:
-                children_cnt = len(list(element.children))
-                if children_cnt == 1 and isinstance(
-                    list(element.children)[0], bs4.element.NavigableString
-                ):
+                if SingleTextNodeChecker(element).check():
                     node = TextNode(element)
+                    node.type = tag
                 else:
                     node = ListGroupNode(element)
             elif tag in ["blockquote", "details"]:
                 node = GroupNode(element)
                 node.type = f"{tag}_group"
             elif tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
-                node = HeaderNode(element)
+                node = SpecHeaderNode(element)
             elif tag in ["img"]:
                 node = ImageNode(element)
             elif tag in ["table"]:
                 node = TableNode(element)
             elif tag in ["a"]:
-                node = HyperlinkNode(element)
+                if SingleTextNodeChecker(element).check():
+                    node = HyperlinkNode(element)
+                else:
+                    node = HyperlinkGroupNode(element)
             elif tag in ["pre", "code"]:
                 node = CodeNode(element)
             elif tag in ["p"]:
                 if re.search("caption", class_str):
                     node = CaptionNode(element)
+                elif class_str in ["title", "author", "date"]:
+                    node = TextNode(element)
+                    node.type = class_str
                 else:
                     node = ParagraphNode(element)
             elif tag in [
@@ -591,7 +614,7 @@ class ArxivElementNodelizer:
             elif tag in ["style"]:
                 node = StyleNode(element)
             elif tag in ["script"]:
-                node = JavascriptNode(element)
+                node = ScriptNode(element)
             elif tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
                 node = ArxivHeaderNode(element)
             elif tag in ["img"]:
