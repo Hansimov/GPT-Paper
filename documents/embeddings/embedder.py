@@ -1,13 +1,7 @@
 import os
-import torch
-from nltk.tokenize import sent_tokenize
+
 from utils.envs import enver
 from utils.logger import logger, Runtimer
-
-from FlagEmbedding import FlagReranker
-from sentence_transformers import SentenceTransformer
-from sentence_transformers import util as st_util
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 
 class SeparatorRemover:
@@ -33,7 +27,11 @@ class EmbeddingEncoder:
             )
         self.is_load_model = False
 
-    def load_model(self, quiet=True):
+    def load_model(self, quiet=False):
+        from sentence_transformers import SentenceTransformer
+
+        if self.is_load_model:
+            return
         logger.enter_quiet(quiet)
         logger.note(f"> Using embedding model: [{self.model_name}]")
         enver.set_envs(set_proxy=True, cuda_device=True, huggingface=True)
@@ -45,6 +43,8 @@ class EmbeddingEncoder:
         logger.exit_quiet(quiet)
 
     def calc_embedding(self, text, normalize_embeddings=True, query_prefix=False):
+        if not self.is_load_model:
+            self.load_model()
         text = SeparatorRemover(text).text
         if query_prefix:
             text = self.query_prefix + text
@@ -61,6 +61,10 @@ class Reranker:
         self.is_load_model = False
 
     def load_model(self, quiet=True):
+        from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+        if self.is_load_model:
+            return
         logger.enter_quiet(quiet)
         logger.note(f"> Using CrossEncoder model: [{self.model_name}]")
         enver.set_envs(
@@ -84,6 +88,7 @@ class Reranker:
     def compute_score(self, pairs):
         # ['query', 'passage']
         # [['query1', 'passage1'], ['query2', 'passage2']]
+        import torch
 
         with torch.no_grad():
             inputs = self.tokenizer(
