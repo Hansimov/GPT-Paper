@@ -297,17 +297,28 @@ class SeparatorNode(Node):
         self.type = "sep"
 
 
-class ImageNodeSourceReplacer:
+class LinkableNodeSourceReplacer:
     def __init__(self, html_url=""):
         self.html_url = html_url
         self.src_prefix = html_url[: html_url.rfind("/") + 1]
 
     def replace(self, node):
         node.src = node.element.get("src", "")
-        if node.src and not node.src.startswith(("http", "https", "data", "file")):
-            node.src = self.src_prefix + node.src
-            node.element["src"] = node.src
-            node.element["title"] = node.src
+        node.href = node.element.get("href", "")
+
+        if node.src:
+            node.link = node.src
+            node.link_attr = "src"
+        elif node.href:
+            node.link = node.href
+            node.link_attr = "href"
+        else:
+            node.link = None
+
+        if node.link and not node.link.startswith(("http", "https", "data", "file")):
+            node.link = self.src_prefix + node.link
+            node.element[node.link_attr] = node.link
+            node.element["title"] = node.link
         return node
 
 
@@ -657,8 +668,8 @@ class HTMLNodelizer:
                 elif node.type in ["ignorable"]:
                     continue
                 else:
-                    if node.type in ["image"]:
-                        node = ImageNodeSourceReplacer(self.url).replace(node)
+                    if node.type in ["image", "hyperlink"]:
+                        node = LinkableNodeSourceReplacer(self.url).replace(node)
                     self.nodes.append(node)
 
                 if parent_node:
