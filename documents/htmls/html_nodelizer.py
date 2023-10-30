@@ -197,12 +197,12 @@ class TextNode(Node):
         self.type = "text"
 
     def get_full_text(self, add_description=True):
-        if self.tag in ["p", "span", "li"]:
+        if self.tag in ["p", "span"]:
             self.tagged_text = self.get_text()
         else:
             self.tagged_text = f"<{self.tag}>{self.get_text()}</{self.tag}>"
 
-        if self.class_str and add_description:
+        if add_description:
             self.full_text = f"{self.get_description()}: {self.tagged_text}"
         else:
             self.full_text = self.tagged_text
@@ -525,7 +525,8 @@ class SpecElementNodelizer:
         node = None
         if isinstance(element, bs4.element.NavigableString):
             node = StringNode(element)
-            if not node.get_text().strip():
+            node_text = node.get_text().strip()
+            if not node_text:
                 node = IgnorableNode(element)
         else:
             tag = element.name
@@ -551,7 +552,6 @@ class SpecElementNodelizer:
             elif tag in ["ul", "ol", "li"]:
                 if SingleTextNodeChecker(element).check():
                     node = TextNode(element)
-                    node.type = tag
                 else:
                     node = ListGroupNode(element)
             elif tag in ["blockquote", "details"]:

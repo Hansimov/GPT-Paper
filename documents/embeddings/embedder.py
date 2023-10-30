@@ -96,7 +96,7 @@ class Reranker:
                 padding=True,
                 truncation=True,
                 return_tensors="pt",
-                max_length=512,
+                # max_length=512,
             )
             scores = self.model(**inputs, return_dict=True).logits.view(-1).float()
 

@@ -33,19 +33,20 @@ class NodeEmbedder:
         self.embedding_items = []
         for node in self.html_nodelizer.nodes[:]:
             if not node.type.endswith("group"):
-                node_full_text_with_description = node.get_full_text(
-                    add_description=True
-                )
+                if node.type in ["string", "paragraph", "text"]:
+                    add_description = False
+                else:
+                    add_description = True
+                node_full_text = node.get_full_text(add_description=add_description)
                 if (not self.embeddings_df.empty) and (
                     self.embeddings_df["full_text_with_description"]
-                    .isin([node_full_text_with_description])
+                    .isin([node_full_text])
                     .any()
                 ):
-                    # print(f"> Embedding cached")
                     continue
                 else:
                     node_embedding = self.embedding_encoder.calc_embedding(
-                        node_full_text_with_description
+                        node_full_text
                     )
                     print(node_embedding)
                     embedding_item = {
@@ -53,9 +54,7 @@ class NodeEmbedder:
                         "type": node.type,
                         "text": node.get_text(),
                         "full_text": node.get_full_text(add_description=False),
-                        "full_text_with_description": node.get_full_text(
-                            add_description=True
-                        ),
+                        "full_text_with_description": node_full_text,
                         "embedding": node_embedding,
                     }
                     self.embedding_items.append(embedding_item)
