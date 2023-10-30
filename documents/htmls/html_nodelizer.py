@@ -69,6 +69,10 @@ class Node:
             parent = parent.get_parent()
         return parent
 
+    def get_text(self):
+        self.text = self.element.text.strip()
+        return self.text
+
     def get_full_text(self):
         if self.get_description():
             self.full_text = f"{self.get_description()}: {self.get_text()}"
@@ -78,7 +82,7 @@ class Node:
 
     def get_description(self):
         self.description = self.type
-        return self.description()
+        return self.description
 
     def get_section_group_node(self):
         node = self
@@ -169,6 +173,10 @@ class TableNode(Node):
         self.text = str(self.get_markdown())
         return self.text
 
+    def get_full_text(self):
+        self.full_text = f"{self.get_description()}:\n{self.get_text()}"
+        return self.full_text
+
     def get_columns(self):
         self.columns = self.get_df().columns.tolist()
         return self.columns
@@ -186,10 +194,10 @@ class TextNode(Node):
         self.type = "text"
 
     def get_full_text(self):
-        if self.tag not in ["p", "span"]:
-            self.tagged_text = f"<{self.tag}>{self.get_text()}</{self.tag}>"
-        else:
+        if self.tag in ["p", "span", "li"]:
             self.tagged_text = self.get_text()
+        else:
+            self.tagged_text = f"<{self.tag}>{self.get_text()}</{self.tag}>"
 
         if self.class_str:
             self.full_text = f"{self.get_description()}: {self.tagged_text}"
@@ -206,13 +214,17 @@ class StringNode(Node):
         self.text = str(self.element)
         return self.text
 
+    def get_full_text(self):
+        self.full_text = self.get_text()
+        return self.full_text
+
 
 class HyperlinkNode(Node):
     def parse_element(self):
         self.type = "hyperlink"
 
     def get_text(self):
-        self.text = self.element.text.strip()
+        self.text = self.get_href()
         return self.text
 
     def get_href(self):
@@ -241,7 +253,7 @@ class HeaderNode(Node):
 
     def get_full_text(self):
         self.full_text = (
-            f"{self.get_description()}: {self.get_number()} {self.get_text()}"
+            f"{self.get_description()}: [{self.get_number()}] {self.get_text()}"
         )
         return self.full_text
 
@@ -364,6 +376,10 @@ class CaptionNode(Node):
 class ParagraphNode(Node):
     def parse_element(self):
         self.type = "paragraph"
+
+    def get_full_text(self):
+        self.full_text = self.get_text()
+        return self.full_text
 
 
 class AuthorNode(Node):
@@ -688,9 +704,7 @@ class HTMLNodelizer:
         self.traverse_element(element=self.main_element, parent_node=self.main_node)
 
         for idx, node in enumerate(self.nodes):
-            print(f"{idx+1}: {node.type}")
-            if node.type == "header":
-                print(node.get_text())
+            # print(f"{idx+1}: {node.type}")
             node.idx = idx
             if idx > 0:
                 self.prev = self.nodes[idx - 1]
@@ -700,6 +714,12 @@ class HTMLNodelizer:
         print(
             f"=== {len(self.groups)} groups, {len(self.nodes)-len(self.groups)} nodes. ==="
         )
+
+        for idx, node in enumerate(self.nodes[120:]):
+            if node.type.endswith("group"):
+                print(node.type)
+            else:
+                print(node.get_full_text())
 
     def run(self):
         self.parse_html_to_nodes()
