@@ -8,7 +8,6 @@ from utils.logger import logger, Runtimer
 from sentence_transformers import SentenceTransformer, CrossEncoder
 from sentence_transformers import util as st_util
 from termcolor import colored
-from utils.envs import enver
 
 
 def df_column_to_torch_tensor(df_column):
