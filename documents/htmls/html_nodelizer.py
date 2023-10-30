@@ -229,7 +229,10 @@ class HeaderNode(Node):
         return self.level
 
     def get_text(self):
-        self.text = self.element.text.strip()
+        self.text = ""
+        for child in self.element.children:
+            if isinstance(child, bs4.element.NavigableString):
+                self.text += child.strip()
         return self.text
 
     @abstractmethod
@@ -270,6 +273,18 @@ class ArxivHeaderNode(HeaderNode):
         else:
             self.number = ""
         return self.number
+
+
+class SpecHeaderNode(HeaderNode):
+    def get_number(self):
+        # <span class="header-section-number">1.1</span>
+        span_element = self.element.find("span", class_="header-section-number")
+        if span_element:
+            self.header_number = span_element.text.strip()
+        else:
+            self.header_number = ""
+
+        return self.header_number
 
 
 class CodeNode(Node):
@@ -448,32 +463,39 @@ class SpecElementNodelizer:
         if isinstance(element, bs4.element.NavigableString):
             node = StringNode(element)
             if not node.get_text().strip():
-                node = None
+                node = IgnorableNode(element)
         else:
             tag = element.name
             class_str = " ".join(element.get("class", []))
-            children_cnt = len(list(element.children))
 
-            if children_cnt == 1 and isinstance(
-                list(element.children)[0], bs4.element.NavigableString
-            ):
-                node = TextNode(element)
-            elif class_str and class_str.startswith("section"):
-                node = SectionGroupNode(element)
-            elif class_str == "figure":
-                node = FigureGroupNode(element)
-            elif class_str == "table":
-                node = TableGroupNode(element)
-            elif tag in ["ul", "ol", "li"]:
-                node = ListGroupNode(element)
-            elif tag in ["blockquote"]:
-                node = BlockquoteGroupNode(element)
-            elif tag in ["details"]:
-                node = DetailsGroupNode(element)
-            elif tag in ["style"]:
+            if tag in ["style"]:
                 node = StyleNode(element)
+            elif tag in ["script"]:
+                node = JavascriptNode(element)
             elif tag in ["noscript"]:
                 node = IgnorableNode(element)
+            elif tag in ["div"]:
+                if re.search("^section", class_str):
+                    node = SectionGroupNode(element)
+                elif class_str == "figure":
+                    node = FigureGroupNode(element)
+                elif class_str == "table":
+                    node = TableGroupNode(element)
+                elif re.search("sourceCode", class_str):
+                    node = CodeNode(element)
+                else:
+                    node = DivGroupNode(element)
+            elif tag in ["ul", "ol", "li"]:
+                children_cnt = len(list(element.children))
+                if children_cnt == 1 and isinstance(
+                    list(element.children)[0], bs4.element.NavigableString
+                ):
+                    node = TextNode(element)
+                else:
+                    node = ListGroupNode(element)
+            elif tag in ["blockquote", "details"]:
+                node = GroupNode(element)
+                node.type = f"{tag}_group"
             elif tag in ["h1", "h2", "h3", "h4", "h5", "h6"]:
                 node = HeaderNode(element)
             elif tag in ["img"]:
@@ -482,16 +504,18 @@ class SpecElementNodelizer:
                 node = TableNode(element)
             elif tag in ["a"]:
                 node = HyperlinkNode(element)
-            elif class_str == "sourceCode" or tag == "pre":
+            elif tag in ["pre", "code"]:
                 node = CodeNode(element)
-            elif tag in ["script"]:
-                node = JavascriptNode(element)
+            elif tag in ["p"]:
+                if re.search("caption", class_str):
+                    node = CaptionNode(element)
+                else:
+                    node = ParagraphNode(element)
             elif tag in [
                 "del",
                 "em",
                 "i",
                 "mark",
-                "p",
                 "span",
                 "strong",
                 "sub",
@@ -504,13 +528,11 @@ class SpecElementNodelizer:
             elif tag in ["hr", "br"]:
                 node = SeparatorNode(element)
             else:
-                if node is None:
-                    if tag in ["div"]:
-                        node = DivGroupNode(element)
-                    else:
-                        print(element)
-                        node = TextNode(element)
-                        # raise NotImplementedError
+                pass
+
+        if node is None:
+            print(element)
+            raise NotImplementedError("Can not categorize element!")
 
         self.node = node
 
@@ -629,7 +651,6 @@ class HTMLNodelizer:
     def traverse_element(self, element, parent_node):
         for child in element.children:
             node = self.get_element_nodelizer_class()(child).node
-
             if node:
                 if node.type in ["style", "script"]:
                     self.style_nodes.append(node)
@@ -647,15 +668,14 @@ class HTMLNodelizer:
                 if node.type.endswith("group"):
                     self.traverse_element(child, parent_node=node)
             else:
-                print(child.name, child.id)
                 print(child)
-                raise NotImplementedError
+                raise NotImplementedError("Node is None!")
 
     def parse_html_to_nodes(self):
         self.main_element = self.get_main_element()
         self.main_node = SectionGroupNode(self.main_element)
         self.traverse_element(element=self.main_element, parent_node=self.main_node)
-        print(f"{len(self.nodes)} nodes parsed.")
+
         for idx, node in enumerate(self.nodes):
             print(f"{idx+1}: {node.type}")
             if node.type == "header":
@@ -665,6 +685,10 @@ class HTMLNodelizer:
                 self.prev = self.nodes[idx - 1]
             if idx < len(self.nodes) - 1:
                 self.next = self.nodes[idx + 1]
+        self.groups = [node for node in self.nodes if node.type.endswith("group")]
+        print(
+            f"=== {len(self.groups)} groups, {len(self.nodes)-len(self.groups)} nodes. ==="
+        )
 
     def run(self):
         self.parse_html_to_nodes()
