@@ -34,6 +34,7 @@ class OSEnver:
         cuda_device=True,
         cuda_alloc=True,
         huggingface=True,
+        huggingface_offline=False,
         openai=False,
         ninomae=False,
         tiktoken_cache=False,
@@ -63,10 +64,12 @@ class OSEnver:
             """
             * https://stackoverflow.com/questions/63312859/how-to-change-huggingface-transformers-default-cache-directory
             * https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables
+            # https://huggingface.co/docs/huggingface_hub/guides/manage-cache
             """
             cache_root = Path(__file__).parents[2] / ".cache"
             cache_root.mkdir(parents=True, exist_ok=True)
             hf_envs = {
+                "XDG_CACHE_HOME": ".",
                 "HF_HOME": ".",
                 "XDG_CACHE_HOME": ".",
                 "TRANSFORMERS_CACHE": "hub",
@@ -74,7 +77,10 @@ class OSEnver:
                 "HUGGINGFACE_ASSETS_CACHE": "assets",
                 "HUGGING_FACE_HUB_TOKEN": "token",
                 # "HF_DATASETS_CACHE": "datasets",
+                # "HF_HUB_OFFLINE": "1",
             }
+            if huggingface_offline:
+                hf_envs.update({"HF_HUB_OFFLINE": "1"})
             for env_name, env_path in hf_envs.items():
                 self.envs[env_name] = str(cache_root / "huggingface" / f"{env_path}")
                 # logger.note(str(cache_root / "huggingface" / f"{env_path}"))
