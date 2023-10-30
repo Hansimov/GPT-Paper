@@ -73,8 +73,8 @@ class Node:
         self.text = self.element.text.strip()
         return self.text
 
-    def get_full_text(self):
-        if self.get_description():
+    def get_full_text(self, add_description=True):
+        if add_description and self.get_description():
             self.full_text = f"{self.get_description()}: {self.get_text()}"
         else:
             self.full_text = self.get_text()
@@ -173,8 +173,11 @@ class TableNode(Node):
         self.text = str(self.get_markdown())
         return self.text
 
-    def get_full_text(self):
-        self.full_text = f"{self.get_description()}:\n{self.get_text()}"
+    def get_full_text(self, add_description=True):
+        if add_description:
+            self.full_text = f"{self.get_description()}:\n{self.get_text()}"
+        else:
+            self.full_text = self.get_text()
         return self.full_text
 
     def get_columns(self):
@@ -193,13 +196,13 @@ class TextNode(Node):
     def parse_element(self):
         self.type = "text"
 
-    def get_full_text(self):
+    def get_full_text(self, add_description=True):
         if self.tag in ["p", "span", "li"]:
             self.tagged_text = self.get_text()
         else:
             self.tagged_text = f"<{self.tag}>{self.get_text()}</{self.tag}>"
 
-        if self.class_str:
+        if self.class_str and add_description:
             self.full_text = f"{self.get_description()}: {self.tagged_text}"
         else:
             self.full_text = self.tagged_text
@@ -214,8 +217,11 @@ class StringNode(Node):
         self.text = str(self.element)
         return self.text
 
-    def get_full_text(self):
-        self.full_text = self.get_text()
+    def get_full_text(self, add_description=True):
+        if add_description:
+            self.full_text = f"{self.get_description()}: {self.get_text()}"
+        else:
+            self.full_text = self.get_text()
         return self.full_text
 
 
@@ -251,10 +257,13 @@ class HeaderNode(Node):
     def get_number(self):
         pass
 
-    def get_full_text(self):
-        self.full_text = (
-            f"{self.get_description()}: [{self.get_number()}] {self.get_text()}"
-        )
+    def get_full_text(self, add_description=True):
+        if add_description:
+            self.full_text = (
+                f"{self.get_description()}: [{self.get_number()}] {self.get_text()}"
+            )
+        else:
+            self.full_text = f"[{self.get_number()}] {self.get_text()}"
         return self.full_text
 
     def get_indented_full_text(self, indent=2, indent_char=" ", begin_char="-"):
@@ -348,8 +357,13 @@ class ImageNode(Node):
         self.src = self.element.get("src", "")
         return self.src
 
-    def get_full_text(self):
-        self.full_text = f"{self.type}: ![{self.get_text()}]({self.get_src()})"
+    def get_full_text(self, add_description=True):
+        if add_description:
+            self.full_text = (
+                f"{self.get_description()}: ![{self.get_text()}]({self.get_src()})"
+            )
+        else:
+            self.full_text = f"![{self.get_text()}]({self.get_src()})"
         return self.full_text
 
 
@@ -377,8 +391,11 @@ class ParagraphNode(Node):
     def parse_element(self):
         self.type = "paragraph"
 
-    def get_full_text(self):
-        self.full_text = self.get_text()
+    def get_full_text(self, add_description=True):
+        if add_description:
+            self.full_text = f"{self.get_description()}: {self.get_text()}"
+        else:
+            self.full_text = self.get_text()
         return self.full_text
 
 
@@ -410,10 +427,10 @@ class GroupNode(Node):
         self.text = "\n".join(texts)
         return self.text
 
-    def get_full_text(self):
+    def get_full_text(self, add_description=True):
         full_texts = []
         for child in self.children:
-            full_texts.append(child.get_full_text())
+            full_texts.append(child.get_full_text(add_description=add_description))
         self.full_text = "\n".join(full_texts)
         return self.full_text
 
