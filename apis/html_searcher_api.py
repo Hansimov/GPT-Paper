@@ -1,9 +1,11 @@
+import json
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from documents.htmls.html_nodelizer import HTMLNodelizer
 from documents.embeddings.embedder import EmbeddingEncoder, Reranker
 from networks.html_fetcher import HTMLFetcher
+from typing import Union
 
 
 class APIApp:
@@ -30,22 +32,18 @@ class APIApp:
         }
 
     class EmbeddingPostItem(BaseModel):
-        text: str = None
-
-    class EmbeddingPostResponseItem(BaseModel):
-        text: str = None
-        embedding: list[float] = Field(
+        text: Union[str, list[str]] = Field(
             default=None,
-            description="`list[float]`: Embeddings of the text",
+            description="`str` or `list[str]`: Text(s) to calculate embedding",
         )
 
     def calculate_embedding(self, item: EmbeddingPostItem):
-        text = item.text
-        embedding = self.embedding_encoder.calc_embedding(text)
-        return {
-            "text": text,
-            "embedding": embedding.tolist(),
-        }
+        if isinstance(item.text, str):
+            result = self.embedding_encoder.calc_embedding(item.text)
+        else:
+            result = [self.embedding_encoder.calc_embedding(text) for text in item.text]
+
+        return result
 
     class RerankPostItem(BaseModel):
         query: str = None
@@ -54,38 +52,72 @@ class APIApp:
             description="`list[str]`: Passages to rerank.",
         )
         sort: bool = Field(
-            default=True,
-            description="Sort the reranked passages by score",
+            default=False,
+            description="Sort the reranked passages by rerank score",
+        )
+        include_query: bool = Field(
+            default=False, description="Include the query in the response"
+        )
+        include_passages: bool = Field(
+            default=False,
+            description="Include the passages in the response, will return `list[dict]`"
+            'Each dict item: `{"passage": ..., "score": ...}`',
+        )
+        max_tokens: int = Field(
+            default=None,
+            description="Max tokens of returned reranked passages texts",
+        )
+        top_k: int = Field(
+            default=None,
+            description="Max count of returned reranked passages",
         )
 
-    class RerankPostResponseItem(BaseModel):
+    class RerankPostResponseDictItem(BaseModel):
         query: str = None
-        rerank_scores: list[dict] = Field(
+        rerank_results: list[dict] = Field(
             default=None,
-            description="`list[dict]`: Rerank scores of the passages. "
+            description="`list[dict]`: Reranked results of the passages"
             'Each dict item: `{"passage": ..., "score": ...}`',
         )
 
+    class RerankPostResponseListItem(BaseModel):
+        query: str = None
+        rerank_results: list[float] = Field(
+            default=None,
+            description="`list[float]`: Rerank scores of the passages."
+            "'sort' must be `false`",
+        )
+
     def rerank_passages_with_query(self, item: RerankPostItem):
-        pairs = [[item.query, passage] for passage in item.passages]
-        rerank_scores = self.reranker.compute_score(pairs).tolist()
-        rerank_scores_with_passages = [
-            {
-                "passage": passage,
-                "score": score,
-            }
-            for passage, score in zip(item.passages, rerank_scores)
-        ]
-        if item.sort:
-            rerank_scores_with_passages = sorted(
-                rerank_scores_with_passages, key=lambda x: x["score"], reverse=True
+        if item.sort and not item.include_passages:
+            raise HTTPException(
+                "'include_passages' must be `true` when 'sort' is `true`"
             )
+        pairs = [[item.query, passage] for passage in item.passages]
+        rerank_scores = self.reranker.compute_scores(pairs)
+
+        if item.include_passages:
+            rerank_results = [
+                {
+                    "passage": passage,
+                    "score": score,
+                }
+                for passage, score in zip(item.passages, rerank_scores)
+            ]
+        else:
+            rerank_results = rerank_scores
+
+        if item.sort:
+            rerank_results = sorted(
+                rerank_results, key=lambda x: x["score"], reverse=True
+            )
+
         return {
             "query": item.query,
-            "rerank_scores": rerank_scores_with_passages,
+            "rerank_results": rerank_results,
         }
 
-    class RetrievePostItem(BaseModel):
+    class SearchPostItem(BaseModel):
         query: str = None
         url: str = None
         sort: bool = Field(
@@ -105,7 +137,7 @@ class APIApp:
             description="Max number of passages",
         )
 
-    def retrieve_passages_with_query(self, item: RetrievePostItem):
+    def search_passages_with_query(self, item: SearchPostItem):
         pass
 
     def setup_routes(self):
@@ -113,20 +145,25 @@ class APIApp:
             "/url",
             summary="Fetch HTML from URL",
         )(self.fetch_html_from_url)
+
         self.app.post(
             "/embedding",
             summary="Calculate embedding for text",
-            response_model=self.EmbeddingPostResponseItem,
         )(self.calculate_embedding)
+
         self.app.post(
             "/rerank",
             summary="Calculate rerank scores for list of passages with query",
-            response_model=self.RerankPostResponseItem,
+            response_model=Union[
+                self.RerankPostResponseDictItem,
+                self.RerankPostResponseListItem,
+            ],
         )(self.rerank_passages_with_query)
+
         self.app.post(
-            "/retrieve",
-            summary="Retrieve passages from url with query",
-        )(self.retrieve_passages_with_query)
+            "/search",
+            summary="Search passages from url with query",
+        )(self.search_passages_with_query)
 
 
 app = APIApp().app
