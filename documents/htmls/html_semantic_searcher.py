@@ -36,8 +36,11 @@ class UrlToEmbeddingsDfConverter:
 
 
 class HTMLSemanticSearcher:
-    def __init__(self, url, embedding_encoder=None, reranker=None):
+    def __init__(
+        self, url, embedding_encoder=None, reranker=None, document_entity=None
+    ):
         self.url = url
+        self.document_entity = document_entity
         self.load_models(embedding_encoder=embedding_encoder, reranker=reranker)
         self.get_embeddings_df()
 
@@ -53,19 +56,23 @@ class HTMLSemanticSearcher:
             self.reranker = Reranker()
 
     def get_embeddings_df(self):
-        self.url_to_embeddings_df_converter = UrlToEmbeddingsDfConverter(
-            self.url, embedding_encoder=self.embeddings_encoder
-        )
-        self.embeddings_df = self.url_to_embeddings_df_converter.get_embeddings_df()
+        if self.document_entity:
+            self.embeddings_df = self.document_entity.embeddings_df
+        else:
+            self.url_to_embeddings_df_converter = UrlToEmbeddingsDfConverter(
+                self.url, embedding_encoder=self.embeddings_encoder
+            )
+            self.embeddings_df = self.url_to_embeddings_df_converter.embeddings_df
 
     def search(self, query, retrieve_top_k=50, rerank_top_k=10):
         self.query = query
         self.retrieve(retrieve_top_k)
         self.rerank(rerank_top_k)
+        return self.top_rerank_results
 
-    def retrieve(self, top_k=50, display=True):
+    def retrieve(self, top_k=50, display=False):
         query_embeddings = self.embeddings_encoder.calc_embedding(
-            query, query_prefix=False
+            self.query, query_prefix=False
         )
         self.retrieve_results = []
         for row_idx, row in self.embeddings_df.iterrows():
