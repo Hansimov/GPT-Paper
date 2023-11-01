@@ -22,12 +22,13 @@ class EmbeddingSearcher:
 
 class HTMLSemanticSearcher:
     def __init__(self, url):
+        self.url = url
         self.get_embeddings_df()
         self.load_embeddings_encoder()
 
     def get_embeddings_df(self):
-        self.embeddings_df = UrlToEmbeddingsDfConverter(url).get_embeddings_df()
-        self.embedings_list = self.embeddings_df["embedding"].tolist()
+        self.embeddings_df = UrlToEmbeddingsDfConverter(self.url).get_embeddings_df()
+        self.embeddings_list = self.embeddings_df["embedding"].tolist()
 
     def load_embeddings_encoder(self):
         self.embeddings_encoder = EmbeddingEncoder()
@@ -43,7 +44,7 @@ class HTMLSemanticSearcher:
             query, query_prefix=False
         )
         self.retrieve_score_tuples = []
-        for i, embedding in enumerate(self.embedings_list):
+        for i, embedding in enumerate(self.embeddings_list):
             retrieve_score = query_embeddings @ embedding.T
             self.retrieve_score_tuples.append((i, retrieve_score))
 
@@ -87,6 +88,7 @@ class HTMLSemanticSearcher:
 
 
 if __name__ == "__main__":
-    query = "author team of this document"
+    print(f"Query: {query}")
     html_semantic_searcher = HTMLSemanticSearcher(url)
     html_semantic_searcher.search(query)
+    print(f"Query: {query}")

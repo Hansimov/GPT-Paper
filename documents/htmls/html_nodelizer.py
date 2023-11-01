@@ -246,6 +246,14 @@ class HeaderNode(Node):
         self.level = int(self.tag[-1])
         return self.level
 
+    def get_description(self):
+        if self.get_level() <= 1:
+            self.description = "section"
+        else:
+            self.description = "subsection"
+
+        return self.description
+
     def get_text(self):
         self.text = ""
         for child in self.element.children:
@@ -579,6 +587,7 @@ class SpecElementNodelizer:
                 else:
                     node = ParagraphNode(element)
             elif tag in [
+                "b",
                 "del",
                 "em",
                 "i",
@@ -758,8 +767,10 @@ class HTMLNodelizer:
         # for idx, node in enumerate(self.nodes):
         #     if node.type.endswith("group"):
         #         print(node.type)
-        #     else:
+        #     elif node.type == "header":
         #         print(node.get_full_text())
+        #     else:
+        #         pass
 
     def run(self):
         self.parse_html_to_nodes()

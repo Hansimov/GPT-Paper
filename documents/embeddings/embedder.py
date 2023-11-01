@@ -57,7 +57,7 @@ class Reranker:
         if model_name:
             self.model_name = model_name
         else:
-            self.model_name = "BAAI/bge-reranker-base"
+            self.model_name = "BAAI/bge-reranker-large"
         self.is_load_model = False
 
     def load_model(self, quiet=True):
