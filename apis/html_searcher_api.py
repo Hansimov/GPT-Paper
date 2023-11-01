@@ -13,14 +13,31 @@ class DocumentEntity:
     def __init__(
         self,
         url: str = None,
-        html_fetcher: HTMLFetcher = None,
-        html_nodelizer: HTMLNodelizer = None,
-        node_embedder: NodeEmbedder = None,
+        app=None,
     ):
         self.url = url
-        self.html_fetcher = html_fetcher
-        self.html_nodelizer = html_nodelizer
-        self.node_embedder = node_embedder
+        self.app = app
+
+        self.html_fetcher = HTMLFetcher(url)
+        self.html_fetcher.run()
+        self.html_nodelizer = HTMLNodelizer(
+            html_path=self.html_fetcher.output_path,
+            url=self.html_fetcher.html_url,
+            domain=self.html_fetcher.domain,
+        )
+        self.html_nodelizer.run()
+        self.node_embedder = NodeEmbedder(
+            html_nodelizer=self.html_nodelizer,
+            embedding_encoder=self.app.embedding_encoder,
+        )
+        self.node_embedder.run()
+
+        self.init_paths()
+
+    def init_paths(self):
+        self.html_path = self.html_nodelizer.html_path
+        self.nodes = self.html_nodelizer.nodes
+        self.embeddings_df_pkl_path = self.node_embedder.embeddings_df_pkl_path
 
 
 class APIApp:
@@ -56,35 +73,16 @@ class APIApp:
     def embed_html_from_url(self, item: EmbedFromUrlPostItem):
         url = item.url
         if url not in self.data_store:
-            html_fetcher = HTMLFetcher(url)
-            html_fetcher.run()
-            html_nodelizer = HTMLNodelizer(
-                html_path=html_fetcher.output_path,
-                url=html_fetcher.html_url,
-                domain=html_fetcher.domain,
-            )
-            html_nodelizer.run()
-            node_embedder = NodeEmbedder(
-                html_nodelizer=html_nodelizer,
-                embedding_encoder=self.embedding_encoder,
-            )
-            node_embedder.run()
-            self.data_store[url] = DocumentEntity(
-                url=url,
-                html_fetcher=html_fetcher,
-                html_nodelizer=html_nodelizer,
-                node_embedder=node_embedder,
-            )
+            document_entity = DocumentEntity(url=url, app=self)
+            self.data_store[url] = document_entity
         else:
-            pass
+            document_entity = self.data_store[url]
 
         return {
             "url": url,
-            "html_path": self.data_store[url].html_fetcher.output_path,
-            "embeddings_df_pkl_path": self.data_store[
-                url
-            ].node_embedder.embeddings_df_pkl_path,
-            "nodes_count": len(self.data_store[url].html_nodelizer.nodes),
+            "html_path": document_entity.html_path,
+            "embeddings_df_pkl_path": document_entity.embeddings_df_pkl_path,
+            "nodes_count": len(document_entity.nodes),
         }
 
     class EmbeddingPostItem(BaseModel):
