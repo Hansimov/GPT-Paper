@@ -47,11 +47,13 @@ class EmbeddingEncoder:
     def calc_embedding(self, text, normalize_embeddings=True, query_prefix=False):
         if not self.is_load_model:
             self.load_model()
-        print(f"> Encode embedding for: {text}")
+        # print(f"> Encode embedding for: {text}")
         text = SeparatorRemover(text).text
         if query_prefix:
             text = self.query_prefix + text
-        embeddings = self.model.encode(text, normalize_embeddings=normalize_embeddings)
+        embeddings = self.model.encode(
+            text, normalize_embeddings=normalize_embeddings
+        ).tolist()
         return embeddings
 
 
@@ -88,7 +90,7 @@ class Reranker:
         self.is_load_model = True
         logger.exit_quiet(quiet)
 
-    def compute_score(self, pairs):
+    def compute_scores(self, pairs):
         if not self.is_load_model:
             self.load_model()
         # ['query', 'passage']
@@ -101,7 +103,9 @@ class Reranker:
                 return_tensors="pt",
                 # max_length=512,
             ).to(self.device)
-            scores = self.model(**inputs, return_dict=True).logits.view(-1).float()
+            scores = (
+                self.model(**inputs, return_dict=True).logits.view(-1).float().tolist()
+            )
 
         # scores = self.reranker.compute_score(pairs)
         return scores
