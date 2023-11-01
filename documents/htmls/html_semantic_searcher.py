@@ -79,7 +79,7 @@ class HTMLSemanticSearcher:
             node_idx = row["idx"]
             embedding = row["embedding"]
             # full_text = row["full_text_with_description"]
-            retrieve_score = query_embeddings @ embedding.T
+            retrieve_score = (query_embeddings @ embedding.T).tolist()
             self.retrieve_results.append(
                 {
                     "node_idx": node_idx,

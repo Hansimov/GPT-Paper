@@ -150,6 +150,17 @@ class APIApp:
             retrieve_top_k=item.retrieve_top_k,
             rerank_top_k=item.rerank_top_k,
         )
+
+        search_results = [
+            {
+                **search_result,
+                "text": self.html_semantic_searcher.embeddings_df.iloc[
+                    search_result["row_idx"]
+                ]["full_text_with_description"],
+            }
+            for search_result in search_results
+        ]
+
         return {
             "url": url,
             "query": query,
