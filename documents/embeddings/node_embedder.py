@@ -5,11 +5,14 @@ import pandas as pd
 
 
 class NodeEmbedder:
-    def __init__(self, html_nodelizer):
+    def __init__(self, html_nodelizer, embedding_encoder=None):
         self.html_nodelizer = html_nodelizer
         self.html_path = html_nodelizer.html_path
         self.embeddings_df_pkl_path = self.html_path.with_suffix(".embeddings.pkl")
-        self.embedding_encoder = EmbeddingEncoder()
+        if embedding_encoder:
+            self.embedding_encoder = embedding_encoder
+        else:
+            self.embedding_encoder = EmbeddingEncoder()
         self.load_embedding_cache()
 
     def load_embedding_cache(self):
@@ -48,7 +51,7 @@ class NodeEmbedder:
                     node_embedding = self.embedding_encoder.calc_embedding(
                         node_full_text
                     )
-                    print(node_embedding)
+                    # print(node.idx, node_embedding)
                     embedding_item = {
                         "idx": node.idx,
                         "type": node.type,
@@ -58,6 +61,9 @@ class NodeEmbedder:
                         "embedding": node_embedding,
                     }
                     self.embedding_items.append(embedding_item)
+
+    def run(self):
+        self.compute_embeddings()
         self.dump_embeddings_to_pickle()
 
 
@@ -71,4 +77,4 @@ if __name__ == "__main__":
     )
     html_nodelizer.run()
     node_embedder = NodeEmbedder(html_nodelizer)
-    node_embedder.compute_embeddings()
+    node_embedder.run()
