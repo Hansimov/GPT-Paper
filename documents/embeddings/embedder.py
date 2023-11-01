@@ -44,16 +44,18 @@ class EmbeddingEncoder:
         self.is_load_model = True
         logger.exit_quiet(quiet)
 
-    def calc_embedding(self, text, normalize_embeddings=True, query_prefix=False):
+    def calc_embedding(
+        self, text, normalize_embeddings=True, query_prefix=False, tolist=False
+    ):
         if not self.is_load_model:
             self.load_model()
         # print(f"> Encode embedding for: {text}")
         text = SeparatorRemover(text).text
         if query_prefix:
             text = self.query_prefix + text
-        embeddings = self.model.encode(
-            text, normalize_embeddings=normalize_embeddings
-        ).tolist()
+        embeddings = self.model.encode(text, normalize_embeddings=normalize_embeddings)
+        if tolist:
+            embeddings = embeddings.tolist()
         return embeddings
 
 

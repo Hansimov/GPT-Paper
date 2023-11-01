@@ -72,7 +72,7 @@ class HTMLSemanticSearcher:
 
     def retrieve(self, top_k=50, display=False):
         query_embeddings = self.embeddings_encoder.calc_embedding(
-            self.query, query_prefix=False
+            self.query, query_prefix=False, tolist=False
         )
         self.retrieve_results = []
         for row_idx, row in self.embeddings_df.iterrows():

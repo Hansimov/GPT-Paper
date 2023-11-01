@@ -95,9 +95,12 @@ class APIApp:
 
     def calculate_embedding(self, item: EmbeddingPostItem):
         if isinstance(item.text, str):
-            result = self.embedding_encoder.calc_embedding(item.text)
+            result = self.embedding_encoder.calc_embedding(text=item.text, tolist=True)
         else:
-            result = [self.embedding_encoder.calc_embedding(text) for text in item.text]
+            result = [
+                self.embedding_encoder.calc_embedding(text=text, tolist=True)
+                for text in item.text
+            ]
         return result
 
     class RerankPostItem(BaseModel):
