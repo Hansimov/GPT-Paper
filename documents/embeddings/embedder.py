@@ -1,7 +1,10 @@
 import os
+import torch
 
 from utils.envs import enver
 from utils.logger import logger, Runtimer
+from sentence_transformers import SentenceTransformer
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 
 class SeparatorRemover:
@@ -28,15 +31,14 @@ class EmbeddingEncoder:
         self.is_load_model = False
 
     def load_model(self, quiet=False):
-        from sentence_transformers import SentenceTransformer
-
         if self.is_load_model:
             return
         logger.enter_quiet(quiet)
         logger.note(f"> Using embedding model: [{self.model_name}]")
         enver.set_envs(set_proxy=True, cuda_device=True, huggingface=True)
         os.environ = enver.envs
-        self.model = SentenceTransformer(self.model_name)
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.model = SentenceTransformer(self.model_name, device=self.device)
         enver.restore_envs()
         os.environ = enver.envs
         self.is_load_model = True
@@ -45,6 +47,7 @@ class EmbeddingEncoder:
     def calc_embedding(self, text, normalize_embeddings=True, query_prefix=False):
         if not self.is_load_model:
             self.load_model()
+        print(f"> Encode embedding for: {text}")
         text = SeparatorRemover(text).text
         if query_prefix:
             text = self.query_prefix + text
@@ -60,9 +63,7 @@ class Reranker:
             self.model_name = "BAAI/bge-reranker-large"
         self.is_load_model = False
 
-    def load_model(self, quiet=True):
-        from transformers import AutoModelForSequenceClassification, AutoTokenizer
-
+    def load_model(self, quiet=False):
         if self.is_load_model:
             return
         logger.enter_quiet(quiet)
@@ -74,7 +75,9 @@ class Reranker:
         # self.model = CrossEncoder(self.model_name)
 
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = AutoModelForSequenceClassification.from_pretrained(self.model_name)
+        self.model.to(self.device)
         self.model.eval()
 
         # Setting use_fp16 to True speeds up computation with a slight performance degradation
@@ -86,10 +89,10 @@ class Reranker:
         logger.exit_quiet(quiet)
 
     def compute_score(self, pairs):
+        if not self.is_load_model:
+            self.load_model()
         # ['query', 'passage']
         # [['query1', 'passage1'], ['query2', 'passage2']]
-        import torch
-
         with torch.no_grad():
             inputs = self.tokenizer(
                 pairs,
@@ -97,7 +100,7 @@ class Reranker:
                 truncation=True,
                 return_tensors="pt",
                 # max_length=512,
-            )
+            ).to(self.device)
             scores = self.model(**inputs, return_dict=True).logits.view(-1).float()
 
         # scores = self.reranker.compute_score(pairs)
