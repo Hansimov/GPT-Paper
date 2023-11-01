@@ -4,10 +4,15 @@ Enhance paper search, reading, writing and review with the assistance of GPT.
 
 ## Installation of dependencies
 
-**PyMuPDF**, **httpx**, **markdown2**, **PyDeepLX**, **deep-translator**, **Pygments**, **lxml**, **thefuzz*, **requests-html**, **requests_ntlm**, **fastapi**, **uvicorn**
-
 ```sh
-pip install pymupdf httpx markdown2[all] PyDeepLX deep-translator Pygments lxml thefuzz requests-html requests_ntlm fastapi uvicorn[standard]
+pip install pymupdf markdown2[all] lxml thefuzz
+pip install PyDeepLX deep-translator Pygments
+pip install httpx requests_ntlm requests-html
+pip install fastapi uvicorn[standard] pydantic
+pip install sentence-transformers
+pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipynbname cssutils
+pip install dash dash-mantine-components dash-dangerously-set-inner-html
+pip install --upgrade nougat-ocr[api]
 ```
 
 ## Setup detectron2 and unilm
@@ -31,8 +36,7 @@ Ubuntu:
 * https://tesseract-ocr.github.io/tessdoc/Installation.html#ubuntu
 
 ```sh
-sudo apt install tesseract-ocr
-sudo apt install libtesseract-dev
+sudo apt install tesseract-ocr libtesseract-dev
 ```
 
 Windows:
@@ -47,33 +51,6 @@ pip install pytesseract
 
 * https://github.com/madmaze/pytesseract#installation
 
-
-**sentence-transformers:**
-
-```sh
-pip install sentence-transformers
-```
-
-**JupyterLab:**
-
-```sh
-pip install jupyterlab notebook jupyterlab-widgets ipywidgets jupyter-black ipynbname
-```
-
-**Dash:**
-
-```sh
-pip install dash dash-mantine-components dash-dangerously-set-inner-html
-pip install cssutils
-```
-
-**Nougat:**
-
-* https://github.com/facebookresearch/nougat
-
-```sh
-pip install --upgrade nougat-ocr[api]
-```
 
 
 ## Data pre-processing
@@ -91,4 +68,4 @@ Hers is the dict structure of blocks in a page of a PDF document parsed via PyMu
 ![](https://pymupdf.readthedocs.io/en/latest/_images/img-textpage.png)
 
 
-## Layout Analysis
+### Nodelize HTMLs
