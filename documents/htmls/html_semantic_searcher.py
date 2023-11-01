@@ -119,7 +119,7 @@ class HTMLSemanticSearcher:
             ]
             for retrieve_result in self.top_retrieve_results
         ]
-        self.rerank_scores = self.reranker.compute_scores(rerank_pairs)
+        self.rerank_scores = self.reranker.compute_scores(rerank_pairs, tolist=True)
 
         self.rerank_results = [
             {

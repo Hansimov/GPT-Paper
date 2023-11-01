@@ -112,7 +112,7 @@ class APIApp:
 
     def rerank_passages_with_query(self, item: RerankPostItem):
         pairs = [[item.query, passage] for passage in item.passages]
-        rerank_scores = self.reranker.compute_scores(pairs)
+        rerank_scores = self.reranker.compute_scores(pairs, tolist=True)
         return rerank_scores
 
     class SearchPostItem(BaseModel):

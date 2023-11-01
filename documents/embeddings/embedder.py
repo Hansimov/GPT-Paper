@@ -92,7 +92,7 @@ class Reranker:
         self.is_load_model = True
         logger.exit_quiet(quiet)
 
-    def compute_scores(self, pairs):
+    def compute_scores(self, pairs, tolist=False):
         if not self.is_load_model:
             self.load_model()
         # ['query', 'passage']
@@ -105,9 +105,9 @@ class Reranker:
                 return_tensors="pt",
                 # max_length=512,
             ).to(self.device)
-            scores = (
-                self.model(**inputs, return_dict=True).logits.view(-1).float().tolist()
-            )
+            scores = self.model(**inputs, return_dict=True).logits.view(-1).float()
+            if tolist:
+                scores = scores.tolist()
 
         # scores = self.reranker.compute_score(pairs)
         return scores

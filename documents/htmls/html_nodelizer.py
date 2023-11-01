@@ -302,7 +302,7 @@ class ArxivHeaderNode(HeaderNode):
         # <h1 class="ltx_title ltx_title_document">A Survey of Large Language Models</h1>
         if span_element is not None:
             span_element_class_str = " ".join(span_element.get("class", []))
-            if re.search("ltx_tag_(sub)?section", span_element_class_str):
+            if re.search("ltx_tag_(sub)*section", span_element_class_str):
                 self.number = span_element.text.strip()
 
         return self.number
@@ -638,7 +638,11 @@ class ArxivElementNodelizer:
                 else:
                     pass
             elif tag in ["ul", "ol", "li"]:
-                node = ListGroupNode(element)
+                if re.search("ltx_bibitem", class_str):
+                    node = TextNode(element)
+                    node.description = "bib_item"
+                else:
+                    node = ListGroupNode(element)
             elif tag in ["style"]:
                 node = StyleNode(element)
             elif tag in ["script"]:
