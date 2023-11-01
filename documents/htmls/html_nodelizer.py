@@ -81,6 +81,8 @@ class Node:
         return self.full_text
 
     def get_description(self):
+        if hasattr(self, "description") and self.description:
+            return self.description
         self.description = self.type
         return self.description
 
@@ -293,14 +295,16 @@ class HeaderNode(Node):
 
 class ArxivHeaderNode(HeaderNode):
     def get_number(self):
+        self.number = ""
+        span_element = self.element.find("span")
         # <span class="ltx_tag ltx_tag_section">2 </span>
         # <span class="ltx_tag ltx_tag_subsection">2.1 </span>
-        span_element = self.element.find("span")
-        span_element_class_str = " ".join(span_element.get("class", []))
-        if re.search("ltx_tag_(sub)?section", span_element_class_str):
-            self.number = span_element.text.strip()
-        else:
-            self.number = ""
+        # <h1 class="ltx_title ltx_title_document">A Survey of Large Language Models</h1>
+        if span_element is not None:
+            span_element_class_str = " ".join(span_element.get("class", []))
+            if re.search("ltx_tag_(sub)?section", span_element_class_str):
+                self.number = span_element.text.strip()
+
         return self.number
 
 
@@ -624,9 +628,7 @@ class ArxivElementNodelizer:
             tag = element.name
             class_str = " ".join(element.get("class", []))
 
-            if tag in ["section"] or (
-                tag in ["div"] and re.search("ltx_abstract", class_str)
-            ):
+            if tag in ["section"]:
                 node = SectionGroupNode(element)
             elif tag in ["figure"]:
                 if re.search("ltx_table", class_str):
@@ -651,18 +653,23 @@ class ArxivElementNodelizer:
                 node = TableNode(element)
             elif tag in ["figcaption"]:
                 node = CaptionNode(element)
-            elif tag in ["div", "p"]:
+            elif tag in ["div", "p", "span"]:
                 if re.search("ltx_p(ara)?", class_str):
                     node = ParagraphNode(element)
                 elif re.search("ltx_authors", class_str):
                     node = AuthorNode(element)
-                else:
-                    pass
-            elif tag in ["span"]:
-                if re.search("ltx_role_footnotetext", class_str):
+                elif re.search("ltx_abstract", class_str):
+                    node = SectionGroupNode(element)
+                    node.description = "abstract"
+                elif re.search("ltx_keywords", class_str):
+                    node = SectionGroupNode(element)
+                    node.description = "keywords"
+                elif re.search("ltx_role_footnotetext", class_str):
                     node = TextNode(element)
                 elif re.search("ltx_(tag_bibitem|bibblock)", class_str):
                     node = TextNode(element)
+                elif re.search("ltx_transformed_(outer|inner)", class_str):
+                    node = SectionGroupNode(element)
                 elif re.search("ltx_ERROR", class_str):
                     node = IgnorableNode(element)
                 else:
