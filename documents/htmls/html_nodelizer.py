@@ -204,7 +204,11 @@ class TextNode(Node):
         else:
             self.tagged_text = f"<{self.tag}>{self.get_text()}</{self.tag}>"
 
-        if add_description:
+        if add_description and self.get_description() not in [
+            "text",
+            "paragraph",
+            "string",
+        ]:
             self.full_text = f"{self.get_description()}: {self.tagged_text}"
         else:
             self.full_text = self.tagged_text
@@ -246,11 +250,7 @@ class HeaderNode(Node):
         return self.level
 
     def get_description(self):
-        if self.get_level() <= 1:
-            self.description = "section"
-        else:
-            self.description = "subsection"
-
+        self.description = "section"
         return self.description
 
     def get_text(self):
@@ -769,13 +769,17 @@ class HTMLNodelizer:
             f"=== {len(self.groups)} groups, {len(self.nodes)-len(self.groups)} nodes. ==="
         )
 
-        # for idx, node in enumerate(self.nodes):
-        #     if node.type.endswith("group"):
-        #         print(node.type)
-        #     elif node.type == "header":
-        #         print(node.get_full_text())
-        #     else:
-        #         pass
+        for idx, node in enumerate(self.nodes):
+            if node.type.endswith("group"):
+                print(f"[{node.type}]")
+            elif node.type in ["table"]:
+                print(node.type)
+            else:
+                print(node.get_full_text())
+
+        print(
+            f"=== {len(self.groups)} groups, {len(self.nodes)-len(self.groups)} nodes. ==="
+        )
 
     def run(self):
         self.parse_html_to_nodes()
