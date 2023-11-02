@@ -220,10 +220,7 @@ class StringNode(Node):
         return self.text
 
     def get_full_text(self, add_description=True):
-        if add_description:
-            self.full_text = f"{self.get_description()}: {self.get_text()}"
-        else:
-            self.full_text = self.get_text()
+        self.full_text = self.get_text()
         return self.full_text
 
 
@@ -270,7 +267,7 @@ class HeaderNode(Node):
     def get_full_text(self, add_description=True):
         if add_description:
             self.full_text = (
-                f"{self.get_description()}: [{self.get_number()}] {self.get_text()}"
+                f"{self.get_description()} {self.get_number()}: {self.get_text()}"
             )
         else:
             self.full_text = f"[{self.get_number()}] {self.get_text()}"
@@ -404,10 +401,7 @@ class ParagraphNode(Node):
         self.type = "paragraph"
 
     def get_full_text(self, add_description=True):
-        if add_description:
-            self.full_text = f"{self.get_description()}: {self.get_text()}"
-        else:
-            self.full_text = self.get_text()
+        self.full_text = self.get_text()
         return self.full_text
 
 
