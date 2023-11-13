@@ -570,7 +570,7 @@ class SpecElementNodelizer:
         if isinstance(element, bs4.element.NavigableString):
             node = StringNode(element)
             node_text = node.get_text().strip()
-            if not node_text:
+            if not node_text or isinstance(element, bs4.element.Comment):
                 node = IgnorableNode(element)
         else:
             tag = element.name
@@ -797,8 +797,9 @@ class HTMLNodelizer:
 
         for idx, node in enumerate(self.nodes):
             # print(f"{idx+1}: {node.type}")
-            if node.type == "header":
-                print(node.get_expanded_full_text())
+            # if node.type == "header":
+            #     print(node.get_full_text())
+            #     print(node.get_expanded_full_text(self.nodes))
             node.idx = idx
             if idx > 0:
                 self.prev = self.nodes[idx - 1]
