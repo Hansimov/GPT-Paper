@@ -163,10 +163,10 @@ class APIApp:
             processed_search_results.append(
                 {
                     **search_result,
+                    "source": node.get_section_source_list(),
                     "original_text": embeddings_df.iloc[row_idx][
                         "full_text_with_description"
                     ],
-                    "source": node.get_section_source_list(),
                     "text": node.get_expanded_full_text(nodes),
                 }
             )

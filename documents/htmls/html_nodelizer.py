@@ -169,16 +169,27 @@ class Node:
 
     def get_expanded_nodes(self, nodes):
         self.expanded_nodes = []
-        if self.type == "header":
-            for node in nodes[self.idx :]:
-                if node.type == "section_group":
-                    break
-                elif node.type.endswith("group"):
-                    continue
-                else:
-                    self.expanded_nodes.append(node)
-        else:
-            self.expanded_nodes.append(self)
+
+        for node in nodes[: self.idx][::-1]:
+            if node.type == "section_group":
+                break
+            elif node.type.endswith("group"):
+                continue
+            else:
+                self.expanded_nodes.append(node)
+
+        self.expanded_nodes.reverse()
+
+        for node in nodes[self.idx :]:
+            if node.type == "section_group":
+                break
+            elif node.type.endswith("group"):
+                continue
+            else:
+                self.expanded_nodes.append(node)
+
+        if not self.expanded_nodes:
+            self.expanded_nodes = [self]
 
         return self.expanded_nodes
 
