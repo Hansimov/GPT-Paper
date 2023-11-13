@@ -157,6 +157,9 @@ class APIApp:
                 "text": self.html_semantic_searcher.embeddings_df.iloc[
                     search_result["row_idx"]
                 ]["full_text_with_description"],
+                "source": self.data_store[url]
+                .html_nodelizer.nodes[search_result["node_idx"]]
+                .get_section_source_list(),
             }
             for search_result in search_results
         ]

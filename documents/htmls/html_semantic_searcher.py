@@ -91,11 +91,11 @@ class HTMLSemanticSearcher:
         self.top_retrieve_results = sorted(
             self.retrieve_results, key=lambda x: x["retrieve_score"], reverse=True
         )[:top_k]
-        
+
         self.top_retrieve_results = [
             {
                 **retrieve_result,
-                "retrieve_idx": retrieve_idx
+                "retrieve_idx": retrieve_idx,
             }
             for retrieve_idx, retrieve_result in enumerate(self.top_retrieve_results)
         ]
@@ -142,11 +142,11 @@ class HTMLSemanticSearcher:
         self.top_rerank_results = sorted(
             self.rerank_results, key=lambda x: x["rerank_score"], reverse=True
         )[:top_k]
-        
+
         self.top_rerank_results = [
             {
                 **rerank_result,
-                "rerank_idx": rerank_idx
+                "rerank_idx": rerank_idx,
             }
             for rerank_idx, rerank_result in enumerate(self.top_rerank_results)
         ]

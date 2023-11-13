@@ -153,6 +153,23 @@ class Node:
 
         return self.full_node
 
+    def get_section_source_list(self):
+        self.section_source_list = []
+        node = self
+        while node:
+            if node.type.endswith("section_group"):
+                header_node = node.get_header_node()
+                if header_node.type == "header":
+                    self.section_source_list.append(
+                        (header_node.get_number(), header_node.get_text())
+                    )
+                    # print((header_node.get_number(), header_node.get_text()))
+            node = node.parent
+
+        self.section_source_list.reverse()
+
+        return self.section_source_list
+
 
 class ScriptNode(Node):
     def parse_element(self):
@@ -759,6 +776,10 @@ class HTMLNodelizer:
 
         for idx, node in enumerate(self.nodes):
             # print(f"{idx+1}: {node.type}")
+            # if node.type == "header":
+            #     print(node.get_full_text())
+            print(node.get_section_source_list())
+            # print(f"{idx+1}: {node.get_section_source_list()}")
             node.idx = idx
             if idx > 0:
                 self.prev = self.nodes[idx - 1]
@@ -769,17 +790,17 @@ class HTMLNodelizer:
             f"=== {len(self.groups)} groups, {len(self.nodes)-len(self.groups)} nodes. ==="
         )
 
-        for idx, node in enumerate(self.nodes):
-            if node.type.endswith("group"):
-                print(f"[{node.type}]")
-            elif node.type in ["table"]:
-                print(node.type)
-            else:
-                print(node.get_full_text())
+        # for idx, node in enumerate(self.nodes):
+        #     if node.type.endswith("group"):
+        #         print(f"[{node.type}]")
+        #     elif node.type in ["table"]:
+        #         print(node.type)
+        #     else:
+        #         print(node.get_full_text())
 
-        print(
-            f"=== {len(self.groups)} groups, {len(self.nodes)-len(self.groups)} nodes. ==="
-        )
+        # print(
+        #     f"=== {len(self.groups)} groups, {len(self.nodes)-len(self.groups)} nodes. ==="
+        # )
 
     def run(self):
         self.parse_html_to_nodes()
