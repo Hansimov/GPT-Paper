@@ -139,11 +139,13 @@ class APIApp:
         url = item.url
         query = item.query
         self.embed_html_from_url(item=APIApp.EmbedHTMLFromUrlPostItem(url=url))
+        document_entity = self.data_store[url]
+
         self.html_semantic_searcher = HTMLSemanticSearcher(
             url=url,
             embedding_encoder=self.embedding_encoder,
             reranker=self.reranker,
-            document_entity=self.data_store[url],
+            document_entity=document_entity,
         )
         search_results = self.html_semantic_searcher.search(
             query=query,
@@ -151,23 +153,28 @@ class APIApp:
             rerank_top_k=item.rerank_top_k,
         )
 
-        search_results = [
-            {
-                **search_result,
-                "text": self.html_semantic_searcher.embeddings_df.iloc[
-                    search_result["row_idx"]
-                ]["full_text_with_description"],
-                "source": self.data_store[url]
-                .html_nodelizer.nodes[search_result["node_idx"]]
-                .get_section_source_list(),
-            }
-            for search_result in search_results
-        ]
+        processed_search_results = []
+        nodes = document_entity.html_nodelizer.nodes
+        embeddings_df = document_entity.embeddings_df
+        for search_result in search_results:
+            node_idx = search_result["node_idx"]
+            row_idx = search_result["row_idx"]
+            node = nodes[node_idx]
+            processed_search_results.append(
+                {
+                    **search_result,
+                    "original_text": embeddings_df.iloc[row_idx][
+                        "full_text_with_description"
+                    ],
+                    "source": node.get_section_source_list(),
+                    "text": node.get_expanded_full_text(nodes),
+                }
+            )
 
         return {
             "url": url,
             "query": query,
-            "results": search_results,
+            "results": processed_search_results,
         }
 
     def setup_routes(self):

@@ -163,12 +163,31 @@ class Node:
                     self.section_source_list.append(
                         (header_node.get_number(), header_node.get_text())
                     )
-                    # print((header_node.get_number(), header_node.get_text()))
             node = node.parent
-
         self.section_source_list.reverse()
-
         return self.section_source_list
+
+    def get_expanded_nodes(self, nodes):
+        self.expanded_nodes = []
+        if self.type == "header":
+            for node in nodes[self.idx :]:
+                if node.type == "section_group":
+                    break
+                elif node.type.endswith("group"):
+                    continue
+                else:
+                    self.expanded_nodes.append(node)
+        else:
+            self.expanded_nodes.append(self)
+
+        return self.expanded_nodes
+
+    def get_expanded_full_text(self, nodes):
+        self.get_expanded_nodes(nodes)
+        self.expanded_full_text = "\n".join(
+            node.get_full_text() for node in self.expanded_nodes
+        )
+        return self.expanded_full_text
 
 
 class ScriptNode(Node):
@@ -470,7 +489,9 @@ class SectionGroupNode(GroupNode):
 
         if self.header_node is None:
             # print(self.element)
-            print("get_header_node(): No header node for SectionGroupNode")
+            print(
+                "get_header_node(): No header node for current SectionGroupNode. Maybe reach the root node."
+            )
             # raise NotImplementedError
             self.header_node = self.children[0]
 
@@ -776,10 +797,8 @@ class HTMLNodelizer:
 
         for idx, node in enumerate(self.nodes):
             # print(f"{idx+1}: {node.type}")
-            # if node.type == "header":
-            #     print(node.get_full_text())
-            print(node.get_section_source_list())
-            # print(f"{idx+1}: {node.get_section_source_list()}")
+            if node.type == "header":
+                print(node.get_expanded_full_text())
             node.idx = idx
             if idx > 0:
                 self.prev = self.nodes[idx - 1]
@@ -789,18 +808,6 @@ class HTMLNodelizer:
         print(
             f"=== {len(self.groups)} groups, {len(self.nodes)-len(self.groups)} nodes. ==="
         )
-
-        # for idx, node in enumerate(self.nodes):
-        #     if node.type.endswith("group"):
-        #         print(f"[{node.type}]")
-        #     elif node.type in ["table"]:
-        #         print(node.type)
-        #     else:
-        #         print(node.get_full_text())
-
-        # print(
-        #     f"=== {len(self.groups)} groups, {len(self.nodes)-len(self.groups)} nodes. ==="
-        # )
 
     def run(self):
         self.parse_html_to_nodes()
