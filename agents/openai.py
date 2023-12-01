@@ -52,6 +52,10 @@ class OpenAIAgent:
             "chat": "/chat/completions",
             "models": "/models",
         },
+        "pplx": {
+            "chat": "/chat/completions",
+            "models": "/models",
+        },
     }
     continuous_token_thresholds = {
         "gpt-4": 950,
@@ -62,8 +66,8 @@ class OpenAIAgent:
     def __init__(
         self,
         name="",  # name of the agent, also use "role" as alias
-        endpoint_name="ninomae",
-        model="gpt-3.5-turbo",
+        endpoint_name="pplx",
+        model="pplx-7b-online",
         temperature=0,
         system_message=None,
         history_messages=None,
@@ -405,11 +409,11 @@ class OpenAIAgent:
 
 if __name__ == "__main__":
     agent = OpenAIAgent(
-        name="ninomae",
-        endpoint_name="ninomae",
+        name="pplx",
+        endpoint_name="pplx",
         # model="gpt-4",
         # model="poe-gpt-3.5-turbo-16k",
-        model="gpt-4-internet",
+        model="pplx-7b-online",
         temperature=0.0,
         # system_message="Explain the following text in Chinese:",
     )
@@ -419,9 +423,7 @@ if __name__ == "__main__":
     # )
     # agent.get_available_models()
     # agent.chat("List most popular twitter posts today.")
-    agent.chat(
-        "Please search this news: 'ChatGPT can now see, hear, and speak'. Then summarize it with Chinese."
-    )
+    agent.chat("Rockstar latest tweet on X")
 
     # prompt1 = "To achieve semantic-awareness, we consolidate multiple datasets across three granularities and introduce decoupled classification for objects and parts. This allows our model to capture rich semantic information."
     # agent = OpenAIAgent(

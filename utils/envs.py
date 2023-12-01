@@ -37,6 +37,7 @@ class OSEnver:
         huggingface_offline=False,
         openai=False,
         ninomae=False,
+        pplx=False,
         tiktoken_cache=False,
         store_envs=True,
     ):
@@ -59,6 +60,9 @@ class OSEnver:
 
         if ninomae:
             self.envs["OPENAI_API_KEY"] = secrets["ninomae_api_key"]
+
+        if pplx:
+            self.envs["OPENAI_API_KEY"] = secrets["pplx_api_key"]
 
         if huggingface:
             """
